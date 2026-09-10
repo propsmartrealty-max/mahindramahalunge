@@ -14,7 +14,7 @@ interface Props {
 const {
   title = "Mahindra Lifespaces Mahalunge, Pune | 2, 3 & 4 BHK Pre-Launch Residences near Hinjewadi & Baner",
   description = "Discover Mahindra Lifespaces' landmark 13.46-acre residential destination at Nande-Mahalunge, Pune. Estimated ₹3,500 Cr development with 2, 3 & 4 BHK future-ready sustainable homes near Hinjewadi and Baner.",
-  canonical = "https://mahindra-mahalunge.com",
+  canonical = "https://www.mahindralifespaceshomes.in",
   customSchema = null,
 } = Astro.props;
 
@@ -23,10 +23,10 @@ const baseSchema = {
   "@graph": [
     {
       "@type": "Organization",
-      "@id": "https://mahindra-mahalunge.com/#organization",
+      "@id": "https://www.mahindralifespaceshomes.in/#organization",
       "name": "Mahindra Lifespaces Developers Ltd.",
       "url": "https://www.mahindralifespaces.com/",
-      "logo": "https://mahindra-mahalunge.com/images/mahindra-lifespaces-logo.svg",
+      "logo": "https://www.mahindralifespaceshomes.in/images/mahindra-lifespaces-logo.svg",
       "parentOrganization": {
         "@type": "Organization",
         "name": "Mahindra Group"
@@ -34,7 +34,7 @@ const baseSchema = {
     },
     {
       "@type": "ApartmentComplex",
-      "@id": "https://mahindra-mahalunge.com/#project",
+      "@id": "https://www.mahindralifespaceshomes.in/#project",
       "name": "Mahindra Lifespaces Mahalunge",
       "alternateName": ["Mahindra Mahalunge", "Mahindra Nande Mahalunge", "Mahindra Lifespaces Pune"],
       "description": "Upcoming 13.46-acre future-ready sustainable residential community by Mahindra Lifespaces at Nande-Mahalunge near Hinjewadi and Baner, Pune.",
@@ -53,7 +53,7 @@ const baseSchema = {
         "longitude": 73.7432
       },
       "developer": {
-        "@id": "https://mahindra-mahalunge.com/#organization"
+        "@id": "https://www.mahindralifespaceshomes.in/#organization"
       }
     }
   ]

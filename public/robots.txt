@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://mahindra-mahalunge.com/sitemap.xml
+Sitemap: https://www.mahindralifespaceshomes.in/sitemap.xml
