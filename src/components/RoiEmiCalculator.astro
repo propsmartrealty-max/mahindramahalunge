@@ -1,0 +1,258 @@
+---
+// RoiEmiCalculator.astro - Interactive EMI & Investment Yield Calculator
+---
+
+<div class="bg-charcoal-900 border border-white/10 rounded-2xl p-6 sm:p-10 shadow-2xl relative overflow-hidden" id="emi-calculator-card">
+  <!-- Subtle ambient glow background -->
+  <div class="absolute -top-24 -right-24 w-72 h-72 bg-brand-red/10 rounded-full blur-3xl pointer-events-none"></div>
+  <div class="absolute -bottom-24 -left-24 w-72 h-72 bg-gold-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+  <div class="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
+    
+    <!-- Left Column: Interactive Sliders (7 Cols) -->
+    <div class="lg:col-span-7 space-y-6">
+      <div class="space-y-1">
+        <span class="text-xs uppercase tracking-widest text-gold-400 font-bold">Financial Intelligence</span>
+        <h3 class="font-serif text-2xl sm:text-3xl text-stone-100 font-bold">
+          EMI & Investment Yield Calculator
+        </h3>
+        <p class="text-xs text-stone-400">
+          Simulate your monthly outflows, tax advantages, and rental yield potential in the booming Mahalunge corridor.
+        </p>
+      </div>
+
+      <!-- Slider 1: Property Value -->
+      <div class="space-y-2">
+        <div class="flex justify-between items-center text-xs">
+          <label for="calc-price" class="text-stone-300 font-medium">Estimated Property Value</label>
+          <span id="display-price" class="font-bold text-gold-400 font-mono text-sm">₹ 85,00,000</span>
+        </div>
+        <input 
+          type="range" 
+          id="calc-price" 
+          min="6500000" 
+          max="32000000" 
+          step="500000" 
+          value="8500000" 
+          class="w-full h-2 bg-charcoal-950 rounded-lg appearance-none cursor-pointer accent-gold-400"
+        />
+        <div class="flex justify-between text-[10px] text-stone-500 font-mono">
+          <span>₹65 L (2 BHK)</span>
+          <span>₹1.4 Cr (3 BHK)</span>
+          <span>₹3.2 Cr (4 BHK Signature)</span>
+        </div>
+      </div>
+
+      <!-- Slider 2: Down Payment (%) -->
+      <div class="space-y-2">
+        <div class="flex justify-between items-center text-xs">
+          <label for="calc-dp" class="text-stone-300 font-medium">Down Payment Percentage</label>
+          <span id="display-dp" class="font-bold text-stone-200 font-mono text-sm">20% (₹ 17,00,000)</span>
+        </div>
+        <input 
+          type="range" 
+          id="calc-dp" 
+          min="10" 
+          max="50" 
+          step="5" 
+          value="20" 
+          class="w-full h-2 bg-charcoal-950 rounded-lg appearance-none cursor-pointer accent-gold-400"
+        />
+        <div class="flex justify-between text-[10px] text-stone-500 font-mono">
+          <span>10% (Min)</span>
+          <span>20% (Standard)</span>
+          <span>50% (Conservative)</span>
+        </div>
+      </div>
+
+      <!-- Two Column Controls: Loan Tenure & Interest Rate -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <!-- Tenure -->
+        <div class="space-y-2">
+          <div class="flex justify-between items-center text-xs">
+            <label for="calc-tenure" class="text-stone-300 font-medium">Loan Tenure</label>
+            <span id="display-tenure" class="font-bold text-stone-200 font-mono text-sm">20 Years</span>
+          </div>
+          <input 
+            type="range" 
+            id="calc-tenure" 
+            min="5" 
+            max="30" 
+            step="1" 
+            value="20" 
+            class="w-full h-2 bg-charcoal-950 rounded-lg appearance-none cursor-pointer accent-gold-400"
+          />
+          <div class="flex justify-between text-[10px] text-stone-500 font-mono">
+            <span>5 Yrs</span>
+            <span>20 Yrs</span>
+            <span>30 Yrs</span>
+          </div>
+        </div>
+
+        <!-- Interest Rate -->
+        <div class="space-y-2">
+          <div class="flex justify-between items-center text-xs">
+            <label for="calc-rate" class="text-stone-300 font-medium">Interest Rate (p.a.)</label>
+            <span id="display-rate" class="font-bold text-stone-200 font-mono text-sm">8.50%</span>
+          </div>
+          <input 
+            type="range" 
+            id="calc-rate" 
+            min="7.5" 
+            max="11.0" 
+            step="0.1" 
+            value="8.5" 
+            class="w-full h-2 bg-charcoal-950 rounded-lg appearance-none cursor-pointer accent-gold-400"
+          />
+          <div class="flex justify-between text-[10px] text-stone-500 font-mono">
+            <span>7.5%</span>
+            <span>8.5% (Avg)</span>
+            <span>11.0%</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Disclaimer Note -->
+      <p class="text-[10px] text-stone-500 leading-relaxed italic">
+        *Calculations are indicative for planning purposes. Final home loan terms and interest rates depend on bank assessment, credit score, and sanctioned schemes at the time of booking.
+      </p>
+    </div>
+
+    <!-- Right Column: Results Dashboard (5 Cols) -->
+    <div class="lg:col-span-5 bg-charcoal-950/90 border border-white/10 rounded-xl p-6 sm:p-7 space-y-6 flex flex-col justify-between">
+      <div>
+        <div class="flex items-center justify-between border-b border-white/10 pb-4">
+          <span class="text-xs uppercase tracking-wider text-stone-400 font-semibold">Monthly EMI Outflow</span>
+          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+        </div>
+        
+        <div class="py-4">
+          <div class="text-[11px] uppercase tracking-widest text-stone-400">Estimated Monthly EMI</div>
+          <div id="result-emi" class="font-serif text-3xl sm:text-4xl font-bold text-gold-400 tracking-tight mt-1 font-mono">
+            ₹ 59,052
+          </div>
+          <div class="text-[11px] text-stone-400 mt-1">Principal + Interest per month</div>
+        </div>
+
+        <!-- Metric Breakdown Cards -->
+        <div class="grid grid-cols-2 gap-3 pt-2">
+          <div class="p-3 rounded-lg bg-white/5 border border-white/5">
+            <div class="text-[10px] text-stone-400 uppercase tracking-wider">Loan Amount</div>
+            <div id="result-loan" class="font-bold text-stone-100 text-xs sm:text-sm mt-0.5 font-mono">
+              ₹ 68,00,000
+            </div>
+          </div>
+          <div class="p-3 rounded-lg bg-white/5 border border-white/5">
+            <div class="text-[10px] text-stone-400 uppercase tracking-wider">Total Interest</div>
+            <div id="result-interest" class="font-bold text-stone-100 text-xs sm:text-sm mt-0.5 font-mono">
+              ₹ 73,72,500
+            </div>
+          </div>
+        </div>
+
+        <!-- Investment Yield Forecast -->
+        <div class="mt-4 p-3.5 rounded-lg bg-gradient-to-r from-emerald-950/40 to-charcoal-900 border border-emerald-500/20 space-y-1.5">
+          <div class="flex items-center justify-between">
+            <span class="text-[11px] font-semibold text-emerald-400 flex items-center space-x-1">
+              <span>✦ Mahalunge Rental Yield Projection</span>
+            </span>
+            <span class="text-[10px] text-stone-400 font-mono">~4.0% p.a.</span>
+          </div>
+          <div class="text-xs text-stone-300">
+            Estimated Monthly Rent: <strong id="result-rent" class="text-white font-mono">₹ 28,000 - ₹ 32,000/mo</strong>
+          </div>
+          <p class="text-[10px] text-stone-400 leading-tight">
+            Driven by 450,000+ tech workforce in Hinjewadi Rajiv Gandhi Infotech Park seeking upscale walk-to-work residences.
+          </p>
+        </div>
+      </div>
+
+      <!-- Action Button -->
+      <div class="pt-2">
+        <button
+          type="button"
+          data-open-modal
+          data-interest="Personalized Cost Sheet & EMI Plan"
+          class="w-full py-3 px-4 rounded-full bg-gradient-to-r from-gold-400 via-gold-500 to-gold-400 text-charcoal-950 font-bold uppercase tracking-wider text-xs shadow-lg hover:shadow-gold-500/20 active:scale-95 transition-all text-center"
+        >
+          Download Detailed Cost Sheet PDF
+        </button>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+<script>
+  function formatINR(val: number): string {
+    return new Intl.NumberFormat('en-IN', {
+      style: 'currency',
+      currency: 'INR',
+      maximumFractionDigits: 0,
+    }).format(val);
+  }
+
+  function initCalculator() {
+    const priceInput = document.getElementById('calc-price') as HTMLInputElement | null;
+    const dpInput = document.getElementById('calc-dp') as HTMLInputElement | null;
+    const tenureInput = document.getElementById('calc-tenure') as HTMLInputElement | null;
+    const rateInput = document.getElementById('calc-rate') as HTMLInputElement | null;
+
+    const displayPrice = document.getElementById('display-price');
+    const displayDp = document.getElementById('display-dp');
+    const displayTenure = document.getElementById('display-tenure');
+    const displayRate = document.getElementById('display-rate');
+
+    const resultEmi = document.getElementById('result-emi');
+    const resultLoan = document.getElementById('result-loan');
+    const resultInterest = document.getElementById('result-interest');
+    const resultRent = document.getElementById('result-rent');
+
+    if (!priceInput || !dpInput || !tenureInput || !rateInput) return;
+
+    function calculate() {
+      const price = parseFloat(priceInput!.value);
+      const dpPercent = parseFloat(dpInput!.value);
+      const tenureYears = parseFloat(tenureInput!.value);
+      const annualRate = parseFloat(rateInput!.value);
+
+      const dpAmount = price * (dpPercent / 100);
+      const loanAmount = price - dpAmount;
+
+      const monthlyRate = annualRate / (12 * 100);
+      const totalMonths = tenureYears * 12;
+
+      // EMI Formula: P * r * (1 + r)^n / ((1 + r)^n - 1)
+      const emi = (loanAmount * monthlyRate * Math.pow(1 + monthlyRate, totalMonths)) / (Math.pow(1 + monthlyRate, totalMonths) - 1);
+      const totalPayment = emi * totalMonths;
+      const totalInterest = totalPayment - loanAmount;
+
+      // Rental projection: ~3.8% to 4.4% annualized gross yield
+      const lowMonthlyRent = Math.round((price * 0.038) / 12);
+      const highMonthlyRent = Math.round((price * 0.044) / 12);
+
+      if (displayPrice) displayPrice.textContent = formatINR(price);
+      if (displayDp) displayDp.textContent = `${dpPercent}% (${formatINR(dpAmount)})`;
+      if (displayTenure) displayTenure.textContent = `${tenureYears} Years`;
+      if (displayRate) displayRate.textContent = `${annualRate.toFixed(2)}%`;
+
+      if (resultEmi) resultEmi.textContent = formatINR(Math.round(emi));
+      if (resultLoan) resultLoan.textContent = formatINR(Math.round(loanAmount));
+      if (resultInterest) resultInterest.textContent = formatINR(Math.round(totalInterest));
+      if (resultRent) resultRent.textContent = `${formatINR(lowMonthlyRent)} - ${formatINR(highMonthlyRent)}/mo`;
+    }
+
+    [priceInput, dpInput, tenureInput, rateInput].forEach(input => {
+      input.addEventListener('input', calculate);
+    });
+
+    calculate();
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initCalculator);
+  } else {
+    initCalculator();
+  }
+</script>

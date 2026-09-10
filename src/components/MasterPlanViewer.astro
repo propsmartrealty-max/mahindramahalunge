@@ -1,0 +1,189 @@
+---
+// MasterPlanViewer.astro - Interactive SVG Master Plan Island
+---
+
+<div class="w-full bg-charcoal-900 border border-white/10 rounded-2xl p-6 lg:p-10 shadow-2xl">
+  <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6 border-b border-white/10">
+    <div>
+      <span class="text-[11px] uppercase tracking-widest text-gold-400 font-bold">13.46-Acre Land Parcel Blueprint</span>
+      <h3 class="font-serif text-2xl lg:text-3xl text-stone-100 font-bold">Interactive Master Layout</h3>
+    </div>
+    <div class="flex items-center space-x-2 text-xs text-stone-400">
+      <span class="inline-block w-3 h-3 rounded-full bg-gold-400 animate-pulse"></span>
+      <span>Click any hotspot on the map to inspect zone details</span>
+    </div>
+  </div>
+
+  <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 mt-8 items-center">
+    
+    <!-- SVG Interactive Map -->
+    <div class="lg:col-span-7 bg-charcoal-950 rounded-xl border border-white/10 p-4 relative overflow-hidden">
+      <svg viewBox="0 0 600 450" class="w-full h-auto cursor-pointer select-none">
+        <rect x="10" y="10" width="580" height="430" rx="12" fill="#111317" stroke="#222731" stroke-width="2" />
+        
+        <!-- Organic Landscape Swirls -->
+        <path d="M40 380 Q 200 400 320 280 T 560 200" fill="none" stroke="#1d2621" stroke-width="60" stroke-linecap="round" />
+        <path d="M40 380 Q 200 400 320 280 T 560 200" fill="none" stroke="#2a4030" stroke-width="12" stroke-linecap="round" stroke-dasharray="6,6" />
+
+        <!-- Perimeter Road -->
+        <path d="M20 400 L 580 400" stroke="#333a46" stroke-width="16" />
+        <text x="300" y="420" fill="#6b7280" font-size="10" font-family="sans-serif" text-anchor="middle" letter-spacing="2">PROPOSED PMRDA 36M ACCESS ROAD</text>
+
+        <!-- Zone 1: Clubhouse -->
+        <g class="zone-hotspot" data-zone="clubhouse">
+          <circle cx="300" cy="220" r="35" fill="#c5a368" fill-opacity="0.35" stroke="#c5a368" stroke-width="2.5" />
+          <circle cx="300" cy="220" r="8" fill="#dfc08f" class="animate-ping" style="animation-duration: 3s;" />
+          <circle cx="300" cy="220" r="6" fill="#dfc08f" />
+          <text x="300" y="176" fill="#f3ede2" font-size="11" font-family="Cinzel" font-weight="bold" text-anchor="middle">Zone 01</text>
+        </g>
+
+        <!-- Zone 2: Towers -->
+        <g class="zone-hotspot" data-zone="towers">
+          <circle cx="170" cy="140" r="40" fill="#1c212b" fill-opacity="0.65" stroke="#4b5563" stroke-width="1.5" />
+          <circle cx="170" cy="140" r="6" fill="#c5a368" />
+          <text x="170" y="90" fill="#9ca3af" font-size="11" font-family="Cinzel" font-weight="bold" text-anchor="middle">Zone 02</text>
+        </g>
+
+        <!-- Zone 3: Central Greens -->
+        <g class="zone-hotspot" data-zone="greens">
+          <circle cx="430" cy="160" r="45" fill="#1c212b" fill-opacity="0.65" stroke="#4b5563" stroke-width="1.5" />
+          <circle cx="430" cy="160" r="6" fill="#c5a368" />
+          <text x="430" y="105" fill="#9ca3af" font-size="11" font-family="Cinzel" font-weight="bold" text-anchor="middle">Zone 03</text>
+        </g>
+
+        <!-- Zone 4: Sports Arena -->
+        <g class="zone-hotspot" data-zone="sports">
+          <circle cx="460" cy="310" r="36" fill="#1c212b" fill-opacity="0.65" stroke="#4b5563" stroke-width="1.5" />
+          <circle cx="460" cy="310" r="6" fill="#c5a368" />
+          <text x="460" y="264" fill="#9ca3af" font-size="11" font-family="Cinzel" font-weight="bold" text-anchor="middle">Zone 04</text>
+        </g>
+
+        <!-- Zone 5: Grand Entrance -->
+        <g class="zone-hotspot" data-zone="entrance">
+          <circle cx="150" cy="340" r="30" fill="#1c212b" fill-opacity="0.65" stroke="#4b5563" stroke-width="1.5" />
+          <circle cx="150" cy="340" r="6" fill="#c5a368" />
+          <text x="150" y="300" fill="#9ca3af" font-size="11" font-family="Cinzel" font-weight="bold" text-anchor="middle">Zone 05</text>
+        </g>
+
+        <!-- Compass -->
+        <g transform="translate(530, 60)">
+          <circle cx="0" cy="0" r="22" fill="#14171d" stroke="#c5a368" stroke-width="1" />
+          <path d="M0 -16 L4 0 L-4 0 Z" fill="#c5a368" />
+          <path d="M0 16 L4 0 L-4 0 Z" fill="#4b5563" />
+          <text x="0" y="-19" fill="#c5a368" font-size="10" font-weight="bold" text-anchor="middle">N</text>
+        </g>
+      </svg>
+    </div>
+
+    <!-- Right Info Box -->
+    <div class="lg:col-span-5 space-y-5">
+      <div id="zone-category" class="inline-block px-3 py-1 rounded bg-gold-500/10 border border-gold-500/30 text-gold-400 text-xs font-semibold uppercase tracking-widest">
+        Lifestyle • Zone 01
+      </div>
+      
+      <h4 id="zone-title" class="font-serif text-2xl text-stone-100 font-bold">
+        Grand Clubhouse & Wellness Sanctum
+      </h4>
+
+      <p id="zone-desc" class="text-xs text-stone-400 leading-relaxed">
+        A multi-level 35,000+ sq.ft. social destination featuring a heated indoor pool, badminton courts, banquet salon, luxury spa, and rooftop lounge.
+      </p>
+
+      <div class="pt-2">
+        <h5 class="text-xs uppercase tracking-widest text-stone-300 font-semibold mb-3">Zone Highlights</h5>
+        <div id="zone-highlights" class="space-y-2">
+          <div class="flex items-center space-x-2 text-xs text-stone-300"><span class="text-gold-400">✦</span><span>Multi-cuisine Dining Terrace</span></div>
+          <div class="flex items-center space-x-2 text-xs text-stone-300"><span class="text-gold-400">✦</span><span>Temperature Controlled Infinity Pool</span></div>
+          <div class="flex items-center space-x-2 text-xs text-stone-300"><span class="text-gold-400">✦</span><span>State-of-the-art TechnoGym</span></div>
+        </div>
+      </div>
+
+      <div class="pt-4 flex flex-col sm:flex-row gap-3">
+        <button
+          data-open-modal
+          data-interest="Master Plan High-Res Dossier"
+          class="px-6 py-3 rounded bg-gradient-to-r from-gold-400 to-gold-500 text-charcoal-950 text-xs font-bold uppercase tracking-widest hover:shadow-lg transition-all"
+        >
+          Request High-Res Master Plan
+        </button>
+      </div>
+
+      <p class="text-[10px] text-stone-500">
+        *Master plan layout is conceptual based on the acquired 13.46-acre land parcel and remains subject to official town planning approvals.
+      </p>
+    </div>
+
+  </div>
+</div>
+
+<script>
+  const zones: any = {
+    clubhouse: {
+      tag: 'Lifestyle • Zone 01',
+      title: 'Grand Clubhouse & Wellness Sanctum',
+      desc: 'A multi-level 35,000+ sq.ft. social destination featuring a heated indoor pool, badminton courts, banquet salon, luxury spa, and rooftop lounge.',
+      highlights: ['Multi-cuisine Dining Terrace', 'Temperature Controlled Infinity Pool', 'State-of-the-art TechnoGym']
+    },
+    towers: {
+      tag: 'Residences • Zone 02',
+      title: 'Signature High-Rise Towers (Phase 1)',
+      desc: 'Elegantly proportioned towers designed with optimal solar orientation, cross-ventilation fins, and uninterrupted views toward the Mula river and Hinjewadi skyline.',
+      highlights: ['3 & 4 BHK Luxury Residences', 'High-speed destination elevators', 'Double-height arrival lobbies']
+    },
+    greens: {
+      tag: 'Landscape • Zone 03',
+      title: 'The Central Forest Reserve & Meadow',
+      desc: 'Over 4 acres of continuous vehicle-free bio-diversity greens, indigenous forest groves, fruit orchards, and oxygen-rich walking trails.',
+      highlights: ['Dense Miyawaki plantation', 'Reflective water body', 'Herbal butterfly gardens']
+    },
+    sports: {
+      tag: 'Active Life • Zone 04',
+      title: 'Active Sports Complex & Courts',
+      desc: 'Floodlit outdoor sports amenities designed to international specifications for tennis, half-court basketball, cricket nets, and skating rink.',
+      highlights: ['Fitted synthetic tennis courts', 'Jogging track with shock-absorbent turf', 'Kids skating promenade']
+    },
+    entrance: {
+      tag: 'Infrastructure • Zone 05',
+      title: 'The Grand Boulevard & Security Portal',
+      desc: 'A monumental 60-foot palm-lined entry boulevard with RFID automated barrier access, visitor management lounge, and peripheral drop-off bays.',
+      highlights: ['Multi-tier biometric security', 'EV high-speed fast charging stations', 'Driver waiting lounge']
+    }
+  };
+
+  const categoryEl = document.getElementById('zone-category');
+  const titleEl = document.getElementById('zone-title');
+  const descEl = document.getElementById('zone-desc');
+  const highlightsEl = document.getElementById('zone-highlights');
+
+  document.querySelectorAll('.zone-hotspot').forEach((g) => {
+    g.addEventListener('click', () => {
+      const zoneKey = g.getAttribute('data-zone') || '';
+      const zone = zones[zoneKey];
+      if (!zone) return;
+
+      if (categoryEl) categoryEl.textContent = zone.tag;
+      if (titleEl) titleEl.textContent = zone.title;
+      if (descEl) descEl.textContent = zone.desc;
+      if (highlightsEl) {
+        highlightsEl.innerHTML = zone.highlights
+          .map((h: string) => `<div class="flex items-center space-x-2 text-xs text-stone-300"><span class="text-gold-400">✦</span><span>${h}</span></div>`)
+          .join('');
+      }
+
+      // Update hotspot styles
+      document.querySelectorAll('.zone-hotspot circle:first-child').forEach((c) => {
+        c.setAttribute('fill', '#1c212b');
+        c.setAttribute('fill-opacity', '0.65');
+        c.setAttribute('stroke', '#4b5563');
+        c.setAttribute('stroke-width', '1.5');
+      });
+      const firstCircle = g.querySelector('circle:first-child');
+      if (firstCircle) {
+        firstCircle.setAttribute('fill', '#c5a368');
+        firstCircle.setAttribute('fill-opacity', '0.35');
+        firstCircle.setAttribute('stroke', '#c5a368');
+        firstCircle.setAttribute('stroke-width', '2.5');
+      }
+    });
+  });
+</script>

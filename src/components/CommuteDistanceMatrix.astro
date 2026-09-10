@@ -1,0 +1,201 @@
+---
+// CommuteDistanceMatrix.astro - Interactive Neighborhood Distance & Commute Matrix
+const categories = [
+  {
+    id: 'it-parks',
+    name: 'Tech Parks & Employment',
+    icon: '💼',
+    items: [
+      { name: 'Hinjewadi Phase 1 (Wipro, Infosys, Cognizant)', distance: '3.2 km', peakTime: '8-10 mins', offPeak: '6 mins', highlight: 'Primary Tech Hub' },
+      { name: 'Embassy TechZone & Phase 2', distance: '5.8 km', peakTime: '12-14 mins', offPeak: '9 mins', highlight: 'Phase 2 Campuses' },
+      { name: 'Hinjewadi Phase 3 (TCS, Tech Mahindra)', distance: '8.4 km', peakTime: '16-18 mins', offPeak: '12 mins', highlight: 'Phase 3 Tech Park' },
+      { name: 'Teerth Technospace & Baner IT Corridor', distance: '5.5 km', peakTime: '11-13 mins', offPeak: '8 mins', highlight: 'Baner Tech Hub' },
+      { name: 'Cummins India Office Campus, Balewadi', distance: '4.8 km', peakTime: '10-12 mins', offPeak: '8 mins', highlight: 'Corporate HQ' },
+    ]
+  },
+  {
+    id: 'schools',
+    name: 'Top International Schools',
+    icon: '🎓',
+    items: [
+      { name: 'Mercedes-Benz International School (MBIS)', distance: '4.5 km', peakTime: '10-12 mins', offPeak: '8 mins', highlight: 'IB World School' },
+      { name: 'Banyan Tree International School', distance: '2.4 km', peakTime: '5-7 mins', offPeak: '4 mins', highlight: 'Walking Proximity' },
+      { name: 'Vibgyor High School, Balewadi', distance: '4.9 km', peakTime: '11-13 mins', offPeak: '8 mins', highlight: 'ICSE / CBSE' },
+      { name: 'The Orchid School, Baner', distance: '6.8 km', peakTime: '15-18 mins', offPeak: '12 mins', highlight: 'Renowned Pedagogy' },
+      { name: 'Crimson Anisha Global School', distance: '3.8 km', peakTime: '8-10 mins', offPeak: '6 mins', highlight: 'Modern Campus' },
+    ]
+  },
+  {
+    id: 'healthcare',
+    name: 'Hospitals & Medical Care',
+    icon: '🏥',
+    items: [
+      { name: 'Jupiter Hospital, Baner', distance: '6.2 km', peakTime: '12-15 mins', offPeak: '10 mins', highlight: 'Quaternary Super-Specialty' },
+      { name: 'Manipal Hospital (formerly Columbia Asia)', distance: '6.5 km', peakTime: '14-16 mins', offPeak: '10 mins', highlight: 'Multi-Specialty Care' },
+      { name: 'Ruby Hall Clinic, Hinjewadi', distance: '5.1 km', peakTime: '10-12 mins', offPeak: '8 mins', highlight: '24/7 Emergency Care' },
+      { name: 'Vitalife Medipoint Hospital, Aundh/Baner', distance: '7.8 km', peakTime: '16-20 mins', offPeak: '14 mins', highlight: 'Specialist Clinic' },
+    ]
+  },
+  {
+    id: 'retail',
+    name: 'Retail & Social Life',
+    icon: '✨',
+    items: [
+      { name: 'Balewadi High Street (Dining & Lounges)', distance: '4.6 km', peakTime: '10-12 mins', offPeak: '8 mins', highlight: 'Pune’s Prime Gourmet Strip' },
+      { name: 'Phoenix Mall of the Millennium, Wakad', distance: '5.9 km', peakTime: '12-15 mins', offPeak: '10 mins', highlight: 'Luxury Retail & IMAX' },
+      { name: 'Shree Shiv Chhatrapati Sports Complex', distance: '3.6 km', peakTime: '7-9 mins', offPeak: '5 mins', highlight: 'Olympic-Grade Stadium' },
+      { name: 'Westend Mall, Aundh', distance: '8.9 km', peakTime: '18-22 mins', offPeak: '15 mins', highlight: 'Shopping & Cinema' },
+    ]
+  },
+  {
+    id: 'transit',
+    name: 'Highways & Mass Transit',
+    icon: '🚇',
+    items: [
+      { name: 'Proposed PMRDA 36m Model DP Road', distance: '0.2 km', peakTime: '1 min', offPeak: '1 min', highlight: 'Direct Access' },
+      { name: 'Pune Metro Line 3 (Hinjewadi-Shivajinagar)', distance: '2.8 km', peakTime: '6-8 mins', offPeak: '5 mins', highlight: 'Rapid Metro Access' },
+      { name: 'Mumbai-Pune Expressway (Urse / Wakad)', distance: '6.0 km', peakTime: '12-14 mins', offPeak: '9 mins', highlight: 'Inter-City Gateway' },
+      { name: 'Pune International Airport (Lohegaon)', distance: '21.5 km', peakTime: '45-50 mins', offPeak: '35 mins', highlight: 'Air Connectivity' },
+    ]
+  }
+];
+---
+
+<div class="bg-charcoal-900 border border-white/10 rounded-2xl p-6 sm:p-10 shadow-2xl space-y-8" id="commute-matrix">
+  <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 border-b border-white/10 pb-6">
+    <div class="space-y-1">
+      <span class="text-xs uppercase tracking-widest text-gold-400 font-bold">Hyper-Local Connectivity</span>
+      <h3 class="font-serif text-2xl sm:text-3xl text-stone-100 font-bold">
+        Commute & Neighborhood Distance Matrix
+      </h3>
+      <p class="text-xs text-stone-400 max-w-xl">
+        Strategically located at Mahalunge–Nande, minimizing daily drive times to Hinjewadi tech parks and Baner lifestyle amenities.
+      </p>
+    </div>
+
+    <!-- Live Commute Status Pill -->
+    <div class="inline-flex items-center space-x-2 px-3 py-1.5 rounded-full bg-emerald-950/60 border border-emerald-500/30 text-emerald-300 text-xs font-mono">
+      <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+      <span>Live Route Index: Optimal Access</span>
+    </div>
+  </div>
+
+  <!-- Category Filter Tabs -->
+  <div class="flex flex-wrap gap-2" id="matrix-tabs">
+    {categories.map((cat, idx) => (
+      <button
+        type="button"
+        data-cat-target={cat.id}
+        class={`px-4 py-2 rounded-full text-xs font-semibold tracking-wider transition-all duration-200 flex items-center space-x-2 cursor-pointer ${
+          idx === 0
+            ? 'bg-gold-500 text-charcoal-950 shadow-md shadow-gold-500/20 active-tab'
+            : 'bg-charcoal-950 text-stone-300 hover:text-white border border-white/10 hover:border-gold-500/30'
+        }`}
+      >
+        <span>{cat.icon}</span>
+        <span>{cat.name}</span>
+      </button>
+    ))}
+  </div>
+
+  <!-- Category Panels -->
+  <div id="matrix-panels" class="space-y-4">
+    {categories.map((cat, idx) => (
+      <div 
+        id={`panel-${cat.id}`} 
+        class={`category-panel transition-opacity duration-300 ${idx === 0 ? 'block' : 'hidden'}`}
+      >
+        <div class="bg-charcoal-950 rounded-xl border border-white/10 overflow-hidden">
+          <div class="overflow-x-auto">
+            <table class="w-full text-left text-xs text-stone-300">
+              <thead class="bg-charcoal-900/80 text-[11px] uppercase tracking-wider text-stone-400 border-b border-white/10">
+                <tr>
+                  <th class="p-4 sm:p-5 font-semibold">Key Landmark / Destination</th>
+                  <th class="p-4 sm:p-5 font-semibold">Distance</th>
+                  <th class="p-4 sm:p-5 font-semibold">Peak Hours</th>
+                  <th class="p-4 sm:p-5 font-semibold">Off-Peak Drive</th>
+                  <th class="p-4 sm:p-5 font-semibold text-right">Category</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-white/5">
+                {cat.items.map(item => (
+                  <tr class="hover:bg-white/5 transition-colors">
+                    <td class="p-4 sm:p-5 font-medium text-stone-100 flex items-center space-x-2">
+                      <span class="w-1.5 h-1.5 rounded-full bg-gold-400 flex-shrink-0"></span>
+                      <span>{item.name}</span>
+                    </td>
+                    <td class="p-4 sm:p-5 font-mono font-bold text-gold-400">{item.distance}</td>
+                    <td class="p-4 sm:p-5 text-amber-300/90 font-mono">{item.peakTime}</td>
+                    <td class="p-4 sm:p-5 text-emerald-400 font-mono">{item.offPeak}</td>
+                    <td class="p-4 sm:p-5 text-right">
+                      <span class="px-2.5 py-1 rounded bg-white/5 text-stone-400 text-[10px] tracking-wider uppercase">
+                        {item.highlight}
+                      </span>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    ))}
+  </div>
+
+  <!-- Bottom Interactive Note & CTA -->
+  <div class="flex flex-col sm:flex-row items-center justify-between gap-4 p-4 rounded-xl bg-charcoal-950 border border-white/5 text-xs text-stone-400">
+    <div class="flex items-center space-x-2">
+      <span class="text-gold-400">✦</span>
+      <span>Exact location coordinates: <strong>18.5714° N, 73.7432° E</strong> (Mahalunge-Nande Corridor).</span>
+    </div>
+    <button
+      type="button"
+      data-open-modal
+      data-interest="Route & Location Map PDF"
+      class="px-5 py-2 rounded-full border border-gold-500/40 text-gold-400 hover:bg-gold-500/10 text-[11px] font-bold tracking-wider uppercase transition-all whitespace-nowrap"
+    >
+      Download High-Res Route Map
+    </button>
+  </div>
+</div>
+
+<script>
+  function initMatrixTabs() {
+    const tabButtons = document.querySelectorAll<HTMLButtonElement>('#matrix-tabs button');
+    const panels = document.querySelectorAll<HTMLDivElement>('#matrix-panels .category-panel');
+
+    tabButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const targetId = btn.getAttribute('data-cat-target');
+        if (!targetId) return;
+
+        // Reset tab styles
+        tabButtons.forEach(b => {
+          b.classList.remove('bg-gold-500', 'text-charcoal-950', 'shadow-md', 'shadow-gold-500/20', 'active-tab');
+          b.classList.add('bg-charcoal-950', 'text-stone-300', 'border', 'border-white/10');
+        });
+
+        // Activate clicked tab
+        btn.classList.add('bg-gold-500', 'text-charcoal-950', 'shadow-md', 'shadow-gold-500/20', 'active-tab');
+        btn.classList.remove('bg-charcoal-950', 'text-stone-300', 'border', 'border-white/10');
+
+        // Toggle panel
+        panels.forEach(panel => {
+          if (panel.id === `panel-${targetId}`) {
+            panel.classList.remove('hidden');
+            panel.classList.add('block');
+          } else {
+            panel.classList.add('hidden');
+            panel.classList.remove('block');
+          }
+        });
+      });
+    });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initMatrixTabs);
+  } else {
+    initMatrixTabs();
+  }
+</script>

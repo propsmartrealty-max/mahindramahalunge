@@ -1,0 +1,191 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const faqCategories = [
+  {
+    category: 'Project Background & Land Parcel',
+    questions: [
+      {
+        q: 'What is the official status of Mahindra Lifespaces’ project at Mahalunge?',
+        a: 'In October 2025, Mahindra Lifespaces Developers Limited officially announced the acquisition of 13.46 acres in the Nande–Mahalunge corridor with an estimated development potential of approximately ₹3,500 Crore. The project is currently in the master-planning and statutory approval stage.'
+      },
+      {
+        q: 'Is the land parcel 13.46 acres confirmed?',
+        a: 'Yes, the 13.46-acre figure represents the acquired land parcel publicly announced by Mahindra Lifespaces in its regulatory filings. The final net planned residential development area will be defined in the MahaRERA project sanction.'
+      },
+      {
+        q: 'Who is the developer behind this project?',
+        a: 'The development is led by Mahindra Lifespaces Developers Ltd., the real estate and infrastructure development arm of the USD 20+ Billion Mahindra Group. Mahindra has delivered 50+ residential communities across India spanning over 55 million square feet.'
+      }
+    ]
+  },
+  {
+    category: 'Configurations & Living Spaces',
+    questions: [
+      {
+        q: 'What apartment configurations are anticipated at Mahindra Mahalunge?',
+        a: 'The master community is being planned to feature premium 2 BHK Optima Suites, 3 BHK Luxe Residences, and 4 BHK Signature Estates designed with expansive cross-ventilation, panoramic decks, and zero wasted corridor spaces.'
+      },
+      {
+        q: 'What are the tentative carpet areas for each configuration?',
+        a: 'Tentative carpet area estimates are: 2 BHK (~785 to 895 sq.ft.*), 3 BHK (~1,120 to 1,210 sq.ft.*), and 4 BHK (~1,650 to 1,820 sq.ft.*). Exact RERA carpet areas will be officially released upon MahaRERA project sanction.'
+      },
+      {
+        q: 'Are the homes Vastu-compliant?',
+        a: 'Yes, the architectural layouts are planned to incorporate fundamental Vastu principles, including auspicious East and North-East entry orientations and well-ventilated cross-breeze pathways.'
+      }
+    ]
+  },
+  {
+    category: 'MahaRERA Compliance & Pre-Launch Guidelines',
+    questions: [
+      {
+        q: 'Is the project registered with MahaRERA yet?',
+        a: 'The project is in its statutory approval and pre-registration phase. In strict accordance with MahaRERA guidelines, no booking, sale, or advance deposit will be accepted until MahaRERA registration is formally granted and the official registration number and QR code are displayed.'
+      },
+      {
+        q: 'Can I submit an Expression of Interest (EOI)?',
+        a: 'Yes, prospective homebuyers may submit a non-financial Expression of Interest (EOI) / Priority Pass to receive formal notifications, confidential cost sheets, and priority site-visit invitations as soon as statutory sanctions are finalized.'
+      }
+    ]
+  },
+  {
+    category: 'Location, Connectivity & Transit',
+    questions: [
+      {
+        q: 'How far is the project from Hinjewadi IT Park?',
+        a: 'The site is approximately 7 to 10 minutes from Hinjewadi Phase 1, offering direct access to global IT campuses including Infosys, Wipro, TCS, and Cognizant.'
+      },
+      {
+        q: 'How easily can residents reach Baner and Balewadi High Street?',
+        a: 'Baner and Balewadi High Street are located just 8 to 12 minutes away via the planned 36-meter wide PMRDA arterial road network, providing seamless access to Pune’s premier dining and shopping hubs.'
+      },
+      {
+        q: 'What infrastructure advantages does the PMRDA Town Planning Scheme provide?',
+        a: 'Mahalunge is part of Pune’s first PMRDA model Town Planning Scheme. Key benefits include planned 36-meter wide ring roads, dedicated underground utility corridors, planned green parks, and direct integration with the upcoming Pune Metro Line 3.'
+      }
+    ]
+  },
+  {
+    category: 'Schools, Healthcare & Social Infrastructure',
+    questions: [
+      {
+        q: 'Which reputable international schools are located near Mahalunge?',
+        a: 'Nearby educational institutions include Mahindra International School (Hinjewadi), Delhi Public School (DPS Pune), Symbiosis International School, The Orchid School, and Vibgyor High School, all within 10 to 15 minutes.'
+      },
+      {
+        q: 'What hospitals and healthcare facilities serve the neighborhood?',
+        a: 'Residents have rapid access to multi-specialty hospitals including Jupiter Hospital (Baner), Manipal Hospital clinic, Surya Mother & Child Care Hospital, and Ruby Hall Clinic Hinjewadi.'
+      }
+    ]
+  },
+  {
+    category: 'Investment Potential & Rental Yields',
+    questions: [
+      {
+        q: 'What rental yields can investors expect in the Mahalunge corridor?',
+        a: 'Because of sustained housing demand from 400,000+ tech professionals in Hinjewadi, residential properties in the Mahalunge-Nande corridor command rental yields averaging 4.2% to 5.2%, substantially higher than mature suburbs like Kothrud or Aundh.'
+      },
+      {
+        q: 'Why is Mahalunge considered a high-growth capital appreciation market?',
+        a: 'Mahalunge offers lower entry capital values compared to neighboring Baner, while benefiting from massive ongoing public infrastructure investments (PMRDA Ring Road, Metro Line 3, and Town Planning schemes) and institutional Grade-A developers like Mahindra Lifespaces.'
+      }
+    ]
+  }
+];
+
+// Build flat list for JSON-LD schema
+const allFaqs = faqCategories.flatMap(c => c.questions);
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": allFaqs.map(f => ({
+    "@type": "Question",
+    "name": f.q,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": f.a
+    }
+  }))
+};
+---
+
+<Layout
+  title="Mahindra Lifespaces Mahalunge FAQ | All Project, RERA & Location Answers"
+  description="Exhaustive FAQ guide for Mahindra Lifespaces upcoming Mahalunge project: land acquisition, 2/3/4 BHK configurations, MahaRERA timeline, Hinjewadi commute, and pricing."
+  canonical="https://mahindra-mahalunge.com/faq"
+>
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
+  <!-- Hero Section -->
+  <section class="pt-32 pb-16 bg-charcoal-950 border-b border-white/10 relative overflow-hidden">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4 text-center">
+      <div class="inline-flex items-center space-x-2 px-3 py-1 rounded bg-gold-500/10 border border-gold-500/30 text-gold-400 text-xs font-semibold uppercase tracking-widest">
+        <span>Verified Intelligence</span>
+      </div>
+      <h1 class="font-serif text-3xl sm:text-5xl font-bold text-stone-100 leading-tight">
+        Frequently Asked Questions: <br />
+        <span class="gold-gradient-text">Mahindra Lifespaces Mahalunge</span>
+      </h1>
+      <p class="text-stone-400 text-xs sm:text-sm max-w-xl mx-auto font-light leading-relaxed">
+        Transparent answers regarding the 13.46-acre land acquisition, upcoming residence configurations, MahaRERA registration, and the Nande–Mahalunge corridor.
+      </p>
+    </div>
+  </section>
+
+  <!-- Categorized FAQ Section -->
+  <section class="py-16 bg-charcoal-900">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
+      
+      {faqCategories.map((cat, catIdx) => (
+        <div class="space-y-6">
+          <div class="flex items-center space-x-3 border-b border-white/10 pb-3">
+            <span class="font-serif text-gold-400 font-bold text-sm">0{catIdx + 1}</span>
+            <h2 class="font-serif text-xl sm:text-2xl text-stone-100 font-bold">{cat.category}</h2>
+          </div>
+
+          <div class="space-y-4">
+            {cat.questions.map((faq) => (
+              <details class="group p-5 rounded-xl bg-charcoal-950 border border-white/10 cursor-pointer hover:border-gold-500/30 transition-colors">
+                <summary class="flex items-center justify-between font-serif text-sm sm:text-base text-stone-200 font-semibold list-none">
+                  <span class="pr-4">{faq.q}</span>
+                  <span class="text-gold-400 group-open:rotate-180 transition-transform flex-shrink-0">▼</span>
+                </summary>
+                <p class="mt-3 text-xs sm:text-sm text-stone-400 leading-relaxed pt-3 border-t border-white/5">
+                  {faq.a}
+                </p>
+              </details>
+            ))}
+          </div>
+        </div>
+      ))}
+
+      <!-- Still Have Questions Callout -->
+      <div class="p-8 rounded-2xl bg-charcoal-950 border border-gold-500/40 text-center space-y-4 shadow-2xl">
+        <span class="text-xs uppercase tracking-widest text-gold-400 font-bold">Official Project Desk</span>
+        <h3 class="font-serif text-2xl text-stone-100 font-bold">Have a Specific Question Not Listed Here?</h3>
+        <p class="text-xs text-stone-400 max-w-md mx-auto">
+          Our senior relationship managers are available to provide direct, verified information regarding project status and corridor walkthroughs.
+        </p>
+        <div class="pt-2 flex flex-col sm:flex-row gap-3 justify-center">
+          <button
+            data-open-modal
+            data-interest="FAQ Unanswered Question"
+            class="px-8 py-3 rounded bg-gradient-to-r from-gold-400 to-gold-500 text-charcoal-950 text-xs font-bold uppercase tracking-widest hover:shadow-xl transition-all"
+          >
+            Submit an Inquiry
+          </button>
+          <a
+            href="https://wa.me/912067000000?text=Hi%2C%20I%20have%20a%20question%20about%20Mahindra%20Mahalunge."
+            target="_blank"
+            rel="noopener noreferrer"
+            class="px-8 py-3 rounded border border-emerald-500/40 text-emerald-400 hover:bg-emerald-500/10 text-xs font-bold uppercase tracking-widest transition-colors flex items-center justify-center space-x-2"
+          >
+            <span>Ask via WhatsApp</span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</Layout>

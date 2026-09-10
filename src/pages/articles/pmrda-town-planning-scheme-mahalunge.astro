@@ -1,0 +1,117 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "PMRDA Town Planning Scheme at Mahalunge: Master Plan, 36M Roads & Smart Infrastructure",
+  "description": "Exhaustive guide to the PMRDA Town Planning Scheme in Mahalunge, Pune. Understanding road networks, ring road connectivity, and real estate impact.",
+  "author": {
+    "@type": "Organization",
+    "name": "West Pune Real Estate Intelligence"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Mahindra Lifespaces Mahalunge Project Desk"
+  },
+  "datePublished": "2026-03-01",
+  "dateModified": "2026-09-10"
+};
+---
+
+<Layout
+  title="PMRDA Town Planning Scheme Mahalunge | 36M Roads, Infrastructure & Real Estate"
+  description="How PMRDA's flagship Town Planning Scheme at Mahalunge is setting the benchmark for planned urban infrastructure in Pune. 36m roads, smart utilities, and ring road integration."
+  canonical="https://mahindra-mahalunge.com/articles/pmrda-town-planning-scheme-mahalunge"
+>
+  <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
+
+  <article class="pt-32 pb-24 bg-charcoal-950 text-stone-300">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+      
+      <!-- Article Header -->
+      <div class="space-y-4 border-b border-white/10 pb-8">
+        <div class="flex items-center space-x-3 text-xs text-gold-400 uppercase tracking-widest font-semibold">
+          <a href="/articles" class="hover:underline">← All Research</a>
+          <span>•</span>
+          <span>Infrastructure & Civic Planning</span>
+          <span>•</span>
+          <span>2026 Edition</span>
+        </div>
+
+        <h1 class="font-serif text-3xl sm:text-5xl font-bold text-stone-100 leading-tight">
+          PMRDA Town Planning Scheme at Mahalunge: <br />
+          <span class="gold-gradient-text">The Blueprint for West Pune’s High-Tech Future</span>
+        </h1>
+
+        <p class="text-sm sm:text-base text-stone-400 font-light leading-relaxed">
+          How the Pune Metropolitan Region Development Authority (PMRDA) model Town Planning Scheme is laying down 36-meter wide roads, underground utility tunnels, and seamless metro connectivity.
+        </p>
+      </div>
+
+      <!-- Feature Image -->
+      <div class="rounded-2xl overflow-hidden border border-white/10 shadow-2xl">
+        <img
+          src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1200&q=85"
+          alt="PMRDA Planned Infrastructure"
+          class="w-full h-80 sm:h-96 object-cover"
+        />
+      </div>
+
+      <!-- Content -->
+      <div class="space-y-8 text-xs sm:text-sm leading-relaxed text-stone-300">
+        <h2 class="font-serif text-2xl text-stone-100 font-bold">1. What is the PMRDA Town Planning Scheme?</h2>
+        <p>
+          The PMRDA Town Planning (TP) Scheme at Mahalunge-Maan represents Pune’s most ambitious planned development initiative. Based on the successful land-pooling model implemented in Gujarat, land owners pool their parcels together, allowing planning authorities to carve out systematically planned multi-lane roads, civic parks, educational spaces, and utility infrastructure before returning reconstitution plots.
+        </p>
+
+        <h2 class="font-serif text-2xl text-stone-100 font-bold">2. Key Infrastructure Pillars of Mahalunge TP Scheme</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div class="p-5 rounded-xl bg-charcoal-900 border border-white/10 space-y-2">
+            <h4 class="font-serif text-base text-gold-400 font-semibold">36-Meter Arterial Spine</h4>
+            <p class="text-xs text-stone-400">Multi-lane divided boulevards ensuring traffic flows freely between Baner, Balewadi, and Hinjewadi Phase 1.</p>
+          </div>
+          <div class="p-5 rounded-xl bg-charcoal-900 border border-white/10 space-y-2">
+            <h4 class="font-serif text-base text-gold-400 font-semibold">Underground Utility Conduits</h4>
+            <p class="text-xs text-stone-400">Zero recurring road-digging with dedicated ducts for optical fiber, electricity cables, water mains, and sewage networks.</p>
+          </div>
+          <div class="p-5 rounded-xl bg-charcoal-900 border border-white/10 space-y-2">
+            <h4 class="font-serif text-base text-gold-400 font-semibold">Proposed Ring Road Access</h4>
+            <p class="text-xs text-stone-400">Direct integration with the Pune Inner Ring Road, providing high-speed bypass routes to the Mumbai-Pune Expressway.</p>
+          </div>
+          <div class="p-5 rounded-xl bg-charcoal-900 border border-white/10 space-y-2">
+            <h4 class="font-serif text-base text-gold-400 font-semibold">High-Tech City Zoning</h4>
+            <p class="text-xs text-stone-400">Dedicated institutional reservations for international schools, healthcare districts, and community recreational parks.</p>
+          </div>
+        </div>
+
+        <h2 class="font-serif text-2xl text-stone-100 font-bold">3. The Mahindra Lifespaces Catalyst</h2>
+        <p>
+          Mahindra Lifespaces’ acquisition of 13.46 acres in October 2025 with ~₹3,500 Cr development potential anchors the PMRDA corridor with institutional credibility. Grade-A developers of Mahindra’s stature ensure that township communities integrate seamlessly into municipal trunk roads and green buffers.
+        </p>
+      </div>
+
+      <!-- Lead CTA -->
+      <div class="p-8 rounded-2xl bg-charcoal-900 border border-gold-500/40 text-center space-y-4">
+        <h3 class="font-serif text-2xl text-stone-100 font-bold">Download PMRDA Town Planning Map</h3>
+        <p class="text-xs text-stone-400 max-w-md mx-auto">
+          Access high-resolution PMRDA zoning maps, road alignments, and green belt reservations for Mahalunge.
+        </p>
+        <button
+          data-open-modal
+          data-interest="PMRDA Master Plan Download"
+          class="px-8 py-3 rounded bg-gradient-to-r from-gold-400 to-gold-500 text-charcoal-950 text-xs font-bold uppercase tracking-widest hover:shadow-xl transition-all"
+        >
+          Download Master Plan PDF
+        </button>
+      </div>
+
+      <!-- Navigation -->
+      <div class="pt-6 border-t border-white/10 flex flex-col sm:flex-row justify-between text-xs text-stone-400">
+        <a href="/articles/mahalunge-vs-baner-vs-hinjewadi" class="hover:text-gold-400">← Mahalunge vs Baner vs Hinjewadi</a>
+        <a href="/articles" class="hover:text-gold-400 mt-2 sm:mt-0">Back to All Articles →</a>
+      </div>
+
+    </div>
+  </article>
+</Layout>

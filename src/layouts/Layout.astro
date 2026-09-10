@@ -1,0 +1,187 @@
+---
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+import LeadModal from '../components/LeadModal.astro';
+import StickyBar from '../components/StickyBar.astro';
+
+interface Props {
+  title?: string;
+  description?: string;
+  canonical?: string;
+  customSchema?: any;
+}
+
+const {
+  title = "Mahindra Lifespaces Mahalunge, Pune | 2, 3 & 4 BHK Pre-Launch Residences near Hinjewadi & Baner",
+  description = "Discover Mahindra Lifespaces' landmark 13.46-acre residential destination at Nande-Mahalunge, Pune. Estimated ₹3,500 Cr development with 2, 3 & 4 BHK future-ready sustainable homes near Hinjewadi and Baner.",
+  canonical = "https://mahindra-mahalunge.com",
+  customSchema = null,
+} = Astro.props;
+
+const baseSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://mahindra-mahalunge.com/#organization",
+      "name": "Mahindra Lifespaces Developers Ltd.",
+      "url": "https://www.mahindralifespaces.com/",
+      "logo": "https://mahindra-mahalunge.com/images/mahindra-lifespaces-logo.svg",
+      "parentOrganization": {
+        "@type": "Organization",
+        "name": "Mahindra Group"
+      }
+    },
+    {
+      "@type": "ApartmentComplex",
+      "@id": "https://mahindra-mahalunge.com/#project",
+      "name": "Mahindra Lifespaces Mahalunge",
+      "alternateName": ["Mahindra Mahalunge", "Mahindra Nande Mahalunge", "Mahindra Lifespaces Pune"],
+      "description": "Upcoming 13.46-acre future-ready sustainable residential community by Mahindra Lifespaces at Nande-Mahalunge near Hinjewadi and Baner, Pune.",
+      "telephone": "+91-20-67000000",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Mahalunge-Nande Road, near Hinjewadi Phase 1",
+        "addressLocality": "Mahalunge, Mulshi Taluka",
+        "addressRegion": "Pune, Maharashtra",
+        "postalCode": "411045",
+        "addressCountry": "IN"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 18.5714,
+        "longitude": 73.7432
+      },
+      "developer": {
+        "@id": "https://mahindra-mahalunge.com/#organization"
+      }
+    }
+  ]
+};
+---
+
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href={canonical} />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json" set:html={JSON.stringify(baseSchema)} />
+    {customSchema && (
+      <script type="application/ld+json" set:html={JSON.stringify(customSchema)} />
+    )}
+
+    <style is:global>
+      :root {
+        --font-serif: 'Cinzel', serif;
+        --font-sans: 'Plus Jakarta Sans', sans-serif;
+      }
+      body {
+        font-family: var(--font-sans);
+        background-color: #0d0f12;
+        color: #e5e3dc;
+        overflow-x: hidden;
+      }
+      h1, h2, h3, .font-serif {
+        font-family: var(--font-serif);
+      }
+      /* Custom Luxury Scrollbar */
+      ::-webkit-scrollbar {
+        width: 6px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #111317;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #2a303c;
+        border-radius: 3px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #c5a368;
+      }
+      .glass-card {
+        background: linear-gradient(180deg, rgba(25, 29, 38, 0.75) 0%, rgba(14, 17, 23, 0.85) 100%);
+        backdrop-filter: blur(20px);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+      }
+      .glass-card:hover {
+        border-color: rgba(197, 163, 104, 0.35);
+        box-shadow: 0 12px 40px -10px rgba(0, 0, 0, 0.7);
+      }
+      .gold-gradient-text {
+        background: linear-gradient(135deg, #ffffff 0%, #f5e6cf 35%, #c5a368 75%, #9f7a4e 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      .red-glow-btn {
+        background: linear-gradient(135deg, #e31837 0%, #c8102e 60%, #990f23 100%);
+        box-shadow: 0 4px 20px -2px rgba(227, 24, 55, 0.45);
+      }
+      .red-glow-btn:hover {
+        box-shadow: 0 6px 28px rgba(227, 24, 55, 0.65);
+      }
+      .gold-glow-btn {
+        background: linear-gradient(135deg, #f5e6cf 0%, #c5a368 50%, #a7854d 100%);
+        box-shadow: 0 4px 20px -2px rgba(197, 163, 104, 0.35);
+      }
+      .gold-glow-btn:hover {
+        box-shadow: 0 6px 28px rgba(197, 163, 104, 0.55);
+      }
+    </style>
+  </head>
+  <body class="bg-charcoal-950 text-stone-200 antialiased selection:bg-brand-red/30 selection:text-white relative">
+    
+    <!-- Ambient Mahindra Brand Atmosphere Lighting Orbs -->
+    <div class="fixed top-0 left-1/4 -translate-x-1/2 w-[700px] h-[500px] bg-brand-red/[0.07] rounded-full blur-[160px] pointer-events-none -z-10"></div>
+    <div class="fixed top-1/3 right-0 w-[600px] h-[600px] bg-gold-500/[0.05] rounded-full blur-[180px] pointer-events-none -z-10"></div>
+    <div class="fixed bottom-0 left-1/3 w-[800px] h-[500px] bg-brand-red/[0.04] rounded-full blur-[170px] pointer-events-none -z-10"></div>
+
+    <Navbar />
+    
+    <main class="min-h-screen">
+      <slot />
+    </main>
+
+    <Footer />
+
+    <!-- Interactive Components -->
+    <LeadModal />
+    <StickyBar />
+
+    <!-- Script to connect modal buttons -->
+    <script>
+      document.addEventListener('click', (e) => {
+        const target = (e.target as HTMLElement).closest('[data-open-modal]');
+        if (target) {
+          const interest = target.getAttribute('data-interest') || 'General Enquiry';
+          const unit = target.getAttribute('data-unit') || '';
+          window.dispatchEvent(new CustomEvent('open-lead-modal', {
+            detail: { interest, unit }
+          }));
+        }
+      });
+    </script>
+  </body>
+</html>

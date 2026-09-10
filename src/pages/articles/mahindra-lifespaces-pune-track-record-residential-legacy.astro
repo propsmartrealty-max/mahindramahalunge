@@ -1,0 +1,193 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://mahindra-mahalunge.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Research Hub", "item": "https://mahindra-mahalunge.com/articles" },
+    { "@type": "ListItem", "position": 3, "name": "Mahindra Lifespaces Pune Legacy & Track Record", "item": "https://mahindra-mahalunge.com/articles/mahindra-lifespaces-pune-track-record-residential-legacy" }
+  ]
+};
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Mahindra Lifespaces in Pune: A Legacy of Delivered Trust Across Landmark Residential Communities",
+  "description": "Discover Mahindra Lifespaces' proven Pune residential track record: Mahindra Antheia, Centralis, Happinest Tathawade, and the new 13.46-acre Mahalunge community.",
+  "author": {
+    "@type": "Organization",
+    "name": "Mahindra Lifespaces Mahalunge Research Desk"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Mahindra Lifespaces Developers Ltd.",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://mahindra-mahalunge.com/images/mahindra-lifespaces-logo.svg"
+    }
+  },
+  "datePublished": "2026-09-10",
+  "dateModified": "2026-09-10"
+};
+
+const pageSchema = {
+  "@context": "https://schema.org",
+  "@graph": [breadcrumbSchema, articleSchema]
+};
+---
+
+<Layout
+  title="Mahindra Lifespaces in Pune: Delivered Projects & Residential Legacy"
+  description="Examine Mahindra Lifespaces' proven Pune track record. From Mahindra Antheia and Centralis to the upcoming 13.46-acre Mahalunge development."
+  canonical="https://mahindra-mahalunge.com/articles/mahindra-lifespaces-pune-track-record-residential-legacy"
+  customSchema={pageSchema}
+>
+  <article class="pt-32 pb-24 bg-charcoal-950">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+      
+      <!-- Header -->
+      <div class="space-y-4 border-b border-white/10 pb-8">
+        <div class="flex items-center space-x-2 text-xs text-stone-400 font-mono">
+          <a href="/articles" class="hover:text-gold-400">← Research Hub</a>
+          <span>/</span>
+          <span class="text-gold-400">Developer Credibility & E-E-A-T</span>
+          <span>/</span>
+          <span>Updated Sept 2026</span>
+        </div>
+
+        <h1 class="font-serif text-3xl sm:text-5xl font-bold text-stone-100 leading-tight">
+          Mahindra Lifespaces in Pune: <br />
+          <span class="gold-gradient-text">A Proven Legacy of Delivered Residential Trust</span>
+        </h1>
+
+        <p class="text-stone-300 text-sm sm:text-base font-light leading-relaxed">
+          How the Mahindra Group’s pioneering real estate development arm has reshaped Pune's urban skylines through green engineering, transparent corporate governance, and uncompromising delivery punctuality.
+        </p>
+      </div>
+
+      <!-- Feature Image -->
+      <div class="rounded-2xl overflow-hidden border border-white/10 shadow-2xl">
+        <img
+          src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=85"
+          alt="Mahindra Lifespaces Pune Delivered Developments"
+          class="w-full h-80 sm:h-96 object-cover"
+        />
+      </div>
+
+      <!-- Article Content -->
+      <div class="prose prose-invert max-w-none space-y-8 text-stone-300 text-sm leading-relaxed">
+        
+        <section class="space-y-4">
+          <h2 class="font-serif text-2xl text-stone-100 font-bold">
+            1. The Mahindra Group Legacy: 75+ Years of Corporate Excellence
+          </h2>
+          <p>
+            Established as the real estate and infrastructure development arm of the multinational <strong>Mahindra Group</strong>, Mahindra Lifespaces Developers Ltd. (MLDL) is one of India's few publicly listed developers (NSE: MAHLIFE) that adheres to stringent global ESG (Environmental, Social, and Governance) standards.
+          </p>
+          <p>
+            With a portfolio spanning more than 35 million sq.ft. of completed, ongoing, and forthcoming residential projects across Mumbai, Pune, Bengaluru, Chennai, and the National Capital Region (NCR), Mahindra Lifespaces is renowned for delivering communities that generate enduring generational capital appreciation.
+          </p>
+        </section>
+
+        <!-- Delivered Pune Projects Showcase -->
+        <section class="space-y-4">
+          <h2 class="font-serif text-2xl text-stone-100 font-bold">
+            2. Landmark Footprint Across Pune
+          </h2>
+          
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-2">
+            <!-- Project 1 -->
+            <div class="p-6 rounded-xl bg-charcoal-900 border border-white/10 space-y-3">
+              <div class="flex justify-between items-start">
+                <h3 class="font-serif text-lg font-bold text-stone-100">Mahindra Antheia</h3>
+                <span class="px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-400 text-[10px] uppercase font-bold">Delivered</span>
+              </div>
+              <p class="text-xs text-stone-400">
+                Pimpri, Pune. A premier 16-acre integrated residential township with landscaped podiums, expansive club facilities, and thriving resident communities.
+              </p>
+              <div class="text-[11px] text-gold-400 font-mono">1, 2, 2.5 & 3 BHK</div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="p-6 rounded-xl bg-charcoal-900 border border-white/10 space-y-3">
+              <div class="flex justify-between items-start">
+                <h3 class="font-serif text-lg font-bold text-stone-100">Mahindra Centralis</h3>
+                <span class="px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-400 text-[10px] uppercase font-bold">Delivered</span>
+              </div>
+              <p class="text-xs text-stone-400">
+                Pimpri-Chinchwad. Modern high-rise architectural towers designed with 100% IGBC green homes certification and smart cross-ventilation.
+              </p>
+              <div class="text-[11px] text-gold-400 font-mono">1 & 2 BHK Residences</div>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="p-6 rounded-xl bg-charcoal-900 border border-white/10 space-y-3">
+              <div class="flex justify-between items-start">
+                <h3 class="font-serif text-lg font-bold text-stone-100">Happinest Tathawade</h3>
+                <span class="px-2 py-0.5 rounded bg-amber-500/20 text-amber-400 text-[10px] uppercase font-bold">Under Constr.</span>
+              </div>
+              <p class="text-xs text-stone-400">
+                Tathawade, Pune. Future-ready biophilic fusion homes featuring Pune's first multi-tier aerial clubhouse and skywalk amenity decks.
+              </p>
+              <div class="text-[11px] text-gold-400 font-mono">Fusion 1 & 2 BHK</div>
+            </div>
+          </div>
+        </section>
+
+        <!-- The 13.46 Acres Landmark -->
+        <section class="p-8 rounded-2xl bg-charcoal-900 border border-white/10 space-y-4">
+          <span class="text-xs uppercase tracking-widest text-gold-400 font-bold">New Frontier</span>
+          <h2 class="font-serif text-2xl text-stone-100 font-bold">
+            3. The Next Benchmark: 13.46 Acres at Nande–Mahalunge (₹3,500 Cr Potential)
+          </h2>
+          <p class="text-stone-300">
+            In October 2025, Mahindra Lifespaces officially announced the strategic acquisition of 13.46 acres in the Nande–Mahalunge corridor with an estimated development potential of ₹3,500 Crore.
+          </p>
+          <p class="text-stone-300">
+            This land acquisition represents one of the largest single institutional residential investments in West Pune. It is planned to feature expansive 2, 3, and 4 BHK sustainable residences enveloped in rich biodiverse gardens, a private master clubhouse, state-of-the-art sports facilities, and direct access to the PMRDA Town Planning Scheme 36-meter boulevard.
+          </p>
+        </section>
+
+        <section class="space-y-3">
+          <h2 class="font-serif text-2xl text-stone-100 font-bold">
+            4. Why Institutional Developers Offer Superior Investment Security
+          </h2>
+          <p>
+            When purchasing residential property in Pune, institutional developers like Mahindra Lifespaces provide unmatched structural advantages:
+          </p>
+          <ul class="list-disc pl-5 space-y-2 text-stone-400">
+            <li><strong>Clear Land Titles & Diligence:</strong> Rigorous corporate legal audits ensure zero encumbrances or title ambiguities.</li>
+            <li><strong>MahaRERA Financial Discipline:</strong> Strict adherence to dedicated project escrow accounts guarantees funds are never diverted to other sites.</li>
+            <li><strong>Green Value Preservation:</strong> Energy-efficient design, solar integration, and rainwater harvesting lower life-cycle maintenance costs for homeowners.</li>
+            <li><strong>Secondary Market Resale Premium:</strong> Mahindra developments consistently command higher price multiples and faster resale transactions compared to unbranded buildings.</li>
+          </ul>
+        </section>
+
+      </div>
+
+      <!-- Action Card -->
+      <div class="p-8 rounded-2xl bg-gradient-to-r from-gold-950/40 to-charcoal-900 border border-gold-500/30 space-y-4 text-center">
+        <span class="text-xs uppercase tracking-widest text-gold-400 font-bold">Pre-Launch Privileges</span>
+        <h3 class="font-serif text-2xl sm:text-3xl text-stone-100 font-bold">
+          Be Part of Mahindra’s Next Milestone in Mahalunge
+        </h3>
+        <p class="text-xs sm:text-sm text-stone-300 max-w-lg mx-auto leading-relaxed">
+          Register your Expression of Interest (EOI) today to receive private architectural previews and guaranteed first access when bookings open.
+        </p>
+        <div class="pt-2">
+          <button
+            type="button"
+            data-open-modal
+            data-interest="Priority Early Pass - Brand Legacy"
+            class="px-8 py-3.5 rounded-full bg-gradient-to-r from-gold-400 via-gold-500 to-gold-400 text-charcoal-950 font-bold text-xs uppercase tracking-wider hover:shadow-xl active:scale-95 transition-all"
+          >
+            Register for Pre-Launch EOI
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </article>
+</Layout>

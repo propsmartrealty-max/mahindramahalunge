@@ -1,0 +1,325 @@
+---
+// ResidenceSelector.astro - Interactive Luxury Floor Plan & Unit Selector
+---
+
+<div class="w-full bg-charcoal-900 border border-white/10 rounded-2xl p-6 lg:p-10 shadow-2xl">
+  
+  <!-- Top Selector Navigation -->
+  <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-white/10 pb-6">
+    <div>
+      <span class="text-[11px] uppercase tracking-widest text-gold-400 font-bold">Curated Living Spaces</span>
+      <h3 class="font-serif text-2xl lg:text-3xl text-stone-100 font-bold">Interactive Residence Explorer</h3>
+    </div>
+
+    <!-- Configuration Tabs -->
+    <div class="flex items-center space-x-2 bg-charcoal-950 p-1.5 rounded-lg border border-white/10">
+      <button
+        id="tab-2bhk"
+        class="tab-btn px-5 py-2 rounded text-xs font-semibold uppercase tracking-widest text-stone-400 hover:text-white transition-all"
+      >
+        2 BHK
+      </button>
+      <button
+        id="tab-3bhk"
+        class="tab-btn px-5 py-2 rounded text-xs font-bold uppercase tracking-widest bg-gold-500 text-charcoal-950 shadow-md transition-all"
+      >
+        3 BHK
+      </button>
+      <button
+        id="tab-4bhk"
+        class="tab-btn px-5 py-2 rounded text-xs font-semibold uppercase tracking-widest text-stone-400 hover:text-white transition-all"
+      >
+        4 BHK
+      </button>
+    </div>
+  </div>
+
+  <!-- Main Residence Detail Grid -->
+  <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 mt-8 items-start">
+    
+    <!-- Left Col: Interactive Blueprint Canvas -->
+    <div class="lg:col-span-7 bg-charcoal-950 rounded-xl border border-white/10 p-5 relative overflow-hidden group">
+      <div class="flex items-center justify-between mb-3 text-xs text-stone-400 border-b border-white/5 pb-2">
+        <span class="flex items-center space-x-2">
+          <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+          <span class="text-[11px] uppercase tracking-wider">Concept Blueprint Representation</span>
+        </span>
+        <button 
+          id="zoom-toggle-btn"
+          class="px-2.5 py-1 rounded bg-white/5 hover:bg-white/10 text-stone-300 text-[10px] uppercase tracking-wider"
+        >
+          Zoom Blueprint
+        </button>
+      </div>
+
+      <!-- SVG Blueprint Container -->
+      <div id="blueprint-container" class="transition-transform duration-300 origin-center">
+        <!-- SVG content will be injected by client script -->
+        <div id="svg-target" class="w-full h-auto"></div>
+      </div>
+
+      <div class="mt-4 pt-3 border-t border-white/10 flex items-center justify-between text-[11px] text-stone-400">
+        <span>*Dimensions indicative of proposed layouts</span>
+        <span class="text-gold-400">Vastu Compliant Orientation</span>
+      </div>
+    </div>
+
+    <!-- Right Col: Specifications & Features -->
+    <div class="lg:col-span-5 space-y-6">
+      <div>
+        <div id="unit-collection-label" class="text-xs uppercase tracking-widest text-gold-400 font-semibold">3 BHK Collection</div>
+        <h4 id="unit-name" class="font-serif text-2xl text-stone-100 font-bold mt-1">3 BHK Luxe Residence</h4>
+        <p class="text-xs text-stone-400 mt-2 leading-relaxed">
+          Engineered with Mahindra Lifespaces' "Homes of Positive Energy" philosophy, prioritizing abundant cross-ventilation, deep daylight penetration, and generous panoramic outdoor decks.
+        </p>
+      </div>
+
+      <!-- Key Specs Table -->
+      <div class="bg-charcoal-950/60 rounded-xl border border-white/10 divide-y divide-white/5 text-xs">
+        <div class="p-3.5 flex justify-between">
+          <span class="text-stone-400">Tentative Carpet Area</span>
+          <span id="spec-carpet" class="font-semibold text-stone-100">1,120 - 1,210 sq.ft.*</span>
+        </div>
+        <div class="p-3.5 flex justify-between">
+          <span class="text-stone-400">Exclusive Balcony Deck</span>
+          <span id="spec-balcony" class="font-semibold text-stone-100">92 sq.ft.*</span>
+        </div>
+        <div class="p-3.5 flex justify-between">
+          <span class="text-stone-400">Primary Orientation</span>
+          <span id="spec-orient" class="font-semibold text-stone-100">East - West Cross Breeze</span>
+        </div>
+        <div class="p-3.5 flex justify-between">
+          <span class="text-stone-400">Facing & Vista</span>
+          <span id="spec-view" class="font-semibold text-stone-100">Central Landscaped Greens</span>
+        </div>
+        <div class="p-3.5 flex justify-between">
+          <span class="text-stone-400">Proposed Towers</span>
+          <span id="spec-tower" class="font-semibold text-stone-100">Towers Delta & Epsilon</span>
+        </div>
+      </div>
+
+      <!-- Architectural Highlights -->
+      <div>
+        <h5 class="text-xs uppercase tracking-widest text-stone-300 font-semibold mb-3">Architectural Highlights</h5>
+        <ul id="highlights-list" class="space-y-2 text-xs text-stone-400">
+          <li class="flex items-start space-x-2">
+            <span class="text-gold-400 mt-0.5">✦</span>
+            <span>Triple-exposure cross ventilation maximising daylight and air flow</span>
+          </li>
+          <li class="flex items-start space-x-2">
+            <span class="text-gold-400 mt-0.5">✦</span>
+            <span>Separate guest bedroom flexible as a hybrid work studio / library</span>
+          </li>
+          <li class="flex items-start space-x-2">
+            <span class="text-gold-400 mt-0.5">✦</span>
+            <span>Large double-height balcony overlooking private organic groves</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Action CTAs -->
+      <div class="pt-2 flex flex-col sm:flex-row gap-3">
+        <button
+          id="enquire-layout-btn"
+          data-open-modal
+          data-interest="Residence Enquiry"
+          class="flex-1 py-3 px-4 rounded bg-gradient-to-r from-gold-400 via-gold-500 to-gold-400 text-charcoal-950 font-bold text-xs uppercase tracking-widest hover:shadow-lg transition-all"
+        >
+          Enquire For This Layout
+        </button>
+        <button
+          id="download-plan-btn"
+          data-open-modal
+          data-interest="Download Floor Plan"
+          class="py-3 px-4 rounded border border-white/20 hover:border-gold-400 text-stone-200 hover:text-white text-xs uppercase tracking-wider transition-colors flex items-center justify-center space-x-2"
+        >
+          <svg class="w-4 h-4 text-gold-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+          </svg>
+          <span>Download Plan</span>
+        </button>
+      </div>
+
+      <p class="text-[10px] text-stone-500 italic">
+        *Final RERA carpet area, room configurations and structural columns are subject to MahaRERA and statutory sanctions.
+      </p>
+    </div>
+
+  </div>
+
+</div>
+
+<script>
+  const data: any = {
+    '2 BHK': {
+      label: '2 BHK Collection',
+      name: '2 BHK Optima Suite',
+      carpet: '785 - 895 sq.ft.*',
+      balcony: '68 sq.ft.*',
+      orient: 'East-Facing (Vastu Compliant)',
+      view: 'Central Landscaped Greens & Courtyard',
+      tower: 'Towers Alpha & Beta',
+      highlights: [
+        'Dedicated entry foyer ensuring complete living room privacy',
+        'Cross-ventilation architectural orientation for natural air breeze',
+        'Generous 5-foot deep panoramic deck overlooking central foliage',
+        'Concealed air-conditioning and acoustic insulation provisioning'
+      ],
+      svg: `
+        <svg viewBox="0 0 600 420" class="w-full h-auto text-stone-300">
+          <rect x="20" y="20" width="560" height="380" fill="#12151a" stroke="#c5a368" stroke-width="2" rx="4"/>
+          <rect x="40" y="40" width="280" height="190" fill="#1b2028" stroke="#333d4b" stroke-dasharray="3,3"/>
+          <text x="180" y="125" fill="#e5e3dc" font-family="Cinzel" font-size="14" text-anchor="middle">LIVING & DINING</text>
+          <text x="180" y="145" fill="#9ca3af" font-size="11" text-anchor="middle">18'0" × 12'0"</text>
+          <rect x="320" y="40" width="100" height="120" fill="#1f2732" stroke="#c5a368" stroke-width="1.5"/>
+          <text x="370" y="95" fill="#c5a368" font-size="11" text-anchor="middle" font-weight="bold">BALCONY DECK</text>
+          <rect x="40" y="240" width="220" height="140" fill="#1b2028" stroke="#333d4b"/>
+          <text x="150" y="305" fill="#e5e3dc" font-family="Cinzel" font-size="13" text-anchor="middle">MASTER SUITE</text>
+          <rect x="280" y="180" width="280" height="150" fill="#1b2028" stroke="#333d4b"/>
+          <text x="420" y="250" fill="#e5e3dc" font-family="Cinzel" font-size="13" text-anchor="middle">BEDROOM 02</text>
+          <circle cx="530" cy="360" r="20" fill="#111317" stroke="#c5a368"/>
+          <text x="530" y="355" fill="#c5a368" font-size="11" font-weight="bold" text-anchor="middle">▲</text>
+          <text x="530" y="370" fill="#c5a368" font-size="9" font-weight="bold" text-anchor="middle">N</text>
+        </svg>
+      `
+    },
+    '3 BHK': {
+      label: '3 BHK Collection',
+      name: '3 BHK Luxe Residence',
+      carpet: '1,120 - 1,210 sq.ft.*',
+      balcony: '92 sq.ft.*',
+      orient: 'East - West Cross Breeze',
+      view: 'Central Landscaped Greens',
+      tower: 'Towers Delta & Epsilon',
+      highlights: [
+        'Triple-exposure cross ventilation maximising daylight and air flow',
+        'Separate guest bedroom flexible as a hybrid work studio / library',
+        'Large double-height balcony overlooking private organic groves',
+        'Zero dead-space corridor architecture for optimal usable carpet area'
+      ],
+      svg: `
+        <svg viewBox="0 0 600 420" class="w-full h-auto text-stone-300">
+          <rect x="20" y="20" width="560" height="380" fill="#12151a" stroke="#c5a368" stroke-width="2" rx="4"/>
+          <rect x="40" y="40" width="310" height="180" fill="#1b2028" stroke="#333d4b"/>
+          <text x="195" y="120" fill="#e5e3dc" font-family="Cinzel" font-size="14" text-anchor="middle">EXPANSIVE LIVING & DINING</text>
+          <text x="195" y="140" fill="#9ca3af" font-size="11" text-anchor="middle">24'0" × 13'0"</text>
+          <rect x="360" y="40" width="180" height="110" fill="#1b2028" stroke="#333d4b"/>
+          <text x="450" y="90" fill="#e5e3dc" font-family="Cinzel" font-size="12" text-anchor="middle">ISLAND KITCHEN</text>
+          <rect x="40" y="230" width="200" height="150" fill="#1b2028" stroke="#333d4b"/>
+          <text x="140" y="305" fill="#e5e3dc" font-family="Cinzel" font-size="13" text-anchor="middle">MASTER SUITE</text>
+          <rect x="250" y="230" width="160" height="150" fill="#1b2028" stroke="#333d4b"/>
+          <text x="330" y="305" fill="#e5e3dc" font-family="Cinzel" font-size="12" text-anchor="middle">BEDROOM 02</text>
+          <rect x="420" y="160" width="140" height="140" fill="#1b2028" stroke="#333d4b"/>
+          <text x="490" y="225" fill="#e5e3dc" font-family="Cinzel" font-size="12" text-anchor="middle">GUEST / STUDY</text>
+          <circle cx="530" cy="350" r="20" fill="#111317" stroke="#c5a368"/>
+          <text x="530" y="345" fill="#c5a368" font-size="11" font-weight="bold" text-anchor="middle">▲</text>
+          <text x="530" y="360" fill="#c5a368" font-size="9" font-weight="bold" text-anchor="middle">N</text>
+        </svg>
+      `
+    },
+    '4 BHK': {
+      label: '4 BHK Collection',
+      name: '4 BHK Signature Estate',
+      carpet: '1,650 - 1,820 sq.ft.*',
+      balcony: '145 sq.ft.*',
+      orient: 'North-East 270° Panorama',
+      view: 'Scenic Mula-Mutha Riverbed & Skyline',
+      tower: 'Iconic Signature Tower',
+      highlights: [
+        'Exclusive private elevator vestibule entrance lobby',
+        'Grand 28-foot living room opening into an uninterrupted horizon sky deck',
+        'Dual master bedrooms with luxury en-suite soaking bath accommodations',
+        'Staff quarters with separate service ingress and utility corridor'
+      ],
+      svg: `
+        <svg viewBox="0 0 600 420" class="w-full h-auto text-stone-300">
+          <rect x="20" y="20" width="560" height="380" fill="#12151a" stroke="#c5a368" stroke-width="2" rx="4"/>
+          <rect x="40" y="40" width="340" height="180" fill="#1b2028" stroke="#333d4b"/>
+          <text x="210" y="120" fill="#e5e3dc" font-family="Cinzel" font-size="15" text-anchor="middle">GRAND SALON & DINING</text>
+          <text x="210" y="145" fill="#9ca3af" font-size="12" text-anchor="middle">28'0" × 16'0"</text>
+          <rect x="390" y="40" width="160" height="140" fill="#1f2732" stroke="#c5a368" stroke-width="2"/>
+          <text x="470" y="105" fill="#c5a368" font-size="12" font-weight="bold" text-anchor="middle">PANORAMIC SKY DECK</text>
+          <rect x="40" y="230" width="180" height="150" fill="#1b2028" stroke="#333d4b"/>
+          <text x="130" y="300" fill="#e5e3dc" font-family="Cinzel" font-size="13" text-anchor="middle">PRESIDENTIAL SUITE</text>
+          <rect x="230" y="230" width="150" height="150" fill="#1b2028" stroke="#333d4b"/>
+          <text x="305" y="300" fill="#e5e3dc" font-family="Cinzel" font-size="12" text-anchor="middle">SUITE 02</text>
+          <rect x="390" y="190" width="160" height="90" fill="#1b2028" stroke="#333d4b"/>
+          <text x="470" y="235" fill="#e5e3dc" font-family="Cinzel" font-size="11" text-anchor="middle">SUITE 03</text>
+          <circle cx="80" cy="80" r="20" fill="#111317" stroke="#c5a368"/>
+          <text x="80" y="75" fill="#c5a368" font-size="11" font-weight="bold" text-anchor="middle">▲</text>
+          <text x="80" y="90" fill="#c5a368" font-size="9" font-weight="bold" text-anchor="middle">N</text>
+        </svg>
+      `
+    }
+  };
+
+  let currentKey = '3 BHK';
+  let isZoomed = false;
+
+  function renderUnit(key: string) {
+    currentKey = key;
+    const item = data[key];
+    if (!item) return;
+
+    const label = document.getElementById('unit-collection-label');
+    const name = document.getElementById('unit-name');
+    const carpet = document.getElementById('spec-carpet');
+    const balcony = document.getElementById('spec-balcony');
+    const orient = document.getElementById('spec-orient');
+    const view = document.getElementById('spec-view');
+    const tower = document.getElementById('spec-tower');
+    const highlights = document.getElementById('highlights-list');
+    const svgTarget = document.getElementById('svg-target');
+
+    if (label) label.textContent = item.label;
+    if (name) name.textContent = item.name;
+    if (carpet) carpet.textContent = item.carpet;
+    if (balcony) balcony.textContent = item.balcony;
+    if (orient) orient.textContent = item.orient;
+    if (view) view.textContent = item.view;
+    if (tower) tower.textContent = item.tower;
+
+    if (highlights) {
+      highlights.innerHTML = item.highlights
+        .map((h: string) => `<li class="flex items-start space-x-2"><span class="text-gold-400 mt-0.5">✦</span><span>${h}</span></li>`)
+        .join('');
+    }
+
+    if (svgTarget) {
+      svgTarget.innerHTML = item.svg;
+    }
+
+    // Update tab styles
+    ['2 BHK', '3 BHK', '4 BHK'].forEach((t) => {
+      const btnId = `tab-${t.toLowerCase().replace(' ', '')}`;
+      const btn = document.getElementById(btnId);
+      if (btn) {
+        if (t === key) {
+          btn.className = 'tab-btn px-5 py-2 rounded text-xs font-bold uppercase tracking-widest bg-gold-500 text-charcoal-950 shadow-md transition-all';
+        } else {
+          btn.className = 'tab-btn px-5 py-2 rounded text-xs font-semibold uppercase tracking-widest text-stone-400 hover:text-white transition-all';
+        }
+      }
+    });
+  }
+
+  // Event bindings
+  document.getElementById('tab-2bhk')?.addEventListener('click', () => renderUnit('2 BHK'));
+  document.getElementById('tab-3bhk')?.addEventListener('click', () => renderUnit('3 BHK'));
+  document.getElementById('tab-4bhk')?.addEventListener('click', () => renderUnit('4 BHK'));
+
+  const zoomBtn = document.getElementById('zoom-toggle-btn');
+  const container = document.getElementById('blueprint-container');
+  zoomBtn?.addEventListener('click', () => {
+    isZoomed = !isZoomed;
+    if (container) {
+      container.style.transform = isZoomed ? 'scale(1.2)' : 'scale(1)';
+    }
+    if (zoomBtn) {
+      zoomBtn.textContent = isZoomed ? 'Reset View' : 'Zoom Blueprint';
+    }
+  });
+
+  // Initial render
+  renderUnit('3 BHK');
+</script>

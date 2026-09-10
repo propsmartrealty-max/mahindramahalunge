@@ -1,0 +1,153 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import ResidenceSelector from '../../components/ResidenceSelector.astro';
+
+const seoSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Luxury Flats & Apartments Near Hinjewadi IT Park | Mahindra Mahalunge",
+  "description": "Discover upcoming luxury 2, 3 & 4 BHK flats near Hinjewadi Phase 1 at Mahindra Lifespaces Mahalunge. 7-minute commute, 13.46-acre master green community.",
+  "url": "https://mahindra-mahalunge.com/flats-near-hinjewadi"
+};
+---
+
+<Layout
+  title="Flats Near Hinjewadi IT Park | Luxury 2, 3 & 4 BHK at Mahindra Mahalunge"
+  description="Looking for flats near Hinjewadi? Explore Mahindra Lifespaces' upcoming 13.46-acre residential sanctuary at Mahalunge. 7-minute signal-free commute, world-class amenities."
+  canonical="https://mahindra-mahalunge.com/flats-near-hinjewadi"
+>
+  <script type="application/ld+json" set:html={JSON.stringify(seoSchema)} />
+
+  <!-- Hero Section -->
+  <section class="pt-32 pb-20 bg-charcoal-950 border-b border-white/10 relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
+      <div class="inline-flex items-center space-x-2 px-3 py-1 rounded bg-gold-500/10 border border-gold-500/30 text-gold-400 text-xs font-semibold uppercase tracking-widest">
+        <span>Prime IT Tech Belt Living</span>
+      </div>
+      <h1 class="font-serif text-3xl sm:text-5xl lg:text-6xl font-bold text-stone-100 max-w-4xl leading-tight">
+        Luxury Flats Near Hinjewadi: <br />
+        <span class="gold-gradient-text">A 7-Minute Green Commute at Mahindra Mahalunge</span>
+      </h1>
+      <p class="text-stone-300 text-sm sm:text-base max-w-2xl font-light leading-relaxed">
+        Say goodbye to Hinjewadi traffic jams. Live in an institutional 13.46-acre biophilic sanctuary in Mahalunge with seamless multi-lane connectivity to Infosys, Wipro, TCS, and Cognizant campuses.
+      </p>
+      
+      <div class="pt-4 flex flex-col sm:flex-row gap-4">
+        <button
+          data-open-modal
+          data-interest="Hinjewadi Tech Worker Priority Pass"
+          class="px-8 py-3.5 rounded bg-gradient-to-r from-gold-400 via-gold-500 to-gold-400 text-charcoal-950 text-xs font-bold uppercase tracking-widest hover:shadow-xl transition-all"
+        >
+          Request IT Employee Priority Pass
+        </button>
+        <a
+          href="#explore-residences"
+          class="px-8 py-3.5 rounded border border-white/20 text-stone-200 hover:text-white text-xs font-semibold uppercase tracking-widest text-center hover:bg-white/5 transition-colors"
+        >
+          View Configurations
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Commute Comparison Matrix -->
+  <section class="py-16 bg-charcoal-900 border-b border-white/10">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+      <div class="text-center space-y-2">
+        <span class="text-xs uppercase tracking-widest text-gold-400 font-bold">Commute Velocity</span>
+        <h2 class="font-serif text-2xl sm:text-3xl text-stone-100 font-bold">Transit Times to Major Hinjewadi Tech Clusters</h2>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="p-6 rounded-xl bg-charcoal-950 border border-white/10 text-center space-y-2">
+          <div class="font-serif text-3xl font-bold text-gold-400">7 Mins</div>
+          <h3 class="font-semibold text-stone-100 text-sm">Hinjewadi Phase 1</h3>
+          <p class="text-[11px] text-stone-400">Infosys Campus, Wipro Technologies, Cognizant, KPIT</p>
+        </div>
+
+        <div class="p-6 rounded-xl bg-charcoal-950 border border-white/10 text-center space-y-2">
+          <div class="font-serif text-3xl font-bold text-gold-400">12 Mins</div>
+          <h3 class="font-semibold text-stone-100 text-sm">Hinjewadi Phase 2 & 3</h3>
+          <p class="text-[11px] text-stone-400">TCS Sahyadri Park, Tech Mahindra, Mindtree, Barclays</p>
+        </div>
+
+        <div class="p-6 rounded-xl bg-charcoal-950 border border-white/10 text-center space-y-2">
+          <div class="font-serif text-3xl font-bold text-emerald-400">8 Mins</div>
+          <h3 class="font-semibold text-stone-100 text-sm">Balewadi High Street</h3>
+          <p class="text-[11px] text-stone-400">Fine dining, retail boulevards & sports arena</p>
+        </div>
+
+        <div class="p-6 rounded-xl bg-charcoal-950 border border-white/10 text-center space-y-2">
+          <div class="font-serif text-3xl font-bold text-stone-100">10 Mins</div>
+          <h3 class="font-semibold text-stone-100 text-sm">Upcoming Metro 3</h3>
+          <p class="text-[11px] text-stone-400">Hinjewadi-Shivajinagar high-speed rapid rail</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Residence Selector Section -->
+  <section id="explore-residences" class="py-20 bg-charcoal-950">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+      <div class="text-center max-w-2xl mx-auto space-y-2">
+        <span class="text-xs uppercase tracking-widest text-gold-400 font-bold">Designed for Modern Lifestyle</span>
+        <h2 class="font-serif text-3xl sm:text-4xl text-stone-100 font-bold">Explore Residences Near Hinjewadi</h2>
+        <p class="text-xs text-stone-400 leading-relaxed">
+          Optimized for hybrid work lifestyles with dedicated study spaces, high-speed fiber connectivity, and expansive private balconies.
+        </p>
+      </div>
+
+      <ResidenceSelector />
+    </div>
+  </section>
+
+  <!-- Why Tech Professionals Choose Mahindra Mahalunge -->
+  <section class="py-20 bg-charcoal-900 border-t border-white/10">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+      <div class="text-center space-y-2">
+        <span class="text-xs uppercase tracking-widest text-gold-400 font-bold">Unrivaled Quality of Life</span>
+        <h2 class="font-serif text-3xl text-stone-100 font-bold">Why IT Leaders Choose Mahindra Mahalunge</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="p-6 rounded-xl bg-charcoal-950 border border-white/10 space-y-3">
+          <h3 class="font-serif text-lg font-bold text-stone-100">1. Clean Valley Living Away from Industrial Dust</h3>
+          <p class="text-xs text-stone-400 leading-relaxed">
+            Unlike residential towers positioned directly along congested highway nodes, Mahalunge sits in a scenic natural valley flanked by green hills and the Mula-Mutha river basin.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-xl bg-charcoal-950 border border-white/10 space-y-3">
+          <h3 class="font-serif text-lg font-bold text-stone-100">2. Institutional Mahindra Reliability</h3>
+          <p class="text-xs text-stone-400 leading-relaxed">
+            Backed by the USD 20+ Billion Mahindra Group, guaranteeing zero project delays, clear legal land titles, and high-quality structural execution.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-xl bg-charcoal-950 border border-white/10 space-y-3">
+          <h3 class="font-serif text-lg font-bold text-stone-100">3. High Rental Demand & Institutional Asset Value</h3>
+          <p class="text-xs text-stone-400 leading-relaxed">
+            Properties close to Hinjewadi command 4.5% to 5.2% rental yields from MNC consultants and senior corporate leadership seeking upscale gated communities.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-xl bg-charcoal-950 border border-white/10 space-y-3">
+          <h3 class="font-serif text-lg font-bold text-stone-100">4. Proximity to Top International Schools</h3>
+          <p class="text-xs text-stone-400 leading-relaxed">
+            Within 10 minutes of Mahindra International School, DPS Pune, and Symbiosis, providing world-class education without stressful cross-city school bus commutes.
+          </p>
+        </div>
+      </div>
+
+      <div class="text-center pt-4">
+        <button
+          data-open-modal
+          data-interest="Hinjewadi Tech Community Pass"
+          class="px-8 py-3.5 rounded bg-gradient-to-r from-gold-400 via-gold-500 to-gold-400 text-charcoal-950 text-xs font-bold uppercase tracking-widest hover:shadow-xl transition-all"
+        >
+          Register for Early Priority Allocations
+        </button>
+      </div>
+    </div>
+  </section>
+</Layout>
