@@ -1,4 +1,3 @@
-# Cloudflare Pages 301 Canonical Redirects for Google Search Compliance
-http://mahindralifespaceshomes.in/* https://www.mahindralifespaceshomes.in/:splat 301!
+# Cloudflare Pages 301 HTTPS Redirection
+http://mahindralifespaceshomes.in/* https://mahindralifespaceshomes.in/:splat 301!
 http://www.mahindralifespaceshomes.in/* https://www.mahindralifespaceshomes.in/:splat 301!
-https://mahindralifespaceshomes.in/* https://www.mahindralifespaceshomes.in/:splat 301!
