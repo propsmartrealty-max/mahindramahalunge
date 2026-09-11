@@ -9,7 +9,12 @@ export const onRequest: PagesFunction<Env> = async (context) => {
   const { request, next, env } = context;
   const url = new URL(request.url);
 
-  // 1. Fetch static HTML response from Cloudflare Edge Cache
+  // 1. Edge 301 Canonical Normalization: Redirect www to apex for 100% PageRank consolidation
+  if (url.hostname === 'www.mahindralifespaceshomes.in') {
+    return Response.redirect(`https://mahindralifespaceshomes.in${url.pathname}${url.search}`, 301);
+  }
+
+  // 2. Fetch static HTML response from Cloudflare Edge Cache
   const response = await next();
 
   const contentType = response.headers.get('content-type') || '';
@@ -17,7 +22,7 @@ export const onRequest: PagesFunction<Env> = async (context) => {
     return response;
   }
 
-  // 2. Stream & Rewrite HTML at the Edge using Cloudflare HTMLRewriter
+  // 3. Stream & Rewrite HTML at the Edge using Cloudflare HTMLRewriter
   const rewriter = new HTMLRewriter()
     // Inject Google Ecosystem Compliance, Geo-targeting & Verification into <head>
     .on('head', {
@@ -79,13 +84,13 @@ export const onRequest: PagesFunction<Env> = async (context) => {
       }
     });
 
-  // 3. Transform streamed response and append Edge Googlebot & Security Headers
+  // 4. Transform streamed response and append Edge Googlebot & Security Headers
   const transformed = rewriter.transform(response);
   const newHeaders = new Headers(transformed.headers);
 
   // Googlebot Edge Directives
   newHeaders.set('X-Robots-Tag', 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1');
-  newHeaders.set('Link', `<${url.origin}${url.pathname}>; rel="canonical"`);
+  newHeaders.set('Link', `<https://mahindralifespaceshomes.in${url.pathname}>; rel="canonical"`);
   newHeaders.set('X-Content-Type-Options', 'nosniff');
   newHeaders.set('X-Frame-Options', 'SAMEORIGIN');
   newHeaders.set('Referrer-Policy', 'strict-origin-when-cross-origin');

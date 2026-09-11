@@ -3,7 +3,7 @@ import tailwind from '@astrojs/tailwind';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://www.mahindralifespaceshomes.in',
+  site: 'https://mahindralifespaceshomes.in',
   output: 'static',
   build: {
     format: 'directory',
