@@ -88,14 +88,29 @@ export const onRequest: PagesFunction<Env> = async (context) => {
   const transformed = rewriter.transform(response);
   const newHeaders = new Headers(transformed.headers);
 
-  // Googlebot Edge Directives
+  // Enterprise Security & Hardening Headers
   newHeaders.set('X-Robots-Tag', 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1');
   newHeaders.set('Link', `<https://mahindralifespaceshomes.in${url.pathname}>; rel="canonical"`);
   newHeaders.set('X-Content-Type-Options', 'nosniff');
   newHeaders.set('X-Frame-Options', 'SAMEORIGIN');
   newHeaders.set('Referrer-Policy', 'strict-origin-when-cross-origin');
-  newHeaders.set('Permissions-Policy', 'geolocation=(), camera=(), microphone=()');
+  newHeaders.set('Permissions-Policy', 'geolocation=(), camera=(), microphone=(), payment=()');
   newHeaders.set('Strict-Transport-Security', 'max-age=31536000; includeSubDomains; preload');
+  newHeaders.set('Cross-Origin-Opener-Policy', 'same-origin');
+  newHeaders.set('Cross-Origin-Resource-Policy', 'cross-origin');
+  newHeaders.set(
+    'Content-Security-Policy',
+    "default-src 'self' https:; " +
+    "script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://static.cloudflareinsights.com; " +
+    "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; " +
+    "font-src 'self' https://fonts.gstatic.com data:; " +
+    "img-src 'self' data: https: blob:; " +
+    "connect-src 'self' https:; " +
+    "frame-ancestors 'self'; " +
+    "base-uri 'self'; " +
+    "form-action 'self' https:; " +
+    "upgrade-insecure-requests;"
+  );
   newHeaders.set('Cache-Control', 'public, max-age=0, s-maxage=86400, stale-while-revalidate=604800');
 
   return new Response(transformed.body, {
