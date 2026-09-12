@@ -1,136 +1,240 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <!-- Core Money Pages -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  
+  <!-- 01. Homepage & Primary Master Showcase -->
   <url>
     <loc>https://mahindralifespaceshomes.in/</loc>
     <lastmod>2026-09-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://mahindralifespaceshomes.in/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mahindralifespaceshomes.in/" />
+    <image:image>
+      <image:loc>https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&amp;fit=crop&amp;w=2000&amp;q=88</image:loc>
+      <image:title>Mahindra Mahalunge Master Architectural Rendering</image:title>
+      <image:caption>Mahindra Lifespaces Mahalunge 13.46-Acre Landmark Residential Community in Pune</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&amp;fit=crop&amp;w=1200&amp;q=85</image:loc>
+      <image:title>Mahindra Mahalunge Central Greens &amp; Towers</image:title>
+      <image:caption>80%+ Open Bio-Reserve and Residential Towers at Mahindra Mahalunge</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://mahindralifespaceshomes.in/images/mahindra-lifespaces-logo.svg</image:loc>
+      <image:title>Mahindra Lifespaces Official Corporate Emblem</image:title>
+      <image:caption>Mahindra Lifespaces Developers Limited</image:caption>
+    </image:image>
   </url>
+
+  <!-- 02. Core Micro-Market & Location Pages -->
   <url>
     <loc>https://mahindralifespaceshomes.in/mahalunge-pune/</loc>
     <lastmod>2026-09-12</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.95</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://mahindralifespaceshomes.in/mahalunge-pune/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mahindralifespaceshomes.in/mahalunge-pune/" />
+    <image:image>
+      <image:loc>https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&amp;fit=crop&amp;w=1200&amp;q=85</image:loc>
+      <image:title>Mahalunge Pune Real Estate &amp; Infrastructure Corridor</image:title>
+      <image:caption>PMRDA Town Planning Scheme and Metro Line 3 Connectivity at Mahalunge</image:caption>
+    </image:image>
   </url>
+
   <url>
     <loc>https://mahindralifespaceshomes.in/flats-near-hinjewadi/</loc>
     <lastmod>2026-09-12</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.95</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://mahindralifespaceshomes.in/flats-near-hinjewadi/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mahindralifespaceshomes.in/flats-near-hinjewadi/" />
+    <image:image>
+      <image:loc>https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&amp;fit=crop&amp;w=1200&amp;q=85</image:loc>
+      <image:title>Flats Near Hinjewadi IT Park at Mahindra Mahalunge</image:title>
+      <image:caption>7-Minute Signal-Free Commute to Hinjewadi Phase 1 from Mahindra Mahalunge</image:caption>
+    </image:image>
   </url>
+
   <url>
     <loc>https://mahindralifespaceshomes.in/flats-near-baner/</loc>
     <lastmod>2026-09-12</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
+    <priority>0.90</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://mahindralifespaceshomes.in/flats-near-baner/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mahindralifespaceshomes.in/flats-near-baner/" />
   </url>
+
   <url>
     <loc>https://mahindralifespaceshomes.in/nande-mahalunge-real-estate/</loc>
     <lastmod>2026-09-12</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
+    <priority>0.90</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://mahindralifespaceshomes.in/nande-mahalunge-real-estate/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mahindralifespaceshomes.in/nande-mahalunge-real-estate/" />
   </url>
 
-  <!-- Configuration Pages -->
+  <!-- 03. Residence Configuration Pages (Floor Plans & Units) -->
   <url>
     <loc>https://mahindralifespaceshomes.in/residences/2-bhk/</loc>
     <lastmod>2026-09-12</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.95</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://mahindralifespaceshomes.in/residences/2-bhk/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mahindralifespaceshomes.in/residences/2-bhk/" />
+    <image:image>
+      <image:loc>https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?auto=format&amp;fit=crop&amp;w=1200&amp;q=85</image:loc>
+      <image:title>Mahindra Mahalunge 2 BHK Optima Suite Interior Architecture</image:title>
+      <image:caption>2 BHK Luxury Floor Plan with 785 - 895 sq.ft. usable carpet area</image:caption>
+    </image:image>
   </url>
+
   <url>
     <loc>https://mahindralifespaceshomes.in/residences/3-bhk/</loc>
     <lastmod>2026-09-12</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.95</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://mahindralifespaceshomes.in/residences/3-bhk/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mahindralifespaceshomes.in/residences/3-bhk/" />
+    <image:image>
+      <image:loc>https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&amp;fit=crop&amp;w=1200&amp;q=85</image:loc>
+      <image:title>Mahindra Mahalunge 3 BHK Luxe Residence Living Salon</image:title>
+      <image:caption>3 BHK Premium Layout with 1,120 - 1,210 sq.ft. carpet and panoramic deck</image:caption>
+    </image:image>
   </url>
+
   <url>
     <loc>https://mahindralifespaceshomes.in/residences/4-bhk/</loc>
     <lastmod>2026-09-12</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.95</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://mahindralifespaceshomes.in/residences/4-bhk/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mahindralifespaceshomes.in/residences/4-bhk/" />
+    <image:image>
+      <image:loc>https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&amp;fit=crop&amp;w=1200&amp;q=85</image:loc>
+      <image:title>Mahindra Mahalunge 4 BHK Signature Sky Deck Mansion</image:title>
+      <image:caption>4 BHK Signature Estate with 1,650 - 1,820 sq.ft. carpet and private elevator lobby</image:caption>
+    </image:image>
   </url>
 
-  <!-- Content & Research Hub -->
+  <!-- 04. Comprehensive Real Estate Research & Intelligence Articles -->
   <url>
     <loc>https://mahindralifespaceshomes.in/articles/</loc>
     <lastmod>2026-09-12</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
+    <priority>0.90</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://mahindralifespaceshomes.in/articles/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mahindralifespaceshomes.in/articles/" />
   </url>
+
   <url>
     <loc>https://mahindralifespaceshomes.in/articles/mahindra-lifespaces-13-acres-mahalunge-project-preview/</loc>
     <lastmod>2026-09-12</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.92</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://mahindralifespaceshomes.in/articles/mahindra-lifespaces-13-acres-mahalunge-project-preview/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mahindralifespaceshomes.in/articles/mahindra-lifespaces-13-acres-mahalunge-project-preview/" />
   </url>
+
   <url>
     <loc>https://mahindralifespaceshomes.in/articles/mahindra-mahalunge-vs-godrej-vtp-kolte-patil/</loc>
     <lastmod>2026-09-12</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.92</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://mahindralifespaceshomes.in/articles/mahindra-mahalunge-vs-godrej-vtp-kolte-patil/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mahindralifespaceshomes.in/articles/mahindra-mahalunge-vs-godrej-vtp-kolte-patil/" />
   </url>
+
   <url>
     <loc>https://mahindralifespaceshomes.in/articles/mahalunge-pin-code-connectivity-infrastructure-guide-2026/</loc>
     <lastmod>2026-09-12</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.90</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://mahindralifespaceshomes.in/articles/mahalunge-pin-code-connectivity-infrastructure-guide-2026/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mahindralifespaceshomes.in/articles/mahalunge-pin-code-connectivity-infrastructure-guide-2026/" />
   </url>
+
   <url>
     <loc>https://mahindralifespaceshomes.in/articles/mahindra-lifespaces-pune-track-record-residential-legacy/</loc>
     <lastmod>2026-09-12</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
+    <priority>0.88</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://mahindralifespaceshomes.in/articles/mahindra-lifespaces-pune-track-record-residential-legacy/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mahindralifespaceshomes.in/articles/mahindra-lifespaces-pune-track-record-residential-legacy/" />
   </url>
+
   <url>
     <loc>https://mahindralifespaceshomes.in/articles/mahalunge-vs-baner-vs-hinjewadi/</loc>
     <lastmod>2026-09-12</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://mahindralifespaceshomes.in/articles/mahalunge-vs-baner-vs-hinjewadi/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mahindralifespaceshomes.in/articles/mahalunge-vs-baner-vs-hinjewadi/" />
   </url>
+
   <url>
     <loc>https://mahindralifespaceshomes.in/articles/pmrda-town-planning-scheme-mahalunge/</loc>
     <lastmod>2026-09-12</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://mahindralifespaceshomes.in/articles/pmrda-town-planning-scheme-mahalunge/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mahindralifespaceshomes.in/articles/pmrda-town-planning-scheme-mahalunge/" />
   </url>
+
   <url>
     <loc>https://mahindralifespaceshomes.in/articles/mahalunge-property-prices-investment-trends/</loc>
     <lastmod>2026-09-12</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://mahindralifespaceshomes.in/articles/mahalunge-property-prices-investment-trends/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mahindralifespaceshomes.in/articles/mahalunge-property-prices-investment-trends/" />
   </url>
+
   <url>
     <loc>https://mahindralifespaceshomes.in/articles/schools-hospitals-it-parks-near-mahalunge/</loc>
     <lastmod>2026-09-12</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://mahindralifespaceshomes.in/articles/schools-hospitals-it-parks-near-mahalunge/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mahindralifespaceshomes.in/articles/schools-hospitals-it-parks-near-mahalunge/" />
   </url>
+
   <url>
     <loc>https://mahindralifespaceshomes.in/articles/why-mahalunge-nande-maan-is-punes-next-billion-dollar-growth-corridor/</loc>
     <lastmod>2026-09-12</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://mahindralifespaceshomes.in/articles/why-mahalunge-nande-maan-is-punes-next-billion-dollar-growth-corridor/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mahindralifespaceshomes.in/articles/why-mahalunge-nande-maan-is-punes-next-billion-dollar-growth-corridor/" />
   </url>
 
-  <!-- Brand & Utility -->
+  <!-- 05. Brand & Conversions -->
   <url>
     <loc>https://mahindralifespaceshomes.in/brand/</loc>
     <lastmod>2026-09-12</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.88</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://mahindralifespaceshomes.in/brand/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mahindralifespaceshomes.in/brand/" />
   </url>
+
   <url>
     <loc>https://mahindralifespaceshomes.in/faq/</loc>
     <lastmod>2026-09-12</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
+    <priority>0.92</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://mahindralifespaceshomes.in/faq/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mahindralifespaceshomes.in/faq/" />
   </url>
+
   <url>
     <loc>https://mahindralifespaceshomes.in/brochure/</loc>
     <lastmod>2026-09-12</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
+    <priority>0.92</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://mahindralifespaceshomes.in/brochure/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mahindralifespaceshomes.in/brochure/" />
   </url>
+
 </urlset>

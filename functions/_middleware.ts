@@ -7,8 +7,8 @@ interface Env {
 }
 
 // Googlebot and Search Engine Crawler Detection Patterns
-const GOOGLEBOT_REGEX = /Googlebot|Google-InspectionTool|Storebot-Google|Google-Extended|Mediapartners-Google|AdsBot-Google|FeedFetcher-Google/i;
-const SEARCH_ENGINE_REGEX = /Googlebot|Google-InspectionTool|Storebot-Google|Google-Extended|Mediapartners-Google|AdsBot-Google|FeedFetcher-Google|bingbot|Baiduspider|YandexBot|DuckDuckBot|Slurp/i;
+const GOOGLEBOT_REGEX = /Googlebot|Googlebot-Image|Googlebot-Mobile|Google-InspectionTool|Storebot-Google|Google-Extended|Mediapartners-Google|AdsBot-Google|FeedFetcher-Google/i;
+const SEARCH_ENGINE_REGEX = /Googlebot|Googlebot-Image|Googlebot-Mobile|Google-InspectionTool|Storebot-Google|Google-Extended|Mediapartners-Google|AdsBot-Google|FeedFetcher-Google|bingbot|Baiduspider|YandexBot|DuckDuckBot|Slurp|Applebot/i;
 
 /**
  * Format URL segment into clean human-readable title
@@ -86,6 +86,18 @@ function generateWebSiteSchema(): string {
       '@type': 'Organization',
       name: 'Mahindra Lifespaces Developers Ltd.',
       url: 'https://www.mahindralifespaces.com/',
+      sameAs: [
+        'https://en.wikipedia.org/wiki/Mahindra_Lifespaces',
+        'https://www.wikidata.org/wiki/Q6734139',
+        'https://www.mahindra.com/',
+        'https://www.bseindia.com/stock-share-price/mahindra-lifespace-developers-ltd/mahlife/532313/',
+        'https://www.nseindia.com/get-quotes/equity?symbol=MAHLIFE'
+      ],
+      parentOrganization: {
+        '@type': 'Organization',
+        name: 'Mahindra Group',
+        sameAs: 'https://en.wikipedia.org/wiki/Mahindra_Group'
+      }
     },
     inLanguage: 'en-IN',
   });
@@ -132,6 +144,25 @@ export const onRequest: PagesFunction<Env> = async (context) => {
 
   // 2. Fetch original response from Cloudflare Edge Cache / Asset Store
   const response = await next();
+
+  // Specialized Edge Delivery & Caching for Sitemaps and Robots.txt
+  if (url.pathname === '/sitemap.xml') {
+    const sitemapHeaders = new Headers(response.headers);
+    sitemapHeaders.set('Content-Type', 'application/xml; charset=utf-8');
+    sitemapHeaders.set('Cache-Control', 'public, max-age=86400, s-maxage=86400, stale-while-revalidate=604800');
+    sitemapHeaders.set('X-Robots-Tag', 'noindex, follow');
+    sitemapHeaders.set('Access-Control-Allow-Origin', '*');
+    return new Response(response.body, { status: response.status, headers: sitemapHeaders });
+  }
+
+  if (url.pathname === '/robots.txt') {
+    const robotsHeaders = new Headers(response.headers);
+    robotsHeaders.set('Content-Type', 'text/plain; charset=utf-8');
+    robotsHeaders.set('Cache-Control', 'public, max-age=86400, s-maxage=86400, stale-while-revalidate=604800');
+    robotsHeaders.set('X-Robots-Tag', 'noindex, follow');
+    robotsHeaders.set('Access-Control-Allow-Origin', '*');
+    return new Response(response.body, { status: response.status, headers: robotsHeaders });
+  }
 
   const contentType = response.headers.get('content-type') || '';
   if (!contentType.includes('text/html')) {
@@ -293,13 +324,17 @@ export const onRequest: PagesFunction<Env> = async (context) => {
   // Last-Modified Timestamp for Google Freshness
   newHeaders.set('Last-Modified', new Date().toUTCString());
 
-  // Crawler Diagnostic Telemetry
+  // Crawler Diagnostic & Whitelisting Telemetry
   if (isGoogle) {
     newHeaders.set('X-Google-Crawl-Optimized', 'true');
     newHeaders.set('X-Crawler-Detected', 'googlebot');
+    newHeaders.set('X-Googlebot-Whitelisted', 'verified-search-crawler');
+    newHeaders.set('X-Robots-Tag', 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1');
   } else if (isSearchCrawler) {
     newHeaders.set('X-Google-Crawl-Optimized', 'true');
     newHeaders.set('X-Crawler-Detected', 'search-bot');
+    newHeaders.set('X-Searchbot-Whitelisted', 'verified-search-crawler');
+    newHeaders.set('X-Robots-Tag', 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1');
   }
 
   // Enterprise Security & Hardening Directives

@@ -1,4 +1,129 @@
-User-agent: *
+# ==============================================================================
+# Enterprise Robots.txt — Mahindra Lifespaces Mahalunge Showcase
+# Optimized for Googlebot, Search Engine Crawlers & Real Estate Indexing
+# Canonical Domain: https://mahindralifespaceshomes.in
+# ==============================================================================
+
+# ------------------------------------------------------------------------------
+# 1. Primary Google Web Search Bot (Googlebot)
+# ------------------------------------------------------------------------------
+User-agent: Googlebot
+Allow: /
+Allow: /_astro/
+Allow: /images/
+Allow: /favicon.svg
+Allow: /*.css$
+Allow: /*.js$
+Allow: /*.png$
+Allow: /*.jpg$
+Allow: /*.jpeg$
+Allow: /*.webp$
+Allow: /*.svg$
+Disallow: /api/
+Disallow: /cdn-cgi/
+
+# ------------------------------------------------------------------------------
+# 2. Google Image Search Bot (Googlebot-Image)
+# ------------------------------------------------------------------------------
+User-agent: Googlebot-Image
+Allow: /
+Allow: /images/
+Allow: /*.png$
+Allow: /*.jpg$
+Allow: /*.jpeg$
+Allow: /*.webp$
+Allow: /*.svg$
+
+# ------------------------------------------------------------------------------
+# 3. Google Mobile Search Bot (Googlebot-Mobile)
+# ------------------------------------------------------------------------------
+User-agent: Googlebot-Mobile
+Allow: /
+Allow: /_astro/
+Allow: /images/
+
+# ------------------------------------------------------------------------------
+# 4. Google Search Console & Rich Results Inspection Tool
+# ------------------------------------------------------------------------------
+User-agent: Google-InspectionTool
+Allow: /
+Allow: /_astro/
+Allow: /images/
+
+# ------------------------------------------------------------------------------
+# 5. Specialized Google Crawlers (Ads, Store, Extended)
+# ------------------------------------------------------------------------------
+User-agent: Mediapartners-Google
 Allow: /
 
+User-agent: AdsBot-Google
+Allow: /
+
+User-agent: Storebot-Google
+Allow: /
+
+# ------------------------------------------------------------------------------
+# 6. Microsoft Bing & Yahoo Crawler (Bingbot, Slurp)
+# ------------------------------------------------------------------------------
+User-agent: bingbot
+Allow: /
+Allow: /_astro/
+Allow: /images/
+Disallow: /api/
+Disallow: /cdn-cgi/
+
+User-agent: Slurp
+Allow: /
+
+# ------------------------------------------------------------------------------
+# 7. Other Major Compliant Search Engine Crawlers
+# ------------------------------------------------------------------------------
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: YandexBot
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+# ------------------------------------------------------------------------------
+# 8. Aggressive Non-Search Scraper Bots (Protect Serverless Edge & Bandwidth)
+# ------------------------------------------------------------------------------
+User-agent: AhrefsBot
+Crawl-delay: 10
+
+User-agent: SemrushBot
+Crawl-delay: 10
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+User-agent: PetalBot
+Disallow: /
+
+User-agent: Bytespider
+Disallow: /
+
+# ------------------------------------------------------------------------------
+# 9. Default Directive for All Other Compliant Crawlers
+# ------------------------------------------------------------------------------
+User-agent: *
+Allow: /
+Allow: /_astro/
+Allow: /images/
+Disallow: /api/
+Disallow: /cdn-cgi/
+
+# ------------------------------------------------------------------------------
+# 10. Canonical Host & Sitemaps
+# ------------------------------------------------------------------------------
+Host: https://mahindralifespaceshomes.in
 Sitemap: https://mahindralifespaceshomes.in/sitemap.xml
+
