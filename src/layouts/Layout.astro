@@ -12,8 +12,8 @@ interface Props {
 }
 
 const {
-  title = "Mahindra Lifespaces Mahalunge, Pune | 2, 3 & 4 BHK Pre-Launch Residences near Hinjewadi & Baner",
-  description = "Discover Mahindra Lifespaces' landmark 13.46-acre residential destination at Nande-Mahalunge, Pune. Estimated ₹3,500 Cr development with 2, 3 & 4 BHK future-ready sustainable homes near Hinjewadi and Baner.",
+  title = "Mahindra Mahalunge | Mahindra Lifespaces Mahalunge Pune - 2, 3 & 4 BHK Pre-Launch",
+  description = "Official overview of Mahindra Mahalunge by Mahindra Lifespaces Mahalunge, Pune. Explore the 13.46-acre master development with luxury 2, 3 & 4 BHK residences, floor plans, price sheet, location map & PMRDA connectivity.",
   canonical = "https://mahindralifespaceshomes.in",
   customSchema = null,
 } = Astro.props;
@@ -35,10 +35,21 @@ const baseSchema = {
     {
       "@type": "ApartmentComplex",
       "@id": "https://mahindralifespaceshomes.in/#project",
-      "name": "Mahindra Lifespaces Mahalunge",
-      "alternateName": ["Mahindra Mahalunge", "Mahindra Nande Mahalunge", "Mahindra Lifespaces Pune"],
-      "description": "Upcoming 13.46-acre future-ready sustainable residential community by Mahindra Lifespaces at Nande-Mahalunge near Hinjewadi and Baner, Pune.",
+      "name": "Mahindra Mahalunge",
+      "alternateName": [
+        "Mahindra Lifespaces Mahalunge",
+        "Mahindra Lifespaces Mahalunge Pune",
+        "Mahindra Mahalunge Pune",
+        "Mahindra Nande Mahalunge",
+        "Mahindra Lifespaces Hinjewadi Baner",
+        "Mahindra Homes Mahalunge"
+      ],
+      "description": "Mahindra Mahalunge by Mahindra Lifespaces is a landmark 13.46-acre master-planned residential development in the Nande-Mahalunge growth corridor near Hinjewadi Phase 1 and Baner, West Pune.",
       "telephone": "+91-20-67000000",
+      "url": "https://mahindralifespaceshomes.in/",
+      "priceRange": "₹65 Lakhs - ₹3.2 Crore",
+      "hasMap": "https://maps.google.com/?q=18.5714,73.7432",
+      "keywords": "mahindra mahalunge, mahindra lifespaces mahalunge, mahindra mahalunge pune, mahindra lifespaces mahalunge pune, mahindra mahalunge floor plan, mahindra mahalunge price",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "Mahalunge-Nande Road, near Hinjewadi Phase 1",
@@ -67,6 +78,7 @@ const baseSchema = {
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{title}</title>
     <meta name="description" content={description} />
+    <meta name="keywords" content="mahindra mahalunge, mahindra lifespaces mahalunge, mahindra mahalunge pune, mahindra lifespaces mahalunge pune, mahindra mahalunge floor plan, mahindra mahalunge price, mahindra mahalunge pre launch, mahindra flats in mahalunge, flats near hinjewadi" />
     <meta name="robots" content="index, follow" />
     <link rel="canonical" href={canonical} />
 

@@ -70,20 +70,51 @@ function generateWebSiteSchema(): string {
     '@type': 'WebSite',
     '@id': 'https://mahindralifespaceshomes.in/#website',
     url: 'https://mahindralifespaceshomes.in/',
-    name: 'Mahindra Lifespaces Mahalunge',
+    name: 'Mahindra Mahalunge | Mahindra Lifespaces Mahalunge',
     alternateName: [
-      'Mahindra Lifespaces Mahalunge Pune',
       'Mahindra Mahalunge',
+      'Mahindra Lifespaces Mahalunge',
+      'Mahindra Lifespaces Mahalunge Pune',
+      'Mahindra Mahalunge Pune',
       'Mahindra Lifespaces Hinjewadi Baner',
+      'Mahindra Nande Mahalunge',
+      'Mahindra Project Mahalunge'
     ],
     description:
-      'Official pre-launch showcase of Mahindra Lifespaces 13.46-acre master development at Nande-Mahalunge near Hinjewadi and Baner, Pune.',
+      'Official pre-launch showcase of Mahindra Mahalunge by Mahindra Lifespaces Developers Ltd. Explore 13.46 acres of sustainable 2, 3 & 4 BHK residences at Nande-Mahalunge near Hinjewadi and Baner, Pune.',
     publisher: {
       '@type': 'Organization',
       name: 'Mahindra Lifespaces Developers Ltd.',
       url: 'https://www.mahindralifespaces.com/',
     },
     inLanguage: 'en-IN',
+  });
+}
+
+/**
+ * Generate RealEstateListing Schema for Search Engines
+ */
+function generateRealEstateSchema(): string {
+  return JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'RealEstateListing',
+    '@id': 'https://mahindralifespaceshomes.in/#realestate-listing',
+    name: 'Mahindra Mahalunge by Mahindra Lifespaces',
+    alternateName: 'Mahindra Lifespaces Mahalunge',
+    description:
+      'Mahindra Mahalunge by Mahindra Lifespaces Developers Ltd. Official pre-launch project details for upcoming 13.46-acre master residential township in Nande-Mahalunge, Pune.',
+    url: 'https://mahindralifespaceshomes.in/',
+    datePosted: '2025-10-15',
+    validThrough: '2028-12-31',
+    offers: {
+      '@type': 'AggregateOffer',
+      priceCurrency: 'INR',
+      lowPrice: '6500000',
+      highPrice: '32000000',
+      offerCount: '1500',
+      priceValidUntil: '2027-12-31',
+      availability: 'https://schema.org/PreOrder',
+    },
   });
 }
 
@@ -144,10 +175,13 @@ export const onRequest: PagesFunction<Env> = async (context) => {
         const breadcrumbJson = generateBreadcrumbSchema(url);
         el.append(`<script type="application/ld+json">${breadcrumbJson}</script>\n`, { html: true });
 
-        // WebSite Schema Injection on Root Domain
+        // WebSite & RealEstate Schema Injection on Root Domain
         if (url.pathname === '/' || url.pathname === '') {
           const webSiteJson = generateWebSiteSchema();
           el.append(`<script type="application/ld+json">${webSiteJson}</script>\n`, { html: true });
+
+          const realEstateJson = generateRealEstateSchema();
+          el.append(`<script type="application/ld+json">${realEstateJson}</script>\n`, { html: true });
         }
 
         // Speculation Rules API for Chromium / Google User Pre-Rendering
