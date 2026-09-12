@@ -2,7 +2,7 @@
 // RoiEmiCalculator.astro - Interactive EMI & Investment Yield Calculator
 ---
 
-<div class="bg-charcoal-900 border border-white/10 rounded-2xl p-6 sm:p-10 shadow-2xl relative overflow-hidden" id="emi-calculator-card">
+<div class="glass-card border border-white/10 rounded-2xl p-6 sm:p-10 shadow-2xl relative overflow-hidden" id="emi-calculator-card">
   <!-- Subtle ambient glow background -->
   <div class="absolute -top-24 -right-24 w-72 h-72 bg-brand-red/10 rounded-full blur-3xl pointer-events-none"></div>
   <div class="absolute -bottom-24 -left-24 w-72 h-72 bg-gold-500/10 rounded-full blur-3xl pointer-events-none"></div>
@@ -12,11 +12,14 @@
     <!-- Left Column: Interactive Sliders (7 Cols) -->
     <div class="lg:col-span-7 space-y-6">
       <div class="space-y-1">
-        <span class="text-xs uppercase tracking-widest text-gold-400 font-bold">Financial Intelligence</span>
+        <span class="text-xs uppercase tracking-widest text-gold-400 font-bold flex items-center gap-1.5">
+          <span class="w-1.5 h-1.5 rounded-full bg-gold-400 animate-pulse"></span>
+          Financial Intelligence
+        </span>
         <h3 class="font-serif text-2xl sm:text-3xl text-stone-100 font-bold">
           EMI & Investment Yield Calculator
         </h3>
-        <p class="text-xs text-stone-400">
+        <p class="text-xs text-stone-300">
           Simulate your monthly outflows, tax advantages, and rental yield potential in the booming Mahalunge corridor.
         </p>
       </div>
@@ -119,15 +122,15 @@
     </div>
 
     <!-- Right Column: Results Dashboard (5 Cols) -->
-    <div class="lg:col-span-5 bg-charcoal-950/90 border border-white/10 rounded-xl p-6 sm:p-7 space-y-6 flex flex-col justify-between">
+    <div class="lg:col-span-5 bg-[#0c1017]/90 border border-white/10 rounded-xl p-6 sm:p-7 space-y-6 flex flex-col justify-between backdrop-blur-sm">
       <div>
         <div class="flex items-center justify-between border-b border-white/10 pb-4">
-          <span class="text-xs uppercase tracking-wider text-stone-400 font-semibold">Monthly EMI Outflow</span>
+          <span class="text-xs uppercase tracking-wider text-stone-300 font-semibold">Monthly EMI Outflow</span>
           <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
         </div>
         
         <div class="py-4">
-          <div class="text-[11px] uppercase tracking-widest text-stone-400">Estimated Monthly EMI</div>
+          <div class="text-[11px] uppercase tracking-widest text-stone-300">Estimated Monthly EMI</div>
           <div id="result-emi" class="font-serif text-3xl sm:text-4xl font-bold text-gold-400 tracking-tight mt-1 font-mono">
             ₹ 59,052
           </div>
@@ -136,13 +139,13 @@
 
         <!-- Metric Breakdown Cards -->
         <div class="grid grid-cols-2 gap-3 pt-2">
-          <div class="p-3 rounded-lg bg-white/5 border border-white/5">
+          <div class="p-3 rounded-lg bg-white/5 border border-white/10">
             <div class="text-[10px] text-stone-400 uppercase tracking-wider">Loan Amount</div>
             <div id="result-loan" class="font-bold text-stone-100 text-xs sm:text-sm mt-0.5 font-mono">
               ₹ 68,00,000
             </div>
           </div>
-          <div class="p-3 rounded-lg bg-white/5 border border-white/5">
+          <div class="p-3 rounded-lg bg-white/5 border border-white/10">
             <div class="text-[10px] text-stone-400 uppercase tracking-wider">Total Interest</div>
             <div id="result-interest" class="font-bold text-stone-100 text-xs sm:text-sm mt-0.5 font-mono">
               ₹ 73,72,500
@@ -151,17 +154,17 @@
         </div>
 
         <!-- Investment Yield Forecast -->
-        <div class="mt-4 p-3.5 rounded-lg bg-gradient-to-r from-emerald-950/40 to-charcoal-900 border border-emerald-500/20 space-y-1.5">
+        <div class="mt-4 p-3.5 rounded-lg bg-gradient-to-r from-emerald-950/40 via-[#101920] to-[#0c1017] border border-emerald-500/20 space-y-1.5">
           <div class="flex items-center justify-between">
             <span class="text-[11px] font-semibold text-emerald-400 flex items-center space-x-1">
               <span>✦ Mahalunge Rental Yield Projection</span>
             </span>
-            <span class="text-[10px] text-stone-400 font-mono">~4.0% p.a.</span>
+            <span class="text-[10px] text-emerald-300 font-mono">~4.0% p.a.</span>
           </div>
-          <div class="text-xs text-stone-300">
+          <div class="text-xs text-stone-200">
             Estimated Monthly Rent: <strong id="result-rent" class="text-white font-mono">₹ 28,000 - ₹ 32,000/mo</strong>
           </div>
-          <p class="text-[10px] text-stone-400 leading-tight">
+          <p class="text-[10px] text-stone-300 leading-tight">
             Driven by 450,000+ tech workforce in Hinjewadi Rajiv Gandhi Infotech Park seeking upscale walk-to-work residences.
           </p>
         </div>
@@ -173,7 +176,7 @@
           type="button"
           data-open-modal
           data-interest="Personalized Cost Sheet & EMI Plan"
-          class="w-full py-3 px-4 rounded-full bg-gradient-to-r from-gold-400 via-gold-500 to-gold-400 text-charcoal-950 font-bold uppercase tracking-wider text-xs shadow-lg hover:shadow-gold-500/20 active:scale-95 transition-all text-center"
+          class="btn-shimmer w-full py-3.5 px-4 rounded-xl bg-gradient-to-r from-gold-400 via-gold-500 to-gold-400 text-charcoal-950 font-bold uppercase tracking-wider text-xs shadow-lg hover:shadow-gold-500/20 active:scale-95 transition-all text-center"
         >
           Download Detailed Cost Sheet PDF
         </button>

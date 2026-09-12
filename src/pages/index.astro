@@ -59,50 +59,52 @@ const homepageFaqSchema = {
   canonical="https://mahindralifespaceshomes.in/"
   customSchema={homepageFaqSchema}
 >
-  <!-- 01 CINEMATIC HERO SECTION -->
-  <section class="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 pb-16">
-    <!-- Cinematic Dark Background with Gradient Overlays -->
+  <!-- 01 CINEMATIC HERO SECTION (Luminous & Vibrant) -->
+  <section class="relative min-h-screen flex items-center justify-center overflow-hidden pt-24 pb-20">
+    <!-- Cinematic Radiant Background with Multi-Layer Glow -->
     <div class="absolute inset-0 z-0">
       <img
-        src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=2000&q=85"
+        src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=2000&q=88"
         alt="Mahindra Lifespaces Mahalunge Aerial Architecture"
-        class="w-full h-full object-cover object-center filter brightness-[0.38] contrast-[1.1] scale-105 transform animate-pulse"
-        style="animation-duration: 10s;"
+        class="w-full h-full object-cover object-center filter brightness-[0.78] contrast-[1.08] saturate-[1.12] scale-105 transform animate-float-slow duration-1000"
+        fetchpriority="high"
+        decoding="async"
       />
-      <div class="absolute inset-0 bg-gradient-to-t from-charcoal-950 via-charcoal-950/60 to-charcoal-950/70"></div>
-      <div class="absolute inset-0 bg-radial-at-c from-transparent via-charcoal-950/40 to-charcoal-950"></div>
+      <!-- Radiant Gradient Overlays -->
+      <div class="absolute inset-0 bg-gradient-to-t from-[#0c1017] via-[#0c1017]/45 to-black/25"></div>
+      <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(212,175,102,0.14)_0%,transparent_75%)]"></div>
     </div>
 
     <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 text-center space-y-8">
-      <!-- Tagline & Brand Badge -->
-      <div class="inline-flex items-center space-x-3 px-4 py-1.5 rounded-full bg-white/5 border border-white/15 backdrop-blur-md">
-        <span class="w-2 h-2 rounded-full bg-brand-red animate-ping"></span>
-        <span class="text-[11px] tracking-widest text-stone-300 uppercase font-medium">
+      <!-- Tagline & Brand Badge with Luminous Shimmer -->
+      <div class="reveal inline-flex items-center space-x-3 px-4 py-1.5 rounded-full bg-charcoal-900/80 border border-gold-400/40 backdrop-blur-xl shadow-[0_0_30px_rgba(212,175,102,0.25)]">
+        <span class="w-2.5 h-2.5 rounded-full bg-brand-red animate-ping"></span>
+        <span class="text-[11px] tracking-widest text-amber-100 uppercase font-semibold">
           Mahindra Lifespaces • Landmark 13.46-Acre Acquisition
         </span>
       </div>
 
       <!-- Main Headline -->
-      <div class="space-y-3">
-        <h2 class="text-xs sm:text-sm font-sans tracking-widest uppercase text-gold-400 font-semibold">
+      <div class="space-y-3 reveal delay-100">
+        <h2 class="text-xs sm:text-sm font-sans tracking-widest uppercase text-gold-400 font-bold">
           MAHINDRA LIFESPACES • LANDMARK PRE-LAUNCH
         </h2>
-        <h1 class="font-serif text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-white leading-tight">
+        <h1 class="font-serif text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-white leading-tight drop-shadow-lg">
           Mahindra Lifespaces <br />
           <span class="gold-gradient-text">Mahalunge, Pune</span>
         </h1>
       </div>
 
       <!-- Subtitle -->
-      <p class="text-sm sm:text-lg text-stone-300 max-w-2xl mx-auto font-light leading-relaxed">
+      <p class="reveal delay-200 text-sm sm:text-lg text-stone-100/90 max-w-2xl mx-auto font-light leading-relaxed">
         A thoughtfully planned 13.46-acre residential destination in Pune's fastest emerging growth corridor — uniting Mahindra's legacy of trust with future-ready sustainable 2, 3 & 4 BHK living.
       </p>
 
-      <!-- Clean Minimal Action CTAs -->
-      <div class="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
+      <!-- Clean Minimal Action CTAs with Shimmer Animation -->
+      <div class="reveal delay-300 pt-2 flex flex-col sm:flex-row items-center justify-center gap-4">
         <a
           href="#overview"
-          class="w-full sm:w-auto px-8 py-3.5 rounded-full bg-gradient-to-r from-gold-400 via-gold-500 to-gold-400 text-charcoal-950 text-xs font-bold tracking-widest uppercase hover:shadow-xl hover:shadow-gold-500/25 transition-all active:scale-95"
+          class="btn-shimmer w-full sm:w-auto px-8 py-3.5 rounded-full bg-gradient-to-r from-gold-300 via-gold-400 to-gold-500 text-charcoal-950 text-xs font-bold tracking-widest uppercase hover:shadow-xl hover:shadow-gold-500/35 transition-all active:scale-95"
         >
           Explore Project
         </a>
@@ -110,28 +112,48 @@ const homepageFaqSchema = {
           type="button"
           data-open-modal
           data-interest="Request Details Brochure"
-          class="w-full sm:w-auto px-8 py-3.5 rounded-full border border-white/20 hover:border-gold-400 text-stone-200 hover:text-white text-xs font-semibold tracking-widest uppercase transition-all backdrop-blur-sm hover:bg-white/5"
+          class="btn-shimmer w-full sm:w-auto px-8 py-3.5 rounded-full border border-white/30 hover:border-gold-400 text-stone-100 hover:text-white text-xs font-semibold tracking-widest uppercase transition-all backdrop-blur-md hover:bg-white/10"
         >
           Request Details
         </button>
       </div>
 
+      <!-- Live Animated Numerical Stat Bar -->
+      <div class="reveal delay-400 pt-6 grid grid-cols-2 md:grid-cols-4 gap-3 max-w-3xl mx-auto">
+        <div class="glass-card p-3.5 rounded-xl border border-white/15 hover:border-gold-500/50 transition-all">
+          <div class="font-serif text-xl sm:text-2xl font-bold text-gold-400" data-counter="13.46" data-decimals="2" data-suffix=" ACRES">13.46 ACRES</div>
+          <div class="text-[10px] uppercase tracking-wider text-stone-300 mt-0.5">Master Land Parcel</div>
+        </div>
+        <div class="glass-card p-3.5 rounded-xl border border-white/15 hover:border-gold-500/50 transition-all">
+          <div class="font-serif text-xl sm:text-2xl font-bold text-white" data-counter="3500" data-prefix="₹" data-suffix=" CR">₹3,500 CR</div>
+          <div class="text-[10px] uppercase tracking-wider text-stone-300 mt-0.5">Est. GDV Potential</div>
+        </div>
+        <div class="glass-card p-3.5 rounded-xl border border-white/15 hover:border-gold-500/50 transition-all">
+          <div class="font-serif text-xl sm:text-2xl font-bold text-gold-400" data-counter="7" data-suffix=" MINS">7 MINS</div>
+          <div class="text-[10px] uppercase tracking-wider text-stone-300 mt-0.5">To Hinjewadi Phase 1</div>
+        </div>
+        <div class="glass-card p-3.5 rounded-xl border border-white/15 hover:border-gold-500/50 transition-all">
+          <div class="font-serif text-xl sm:text-2xl font-bold text-emerald-400">2, 3 & 4 BHK</div>
+          <div class="text-[10px] uppercase tracking-wider text-stone-300 mt-0.5">Future-Ready Homes</div>
+        </div>
+      </div>
+
       <!-- Floating Site Visit Invitation Note -->
-      <div class="pt-8">
+      <div class="pt-2">
         <button
           data-open-modal
           data-interest="Private Site Visit"
-          class="inline-flex items-center space-x-2 text-xs text-stone-400 hover:text-gold-400 transition-colors group cursor-pointer"
+          class="inline-flex items-center space-x-2 text-xs text-stone-300 hover:text-gold-300 transition-colors group cursor-pointer"
         >
-          <span class="w-1.5 h-1.5 rounded-full bg-gold-400 group-hover:scale-150 transition-transform"></span>
-          <span class="border-b border-stone-600 group-hover:border-gold-400 pb-0.5">Book Exclusive Site Visit & Corridor Walkthrough</span>
+          <span class="w-2 h-2 rounded-full bg-gold-400 group-hover:scale-150 transition-transform shadow-[0_0_10px_#d4af66]"></span>
+          <span class="border-b border-stone-500 group-hover:border-gold-300 pb-0.5">Book Exclusive Site Visit & Corridor Walkthrough</span>
           <span>→</span>
         </button>
       </div>
     </div>
 
     <!-- Scroll Down Indicator -->
-    <a href="#overview" class="absolute bottom-6 left-1/2 transform -translate-x-1/2 text-stone-400 hover:text-white transition-colors flex flex-col items-center space-y-1">
+    <a href="#overview" class="absolute bottom-6 left-1/2 transform -translate-x-1/2 text-stone-300 hover:text-white transition-colors flex flex-col items-center space-y-1">
       <span class="text-[10px] tracking-widest uppercase">Scroll</span>
       <svg class="w-4 h-4 animate-bounce text-gold-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
@@ -139,56 +161,86 @@ const homepageFaqSchema = {
     </a>
   </section>
 
+  <!-- LUXURY INFINITE MARQUEE TICKER RIBBON -->
+  <div class="py-3.5 bg-gradient-to-r from-charcoal-950 via-[#151c2a] to-charcoal-950 border-y border-gold-500/30 overflow-hidden relative shadow-lg">
+    <div class="flex whitespace-nowrap animate-marquee space-x-8 text-xs font-semibold uppercase tracking-wider text-stone-200">
+      <span class="flex items-center space-x-2"><span class="text-gold-400">★</span><span>Landmark 13.46-Acre Acquisition</span></span>
+      <span class="text-gold-500/40">•</span>
+      <span class="flex items-center space-x-2"><span class="text-emerald-400">🌿</span><span>Net-Zero Sustainable Living</span></span>
+      <span class="text-gold-500/40">•</span>
+      <span class="flex items-center space-x-2"><span class="text-gold-400">🏛️</span><span>₹3,500 Cr Est. Development Potential</span></span>
+      <span class="text-gold-500/40">•</span>
+      <span class="flex items-center space-x-2"><span class="text-brand-red">⚡</span><span>7 Mins to Hinjewadi Phase 1</span></span>
+      <span class="text-gold-500/40">•</span>
+      <span class="flex items-center space-x-2"><span class="text-gold-400">🛍️</span><span>8 Mins to Balewadi High Street</span></span>
+      <span class="text-gold-500/40">•</span>
+      <span class="flex items-center space-x-2"><span class="text-emerald-400">🚇</span><span>Proposed PMRDA 36M DP Road & Metro Line 3</span></span>
+      <span class="text-gold-500/40">•</span>
+      <span class="flex items-center space-x-2"><span class="text-gold-400">🏡</span><span>2, 3 & 4 BHK Pre-Launch Master Concept</span></span>
+      <span class="text-gold-500/40">•</span>
+      <!-- Repeated for seamless loop -->
+      <span class="flex items-center space-x-2"><span class="text-gold-400">★</span><span>Landmark 13.46-Acre Acquisition</span></span>
+      <span class="text-gold-500/40">•</span>
+      <span class="flex items-center space-x-2"><span class="text-emerald-400">🌿</span><span>Net-Zero Sustainable Living</span></span>
+      <span class="text-gold-500/40">•</span>
+      <span class="flex items-center space-x-2"><span class="text-gold-400">🏛️</span><span>₹3,500 Cr Est. Development Potential</span></span>
+      <span class="text-gold-500/40">•</span>
+      <span class="flex items-center space-x-2"><span class="text-brand-red">⚡</span><span>7 Mins to Hinjewadi Phase 1</span></span>
+      <span class="text-gold-500/40">•</span>
+      <span class="flex items-center space-x-2"><span class="text-gold-400">🛍️</span><span>8 Mins to Balewadi High Street</span></span>
+    </div>
+  </div>
 
-  <!-- 02 THE MAHINDRA DIFFERENCE (Horizontal Storytelling) -->
-  <section id="overview" class="py-24 bg-charcoal-900 border-t border-white/10 relative">
+
+  <!-- 02 THE MAHINDRA DIFFERENCE (Luminous Overview) -->
+  <section id="overview" class="py-24 bg-gradient-to-b from-[#0e121a] via-[#141924] to-[#0e121a] border-t border-gold-500/20 relative">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
-      <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+      <div class="reveal flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
         <div>
           <span class="text-xs uppercase tracking-widest text-gold-400 font-bold">Pillars of Distinction</span>
-          <h2 class="font-serif text-3xl sm:text-4xl text-stone-100 font-bold mt-2">The Mahindra Difference</h2>
+          <h2 class="font-serif text-3xl sm:text-4xl text-stone-50 font-bold mt-2">The Mahindra Difference</h2>
         </div>
-        <p class="text-xs text-stone-400 max-w-md leading-relaxed">
+        <p class="text-xs sm:text-sm text-stone-200 max-w-md leading-relaxed">
           Grounding every development in the pioneering ethos of the Mahindra Group, crafting environments of positive energy, longevity, and generational value.
         </p>
       </div>
 
-      <!-- 4 Pillars Grid -->
+      <!-- 4 Pillars Grid with Staggered Scroll Reveals -->
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
         
         <!-- Pillar 01 -->
-        <div class="glass-card p-8 rounded-xl space-y-4 hover:border-gold-500/40 transition-all group">
-          <div class="font-serif text-3xl font-bold text-gold-400/80 group-hover:text-gold-400 transition-colors">01</div>
+        <div class="reveal delay-100 glass-card p-8 rounded-xl space-y-4 hover:border-gold-500/60 transition-all group">
+          <div class="font-serif text-3xl font-bold text-gold-400 group-hover:scale-110 transition-transform origin-left">01</div>
           <h3 class="font-serif text-xl text-stone-100 font-semibold">Trust & Credibility</h3>
-          <p class="text-xs text-stone-400 leading-relaxed">
+          <p class="text-xs text-stone-300 leading-relaxed">
             Backed by the 75+ year legacy of the Mahindra Group. Built on uncompromising governance, transparent dealings, and on-schedule delivery milestones.
           </p>
         </div>
 
         <!-- Pillar 02 -->
-        <div class="glass-card p-8 rounded-xl space-y-4 hover:border-gold-500/40 transition-all group">
-          <div class="font-serif text-3xl font-bold text-gold-400/80 group-hover:text-gold-400 transition-colors">02</div>
+        <div class="reveal delay-200 glass-card p-8 rounded-xl space-y-4 hover:border-gold-500/60 transition-all group">
+          <div class="font-serif text-3xl font-bold text-gold-400 group-hover:scale-110 transition-transform origin-left">02</div>
           <h3 class="font-serif text-xl text-stone-100 font-semibold">Thoughtful Design</h3>
-          <p class="text-xs text-stone-400 leading-relaxed">
+          <p class="text-xs text-stone-300 leading-relaxed">
             Homes intuitively sculpted around modern lifestyle rhythms — intelligent space utilization, abundant natural breezes, and biophilic living integration.
           </p>
         </div>
 
         <!-- Pillar 03 -->
-        <div class="glass-card p-8 rounded-xl space-y-4 hover:border-gold-500/40 transition-all group">
-          <div class="font-serif text-3xl font-bold text-gold-400/80 group-hover:text-gold-400 transition-colors">03</div>
+        <div class="reveal delay-300 glass-card p-8 rounded-xl space-y-4 hover:border-gold-500/60 transition-all group">
+          <div class="font-serif text-3xl font-bold text-gold-400 group-hover:scale-110 transition-transform origin-left">03</div>
           <h3 class="font-serif text-xl text-stone-100 font-semibold">Homes of Positive Energy</h3>
-          <p class="text-xs text-stone-400 leading-relaxed">
+          <p class="text-xs text-stone-300 leading-relaxed">
             Mahindra Lifespaces' pioneering green philosophy: Net-Zero water strategies, solar harvest micro-grids, and IGBC Platinum-certified sustainable construction.
           </p>
         </div>
 
         <!-- Pillar 04 -->
-        <div class="glass-card p-8 rounded-xl space-y-4 hover:border-gold-500/40 transition-all group">
-          <div class="font-serif text-3xl font-bold text-gold-400/80 group-hover:text-gold-400 transition-colors">04</div>
+        <div class="reveal delay-400 glass-card p-8 rounded-xl space-y-4 hover:border-gold-500/60 transition-all group">
+          <div class="font-serif text-3xl font-bold text-gold-400 group-hover:scale-110 transition-transform origin-left">04</div>
           <h3 class="font-serif text-xl text-stone-100 font-semibold">Future Ready Corridor</h3>
-          <p class="text-xs text-stone-400 leading-relaxed">
+          <p class="text-xs text-stone-300 leading-relaxed">
             Strategically located at Nande–Mahalunge, seamlessly woven into the Baner–Balewadi lifestyle ecosystem and Hinjewadi’s vast economic power engine.
           </p>
         </div>
@@ -200,53 +252,56 @@ const homepageFaqSchema = {
 
 
   <!-- 03 PROJECT STORY: Where Pune's Future Is Taking Shape -->
-  <section class="py-24 bg-charcoal-950 relative overflow-hidden">
+  <section class="py-24 bg-[#0c1017] border-t border-white/[0.08] relative overflow-hidden">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
         
-        <div class="lg:col-span-6 space-y-6">
-          <div class="inline-block px-3 py-1 rounded bg-gold-500/10 border border-gold-500/30 text-gold-400 text-xs font-semibold uppercase tracking-widest">
+        <div class="reveal lg:col-span-6 space-y-6">
+          <div class="inline-block px-3 py-1 rounded-full bg-gold-500/15 border border-gold-500/40 text-gold-300 text-xs font-semibold uppercase tracking-widest shadow-[0_0_20px_rgba(212,175,102,0.15)]">
             Western Pune Growth Epicenter
           </div>
-          <h2 class="font-serif text-3xl sm:text-4xl text-stone-100 font-bold leading-tight">
+          <h2 class="font-serif text-3xl sm:text-4xl text-stone-50 font-bold leading-tight">
             Where Pune's Future <br /><span class="gold-gradient-text">Is Taking Shape</span>
           </h2>
-          <p class="text-xs sm:text-sm text-stone-400 leading-relaxed">
+          <p class="text-xs sm:text-sm text-stone-200 leading-relaxed">
             In October 2025, Mahindra Lifespaces officially announced its strategic acquisition of 13.46 acres in the Nande–Mahalunge corridor with an estimated development potential of approximately ₹3,500 Crore.
           </p>
-          <p class="text-xs text-stone-400 leading-relaxed">
+          <p class="text-xs text-stone-300 leading-relaxed">
             Nestled between the booming IT employment capital of Hinjewadi and the upscale urban fabric of Baner–Balewadi, this upcoming landmark will create a balanced sanctuary of green tranquility and high-tech connectivity.
           </p>
 
-          <!-- 3-Column Story -->
+          <!-- 3-Column Story with Elevated Cards -->
           <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-4 border-t border-white/10">
-            <div>
-              <h4 class="font-serif text-stone-100 font-semibold text-sm">Mahalunge</h4>
-              <p class="text-[11px] text-stone-400 mt-1">An emerging residential destination primed by planned urban infrastructure.</p>
+            <div class="glass-card p-3 rounded-lg">
+              <h4 class="font-serif text-gold-300 font-semibold text-sm">Mahalunge</h4>
+              <p class="text-[11px] text-stone-300 mt-1">An emerging residential destination primed by planned urban infrastructure.</p>
             </div>
-            <div>
-              <h4 class="font-serif text-stone-100 font-semibold text-sm">Nande–Maan</h4>
-              <p class="text-[11px] text-stone-400 mt-1">Rapidly evolving western belt benefiting from PMRDA Ring Road access.</p>
+            <div class="glass-card p-3 rounded-lg">
+              <h4 class="font-serif text-gold-300 font-semibold text-sm">Nande–Maan</h4>
+              <p class="text-[11px] text-stone-300 mt-1">Rapidly evolving western belt benefiting from PMRDA Ring Road access.</p>
             </div>
-            <div>
-              <h4 class="font-serif text-stone-100 font-semibold text-sm">Hinjewadi–Baner</h4>
-              <p class="text-[11px] text-stone-400 mt-1">Minutes away from 400,000+ IT professionals & premium social life.</p>
+            <div class="glass-card p-3 rounded-lg">
+              <h4 class="font-serif text-gold-300 font-semibold text-sm">Hinjewadi–Baner</h4>
+              <p class="text-[11px] text-stone-300 mt-1">Minutes away from 400,000+ IT professionals & premium social life.</p>
             </div>
           </div>
         </div>
 
-        <div class="lg:col-span-6 relative">
-          <div class="rounded-2xl overflow-hidden border border-white/15 shadow-2xl relative">
+        <div class="reveal delay-200 lg:col-span-6 relative">
+          <div class="rounded-2xl overflow-hidden border border-gold-500/30 shadow-[0_20px_60px_rgba(0,0,0,0.7)] relative group">
             <img
-              src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1200&q=80"
+              src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1200&q=85"
               alt="Mahindra Lifespaces Mahalunge Concept"
-              class="w-full h-[450px] object-cover"
+              class="w-full h-[460px] object-cover group-hover:scale-105 transition-transform duration-700"
             />
-            <div class="absolute inset-0 bg-gradient-to-t from-charcoal-950 via-transparent to-transparent"></div>
-            <div class="absolute bottom-6 left-6 right-6 p-4 rounded-lg bg-charcoal-950/80 backdrop-blur-md border border-white/10">
-              <span class="text-[10px] uppercase tracking-widest text-gold-400 font-bold">Planned Master Community</span>
-              <p class="text-xs text-stone-200 mt-1">
+            <div class="absolute inset-0 bg-gradient-to-t from-[#0c1017] via-transparent to-transparent"></div>
+            <div class="absolute bottom-6 left-6 right-6 p-4 rounded-xl bg-charcoal-900/90 backdrop-blur-xl border border-gold-500/30 shadow-2xl">
+              <span class="text-[10px] uppercase tracking-widest text-gold-400 font-bold flex items-center space-x-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                <span>Planned Master Community</span>
+              </span>
+              <p class="text-xs text-stone-100 mt-1 font-light">
                 Conceived as an integrated green township celebrating bio-diversity and modern wellness.
               </p>
             </div>
@@ -259,39 +314,42 @@ const homepageFaqSchema = {
   </section>
 
 
-  <!-- 04 PROJECT SNAPSHOT DATA STRIP -->
-  <section class="py-12 bg-charcoal-900 border-y border-white/10">
+  <!-- 04 PROJECT SNAPSHOT DATA STRIP (Animated Counters & Luminous) -->
+  <section class="py-14 bg-gradient-to-r from-[#121722] via-[#1a2232] to-[#121722] border-y border-gold-500/30 shadow-2xl relative">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-2 md:grid-cols-5 gap-6 text-center divide-y md:divide-y-0 md:divide-x divide-white/10">
         
-        <div class="p-4 space-y-1">
-          <div class="font-serif text-2xl lg:text-3xl font-bold text-gold-400">13.46 ACRES*</div>
-          <div class="text-[11px] uppercase tracking-widest text-stone-400">Acquired Land Parcel</div>
+        <div class="reveal p-4 space-y-1">
+          <div class="font-serif text-2xl lg:text-4xl font-bold text-gold-400" data-counter="13.46" data-decimals="2" data-suffix=" ACRES*">13.46 ACRES*</div>
+          <div class="text-[11px] uppercase tracking-widest text-stone-300 font-medium">Acquired Land Parcel</div>
         </div>
 
-        <div class="p-4 space-y-1">
-          <div class="font-serif text-2xl lg:text-3xl font-bold text-stone-100">₹3,500 CR*</div>
-          <div class="text-[11px] uppercase tracking-widest text-stone-400">Est. Development Potential</div>
+        <div class="reveal delay-100 p-4 space-y-1">
+          <div class="font-serif text-2xl lg:text-4xl font-bold text-white" data-counter="3500" data-prefix="₹" data-suffix=" CR*">₹3,500 CR*</div>
+          <div class="text-[11px] uppercase tracking-widest text-stone-300 font-medium">Est. Development Potential</div>
         </div>
 
-        <div class="p-4 space-y-1">
-          <div class="font-serif text-2xl lg:text-3xl font-bold text-gold-400">2, 3 & 4 BHK*</div>
-          <div class="text-[11px] uppercase tracking-widest text-stone-400">Proposed Configurations</div>
+        <div class="reveal delay-200 p-4 space-y-1">
+          <div class="font-serif text-2xl lg:text-4xl font-bold text-gold-400">2, 3 & 4 BHK*</div>
+          <div class="text-[11px] uppercase tracking-widest text-stone-300 font-medium">Proposed Configurations</div>
         </div>
 
-        <div class="p-4 space-y-1">
-          <div class="font-serif text-2xl lg:text-3xl font-bold text-stone-100">80%+ GREENS*</div>
-          <div class="text-[11px] uppercase tracking-widest text-stone-400">Open Bio-Reserve</div>
+        <div class="reveal delay-300 p-4 space-y-1">
+          <div class="font-serif text-2xl lg:text-4xl font-bold text-emerald-400" data-counter="80" data-suffix="%+ GREENS*">80%+ GREENS*</div>
+          <div class="text-[11px] uppercase tracking-widest text-stone-300 font-medium">Open Bio-Reserve</div>
         </div>
 
-        <div class="col-span-2 md:col-span-1 p-4 space-y-1">
-          <div class="font-serif text-xl lg:text-2xl font-bold text-emerald-400">UPCOMING*</div>
-          <div class="text-[11px] uppercase tracking-widest text-stone-400">MahaRERA Registration Stage</div>
+        <div class="reveal delay-400 col-span-2 md:col-span-1 p-4 space-y-1">
+          <div class="font-serif text-xl lg:text-2xl font-bold text-amber-300 flex items-center justify-center space-x-1.5">
+            <span class="w-2 h-2 rounded-full bg-amber-400 animate-ping"></span>
+            <span>UPCOMING*</span>
+          </div>
+          <div class="text-[11px] uppercase tracking-widest text-stone-300 font-medium">MahaRERA Registration Stage</div>
         </div>
 
       </div>
       
-      <p class="text-[10px] text-center text-stone-500 mt-4">
+      <p class="text-[10px] text-center text-stone-400 mt-5">
         *13.46 acres reflects the land acquisition announced by Mahindra Lifespaces in Oct 2025. Configurations, area breakdowns and pricing are indicative concepts pending MahaRERA approvals.
       </p>
     </div>
@@ -299,12 +357,12 @@ const homepageFaqSchema = {
 
 
   <!-- 05 RESIDENCES SECTION (Interactive Selector) -->
-  <section id="residences" class="py-24 bg-charcoal-950 relative">
+  <section id="residences" class="py-24 bg-[#0e121a] border-t border-white/[0.08] relative">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
-      <div class="text-center max-w-2xl mx-auto space-y-3">
+      <div class="reveal text-center max-w-2xl mx-auto space-y-3">
         <span class="text-xs uppercase tracking-widest text-gold-400 font-bold">Unmatched Craftsmanship</span>
-        <h2 class="font-serif text-3xl sm:text-4xl text-stone-100 font-bold">Master-Planned Residences</h2>
-        <p class="text-xs text-stone-400 leading-relaxed">
+        <h2 class="font-serif text-3xl sm:text-4xl text-stone-50 font-bold">Master-Planned Residences</h2>
+        <p class="text-xs sm:text-sm text-stone-200 leading-relaxed">
           Designed with zero dead-space corridors, optimal solar aspect ratios, and expansive panoramic viewing decks.
         </p>
       </div>
@@ -315,13 +373,13 @@ const homepageFaqSchema = {
   </section>
 
 
-  <!-- 06 MASTER PLAN SECTION -->
-  <section id="masterplan" class="py-24 bg-charcoal-900 border-t border-white/10 relative">
+  <!-- 06 MASTER PLAN SECTION (Luminous Blueprint) -->
+  <section id="masterplan" class="py-24 bg-gradient-to-b from-[#10141e] via-[#151c2a] to-[#10141e] border-t border-gold-500/20 relative">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
-      <div class="text-center max-w-2xl mx-auto space-y-3">
+      <div class="reveal text-center max-w-2xl mx-auto space-y-3">
         <span class="text-xs uppercase tracking-widest text-gold-400 font-bold">Township Topography</span>
-        <h2 class="font-serif text-3xl sm:text-4xl text-stone-100 font-bold">The Master Blueprint</h2>
-        <p class="text-xs text-stone-400 leading-relaxed">
+        <h2 class="font-serif text-3xl sm:text-4xl text-stone-50 font-bold">The Master Blueprint</h2>
+        <p class="text-xs sm:text-sm text-stone-200 leading-relaxed">
           Explore the envisioned zoning across 13.46 acres — prioritizing vehicular-free central sanctuaries and pedestrian walkways.
         </p>
       </div>
@@ -332,113 +390,113 @@ const homepageFaqSchema = {
   </section>
 
 
-  <!-- 07 CURATED AMENITIES EDITORIAL -->
-  <section id="amenities" class="py-24 bg-charcoal-950 relative">
+  <!-- 07 CURATED AMENITIES EDITORIAL (Luminous Cards) -->
+  <section id="amenities" class="py-24 bg-[#0c1017] border-t border-white/[0.08] relative">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
       
-      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+      <div class="reveal flex flex-col md:flex-row md:items-end justify-between gap-6">
         <div>
           <span class="text-xs uppercase tracking-widest text-gold-400 font-bold">Editorial Luxury</span>
-          <h2 class="font-serif text-3xl sm:text-4xl text-stone-100 font-bold mt-2">Curated Lifestyle Enclaves</h2>
+          <h2 class="font-serif text-3xl sm:text-4xl text-stone-50 font-bold mt-2">Curated Lifestyle Enclaves</h2>
         </div>
-        <p class="text-xs text-stone-400 max-w-md leading-relaxed">
+        <p class="text-xs sm:text-sm text-stone-200 max-w-md leading-relaxed">
           Over 40+ thoughtfully zoned amenities engineered across 5 distinct lifestyle pillars for mental rejuvenation, athletic vigor, and community warmth.
         </p>
       </div>
 
-      <!-- 5 Categories Grid -->
+      <!-- 5 Categories Grid with Staggered Hover & Scroll Reveal -->
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         
         <!-- Category 1: Wellness -->
-        <div class="glass-card rounded-xl overflow-hidden border border-white/10 group hover:border-gold-500/40 transition-all">
+        <div class="reveal delay-100 glass-card rounded-xl overflow-hidden border border-white/15 group hover:border-gold-500/50 transition-all">
           <div class="h-48 overflow-hidden relative">
             <img 
-              src="https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?auto=format&fit=crop&w=800&q=80" 
+              src="https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?auto=format&fit=crop&w=800&q=85" 
               alt="Wellness & Infinity Pool" 
-              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
             />
-            <div class="absolute inset-0 bg-gradient-to-t from-charcoal-950 via-transparent to-transparent"></div>
-            <span class="absolute bottom-3 left-4 text-xs font-serif uppercase tracking-widest text-gold-400 font-bold">01 • Wellness</span>
+            <div class="absolute inset-0 bg-gradient-to-t from-[#0e121a] via-transparent to-transparent"></div>
+            <span class="absolute bottom-3 left-4 text-xs font-serif uppercase tracking-widest text-gold-400 font-bold drop-shadow">01 • Wellness</span>
           </div>
           <div class="p-6 space-y-3">
-            <h3 class="font-serif text-xl text-stone-100 font-semibold">Sanctum of Vitality</h3>
-            <p class="text-xs text-stone-400 leading-relaxed">
+            <h3 class="font-serif text-xl text-stone-100 font-semibold group-hover:text-gold-300 transition-colors">Sanctum of Vitality</h3>
+            <p class="text-xs text-stone-200 leading-relaxed font-light">
               Temperature-controlled indoor lap pool, open-sky yoga pavilion, herbal steam bath, aromatic reflexology walkways, and meditation deck.
             </p>
           </div>
         </div>
 
         <!-- Category 2: Social -->
-        <div class="glass-card rounded-xl overflow-hidden border border-white/10 group hover:border-gold-500/40 transition-all">
+        <div class="reveal delay-200 glass-card rounded-xl overflow-hidden border border-white/15 group hover:border-gold-500/50 transition-all">
           <div class="h-48 overflow-hidden relative">
             <img 
-              src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80" 
+              src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=85" 
               alt="Clubhouse & Social" 
-              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
             />
-            <div class="absolute inset-0 bg-gradient-to-t from-charcoal-950 via-transparent to-transparent"></div>
-            <span class="absolute bottom-3 left-4 text-xs font-serif uppercase tracking-widest text-gold-400 font-bold">02 • Social Life</span>
+            <div class="absolute inset-0 bg-gradient-to-t from-[#0e121a] via-transparent to-transparent"></div>
+            <span class="absolute bottom-3 left-4 text-xs font-serif uppercase tracking-widest text-gold-400 font-bold drop-shadow">02 • Social Life</span>
           </div>
           <div class="p-6 space-y-3">
-            <h3 class="font-serif text-xl text-stone-100 font-semibold">35,000+ Sq.Ft. Clubhouse</h3>
-            <p class="text-xs text-stone-400 leading-relaxed">
+            <h3 class="font-serif text-xl text-stone-100 font-semibold group-hover:text-gold-300 transition-colors">35,000+ Sq.Ft. Clubhouse</h3>
+            <p class="text-xs text-stone-200 leading-relaxed font-light">
               Banquet ballroom for family celebrations, private acoustic screening room, co-working business lounge with high-speed fiber, and sunset terrace café.
             </p>
           </div>
         </div>
 
         <!-- Category 3: Active Life -->
-        <div class="glass-card rounded-xl overflow-hidden border border-white/10 group hover:border-gold-500/40 transition-all">
+        <div class="reveal delay-300 glass-card rounded-xl overflow-hidden border border-white/15 group hover:border-gold-500/50 transition-all">
           <div class="h-48 overflow-hidden relative">
             <img 
-              src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=800&q=80" 
+              src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=800&q=85" 
               alt="Active Sports Complex" 
-              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
             />
-            <div class="absolute inset-0 bg-gradient-to-t from-charcoal-950 via-transparent to-transparent"></div>
-            <span class="absolute bottom-3 left-4 text-xs font-serif uppercase tracking-widest text-gold-400 font-bold">03 • Active Sports</span>
+            <div class="absolute inset-0 bg-gradient-to-t from-[#0e121a] via-transparent to-transparent"></div>
+            <span class="absolute bottom-3 left-4 text-xs font-serif uppercase tracking-widest text-gold-400 font-bold drop-shadow">03 • Active Sports</span>
           </div>
           <div class="p-6 space-y-3">
-            <h3 class="font-serif text-xl text-stone-100 font-semibold">The Sports Complex</h3>
-            <p class="text-xs text-stone-400 leading-relaxed">
+            <h3 class="font-serif text-xl text-stone-100 font-semibold group-hover:text-gold-300 transition-colors">The Sports Complex</h3>
+            <p class="text-xs text-stone-200 leading-relaxed font-light">
               Floodlit synthetic tennis courts, squash courts, cricket bowling nets, half-court basketball, and professional cross-fit calisthenics zone.
             </p>
           </div>
         </div>
 
         <!-- Category 4: Children -->
-        <div class="glass-card rounded-xl overflow-hidden border border-white/10 group hover:border-gold-500/40 transition-all">
+        <div class="reveal delay-100 glass-card rounded-xl overflow-hidden border border-white/15 group hover:border-gold-500/50 transition-all">
           <div class="h-48 overflow-hidden relative">
             <img 
-              src="https://images.unsplash.com/photo-1596464716127-f2a829822301?auto=format&fit=crop&w=800&q=80" 
+              src="https://images.unsplash.com/photo-1596464716127-f2a829822301?auto=format&fit=crop&w=800&q=85" 
               alt="Children Activity Spaces" 
-              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
             />
-            <div class="absolute inset-0 bg-gradient-to-t from-charcoal-950 via-transparent to-transparent"></div>
-            <span class="absolute bottom-3 left-4 text-xs font-serif uppercase tracking-widest text-gold-400 font-bold">04 • Children's Realm</span>
+            <div class="absolute inset-0 bg-gradient-to-t from-[#0e121a] via-transparent to-transparent"></div>
+            <span class="absolute bottom-3 left-4 text-xs font-serif uppercase tracking-widest text-gold-400 font-bold drop-shadow">04 • Children's Realm</span>
           </div>
           <div class="p-6 space-y-3">
-            <h3 class="font-serif text-xl text-stone-100 font-semibold">Imagination Playground</h3>
-            <p class="text-xs text-stone-400 leading-relaxed">
+            <h3 class="font-serif text-xl text-stone-100 font-semibold group-hover:text-gold-300 transition-colors">Imagination Playground</h3>
+            <p class="text-xs text-stone-200 leading-relaxed font-light">
               Interactive water splash pad, soft-turf adventure obstacle course, outdoor treehouse learning library, and dedicated skate promenade.
             </p>
           </div>
         </div>
 
         <!-- Category 5: Landscape -->
-        <div class="glass-card rounded-xl overflow-hidden border border-white/10 group hover:border-gold-500/40 transition-all lg:col-span-2">
+        <div class="reveal delay-200 glass-card rounded-xl overflow-hidden border border-white/15 group hover:border-gold-500/50 transition-all lg:col-span-2">
           <div class="h-48 overflow-hidden relative">
             <img 
-              src="https://images.unsplash.com/photo-1513836279014-a89f7a76ae86?auto=format&fit=crop&w=1200&q=80" 
+              src="https://images.unsplash.com/photo-1513836279014-a89f7a76ae86?auto=format&fit=crop&w=1200&q=85" 
               alt="Landscaped Forest Greens" 
-              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
             />
-            <div class="absolute inset-0 bg-gradient-to-t from-charcoal-950 via-transparent to-transparent"></div>
-            <span class="absolute bottom-3 left-4 text-xs font-serif uppercase tracking-widest text-gold-400 font-bold">05 • Biophilic Sanctuary</span>
+            <div class="absolute inset-0 bg-gradient-to-t from-[#0e121a] via-transparent to-transparent"></div>
+            <span class="absolute bottom-3 left-4 text-xs font-serif uppercase tracking-widest text-gold-400 font-bold drop-shadow">05 • Biophilic Sanctuary</span>
           </div>
           <div class="p-6 space-y-3">
-            <h3 class="font-serif text-xl text-stone-100 font-semibold">The Forest Greens & Canopy Trails</h3>
-            <p class="text-xs text-stone-400 leading-relaxed">
+            <h3 class="font-serif text-xl text-stone-100 font-semibold group-hover:text-gold-300 transition-colors">The Forest Greens & Canopy Trails</h3>
+            <p class="text-xs text-stone-200 leading-relaxed font-light">
               Over 1,000+ indigenous trees planted under the Miyawaki afforestation method, cascading water bio-ponds, organic fruit orchard, and scented flowering perimeter trails designed to restore natural biodiversity.
             </p>
           </div>
@@ -450,14 +508,14 @@ const homepageFaqSchema = {
   </section>
 
 
-  <!-- 08 3D RADIAL LOCATION & CONNECTIVITY MAP -->
-  <section id="location" class="py-24 bg-charcoal-900 border-t border-white/10 relative">
+  <!-- 08 3D RADIAL LOCATION & CONNECTIVITY MAP (Luminous Gradient) -->
+  <section id="location" class="py-24 bg-gradient-to-b from-[#10141e] via-[#151c2a] to-[#10141e] border-t border-gold-500/20 relative">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
       
-      <div class="text-center max-w-2xl mx-auto space-y-3">
+      <div class="reveal text-center max-w-2xl mx-auto space-y-3">
         <span class="text-xs uppercase tracking-widest text-gold-400 font-bold">Strategic Geography</span>
-        <h2 class="font-serif text-3xl sm:text-4xl text-stone-100 font-bold">Radial Connectivity Matrix</h2>
-        <p class="text-xs text-stone-400 leading-relaxed">
+        <h2 class="font-serif text-3xl sm:text-4xl text-stone-50 font-bold">Radial Connectivity Matrix</h2>
+        <p class="text-xs sm:text-sm text-stone-200 leading-relaxed">
           Positioned in the prime Nande–Mahalunge corridor with rapid arterial access across Pune's prime employment, educational, and leisure destinations.
         </p>
       </div>
@@ -466,101 +524,101 @@ const homepageFaqSchema = {
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
         
         <!-- Radial Map Canvas Placeholder -->
-        <div class="lg:col-span-7 bg-charcoal-950 rounded-2xl border border-white/10 p-6 relative overflow-hidden shadow-2xl">
+        <div class="reveal lg:col-span-7 glass-card rounded-2xl border border-gold-500/30 p-6 relative overflow-hidden shadow-2xl">
           <svg viewBox="0 0 600 480" class="w-full h-auto select-none">
             {/* Background Grid */}
-            <circle cx="300" cy="240" r="200" fill="none" stroke="#222731" strokeWidth="1" strokeDasharray="4,4" />
-            <circle cx="300" cy="240" r="140" fill="none" stroke="#222731" strokeWidth="1" strokeDasharray="4,4" />
-            <circle cx="300" cy="240" r="75" fill="none" stroke="#c5a368" strokeWidth="1.5" strokeOpacity="0.3" />
+            <circle cx="300" cy="240" r="200" fill="none" stroke="#252e42" strokeWidth="1" strokeDasharray="4,4" />
+            <circle cx="300" cy="240" r="140" fill="none" stroke="#252e42" strokeWidth="1" strokeDasharray="4,4" />
+            <circle cx="300" cy="240" r="75" fill="none" stroke="#d4af66" strokeWidth="1.5" strokeOpacity="0.35" />
 
             {/* Connecting Rays */}
-            <line x1="300" y1="240" x2="480" y2="240" stroke="#c5a368" strokeWidth="2" strokeDasharray="6,4" />
-            <line x1="300" y1="240" x2="300" y2="70" stroke="#c5a368" strokeWidth="2" strokeDasharray="6,4" />
-            <line x1="300" y1="240" x2="140" y2="130" stroke="#c5a368" strokeWidth="2" strokeDasharray="6,4" />
-            <line x1="300" y1="240" x2="160" y2="380" stroke="#c5a368" strokeWidth="2" strokeDasharray="6,4" />
-            <line x1="300" y1="240" x2="440" y2="370" stroke="#c5a368" strokeWidth="2" strokeDasharray="6,4" />
+            <line x1="300" y1="240" x2="480" y2="240" stroke="#d4af66" strokeWidth="2" strokeDasharray="6,4" />
+            <line x1="300" y1="240" x2="300" y2="70" stroke="#d4af66" strokeWidth="2" strokeDasharray="6,4" />
+            <line x1="300" y1="240" x2="140" y2="130" stroke="#d4af66" strokeWidth="2" strokeDasharray="6,4" />
+            <line x1="300" y1="240" x2="160" y2="380" stroke="#d4af66" strokeWidth="2" strokeDasharray="6,4" />
+            <line x1="300" y1="240" x2="440" y2="370" stroke="#d4af66" strokeWidth="2" strokeDasharray="6,4" />
 
             {/* Central Landmark Epicenter */}
-            <circle cx="300" cy="240" r="32" fill="#c8102e" fillOpacity="0.2" className="animate-ping" />
-            <circle cx="300" cy="240" r="28" fill="#16191f" stroke="#c8102e" strokeWidth="3" />
+            <circle cx="300" cy="240" r="32" fill="#e31837" fillOpacity="0.25" className="animate-ping" />
+            <circle cx="300" cy="240" r="28" fill="#141924" stroke="#e31837" strokeWidth="3" />
             <text x="300" y="238" fill="#ffffff" fontSize="9" fontWeight="bold" textAnchor="middle">MAHINDRA</text>
-            <text x="300" y="250" fill="#dfc08f" fontSize="8" textAnchor="middle">MAHALUNGE</text>
+            <text x="300" y="250" fill="#e8cb97" fontSize="8" textAnchor="middle">MAHALUNGE</text>
 
             {/* Hinjewadi IT Park (East) */}
             <g transform="translate(480, 240)">
-              <circle cx="0" cy="0" r="24" fill="#1b2028" stroke="#c5a368" strokeWidth="1.5" />
+              <circle cx="0" cy="0" r="24" fill="#18202d" stroke="#d4af66" strokeWidth="1.5" />
               <text x="0" y="-3" fill="#ffffff" fontSize="9" fontWeight="bold" textAnchor="middle">HINJEWADI</text>
-              <text x="0" y="10" fill="#dfc08f" fontSize="8" textAnchor="middle">7-10 Mins</text>
+              <text x="0" y="10" fill="#e8cb97" fontSize="8" textAnchor="middle">7-10 Mins</text>
             </g>
 
             {/* Baner High Street (North) */}
             <g transform="translate(300, 70)">
-              <circle cx="0" cy="0" r="24" fill="#1b2028" stroke="#c5a368" strokeWidth="1.5" />
+              <circle cx="0" cy="0" r="24" fill="#18202d" stroke="#d4af66" strokeWidth="1.5" />
               <text x="0" y="-3" fill="#ffffff" fontSize="9" fontWeight="bold" textAnchor="middle">BANER</text>
-              <text x="0" y="10" fill="#dfc08f" fontSize="8" textAnchor="middle">10-12 Mins</text>
+              <text x="0" y="10" fill="#e8cb97" fontSize="8" textAnchor="middle">10-12 Mins</text>
             </g>
 
             {/* Balewadi Sports Complex (North-West) */}
             <g transform="translate(140, 130)">
-              <circle cx="0" cy="0" r="24" fill="#1b2028" stroke="#c5a368" strokeWidth="1.5" />
+              <circle cx="0" cy="0" r="24" fill="#18202d" stroke="#d4af66" strokeWidth="1.5" />
               <text x="0" y="-3" fill="#ffffff" fontSize="9" fontWeight="bold" textAnchor="middle">BALEWADI</text>
-              <text x="0" y="10" fill="#dfc08f" fontSize="8" textAnchor="middle">8 Mins</text>
+              <text x="0" y="10" fill="#e8cb97" fontSize="8" textAnchor="middle">8 Mins</text>
             </g>
 
             {/* Mumbai-Pune Expressway (South-West) */}
             <g transform="translate(160, 380)">
-              <circle cx="0" cy="0" r="24" fill="#1b2028" stroke="#c5a368" strokeWidth="1.5" />
+              <circle cx="0" cy="0" r="24" fill="#18202d" stroke="#d4af66" strokeWidth="1.5" />
               <text x="0" y="-3" fill="#ffffff" fontSize="8" fontWeight="bold" textAnchor="middle">EXPRESSWAY</text>
-              <text x="0" y="10" fill="#dfc08f" fontSize="8" textAnchor="middle">15 Mins</text>
+              <text x="0" y="10" fill="#e8cb97" fontSize="8" textAnchor="middle">15 Mins</text>
             </g>
 
             {/* Aundh & Pune Univ (South-East) */}
             <g transform="translate(440, 370)">
-              <circle cx="0" cy="0" r="24" fill="#1b2028" stroke="#c5a368" strokeWidth="1.5" />
+              <circle cx="0" cy="0" r="24" fill="#18202d" stroke="#d4af66" strokeWidth="1.5" />
               <text x="0" y="-3" fill="#ffffff" fontSize="9" fontWeight="bold" textAnchor="middle">AUNDH</text>
-              <text x="0" y="10" fill="#dfc08f" fontSize="8" textAnchor="middle">18 Mins</text>
+              <text x="0" y="10" fill="#e8cb97" fontSize="8" textAnchor="middle">18 Mins</text>
             </g>
           </svg>
         </div>
 
-        <!-- Transit Time Indicators -->
-        <div class="lg:col-span-5 space-y-4">
-          <h3 class="font-serif text-2xl text-stone-100 font-bold">Unrivaled West Pune Transit</h3>
-          <p class="text-xs text-stone-400 leading-relaxed">
+        <!-- Transit Time Indicators with Glass Cards -->
+        <div class="reveal delay-200 lg:col-span-5 space-y-4">
+          <h3 class="font-serif text-2xl text-stone-50 font-bold">Unrivaled West Pune Transit</h3>
+          <p class="text-xs sm:text-sm text-stone-200 leading-relaxed">
             Positioned along the designated PMRDA Town Planning Scheme corridor, offering rapid multi-lane connectivity to Hinjewadi Phase 1, Baner High Street, and the Mumbai-Pune Expressway.
           </p>
 
           <div class="space-y-3 pt-2">
-            <div class="p-3 rounded-lg bg-charcoal-950 border border-white/10 flex items-center justify-between text-xs">
+            <div class="glass-card p-3.5 rounded-lg border border-white/15 hover:border-gold-500/50 flex items-center justify-between text-xs transition-all">
               <div>
-                <span class="font-semibold text-stone-200">Hinjewadi IT Tech Park (Ph 1 & 2)</span>
-                <p class="text-[10px] text-stone-400">Infosys, Wipro, TCS, Cognizant</p>
+                <span class="font-semibold text-stone-100">Hinjewadi IT Tech Park (Ph 1 & 2)</span>
+                <p class="text-[10px] text-stone-300">Infosys, Wipro, TCS, Cognizant</p>
               </div>
-              <span class="px-2.5 py-1 rounded bg-gold-500/10 text-gold-400 font-bold">7-10 Mins</span>
+              <span class="px-2.5 py-1 rounded-full bg-gold-500/20 border border-gold-500/30 text-gold-300 font-bold">7-10 Mins</span>
             </div>
 
-            <div class="p-3 rounded-lg bg-charcoal-950 border border-white/10 flex items-center justify-between text-xs">
+            <div class="glass-card p-3.5 rounded-lg border border-white/15 hover:border-gold-500/50 flex items-center justify-between text-xs transition-all">
               <div>
-                <span class="font-semibold text-stone-200">Balewadi High Street & Sports Arena</span>
-                <p class="text-[10px] text-stone-400">Fine dining, retail, athletic stadium</p>
+                <span class="font-semibold text-stone-100">Balewadi High Street & Sports Arena</span>
+                <p class="text-[10px] text-stone-300">Fine dining, retail, athletic stadium</p>
               </div>
-              <span class="px-2.5 py-1 rounded bg-gold-500/10 text-gold-400 font-bold">8 Mins</span>
+              <span class="px-2.5 py-1 rounded-full bg-gold-500/20 border border-gold-500/30 text-gold-300 font-bold">8 Mins</span>
             </div>
 
-            <div class="p-3 rounded-lg bg-charcoal-950 border border-white/10 flex items-center justify-between text-xs">
+            <div class="glass-card p-3.5 rounded-lg border border-white/15 hover:border-gold-500/50 flex items-center justify-between text-xs transition-all">
               <div>
-                <span class="font-semibold text-stone-200">Elite Educational Hubs</span>
-                <p class="text-[10px] text-stone-400">Delhi Public School, Mahindra Intl, Symbiosis</p>
+                <span class="font-semibold text-stone-100">Elite Educational Hubs</span>
+                <p class="text-[10px] text-stone-300">Delhi Public School, Mahindra Intl, Symbiosis</p>
               </div>
-              <span class="px-2.5 py-1 rounded bg-gold-500/10 text-gold-400 font-bold">10-12 Mins</span>
+              <span class="px-2.5 py-1 rounded-full bg-gold-500/20 border border-gold-500/30 text-gold-300 font-bold">10-12 Mins</span>
             </div>
 
-            <div class="p-3 rounded-lg bg-charcoal-950 border border-white/10 flex items-center justify-between text-xs">
+            <div class="glass-card p-3.5 rounded-lg border border-white/15 hover:border-gold-500/50 flex items-center justify-between text-xs transition-all">
               <div>
-                <span class="font-semibold text-stone-200">Proposed PMRDA Ring Road & Metro 3</span>
-                <p class="text-[10px] text-stone-400">Arterial transit to Pune airport & railway station</p>
+                <span class="font-semibold text-stone-100">Proposed PMRDA Ring Road & Metro 3</span>
+                <p class="text-[10px] text-stone-300">Arterial transit to Pune airport & railway station</p>
               </div>
-              <span class="px-2.5 py-1 rounded bg-emerald-500/10 text-emerald-400 font-bold">Direct Access</span>
+              <span class="px-2.5 py-1 rounded-full bg-emerald-500/20 border border-emerald-500/30 text-emerald-300 font-bold">Direct Access</span>
             </div>
           </div>
 
@@ -568,7 +626,7 @@ const homepageFaqSchema = {
             <button
               data-open-modal
               data-interest="Location Dossier"
-              class="w-full py-3 rounded border border-gold-500/40 text-gold-400 hover:bg-gold-500/10 text-xs font-bold uppercase tracking-widest transition-colors"
+              class="btn-shimmer w-full py-3.5 rounded-full border border-gold-500/50 text-gold-300 hover:bg-gold-500/15 hover:text-white text-xs font-bold uppercase tracking-widest transition-all shadow-md"
             >
               Download Complete Location Dossier
             </button>
@@ -587,12 +645,12 @@ const homepageFaqSchema = {
 
 
   <!-- 09 WHY MAHALUNGE? (Micro-Market Authority Section) -->
-  <section class="py-24 bg-charcoal-950 relative">
+  <section class="py-24 bg-[#0c1017] border-t border-white/[0.08] relative">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
-      <div class="text-center max-w-2xl mx-auto space-y-3">
+      <div class="reveal text-center max-w-2xl mx-auto space-y-3">
         <span class="text-xs uppercase tracking-widest text-gold-400 font-bold">Micro-Market Fundamentals</span>
-        <h2 class="font-serif text-3xl sm:text-4xl text-stone-100 font-bold">Why Mahalunge is West Pune's Key Growth Story</h2>
-        <p class="text-xs text-stone-400 leading-relaxed">
+        <h2 class="font-serif text-3xl sm:text-4xl text-stone-50 font-bold">Why Mahalunge is West Pune's Key Growth Story</h2>
+        <p class="text-xs sm:text-sm text-stone-200 leading-relaxed">
           From planned PMRDA town planning schemes to sustained rental yield demand from the Hinjewadi tech belt — explore why Mahalunge is transforming into an elite residential address.
         </p>
       </div>
@@ -608,10 +666,10 @@ const homepageFaqSchema = {
           { title: 'High Rental Yields', desc: 'Consistently strong residential rental absorption fueled by MNC corporate leadership.' },
           { title: 'Mahindra Stamp of Trust', desc: 'Institutional master-planning ensuring high long-term asset value and quality maintenance.' }
         ].map((item, idx) => (
-          <div class="p-6 rounded-xl bg-charcoal-900 border border-white/10 space-y-3 hover:border-gold-500/30 transition-all">
-            <span class="text-xs font-serif text-gold-400 font-bold">0{idx + 1}</span>
-            <h3 class="font-serif text-base text-stone-100 font-semibold">{item.title}</h3>
-            <p class="text-xs text-stone-400 leading-relaxed">{item.desc}</p>
+          <div class="reveal glass-card p-6 rounded-xl space-y-3 hover:border-gold-500/50 transition-all group">
+            <span class="text-xs font-serif text-gold-400 font-bold group-hover:scale-110 transition-transform inline-block">0{idx + 1}</span>
+            <h3 class="font-serif text-base text-stone-50 font-semibold group-hover:text-gold-300 transition-colors">{item.title}</h3>
+            <p class="text-xs text-stone-200 leading-relaxed font-light">{item.desc}</p>
           </div>
         ))}
       </div>
@@ -619,7 +677,7 @@ const homepageFaqSchema = {
       <div class="text-center">
         <a 
           href="/mahalunge-pune" 
-          class="inline-flex items-center space-x-2 text-xs uppercase tracking-widest text-gold-400 hover:text-gold-300 font-semibold border-b border-gold-400 pb-1"
+          class="inline-flex items-center space-x-2 text-xs uppercase tracking-widest text-gold-400 hover:text-gold-300 font-semibold border-b border-gold-400 pb-1 hover:translate-x-1 transition-transform"
         >
           <span>Read the in-depth Mahalunge Real Estate Analysis & Data Guide</span>
           <span>→</span>
@@ -630,67 +688,67 @@ const homepageFaqSchema = {
 
 
   <!-- 10 MAHINDRA BRAND AUTHORITY & PUNE TRACK RECORD -->
-  <section class="py-24 bg-charcoal-900 border-t border-white/10 relative">
+  <section class="py-24 bg-gradient-to-b from-[#10141e] via-[#151c2a] to-[#10141e] border-t border-gold-500/20 relative">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
       
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-        <div class="lg:col-span-6 space-y-6">
+        <div class="reveal lg:col-span-6 space-y-6">
           <span class="text-xs uppercase tracking-widest text-gold-400 font-bold">Institutional Pedigree</span>
-          <h2 class="font-serif text-3xl sm:text-4xl text-stone-100 font-bold">The Mahindra Lifespaces Legacy</h2>
-          <p class="text-xs sm:text-sm text-stone-400 leading-relaxed">
+          <h2 class="font-serif text-3xl sm:text-4xl text-stone-50 font-bold">The Mahindra Lifespaces Legacy</h2>
+          <p class="text-xs sm:text-sm text-stone-200 leading-relaxed">
             As the real estate and infrastructure arm of the USD 20+ Billion Mahindra Group, Mahindra Lifespaces Developers Limited is synonymous with uncompromising transparency, green innovation, and community development.
           </p>
           
-          <div class="grid grid-cols-3 gap-4 pt-2 border-t border-white/10">
-            <div>
-              <div class="font-serif text-2xl font-bold text-stone-100">50+</div>
-              <div class="text-[10px] text-stone-400 uppercase tracking-wider">Residential Projects</div>
+          <div class="grid grid-cols-3 gap-4 pt-4 border-t border-white/15">
+            <div class="glass-card p-4 rounded-xl text-center">
+              <div class="font-serif text-2xl lg:text-3xl font-bold text-white" data-counter="50" data-suffix="+">50+</div>
+              <div class="text-[10px] text-stone-300 uppercase tracking-wider mt-1">Residential Projects</div>
             </div>
-            <div>
-              <div class="font-serif text-2xl font-bold text-stone-100">55.5M+</div>
-              <div class="text-[10px] text-stone-400 uppercase tracking-wider">Sq.Ft. Portfolio</div>
+            <div class="glass-card p-4 rounded-xl text-center">
+              <div class="font-serif text-2xl lg:text-3xl font-bold text-white" data-counter="55.5" data-decimals="1" data-suffix="M+">55.5M+</div>
+              <div class="text-[10px] text-stone-300 uppercase tracking-wider mt-1">Sq.Ft. Portfolio</div>
             </div>
-            <div>
-              <div class="font-serif text-2xl font-bold text-gold-400">21,000+</div>
-              <div class="text-[10px] text-stone-400 uppercase tracking-wider">Happy Families</div>
+            <div class="glass-card p-4 rounded-xl text-center">
+              <div class="font-serif text-2xl lg:text-3xl font-bold text-gold-400" data-counter="21000" data-suffix="+">21,000+</div>
+              <div class="text-[10px] text-stone-300 uppercase tracking-wider mt-1">Happy Families</div>
             </div>
           </div>
         </div>
 
         <!-- Pune Portfolio Cards -->
-        <div class="lg:col-span-6 space-y-4">
-          <h3 class="font-serif text-sm uppercase tracking-widest text-stone-300 font-semibold mb-2">Proven Track Record in Pune</h3>
+        <div class="reveal delay-200 lg:col-span-6 space-y-4">
+          <h3 class="font-serif text-sm uppercase tracking-widest text-amber-200 font-semibold mb-2">Proven Track Record in Pune</h3>
           
           <div class="space-y-3">
-            <div class="p-4 rounded-xl bg-charcoal-950 border border-white/10 flex items-center justify-between text-xs hover:border-gold-500/40 transition-colors">
+            <div class="glass-card p-4 rounded-xl border border-white/15 flex items-center justify-between text-xs hover:border-gold-500/50 transition-all">
               <div>
                 <h4 class="font-serif text-sm font-semibold text-stone-100">Mahindra Antheia</h4>
-                <p class="text-[11px] text-stone-400">Pimpri-Chinchwad, Pune • Premium Integrated Community</p>
+                <p class="text-[11px] text-stone-300">Pimpri-Chinchwad, Pune • Premium Integrated Community</p>
               </div>
-              <span class="px-2.5 py-1 rounded bg-white/5 text-stone-300 text-[10px] uppercase tracking-wider">Delivered</span>
+              <span class="px-2.5 py-1 rounded bg-white/10 text-stone-200 text-[10px] uppercase tracking-wider">Delivered</span>
             </div>
 
-            <div class="p-4 rounded-xl bg-charcoal-950 border border-white/10 flex items-center justify-between text-xs hover:border-gold-500/40 transition-colors">
+            <div class="glass-card p-4 rounded-xl border border-white/15 flex items-center justify-between text-xs hover:border-gold-500/50 transition-all">
               <div>
                 <h4 class="font-serif text-sm font-semibold text-stone-100">Mahindra Centralis</h4>
-                <p class="text-[11px] text-stone-400">Pimpri, Pune • Modern High-Rise Residences</p>
+                <p class="text-[11px] text-stone-300">Pimpri, Pune • Modern High-Rise Residences</p>
               </div>
-              <span class="px-2.5 py-1 rounded bg-white/5 text-stone-300 text-[10px] uppercase tracking-wider">Delivered</span>
+              <span class="px-2.5 py-1 rounded bg-white/10 text-stone-200 text-[10px] uppercase tracking-wider">Delivered</span>
             </div>
 
-            <div class="p-4 rounded-xl bg-charcoal-950 border border-white/10 flex items-center justify-between text-xs hover:border-gold-500/40 transition-colors">
+            <div class="glass-card p-4 rounded-xl border border-white/15 flex items-center justify-between text-xs hover:border-gold-500/50 transition-all">
               <div>
                 <h4 class="font-serif text-sm font-semibold text-stone-100">Mahindra Happinest Tathawade</h4>
-                <p class="text-[11px] text-stone-400">Tathawade, West Pune • Future-Ready Fusion Living</p>
+                <p class="text-[11px] text-stone-300">Tathawade, West Pune • Future-Ready Fusion Living</p>
               </div>
-              <span class="px-2.5 py-1 rounded bg-gold-500/20 text-gold-400 text-[10px] uppercase tracking-wider">Under Construction</span>
+              <span class="px-2.5 py-1 rounded bg-gold-500/20 text-gold-300 border border-gold-500/30 text-[10px] uppercase tracking-wider">Under Construction</span>
             </div>
           </div>
 
           <div class="pt-2">
             <a 
               href="/brand" 
-              class="text-xs uppercase tracking-widest text-gold-400 hover:text-white font-medium flex items-center space-x-1"
+              class="text-xs uppercase tracking-widest text-gold-400 hover:text-gold-300 font-medium flex items-center space-x-1.5 transition-colors"
             >
               <span>Explore full Mahindra corporate and Pune portfolio</span>
               <span>→</span>
@@ -703,23 +761,23 @@ const homepageFaqSchema = {
   </section>
 
 
-  <!-- 11 PRICING & PRIORITY INVENTORY UNLOCK -->
-  <section id="pricing" class="py-24 bg-charcoal-950 relative">
+  <!-- 11 PRICING & PRIORITY INVENTORY UNLOCK (Luminous Table) -->
+  <section id="pricing" class="py-24 bg-[#0c1017] border-t border-white/[0.08] relative">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
       
-      <div class="text-center space-y-3">
+      <div class="reveal text-center space-y-3">
         <span class="text-xs uppercase tracking-widest text-gold-400 font-bold">Early Expression of Interest</span>
-        <h2 class="font-serif text-3xl sm:text-4xl text-stone-100 font-bold">Tentative Pricing & Availability</h2>
-        <p class="text-xs text-stone-400 max-w-xl mx-auto leading-relaxed">
+        <h2 class="font-serif text-3xl sm:text-4xl text-stone-50 font-bold">Tentative Pricing & Availability</h2>
+        <p class="text-xs sm:text-sm text-stone-200 max-w-xl mx-auto leading-relaxed">
           Register your preliminary interest to secure preferential pre-launch inventory allocations once official statutory approvals and MahaRERA sanctions are finalized.
         </p>
       </div>
 
-      <!-- Pricing Table -->
-      <div class="bg-charcoal-900 rounded-2xl border border-white/10 overflow-hidden shadow-2xl">
+      <!-- Pricing Table with Luminous Glass Styling -->
+      <div class="reveal delay-100 glass-card rounded-2xl border border-gold-500/35 overflow-hidden shadow-2xl">
         <div class="overflow-x-auto">
-          <table class="w-full text-left text-xs text-stone-300">
-            <thead class="bg-charcoal-950 text-[11px] uppercase tracking-wider text-stone-400 border-b border-white/10">
+          <table class="w-full text-left text-xs text-stone-200">
+            <thead class="bg-[#131926] text-[11px] uppercase tracking-wider text-amber-200/90 border-b border-gold-500/25">
               <tr>
                 <th class="p-4 sm:p-6 font-semibold">Configuration</th>
                 <th class="p-4 sm:p-6 font-semibold">Indicative Carpet Area*</th>
@@ -728,52 +786,52 @@ const homepageFaqSchema = {
                 <th class="p-4 sm:p-6 font-semibold text-right">Action</th>
               </tr>
             </thead>
-            <tbody class="divide-y divide-white/5">
-              <tr class="hover:bg-white/5 transition-colors">
-                <td class="p-4 sm:p-6 font-serif text-sm font-semibold text-stone-100">2 BHK Luxe</td>
-                <td class="p-4 sm:p-6 text-stone-400">785 - 895 sq.ft.*</td>
+            <tbody class="divide-y divide-white/10">
+              <tr class="hover:bg-white/[0.06] transition-colors">
+                <td class="p-4 sm:p-6 font-serif text-sm font-semibold text-stone-50">2 BHK Luxe</td>
+                <td class="p-4 sm:p-6 text-stone-300">785 - 895 sq.ft.*</td>
                 <td class="p-4 sm:p-6 font-semibold text-gold-400">Unlock Early Price</td>
-                <td class="p-4 sm:p-6"><span class="px-2.5 py-1 rounded bg-gold-500/10 text-gold-400 text-[10px] uppercase">EOI Open</span></td>
+                <td class="p-4 sm:p-6"><span class="px-2.5 py-1 rounded-full bg-gold-500/15 border border-gold-500/30 text-gold-300 text-[10px] uppercase font-bold">EOI Open</span></td>
                 <td class="p-4 sm:p-6 text-right">
                   <button
                     data-open-modal
                     data-unit="2 BHK Luxe"
                     data-interest="Price Sheet 2 BHK"
-                    class="px-4 py-2 rounded bg-gradient-to-r from-gold-400 to-gold-500 text-charcoal-950 font-bold uppercase tracking-wider text-[11px]"
+                    class="btn-shimmer px-4 py-2 rounded-full bg-gradient-to-r from-gold-300 via-gold-400 to-gold-500 text-charcoal-950 font-bold uppercase tracking-wider text-[11px] shadow-md hover:shadow-gold-500/30 transition-all cursor-pointer"
                   >
                     Get Cost Sheet
                   </button>
                 </td>
               </tr>
 
-              <tr class="hover:bg-white/5 transition-colors">
-                <td class="p-4 sm:p-6 font-serif text-sm font-semibold text-stone-100">3 BHK Premium</td>
-                <td class="p-4 sm:p-6 text-stone-400">1,120 - 1,210 sq.ft.*</td>
+              <tr class="hover:bg-white/[0.06] transition-colors">
+                <td class="p-4 sm:p-6 font-serif text-sm font-semibold text-stone-50">3 BHK Premium</td>
+                <td class="p-4 sm:p-6 text-stone-300">1,120 - 1,210 sq.ft.*</td>
                 <td class="p-4 sm:p-6 font-semibold text-gold-400">Unlock Early Price</td>
-                <td class="p-4 sm:p-6"><span class="px-2.5 py-1 rounded bg-gold-500/10 text-gold-400 text-[10px] uppercase">EOI Open</span></td>
+                <td class="p-4 sm:p-6"><span class="px-2.5 py-1 rounded-full bg-gold-500/15 border border-gold-500/30 text-gold-300 text-[10px] uppercase font-bold">EOI Open</span></td>
                 <td class="p-4 sm:p-6 text-right">
                   <button
                     data-open-modal
                     data-unit="3 BHK Premium"
                     data-interest="Price Sheet 3 BHK"
-                    class="px-4 py-2 rounded bg-gradient-to-r from-gold-400 to-gold-500 text-charcoal-950 font-bold uppercase tracking-wider text-[11px]"
+                    class="btn-shimmer px-4 py-2 rounded-full bg-gradient-to-r from-gold-300 via-gold-400 to-gold-500 text-charcoal-950 font-bold uppercase tracking-wider text-[11px] shadow-md hover:shadow-gold-500/30 transition-all cursor-pointer"
                   >
                     Get Cost Sheet
                   </button>
                 </td>
               </tr>
 
-              <tr class="hover:bg-white/5 transition-colors">
-                <td class="p-4 sm:p-6 font-serif text-sm font-semibold text-stone-100">4 BHK Signature</td>
-                <td class="p-4 sm:p-6 text-stone-400">1,650 - 1,820 sq.ft.*</td>
+              <tr class="hover:bg-white/[0.06] transition-colors">
+                <td class="p-4 sm:p-6 font-serif text-sm font-semibold text-stone-50">4 BHK Signature</td>
+                <td class="p-4 sm:p-6 text-stone-300">1,650 - 1,820 sq.ft.*</td>
                 <td class="p-4 sm:p-6 font-semibold text-gold-400">Unlock Early Price</td>
-                <td class="p-4 sm:p-6"><span class="px-2.5 py-1 rounded bg-gold-500/10 text-gold-400 text-[10px] uppercase">Limited Release</span></td>
+                <td class="p-4 sm:p-6"><span class="px-2.5 py-1 rounded-full bg-amber-500/15 border border-amber-500/30 text-amber-300 text-[10px] uppercase font-bold">Limited Release</span></td>
                 <td class="p-4 sm:p-6 text-right">
                   <button
                     data-open-modal
                     data-unit="4 BHK Signature"
                     data-interest="Price Sheet 4 BHK"
-                    class="px-4 py-2 rounded bg-gradient-to-r from-gold-400 to-gold-500 text-charcoal-950 font-bold uppercase tracking-wider text-[11px]"
+                    class="btn-shimmer px-4 py-2 rounded-full bg-gradient-to-r from-gold-300 via-gold-400 to-gold-500 text-charcoal-950 font-bold uppercase tracking-wider text-[11px] shadow-md hover:shadow-gold-500/30 transition-all cursor-pointer"
                   >
                     Get Cost Sheet
                   </button>
@@ -783,7 +841,7 @@ const homepageFaqSchema = {
           </table>
         </div>
 
-        <div class="p-5 bg-charcoal-950/80 border-t border-white/10 text-[11px] text-stone-400 leading-relaxed">
+        <div class="p-5 bg-[#0e131e] border-t border-white/10 text-[11px] text-stone-300 leading-relaxed font-light">
           *Prices, availability, specifications and payment schedules are subject to change without prior notice and will be finalized upon MahaRERA project registration and statutory approvals.
         </div>
       </div>
@@ -797,14 +855,14 @@ const homepageFaqSchema = {
   </section>
 
 
-  <!-- 12 FREQUENTLY ASKED QUESTIONS (FAQ) -->
-  <section class="py-24 bg-charcoal-900 border-t border-white/10 relative">
+  <!-- 12 FREQUENTLY ASKED QUESTIONS (Luminous Accordion) -->
+  <section class="py-24 bg-gradient-to-b from-[#10141e] via-[#151c2a] to-[#10141e] border-t border-gold-500/20 relative">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
       
-      <div class="text-center space-y-3">
+      <div class="reveal text-center space-y-3">
         <span class="text-xs uppercase tracking-widest text-gold-400 font-bold">Frequently Asked Questions</span>
-        <h2 class="font-serif text-3xl sm:text-4xl text-stone-100 font-bold">Essential Project Inquiries</h2>
-        <p class="text-xs text-stone-400 leading-relaxed">
+        <h2 class="font-serif text-3xl sm:text-4xl text-stone-50 font-bold">Essential Project Inquiries</h2>
+        <p class="text-xs sm:text-sm text-stone-200 leading-relaxed">
           Transparent facts regarding Mahindra Lifespaces' newly acquired 13.46-acre land parcel at Mahalunge.
         </p>
       </div>
@@ -832,12 +890,12 @@ const homepageFaqSchema = {
             a: 'You can register your confidential Expression of Interest (EOI) through our online Priority Pass form to receive official updates, floor plans, and pre-launch booking invitations.'
           }
         ].map((faq, i) => (
-          <details class="group p-5 rounded-xl bg-charcoal-950 border border-white/10 cursor-pointer">
-            <summary class="flex items-center justify-between font-serif text-sm sm:text-base text-stone-200 font-semibold list-none">
-              <span>{faq.q}</span>
+          <details class="reveal glass-card group p-5 rounded-xl border border-white/15 hover:border-gold-500/50 cursor-pointer transition-all">
+            <summary class="flex items-center justify-between font-serif text-sm sm:text-base text-stone-100 font-semibold list-none">
+              <span class="group-hover:text-gold-300 transition-colors">{faq.q}</span>
               <span class="text-gold-400 group-open:rotate-180 transition-transform">▼</span>
             </summary>
-            <p class="mt-3 text-xs text-stone-400 leading-relaxed pt-2 border-t border-white/5">
+            <p class="mt-3 text-xs sm:text-sm text-stone-200 leading-relaxed pt-3 border-t border-white/10 font-light">
               {faq.a}
             </p>
           </details>
@@ -848,16 +906,16 @@ const homepageFaqSchema = {
   </section>
 
   <!-- 13 MAHALUNGE REAL ESTATE AUTHORITY DIRECTORY & TOPIC MATRIX -->
-  <section class="py-20 bg-charcoal-950 border-t border-white/10 relative">
+  <section class="py-20 bg-[#0c1017] border-t border-white/[0.08] relative">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
       
-      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-white/10 pb-6">
+      <div class="reveal flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-white/15 pb-6">
         <div class="space-y-2">
           <span class="text-xs uppercase tracking-widest text-gold-400 font-bold">Topical Authority Network</span>
-          <h2 class="font-serif text-3xl sm:text-4xl text-stone-100 font-bold">
+          <h2 class="font-serif text-3xl sm:text-4xl text-stone-50 font-bold">
             Mahalunge Real Estate Intelligence Matrix
           </h2>
-          <p class="text-xs text-stone-400 max-w-2xl leading-relaxed">
+          <p class="text-xs sm:text-sm text-stone-200 max-w-2xl leading-relaxed">
             Direct access to comprehensive research dossiers, configuration blueprints, micro-market pricing analyses, and civic infrastructure reports.
           </p>
         </div>
@@ -874,132 +932,132 @@ const homepageFaqSchema = {
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-xs">
         
         <!-- Col 1: Configurations -->
-        <div class="space-y-4">
-          <h3 class="font-serif text-sm uppercase tracking-widest text-stone-200 font-bold border-b border-white/10 pb-2">
+        <div class="reveal glass-card p-5 rounded-xl space-y-4 border border-white/10">
+          <h3 class="font-serif text-sm uppercase tracking-widest text-amber-200 font-bold border-b border-white/10 pb-2">
             Residences & Typologies
           </h3>
-          <ul class="space-y-2.5 text-stone-400">
+          <ul class="space-y-2.5 text-stone-300">
             <li>
-              <a href="/residences/2-bhk" class="hover:text-gold-400 transition-colors flex items-center justify-between">
+              <a href="/residences/2-bhk" class="hover:text-gold-300 transition-colors flex items-center justify-between">
                 <span>2 BHK Luxe (785-895 sq.ft.)</span>
-                <span class="text-stone-600">→</span>
+                <span class="text-gold-500/60">→</span>
               </a>
             </li>
             <li>
-              <a href="/residences/3-bhk" class="hover:text-gold-400 transition-colors flex items-center justify-between">
+              <a href="/residences/3-bhk" class="hover:text-gold-300 transition-colors flex items-center justify-between">
                 <span>3 BHK Premium (1,120-1,210 sq.ft.)</span>
-                <span class="text-stone-600">→</span>
+                <span class="text-gold-500/60">→</span>
               </a>
             </li>
             <li>
-              <a href="/residences/4-bhk" class="hover:text-gold-400 transition-colors flex items-center justify-between">
+              <a href="/residences/4-bhk" class="hover:text-gold-300 transition-colors flex items-center justify-between">
                 <span>4 BHK Signature (1,650-1,820 sq.ft.)</span>
-                <span class="text-stone-600">→</span>
+                <span class="text-gold-500/60">→</span>
               </a>
             </li>
             <li>
-              <a href="/brochure" class="hover:text-gold-400 transition-colors flex items-center justify-between">
+              <a href="/brochure" class="hover:text-gold-300 transition-colors flex items-center justify-between">
                 <span>Download Master Layout & Cost Sheet</span>
-                <span class="text-stone-600">→</span>
+                <span class="text-gold-500/60">→</span>
               </a>
             </li>
           </ul>
         </div>
 
         <!-- Col 2: Locality Pillar Pages -->
-        <div class="space-y-4">
-          <h3 class="font-serif text-sm uppercase tracking-widest text-stone-200 font-bold border-b border-white/10 pb-2">
+        <div class="reveal delay-100 glass-card p-5 rounded-xl space-y-4 border border-white/10">
+          <h3 class="font-serif text-sm uppercase tracking-widest text-amber-200 font-bold border-b border-white/10 pb-2">
             Micro-Market Hubs
           </h3>
-          <ul class="space-y-2.5 text-stone-400">
+          <ul class="space-y-2.5 text-stone-300">
             <li>
-              <a href="/mahalunge-pune" class="hover:text-gold-400 transition-colors flex items-center justify-between">
+              <a href="/mahalunge-pune" class="hover:text-gold-300 transition-colors flex items-center justify-between">
                 <span>Why Mahalunge Micro-Market</span>
-                <span class="text-stone-600">→</span>
+                <span class="text-gold-500/60">→</span>
               </a>
             </li>
             <li>
-              <a href="/flats-near-hinjewadi" class="hover:text-gold-400 transition-colors flex items-center justify-between">
+              <a href="/flats-near-hinjewadi" class="hover:text-gold-300 transition-colors flex items-center justify-between">
                 <span>Flats Near Hinjewadi Tech Park</span>
-                <span class="text-stone-600">→</span>
+                <span class="text-gold-500/60">→</span>
               </a>
             </li>
             <li>
-              <a href="/flats-near-baner" class="hover:text-gold-400 transition-colors flex items-center justify-between">
+              <a href="/flats-near-baner" class="hover:text-gold-300 transition-colors flex items-center justify-between">
                 <span>Flats Near Baner & High Street</span>
-                <span class="text-stone-600">→</span>
+                <span class="text-gold-500/60">→</span>
               </a>
             </li>
             <li>
-              <a href="/nande-mahalunge-real-estate" class="hover:text-gold-400 transition-colors flex items-center justify-between">
+              <a href="/nande-mahalunge-real-estate" class="hover:text-gold-300 transition-colors flex items-center justify-between">
                 <span>Nande-Mahalunge Growth Corridor</span>
-                <span class="text-stone-600">→</span>
+                <span class="text-gold-500/60">→</span>
               </a>
             </li>
           </ul>
         </div>
 
         <!-- Col 3: Research & Comparative Studies -->
-        <div class="space-y-4">
-          <h3 class="font-serif text-sm uppercase tracking-widest text-stone-200 font-bold border-b border-white/10 pb-2">
+        <div class="reveal delay-200 glass-card p-5 rounded-xl space-y-4 border border-white/10">
+          <h3 class="font-serif text-sm uppercase tracking-widest text-amber-200 font-bold border-b border-white/10 pb-2">
             Comparative & Market Studies
           </h3>
-          <ul class="space-y-2.5 text-stone-400">
+          <ul class="space-y-2.5 text-stone-300">
             <li>
-              <a href="/articles/mahindra-mahalunge-vs-godrej-vtp-kolte-patil" class="hover:text-gold-400 transition-colors flex items-center justify-between">
+              <a href="/articles/mahindra-mahalunge-vs-godrej-vtp-kolte-patil" class="hover:text-gold-300 transition-colors flex items-center justify-between">
                 <span>Mahindra vs Godrej, VTP & Kolte Patil</span>
-                <span class="text-stone-600">→</span>
+                <span class="text-gold-500/60">→</span>
               </a>
             </li>
             <li>
-              <a href="/articles/mahalunge-vs-baner-vs-hinjewadi" class="hover:text-gold-400 transition-colors flex items-center justify-between">
+              <a href="/articles/mahalunge-vs-baner-vs-hinjewadi" class="hover:text-gold-300 transition-colors flex items-center justify-between">
                 <span>Mahalunge vs Baner vs Hinjewadi</span>
-                <span class="text-stone-600">→</span>
+                <span class="text-gold-500/60">→</span>
               </a>
             </li>
             <li>
-              <a href="/articles/mahalunge-property-prices-investment-trends" class="hover:text-gold-400 transition-colors flex items-center justify-between">
+              <a href="/articles/mahalunge-property-prices-investment-trends" class="hover:text-gold-300 transition-colors flex items-center justify-between">
                 <span>Property Prices & ROI Forecast</span>
-                <span class="text-stone-600">→</span>
+                <span class="text-gold-500/60">→</span>
               </a>
             </li>
             <li>
-              <a href="/articles/why-mahalunge-nande-maan-is-punes-next-billion-dollar-growth-corridor" class="hover:text-gold-400 transition-colors flex items-center justify-between">
+              <a href="/articles/why-mahalunge-nande-maan-is-punes-next-billion-dollar-growth-corridor" class="hover:text-gold-300 transition-colors flex items-center justify-between">
                 <span>Next Billion-Dollar Corridor Study</span>
-                <span class="text-stone-600">→</span>
+                <span class="text-gold-500/60">→</span>
               </a>
             </li>
           </ul>
         </div>
 
         <!-- Col 4: Infrastructure & Brand Authority -->
-        <div class="space-y-4">
-          <h3 class="font-serif text-sm uppercase tracking-widest text-stone-200 font-bold border-b border-white/10 pb-2">
+        <div class="reveal delay-300 glass-card p-5 rounded-xl space-y-4 border border-white/10">
+          <h3 class="font-serif text-sm uppercase tracking-widest text-amber-200 font-bold border-b border-white/10 pb-2">
             Infrastructure & Brand
           </h3>
-          <ul class="space-y-2.5 text-stone-400">
+          <ul class="space-y-2.5 text-stone-300">
             <li>
-              <a href="/articles/mahalunge-pin-code-connectivity-infrastructure-guide-2026" class="hover:text-gold-400 transition-colors flex items-center justify-between">
+              <a href="/articles/mahalunge-pin-code-connectivity-infrastructure-guide-2026" class="hover:text-gold-300 transition-colors flex items-center justify-between">
                 <span>Pin Code 411045 & Road Network</span>
-                <span class="text-stone-600">→</span>
+                <span class="text-gold-500/60">→</span>
               </a>
             </li>
             <li>
-              <a href="/articles/pmrda-town-planning-scheme-mahalunge" class="hover:text-gold-400 transition-colors flex items-center justify-between">
+              <a href="/articles/pmrda-town-planning-scheme-mahalunge" class="hover:text-gold-300 transition-colors flex items-center justify-between">
                 <span>PMRDA Town Planning Scheme 1</span>
-                <span class="text-stone-600">→</span>
+                <span class="text-gold-500/60">→</span>
               </a>
             </li>
             <li>
-              <a href="/articles/mahindra-lifespaces-pune-track-record-residential-legacy" class="hover:text-gold-400 transition-colors flex items-center justify-between">
+              <a href="/articles/mahindra-lifespaces-pune-track-record-residential-legacy" class="hover:text-gold-300 transition-colors flex items-center justify-between">
                 <span>Mahindra's Delivered Pune Legacy</span>
-                <span class="text-stone-600">→</span>
+                <span class="text-gold-500/60">→</span>
               </a>
             </li>
             <li>
-              <a href="/faq" class="hover:text-gold-400 transition-colors flex items-center justify-between">
+              <a href="/faq" class="hover:text-gold-300 transition-colors flex items-center justify-between">
                 <span>20+ Categorized Project FAQs</span>
-                <span class="text-stone-600">→</span>
+                <span class="text-gold-500/60">→</span>
               </a>
             </li>
           </ul>
@@ -1011,22 +1069,27 @@ const homepageFaqSchema = {
   </section>
 
 
-  <!-- 14 VIP BOOK SITE VISIT & CONTACT ENGINE -->
-  <section class="py-24 bg-gradient-to-b from-charcoal-950 via-charcoal-900 to-charcoal-950 border-t border-white/10 relative text-center">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
-      <span class="text-xs uppercase tracking-widest text-gold-400 font-bold">Personalized Advisory</span>
-      <h2 class="font-serif text-3xl sm:text-5xl text-stone-100 font-bold">
+  <!-- 14 VIP BOOK SITE VISIT & CONTACT ENGINE (Luminous VIP Lounge) -->
+  <section class="py-28 bg-gradient-to-b from-[#0e131d] via-[#161e2e] to-[#0c1017] border-t border-gold-500/30 relative text-center overflow-hidden shadow-2xl">
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(212,175,102,0.1)_0%,transparent_70%)] pointer-events-none"></div>
+    
+    <div class="reveal max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8 relative z-10">
+      <div class="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full bg-gold-500/15 border border-gold-500/40 text-gold-300 text-xs font-semibold uppercase tracking-widest shadow-[0_0_20px_rgba(212,175,102,0.2)]">
+        <span>Personalized Concierge Advisory</span>
+      </div>
+      
+      <h2 class="font-serif text-3xl sm:text-5xl text-white font-bold leading-tight drop-shadow-md">
         Experience the Mahalunge Corridor
       </h2>
-      <p class="text-xs sm:text-sm text-stone-300 max-w-xl mx-auto leading-relaxed">
-        Arrange a private corridor tour and review the 13.46-acre master topography with an authorized Mahindra Lifespaces relationship manager.
+      <p class="text-xs sm:text-base text-stone-200 max-w-xl mx-auto leading-relaxed font-light">
+        Arrange a private corridor walkthrough and preview the 13.46-acre master topography with an authorized Mahindra Lifespaces relationship manager.
       </p>
 
       <div class="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
         <button
           data-open-modal
           data-interest="VIP Site Visit"
-          class="w-full sm:w-auto px-8 py-4 rounded bg-gradient-to-r from-gold-400 via-gold-500 to-gold-400 text-charcoal-950 text-xs font-bold tracking-widest uppercase hover:shadow-xl hover:shadow-gold-500/20 transition-all active:scale-95"
+          class="btn-shimmer w-full sm:w-auto px-9 py-4 rounded-full bg-gradient-to-r from-gold-300 via-gold-400 to-gold-500 text-charcoal-950 text-xs font-bold tracking-widest uppercase hover:shadow-2xl hover:shadow-gold-500/35 transition-all active:scale-95 cursor-pointer"
         >
           Schedule VIP Site Visit
         </button>
@@ -1035,8 +1098,11 @@ const homepageFaqSchema = {
           href="https://wa.me/912067000000?text=Hi%2C%20I%20would%20like%20to%20schedule%20a%20site%20visit%20for%20Mahindra%20Mahalunge."
           target="_blank"
           rel="noopener noreferrer"
-          class="w-full sm:w-auto px-8 py-4 rounded border border-emerald-500/40 text-emerald-400 hover:bg-emerald-500/10 text-xs font-semibold tracking-widest uppercase transition-all flex items-center justify-center space-x-2"
+          class="btn-shimmer w-full sm:w-auto px-9 py-4 rounded-full border border-emerald-400/60 bg-emerald-950/40 text-emerald-300 hover:bg-emerald-500/20 hover:text-white text-xs font-semibold tracking-widest uppercase transition-all flex items-center justify-center space-x-2 shadow-lg cursor-pointer"
         >
+          <svg class="w-4 h-4 text-emerald-400" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86.173.086.275.072.376-.044.101-.116.433-.506.549-.68.116-.173.231-.145.39-.086s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.099.824z"/>
+          </svg>
           <span>Chat Direct on WhatsApp</span>
         </a>
       </div>

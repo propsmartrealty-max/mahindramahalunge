@@ -2,14 +2,17 @@
 // MasterPlanViewer.astro - Interactive SVG Master Plan Island
 ---
 
-<div class="w-full bg-charcoal-900 border border-white/10 rounded-2xl p-6 lg:p-10 shadow-2xl">
+<div class="w-full glass-card border border-white/10 rounded-2xl p-6 lg:p-10 shadow-2xl relative overflow-hidden">
   <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6 border-b border-white/10">
     <div>
-      <span class="text-[11px] uppercase tracking-widest text-gold-400 font-bold">13.46-Acre Land Parcel Blueprint</span>
+      <span class="text-[11px] uppercase tracking-widest text-gold-400 font-bold flex items-center gap-1.5">
+        <span class="w-1.5 h-1.5 rounded-full bg-gold-400 animate-pulse"></span>
+        13.46-Acre Land Parcel Blueprint
+      </span>
       <h3 class="font-serif text-2xl lg:text-3xl text-stone-100 font-bold">Interactive Master Layout</h3>
     </div>
-    <div class="flex items-center space-x-2 text-xs text-stone-400">
-      <span class="inline-block w-3 h-3 rounded-full bg-gold-400 animate-pulse"></span>
+    <div class="flex items-center space-x-2 text-xs text-stone-300">
+      <span class="inline-block w-2.5 h-2.5 rounded-full bg-gold-400 animate-ping" style="animation-duration: 2s;"></span>
       <span>Click any hotspot on the map to inspect zone details</span>
     </div>
   </div>
@@ -17,7 +20,7 @@
   <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 mt-8 items-center">
     
     <!-- SVG Interactive Map -->
-    <div class="lg:col-span-7 bg-charcoal-950 rounded-xl border border-white/10 p-4 relative overflow-hidden">
+    <div class="lg:col-span-7 bg-[#0c1017]/90 rounded-xl border border-white/10 p-4 relative overflow-hidden">
       <svg viewBox="0 0 600 450" class="w-full h-auto cursor-pointer select-none">
         <rect x="10" y="10" width="580" height="430" rx="12" fill="#111317" stroke="#222731" stroke-width="2" />
         
@@ -85,12 +88,12 @@
         Grand Clubhouse & Wellness Sanctum
       </h4>
 
-      <p id="zone-desc" class="text-xs text-stone-400 leading-relaxed">
+      <p id="zone-desc" class="text-xs text-stone-300 leading-relaxed">
         A multi-level 35,000+ sq.ft. social destination featuring a heated indoor pool, badminton courts, banquet salon, luxury spa, and rooftop lounge.
       </p>
 
       <div class="pt-2">
-        <h5 class="text-xs uppercase tracking-widest text-stone-300 font-semibold mb-3">Zone Highlights</h5>
+        <h5 class="text-xs uppercase tracking-widest text-stone-200 font-semibold mb-3">Zone Highlights</h5>
         <div id="zone-highlights" class="space-y-2">
           <div class="flex items-center space-x-2 text-xs text-stone-300"><span class="text-gold-400">✦</span><span>Multi-cuisine Dining Terrace</span></div>
           <div class="flex items-center space-x-2 text-xs text-stone-300"><span class="text-gold-400">✦</span><span>Temperature Controlled Infinity Pool</span></div>
@@ -102,13 +105,13 @@
         <button
           data-open-modal
           data-interest="Master Plan High-Res Dossier"
-          class="px-6 py-3 rounded bg-gradient-to-r from-gold-400 to-gold-500 text-charcoal-950 text-xs font-bold uppercase tracking-widest hover:shadow-lg transition-all"
+          class="btn-shimmer px-6 py-3 rounded-xl bg-gradient-to-r from-gold-400 via-gold-500 to-gold-400 text-charcoal-950 text-xs font-bold uppercase tracking-widest hover:shadow-gold-500/20 hover:shadow-lg transition-all"
         >
           Request High-Res Master Plan
         </button>
       </div>
 
-      <p class="text-[10px] text-stone-500">
+      <p class="text-[10px] text-stone-400">
         *Master plan layout is conceptual based on the acquired 13.46-acre land parcel and remains subject to official town planning approvals.
       </p>
     </div>

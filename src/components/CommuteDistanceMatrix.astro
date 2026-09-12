@@ -61,20 +61,23 @@ const categories = [
 ];
 ---
 
-<div class="bg-charcoal-900 border border-white/10 rounded-2xl p-6 sm:p-10 shadow-2xl space-y-8" id="commute-matrix">
+<div class="glass-card border border-white/10 rounded-2xl p-6 sm:p-10 shadow-2xl space-y-8" id="commute-matrix">
   <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 border-b border-white/10 pb-6">
     <div class="space-y-1">
-      <span class="text-xs uppercase tracking-widest text-gold-400 font-bold">Hyper-Local Connectivity</span>
+      <span class="text-xs uppercase tracking-widest text-gold-400 font-bold flex items-center gap-1.5">
+        <span class="w-1.5 h-1.5 rounded-full bg-gold-400 animate-pulse"></span>
+        Hyper-Local Connectivity
+      </span>
       <h3 class="font-serif text-2xl sm:text-3xl text-stone-100 font-bold">
         Commute & Neighborhood Distance Matrix
       </h3>
-      <p class="text-xs text-stone-400 max-w-xl">
+      <p class="text-xs text-stone-300 max-w-xl">
         Strategically located at Mahalunge–Nande, minimizing daily drive times to Hinjewadi tech parks and Baner lifestyle amenities.
       </p>
     </div>
 
     <!-- Live Commute Status Pill -->
-    <div class="inline-flex items-center space-x-2 px-3 py-1.5 rounded-full bg-emerald-950/60 border border-emerald-500/30 text-emerald-300 text-xs font-mono">
+    <div class="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-emerald-950/60 border border-emerald-500/30 text-emerald-300 text-xs font-mono">
       <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
       <span>Live Route Index: Optimal Access</span>
     </div>
@@ -88,8 +91,8 @@ const categories = [
         data-cat-target={cat.id}
         class={`px-4 py-2 rounded-full text-xs font-semibold tracking-wider transition-all duration-200 flex items-center space-x-2 cursor-pointer ${
           idx === 0
-            ? 'bg-gold-500 text-charcoal-950 shadow-md shadow-gold-500/20 active-tab'
-            : 'bg-charcoal-950 text-stone-300 hover:text-white border border-white/10 hover:border-gold-500/30'
+            ? 'bg-gradient-to-r from-gold-400 via-gold-500 to-gold-400 text-charcoal-950 font-bold shadow-md shadow-gold-500/20 active-tab'
+            : 'bg-[#0e121a]/90 text-stone-300 hover:text-white border border-white/10 hover:border-gold-500/30'
         }`}
       >
         <span>{cat.icon}</span>
@@ -105,10 +108,10 @@ const categories = [
         id={`panel-${cat.id}`} 
         class={`category-panel transition-opacity duration-300 ${idx === 0 ? 'block' : 'hidden'}`}
       >
-        <div class="bg-charcoal-950 rounded-xl border border-white/10 overflow-hidden">
+        <div class="bg-[#0c1017]/90 rounded-xl border border-white/10 overflow-hidden">
           <div class="overflow-x-auto">
-            <table class="w-full text-left text-xs text-stone-300">
-              <thead class="bg-charcoal-900/80 text-[11px] uppercase tracking-wider text-stone-400 border-b border-white/10">
+            <table class="w-full text-left text-xs text-stone-200">
+              <thead class="bg-[#10141e] text-[11px] uppercase tracking-wider text-stone-300 border-b border-white/10">
                 <tr>
                   <th class="p-4 sm:p-5 font-semibold">Key Landmark / Destination</th>
                   <th class="p-4 sm:p-5 font-semibold">Distance</th>
@@ -125,10 +128,10 @@ const categories = [
                       <span>{item.name}</span>
                     </td>
                     <td class="p-4 sm:p-5 font-mono font-bold text-gold-400">{item.distance}</td>
-                    <td class="p-4 sm:p-5 text-amber-300/90 font-mono">{item.peakTime}</td>
+                    <td class="p-4 sm:p-5 text-amber-300 font-mono">{item.peakTime}</td>
                     <td class="p-4 sm:p-5 text-emerald-400 font-mono">{item.offPeak}</td>
                     <td class="p-4 sm:p-5 text-right">
-                      <span class="px-2.5 py-1 rounded bg-white/5 text-stone-400 text-[10px] tracking-wider uppercase">
+                      <span class="px-2.5 py-1 rounded bg-white/10 text-stone-300 text-[10px] tracking-wider uppercase font-medium">
                         {item.highlight}
                       </span>
                     </td>
@@ -143,16 +146,16 @@ const categories = [
   </div>
 
   <!-- Bottom Interactive Note & CTA -->
-  <div class="flex flex-col sm:flex-row items-center justify-between gap-4 p-4 rounded-xl bg-charcoal-950 border border-white/5 text-xs text-stone-400">
+  <div class="flex flex-col sm:flex-row items-center justify-between gap-4 p-4 rounded-xl bg-[#0c1017]/80 border border-white/10 text-xs text-stone-300">
     <div class="flex items-center space-x-2">
       <span class="text-gold-400">✦</span>
-      <span>Exact location coordinates: <strong>18.5714° N, 73.7432° E</strong> (Mahalunge-Nande Corridor).</span>
+      <span>Exact location coordinates: <strong class="text-white">18.5714° N, 73.7432° E</strong> (Mahalunge-Nande Corridor).</span>
     </div>
     <button
       type="button"
       data-open-modal
       data-interest="Route & Location Map PDF"
-      class="px-5 py-2 rounded-full border border-gold-500/40 text-gold-400 hover:bg-gold-500/10 text-[11px] font-bold tracking-wider uppercase transition-all whitespace-nowrap"
+      class="btn-shimmer px-5 py-2.5 rounded-xl bg-gold-500/20 hover:bg-gold-500 text-gold-300 hover:text-charcoal-950 border border-gold-500/40 text-[11px] font-bold tracking-wider uppercase transition-all whitespace-nowrap"
     >
       Download High-Res Route Map
     </button>
