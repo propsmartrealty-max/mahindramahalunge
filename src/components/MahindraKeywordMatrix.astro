@@ -1,0 +1,135 @@
+---
+import { keywordClusters, allMahindraKeywordPermutations } from '../data/mahindraKeywordsEcosystem';
+
+interface Props {
+  className?: string;
+  showTagsCloud?: boolean;
+}
+
+const { className = "", showTagsCloud = true } = Astro.props;
+
+// Compile all FAQ pairs for JSON-LD schema injection
+const matrixFaqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": keywordClusters.flatMap(c => c.qaPairs.map(qa => ({
+    "@type": "Question",
+    "name": qa.question,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": qa.answer
+    }
+  })))
+};
+---
+
+<section id="search-matrix" class={`py-20 bg-charcoal-950 border-t border-white/10 relative overflow-hidden ${className}`}>
+  <!-- Ambient Gold Glow -->
+  <div class="absolute -top-32 left-1/2 -translate-x-1/2 w-[700px] h-[350px] bg-gold-500/5 rounded-full blur-[120px] pointer-events-none"></div>
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-16">
+    
+    <!-- Section Heading -->
+    <div class="reveal text-center max-w-3xl mx-auto space-y-4">
+      <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-gold-500/10 border border-gold-500/30 text-gold-400 text-xs font-semibold uppercase tracking-widest">
+        <span>Buyer Search & Knowledge Matrix</span>
+      </div>
+      <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl text-stone-50 font-bold leading-tight">
+        Mahindra Lifespaces Pune Ecosystem: <br />
+        <span class="gold-gradient-text">Complete Buyer Search & Knowledge Matrix</span>
+      </h2>
+      <p class="text-xs sm:text-sm text-stone-300 leading-relaxed font-light">
+        Direct answers covering every permutation of pricing, 1, 2, 3 & 4 BHK floor plans, MahaRERA statutory records, and connectivity across Mahalunge, Kharadi, Pimpri, and Tathawade.
+      </p>
+    </div>
+
+    <!-- Cluster Cards Grid -->
+    <div class="space-y-12">
+      {keywordClusters.map((cluster) => (
+        <div class="reveal glass-card rounded-2xl p-6 sm:p-8 border border-white/10 hover:border-gold-500/30 transition-all duration-300 space-y-6">
+          
+          <!-- Cluster Header -->
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-white/10 pb-5">
+            <div class="space-y-1">
+              <span class="px-2.5 py-0.5 rounded-full bg-gold-500/10 text-gold-400 text-[10px] font-mono uppercase tracking-wider font-semibold border border-gold-500/20">
+                {cluster.badge}
+              </span>
+              <h3 class="font-serif text-xl sm:text-2xl font-bold text-stone-100">
+                {cluster.categoryTitle}
+              </h3>
+              <p class="text-xs text-stone-400 font-light">
+                {cluster.description}
+              </p>
+            </div>
+            
+            <!-- Long-Tail Keyword Badges -->
+            <div class="flex flex-wrap gap-1.5 sm:max-w-md justify-start sm:justify-end">
+              {cluster.keywords.slice(0, 3).map((kw) => (
+                <span class="px-2 py-0.5 rounded bg-white/5 border border-white/10 text-[10px] text-stone-400 font-mono">
+                  {kw}
+                </span>
+              ))}
+            </div>
+          </div>
+
+          <!-- Q&A Pairs in Two-Column Responsive Layout -->
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-2">
+            {cluster.qaPairs.map((qa) => (
+              <div class="p-5 rounded-xl bg-charcoal-900/90 border border-white/5 space-y-3 flex flex-col justify-between hover:border-white/20 transition-colors">
+                <div class="space-y-2.5">
+                  <h4 class="font-serif text-sm font-semibold text-stone-100 leading-snug">
+                    {qa.question}
+                  </h4>
+                  <p class="text-xs text-stone-300 leading-relaxed font-light">
+                    {qa.answer}
+                  </p>
+                </div>
+                
+                <div class="pt-3 border-t border-white/10">
+                  <a
+                    href={qa.relevantUrl}
+                    class="inline-flex items-center space-x-1 text-[11px] font-medium text-gold-400 hover:text-gold-300 font-mono transition-colors"
+                  >
+                    <span>{qa.actionLabel}</span>
+                    <span>→</span>
+                  </a>
+                </div>
+              </div>
+            ))}
+          </div>
+
+        </div>
+      ))}
+    </div>
+
+    <!-- Exhaustive Keyword Permutations Cloud for Organic SERP Dominance -->
+    {showTagsCloud && (
+      <div class="reveal p-8 rounded-2xl bg-charcoal-900/60 border border-white/10 space-y-4">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-white/10 pb-3">
+          <h4 class="font-serif text-sm uppercase tracking-widest text-stone-200 font-bold">
+            Indexed Search Queries & Long-Tail Permutations
+          </h4>
+          <span class="text-[10px] font-mono text-stone-400">
+            {allMahindraKeywordPermutations.length} Verified Google Search Query Variations
+          </span>
+        </div>
+        
+        <p class="text-xs text-stone-400 leading-relaxed">
+          The following keywords represent active buyer search queries across Maharashtra and Pan-India evaluating Mahindra Lifespaces developments in Pune & PCMC (Mahindra Mahalunge, Mahindra IvyLush Kharadi, Mahindra Citadel Pimpri, Mahindra Happinest Tathawade, Antheia, Nestalgia, Centralis, and L'Artista):
+        </p>
+
+        <div class="flex flex-wrap gap-2 pt-2">
+          {allMahindraKeywordPermutations.map((term) => (
+            <span class="px-2.5 py-1 rounded-md bg-white/[0.04] hover:bg-gold-500/10 border border-white/10 hover:border-gold-500/30 text-[11px] text-stone-300 hover:text-gold-300 font-mono transition-colors cursor-default">
+              {term}
+            </span>
+          ))}
+        </div>
+      </div>
+    )}
+
+  </div>
+</section>
+
+<!-- Inject FAQ Schema for this matrix -->
+<script type="application/ld+json" set:html={JSON.stringify(matrixFaqSchema)} />

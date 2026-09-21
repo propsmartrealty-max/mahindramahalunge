@@ -1,5 +1,6 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import { mahindraPuneProjects } from '../../data/mahindraPuneEcosystem';
 
 const breadcrumbSchema = {
   "@context": "https://schema.org",
@@ -41,7 +42,7 @@ const pageSchema = {
 <Layout
   title="Mahindra Lifespaces in Pune: Delivered Projects & Residential Legacy"
   description="Examine Mahindra Lifespaces' proven Pune track record. From Mahindra Antheia and Centralis to the upcoming 13.46-acre Mahalunge development."
-  canonical="https://mahindralifespaceshomes.in/articles/mahindra-lifespaces-pune-track-record-residential-legacy"
+  canonical="https://mahindralifespaceshomes.in/articles/mahindra-lifespaces-pune-track-record-residential-legacy/"
   customSchema={pageSchema}
 >
   <article class="pt-32 pb-24 bg-charcoal-950">
@@ -91,48 +92,63 @@ const pageSchema = {
           </p>
         </section>
 
-        <!-- Delivered Pune Projects Showcase -->
-        <section class="space-y-4">
-          <h2 class="font-serif text-2xl text-stone-100 font-bold">
-            2. Landmark Footprint Across Pune
-          </h2>
+        <!-- Delivered & Ongoing Pune Projects Showcase -->
+        <section class="space-y-6">
+          <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
+            <div>
+              <h2 class="font-serif text-2xl text-stone-100 font-bold">
+                2. Landmark Footprint Across Pune
+              </h2>
+              <p class="text-xs text-stone-400 mt-1">
+                6 iconic communities delivered, under construction, and in master planning across West Pune and PCMC.
+              </p>
+            </div>
+            <a 
+              href="/brand/#pune-ecosystem" 
+              class="inline-flex items-center space-x-1 text-xs font-mono text-gold-400 hover:text-gold-300 transition-colors"
+            >
+              <span>View Full Ecosystem Directory</span>
+              <span>→</span>
+            </a>
+          </div>
           
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-2">
-            <!-- Project 1 -->
-            <div class="p-6 rounded-xl bg-charcoal-900 border border-white/10 space-y-3">
-              <div class="flex justify-between items-start">
-                <h3 class="font-serif text-lg font-bold text-stone-100">Mahindra Antheia</h3>
-                <span class="px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-400 text-[10px] uppercase font-bold">Delivered</span>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 pt-2">
+            {mahindraPuneProjects.map((project) => (
+              <div class="p-5 rounded-xl bg-charcoal-900 border border-white/10 space-y-3 flex flex-col justify-between hover:border-gold-500/40 transition-colors">
+                <div class="space-y-2">
+                  <div class="flex justify-between items-start gap-2">
+                    <h3 class="font-serif text-base font-bold text-stone-100 leading-snug">{project.name}</h3>
+                    <span class={`px-2 py-0.5 rounded text-[9px] uppercase font-bold shrink-0 ${
+                      project.status.includes('Delivered') 
+                        ? 'bg-emerald-500/20 text-emerald-400' 
+                        : project.status.includes('Under Constr') 
+                          ? 'bg-amber-500/20 text-amber-400' 
+                          : 'bg-gold-500/20 text-gold-400 border border-gold-500/30'
+                    }`}>
+                      {project.status.includes('Delivered') ? 'Delivered' : project.status.includes('Under Constr') ? 'In Progress' : 'Master Planning'}
+                    </span>
+                  </div>
+                  <p class="text-[11px] text-stone-400 leading-relaxed">
+                    {project.location} • {project.landArea}
+                  </p>
+                  <p class="text-xs text-stone-300 line-clamp-3">
+                    {project.summary}
+                  </p>
+                </div>
+                
+                <div class="pt-3 border-t border-white/10 space-y-1.5 text-[11px]">
+                  <div class="text-gold-400 font-mono">{project.typologies.join(' • ')}</div>
+                  {project.reraNumber && (
+                    <div class="text-[10px] text-stone-400 font-mono truncate">
+                      MahaRERA: {project.reraNumber}
+                    </div>
+                  )}
+                  <div class="text-[10px] text-emerald-400/90 font-mono">
+                    {project.greenRating}
+                  </div>
+                </div>
               </div>
-              <p class="text-xs text-stone-400">
-                Pimpri, Pune. A premier 16-acre integrated residential township with landscaped podiums, expansive club facilities, and thriving resident communities.
-              </p>
-              <div class="text-[11px] text-gold-400 font-mono">1, 2, 2.5 & 3 BHK</div>
-            </div>
-
-            <!-- Project 2 -->
-            <div class="p-6 rounded-xl bg-charcoal-900 border border-white/10 space-y-3">
-              <div class="flex justify-between items-start">
-                <h3 class="font-serif text-lg font-bold text-stone-100">Mahindra Centralis</h3>
-                <span class="px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-400 text-[10px] uppercase font-bold">Delivered</span>
-              </div>
-              <p class="text-xs text-stone-400">
-                Pimpri-Chinchwad. Modern high-rise architectural towers designed with 100% IGBC green homes certification and smart cross-ventilation.
-              </p>
-              <div class="text-[11px] text-gold-400 font-mono">1 & 2 BHK Residences</div>
-            </div>
-
-            <!-- Project 3 -->
-            <div class="p-6 rounded-xl bg-charcoal-900 border border-white/10 space-y-3">
-              <div class="flex justify-between items-start">
-                <h3 class="font-serif text-lg font-bold text-stone-100">Happinest Tathawade</h3>
-                <span class="px-2 py-0.5 rounded bg-amber-500/20 text-amber-400 text-[10px] uppercase font-bold">Under Constr.</span>
-              </div>
-              <p class="text-xs text-stone-400">
-                Tathawade, Pune. Future-ready biophilic fusion homes featuring Pune's first multi-tier aerial clubhouse and skywalk amenity decks.
-              </p>
-              <div class="text-[11px] text-gold-400 font-mono">Fusion 1 & 2 BHK</div>
-            </div>
+            ))}
           </div>
         </section>
 

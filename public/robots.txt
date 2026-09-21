@@ -78,10 +78,36 @@ Allow: /
 # ------------------------------------------------------------------------------
 # 7. Other Major Compliant Search Engine Crawlers
 # ------------------------------------------------------------------------------
-User-agent: DuckDuckBot
+# 8. AI Search Engines & Conversational Knowledge Crawlers
+# ------------------------------------------------------------------------------
+User-agent: GPTBot
+Allow: /
+Allow: /llms.txt
+Allow: /llms-full.txt
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+Allow: /llms.txt
+Allow: /llms-full.txt
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+Allow: /llms.txt
+Allow: /llms-full.txt
+
+User-agent: Google-Extended
 Allow: /
 
 User-agent: Applebot
+Allow: /
+
+User-agent: DuckDuckBot
 Allow: /
 
 User-agent: YandexBot
@@ -91,7 +117,7 @@ User-agent: Baiduspider
 Allow: /
 
 # ------------------------------------------------------------------------------
-# 8. Aggressive Non-Search Scraper Bots (Protect Serverless Edge & Bandwidth)
+# 9. Aggressive Non-Search Scraper Bots (Protect Serverless Edge & Bandwidth)
 # ------------------------------------------------------------------------------
 User-agent: AhrefsBot
 Crawl-delay: 10
@@ -112,18 +138,24 @@ User-agent: Bytespider
 Disallow: /
 
 # ------------------------------------------------------------------------------
-# 9. Default Directive for All Other Compliant Crawlers
+# 10. Default Directive for All Other Compliant Crawlers
 # ------------------------------------------------------------------------------
 User-agent: *
 Allow: /
 Allow: /_astro/
 Allow: /images/
+Allow: /llms.txt
+Allow: /llms-full.txt
 Disallow: /api/
 Disallow: /cdn-cgi/
 
 # ------------------------------------------------------------------------------
-# 10. Canonical Host & Sitemaps
+# 11. Canonical Host, Sitemaps & AI Knowledge Base Manifest
 # ------------------------------------------------------------------------------
 Host: https://mahindralifespaceshomes.in
 Sitemap: https://mahindralifespaceshomes.in/sitemap.xml
+# AI Search Engine Manifests:
+# https://mahindralifespaceshomes.in/llms.txt
+# https://mahindralifespaceshomes.in/llms-full.txt
+
 

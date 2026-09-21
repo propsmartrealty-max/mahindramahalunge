@@ -1,0 +1,241 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { comparisonData, type ComparisonItem } from '../../data/pSeoComparisons';
+
+export async function getStaticPaths() {
+  return comparisonData.map((item) => ({
+    params: { slug: item.slug },
+    props: { item },
+  }));
+}
+
+interface Props {
+  item: ComparisonItem;
+}
+
+const { item } = Astro.props;
+
+const pageSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": `https://mahindralifespaceshomes.in/compare/${item.slug}/#article`,
+      "headline": item.h1,
+      "description": item.metaDescription,
+      "author": {
+        "@type": "Organization",
+        "name": "West Pune Real Estate Advisory"
+      },
+      "datePublished": "2026-01-15",
+      "dateModified": "2026-09-12"
+    },
+    {
+      "@type": "FAQPage",
+      "@id": `https://mahindralifespaceshomes.in/compare/${item.slug}/#faq`,
+      "mainEntity": item.faqs.map((faq) => ({
+        "@type": "Question",
+        "name": faq.q,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": faq.a
+        }
+      }))
+    }
+  ]
+};
+---
+
+<Layout
+  title={item.metaTitle}
+  description={item.metaDescription}
+  keywords={`${item.competitorName.toLowerCase()}, mahindra mahalunge vs ${item.competitorName.toLowerCase()}, mahindra lifespaces vs ${item.competitorName.toLowerCase()}, mahalunge real estate comparison, mahindra mahalunge price vs ${item.competitorName.toLowerCase()}, mahindra mahalunge reviews`}
+  canonical={`https://mahindralifespaceshomes.in/compare/${item.slug}/`}
+  customSchema={pageSchema}
+>
+  <!-- Hero Section -->
+  <section class="pt-32 pb-20 bg-charcoal-950 border-b border-white/10 relative overflow-hidden">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
+      
+      <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-gold-500/10 border border-gold-500/30 text-gold-400 text-xs font-semibold uppercase tracking-widest">
+        <span>Head-to-Head Analysis • {item.competitorType} Comparison</span>
+      </div>
+
+      <h1 class="font-serif text-3xl sm:text-5xl lg:text-6xl font-bold text-stone-100 max-w-4xl leading-tight">
+        {item.h1}
+      </h1>
+
+      <!-- Executive Verdict Box -->
+      <div class="p-6 rounded-2xl bg-charcoal-900 border border-gold-500/30 max-w-4xl space-y-2">
+        <div class="flex items-center space-x-2 text-xs uppercase tracking-widest text-gold-400 font-bold">
+          <span class="w-2 h-2 rounded-full bg-gold-400"></span>
+          <span>Analyst Executive Verdict</span>
+        </div>
+        <p class="text-xs sm:text-sm text-stone-200 leading-relaxed font-light">
+          {item.summaryVerdict}
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Detailed Metric Comparison Matrix Table -->
+  <section class="py-20 bg-charcoal-900 border-b border-white/10">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+      
+      <div class="text-center space-y-2">
+        <span class="text-xs uppercase tracking-widest text-gold-400 font-bold">Comprehensive Scorecard</span>
+        <h2 class="font-serif text-2xl sm:text-3xl text-stone-50 font-bold">
+          Feature-by-Feature Evaluation
+        </h2>
+      </div>
+
+      <div class="overflow-x-auto rounded-2xl border border-white/15 glass-card shadow-2xl">
+        <table class="w-full text-left text-xs border-collapse">
+          <thead class="bg-[#121722] text-stone-200 uppercase tracking-wider text-[11px] border-b border-white/10">
+            <tr>
+              <th class="p-4 sm:p-5 font-semibold">Evaluation Parameter</th>
+              <th class="p-4 sm:p-5 font-semibold text-gold-400">Mahindra Mahalunge</th>
+              <th class="p-4 sm:p-5 font-semibold text-stone-300">{item.competitorName}</th>
+              <th class="p-4 sm:p-5 font-semibold text-center">Advantage</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-white/10 text-stone-300 font-light">
+            {item.metrics.map((row) => (
+              <tr class="hover:bg-white/[0.04] transition-colors">
+                <td class="p-4 sm:p-5 font-medium text-stone-100">{row.feature}</td>
+                <td class="p-4 sm:p-5 text-gold-300 font-semibold">{row.mahindra}</td>
+                <td class="p-4 sm:p-5 text-stone-300">{row.competitor}</td>
+                <td class="p-4 sm:p-5 text-center">
+                  {row.winner === 'Mahindra' && (
+                    <span class="px-2.5 py-1 rounded-full bg-emerald-500/20 text-emerald-300 font-bold text-[10px] uppercase">
+                      Mahindra
+                    </span>
+                  )}
+                  {row.winner === 'Competitor' && (
+                    <span class="px-2.5 py-1 rounded-full bg-stone-500/20 text-stone-300 font-medium text-[10px] uppercase">
+                      Competitor
+                    </span>
+                  )}
+                  {row.winner === 'Tie' && (
+                    <span class="px-2.5 py-1 rounded-full bg-blue-500/20 text-blue-300 font-medium text-[10px] uppercase">
+                      Equal
+                    </span>
+                  )}
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Pros Breakdown -->
+  <section class="py-20 bg-charcoal-950">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        
+        <!-- Mahindra Pros -->
+        <div class="p-8 rounded-2xl bg-charcoal-900 border border-gold-500/40 space-y-4 shadow-xl">
+          <div class="flex items-center space-x-2 text-gold-400 font-serif font-bold text-lg">
+            <span>★</span>
+            <span>Why Choose Mahindra Mahalunge</span>
+          </div>
+          <ul class="space-y-3 text-xs text-stone-200">
+            {item.prosMahindra.map((pro) => (
+              <li class="flex items-start space-x-2">
+                <span class="text-emerald-400 font-bold">✓</span>
+                <span class="leading-relaxed font-light">{pro}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <!-- Competitor Considerations -->
+        <div class="p-8 rounded-2xl bg-charcoal-900 border border-white/15 space-y-4">
+          <div class="flex items-center space-x-2 text-stone-300 font-serif font-bold text-lg">
+            <span>•</span>
+            <span>Considerations for {item.competitorName}</span>
+          </div>
+          <ul class="space-y-3 text-xs text-stone-300">
+            {item.prosCompetitor.map((pro) => (
+              <li class="flex items-start space-x-2">
+                <span class="text-amber-400 font-bold">•</span>
+                <span class="leading-relaxed font-light">{pro}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Action Box -->
+      <div class="p-8 rounded-2xl glass-card border border-gold-500/40 text-center space-y-4">
+        <h3 class="font-serif text-2xl text-stone-50 font-bold">
+          Unlock Pre-Launch Priority Allocations
+        </h3>
+        <p class="text-xs sm:text-sm text-stone-300 max-w-xl mx-auto font-light leading-relaxed">
+          Receive confidential comparative price sheets, layout plans, and early-bird payment schedules for Mahindra Mahalunge.
+        </p>
+        <button
+          data-open-modal
+          data-interest={`Compare - ${item.competitorName}`}
+          class="btn-shimmer px-8 py-3.5 rounded-full bg-gradient-to-r from-gold-300 via-gold-400 to-gold-500 text-charcoal-950 font-bold uppercase tracking-wider text-xs shadow-lg hover:shadow-gold-500/30 transition-all cursor-pointer"
+        >
+          Request Comparative Cost Sheet
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Localized FAQs -->
+  <section class="py-20 bg-charcoal-900 border-t border-white/10">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+      <div class="text-center space-y-2">
+        <span class="text-xs uppercase tracking-widest text-gold-400 font-bold">Comparison Q&A</span>
+        <h2 class="font-serif text-2xl sm:text-3xl text-stone-50 font-bold">
+          Key Buyer Questions Answered
+        </h2>
+      </div>
+
+      <div class="space-y-4">
+        {item.faqs.map((faq) => (
+          <details class="glass-card group p-5 rounded-xl border border-white/15 hover:border-gold-500/50 cursor-pointer transition-all">
+            <summary class="flex items-center justify-between font-serif text-sm sm:text-base text-stone-100 font-semibold list-none">
+              <span class="group-hover:text-gold-300 transition-colors">{faq.q}</span>
+              <span class="text-gold-400 group-open:rotate-180 transition-transform">▼</span>
+            </summary>
+            <p class="mt-3 text-xs sm:text-sm text-stone-200 leading-relaxed pt-3 border-t border-white/10 font-light">
+              {faq.a}
+            </p>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Cross-Link Other Comparisons -->
+  <section class="py-16 bg-charcoal-950 border-t border-white/10">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
+      <h3 class="font-serif text-lg text-stone-100 font-bold">
+        Explore Other Project & Locality Comparisons:
+      </h3>
+      <div class="flex flex-wrap gap-3">
+        {comparisonData
+          .filter((c) => c.slug !== item.slug)
+          .map((c) => (
+            <a
+              href={`/compare/${c.slug}/`}
+              class="px-4 py-2 rounded-xl bg-charcoal-900 border border-white/10 hover:border-gold-500/50 text-xs text-stone-200 hover:text-gold-300 transition-all"
+            >
+              vs {c.competitorName} →
+            </a>
+          ))}
+      </div>
+    </div>
+  </section>
+</Layout>

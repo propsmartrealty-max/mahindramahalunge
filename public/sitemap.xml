@@ -77,6 +77,14 @@
 
   <!-- 03. Residence Configuration Pages (Floor Plans & Units) -->
   <url>
+    <loc>https://mahindralifespaceshomes.in/residences/</loc>
+    <lastmod>2026-09-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://mahindralifespaceshomes.in/residences/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mahindralifespaceshomes.in/residences/" />
+  </url>
+  <url>
     <loc>https://mahindralifespaceshomes.in/residences/2-bhk/</loc>
     <lastmod>2026-09-12</lastmod>
     <changefreq>weekly</changefreq>
@@ -208,6 +216,46 @@
     <xhtml:link rel="alternate" hreflang="en-IN" href="https://mahindralifespaceshomes.in/articles/why-mahalunge-nande-maan-is-punes-next-billion-dollar-growth-corridor/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://mahindralifespaceshomes.in/articles/why-mahalunge-nande-maan-is-punes-next-billion-dollar-growth-corridor/" />
   </url>
+  <url>
+    <loc>https://mahindralifespaceshomes.in/articles/mahindra-lifespaces-mahalunge-upcoming-project-guide/</loc>
+    <lastmod>2026-09-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.92</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://mahindralifespaceshomes.in/articles/mahindra-lifespaces-mahalunge-upcoming-project-guide/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mahindralifespaceshomes.in/articles/mahindra-lifespaces-mahalunge-upcoming-project-guide/" />
+  </url>
+  <url>
+    <loc>https://mahindralifespaceshomes.in/articles/mahindra-lifespaces-acquires-land-in-nande-mahalunge-what-it-means/</loc>
+    <lastmod>2026-09-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.92</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://mahindralifespaceshomes.in/articles/mahindra-lifespaces-acquires-land-in-nande-mahalunge-what-it-means/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mahindralifespaceshomes.in/articles/mahindra-lifespaces-acquires-land-in-nande-mahalunge-what-it-means/" />
+  </url>
+  <url>
+    <loc>https://mahindralifespaceshomes.in/articles/west-pune-real-estate-complete-2026-guide/</loc>
+    <lastmod>2026-09-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://mahindralifespaceshomes.in/articles/west-pune-real-estate-complete-2026-guide/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mahindralifespaceshomes.in/articles/west-pune-real-estate-complete-2026-guide/" />
+  </url>
+  <url>
+    <loc>https://mahindralifespaceshomes.in/articles/nande-mahalunge-maan-real-estate-guide/</loc>
+    <lastmod>2026-09-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://mahindralifespaceshomes.in/articles/nande-mahalunge-maan-real-estate-guide/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mahindralifespaceshomes.in/articles/nande-mahalunge-maan-real-estate-guide/" />
+  </url>
+  <url>
+    <loc>https://mahindralifespaceshomes.in/articles/pune-inner-ring-road-and-west-pune-real-estate/</loc>
+    <lastmod>2026-09-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://mahindralifespaceshomes.in/articles/pune-inner-ring-road-and-west-pune-real-estate/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mahindralifespaceshomes.in/articles/pune-inner-ring-road-and-west-pune-real-estate/" />
+  </url>
 
   <!-- 05. Brand & Conversions -->
   <url>
@@ -230,11 +278,618 @@
 
   <url>
     <loc>https://mahindralifespaceshomes.in/brochure/</loc>
-    <lastmod>2026-09-12</lastmod>
+    <lastmod>2026-09-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.92</priority>
     <xhtml:link rel="alternate" hreflang="en-IN" href="https://mahindralifespaceshomes.in/brochure/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://mahindralifespaceshomes.in/brochure/" />
+  </url>
+
+  <!-- ============================================================================== -->
+  <!-- Programmatic Cluster 01: IT Hub & Tech Park Proximity Pages                    -->
+  <!-- ============================================================================== -->
+  <url>
+    <loc>https://mahindralifespaceshomes.in/near/flats-near-infosys-hinjewadi/</loc>
+    <lastmod>2026-09-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://mahindralifespaceshomes.in/near/flats-near-infosys-hinjewadi/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mahindralifespaceshomes.in/near/flats-near-infosys-hinjewadi/" />
+  </url>
+  <url>
+    <loc>https://mahindralifespaceshomes.in/near/flats-near-wipro-circle-hinjewadi/</loc>
+    <lastmod>2026-09-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://mahindralifespaceshomes.in/near/flats-near-wipro-circle-hinjewadi/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mahindralifespaceshomes.in/near/flats-near-wipro-circle-hinjewadi/" />
+  </url>
+  <url>
+    <loc>https://mahindralifespaceshomes.in/near/flats-near-tcs-sahyadri-park-hinjewadi/</loc>
+    <lastmod>2026-09-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://mahindralifespaceshomes.in/near/flats-near-tcs-sahyadri-park-hinjewadi/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mahindralifespaceshomes.in/near/flats-near-tcs-sahyadri-park-hinjewadi/" />
+  </url>
+  <url>
+    <loc>https://mahindralifespaceshomes.in/near/flats-near-embassy-techzone-hinjewadi/</loc>
+    <lastmod>2026-09-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://mahindralifespaceshomes.in/near/flats-near-embassy-techzone-hinjewadi/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mahindralifespaceshomes.in/near/flats-near-embassy-techzone-hinjewadi/" />
+  </url>
+  <url>
+    <loc>https://mahindralifespaceshomes.in/near/flats-near-cognizant-hinjewadi/</loc>
+    <lastmod>2026-09-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://mahindralifespaceshomes.in/near/flats-near-cognizant-hinjewadi/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mahindralifespaceshomes.in/near/flats-near-cognizant-hinjewadi/" />
+  </url>
+  <url>
+    <loc>https://mahindralifespaceshomes.in/near/flats-near-quadron-business-park-hinjewadi/</loc>
+    <lastmod>2026-09-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://mahindralifespaceshomes.in/near/flats-near-quadron-business-park-hinjewadi/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mahindralifespaceshomes.in/near/flats-near-quadron-business-park-hinjewadi/" />
+  </url>
+  <url>
+    <loc>https://mahindralifespaceshomes.in/near/flats-near-balewadi-high-street/</loc>
+    <lastmod>2026-09-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://mahindralifespaceshomes.in/near/flats-near-balewadi-high-street/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mahindralifespaceshomes.in/near/flats-near-balewadi-high-street/" />
+  </url>
+  <url>
+    <loc>https://mahindralifespaceshomes.in/near/flats-near-amar-paradigm-baner/</loc>
+    <lastmod>2026-09-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://mahindralifespaceshomes.in/near/flats-near-amar-paradigm-baner/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mahindralifespaceshomes.in/near/flats-near-amar-paradigm-baner/" />
+  </url>
+  <url>
+    <loc>https://mahindralifespaceshomes.in/near/flats-near-eon-free-zone-kharadi/</loc>
+    <lastmod>2026-09-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://mahindralifespaceshomes.in/near/flats-near-eon-free-zone-kharadi/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mahindralifespaceshomes.in/near/flats-near-eon-free-zone-kharadi/" />
+  </url>
+  <url>
+    <loc>https://mahindralifespaceshomes.in/near/flats-near-world-trade-center-pune/</loc>
+    <lastmod>2026-09-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://mahindralifespaceshomes.in/near/flats-near-world-trade-center-pune/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mahindralifespaceshomes.in/near/flats-near-world-trade-center-pune/" />
+  </url>
+  <url>
+    <loc>https://mahindralifespaceshomes.in/near/flats-near-cybercity-magarpatta/</loc>
+    <lastmod>2026-09-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://mahindralifespaceshomes.in/near/flats-near-cybercity-magarpatta/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mahindralifespaceshomes.in/near/flats-near-cybercity-magarpatta/" />
+  </url>
+  <url>
+    <loc>https://mahindralifespaceshomes.in/near/flats-near-panchshil-business-park-baner/</loc>
+    <lastmod>2026-09-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://mahindralifespaceshomes.in/near/flats-near-panchshil-business-park-baner/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mahindralifespaceshomes.in/near/flats-near-panchshil-business-park-baner/" />
+  </url>
+  <url>
+    <loc>https://mahindralifespaceshomes.in/near/flats-near-icc-tech-park-senapati-bapat-road/</loc>
+    <lastmod>2026-09-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://mahindralifespaceshomes.in/near/flats-near-icc-tech-park-senapati-bapat-road/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mahindralifespaceshomes.in/near/flats-near-icc-tech-park-senapati-bapat-road/" />
+  </url>
+  <url>
+    <loc>https://mahindralifespaceshomes.in/near/flats-near-cerebrum-it-park-kalyani-nagar/</loc>
+    <lastmod>2026-09-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://mahindralifespaceshomes.in/near/flats-near-cerebrum-it-park-kalyani-nagar/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mahindralifespaceshomes.in/near/flats-near-cerebrum-it-park-kalyani-nagar/" />
+  </url>
+  <url>
+    <loc>https://mahindralifespaceshomes.in/near/flats-near-commerzone-yerwada/</loc>
+    <lastmod>2026-09-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://mahindralifespaceshomes.in/near/flats-near-commerzone-yerwada/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mahindralifespaceshomes.in/near/flats-near-commerzone-yerwada/" />
+  </url>
+  <url>
+    <loc>https://mahindralifespaceshomes.in/near/flats-near-weikfield-it-citi-info-park/</loc>
+    <lastmod>2026-09-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://mahindralifespaceshomes.in/near/flats-near-weikfield-it-citi-info-park/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mahindralifespaceshomes.in/near/flats-near-weikfield-it-citi-info-park/" />
+  </url>
+
+  <!-- ============================================================================== -->
+  <!-- Programmatic Cluster 02: Head-to-Head Comparisons                             -->
+  <!-- ============================================================================== -->
+  <url>
+    <loc>https://mahindralifespaceshomes.in/compare/mahindra-mahalunge-vs-godrej-hillside/</loc>
+    <lastmod>2026-09-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://mahindralifespaceshomes.in/compare/mahindra-mahalunge-vs-godrej-hillside/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mahindralifespaceshomes.in/compare/mahindra-mahalunge-vs-godrej-hillside/" />
+  </url>
+  <url>
+    <loc>https://mahindralifespaceshomes.in/compare/mahindra-mahalunge-vs-vtp-blue-waters/</loc>
+    <lastmod>2026-09-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://mahindralifespaceshomes.in/compare/mahindra-mahalunge-vs-vtp-blue-waters/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mahindralifespaceshomes.in/compare/mahindra-mahalunge-vs-vtp-blue-waters/" />
+  </url>
+  <url>
+    <loc>https://mahindralifespaceshomes.in/compare/mahindra-mahalunge-vs-kolte-patil-life-republic/</loc>
+    <lastmod>2026-09-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://mahindralifespaceshomes.in/compare/mahindra-mahalunge-vs-kolte-patil-life-republic/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mahindralifespaceshomes.in/compare/mahindra-mahalunge-vs-kolte-patil-life-republic/" />
+  </url>
+  <url>
+    <loc>https://mahindralifespaceshomes.in/compare/mahindra-mahalunge-vs-lodha-panache-hinjewadi/</loc>
+    <lastmod>2026-09-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://mahindralifespaceshomes.in/compare/mahindra-mahalunge-vs-lodha-panache-hinjewadi/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mahindralifespaceshomes.in/compare/mahindra-mahalunge-vs-lodha-panache-hinjewadi/" />
+  </url>
+  <url>
+    <loc>https://mahindralifespaceshomes.in/compare/mahalunge-vs-wakad-real-estate/</loc>
+    <lastmod>2026-09-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://mahindralifespaceshomes.in/compare/mahalunge-vs-wakad-real-estate/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mahindralifespaceshomes.in/compare/mahalunge-vs-wakad-real-estate/" />
+  </url>
+  <url>
+    <loc>https://mahindralifespaceshomes.in/compare/mahalunge-vs-baner-real-estate/</loc>
+    <lastmod>2026-09-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://mahindralifespaceshomes.in/compare/mahalunge-vs-baner-real-estate/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mahindralifespaceshomes.in/compare/mahalunge-vs-baner-real-estate/" />
+  </url>
+  <url>
+    <loc>https://mahindralifespaceshomes.in/compare/mahindra-ivylush-vs-godrej-infinity/</loc>
+    <lastmod>2026-09-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://mahindralifespaceshomes.in/compare/mahindra-ivylush-vs-godrej-infinity/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mahindralifespaceshomes.in/compare/mahindra-ivylush-vs-godrej-infinity/" />
+  </url>
+  <url>
+    <loc>https://mahindralifespaceshomes.in/compare/mahindra-citadel-vs-kohinoor-grandeur/</loc>
+    <lastmod>2026-09-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://mahindralifespaceshomes.in/compare/mahindra-citadel-vs-kohinoor-grandeur/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mahindralifespaceshomes.in/compare/mahindra-citadel-vs-kohinoor-grandeur/" />
+  </url>
+  <url>
+    <loc>https://mahindralifespaceshomes.in/compare/mahindra-happinest-vs-rohan-ananta/</loc>
+    <lastmod>2026-09-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://mahindralifespaceshomes.in/compare/mahindra-happinest-vs-rohan-ananta/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mahindralifespaceshomes.in/compare/mahindra-happinest-vs-rohan-ananta/" />
+  </url>
+  <url>
+    <loc>https://mahindralifespaceshomes.in/compare/mahindra-lifespaces-vs-godrej-properties-pune/</loc>
+    <lastmod>2026-09-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://mahindralifespaceshomes.in/compare/mahindra-lifespaces-vs-godrej-properties-pune/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mahindralifespaceshomes.in/compare/mahindra-lifespaces-vs-godrej-properties-pune/" />
+  </url>
+
+  <!-- ============================================================================== -->
+  <!-- Programmatic Cluster 03: Infrastructure & Transit Corridors                   -->
+  <!-- ============================================================================== -->
+  <url>
+    <loc>https://mahindralifespaceshomes.in/connectivity/flats-near-pune-metro-line-3-hinjewadi/</loc>
+    <lastmod>2026-09-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://mahindralifespaceshomes.in/connectivity/flats-near-pune-metro-line-3-hinjewadi/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mahindralifespaceshomes.in/connectivity/flats-near-pune-metro-line-3-hinjewadi/" />
+  </url>
+  <url>
+    <loc>https://mahindralifespaceshomes.in/connectivity/properties-on-pmrda-36m-ring-road/</loc>
+    <lastmod>2026-09-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://mahindralifespaceshomes.in/connectivity/properties-on-pmrda-36m-ring-road/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mahindralifespaceshomes.in/connectivity/properties-on-pmrda-36m-ring-road/" />
+  </url>
+  <url>
+    <loc>https://mahindralifespaceshomes.in/connectivity/mahalunge-hinjewadi-river-bridge-connectivity/</loc>
+    <lastmod>2026-09-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://mahindralifespaceshomes.in/connectivity/mahalunge-hinjewadi-river-bridge-connectivity/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mahindralifespaceshomes.in/connectivity/mahalunge-hinjewadi-river-bridge-connectivity/" />
+  </url>
+  <url>
+    <loc>https://mahindralifespaceshomes.in/connectivity/flats-near-sant-tukaram-metro-station/</loc>
+    <lastmod>2026-09-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://mahindralifespaceshomes.in/connectivity/flats-near-sant-tukaram-metro-station/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mahindralifespaceshomes.in/connectivity/flats-near-sant-tukaram-metro-station/" />
+  </url>
+  <url>
+    <loc>https://mahindralifespaceshomes.in/connectivity/properties-near-kharadi-shivane-riverside-road/</loc>
+    <lastmod>2026-09-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://mahindralifespaceshomes.in/connectivity/properties-near-kharadi-shivane-riverside-road/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mahindralifespaceshomes.in/connectivity/properties-near-kharadi-shivane-riverside-road/" />
+  </url>
+
+  <!-- ============================================================================== -->
+  <!-- Programmatic Cluster 04: West Pune Localities & Micro-Markets                 -->
+  <!-- ============================================================================== -->
+  <url>
+    <loc>https://mahindralifespaceshomes.in/west-pune/</loc>
+    <lastmod>2026-09-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://mahindralifespaceshomes.in/west-pune/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mahindralifespaceshomes.in/west-pune/" />
+  </url>
+  <url>
+    <loc>https://mahindralifespaceshomes.in/west-pune/mahalunge-real-estate/</loc>
+    <lastmod>2026-09-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.92</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://mahindralifespaceshomes.in/west-pune/mahalunge-real-estate/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mahindralifespaceshomes.in/west-pune/mahalunge-real-estate/" />
+  </url>
+  <url>
+    <loc>https://mahindralifespaceshomes.in/west-pune/nande-real-estate/</loc>
+    <lastmod>2026-09-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.92</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://mahindralifespaceshomes.in/west-pune/nande-real-estate/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mahindralifespaceshomes.in/west-pune/nande-real-estate/" />
+  </url>
+  <url>
+    <loc>https://mahindralifespaceshomes.in/west-pune/maan-real-estate/</loc>
+    <lastmod>2026-09-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://mahindralifespaceshomes.in/west-pune/maan-real-estate/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mahindralifespaceshomes.in/west-pune/maan-real-estate/" />
+  </url>
+  <url>
+    <loc>https://mahindralifespaceshomes.in/west-pune/hinjewadi-residential-projects/</loc>
+    <lastmod>2026-09-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://mahindralifespaceshomes.in/west-pune/hinjewadi-residential-projects/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mahindralifespaceshomes.in/west-pune/hinjewadi-residential-projects/" />
+  </url>
+  <url>
+    <loc>https://mahindralifespaceshomes.in/west-pune/baner-residential-projects/</loc>
+    <lastmod>2026-09-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://mahindralifespaceshomes.in/west-pune/baner-residential-projects/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mahindralifespaceshomes.in/west-pune/baner-residential-projects/" />
+  </url>
+  <url>
+    <loc>https://mahindralifespaceshomes.in/west-pune/balewadi-residential-projects/</loc>
+    <lastmod>2026-09-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://mahindralifespaceshomes.in/west-pune/balewadi-residential-projects/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mahindralifespaceshomes.in/west-pune/balewadi-residential-projects/" />
+  </url>
+  <url>
+    <loc>https://mahindralifespaceshomes.in/west-pune/wakad-residential-projects/</loc>
+    <lastmod>2026-09-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://mahindralifespaceshomes.in/west-pune/wakad-residential-projects/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mahindralifespaceshomes.in/west-pune/wakad-residential-projects/" />
+  </url>
+  <url>
+    <loc>https://mahindralifespaceshomes.in/west-pune/tathawade-residential-projects/</loc>
+    <lastmod>2026-09-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://mahindralifespaceshomes.in/west-pune/tathawade-residential-projects/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mahindralifespaceshomes.in/west-pune/tathawade-residential-projects/" />
+  </url>
+  <url>
+    <loc>https://mahindralifespaceshomes.in/west-pune/punawale-residential-projects/</loc>
+    <lastmod>2026-09-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://mahindralifespaceshomes.in/west-pune/punawale-residential-projects/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mahindralifespaceshomes.in/west-pune/punawale-residential-projects/" />
+  </url>
+  <url>
+    <loc>https://mahindralifespaceshomes.in/west-pune/bavdhan-residential-projects/</loc>
+    <lastmod>2026-09-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://mahindralifespaceshomes.in/west-pune/bavdhan-residential-projects/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mahindralifespaceshomes.in/west-pune/bavdhan-residential-projects/" />
+  </url>
+  <url>
+    <loc>https://mahindralifespaceshomes.in/west-pune/sus-residential-projects/</loc>
+    <lastmod>2026-09-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://mahindralifespaceshomes.in/west-pune/sus-residential-projects/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mahindralifespaceshomes.in/west-pune/sus-residential-projects/" />
+  </url>
+  <url>
+    <loc>https://mahindralifespaceshomes.in/west-pune/ravet-residential-projects/</loc>
+    <lastmod>2026-09-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://mahindralifespaceshomes.in/west-pune/ravet-residential-projects/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mahindralifespaceshomes.in/west-pune/ravet-residential-projects/" />
+  </url>
+
+  <!-- ============================================================================== -->
+  <!-- Programmatic Cluster 02 (New): Comparison Pages — Full Expansion              -->
+  <!-- ============================================================================== -->
+  <url>
+    <loc>https://mahindralifespaceshomes.in/compare/mahindra-mahalunge-vs-megapolis-hinjewadi/</loc>
+    <lastmod>2026-09-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://mahindralifespaceshomes.in/compare/mahindra-mahalunge-vs-megapolis-hinjewadi/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mahindralifespaceshomes.in/compare/mahindra-mahalunge-vs-megapolis-hinjewadi/" />
+  </url>
+  <url>
+    <loc>https://mahindralifespaceshomes.in/compare/mahindra-mahalunge-vs-shapoorji-pallonji-sensorium/</loc>
+    <lastmod>2026-09-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://mahindralifespaceshomes.in/compare/mahindra-mahalunge-vs-shapoorji-pallonji-sensorium/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mahindralifespaceshomes.in/compare/mahindra-mahalunge-vs-shapoorji-pallonji-sensorium/" />
+  </url>
+  <url>
+    <loc>https://mahindralifespaceshomes.in/compare/mahindra-citadel-vs-runwal-elixir-pimpri/</loc>
+    <lastmod>2026-09-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://mahindralifespaceshomes.in/compare/mahindra-citadel-vs-runwal-elixir-pimpri/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mahindralifespaceshomes.in/compare/mahindra-citadel-vs-runwal-elixir-pimpri/" />
+  </url>
+  <url>
+    <loc>https://mahindralifespaceshomes.in/compare/mahindra-mahalunge-vs-kolte-patil-24k-majestic/</loc>
+    <lastmod>2026-09-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://mahindralifespaceshomes.in/compare/mahindra-mahalunge-vs-kolte-patil-24k-majestic/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mahindralifespaceshomes.in/compare/mahindra-mahalunge-vs-kolte-patil-24k-majestic/" />
+  </url>
+
+  <!-- ============================================================================== -->
+  <!-- Programmatic Cluster 03 (New): Infrastructure Corridors — Full Expansion      -->
+  <!-- ============================================================================== -->
+  <url>
+    <loc>https://mahindralifespaceshomes.in/connectivity/properties-near-pune-ring-road-western-alignment/</loc>
+    <lastmod>2026-09-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://mahindralifespaceshomes.in/connectivity/properties-near-pune-ring-road-western-alignment/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mahindralifespaceshomes.in/connectivity/properties-near-pune-ring-road-western-alignment/" />
+  </url>
+  <url>
+    <loc>https://mahindralifespaceshomes.in/connectivity/flats-near-mumbai-pune-expressway-access-point/</loc>
+    <lastmod>2026-09-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://mahindralifespaceshomes.in/connectivity/flats-near-mumbai-pune-expressway-access-point/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mahindralifespaceshomes.in/connectivity/flats-near-mumbai-pune-expressway-access-point/" />
+  </url>
+  <url>
+    <loc>https://mahindralifespaceshomes.in/connectivity/flats-near-balewadi-stadium-metro-station/</loc>
+    <lastmod>2026-09-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://mahindralifespaceshomes.in/connectivity/flats-near-balewadi-stadium-metro-station/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mahindralifespaceshomes.in/connectivity/flats-near-balewadi-stadium-metro-station/" />
+  </url>
+
+  <!-- ============================================================================== -->
+  <!-- Programmatic Cluster 05: Brand Project Deep-Dive Pages (NEW TIER)             -->
+  <!-- ============================================================================== -->
+  <url>
+    <loc>https://mahindralifespaceshomes.in/brand/projects/mahindra-mahalunge-pune/</loc>
+    <lastmod>2026-09-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://mahindralifespaceshomes.in/brand/projects/mahindra-mahalunge-pune/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mahindralifespaceshomes.in/brand/projects/mahindra-mahalunge-pune/" />
+    <image:image>
+      <image:loc>https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&amp;fit=crop&amp;w=1200&amp;q=85</image:loc>
+      <image:title>Mahindra Mahalunge Pune — 13.46-Acre Pre-Launch Flagship</image:title>
+      <image:caption>Pre-launch biophilic 2, 3 &amp; 4 BHK residences at Mahindra Mahalunge, Nande-Mahalunge Road, Pune</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://mahindralifespaceshomes.in/brand/projects/mahindra-ivylush-kharadi-annex/</loc>
+    <lastmod>2026-09-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.92</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://mahindralifespaceshomes.in/brand/projects/mahindra-ivylush-kharadi-annex/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mahindralifespaceshomes.in/brand/projects/mahindra-ivylush-kharadi-annex/" />
+    <image:image>
+      <image:loc>https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&amp;fit=crop&amp;w=1200&amp;q=85</image:loc>
+      <image:title>Mahindra IvyLush Kharadi Annex East Pune</image:title>
+      <image:caption>Dual 22,000 sq.ft. clubhouses and 5.4-acre biophilic community at Mahindra IvyLush, Kharadi Annex</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://mahindralifespaceshomes.in/brand/projects/mahindra-citadel-pimpri-metro/</loc>
+    <lastmod>2026-09-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.92</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://mahindralifespaceshomes.in/brand/projects/mahindra-citadel-pimpri-metro/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mahindralifespaceshomes.in/brand/projects/mahindra-citadel-pimpri-metro/" />
+    <image:image>
+      <image:loc>https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&amp;fit=crop&amp;w=1200&amp;q=85</image:loc>
+      <image:title>Mahindra Citadel Pimpri — Sant Tukaram Metro Adjacent Luxury</image:title>
+      <image:caption>9.66-acre luxury development directly adjacent to Sant Tukaram Nagar Metro Station, Pimpri</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://mahindralifespaceshomes.in/brand/projects/mahindra-happinest-tathawade/</loc>
+    <lastmod>2026-09-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.92</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://mahindralifespaceshomes.in/brand/projects/mahindra-happinest-tathawade/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mahindralifespaceshomes.in/brand/projects/mahindra-happinest-tathawade/" />
+  </url>
+  <url>
+    <loc>https://mahindralifespaceshomes.in/brand/projects/mahindra-antheia-pimpri/</loc>
+    <lastmod>2026-09-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.88</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://mahindralifespaceshomes.in/brand/projects/mahindra-antheia-pimpri/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mahindralifespaceshomes.in/brand/projects/mahindra-antheia-pimpri/" />
+  </url>
+  <url>
+    <loc>https://mahindralifespaceshomes.in/brand/projects/mahindra-centralis-pimpri/</loc>
+    <lastmod>2026-09-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.88</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://mahindralifespaceshomes.in/brand/projects/mahindra-centralis-pimpri/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mahindralifespaceshomes.in/brand/projects/mahindra-centralis-pimpri/" />
+  </url>
+  <url>
+    <loc>https://mahindralifespaceshomes.in/brand/projects/mahindra-nestalgia-pimpri/</loc>
+    <lastmod>2026-09-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://mahindralifespaceshomes.in/brand/projects/mahindra-nestalgia-pimpri/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mahindralifespaceshomes.in/brand/projects/mahindra-nestalgia-pimpri/" />
+  </url>
+  <url>
+    <loc>https://mahindralifespaceshomes.in/brand/projects/mahindra-lartista-sopan-baug/</loc>
+    <lastmod>2026-09-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://mahindralifespaceshomes.in/brand/projects/mahindra-lartista-sopan-baug/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mahindralifespaceshomes.in/brand/projects/mahindra-lartista-sopan-baug/" />
+  </url>
+  <url>
+    <loc>https://mahindralifespaceshomes.in/brand/projects/mahindra-woods-pimpri/</loc>
+    <lastmod>2026-09-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://mahindralifespaceshomes.in/brand/projects/mahindra-woods-pimpri/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mahindralifespaceshomes.in/brand/projects/mahindra-woods-pimpri/" />
+  </url>
+
+  <!-- ============================================================================== -->
+  <!-- Tier 5 (New): Residences Typology & Intent Pages                              -->
+  <!-- ============================================================================== -->
+  <url>
+    <loc>https://mahindralifespaceshomes.in/residences/1-bhk-fusion/</loc>
+    <lastmod>2026-09-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://mahindralifespaceshomes.in/residences/1-bhk-fusion/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mahindralifespaceshomes.in/residences/1-bhk-fusion/" />
+  </url>
+  <url>
+    <loc>https://mahindralifespaceshomes.in/residences/2-bhk-premium/</loc>
+    <lastmod>2026-09-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://mahindralifespaceshomes.in/residences/2-bhk-premium/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mahindralifespaceshomes.in/residences/2-bhk-premium/" />
+  </url>
+  <url>
+    <loc>https://mahindralifespaceshomes.in/residences/3-bhk-signature/</loc>
+    <lastmod>2026-09-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://mahindralifespaceshomes.in/residences/3-bhk-signature/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mahindralifespaceshomes.in/residences/3-bhk-signature/" />
+  </url>
+  <url>
+    <loc>https://mahindralifespaceshomes.in/residences/4-bhk-penthouse/</loc>
+    <lastmod>2026-09-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://mahindralifespaceshomes.in/residences/4-bhk-penthouse/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mahindralifespaceshomes.in/residences/4-bhk-penthouse/" />
+  </url>
+  <url>
+    <loc>https://mahindralifespaceshomes.in/residences/duplex-penthouse/</loc>
+    <lastmod>2026-09-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.88</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://mahindralifespaceshomes.in/residences/duplex-penthouse/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mahindralifespaceshomes.in/residences/duplex-penthouse/" />
+  </url>
+  <url>
+    <loc>https://mahindralifespaceshomes.in/residences/vastu-compliant/</loc>
+    <lastmod>2026-09-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://mahindralifespaceshomes.in/residences/vastu-compliant/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mahindralifespaceshomes.in/residences/vastu-compliant/" />
+  </url>
+  <url>
+    <loc>https://mahindralifespaceshomes.in/residences/west-facing/</loc>
+    <lastmod>2026-09-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.88</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://mahindralifespaceshomes.in/residences/west-facing/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mahindralifespaceshomes.in/residences/west-facing/" />
+  </url>
+  <url>
+    <loc>https://mahindralifespaceshomes.in/residences/north-east-facing/</loc>
+    <lastmod>2026-09-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://mahindralifespaceshomes.in/residences/north-east-facing/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mahindralifespaceshomes.in/residences/north-east-facing/" />
+  </url>
+  <url>
+    <loc>https://mahindralifespaceshomes.in/residences/affordable-luxury/</loc>
+    <lastmod>2026-09-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.92</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://mahindralifespaceshomes.in/residences/affordable-luxury/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mahindralifespaceshomes.in/residences/affordable-luxury/" />
+  </url>
+  <url>
+    <loc>https://mahindralifespaceshomes.in/residences/nri-investment/</loc>
+    <lastmod>2026-09-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.92</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://mahindralifespaceshomes.in/residences/nri-investment/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mahindralifespaceshomes.in/residences/nri-investment/" />
   </url>
 
 </urlset>

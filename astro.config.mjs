@@ -5,6 +5,7 @@ import tailwind from '@astrojs/tailwind';
 export default defineConfig({
   site: 'https://mahindralifespaceshomes.in',
   output: 'static',
+  trailingSlash: 'always',
   build: {
     format: 'directory',
   },

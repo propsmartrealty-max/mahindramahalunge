@@ -1,94 +1,129 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import MahindraKeywordMatrix from '../../components/MahindraKeywordMatrix.astro';
 
 const faqCategories = [
   {
-    category: 'Project Background & Land Parcel',
+    category: '1. Mahindra Mahalunge: Upcoming 13.46-Acre Flagship',
     questions: [
       {
         q: 'What is the official status of Mahindra Lifespaces’ project at Mahalunge?',
-        a: 'In October 2025, Mahindra Lifespaces Developers Limited officially announced the acquisition of 13.46 acres in the Nande–Mahalunge corridor with an estimated development potential of approximately ₹3,500 Crore. The project is currently in the master-planning and statutory approval stage.'
+        a: 'In October 2025, Mahindra Lifespaces Developers Limited officially announced the acquisition of 13.46 acres in the Nande–Mahalunge corridor with an estimated development potential of approximately ₹3,500 Crore. The project is currently in the master-planning and statutory pre-registration stage under MahaRERA guidelines.'
       },
       {
         q: 'Is the land parcel 13.46 acres confirmed?',
-        a: 'Yes, the 13.46-acre figure represents the acquired land parcel publicly announced by Mahindra Lifespaces in its regulatory filings. The final net planned residential development area will be defined in the MahaRERA project sanction.'
+        a: 'Yes, the 13.46-acre figure represents the acquired land parcel publicly announced by Mahindra Lifespaces in its regulatory stock exchange filings. The final net planned residential development area will be defined in the MahaRERA project sanction.'
       },
       {
-        q: 'Who is the developer behind this project?',
-        a: 'The development is led by Mahindra Lifespaces Developers Ltd., the real estate and infrastructure development arm of the USD 20+ Billion Mahindra Group. Mahindra has delivered 50+ residential communities across India spanning over 55 million square feet.'
-      }
-    ]
-  },
-  {
-    category: 'Configurations & Living Spaces',
-    questions: [
-      {
-        q: 'What apartment configurations are anticipated at Mahindra Mahalunge?',
-        a: 'The master community is being planned to feature premium 2 BHK Optima Suites, 3 BHK Luxe Residences, and 4 BHK Signature Estates designed with expansive cross-ventilation, panoramic decks, and zero wasted corridor spaces.'
+        q: 'What configurations and carpet areas are anticipated at Mahindra Mahalunge?',
+        a: 'The master community is being planned to feature premium 2 BHK Optima Suites (~785 to 895 sq.ft.*), 3 BHK Luxe Residences (~1,120 to 1,210 sq.ft.*), and 4 BHK Signature Estates (~1,650 to 1,820 sq.ft.*) with zero wasted corridors and biophilic green terraces.'
       },
       {
-        q: 'What are the tentative carpet areas for each configuration?',
-        a: 'Tentative carpet area estimates are: 2 BHK (~785 to 895 sq.ft.*), 3 BHK (~1,120 to 1,210 sq.ft.*), and 4 BHK (~1,650 to 1,820 sq.ft.*). Exact RERA carpet areas will be officially released upon MahaRERA project sanction.'
-      },
-      {
-        q: 'Are the homes Vastu-compliant?',
-        a: 'Yes, the architectural layouts are planned to incorporate fundamental Vastu principles, including auspicious East and North-East entry orientations and well-ventilated cross-breeze pathways.'
-      }
-    ]
-  },
-  {
-    category: 'MahaRERA Compliance & Pre-Launch Guidelines',
-    questions: [
-      {
-        q: 'Is the project registered with MahaRERA yet?',
-        a: 'The project is in its statutory approval and pre-registration phase. In strict accordance with MahaRERA guidelines, no booking, sale, or advance deposit will be accepted until MahaRERA registration is formally granted and the official registration number and QR code are displayed.'
-      },
-      {
-        q: 'Can I submit an Expression of Interest (EOI)?',
+        q: 'Can I submit an Expression of Interest (EOI) for Mahindra Mahalunge?',
         a: 'Yes, prospective homebuyers may submit a non-financial Expression of Interest (EOI) / Priority Pass to receive formal notifications, confidential cost sheets, and priority site-visit invitations as soon as statutory sanctions are finalized.'
       }
     ]
   },
   {
-    category: 'Location, Connectivity & Transit',
+    category: '2. Nande-Mahalunge-Maan & PMRDA Town Planning Scheme 1',
     questions: [
-      {
-        q: 'How far is the project from Hinjewadi IT Park?',
-        a: 'The site is approximately 7 to 10 minutes from Hinjewadi Phase 1, offering direct access to global IT campuses including Infosys, Wipro, TCS, and Cognizant.'
-      },
-      {
-        q: 'How easily can residents reach Baner and Balewadi High Street?',
-        a: 'Baner and Balewadi High Street are located just 8 to 12 minutes away via the planned 36-meter wide PMRDA arterial road network, providing seamless access to Pune’s premier dining and shopping hubs.'
-      },
       {
         q: 'What infrastructure advantages does the PMRDA Town Planning Scheme provide?',
-        a: 'Mahalunge is part of Pune’s first PMRDA model Town Planning Scheme. Key benefits include planned 36-meter wide ring roads, dedicated underground utility corridors, planned green parks, and direct integration with the upcoming Pune Metro Line 3.'
+        a: 'Mahalunge and Maan form Pune’s first PMRDA model Town Planning Scheme (TPS 1). Key benefits include planned 36-meter wide ring roads, underground utility tunnels, dedicated cycle paths, civic garden reservations, and direct integration with Pune Metro Line 3.'
+      },
+      {
+        q: 'How does the Mahalunge-Hinjewadi river bridge improve commute times?',
+        a: 'The proposed river bridge provides a direct bypass from Mahalunge across to Hinjewadi Phase 1, cutting commute times to Infosys and Wipro gates down to 7 minutes and avoiding highway traffic at Wakad bridge and Shivaji Chowk.'
+      },
+      {
+        q: 'What is the alignment of the Pune Inner Ring Road near Mahalunge?',
+        a: 'The upcoming Pune Inner Ring Road connects Mahalunge and Nande directly to the Mumbai-Bengaluru Highway (NH 48) and PCMC, providing circumferential mobility without entering congested city centers.'
       }
     ]
   },
   {
-    category: 'Schools, Healthcare & Social Infrastructure',
+    category: '3. Mahindra IvyLush: East Pune (Kharadi Annex)',
     questions: [
       {
-        q: 'Which reputable international schools are located near Mahalunge?',
-        a: 'Nearby educational institutions include Mahindra International School (Hinjewadi), Delhi Public School (DPS Pune), Symbiosis International School, The Orchid School, and Vibgyor High School, all within 10 to 15 minutes.'
+        q: 'Where is Mahindra IvyLush located and what are its MahaRERA registration numbers?',
+        a: 'Mahindra IvyLush is situated in Kharadi Annex / Wagholi, East Pune, spanning 5.4 acres. It holds official MahaRERA registrations: P52100055146 (Towers A & B) and P52100055147 (Towers C & D).'
       },
       {
-        q: 'What hospitals and healthcare facilities serve the neighborhood?',
-        a: 'Residents have rapid access to multi-specialty hospitals including Jupiter Hospital (Baner), Manipal Hospital clinic, Surya Mother & Child Care Hospital, and Ruby Hall Clinic Hinjewadi.'
+        q: 'What amenities does Mahindra IvyLush offer?',
+        a: 'IvyLush features dual grand clubhouses totaling 22,000 sq.ft., camping machan, adventure play zones, infinity swimming pool, and biophilic green decks just 10 minutes from EON IT Park and World Trade Center (WTC) Pune.'
+      },
+      {
+        q: 'What typologies are available at Mahindra IvyLush?',
+        a: 'Configurations include 2 BHK Spacia, 2 BHK Grande, 3 BHK Spacia, 3 BHK Grande, and 4 BHK Presidential luxury suites.'
       }
     ]
   },
   {
-    category: 'Investment Potential & Rental Yields',
+    category: '4. Mahindra Citadel: Central Pimpri (PCMC Metro Corridor)',
     questions: [
       {
-        q: 'What rental yields can investors expect in the Mahalunge corridor?',
-        a: 'Because of sustained housing demand from 400,000+ tech professionals in Hinjewadi, residential properties in the Mahalunge-Nande corridor command rental yields averaging 4.2% to 5.2%, substantially higher than mature suburbs like Kothrud or Aundh.'
+        q: 'Where is Mahindra Citadel located and how does it connect to the Pune Metro?',
+        a: 'Mahindra Citadel is located in Vallabh Nagar, Pimpri Colony, directly abutting the operational Sant Tukaram Nagar Metro Station on the Old Mumbai-Pune Highway, providing a 2-minute walking commute to the train concourse.'
       },
       {
-        q: 'Why is Mahalunge considered a high-growth capital appreciation market?',
-        a: 'Mahalunge offers lower entry capital values compared to neighboring Baner, while benefiting from massive ongoing public infrastructure investments (PMRDA Ring Road, Metro Line 3, and Town Planning schemes) and institutional Grade-A developers like Mahindra Lifespaces.'
+        q: 'What are the standout amenities and MahaRERA details for Mahindra Citadel?',
+        a: 'Citadel spans 9.66 acres across Bastions I, J, K and Tower L (MahaRERA: P52100047468 / P52100051877), featuring a half-Olympic pool, private cinema lounge, multi-sport courts, and biometric home automation.'
+      }
+    ]
+  },
+  {
+    category: '5. Mahindra Happinest Tathawade: West Pune Biophilic Homes',
+    questions: [
+      {
+        q: 'What are Mahindra Happinest Fusion Homes in Tathawade?',
+        a: 'Happinest Tathawade is a 7.2-acre biophilic development featuring innovative 1 & 2 BHK Fusion Homes with Pune’s first 1.5-acre elevated skywalk connecting multiple high-rise towers, minutes from Hinjewadi Phase 1.'
+      },
+      {
+        q: 'What is the status of Mahindra Happinest Tathawade Phase 4?',
+        a: 'Phase 4 represents the final launch phase of Happinest Tathawade, offering prime residential inventory under MahaRERA registration with rapid connectivity to the Mumbai-Pune Expressway.'
+      }
+    ]
+  },
+  {
+    category: '6. Delivered Communities & Resale Track Record',
+    questions: [
+      {
+        q: 'Which landmark communities has Mahindra Lifespaces already delivered in Pune?',
+        a: 'Mahindra has delivered over 14 million sq.ft. in Pune with Occupancy Certificates (OC), including Mahindra Antheia (16-acre community in Nehru Nagar, Pimpri), Mahindra Centralis (4 towers at Pimpri Chowk), Mahindra Nestalgia, Mahindra L\'Artista (Sopan Baug), and Mahindra Woods.'
+      },
+      {
+        q: 'What are the rental yields and resale demand in delivered Mahindra societies?',
+        a: 'Delivered communities like Antheia and Centralis command average rental yields of 4.2% to 4.8% and high capital appreciation due to institutional Mahindra maintenance and prime transit adjacencies.'
+      }
+    ]
+  },
+  {
+    category: '7. West Pune Real Estate Investment & Price Trends',
+    questions: [
+      {
+        q: 'How do property prices in Mahalunge compare to Baner and Hinjewadi?',
+        a: 'Mahalunge offers an attractive entry benchmark around ₹7,500 - ₹8,800/sq.ft. compared to ₹13,500 - ₹16,500/sq.ft. in land-starved Baner, while providing brand-new master-planned communities just 8-10 minutes away.'
+      },
+      {
+        q: 'What rental yields can investors expect in the Mahalunge-Hinjewadi belt?',
+        a: 'Because of sustained housing demand from 400,000+ tech professionals in Hinjewadi, residential properties in the Mahalunge-Nande corridor command rental yields averaging 4.5% to 5.4%.'
+      }
+    ]
+  },
+  {
+    category: '8. Voice Search & Hinglish Conversational Q&A',
+    questions: [
+      {
+        q: 'Mahindra flat ka price Pune mein kitna hai?',
+        a: 'Mahindra Lifespaces Pune ke flats ki pricing project location par depend karti hai: Happinest Tathawade mein 1 & 2 BHK starting ~₹38L*, upcoming Mahindra Mahalunge 13.46-acre development par pre-launch indicative 2 & 3 BHK entry rates, aur IvyLush Kharadi mein 2, 3 & 4 BHK luxury residences.'
+      },
+      {
+        q: 'Mahindra Mahalunge project kaha hai aur kab launch hoga?',
+        a: 'Mahindra Lifespaces ne October 2025 mein Nande-Mahalunge corridor mein 13.46 acres land acquisition announce kiya hai (~₹3,500 Cr GDV). Ye Hinjewadi Phase 1 se sirf 7 minute aur Baner se 10 minute par sthit hai. Official launch details MahaRERA approval ke baad aayengi.'
+      },
+      {
+        q: 'Mahindra Citadel aur IvyLush kaha hai?',
+        a: 'Mahindra Citadel Pimpri Colony mein Sant Tukaram Metro station ke paas hai. Mahindra IvyLush Kharadi Annex (Wagholi) mein EON IT Park ke paas sthit hai.'
       }
     ]
   }
@@ -111,47 +146,49 @@ const faqSchema = {
 ---
 
 <Layout
-  title="Mahindra Mahalunge FAQ | Mahindra Lifespaces Mahalunge Q&A 2026"
-  description="Comprehensive FAQ guide for Mahindra Mahalunge by Mahindra Lifespaces: land acquisition, 2, 3 & 4 BHK floor plans, MahaRERA status, Hinjewadi distance & price."
-  canonical="https://mahindralifespaceshomes.in/faq"
+  title="Mahindra Lifespaces Pune FAQ | Mahalunge, IvyLush, Citadel & West Pune Q&A"
+  description="Comprehensive 8-pillar FAQ knowledge base for Mahindra Lifespaces Pune: Mahalunge 13.46-acre acquisition, IvyLush Kharadi, Citadel Pimpri, Tathawade & West Pune prices."
+  canonical="https://mahindralifespaceshomes.in/faq/"
+  customSchema={faqSchema}
 >
-  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
 
   <!-- Hero Section -->
   <section class="pt-32 pb-16 bg-charcoal-950 border-b border-white/10 relative overflow-hidden">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4 text-center">
-      <div class="inline-flex items-center space-x-2 px-3 py-1 rounded bg-gold-500/10 border border-gold-500/30 text-gold-400 text-xs font-semibold uppercase tracking-widest">
-        <span>Verified Intelligence</span>
+      <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-gold-500/10 border border-gold-500/30 text-gold-400 text-xs font-semibold uppercase tracking-widest">
+        <span>Verified Intelligence • 8 Strategic Pillars</span>
       </div>
       <h1 class="font-serif text-3xl sm:text-5xl font-bold text-stone-100 leading-tight">
-        Mahindra Mahalunge FAQ: <br />
-        <span class="gold-gradient-text">Mahindra Lifespaces Mahalunge Q&A</span>
+        Mahindra Lifespaces Pune FAQ: <br />
+        <span class="gold-gradient-text">Mahalunge & Pune Real Estate Knowledge Base</span>
       </h1>
-      <p class="text-stone-300 text-xs sm:text-sm max-w-xl mx-auto font-light leading-relaxed">
-        Transparent answers regarding Mahindra Mahalunge, the 13.46-acre land acquisition by Mahindra Lifespaces, upcoming residence configurations, MahaRERA status, and the Nande–Mahalunge corridor.
+      <p class="text-stone-300 text-xs sm:text-sm max-w-2xl mx-auto font-light leading-relaxed">
+        Transparent answers regarding Mahindra Mahalunge (13.46-acre acquisition announced Oct 2025), IvyLush Kharadi, Citadel Pimpri, Happinest Tathawade, delivered communities, and West Pune real estate investment.
       </p>
     </div>
   </section>
 
   <!-- Categorized FAQ Section -->
-  <section class="py-16 bg-charcoal-900">
+  <section class="py-16 bg-charcoal-900 border-b border-white/10">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
       
-      {faqCategories.map((cat, catIdx) => (
+      {faqCategories.map((cat, idx) => (
         <div class="space-y-6">
-          <div class="flex items-center space-x-3 border-b border-white/10 pb-3">
-            <span class="font-serif text-gold-400 font-bold text-sm">0{catIdx + 1}</span>
-            <h2 class="font-serif text-xl sm:text-2xl text-stone-100 font-bold">{cat.category}</h2>
+          <div class="border-b border-gold-500/20 pb-3 flex items-center justify-between">
+            <h2 class="font-serif text-lg sm:text-xl font-bold text-gold-400">
+              {cat.category}
+            </h2>
+            <span class="text-stone-500 font-mono text-xs">Pillar 0{idx + 1}</span>
           </div>
 
           <div class="space-y-4">
             {cat.questions.map((faq) => (
-              <details class="group p-5 rounded-xl bg-charcoal-950 border border-white/10 cursor-pointer hover:border-gold-500/30 transition-colors">
-                <summary class="flex items-center justify-between font-serif text-sm sm:text-base text-stone-200 font-semibold list-none">
-                  <span class="pr-4">{faq.q}</span>
-                  <span class="text-gold-400 group-open:rotate-180 transition-transform flex-shrink-0">▼</span>
+              <details class="group p-5 rounded-2xl glass-card border border-white/10 open:border-gold-500/30 transition-all">
+                <summary class="flex justify-between items-center cursor-pointer font-serif text-sm font-semibold text-stone-200 group-open:text-gold-300 transition-colors">
+                  <span>{faq.q}</span>
+                  <span class="text-gold-400 transition-transform group-open:rotate-180">▼</span>
                 </summary>
-                <p class="mt-3 text-xs sm:text-sm text-stone-400 leading-relaxed pt-3 border-t border-white/5">
+                <p class="mt-3 text-xs sm:text-sm text-stone-400 leading-relaxed font-light pl-1">
                   {faq.a}
                 </p>
               </details>
@@ -160,32 +197,9 @@ const faqSchema = {
         </div>
       ))}
 
-      <!-- Still Have Questions Callout -->
-      <div class="p-8 rounded-2xl bg-charcoal-950 border border-gold-500/40 text-center space-y-4 shadow-2xl">
-        <span class="text-xs uppercase tracking-widest text-gold-400 font-bold">Official Project Desk</span>
-        <h3 class="font-serif text-2xl text-stone-100 font-bold">Have a Specific Question Not Listed Here?</h3>
-        <p class="text-xs text-stone-400 max-w-md mx-auto">
-          Our senior relationship managers are available to provide direct, verified information regarding project status and corridor walkthroughs.
-        </p>
-        <div class="pt-2 flex flex-col sm:flex-row gap-3 justify-center">
-          <button
-            data-open-modal
-            data-interest="FAQ Unanswered Question"
-            class="px-8 py-3 rounded bg-gradient-to-r from-gold-400 to-gold-500 text-charcoal-950 text-xs font-bold uppercase tracking-widest hover:shadow-xl transition-all"
-          >
-            Submit an Inquiry
-          </button>
-          <a
-            href="https://wa.me/912067000000?text=Hi%2C%20I%20have%20a%20question%20about%20Mahindra%20Mahalunge."
-            target="_blank"
-            rel="noopener noreferrer"
-            class="px-8 py-3 rounded border border-emerald-500/40 text-emerald-400 hover:bg-emerald-500/10 text-xs font-bold uppercase tracking-widest transition-colors flex items-center justify-center space-x-2"
-          >
-            <span>Ask via WhatsApp</span>
-          </a>
-        </div>
-      </div>
-
     </div>
   </section>
+
+  <!-- Keyword Matrix Integration -->
+  <MahindraKeywordMatrix />
 </Layout>

@@ -1,0 +1,85 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+---
+
+<Layout
+  title="Mahindra Mahalunge 4 BHK Penthouse | Ultra-Luxury Signature Estate Near Hinjewadi"
+  description="Mahindra Mahalunge 4 BHK Penthouse residences: 1,820 – 2,200+ sq.ft.* carpet, private terraces, double-height ceilings, and ultra-luxury finishes. Pre-launch pricing near Hinjewadi Pune."
+  keywords="mahindra mahalunge 4 bhk penthouse, mahindra mahalunge 4 bhk price, mahindra mahalunge penthouse, 4 bhk luxury flats near hinjewadi, mahindra lifespaces mahalunge 4 bhk"
+  canonical="https://mahindralifespaceshomes.in/residences/4-bhk-penthouse/"
+>
+  <section class="pt-32 pb-20 bg-charcoal-950 border-b border-white/10 relative overflow-hidden">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
+      <div class="inline-flex items-center space-x-2 px-3 py-1 rounded bg-gold-500/10 border border-gold-500/30 text-gold-400 text-xs font-semibold uppercase tracking-widest">
+        <span>Ultra-Luxury Configuration · Penthouse Collection</span>
+      </div>
+      <h1 class="font-serif text-3xl sm:text-5xl lg:text-6xl font-bold text-stone-100 max-w-4xl leading-tight">
+        4 BHK Penthouse Collection: <br />
+        <span class="gold-gradient-text">The Pinnacle of Biophilic Luxury</span>
+      </h1>
+      <p class="text-stone-300 text-sm sm:text-base max-w-2xl font-light leading-relaxed">
+        Reserved for discerning CXOs, NRI investors, and ultra-HNI families. The 4 BHK Penthouse Collection at Mahindra Mahalunge redefines West Pune luxury with private terraces, double-height living rooms, and panoramic Sahyadri horizon views.
+      </p>
+    </div>
+  </section>
+
+  <!-- Specs -->
+  <section class="py-16 bg-charcoal-900 border-b border-white/10">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+        <div class="p-4 bg-charcoal-950 rounded-xl border border-white/10">
+          <div class="font-serif text-2xl sm:text-3xl font-bold text-gold-400">1,820 – 2,200+ sq.ft.*</div>
+          <div class="text-[11px] text-stone-400 uppercase tracking-wider mt-1">Carpet Area</div>
+        </div>
+        <div class="p-4 bg-charcoal-950 rounded-xl border border-white/10">
+          <div class="font-serif text-2xl sm:text-3xl font-bold text-stone-100">Private Terrace</div>
+          <div class="text-[11px] text-stone-400 uppercase tracking-wider mt-1">Sahyadri Hill Views</div>
+        </div>
+        <div class="p-4 bg-charcoal-950 rounded-xl border border-white/10">
+          <div class="font-serif text-2xl sm:text-3xl font-bold text-gold-400">4 Bed · 4 Bath</div>
+          <div class="text-[11px] text-stone-400 uppercase tracking-wider mt-1">All En-Suite</div>
+        </div>
+        <div class="p-4 bg-charcoal-950 rounded-xl border border-white/10">
+          <div class="font-serif text-2xl sm:text-3xl font-bold text-emerald-400">By Invitation</div>
+          <div class="text-[11px] text-stone-400 uppercase tracking-wider mt-1">Exclusive EOI Access</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Ultra Luxury Features -->
+  <section class="py-20 bg-charcoal-950">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+      <div class="text-center space-y-3">
+        <span class="text-xs uppercase tracking-widest text-gold-400 font-bold">Signature Architecture</span>
+        <h2 class="font-serif text-3xl text-stone-100 font-bold">The 4 BHK Penthouse Difference</h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {[
+          { icon: '🏔', title: 'Panoramic Sahyadri Views', desc: 'Top-floor units with unobstructed 270° views of the Sahyadri mountain range and Mahalunge valley.' },
+          { icon: '🏡', title: 'Private Sky Terrace', desc: '200–400 sq.ft.* exclusive private terrace with landscaped garden and outdoor lounge potential.' },
+          { icon: '🛁', title: 'All-En-Suite Bedrooms', desc: '4 bedrooms each with private attached bathrooms featuring Italian marble, rain showers, and premium fixtures.' },
+          { icon: '📐', title: 'Double-Height Living Room', desc: 'Architecturally dramatic 18-foot double-height living volumes creating unmatched spatial grandeur.' },
+          { icon: '🍳', title: 'Island Chef Kitchen', desc: 'Open-concept island kitchen with breakfast counter, butler\'s pantry, and premium appliance integration.' },
+          { icon: '🚗', title: 'Dedicated Parking Bays', desc: '2 dedicated covered parking bays plus optional EV fast-charging connection per penthouse unit.' }
+        ].map((f) => (
+          <div class="p-6 rounded-2xl bg-charcoal-900 border border-gold-500/20 space-y-3 hover:border-gold-500/50 transition-all">
+            <div class="text-2xl">{f.icon}</div>
+            <h3 class="font-serif text-base font-bold text-gold-300">{f.title}</h3>
+            <p class="text-xs text-stone-300 leading-relaxed font-light">{f.desc}</p>
+          </div>
+        ))}
+      </div>
+      <div class="text-center pt-6">
+        <button
+          data-open-modal
+          data-unit="4 BHK Penthouse"
+          data-interest="4 BHK Penthouse Exclusive EOI"
+          class="btn-shimmer px-10 py-4 rounded-full bg-gradient-to-r from-gold-300 via-gold-400 to-gold-500 text-charcoal-950 font-bold uppercase tracking-wider text-xs shadow-lg hover:shadow-gold-500/30 transition-all cursor-pointer"
+        >
+          Request Exclusive 4 BHK Penthouse Dossier
+        </button>
+      </div>
+    </div>
+  </section>
+</Layout>

@@ -1,0 +1,329 @@
+---
+import { mahindraPuneProjects, corporateProfile } from '../data/mahindraPuneEcosystem';
+---
+
+<section id="pune-ecosystem" class="py-24 bg-gradient-to-b from-[#0c1017] via-[#111724] to-[#0c1017] border-t border-gold-500/20 relative overflow-hidden">
+  <!-- Subtle ambient gold lighting -->
+  <div class="absolute top-1/3 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-gold-500/5 rounded-full blur-[140px] pointer-events-none"></div>
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-16">
+    
+    <!-- Section Header -->
+    <div class="reveal text-center max-w-3xl mx-auto space-y-4">
+      <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-brand-red/10 border border-brand-red/30 text-brand-red text-xs font-semibold uppercase tracking-widest">
+        <span class="w-2 h-2 rounded-full bg-brand-red"></span>
+        <span>Corporate Pedigree & Proven Track Record</span>
+      </div>
+      <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl text-stone-50 font-bold leading-tight">
+        The Mahindra Lifespaces Pune Ecosystem: <br />
+        <span class="gold-gradient-text">9 Landmark Developments Across Pune & PCMC</span>
+      </h2>
+      <p class="text-xs sm:text-sm text-stone-300 leading-relaxed font-light">
+        As the real estate and infrastructure development arm of the US $20+ Billion Mahindra Group, Mahindra Lifespaces has established landmark residential communities across East Pune, West Pune, and PCMC. Explore the full portfolio below.
+      </p>
+    </div>
+
+    <!-- Corporate Proof Strip (NSE, BSE, CIN, IGBC) -->
+    <div class="reveal grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+      <div class="p-5 rounded-2xl glass-card border border-white/10 space-y-1">
+        <div class="text-[10px] uppercase tracking-wider text-stone-400 font-mono">Stock Exchange Listed</div>
+        <div class="font-serif text-lg sm:text-xl font-bold text-gold-400">
+          NSE: {corporateProfile.nseSymbol} • BSE: {corporateProfile.bseCode}
+        </div>
+        <p class="text-[10px] text-stone-400">Publicly Traded Transparency</p>
+      </div>
+
+      <div class="p-5 rounded-2xl glass-card border border-white/10 space-y-1">
+        <div class="text-[10px] uppercase tracking-wider text-stone-400 font-mono">National Legacy</div>
+        <div class="font-serif text-lg sm:text-xl font-bold text-white">75+ Years Trust</div>
+        <p class="text-[10px] text-stone-400">{corporateProfile.parentOrganization}</p>
+      </div>
+
+      <div class="p-5 rounded-2xl glass-card border border-white/10 space-y-1">
+        <div class="text-[10px] uppercase tracking-wider text-stone-400 font-mono">Completed Footprint</div>
+        <div class="font-serif text-lg sm:text-xl font-bold text-gold-400">55.5M+ Sq.Ft.</div>
+        <p class="text-[10px] text-stone-400">21,000+ Resident Families</p>
+      </div>
+
+      <div class="p-5 rounded-2xl glass-card border border-white/10 space-y-1">
+        <div class="text-[10px] uppercase tracking-wider text-stone-400 font-mono">Sustainability Benchmark</div>
+        <div class="font-serif text-lg sm:text-xl font-bold text-emerald-400">100% Green Certified</div>
+        <p class="text-[10px] text-stone-400">India's First Net-Zero Developer</p>
+      </div>
+    </div>
+
+    <!-- Portfolio Filter Pills -->
+    <div class="flex flex-wrap items-center justify-center gap-3">
+      <button
+        type="button"
+        class="filter-btn px-4 py-1.5 rounded-full bg-gold-400 text-charcoal-950 font-bold text-xs uppercase tracking-wider shadow-md transition-all active:scale-95"
+        data-filter="all"
+      >
+        All Communities ({mahindraPuneProjects.length})
+      </button>
+      <button
+        type="button"
+        class="filter-btn px-4 py-1.5 rounded-full bg-white/10 hover:bg-white/20 text-stone-300 hover:text-white font-medium text-xs uppercase tracking-wider border border-white/10 transition-all active:scale-95"
+        data-filter="upcoming"
+      >
+        Upcoming / Future Development ({mahindraPuneProjects.filter(p => p.category === 'Upcoming / Future Development').length})
+      </button>
+      <button
+        type="button"
+        class="filter-btn px-4 py-1.5 rounded-full bg-white/10 hover:bg-white/20 text-stone-300 hover:text-white font-medium text-xs uppercase tracking-wider border border-white/10 transition-all active:scale-95"
+        data-filter="current"
+      >
+        Current Sales Inventory ({mahindraPuneProjects.filter(p => p.category === 'Current Sales Inventory').length})
+      </button>
+      <button
+        type="button"
+        class="filter-btn px-4 py-1.5 rounded-full bg-white/10 hover:bg-white/20 text-stone-300 hover:text-white font-medium text-xs uppercase tracking-wider border border-white/10 transition-all active:scale-95"
+        data-filter="delivered"
+      >
+        Delivered Communities ({mahindraPuneProjects.filter(p => p.category === 'Delivered Community').length})
+      </button>
+    </div>
+
+    <!-- Projects Portfolio Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="projects-grid">
+      {mahindraPuneProjects.map((project) => (
+        <div
+          class="project-card reveal glass-card rounded-2xl overflow-hidden border border-white/15 flex flex-col justify-between hover:border-gold-500/50 transition-all duration-300 group shadow-xl"
+          data-category={
+            project.category === 'Upcoming / Future Development' 
+              ? 'upcoming' 
+              : project.category === 'Current Sales Inventory' 
+                ? 'current' 
+                : 'delivered'
+          }
+        >
+          
+          <div>
+            <!-- Image & Status Badge -->
+            <div class="relative h-52 overflow-hidden">
+              <img
+                src={project.image}
+                alt={project.name}
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 filter brightness-90"
+                loading="lazy"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-charcoal-950 via-transparent to-transparent"></div>
+              
+              <!-- Micro-Market & Status Badges -->
+              <div class="absolute top-3 left-3 right-3 flex items-center justify-between gap-2">
+                <span class="px-2.5 py-1 rounded-full bg-charcoal-950/80 backdrop-blur-md text-[10px] font-semibold tracking-wider uppercase text-gold-400 border border-white/10">
+                  {project.microMarket}
+                </span>
+
+                {project.status === 'Pre-Launch / Master Planning' && (
+                  <span class="px-2.5 py-1 rounded-full bg-gold-500/20 backdrop-blur-md text-[10px] font-bold tracking-wider uppercase text-gold-300 border border-gold-500/40 animate-pulse">
+                    Pre-Launch Showcase
+                  </span>
+                )}
+                {project.status === 'Under Construction' && (
+                  <span class="px-2.5 py-1 rounded-full bg-amber-500/20 backdrop-blur-md text-[10px] font-bold tracking-wider uppercase text-amber-300 border border-amber-500/40">
+                    Under Construction
+                  </span>
+                )}
+                {project.status === 'Delivered Landmark' && (
+                  <span class="px-2.5 py-1 rounded-full bg-emerald-500/20 backdrop-blur-md text-[10px] font-bold tracking-wider uppercase text-emerald-300 border border-emerald-500/40">
+                    Delivered & Occupied
+                  </span>
+                )}
+              </div>
+
+              <!-- Location Pill -->
+              <div class="absolute bottom-3 left-4 text-[11px] text-stone-200 font-mono flex items-center space-x-1 drop-shadow">
+                <span>📍</span>
+                <span>{project.location}</span>
+              </div>
+            </div>
+
+            <!-- Content Body -->
+            <div class="p-6 space-y-4">
+              <div>
+                <h3 class="font-serif text-lg font-bold text-stone-100 group-hover:text-gold-300 transition-colors">
+                  <a href={`/brand/projects/${project.slug}/`} class="hover:text-gold-300 transition-colors">
+                    {project.name}
+                  </a>
+                </h3>
+                <p class="text-xs text-stone-300 font-light leading-relaxed mt-2 line-clamp-3">
+                  {project.summary}
+                </p>
+              </div>
+
+              <!-- Project Specifications -->
+              <div class="space-y-2 pt-2 border-t border-white/10 text-xs text-stone-300 font-light">
+                <div class="flex items-center justify-between">
+                  <span class="text-stone-400">Land Area:</span>
+                  <span class="font-medium text-stone-200">{project.landArea}</span>
+                </div>
+                <div class="flex items-center justify-between">
+                  <span class="text-stone-400">Configurations:</span>
+                  <span class="font-medium text-gold-300">{project.typologies.join(', ')}</span>
+                </div>
+                <div class="flex items-center justify-between">
+                  <span class="text-stone-400">Green Standard:</span>
+                  <span class="font-medium text-emerald-300">{project.greenRating}</span>
+                </div>
+                {project.transitHighlight && (
+                  <div class="text-[11px] text-stone-400 pt-1 border-t border-white/5">
+                    <span class="text-gold-400">Transit:</span> {project.transitHighlight}
+                  </div>
+                )}
+                {project.reraNumber && (
+                  <div class="flex items-center justify-between text-[11px] text-stone-400 pt-1 border-t border-white/5">
+                    <span>MahaRERA Reg:</span>
+                    <span class="font-mono text-stone-300">{project.reraNumber}</span>
+                  </div>
+                )}
+              </div>
+            </div>
+          </div>
+
+          <!-- Card Action Button -->
+          <div class="p-6 pt-0 space-y-2">
+            <a
+              href={`/brand/projects/${project.slug}/`}
+              class="w-full py-2.5 rounded-xl bg-gold-500/10 hover:bg-gold-500/20 border border-gold-500/30 text-xs text-gold-300 font-semibold uppercase tracking-wider transition-all flex items-center justify-center gap-1.5 group-hover:border-gold-500/60"
+            >
+              <span>Explore Complete Dossier</span>
+              <span class="text-gold-400 font-mono">→</span>
+            </a>
+            <button
+              data-open-modal
+              data-interest={`Portfolio Inquiry - ${project.name}`}
+              class="w-full py-2 rounded-xl border border-white/10 hover:border-white/30 text-[11px] text-stone-400 hover:text-stone-200 uppercase tracking-wider transition-all cursor-pointer"
+            >
+              Inquire About {project.id === 'mahindra-mahalunge' ? 'Pre-Launch' : project.name.split(' (')[0]}
+            </button>
+          </div>
+
+        </div>
+      ))}
+    </div>
+
+    <!-- MAHINDRA WEST PUNE PROJECT MAP TREE (Cluster 15) -->
+    <div class="reveal p-8 rounded-2xl glass-card border border-white/10 space-y-6">
+      <div class="border-b border-white/10 pb-4">
+        <span class="text-xs uppercase tracking-widest text-gold-400 font-bold block">Portfolio Hierarchy</span>
+        <h3 class="font-serif text-xl sm:text-2xl text-stone-100 font-bold mt-1">
+          Mahindra Lifespaces Pune & West Pune Master Architectural Map
+        </h3>
+        <p class="text-xs text-stone-400 font-light mt-1">
+          Structured view of East Pune, Central / PCMC, West Pune growth corridors, and delivered residential landmarks.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 font-mono text-xs">
+        
+        <!-- Pillar 1: East Pune -->
+        <div class="p-4 rounded-xl bg-white/[0.02] border border-white/10 space-y-3">
+          <div class="flex items-center space-x-2 text-gold-400 font-bold">
+            <span>├──</span>
+            <span>East Pune</span>
+          </div>
+          <div class="pl-6 space-y-2 text-stone-300">
+            <div class="font-semibold text-white">└── Mahindra IvyLush</div>
+            <div class="text-[11px] text-stone-400 pl-4">└── Kharadi Annex / Wagholi</div>
+            <div class="text-[10px] text-amber-400/90 pl-4">• 5.4 Acres (MahaRERA Reg.)</div>
+            <div class="text-[10px] text-stone-400 pl-4">• Near EON IT Park & WTC</div>
+          </div>
+        </div>
+
+        <!-- Pillar 2: Central / PCMC -->
+        <div class="p-4 rounded-xl bg-white/[0.02] border border-white/10 space-y-3">
+          <div class="flex items-center space-x-2 text-gold-400 font-bold">
+            <span>├──</span>
+            <span>Central / PCMC</span>
+          </div>
+          <div class="pl-6 space-y-2 text-stone-300">
+            <div class="font-semibold text-white">├── Mahindra Citadel</div>
+            <div class="text-[11px] text-stone-400 pl-4">└── Pimpri Metro Station</div>
+            <div class="font-semibold text-white">└── Mahindra Happinest</div>
+            <div class="text-[11px] text-stone-400 pl-4">└── Tathawade (Skywalk)</div>
+          </div>
+        </div>
+
+        <!-- Pillar 3: West Pune Future Flagship -->
+        <div class="p-4 rounded-xl bg-gold-500/[0.05] border border-gold-500/30 space-y-3">
+          <div class="flex items-center space-x-2 text-gold-300 font-bold">
+            <span>├──</span>
+            <span>West Pune (Upcoming)</span>
+          </div>
+          <div class="pl-6 space-y-2 text-stone-300">
+            <div class="font-semibold text-gold-200">└── Mahindra Mahalunge</div>
+            <div class="text-[11px] text-stone-300 pl-4">• 13.46 Acres (₹3,500 Cr GDV)</div>
+            <div class="text-[10px] text-gold-400/90 pl-4">├── Mahalunge | Nande | Maan</div>
+            <div class="text-[10px] text-stone-400 pl-4">├── Hinjewadi Phase 1, 2, 3</div>
+            <div class="text-[10px] text-stone-400 pl-4">└── Baner & Balewadi Equidistant</div>
+          </div>
+        </div>
+
+        <!-- Pillar 4: Completed / Legacy -->
+        <div class="p-4 rounded-xl bg-white/[0.02] border border-white/10 space-y-3">
+          <div class="flex items-center space-x-2 text-emerald-400 font-bold">
+            <span>└──</span>
+            <span>Completed / Legacy</span>
+          </div>
+          <div class="pl-6 space-y-1.5 text-stone-300 text-[11px]">
+            <div>├── Mahindra Antheia (16 Ac)</div>
+            <div>├── Mahindra Nestalgia</div>
+            <div>├── Mahindra Centralis (OC)</div>
+            <div>└── Mahindra L'Artista & Woods</div>
+            <div class="text-[10px] text-emerald-400/80 pt-1">• 100% OC Delivered</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- MahaRERA Statutory Disclosure Box -->
+    <div class="reveal p-6 rounded-2xl bg-charcoal-950 border border-white/10 space-y-3">
+      <div class="flex items-center space-x-2 text-xs font-serif uppercase tracking-widest text-gold-400 font-bold">
+        <span>⚖</span>
+        <span>Corporate Statutory Governance & MahaRERA Advisory</span>
+      </div>
+      <p class="text-[11px] text-stone-300 leading-relaxed font-light">
+        <strong>Disclaimer & Regulatory Transparency:</strong> This digital showcase provides comprehensive market intelligence regarding Mahindra Lifespaces Developers Limited’s delivered, ongoing, and planned residential developments in Pune. In strict compliance with the Real Estate (Regulation and Development) Act, 2016 (RERA) and Maharashtra Real Estate Regulatory Authority (MahaRERA) guidelines:
+      </p>
+      <ul class="text-[11px] text-stone-400 space-y-1.5 list-disc pl-5 font-light">
+        <li>Delivered communities (Mahindra Antheia, Mahindra Centralis, Mahindra Nestalgia, Mahindra L'Artista, Mahindra Woods) have received Occupancy Certificates (OC).</li>
+        <li>Active developments (Mahindra IvyLush, Mahindra Citadel, Mahindra Happinest Tathawade) hold official MahaRERA registrations accessible on <a href="https://maharera.mahaonline.gov.in" target="_blank" rel="noopener noreferrer" class="text-gold-400 underline">maharera.mahaonline.gov.in</a>.</li>
+        <li>The upcoming 13.46-acre master community at Mahalunge represents land acquired in October 2025; statutory master approvals and MahaRERA project registration are in progress. No commercial booking or advance payment is accepted prior to MahaRERA registration.</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const buttons = document.querySelectorAll('.filter-btn');
+    const cards = document.querySelectorAll('.project-card');
+
+    buttons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const filter = btn.getAttribute('data-filter');
+        
+        // Update active button styling
+        buttons.forEach(b => {
+          b.classList.remove('bg-gold-400', 'text-charcoal-950', 'font-bold');
+          b.classList.add('bg-white/10', 'text-stone-300', 'font-medium');
+        });
+        btn.classList.remove('bg-white/10', 'text-stone-300', 'font-medium');
+        btn.classList.add('bg-gold-400', 'text-charcoal-950', 'font-bold');
+
+        // Filter cards
+        cards.forEach(card => {
+          const cardCategory = card.getAttribute('data-category');
+          if (filter === 'all' || cardCategory === filter) {
+            (card as HTMLElement).style.display = 'flex';
+          } else {
+            (card as HTMLElement).style.display = 'none';
+          }
+        });
+      });
+    });
+  });
+</script>

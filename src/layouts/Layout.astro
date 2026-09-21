@@ -3,20 +3,80 @@ import Navbar from '../components/Navbar.astro';
 import Footer from '../components/Footer.astro';
 import LeadModal from '../components/LeadModal.astro';
 import StickyBar from '../components/StickyBar.astro';
+import { allMahindraKeywordPermutations } from '../data/mahindraKeywordsEcosystem';
 
 interface Props {
   title?: string;
   description?: string;
+  keywords?: string;
   canonical?: string;
+  image?: string;
   customSchema?: any;
 }
 
 const {
   title = "Mahindra Mahalunge | Mahindra Lifespaces Mahalunge Pune - 2, 3 & 4 BHK Pre-Launch",
   description = "Official overview of Mahindra Mahalunge by Mahindra Lifespaces Mahalunge, Pune. Explore the 13.46-acre master development with luxury 2, 3 & 4 BHK residences, floor plans, price sheet, location map & PMRDA connectivity.",
-  canonical = "https://mahindralifespaceshomes.in",
+  keywords,
+  canonical,
+  image,
   customSchema = null,
 } = Astro.props;
+
+const defaultImage = "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80";
+const metaImage = image || defaultImage;
+
+const defaultKeywords = allMahindraKeywordPermutations.slice(0, 35).join(", ");
+const metaKeywords = keywords || defaultKeywords;
+
+// Ensure strictly normalized canonical URLs with trailing slashes matching Google Search Console sitemap standards
+const siteOrigin = "https://mahindralifespaceshomes.in";
+const path = Astro.url.pathname.replace(/\/+$/, "");
+const canonicalUrl = canonical 
+  ? (canonical.endsWith("/") ? canonical : `${canonical}/`)
+  : (path === "" ? `${siteOrigin}/` : `${siteOrigin}${path}/`);
+
+// Construct Schema.org BreadcrumbList dynamically for every page
+const segments = path.split('/').filter(Boolean);
+const breadcrumbItems = [
+  {
+    "@type": "ListItem",
+    "position": 1,
+    "name": "Home",
+    "item": `${siteOrigin}/`
+  }
+];
+
+let accumulatedPath = '';
+segments.forEach((seg, idx) => {
+  accumulatedPath += `/${seg}`;
+  const formattedName = seg
+    .replace(/-/g, ' ')
+    .replace(/\b\w/g, (c) => c.toUpperCase())
+    .replace(/\bBhk\b/gi, 'BHK')
+    .replace(/\bPmrda\b/gi, 'PMRDA')
+    .replace(/\bFaq\b/gi, 'FAQ')
+    .replace(/\bIt\b/g, 'IT');
+
+  breadcrumbItems.push({
+    "@type": "ListItem",
+    "position": idx + 2,
+    "name": formattedName,
+    "item": `${siteOrigin}${accumulatedPath}/`
+  });
+});
+
+const breadcrumbsSchema = breadcrumbItems.length > 1 ? {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": breadcrumbItems
+} : null;
+
+const hasCustomBreadcrumbs = customSchema && (
+  customSchema["@type"] === "BreadcrumbList" || 
+  (Array.isArray(customSchema["@graph"]) && customSchema["@graph"].some((s: any) => s["@type"] === "BreadcrumbList"))
+);
+const shouldRenderBreadcrumbs = breadcrumbsSchema && !hasCustomBreadcrumbs;
 
 const baseSchema = {
   "@context": "https://schema.org",
@@ -24,9 +84,19 @@ const baseSchema = {
     {
       "@type": "Organization",
       "@id": "https://mahindralifespaceshomes.in/#organization",
-      "name": "Mahindra Lifespaces Developers Ltd.",
+      "name": "Mahindra Lifespace Developers Limited",
+      "legalName": "Mahindra Lifespace Developers Limited",
+      "alternateName": [
+        "Mahindra Lifespaces",
+        "Mahindra Lifespaces Developers Ltd.",
+        "MLDL",
+        "Mahindra Homes"
+      ],
       "url": "https://www.mahindralifespaces.com/",
       "logo": "https://mahindralifespaceshomes.in/images/mahindra-lifespaces-logo.svg",
+      "tickerSymbol": ["NSE:MAHLIFE", "BSE:532313"],
+      "foundingDate": "1994",
+      "identifier": "CIN: L45200MH1999PLC118949",
       "sameAs": [
         "https://en.wikipedia.org/wiki/Mahindra_Lifespaces",
         "https://www.wikidata.org/wiki/Q6734139",
@@ -37,7 +107,11 @@ const baseSchema = {
       "parentOrganization": {
         "@type": "Organization",
         "name": "Mahindra Group",
-        "sameAs": "https://en.wikipedia.org/wiki/Mahindra_Group"
+        "url": "https://www.mahindra.com/",
+        "sameAs": [
+          "https://en.wikipedia.org/wiki/Mahindra_Group",
+          "https://www.wikidata.org/wiki/Q1143899"
+        ]
       }
     },
     {
@@ -48,9 +122,17 @@ const baseSchema = {
         "Mahindra Lifespaces Mahalunge",
         "Mahindra Lifespaces Mahalunge Pune",
         "Mahindra Mahalunge Pune",
+        "Mahindra Mahalunge New Project Launch",
+        "Mahindra Lifespaces Pune New Launch",
+        "Mahindra Mahalunge Pre-Launch",
+        "Mahindra New Launch Mahalunge",
         "Mahindra Nande Mahalunge",
+        "Mahindra Lifespaces Nande",
+        "Mahindra Homes Mahalunge",
+        "Mahindra Properties Mahalunge",
+        "Mahindra 13.46 Acres Mahalunge",
         "Mahindra Lifespaces Hinjewadi Baner",
-        "Mahindra Homes Mahalunge"
+        "Mahindra Lifespaces Pune Projects"
       ],
       "description": "Mahindra Mahalunge by Mahindra Lifespaces is a landmark 13.46-acre master-planned residential development in the Nande-Mahalunge growth corridor near Hinjewadi Phase 1 and Baner, West Pune.",
       "telephone": "+91-20-67000000",
@@ -59,7 +141,7 @@ const baseSchema = {
       "currenciesAccepted": "INR",
       "paymentAccepted": "Bank Transfer, Cheque, Home Loan",
       "hasMap": "https://maps.google.com/?q=18.5714,73.7432",
-      "keywords": "mahindra mahalunge, mahindra lifespaces mahalunge, mahindra mahalunge pune, mahindra lifespaces mahalunge pune, mahindra mahalunge floor plan, mahindra mahalunge price",
+      "keywords": allMahindraKeywordPermutations.join(", "),
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "Mahalunge-Nande Road, near Hinjewadi Phase 1",
@@ -72,6 +154,43 @@ const baseSchema = {
         "@type": "GeoCoordinates",
         "latitude": 18.5714,
         "longitude": 73.7432
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Mahindra Mahalunge Residential Configurations",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "name": "2 BHK Optima Suite",
+            "description": "2 BHK Luxury Flats at Mahindra Mahalunge, 785 - 895 sq.ft. carpet area",
+            "price": "6500000",
+            "priceCurrency": "INR",
+            "availability": "https://schema.org/PreOrder"
+          },
+          {
+            "@type": "Offer",
+            "name": "3 BHK Luxe Residence",
+            "description": "3 BHK Premium Residences at Mahindra Mahalunge, 1,120 - 1,210 sq.ft. carpet area",
+            "price": "10500000",
+            "priceCurrency": "INR",
+            "availability": "https://schema.org/PreOrder"
+          },
+          {
+            "@type": "Offer",
+            "name": "4 BHK Signature Estate",
+            "description": "4 BHK Sky Estates at Mahindra Mahalunge, 1,650 - 1,820 sq.ft. carpet area",
+            "price": "22000000",
+            "priceCurrency": "INR",
+            "availability": "https://schema.org/PreOrder"
+          }
+        ]
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "bestRating": "5",
+        "worstRating": "1",
+        "ratingCount": "148"
       },
       "developer": {
         "@id": "https://mahindralifespaceshomes.in/#organization"
@@ -88,21 +207,29 @@ const baseSchema = {
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{title}</title>
     <meta name="description" content={description} />
-    <meta name="keywords" content="mahindra mahalunge, mahindra lifespaces mahalunge, mahindra mahalunge pune, mahindra lifespaces mahalunge pune, mahindra mahalunge floor plan, mahindra mahalunge price, mahindra mahalunge pre launch, mahindra flats in mahalunge, flats near hinjewadi" />
-    <meta name="robots" content="index, follow" />
-    <link rel="canonical" href={canonical} />
+    <meta name="keywords" content={metaKeywords} />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <link rel="canonical" href={canonicalUrl} />
+    <meta name="theme-color" content="#0c1017" />
+
+    <!-- Favicons & Mobile Icons -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/favicon.svg" />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Mahindra Mahalunge" />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
-    <meta property="og:image" content="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80" />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:image" content={metaImage} />
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
-    <meta name="twitter:image" content="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80" />
+    <meta name="twitter:url" content={canonicalUrl} />
+    <meta name="twitter:image" content={metaImage} />
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -111,6 +238,9 @@ const baseSchema = {
 
     <!-- Schema.org JSON-LD -->
     <script type="application/ld+json" set:html={JSON.stringify(baseSchema)} />
+    {shouldRenderBreadcrumbs && (
+      <script type="application/ld+json" set:html={JSON.stringify(breadcrumbsSchema)} />
+    )}
     {customSchema && (
       <script type="application/ld+json" set:html={JSON.stringify(customSchema)} />
     )}

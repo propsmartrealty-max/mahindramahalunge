@@ -1,5 +1,7 @@
 ---
-// Footer.astro - RERA Compliance and Brand Credentials
+// Footer.astro - RERA Compliance, Brand Credentials & Strategic Keyword Silo
+import { mahindraPuneProjects, corporateProfile } from '../data/mahindraPuneEcosystem';
+import { allMahindraKeywordPermutations } from '../data/mahindraKeywordsEcosystem';
 ---
 
 <footer class="bg-[#0c1017] border-t border-white/10 pt-16 pb-28 sm:pb-20 text-stone-300 text-xs relative overflow-hidden">
@@ -16,7 +18,7 @@
         <div>
           <img 
             src="/images/mahindra-lifespaces-logo.svg" 
-            alt="Mahindra Lifespaces" 
+            alt="Mahindra Lifespaces Developers Limited" 
             class="h-5 w-auto object-contain mb-2"
             width="230"
             height="16"
@@ -31,9 +33,10 @@
         <p class="text-stone-300 text-xs leading-relaxed max-w-sm">
           A landmark 13.46-acre master-planned residential community at the Nande–Mahalunge corridor, West Pune. Designed under Mahindra’s philosophy of "Homes of Positive Energy" with sustainable, future-ready living.
         </p>
-        <div class="flex items-center space-x-4 pt-2">
-          <span class="px-3 py-1 rounded-lg bg-white/5 border border-white/10 text-[11px] text-stone-200 font-medium">75+ Years of Trust</span>
-          <span class="px-3 py-1 rounded-lg bg-white/5 border border-white/10 text-[11px] text-stone-200 font-medium">IGBC Green Champion</span>
+        <div class="flex flex-wrap items-center gap-2 pt-2">
+          <span class="px-2.5 py-1 rounded-lg bg-white/5 border border-white/10 text-[10px] text-stone-200 font-medium">75+ Years Group Legacy</span>
+          <span class="px-2.5 py-1 rounded-lg bg-white/5 border border-white/10 text-[10px] text-stone-200 font-medium">NSE: {corporateProfile.nseSymbol} • BSE: {corporateProfile.bseCode}</span>
+          <span class="px-2.5 py-1 rounded-lg bg-white/5 border border-white/10 text-[10px] text-stone-200 font-medium">100% IGBC Green Portfolio</span>
         </div>
       </div>
 
@@ -45,10 +48,11 @@
         </h4>
         <ul class="space-y-2.5">
           <li><a href="/#overview" class="text-stone-300 hover:text-gold-400 transition-colors">Master Vision</a></li>
-          <li><a href="/#residences" class="text-stone-300 hover:text-gold-400 transition-colors">Residences (2, 3 & 4 BHK)</a></li>
+          <li><a href="/residences/" class="text-stone-300 hover:text-gold-400 transition-colors">Residences Hub (13 Typologies)</a></li>
           <li><a href="/#masterplan" class="text-stone-300 hover:text-gold-400 transition-colors">Interactive Master Plan</a></li>
           <li><a href="/#amenities" class="text-stone-300 hover:text-gold-400 transition-colors">Curated Amenities</a></li>
           <li><a href="/#pricing" class="text-stone-300 hover:text-gold-400 transition-colors">Price & Expressions</a></li>
+          <li><a href="/brochure/" class="text-stone-300 hover:text-gold-400 transition-colors">Download Brochure PDF</a></li>
         </ul>
       </div>
 
@@ -59,12 +63,14 @@
           Location & Growth
         </h4>
         <ul class="space-y-2.5">
-          <li><a href="/mahalunge-pune" class="text-stone-300 hover:text-gold-400 transition-colors">Why Mahalunge</a></li>
-          <li><a href="/flats-near-hinjewadi" class="text-stone-300 hover:text-gold-400 transition-colors">Flats Near Hinjewadi</a></li>
-          <li><a href="/#location" class="text-stone-300 hover:text-gold-400 transition-colors">Radial Connectivity</a></li>
-          <li><a href="/articles" class="text-stone-300 hover:text-gold-400 transition-colors">Research & Guides Hub</a></li>
-          <li><a href="/faq" class="text-stone-300 hover:text-gold-400 transition-colors">Official FAQs</a></li>
-          <li><a href="/brand" class="text-stone-300 hover:text-gold-400 transition-colors">Mahindra Legacy</a></li>
+          <li><a href="/mahalunge-pune/" class="text-stone-300 hover:text-gold-400 transition-colors">Why Mahalunge</a></li>
+          <li><a href="/west-pune/" class="text-stone-300 hover:text-gold-400 transition-colors">West Pune Market Hub (12 Localities)</a></li>
+          <li><a href="/flats-near-hinjewadi/" class="text-stone-300 hover:text-gold-400 transition-colors">Flats Near Hinjewadi</a></li>
+          <li><a href="/flats-near-baner/" class="text-stone-300 hover:text-gold-400 transition-colors">Flats Near Baner</a></li>
+          <li><a href="/nande-mahalunge-real-estate/" class="text-stone-300 hover:text-gold-400 transition-colors">Nande Corridor Analysis</a></li>
+          <li><a href="/articles/" class="text-stone-300 hover:text-gold-400 transition-colors">Research & Guides Hub</a></li>
+          <li><a href="/faq/" class="text-stone-300 hover:text-gold-400 transition-colors">Official FAQs</a></li>
+          <li><a href="/brand/" class="text-stone-300 hover:text-gold-400 transition-colors">Mahindra Pune Ecosystem</a></li>
         </ul>
       </div>
 
@@ -85,6 +91,112 @@
         </button>
       </div>
 
+    </div>
+
+    <!-- STRATEGIC SEO KEYWORD SILO & PUNE ECOSYSTEM NETWORK -->
+    <div class="py-10 border-b border-white/10 space-y-8">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+        <h4 class="font-serif text-xs uppercase tracking-widest text-gold-400 font-bold">
+          Mahindra Lifespaces Pune Ecosystem & Topical Directory
+        </h4>
+        <span class="text-[10px] text-stone-400 font-mono">
+          Corporate CIN: {corporateProfile.cin} • 6 Landmark Pune Communities
+        </span>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-[11px]">
+        
+        <!-- Silo 1: Entire Pune Projects — deep-linked to brand project pages -->
+        <div class="space-y-2.5">
+          <h5 class="font-serif text-stone-200 font-semibold uppercase tracking-wider text-[10px] border-b border-white/10 pb-1">
+            Mahindra Pune Portfolio
+          </h5>
+          <ul class="space-y-1.5 text-stone-400">
+            {mahindraPuneProjects.map((p) => (
+              <li>
+                <a href={`/brand/projects/${p.slug}/`} class="hover:text-gold-300 transition-colors flex items-center justify-between">
+                  <span class="truncate">{p.name}</span>
+                  <span class="text-[9px] text-stone-300 font-mono ml-1">{p.deliveryYear.split(' ')[0]}</span>
+                </a>
+              </li>
+            ))}
+          </ul>
+          <a href="/brand/" class="text-[10px] text-gold-400/70 hover:text-gold-300 transition-colors block pt-0.5">
+            View Full Brand Portfolio →
+          </a>
+        </div>
+
+        <!-- Silo 2: Typologies & Configurations — expanded with new pages -->
+        <div class="space-y-2.5">
+          <h5 class="font-serif text-stone-200 font-semibold uppercase tracking-wider text-[10px] border-b border-white/10 pb-1">
+            Residences & Typologies
+          </h5>
+          <ul class="space-y-1.5 text-stone-400">
+            <li><a href="/residences/2-bhk/" class="hover:text-gold-300 transition-colors">2 BHK Optima Suite (785–895 sq.ft.)</a></li>
+            <li><a href="/residences/2-bhk-premium/" class="hover:text-gold-300 transition-colors">2 BHK Premium with Study Alcove</a></li>
+            <li><a href="/residences/3-bhk/" class="hover:text-gold-300 transition-colors">3 BHK Luxe (1,120–1,210 sq.ft.)</a></li>
+            <li><a href="/residences/3-bhk-signature/" class="hover:text-gold-300 transition-colors">3 BHK Signature Family Layout</a></li>
+            <li><a href="/residences/4-bhk/" class="hover:text-gold-300 transition-colors">4 BHK Signature Estate</a></li>
+            <li><a href="/residences/4-bhk-penthouse/" class="hover:text-gold-300 transition-colors">4 BHK Penthouse Collection</a></li>
+            <li><a href="/residences/vastu-compliant/" class="hover:text-gold-300 transition-colors">Vastu-Compliant Residences</a></li>
+            <li><a href="/residences/north-east-facing/" class="hover:text-gold-300 transition-colors">North-East Facing Units</a></li>
+            <li><a href="/residences/nri-investment/" class="hover:text-gold-300 transition-colors">NRI Investment Guide</a></li>
+            <li><a href="/residences/affordable-luxury/" class="hover:text-gold-300 transition-colors">Affordable Luxury Entry</a></li>
+          </ul>
+          <a href="/residences/" class="text-[10px] text-gold-400/70 hover:text-gold-300 transition-colors block pt-0.5">
+            View All 13 Typologies & Plans →
+          </a>
+        </div>
+
+        <!-- Silo 3: Tech Park Proximity Hubs -->
+        <div class="space-y-2.5">
+          <h5 class="font-serif text-stone-200 font-semibold uppercase tracking-wider text-[10px] border-b border-white/10 pb-1">
+            Tech Park Commute Hubs
+          </h5>
+          <ul class="space-y-1.5 text-stone-400">
+            <li><a href="/near/flats-near-infosys-hinjewadi/" class="hover:text-gold-300 transition-colors">Flats Near Infosys Hinjewadi (7 mins)</a></li>
+            <li><a href="/near/flats-near-wipro-circle-hinjewadi/" class="hover:text-gold-300 transition-colors">Flats Near Wipro Circle (6 mins)</a></li>
+            <li><a href="/near/flats-near-tcs-sahyadri-park-hinjewadi/" class="hover:text-gold-300 transition-colors">Flats Near TCS Sahyadri Park (12 mins)</a></li>
+            <li><a href="/near/flats-near-eon-free-zone-kharadi/" class="hover:text-gold-300 transition-colors">Flats Near EON Free Zone Kharadi</a></li>
+            <li><a href="/near/flats-near-world-trade-center-pune/" class="hover:text-gold-300 transition-colors">Flats Near WTC Pune (Kharadi)</a></li>
+            <li><a href="/near/flats-near-panchshil-business-park-baner/" class="hover:text-gold-300 transition-colors">Flats Near Panchshil Business Park Baner</a></li>
+            <li><a href="/near/flats-near-balewadi-high-street/" class="hover:text-gold-300 transition-colors">Flats Near Balewadi High Street</a></li>
+          </ul>
+        </div>
+
+        <!-- Silo 4: Infrastructure & Comparisons — expanded -->
+        <div class="space-y-2.5">
+          <h5 class="font-serif text-stone-200 font-semibold uppercase tracking-wider text-[10px] border-b border-white/10 pb-1">
+            Corridors & Comparisons
+          </h5>
+          <ul class="space-y-1.5 text-stone-400">
+            <li><a href="/connectivity/flats-near-pune-metro-line-3-hinjewadi/" class="hover:text-gold-300 transition-colors">Pune Metro Line 3 Hinjewadi-Shivajinagar</a></li>
+            <li><a href="/connectivity/flats-near-sant-tukaram-metro-station/" class="hover:text-gold-300 transition-colors">Sant Tukaram Metro Station</a></li>
+            <li><a href="/connectivity/properties-on-pmrda-36m-ring-road/" class="hover:text-gold-300 transition-colors">PMRDA 36m Town Planning Ring Road</a></li>
+            <li><a href="/connectivity/properties-near-pune-ring-road-western-alignment/" class="hover:text-gold-300 transition-colors">Pune Outer Ring Road Western Alignment</a></li>
+            <li><a href="/connectivity/flats-near-mumbai-pune-expressway-access-point/" class="hover:text-gold-300 transition-colors">Mumbai-Pune Expressway Access</a></li>
+            <li><a href="/compare/mahindra-mahalunge-vs-megapolis-hinjewadi/" class="hover:text-gold-300 transition-colors">vs Megapolis Hinjewadi</a></li>
+            <li><a href="/compare/mahindra-mahalunge-vs-kolte-patil-24k-majestic/" class="hover:text-gold-300 transition-colors">vs Kolte Patil 24K Majestic</a></li>
+            <li><a href="/compare/mahindra-mahalunge-vs-godrej-hillside/" class="hover:text-gold-300 transition-colors">vs Godrej Hillside Comparison</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+
+      <!-- Strategic Keyword Cloud Tag Strip -->
+      <div class="pt-4 border-t border-white/5 space-y-2">
+        <div class="text-[10px] uppercase tracking-wider text-stone-400 font-mono">
+          Strategic Search Intent Permutations:
+        </div>
+        <div class="flex flex-wrap gap-1.5">
+          {allMahindraKeywordPermutations.slice(0, 32).map((term) => (
+            <span class="px-2 py-0.5 rounded bg-white/[0.03] text-[10px] text-stone-400 font-mono border border-white/5">
+              {term}
+            </span>
+          ))}
+        </div>
+      </div>
     </div>
 
     <!-- MahaRERA Compliance Notice Box -->

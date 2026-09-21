@@ -1,0 +1,265 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { techParkData, type TechParkItem } from '../../data/pSeoTechParks';
+
+export async function getStaticPaths() {
+  return techParkData.map((item) => ({
+    params: { slug: item.slug },
+    props: { item },
+  }));
+}
+
+interface Props {
+  item: TechParkItem;
+}
+
+const { item } = Astro.props;
+
+// Construct Schema.org JSON-LD for this specific tech park proximity page
+const pageSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Place",
+      "@id": `https://mahindralifespaceshomes.in/near/${item.slug}/#place`,
+      "name": item.name,
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Hinjewadi / West Pune",
+        "addressRegion": "Maharashtra",
+        "addressCountry": "IN"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": `https://mahindralifespaceshomes.in/near/${item.slug}/#faq`,
+      "mainEntity": item.faqs.map((faq) => ({
+        "@type": "Question",
+        "name": faq.q,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": faq.a
+        }
+      }))
+    }
+  ]
+};
+---
+
+<Layout
+  title={item.metaTitle}
+  description={item.metaDescription}
+  keywords={`flats near ${item.name.toLowerCase()}, mahindra mahalunge near ${item.name.toLowerCase()}, mahindra lifespaces ${item.slug.replace(/-/g, ' ')}, apartments near ${item.name.toLowerCase()} hinjewadi, flats near hinjewadi mahindra, mahindra mahalunge pune`}
+  canonical={`https://mahindralifespaceshomes.in/near/${item.slug}/`}
+  customSchema={pageSchema}
+>
+  <!-- Hero Section -->
+  <section class="pt-32 pb-20 bg-charcoal-950 border-b border-white/10 relative overflow-hidden">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
+      
+      <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-gold-500/10 border border-gold-500/30 text-gold-400 text-xs font-semibold uppercase tracking-widest">
+        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+        <span>{item.category} • {item.distanceKm} Away</span>
+      </div>
+
+      <h1 class="font-serif text-3xl sm:text-5xl lg:text-6xl font-bold text-stone-100 max-w-4xl leading-tight">
+        {item.h1}
+      </h1>
+
+      <p class="text-stone-300 text-sm sm:text-base max-w-3xl font-light leading-relaxed">
+        {item.heroHighlight}. Enjoy an effortless commute from your 13.46-acre biophilic sanctuary at Mahindra Mahalunge while living minutes from Pune's prime IT campuses.
+      </p>
+
+      <!-- Quick Action Buttons -->
+      <div class="flex flex-wrap items-center gap-4 pt-4">
+        <button
+          data-open-modal
+          data-interest={`Cost Sheet - Near ${item.shortName}`}
+          class="btn-shimmer px-6 py-3 rounded-full bg-gradient-to-r from-gold-300 via-gold-400 to-gold-500 text-charcoal-950 font-bold uppercase tracking-wider text-xs shadow-lg hover:shadow-gold-500/30 transition-all cursor-pointer"
+        >
+          Download Cost Sheet & Floor Plans
+        </button>
+        <button
+          data-open-modal
+          data-interest={`Commute Guide - ${item.shortName}`}
+          class="px-6 py-3 rounded-full border border-white/20 hover:border-gold-400 text-stone-200 hover:text-white font-semibold uppercase tracking-wider text-xs transition-all cursor-pointer"
+        >
+          Get Detailed Commute Route Map
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Commute Distance & Speed Matrix -->
+  <section class="py-16 bg-charcoal-900 border-b border-white/10">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto mb-10 space-y-2">
+        <span class="text-xs uppercase tracking-widest text-gold-400 font-bold">Transit Efficiency</span>
+        <h2 class="font-serif text-2xl sm:text-3xl text-stone-50 font-bold">
+          Commute Times to {item.shortName}
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+        <div class="p-5 bg-charcoal-950 rounded-2xl border border-white/10 hover:border-gold-500/40 transition-all">
+          <div class="font-serif text-2xl sm:text-3xl font-bold text-gold-400">{item.driveTime}</div>
+          <div class="text-[11px] text-stone-400 uppercase tracking-wider mt-1">Car / Cab Commute</div>
+          <p class="text-[10px] text-stone-300 mt-1">Via PMRDA 36m DP Road</p>
+        </div>
+
+        <div class="p-5 bg-charcoal-950 rounded-2xl border border-white/10 hover:border-gold-500/40 transition-all">
+          <div class="font-serif text-2xl sm:text-3xl font-bold text-stone-100">{item.bikeTime}</div>
+          <div class="text-[11px] text-stone-400 uppercase tracking-wider mt-1">Two-Wheeler</div>
+          <p class="text-[10px] text-stone-300 mt-1">Signal-Free River Corridor</p>
+        </div>
+
+        <div class="p-5 bg-charcoal-950 rounded-2xl border border-white/10 hover:border-gold-500/40 transition-all">
+          <div class="font-serif text-2xl sm:text-3xl font-bold text-emerald-400">{item.cycleTime}</div>
+          <div class="text-[11px] text-stone-400 uppercase tracking-wider mt-1">Bicycle Transit</div>
+          <p class="text-[10px] text-stone-300 mt-1">Dedicated Green Bikeway</p>
+        </div>
+
+        <div class="p-5 bg-charcoal-950 rounded-2xl border border-white/10 hover:border-gold-500/40 transition-all">
+          <div class="font-serif text-2xl sm:text-3xl font-bold text-amber-300">{item.distanceKm}</div>
+          <div class="text-[11px] text-stone-400 uppercase tracking-wider mt-1">Total Distance</div>
+          <p class="text-[10px] text-stone-300 mt-1">Direct Gate-to-Gate Link</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- In-Depth Tech Park Analysis & Lifestyle Advantage -->
+  <section class="py-20 bg-charcoal-950">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+      
+      <div class="lg:col-span-7 space-y-6">
+        <span class="text-xs uppercase tracking-widest text-gold-400 font-bold">Work-Life Integration</span>
+        <h2 class="font-serif text-3xl sm:text-4xl text-stone-100 font-bold leading-tight">
+          Why Tech Professionals at {item.shortName} Choose Mahindra Mahalunge
+        </h2>
+
+        <p class="text-xs sm:text-sm text-stone-300 leading-relaxed font-light">
+          {item.commuteAdvantage}
+        </p>
+
+        <p class="text-xs sm:text-sm text-stone-300 leading-relaxed font-light">
+          {item.routeOverview}
+        </p>
+
+        <!-- Key Employers Strip -->
+        <div class="p-5 rounded-xl bg-charcoal-900 border border-white/10 space-y-2">
+          <span class="text-[11px] uppercase tracking-wider text-amber-200 font-semibold block">Major Employers & MNCs within This Hub:</span>
+          <div class="flex flex-wrap gap-2 pt-1">
+            {item.topCompanies.map((company) => (
+              <span class="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs text-stone-200 font-medium">
+                {company}
+              </span>
+            ))}
+          </div>
+        </div>
+
+        <div class="grid grid-cols-2 gap-4 pt-2">
+          <div class="p-4 bg-charcoal-900 rounded-xl border border-white/10">
+            <div class="text-xs text-stone-400">Total Tech Workforce</div>
+            <div class="font-serif text-xl font-bold text-white mt-0.5">{item.workforceCount}</div>
+          </div>
+          <div class="p-4 bg-charcoal-900 rounded-xl border border-white/10">
+            <div class="text-xs text-stone-400">Average Rental Yield</div>
+            <div class="font-serif text-xl font-bold text-gold-400 mt-0.5">{item.rentalYield}</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Recommendation & CTA Card -->
+      <div class="lg:col-span-5 glass-card rounded-2xl border border-gold-500/30 p-8 space-y-6 shadow-2xl">
+        <div class="space-y-2 border-b border-white/10 pb-4">
+          <span class="text-xs uppercase tracking-widest text-gold-400 font-bold">Recommended Typology</span>
+          <h3 class="font-serif text-xl text-stone-50 font-bold">Tailored Residences</h3>
+          <p class="text-xs text-stone-300 font-light leading-relaxed">
+            {item.recommendedConfig}
+          </p>
+        </div>
+
+        <div class="space-y-3 text-xs text-stone-200">
+          <div class="flex items-center space-x-2">
+            <span class="text-emerald-400">✓</span>
+            <span>Acoustic-glazed windows to eliminate highway noise</span>
+          </div>
+          <div class="flex items-center space-x-2">
+            <span class="text-emerald-400">✓</span>
+            <span>Dedicated study alcove with high-speed fiber provisions</span>
+          </div>
+          <div class="flex items-center space-x-2">
+            <span class="text-emerald-400">✓</span>
+            <span>EV charging stations in designated parking bays</span>
+          </div>
+          <div class="flex items-center space-x-2">
+            <span class="text-emerald-400">✓</span>
+            <span>80%+ open green bio-reserve for evening unwinding</span>
+          </div>
+        </div>
+
+        <button
+          data-open-modal
+          data-interest={`Priority Pass - ${item.shortName}`}
+          class="btn-shimmer w-full py-3.5 rounded-full bg-gradient-to-r from-gold-300 via-gold-400 to-gold-500 text-charcoal-950 font-bold uppercase tracking-wider text-xs shadow-md hover:shadow-gold-500/30 transition-all cursor-pointer"
+        >
+          Request Priority Expression of Interest
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Localized FAQs -->
+  <section class="py-20 bg-charcoal-900 border-t border-white/10">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+      
+      <div class="text-center space-y-2">
+        <span class="text-xs uppercase tracking-widest text-gold-400 font-bold">Frequently Asked Questions</span>
+        <h2 class="font-serif text-2xl sm:text-3xl text-stone-50 font-bold">
+          Living Near {item.shortName}
+        </h2>
+      </div>
+
+      <div class="space-y-4">
+        {item.faqs.map((faq) => (
+          <details class="glass-card group p-5 rounded-xl border border-white/15 hover:border-gold-500/50 cursor-pointer transition-all">
+            <summary class="flex items-center justify-between font-serif text-sm sm:text-base text-stone-100 font-semibold list-none">
+              <span class="group-hover:text-gold-300 transition-colors">{faq.q}</span>
+              <span class="text-gold-400 group-open:rotate-180 transition-transform">▼</span>
+            </summary>
+            <p class="mt-3 text-xs sm:text-sm text-stone-200 leading-relaxed pt-3 border-t border-white/10 font-light">
+              {faq.a}
+            </p>
+          </details>
+        ))}
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Explore Other Tech Hubs (Internal Linking Strip) -->
+  <section class="py-16 bg-charcoal-950 border-t border-white/10">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
+      <h3 class="font-serif text-lg text-stone-100 font-bold">
+        Explore Commute Proximity to Other Hinjewadi & West Pune IT Hubs:
+      </h3>
+      <div class="flex flex-wrap gap-3">
+        {techParkData
+          .filter((p) => p.slug !== item.slug)
+          .map((p) => (
+            <a
+              href={`/near/${p.slug}/`}
+              class="px-4 py-2 rounded-xl bg-charcoal-900 border border-white/10 hover:border-gold-500/50 text-xs text-stone-200 hover:text-gold-300 transition-all"
+            >
+              Flats Near {p.shortName} ({p.distanceKm}) →
+            </a>
+          ))}
+      </div>
+    </div>
+  </section>
+</Layout>

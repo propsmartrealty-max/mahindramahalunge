@@ -1,0 +1,169 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const residencesSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "OfferCatalog",
+      "@id": "https://mahindralifespaceshomes.in/residences/#catalog",
+      "name": "Mahindra Mahalunge Residence Typologies & Configurations",
+      "description": "Complete portfolio of 13 residence configurations at Mahindra Mahalunge including 1, 2, 3 & 4 BHK apartments, penthouses, duplex residences, and Vastu-compliant layouts.",
+      "url": "https://mahindralifespaceshomes.in/residences/",
+      "numberOfItems": 13,
+      "itemListElement": [
+        { "@type": "Offer", "position": 1, "name": "1 BHK Fusion Homes", "url": "https://mahindralifespaceshomes.in/residences/1-bhk-fusion/" },
+        { "@type": "Offer", "position": 2, "name": "2 BHK Optima Suites", "url": "https://mahindralifespaceshomes.in/residences/2-bhk/" },
+        { "@type": "Offer", "position": 3, "name": "2 BHK Premium with Study", "url": "https://mahindralifespaceshomes.in/residences/2-bhk-premium/" },
+        { "@type": "Offer", "position": 4, "name": "3 BHK Luxe Residences", "url": "https://mahindralifespaceshomes.in/residences/3-bhk/" },
+        { "@type": "Offer", "position": 5, "name": "3 BHK Signature Layouts", "url": "https://mahindralifespaceshomes.in/residences/3-bhk-signature/" },
+        { "@type": "Offer", "position": 6, "name": "4 BHK Signature Estates", "url": "https://mahindralifespaceshomes.in/residences/4-bhk/" },
+        { "@type": "Offer", "position": 7, "name": "4 BHK Sky Penthouse Collection", "url": "https://mahindralifespaceshomes.in/residences/4-bhk-penthouse/" },
+        { "@type": "Offer", "position": 8, "name": "Duplex Sky Penthouses", "url": "https://mahindralifespaceshomes.in/residences/duplex-penthouse/" },
+        { "@type": "Offer", "position": 9, "name": "Vastu Compliant Homes", "url": "https://mahindralifespaceshomes.in/residences/vastu-compliant/" },
+        { "@type": "Offer", "position": 10, "name": "North-East Facing Units", "url": "https://mahindralifespaceshomes.in/residences/north-east-facing/" },
+        { "@type": "Offer", "position": 11, "name": "West Facing Sunset Homes", "url": "https://mahindralifespaceshomes.in/residences/west-facing/" },
+        { "@type": "Offer", "position": 12, "name": "Affordable Luxury Residences", "url": "https://mahindralifespaceshomes.in/residences/affordable-luxury/" },
+        { "@type": "Offer", "position": 13, "name": "NRI Investment Portfolio", "url": "https://mahindralifespaceshomes.in/residences/nri-investment/" }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://mahindralifespaceshomes.in/" },
+        { "@type": "ListItem", "position": 2, "name": "Residences", "item": "https://mahindralifespaceshomes.in/residences/" }
+      ]
+    }
+  ]
+};
+---
+
+<Layout
+  title="Mahindra Mahalunge Residences | All Floor Plans, Typologies & Configurations"
+  description="Explore all Mahindra Mahalunge residence typologies — 1, 2, 3 & 4 BHK configurations, duplex penthouses, Vastu-compliant units, NE-facing, and NRI investment options. Pre-launch EOI open."
+  keywords="mahindra mahalunge residences, mahindra mahalunge floor plans, mahindra mahalunge 2 bhk 3 bhk 4 bhk, mahindra mahalunge configurations, mahindra mahalunge vastu compliant, mahindra mahalunge penthouse, mahindra mahalunge nri"
+  canonical="https://mahindralifespaceshomes.in/residences/"
+  customSchema={residencesSchema}
+>
+  <!-- Hero -->
+  <section class="pt-32 pb-16 bg-charcoal-950 border-b border-white/10">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-5">
+      <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-gold-500/10 border border-gold-500/30 text-gold-400 text-xs font-semibold uppercase tracking-widest">
+        <span class="w-1.5 h-1.5 rounded-full bg-gold-400"></span>
+        <span>Complete Residence Typology Directory</span>
+      </div>
+      <h1 class="font-serif text-3xl sm:text-5xl lg:text-6xl font-bold text-stone-100 max-w-4xl leading-tight">
+        Mahindra Mahalunge Residences: <br />
+        <span class="gold-gradient-text">Every Configuration, Every Intent</span>
+      </h1>
+      <p class="text-stone-300 text-sm sm:text-base max-w-2xl font-light leading-relaxed">
+        13 curated residence options across size, orientation, buyer intent, and lifestyle — from compact 1 BHK Fusion Homes to ultra-rare Duplex Sky Penthouses. Pre-launch EOI open.
+      </p>
+    </div>
+  </section>
+
+  <!-- Configuration Cards Grid -->
+  <section class="py-20 bg-charcoal-900">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-14">
+
+      <!-- Core BHK Configurations -->
+      <div class="space-y-6">
+        <div class="flex items-center gap-3">
+          <span class="text-xs uppercase tracking-widest text-gold-400 font-bold">Core Configurations</span>
+          <div class="flex-1 h-px bg-white/10"></div>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          {[
+            { href: '/residences/1-bhk-fusion/', label: '1 BHK Fusion', sub: '~620 sq.ft.* · Studio-Smart', tag: 'Young Professionals' },
+            { href: '/residences/2-bhk/', label: '2 BHK Optima', sub: '785–895 sq.ft.*', tag: 'Most Popular' },
+            { href: '/residences/2-bhk-premium/', label: '2 BHK Premium', sub: '895–1,050 sq.ft.* + Study', tag: 'WFH Ready' },
+            { href: '/residences/3-bhk/', label: '3 BHK Luxe', sub: '1,120–1,210 sq.ft.*', tag: 'Family Standard' },
+          ].map((c) => (
+            <a href={c.href} class="group glass-card p-6 rounded-2xl border border-white/10 hover:border-gold-500/50 transition-all space-y-3 block">
+              <span class="text-[10px] uppercase tracking-widest text-gold-400 font-bold px-2 py-0.5 rounded bg-gold-500/10 border border-gold-500/20">{c.tag}</span>
+              <div class="font-serif text-xl font-bold text-stone-100 group-hover:text-gold-300 transition-colors">{c.label}</div>
+              <div class="text-xs text-stone-400">{c.sub}</div>
+              <div class="text-xs text-gold-400 font-semibold group-hover:translate-x-0.5 transition-transform">View Floor Plan →</div>
+            </a>
+          ))}
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          {[
+            { href: '/residences/3-bhk-signature/', label: '3 BHK Signature', sub: '1,320–1,500 sq.ft.* · 3 Baths', tag: 'Premium Family' },
+            { href: '/residences/4-bhk/', label: '4 BHK Signature', sub: '1,650–1,820 sq.ft.*', tag: 'Signature Estate' },
+            { href: '/residences/4-bhk-penthouse/', label: '4 BHK Penthouse', sub: '1,820–2,200+ sq.ft.* · Sky Terrace', tag: 'Ultra-Luxury' },
+          ].map((c) => (
+            <a href={c.href} class="group glass-card p-6 rounded-2xl border border-white/10 hover:border-gold-500/50 transition-all space-y-3 block">
+              <span class="text-[10px] uppercase tracking-widest text-gold-400 font-bold px-2 py-0.5 rounded bg-gold-500/10 border border-gold-500/20">{c.tag}</span>
+              <div class="font-serif text-xl font-bold text-stone-100 group-hover:text-gold-300 transition-colors">{c.label}</div>
+              <div class="text-xs text-stone-400">{c.sub}</div>
+              <div class="text-xs text-gold-400 font-semibold group-hover:translate-x-0.5 transition-transform">View Floor Plan →</div>
+            </a>
+          ))}
+        </div>
+      </div>
+
+      <!-- Rare & Exclusive -->
+      <div class="space-y-6">
+        <div class="flex items-center gap-3">
+          <span class="text-xs uppercase tracking-widest text-gold-400 font-bold">Rare & Exclusive</span>
+          <div class="flex-1 h-px bg-white/10"></div>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+          <a href="/residences/duplex-penthouse/" class="group p-6 rounded-2xl border border-gold-500/30 bg-gradient-to-br from-charcoal-900 to-charcoal-950 hover:border-gold-500/60 transition-all space-y-3 block">
+            <span class="text-[10px] uppercase tracking-widest text-amber-400 font-bold px-2 py-0.5 rounded bg-amber-500/10 border border-amber-500/20">Ultra-Limited</span>
+            <div class="font-serif text-2xl font-bold text-stone-100 group-hover:text-gold-300 transition-colors">Duplex Sky Penthouse</div>
+            <div class="text-xs text-stone-400">2,500+ sq.ft.* · Double Storey · Rooftop Garden · Private Staircase</div>
+            <div class="text-xs text-gold-400 font-semibold group-hover:translate-x-0.5 transition-transform">Request Private Dossier →</div>
+          </a>
+          <a href="/residences/nri-investment/" class="group p-6 rounded-2xl border border-blue-500/30 bg-gradient-to-br from-charcoal-900 to-charcoal-950 hover:border-blue-500/50 transition-all space-y-3 block">
+            <span class="text-[10px] uppercase tracking-widest text-blue-400 font-bold px-2 py-0.5 rounded bg-blue-500/10 border border-blue-500/20">NRI Investment</span>
+            <div class="font-serif text-2xl font-bold text-stone-100 group-hover:text-blue-300 transition-colors">NRI Investment Guide</div>
+            <div class="text-xs text-stone-400">FEMA Compliant · 4.8–5.4% Yield · Dollar-Priced ROI · 8-Min Expressway</div>
+            <div class="text-xs text-blue-400 font-semibold group-hover:translate-x-0.5 transition-transform">NRI Concierge Desk →</div>
+          </a>
+        </div>
+      </div>
+
+      <!-- Orientation & Intent -->
+      <div class="space-y-6">
+        <div class="flex items-center gap-3">
+          <span class="text-xs uppercase tracking-widest text-gold-400 font-bold">Orientation & Buyer Intent</span>
+          <div class="flex-1 h-px bg-white/10"></div>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          {[
+            { href: '/residences/vastu-compliant/', label: 'Vastu Compliant', icon: '🧭', sub: 'NE + East Facing · Sacred Orientation' },
+            { href: '/residences/north-east-facing/', label: 'North-East Facing', icon: '🌄', sub: 'Highest Resale · Morning Sunrise' },
+            { href: '/residences/west-facing/', label: 'West Facing', icon: '🌅', sub: 'Sahyadri Sunset Views · Valley Breeze' },
+            { href: '/residences/affordable-luxury/', label: 'Affordable Luxury', icon: '💰', sub: 'From ₹75L* · Best Entry Value' },
+          ].map((c) => (
+            <a href={c.href} class="group p-5 rounded-xl bg-charcoal-950 border border-white/10 hover:border-gold-500/40 transition-all space-y-3 block text-center">
+              <div class="text-3xl">{c.icon}</div>
+              <div class="font-serif text-sm font-bold text-stone-100 group-hover:text-gold-300 transition-colors">{c.label}</div>
+              <div class="text-[11px] text-stone-400 leading-relaxed">{c.sub}</div>
+            </a>
+          ))}
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-16 bg-charcoal-950 border-t border-white/10">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-5">
+      <h2 class="font-serif text-3xl text-stone-100 font-bold">Not Sure Which Residence Fits You?</h2>
+      <p class="text-stone-300 text-sm font-light leading-relaxed max-w-xl mx-auto">
+        Our residential consultants will help you shortlist the exact configuration — size, orientation, floor, and budget — that maximises your lifestyle and investment return.
+      </p>
+      <button
+        data-open-modal
+        data-interest="Residence Configuration Guidance"
+        class="btn-shimmer px-10 py-3.5 rounded-full bg-gradient-to-r from-gold-300 via-gold-400 to-gold-500 text-charcoal-950 font-bold uppercase tracking-wider text-xs shadow-lg hover:shadow-gold-500/30 transition-all cursor-pointer"
+      >
+        Help Me Choose My Residence
+      </button>
+    </div>
+  </section>
+</Layout>

@@ -4,66 +4,84 @@ import ResidenceSelector from '../components/ResidenceSelector.astro';
 import MasterPlanViewer from '../components/MasterPlanViewer.astro';
 import RoiEmiCalculator from '../components/RoiEmiCalculator.astro';
 import CommuteDistanceMatrix from '../components/CommuteDistanceMatrix.astro';
+import ProgrammaticHubDirectory from '../components/ProgrammaticHubDirectory.astro';
+import MahindraKeywordMatrix from '../components/MahindraKeywordMatrix.astro';
 
-const homepageFaqSchema = {
+const homepageSchema = {
   "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
+  "@graph": [
     {
-      "@type": "Question",
-      "name": "What is Mahindra Mahalunge by Mahindra Lifespaces?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Mahindra Mahalunge is an upcoming 13.46-acre landmark residential master development by Mahindra Lifespaces Developers Ltd., announced in October 2025 with an estimated GDV potential of ~₹3,500 Crore. Located in the Nande–Mahalunge corridor near Hinjewadi and Baner, it offers future-ready sustainable 2, 3 & 4 BHK residences."
-      }
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is Mahindra Mahalunge by Mahindra Lifespaces?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Mahindra Mahalunge is an upcoming 13.46-acre landmark residential master development by Mahindra Lifespaces Developers Ltd., announced in October 2025 with an estimated GDV potential of ~₹3,500 Crore. Located in the Nande–Mahalunge corridor near Hinjewadi and Baner, it offers future-ready sustainable 2, 3 & 4 BHK residences."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Where is Mahindra Lifespaces Mahalunge located in Pune?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Mahindra Lifespaces Mahalunge is strategically located on Nande-Mahalunge Road, Mulshi Taluka, Pune, Maharashtra (Pin Code 411045), directly connected to Hinjewadi Phase 1 IT Park (7-10 mins) and Balewadi High Street (8-12 mins) via the proposed 36-meter wide PMRDA DP road."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Mahindra Mahalunge currently registered with MahaRERA?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The project is in its statutory planning and approval phase following land acquisition in October 2025. Official MahaRERA registration will be secured prior to any commercial bookings or launch in complete compliance with Real Estate Regulatory Authority standards."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What flat configurations are available at Mahindra Lifespaces Mahalunge?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Mahindra Lifespaces Mahalunge offers thoughtfully designed 2 BHK Optima Suites (785-895 sq.ft.), 3 BHK Luxe Residences (1,120-1,210 sq.ft.), and 4 BHK Signature Estates (1,650-1,820 sq.ft.) built to IGBC green building standards."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the expected price range for flats at Mahindra Mahalunge?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Indicative pre-launch pricing at Mahindra Mahalunge starts from approximately ₹65 Lakhs for 2 BHK, ₹1.05 - ₹1.4 Crore for 3 BHK, and ₹2.2 - ₹3.2 Crore for 4 BHK luxury residences. Official pricing will be released upon statutory sanctions."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How close is Mahindra Lifespaces Mahalunge to Hinjewadi IT Park and Baner?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Mahindra Mahalunge is just 3.2 km (7-10 minutes) from Hinjewadi Phase 1 IT Park (Wipro, Infosys, Cognizant) and approximately 4.6 km (8-12 minutes) from Balewadi High Street and Baner."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How can I download the Mahindra Mahalunge brochure and floor plans?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You can request the comprehensive project brochure, concept floor plans, and cost sheet for Mahindra Lifespaces Mahalunge by registering an Expression of Interest (EOI) on this official showcase."
+          }
+        }
+      ]
     },
     {
-      "@type": "Question",
-      "name": "Where is Mahindra Lifespaces Mahalunge located in Pune?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Mahindra Lifespaces Mahalunge is strategically located on Nande-Mahalunge Road, Mulshi Taluka, Pune, Maharashtra (Pin Code 411045), directly connected to Hinjewadi Phase 1 IT Park (7-10 mins) and Balewadi High Street (8-12 mins) via the proposed 36-meter wide PMRDA DP road."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Is Mahindra Mahalunge currently registered with MahaRERA?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "The project is in its statutory planning and approval phase following land acquisition in October 2025. Official MahaRERA registration will be secured prior to any commercial bookings or launch in complete compliance with Real Estate Regulatory Authority standards."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What flat configurations are available at Mahindra Lifespaces Mahalunge?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Mahindra Lifespaces Mahalunge offers thoughtfully designed 2 BHK Optima Suites (785-895 sq.ft.), 3 BHK Luxe Residences (1,120-1,210 sq.ft.), and 4 BHK Signature Estates (1,650-1,820 sq.ft.) built to IGBC green building standards."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What is the expected price range for flats at Mahindra Mahalunge?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Indicative pre-launch pricing at Mahindra Mahalunge starts from approximately ₹65 Lakhs for 2 BHK, ₹1.05 - ₹1.4 Crore for 3 BHK, and ₹2.2 - ₹3.2 Crore for 4 BHK luxury residences. Official pricing will be released upon statutory sanctions."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How close is Mahindra Lifespaces Mahalunge to Hinjewadi IT Park and Baner?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Mahindra Mahalunge is just 3.2 km (7-10 minutes) from Hinjewadi Phase 1 IT Park (Wipro, Infosys, Cognizant) and approximately 4.6 km (8-12 minutes) from Balewadi High Street and Baner."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How can I download the Mahindra Mahalunge brochure and floor plans?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "You can request the comprehensive project brochure, concept floor plans, and cost sheet for Mahindra Lifespaces Mahalunge by registering an Expression of Interest (EOI) on this official showcase."
-      }
+      "@type": "VideoObject",
+      "name": "Mahindra Mahalunge Master Plan & Project Overview | Mahindra Lifespaces Pune",
+      "description": "Architectural showcase and master walkthrough of Mahindra Mahalunge, a 13.46-acre pre-launch residential development by Mahindra Lifespaces in Pune.",
+      "thumbnailUrl": [
+        "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80"
+      ],
+      "uploadDate": "2026-03-01T09:00:00+05:30",
+      "duration": "PT2M45S",
+      "contentUrl": "https://mahindralifespaceshomes.in/",
+      "embedUrl": "https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ"
     }
   ]
 };
@@ -73,7 +91,7 @@ const homepageFaqSchema = {
   title="Mahindra Mahalunge | Mahindra Lifespaces Mahalunge Pune - 2, 3 & 4 BHK Official Overview"
   description="Official overview of Mahindra Mahalunge by Mahindra Lifespaces Mahalunge, Pune. Explore the 13.46-acre master development with luxury 2, 3 & 4 BHK residences, floor plans, pre-launch price sheet, location map & PMRDA connectivity."
   canonical="https://mahindralifespaceshomes.in/"
-  customSchema={homepageFaqSchema}
+  customSchema={homepageSchema}
 >
   <!-- 01 CINEMATIC HERO SECTION (Luminous & Vibrant) -->
   <section class="relative min-h-screen flex items-center justify-center overflow-hidden pt-24 pb-20">
@@ -528,6 +546,107 @@ const homepageFaqSchema = {
   </section>
 
 
+  <!-- 07 PROJECT ARCHITECTURE & VIDEO WALKTHROUGH (High-Engagement Multimedia) -->
+  <section id="videotour" class="py-24 bg-[#0a0d14] border-t border-white/[0.08] relative overflow-hidden">
+    <!-- Ambient gold background glow -->
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[350px] bg-gold-500/10 rounded-full blur-[140px] pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-12">
+      <div class="reveal text-center max-w-3xl mx-auto space-y-3">
+        <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-gold-500/10 border border-gold-500/30 text-gold-400 text-xs font-semibold uppercase tracking-widest">
+          <span class="w-2 h-2 rounded-full bg-red-500 animate-pulse"></span>
+          <span>Official Virtual Preview</span>
+        </div>
+        <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl text-stone-50 font-bold leading-tight">
+          Mahindra Mahalunge Video Tour: <br />
+          <span class="gold-gradient-text">Drone Site Scan & 3D Master Walkthrough</span>
+        </h2>
+        <p class="text-xs sm:text-sm text-stone-300 leading-relaxed font-light max-w-2xl mx-auto">
+          Experience an aerial perspective of the 13.46-acre master land parcel, natural riverfront green buffers, Hinjewadi-Baner connectivity corridor, and conceptual architectural towers.
+        </p>
+      </div>
+
+      <!-- Video Player Preview Container -->
+      <div class="reveal max-w-5xl mx-auto glass-card rounded-2xl sm:rounded-3xl border border-gold-500/30 overflow-hidden shadow-[0_20px_60px_rgba(0,0,0,0.8),0_0_40px_rgba(212,175,102,0.15)] relative group">
+        <div class="relative aspect-video w-full overflow-hidden bg-charcoal-950">
+          <img 
+            src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80" 
+            alt="Mahindra Mahalunge Video Walkthrough & Aerial View" 
+            class="w-full h-full object-cover filter brightness-[0.72] contrast-[1.08] group-hover:scale-105 transition-transform duration-1000"
+            loading="lazy"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-black/40"></div>
+
+          <!-- Pulsing Luxury Play Button Overlay -->
+          <div class="absolute inset-0 flex flex-col items-center justify-center p-6 text-center space-y-4">
+            <button
+              data-open-modal
+              data-interest="Virtual Video Walkthrough"
+              class="group/btn relative flex items-center justify-center w-20 h-20 sm:w-24 sm:h-24 rounded-full bg-gradient-to-br from-gold-300 via-gold-500 to-amber-600 text-charcoal-950 shadow-[0_0_40px_rgba(212,175,102,0.6)] hover:scale-110 active:scale-95 transition-all duration-300 cursor-pointer"
+              aria-label="Play Mahindra Mahalunge Virtual Tour Video"
+            >
+              <span class="absolute inset-0 rounded-full bg-gold-400/40 animate-ping"></span>
+              <svg class="w-8 h-8 sm:w-10 sm:h-10 text-charcoal-950 ml-1 relative z-10" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M8 5v14l11-7z"/>
+              </svg>
+            </button>
+
+            <div class="space-y-1">
+              <span class="text-xs uppercase tracking-widest text-gold-300 font-bold block">Click to Watch Virtual Tour</span>
+              <span class="text-[11px] text-stone-300 font-mono">Duration: 2m 45s • 4K UHD Master Walkthrough</span>
+            </div>
+          </div>
+
+          <!-- Video Badges Strip -->
+          <div class="absolute bottom-4 left-4 right-4 flex flex-wrap items-center justify-between gap-2 text-[11px] text-stone-200">
+            <div class="flex items-center space-x-2 bg-black/60 backdrop-blur-md px-3 py-1.5 rounded-full border border-white/10">
+              <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+              <span>13.46-Acre Verified Drone Survey</span>
+            </div>
+            <div class="flex items-center space-x-2 bg-black/60 backdrop-blur-md px-3 py-1.5 rounded-full border border-white/10">
+              <span class="text-gold-400 font-serif">Mahindra Lifespaces</span>
+              <span>• Nande-Mahalunge Corridor</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Video Highlights Strip -->
+        <div class="p-6 sm:p-8 bg-[#0e131d] border-t border-white/10 grid grid-cols-1 sm:grid-cols-3 gap-6 text-center">
+          <div class="space-y-1 border-b sm:border-b-0 sm:border-r border-white/10 pb-4 sm:pb-0">
+            <div class="font-serif text-xl sm:text-2xl font-bold text-gold-400">13.46 Acres</div>
+            <p class="text-[11px] text-stone-300">Master-Planned Sustainable Biophilic Habitat</p>
+          </div>
+          <div class="space-y-1 border-b sm:border-b-0 sm:border-r border-white/10 pb-4 sm:pb-0">
+            <div class="font-serif text-xl sm:text-2xl font-bold text-stone-100">7-10 Minutes</div>
+            <p class="text-[11px] text-stone-300">Direct Hinjewadi Phase 1 IT Tech Corridor Link</p>
+          </div>
+          <div class="space-y-1">
+            <div class="font-serif text-xl sm:text-2xl font-bold text-emerald-400">80%+ Open</div>
+            <p class="text-[11px] text-stone-300">Miyawaki Bio-Reserve, Green Canopies & Decks</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick Action Buttons -->
+      <div class="text-center pt-2 flex flex-col sm:flex-row items-center justify-center gap-4">
+        <button
+          data-open-modal
+          data-interest="Request Full Video Presentation"
+          class="btn-shimmer px-6 py-3 rounded-full bg-gradient-to-r from-gold-300 via-gold-400 to-gold-500 text-charcoal-950 font-bold uppercase tracking-wider text-xs shadow-lg hover:shadow-gold-500/30 transition-all cursor-pointer"
+        >
+          Request Full Video Presentation & 3D Walkthrough
+        </button>
+        <a
+          href="/brochure/"
+          class="px-6 py-3 rounded-full border border-white/20 hover:border-gold-400 text-stone-200 hover:text-white font-semibold uppercase tracking-wider text-xs transition-all"
+        >
+          Download PDF Master Deck & Layouts →
+        </a>
+      </div>
+    </div>
+  </section>
+
+
   <!-- 08 3D RADIAL LOCATION & CONNECTIVITY MAP (Luminous Gradient) -->
   <section id="location" class="py-24 bg-gradient-to-b from-[#10141e] via-[#151c2a] to-[#10141e] border-t border-gold-500/20 relative">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
@@ -767,7 +886,7 @@ const homepageFaqSchema = {
 
           <div class="pt-2">
             <a 
-              href="/brand" 
+              href="/brand/" 
               class="text-xs uppercase tracking-widest text-gold-400 hover:text-gold-300 font-medium flex items-center space-x-1.5 transition-colors"
             >
               <span>Explore full Mahindra corporate and Pune portfolio</span>
@@ -948,7 +1067,7 @@ const homepageFaqSchema = {
           </p>
         </div>
         <a 
-          href="/articles" 
+          href="/articles/" 
           class="inline-flex items-center space-x-2 text-xs uppercase tracking-widest text-gold-400 hover:text-white font-bold whitespace-nowrap"
         >
           <span>Explore All 9 Research Guides</span>
@@ -966,25 +1085,25 @@ const homepageFaqSchema = {
           </h3>
           <ul class="space-y-2.5 text-stone-300">
             <li>
-              <a href="/residences/2-bhk" class="hover:text-gold-300 transition-colors flex items-center justify-between">
+              <a href="/residences/2-bhk/" class="hover:text-gold-300 transition-colors flex items-center justify-between">
                 <span>2 BHK Luxe (785-895 sq.ft.)</span>
                 <span class="text-gold-500/60">→</span>
               </a>
             </li>
             <li>
-              <a href="/residences/3-bhk" class="hover:text-gold-300 transition-colors flex items-center justify-between">
+              <a href="/residences/3-bhk/" class="hover:text-gold-300 transition-colors flex items-center justify-between">
                 <span>3 BHK Premium (1,120-1,210 sq.ft.)</span>
                 <span class="text-gold-500/60">→</span>
               </a>
             </li>
             <li>
-              <a href="/residences/4-bhk" class="hover:text-gold-300 transition-colors flex items-center justify-between">
+              <a href="/residences/4-bhk/" class="hover:text-gold-300 transition-colors flex items-center justify-between">
                 <span>4 BHK Signature (1,650-1,820 sq.ft.)</span>
                 <span class="text-gold-500/60">→</span>
               </a>
             </li>
             <li>
-              <a href="/brochure" class="hover:text-gold-300 transition-colors flex items-center justify-between">
+              <a href="/brochure/" class="hover:text-gold-300 transition-colors flex items-center justify-between">
                 <span>Download Master Layout & Cost Sheet</span>
                 <span class="text-gold-500/60">→</span>
               </a>
@@ -999,25 +1118,25 @@ const homepageFaqSchema = {
           </h3>
           <ul class="space-y-2.5 text-stone-300">
             <li>
-              <a href="/mahalunge-pune" class="hover:text-gold-300 transition-colors flex items-center justify-between">
+              <a href="/mahalunge-pune/" class="hover:text-gold-300 transition-colors flex items-center justify-between">
                 <span>Why Mahalunge Micro-Market</span>
                 <span class="text-gold-500/60">→</span>
               </a>
             </li>
             <li>
-              <a href="/flats-near-hinjewadi" class="hover:text-gold-300 transition-colors flex items-center justify-between">
+              <a href="/flats-near-hinjewadi/" class="hover:text-gold-300 transition-colors flex items-center justify-between">
                 <span>Flats Near Hinjewadi Tech Park</span>
                 <span class="text-gold-500/60">→</span>
               </a>
             </li>
             <li>
-              <a href="/flats-near-baner" class="hover:text-gold-300 transition-colors flex items-center justify-between">
+              <a href="/flats-near-baner/" class="hover:text-gold-300 transition-colors flex items-center justify-between">
                 <span>Flats Near Baner & High Street</span>
                 <span class="text-gold-500/60">→</span>
               </a>
             </li>
             <li>
-              <a href="/nande-mahalunge-real-estate" class="hover:text-gold-300 transition-colors flex items-center justify-between">
+              <a href="/nande-mahalunge-real-estate/" class="hover:text-gold-300 transition-colors flex items-center justify-between">
                 <span>Nande-Mahalunge Growth Corridor</span>
                 <span class="text-gold-500/60">→</span>
               </a>
@@ -1032,25 +1151,25 @@ const homepageFaqSchema = {
           </h3>
           <ul class="space-y-2.5 text-stone-300">
             <li>
-              <a href="/articles/mahindra-mahalunge-vs-godrej-vtp-kolte-patil" class="hover:text-gold-300 transition-colors flex items-center justify-between">
+              <a href="/articles/mahindra-mahalunge-vs-godrej-vtp-kolte-patil/" class="hover:text-gold-300 transition-colors flex items-center justify-between">
                 <span>Mahindra vs Godrej, VTP & Kolte Patil</span>
                 <span class="text-gold-500/60">→</span>
               </a>
             </li>
             <li>
-              <a href="/articles/mahalunge-vs-baner-vs-hinjewadi" class="hover:text-gold-300 transition-colors flex items-center justify-between">
+              <a href="/articles/mahalunge-vs-baner-vs-hinjewadi/" class="hover:text-gold-300 transition-colors flex items-center justify-between">
                 <span>Mahalunge vs Baner vs Hinjewadi</span>
                 <span class="text-gold-500/60">→</span>
               </a>
             </li>
             <li>
-              <a href="/articles/mahalunge-property-prices-investment-trends" class="hover:text-gold-300 transition-colors flex items-center justify-between">
+              <a href="/articles/mahalunge-property-prices-investment-trends/" class="hover:text-gold-300 transition-colors flex items-center justify-between">
                 <span>Property Prices & ROI Forecast</span>
                 <span class="text-gold-500/60">→</span>
               </a>
             </li>
             <li>
-              <a href="/articles/why-mahalunge-nande-maan-is-punes-next-billion-dollar-growth-corridor" class="hover:text-gold-300 transition-colors flex items-center justify-between">
+              <a href="/articles/why-mahalunge-nande-maan-is-punes-next-billion-dollar-growth-corridor/" class="hover:text-gold-300 transition-colors flex items-center justify-between">
                 <span>Next Billion-Dollar Corridor Study</span>
                 <span class="text-gold-500/60">→</span>
               </a>
@@ -1065,25 +1184,25 @@ const homepageFaqSchema = {
           </h3>
           <ul class="space-y-2.5 text-stone-300">
             <li>
-              <a href="/articles/mahalunge-pin-code-connectivity-infrastructure-guide-2026" class="hover:text-gold-300 transition-colors flex items-center justify-between">
+              <a href="/articles/mahalunge-pin-code-connectivity-infrastructure-guide-2026/" class="hover:text-gold-300 transition-colors flex items-center justify-between">
                 <span>Pin Code 411045 & Road Network</span>
                 <span class="text-gold-500/60">→</span>
               </a>
             </li>
             <li>
-              <a href="/articles/pmrda-town-planning-scheme-mahalunge" class="hover:text-gold-300 transition-colors flex items-center justify-between">
+              <a href="/articles/pmrda-town-planning-scheme-mahalunge/" class="hover:text-gold-300 transition-colors flex items-center justify-between">
                 <span>PMRDA Town Planning Scheme 1</span>
                 <span class="text-gold-500/60">→</span>
               </a>
             </li>
             <li>
-              <a href="/articles/mahindra-lifespaces-pune-track-record-residential-legacy" class="hover:text-gold-300 transition-colors flex items-center justify-between">
+              <a href="/articles/mahindra-lifespaces-pune-track-record-residential-legacy/" class="hover:text-gold-300 transition-colors flex items-center justify-between">
                 <span>Mahindra's Delivered Pune Legacy</span>
                 <span class="text-gold-500/60">→</span>
               </a>
             </li>
             <li>
-              <a href="/faq" class="hover:text-gold-300 transition-colors flex items-center justify-between">
+              <a href="/faq/" class="hover:text-gold-300 transition-colors flex items-center justify-between">
                 <span>20+ Categorized Project FAQs</span>
                 <span class="text-gold-500/60">→</span>
               </a>
@@ -1096,6 +1215,11 @@ const homepageFaqSchema = {
     </div>
   </section>
 
+  <!-- PROGRAMMATIC SEO LOCALITY & COMPARISON DIRECTORY -->
+  <ProgrammaticHubDirectory />
+
+  <!-- PUNE MAHINDRA LIFESPACES & MAHALUNGE LAUNCH KEYWORD SEARCH MATRIX -->
+  <MahindraKeywordMatrix />
 
   <!-- 14 VIP BOOK SITE VISIT & CONTACT ENGINE (Luminous VIP Lounge) -->
   <section class="py-28 bg-gradient-to-b from-[#0e131d] via-[#161e2e] to-[#0c1017] border-t border-gold-500/30 relative text-center overflow-hidden shadow-2xl">

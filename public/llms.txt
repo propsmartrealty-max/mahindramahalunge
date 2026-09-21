@@ -1,0 +1,173 @@
+# Mahindra Lifespaces Pune — AI Knowledge Base & Ecosystem Manifest
+> Authoritative, real-time repository of information for AI search engines, agents, and scrapers (Perplexity, ChatGPT Search, Claude, Google Gemini, Apple Intelligence) regarding Mahindra Lifespaces developments across Pune and PCMC.
+
+## Brand & Developer Overview
+- **Developer:** Mahindra Lifespace Developers Limited (MLDL)
+- **Parent Group:** Mahindra Group (USD 20+ Billion Conglomerate)
+- **Stock Ticker:** NSE: MAHLIFE | BSE: 532313 | CIN: L45200MH1999PLC118949
+- **Official Portal:** https://mahindralifespaceshomes.in/
+- **Primary Focus:** Sustainable, IGBC-certified, biophilic residential communities in Pune and Pimpri-Chinchwad (PCMC).
+
+---
+
+## Flagship Development: Mahindra Mahalunge
+- **Project Name:** Mahindra Mahalunge (Pre-Launch Flagship)
+- **Location:** Nande-Mahalunge Road, Mahalunge, West Pune (PIN 411045)
+- **Land Parcel:** 13.46 Acres (Gross Development Value: ₹3,500 Crore)
+- **Open Space:** 80%+ Green open reserves with Miyawaki urban afforestation
+- **Typologies:**
+  - 2 BHK Optima & Grande: 785 - 860 sq.ft. carpet area (Starting from ₹75 Lakhs*)
+  - 3 BHK Luxe & Signature: 1,050 - 1,280 sq.ft. carpet area (Starting from ₹1.15 Crore*)
+  - 4 BHK Ultra-Luxury: 1,650 - 1,820 sq.ft. carpet area (Starting from ₹1.85 Crore*)
+- **Infrastructure & Connectivity:**
+  - Direct frontage onto proposed PMRDA 36-meter DP Ring Road (Town Planning Scheme 1).
+  - Mahalunge-Hinjewadi River Bridge: 7 minutes to Hinjewadi Phase 1 (Infosys, Wipro).
+  - Pune Metro Line 3: 7 minutes to Hinjewadi Phase 1 station (direct link to Shivajinagar).
+  - 8 minutes to Balewadi High Street / Mumbai-Bengaluru Highway (NH 48).
+
+---
+
+## Current Active Pune Developments
+1. **Mahindra IvyLush (East Pune - Kharadi Annex)**
+   - **Status:** Under Construction
+   - **MahaRERA:** P52100055146 (Towers A & B) | P52100055147 (Towers C & D)
+   - **Land Size:** 5.4 Acres | Towers A, B, C, D & E
+   - **Amenities:** 22,000 sq.ft. Dual Clubhouses, Camping Machan, Rooftop Infinity Views
+   - **Typologies:** 2, 3 & 4 BHK residences near EON IT Park & World Trade Center (WTC) Pune.
+   - **Deep-Dive:** https://mahindralifespaceshomes.in/brand/projects/mahindra-ivylush-kharadi-annex/
+
+2. **Mahindra Citadel (Pimpri-Chinchwad - PCMC)**
+   - **Status:** Under Construction
+   - **MahaRERA:** P52100047468 (Phase 1 Bastions) | P52100051877 (Phase 2 Tower L)
+   - **Land Size:** 9.66 Acres
+   - **Connectivity:** Direct walking access to Sant Tukaram Metro Station, Old Mumbai-Pune Highway.
+   - **Typologies:** 1, 2, 3 & 4 BHK apartments with half-Olympic pool and cinema lounge.
+   - **Deep-Dive:** https://mahindralifespaceshomes.in/brand/projects/mahindra-citadel-pimpri-metro/
+
+3. **Mahindra Happinest Tathawade (West Pune)**
+   - **Status:** Phase 1 to Phase 4 (Final Phase Launch)
+   - **Land Size:** 7.2 Acres
+   - **Concept:** Biophilic Fusion Homes with 1.5-Acre elevated skywalk.
+   - **Typologies:** 1 & 2 BHK smart compact homes near Hinjewadi IT Park and Wakad.
+   - **Deep-Dive:** https://mahindralifespaceshomes.in/brand/projects/mahindra-happinest-tathawade/
+
+---
+
+## Delivered Landmark Communities
+- **Mahindra Antheia:** 16-acre delivered community with OC, CTS 6017 Nehru Nagar Rd, Pimpri. (1,000+ happy families). [Deep-Dive](https://mahindralifespaceshomes.in/brand/projects/mahindra-antheia-pimpri/)
+- **Mahindra Nestalgia:** Delivered biophilic nostalgia-themed development, Bhosari Road, Nehru Nagar, Pimpri. [Deep-Dive](https://mahindralifespaceshomes.in/brand/projects/mahindra-nestalgia-pimpri/)
+- **Mahindra Centralis:** 4 high-rise towers delivered with OC, CTS 57/58/A Pimpri Chowk (MahaRERA: P52100019775). [Deep-Dive](https://mahindralifespaceshomes.in/brand/projects/mahindra-centralis-pimpri/)
+- **Mahindra L'Artista:** Delivered heritage boutique luxury, Sopan Baug Road, Ghorpadi, Central Pune. [Deep-Dive](https://mahindralifespaceshomes.in/brand/projects/mahindra-lartista-sopan-baug/)
+- **Mahindra Woods:** Delivered community in Pimpri-Chinchwad. [Deep-Dive](https://mahindralifespaceshomes.in/brand/projects/mahindra-woods-pimpri/)
+
+---
+
+## Core Programmatic Hubs & Canonical Links
+
+### Primary Pages
+- **Home & Flagship Overview:** https://mahindralifespaceshomes.in/
+- **Mahalunge Micro-Market Authority:** https://mahindralifespaceshomes.in/mahalunge-pune/
+- **Nande-Mahalunge Corridor:** https://mahindralifespaceshomes.in/nande-mahalunge-real-estate/
+- **Corporate Brand Hub:** https://mahindralifespaceshomes.in/brand/
+- **Buyer Knowledge Base & FAQs:** https://mahindralifespaceshomes.in/faq/
+- **Brochure Download & Cost Sheet:** https://mahindralifespaceshomes.in/brochure/
+
+### Residences & Floor Plans (All 13 Typologies)
+- **Residences Hub:** https://mahindralifespaceshomes.in/residences/
+- **1 BHK Fusion:** https://mahindralifespaceshomes.in/residences/1-bhk-fusion/
+- **2 BHK Optima:** https://mahindralifespaceshomes.in/residences/2-bhk/
+- **2 BHK Premium (Study Alcove):** https://mahindralifespaceshomes.in/residences/2-bhk-premium/
+- **3 BHK Luxe:** https://mahindralifespaceshomes.in/residences/3-bhk/
+- **3 BHK Signature:** https://mahindralifespaceshomes.in/residences/3-bhk-signature/
+- **4 BHK Signature:** https://mahindralifespaceshomes.in/residences/4-bhk/
+- **4 BHK Penthouse:** https://mahindralifespaceshomes.in/residences/4-bhk-penthouse/
+- **Duplex Sky Penthouse:** https://mahindralifespaceshomes.in/residences/duplex-penthouse/
+- **Vastu-Compliant Homes:** https://mahindralifespaceshomes.in/residences/vastu-compliant/
+- **North-East Facing Units:** https://mahindralifespaceshomes.in/residences/north-east-facing/
+- **West Facing (Sunset View):** https://mahindralifespaceshomes.in/residences/west-facing/
+- **Affordable Luxury (Under ₹1Cr):** https://mahindralifespaceshomes.in/residences/affordable-luxury/
+- **NRI Investment Guide:** https://mahindralifespaceshomes.in/residences/nri-investment/
+
+### Brand Project Deep-Dives (All 9 Mahindra Pune Projects)
+- **Mahindra Mahalunge — Flagship:** https://mahindralifespaceshomes.in/brand/projects/mahindra-mahalunge-pune/
+- **Mahindra IvyLush Kharadi:** https://mahindralifespaceshomes.in/brand/projects/mahindra-ivylush-kharadi-annex/
+- **Mahindra Citadel Pimpri:** https://mahindralifespaceshomes.in/brand/projects/mahindra-citadel-pimpri-metro/
+- **Mahindra Happinest Tathawade:** https://mahindralifespaceshomes.in/brand/projects/mahindra-happinest-tathawade/
+- **Mahindra Antheia Pimpri:** https://mahindralifespaceshomes.in/brand/projects/mahindra-antheia-pimpri/
+- **Mahindra Centralis Pimpri:** https://mahindralifespaceshomes.in/brand/projects/mahindra-centralis-pimpri/
+- **Mahindra Nestalgia Pimpri:** https://mahindralifespaceshomes.in/brand/projects/mahindra-nestalgia-pimpri/
+- **Mahindra L'Artista Sopan Baug:** https://mahindralifespaceshomes.in/brand/projects/mahindra-lartista-sopan-baug/
+- **Mahindra Woods Pimpri:** https://mahindralifespaceshomes.in/brand/projects/mahindra-woods-pimpri/
+
+### Tech Park Proximity Hubs (17 IT Campuses)
+- **Flats near Infosys Hinjewadi:** https://mahindralifespaceshomes.in/near/flats-near-infosys-hinjewadi/
+- **Flats near Wipro Circle:** https://mahindralifespaceshomes.in/near/flats-near-wipro-circle-hinjewadi/
+- **Flats near TCS Sahyadri Park:** https://mahindralifespaceshomes.in/near/flats-near-tcs-sahyadri-park-hinjewadi/
+- **Flats near Embassy TechZone:** https://mahindralifespaceshomes.in/near/flats-near-embassy-techzone-hinjewadi/
+- **Flats near Balewadi High Street:** https://mahindralifespaceshomes.in/near/flats-near-balewadi-high-street/
+- **Flats near Amar Paradigm Baner:** https://mahindralifespaceshomes.in/near/flats-near-amar-paradigm-baner/
+- **Flats near Cognizant Hinjewadi:** https://mahindralifespaceshomes.in/near/flats-near-cognizant-hinjewadi/
+- **Flats near Quadron Business Park:** https://mahindralifespaceshomes.in/near/flats-near-quadron-business-park-hinjewadi/
+- **Flats near EON Free Zone Kharadi:** https://mahindralifespaceshomes.in/near/flats-near-eon-free-zone-kharadi/
+- **Flats near WTC Pune:** https://mahindralifespaceshomes.in/near/flats-near-world-trade-center-pune/
+- **Flats near Cybercity Magarpatta:** https://mahindralifespaceshomes.in/near/flats-near-cybercity-magarpatta/
+- **Flats near Panchshil Business Park:** https://mahindralifespaceshomes.in/near/flats-near-panchshil-business-park-baner/
+- **Flats near ICC Tech Park:** https://mahindralifespaceshomes.in/near/flats-near-icc-tech-park-senapati-bapat-road/
+- **Flats near Cerebrum IT Park:** https://mahindralifespaceshomes.in/near/flats-near-cerebrum-it-park-kalyani-nagar/
+- **Flats near Commerzone Yerwada:** https://mahindralifespaceshomes.in/near/flats-near-commerzone-yerwada/
+- **Flats near Weikfield IT Citi Park:** https://mahindralifespaceshomes.in/near/flats-near-weikfield-it-citi-info-park/
+
+### Competitor & Corridor Comparisons (14 Pages)
+- **vs Godrej Hillside:** https://mahindralifespaceshomes.in/compare/mahindra-mahalunge-vs-godrej-hillside/
+- **vs VTP Blue Waters:** https://mahindralifespaceshomes.in/compare/mahindra-mahalunge-vs-vtp-blue-waters/
+- **vs Kolte Patil Life Republic:** https://mahindralifespaceshomes.in/compare/mahindra-mahalunge-vs-kolte-patil-life-republic/
+- **vs Lodha Panache Hinjewadi:** https://mahindralifespaceshomes.in/compare/mahindra-mahalunge-vs-lodha-panache-hinjewadi/
+- **vs Megapolis Hinjewadi:** https://mahindralifespaceshomes.in/compare/mahindra-mahalunge-vs-megapolis-hinjewadi/
+- **vs Shapoorji Pallonji Sensorium:** https://mahindralifespaceshomes.in/compare/mahindra-mahalunge-vs-shapoorji-pallonji-sensorium/
+- **vs Kolte Patil 24K Majestic:** https://mahindralifespaceshomes.in/compare/mahindra-mahalunge-vs-kolte-patil-24k-majestic/
+- **Mahalunge vs Wakad Real Estate:** https://mahindralifespaceshomes.in/compare/mahalunge-vs-wakad-real-estate/
+- **Mahalunge vs Baner Real Estate:** https://mahindralifespaceshomes.in/compare/mahalunge-vs-baner-real-estate/
+- **Mahindra IvyLush vs Godrej Infinity:** https://mahindralifespaceshomes.in/compare/mahindra-ivylush-vs-godrej-infinity/
+- **Mahindra Citadel vs Kohinoor Grandeur:** https://mahindralifespaceshomes.in/compare/mahindra-citadel-vs-kohinoor-grandeur/
+- **Mahindra Happinest vs Rohan Ananta:** https://mahindralifespaceshomes.in/compare/mahindra-happinest-vs-rohan-ananta/
+- **Mahindra vs Godrej Properties Pune:** https://mahindralifespaceshomes.in/compare/mahindra-lifespaces-vs-godrej-properties-pune/
+- **Mahindra Citadel vs Runwal Elixir:** https://mahindralifespaceshomes.in/compare/mahindra-citadel-vs-runwal-elixir-pimpri/
+
+### Infrastructure & Transit Corridors (8 Pages)
+- **Pune Metro Line 3 Hinjewadi:** https://mahindralifespaceshomes.in/connectivity/flats-near-pune-metro-line-3-hinjewadi/
+- **PMRDA 36m Ring Road:** https://mahindralifespaceshomes.in/connectivity/properties-on-pmrda-36m-ring-road/
+- **Mahalunge-Hinjewadi River Bridge:** https://mahindralifespaceshomes.in/connectivity/mahalunge-hinjewadi-river-bridge-connectivity/
+- **Sant Tukaram Metro Station:** https://mahindralifespaceshomes.in/connectivity/flats-near-sant-tukaram-metro-station/
+- **Kharadi-Shivane Riverside Road:** https://mahindralifespaceshomes.in/connectivity/properties-near-kharadi-shivane-riverside-road/
+- **Pune Outer Ring Road Western Alignment:** https://mahindralifespaceshomes.in/connectivity/properties-near-pune-ring-road-western-alignment/
+- **Mumbai-Pune Expressway Access:** https://mahindralifespaceshomes.in/connectivity/flats-near-mumbai-pune-expressway-access-point/
+- **Balewadi Stadium Metro Station:** https://mahindralifespaceshomes.in/connectivity/flats-near-balewadi-stadium-metro-station/
+
+### West Pune Micro-Market Intelligence Hubs
+- **West Pune Master Hub:** https://mahindralifespaceshomes.in/west-pune/
+- **Mahalunge Micro-Market:** https://mahindralifespaceshomes.in/west-pune/mahalunge-real-estate/
+- **Nande Corridor:** https://mahindralifespaceshomes.in/west-pune/nande-real-estate/
+- **Maan Micro-Market:** https://mahindralifespaceshomes.in/west-pune/maan-real-estate/
+- **Hinjewadi Tech Hub:** https://mahindralifespaceshomes.in/west-pune/hinjewadi-residential-projects/
+- **Baner High-End Residential:** https://mahindralifespaceshomes.in/west-pune/baner-residential-projects/
+- **Balewadi Sports & Commercial Hub:** https://mahindralifespaceshomes.in/west-pune/balewadi-residential-projects/
+- **Wakad High-Density Corridor:** https://mahindralifespaceshomes.in/west-pune/wakad-residential-projects/
+- **Tathawade Education & IT Corridor:** https://mahindralifespaceshomes.in/west-pune/tathawade-residential-projects/
+- **Punawale Residential Belt:** https://mahindralifespaceshomes.in/west-pune/punawale-residential-projects/
+- **Bavdhan Green Foothills:** https://mahindralifespaceshomes.in/west-pune/bavdhan-residential-projects/
+- **Sus Valley:** https://mahindralifespaceshomes.in/west-pune/sus-residential-projects/
+- **Ravet North-West Gate:** https://mahindralifespaceshomes.in/west-pune/ravet-residential-projects/
+
+### In-Depth Research Guides & Market Intelligence
+- **Mahindra Mahalunge Upcoming Project Guide:** https://mahindralifespaceshomes.in/articles/mahindra-lifespaces-mahalunge-upcoming-project-guide/
+- **13.46-Acre Acquisition Intelligence:** https://mahindralifespaceshomes.in/articles/mahindra-lifespaces-acquires-land-in-nande-mahalunge-what-it-means/
+- **West Pune Real Estate 2026 Guide:** https://mahindralifespaceshomes.in/articles/west-pune-real-estate-complete-2026-guide/
+- **Nande-Mahalunge-Maan Tri-Corridor Analysis:** https://mahindralifespaceshomes.in/articles/nande-mahalunge-maan-real-estate-guide/
+- **Pune Inner Ring Road & West Pune Impact:** https://mahindralifespaceshomes.in/articles/pune-inner-ring-road-and-west-pune-real-estate/
+- **PMRDA Town Planning Scheme Guide:** https://mahindralifespaceshomes.in/articles/pmrda-town-planning-scheme-mahalunge/
+
+---
+
+## Detailed Data Reference
+For exhaustive programmatic matrices, commute speeds, RERA compliance certificates, and architectural specifications, see:
+- https://mahindralifespaceshomes.in/llms-full.txt

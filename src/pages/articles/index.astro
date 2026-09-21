@@ -1,5 +1,6 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import ProgrammaticHubDirectory from '../../components/ProgrammaticHubDirectory.astro';
 
 const articles = [
   {
@@ -82,6 +83,51 @@ const articles = [
     readTime: '7 min read',
     excerpt: 'The confluence of geographic green belts, riverfront topography, IT tech job corridors, and institutional institutional investments shaping the western horizon.',
     image: 'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=800&q=80'
+  },
+  {
+    slug: 'mahindra-lifespaces-mahalunge-upcoming-project-guide',
+    title: 'Mahindra Lifespaces Mahalunge: Upcoming Project Guide (13.46-Acre Acquisition & Pre-Launch Insights)',
+    category: 'Upcoming Flagship',
+    date: 'Flagship Dossier 2026',
+    readTime: '8 min read',
+    excerpt: 'Comprehensive overview of the upcoming 13.46-acre master development announced in October 2025: ₹3,500 Cr GDV, biophilic living, and pre-launch timeline.',
+    image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80'
+  },
+  {
+    slug: 'mahindra-lifespaces-acquires-land-in-nande-mahalunge-what-it-means',
+    title: 'Mahindra Lifespaces Acquires Land in Nande-Mahalunge: What It Means for Pune Real Estate',
+    category: 'Market Economics',
+    date: 'Strategic Analysis',
+    readTime: '7 min read',
+    excerpt: 'Detailed economic analysis of Mahindra’s 13.46-acre acquisition, why the company selected Nande-Mahalunge, and its regional price appreciation impact.',
+    image: 'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=800&q=80'
+  },
+  {
+    slug: 'west-pune-real-estate-complete-2026-guide',
+    title: 'West Pune Real Estate: Complete 2026 Investment Guide & Emerging Micro-Markets',
+    category: 'Regional Market Dossier',
+    date: 'Comprehensive Guide 2026',
+    readTime: '10 min read',
+    excerpt: 'Compare price rates per sq.ft., rental yields (4.2% - 5.5%), and capital growth across Hinjewadi, Baner, Wakad, Tathawade, and Mahalunge.',
+    image: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80'
+  },
+  {
+    slug: 'nande-mahalunge-maan-real-estate-guide',
+    title: 'Nande–Mahalunge–Maan Real Estate Guide: PMRDA Town Planning, Inner Ring Road & IT Corridor Hubs',
+    category: 'Corridor Master Plan',
+    date: 'Tri-Corridor Study',
+    readTime: '8 min read',
+    excerpt: 'How Nande, Mahalunge, and Maan form West Pune’s strategic growth triangle with PMRDA Town Planning Scheme 1 and Hinjewadi river bridges.',
+    image: 'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=800&q=80'
+  },
+  {
+    slug: 'pune-inner-ring-road-and-west-pune-real-estate',
+    title: 'Pune Inner Ring Road & West Pune Real Estate: Infrastructure Transformation in Mahalunge & Nande',
+    category: 'Infrastructure & Transit',
+    date: 'Infrastructure Report',
+    readTime: '6 min read',
+    excerpt: 'The planned Pune Inner Ring Road and its alignment through Mahalunge and Nande, connecting directly to Mumbai-Bengaluru Highway and PCMC.',
+    image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80'
   }
 ];
 ---
@@ -89,7 +135,8 @@ const articles = [
 <Layout
   title="Mahalunge Real Estate Guide & Research Hub | Insights, Trends & Analysis"
   description="Exhaustive research, price analysis, infrastructure reports, and expert buyer guides on Mahalunge Pune real estate and Mahindra Lifespaces upcoming development."
-  canonical="https://mahindralifespaceshomes.in/articles"
+  keywords="mahindra lifespaces pune, mahindra mahalunge new project launch, mahindra mahalunge reviews, mahalunge pune real estate, flats near hinjewadi, flats near baner, pmrda town planning scheme mahalunge, mahindra lifespaces upcoming projects pune"
+  canonical="https://mahindralifespaceshomes.in/articles/"
 >
   <!-- Hero Section -->
   <section class="pt-32 pb-16 bg-charcoal-950 border-b border-white/10 relative overflow-hidden">
@@ -126,7 +173,7 @@ const articles = [
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {articles.map((art) => (
           <article class="glass-card rounded-xl overflow-hidden border border-white/10 flex flex-col group hover:border-gold-500/40 transition-all duration-300">
-            <a href={`/articles/${art.slug}`} class="block h-52 overflow-hidden relative">
+            <a href={`/articles/${art.slug}/`} class="block h-52 overflow-hidden relative">
               <img 
                 src={art.image} 
                 alt={art.title} 
@@ -145,7 +192,7 @@ const articles = [
                   <span>{art.readTime}</span>
                 </div>
                 <h2 class="font-serif text-lg font-bold text-stone-100 group-hover:text-gold-400 transition-colors leading-snug">
-                  <a href={`/articles/${art.slug}`}>{art.title}</a>
+                  <a href={`/articles/${art.slug}/`}>{art.title}</a>
                 </h2>
                 <p class="text-xs text-stone-400 leading-relaxed line-clamp-3">
                   {art.excerpt}
@@ -154,7 +201,7 @@ const articles = [
 
               <div class="pt-4 border-t border-white/5 flex items-center justify-between">
                 <a 
-                  href={`/articles/${art.slug}`} 
+                  href={`/articles/${art.slug}/`} 
                   class="text-xs uppercase tracking-widest text-gold-400 hover:text-gold-300 font-semibold flex items-center space-x-1"
                 >
                   <span>Read Full Article</span>
@@ -190,4 +237,7 @@ const articles = [
       </div>
     </div>
   </section>
+
+  <!-- PROGRAMMATIC SEO DIRECTORY HUB -->
+  <ProgrammaticHubDirectory />
 </Layout>

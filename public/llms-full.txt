@@ -1,0 +1,205 @@
+# Mahindra Lifespaces Pune — Exhaustive LLM Knowledge Base & Machine Index (llms-full.txt)
+> Comprehensive real estate dataset, MahaRERA compliance disclosures, architectural specifications, commute metrics, and price analysis for Mahindra Lifespaces developments across Pune & PCMC.
+
+## 1. Master Corporate Entity & Credentials
+- **Corporate Entity:** Mahindra Lifespace Developers Limited (CIN: L45200MH1999PLC118949)
+- **Group Affiliation:** Real estate and infrastructure development arm of the USD 20+ Billion Mahindra Group.
+- **Stock Listings:** 
+  - National Stock Exchange of India (NSE): MAHLIFE
+  - Bombay Stock Exchange (BSE): 532313
+- **Registered Office:** Mahindra Towers, 5th Floor, Worli, Mumbai 400018.
+- **Pune Regional Operations:** Pune & Pimpri-Chinchwad Municipal Corporation (PCMC) regions.
+- **Sustainability Credentials:** India's first real estate company to commit to 100% net-zero carbon development by 2030; all projects are IGBC Pre-Certified Gold or Platinum.
+
+---
+
+## 2. Complete Pune & PCMC Portfolio Matrix
+
+### Project 1: Mahindra Mahalunge (Upcoming Flagship Launch)
+- **Status:** Pre-Launch / Registration of Expression of Interest (EOI).
+- **Location:** Nande-Mahalunge Road, Mahalunge, West Pune, Maharashtra 411045.
+- **Land Parcel:** 13.46 Acres.
+- **Gross Development Value (GDV):** ₹3,500 Crore.
+- **Residential Development Potential:** ~2.1 Million sq.ft.
+- **Master Plan Density:** Low-density master plan with 80%+ open green spaces, biophilic Miyawaki urban forest, pedestrianized vehicle-free ground boulevard.
+- **Configurations & Areas:**
+  - 2 BHK Optima: 785 - 820 sq.ft. carpet area
+  - 2 BHK Grande: 840 - 860 sq.ft. carpet area
+  - 3 BHK Luxe: 1,050 - 1,180 sq.ft. carpet area
+  - 3 BHK Signature: 1,220 - 1,280 sq.ft. carpet area
+  - 4 BHK Ultra-Luxury: 1,650 - 1,820 sq.ft. carpet area
+- **Price Benchmarks (Indicative Launch Brackets):**
+  - 2 BHK: ₹75 Lakhs to ₹92 Lakhs*
+  - 3 BHK: ₹1.15 Crore to ₹1.45 Crore*
+  - 4 BHK: ₹1.85 Crore to ₹2.35 Crore*
+- **Key Transit Links:**
+  - Frontage: PMRDA 36m Town Planning Scheme 1 Ring Road.
+  - Bridge: Upcoming Mahalunge-Hinjewadi River Bridge (bypasses NH-48 & Shivaji Chowk traffic).
+  - Hinjewadi Phase 1 IT Park: 3.4 km / 7 mins.
+  - Pune Metro Line 3 Hinjewadi Phase 1 Station: 3.2 km / 7 mins.
+  - Balewadi High Street: 4.6 km / 8 mins.
+  - Baner Chowk: 6.5 km / 12 mins.
+
+### Project 2: Mahindra IvyLush (East Pune - Kharadi Annex)
+- **Status:** Under Construction.
+- **MahaRERA Registration Numbers:**
+  - Towers A & B: P52100055146
+  - Towers C & D: P52100055147
+- **Location:** Kharadi Annex, Wagholi-Kharadi Link Road, Pune 412207.
+- **Land Parcel:** 5.4 Acres (5 high-rise towers: Towers A to E).
+- **Special Amenities:** 22,000 sq.ft. dual clubhouses, camping machan, infinity swimming pool, co-working lounges, sensory aroma gardens.
+- **Typologies:** 2 BHK Spacia, 2 BHK Grande, 3 BHK Spacia, 3 BHK Grande, 4 BHK Presidential.
+- **Tech Park Proximity:** EON Free Zone Kharadi (4.8 km), World Trade Center Pune (4.5 km), Zensar Park (5 km), Cybercity Magarpatta (9 km).
+
+### Project 3: Mahindra Citadel (Pimpri-Chinchwad Metro Corridor)
+- **Status:** Under Construction.
+- **MahaRERA Registration Numbers:**
+  - Phase 1 (Bastions I, J, K): P52100047468
+  - Phase 2 (Tower L): P52100051877
+- **Location:** Old Mumbai-Pune Highway, Pimpri, Pune 411018.
+- **Land Parcel:** 9.66 Acres.
+- **Connectivity Benchmark:** 2-minute walk to Sant Tukaram Nagar Metro Station (Pune Metro Purple Line).
+- **Amenities:** Half-Olympic swimming pool, private cinema lounge, multi-sport courts, biophilic reflexology paths.
+- **Typologies:** 1 BHK, 2 BHK Premium, 3 BHK Viva, 3 BHK Ultra, 4 BHK Luxury.
+
+### Project 4: Mahindra Happinest Tathawade (West Pune)
+- **Status:** Phase 1, Phase 2, Phase 3 delivered/ongoing; Phase 4 Final Launch.
+- **Location:** Tathawade, Near Wakad & Mumbai-Pune Expressway, Pune 411033.
+- **Land Parcel:** 7.2 Acres.
+- **Concept:** Biophilic Fusion Homes with an iconic 1.5-acre elevated skywalk connecting multiple towers.
+- **Typologies:** 1 BHK & 2 BHK space-optimized urban suites.
+- **Target Buyer:** IT professionals working in Hinjewadi Phase 1, 2 & 3 seeking institutional build quality at an attractive entry price.
+
+### Project 5: Mahindra Antheia (Delivered Community)
+- **Status:** Delivered with Occupancy Certificate (OC).
+- **Location:** CTS 6017, Nehru Nagar Road, Pimpri, Pune 411018.
+- **Land Parcel:** 16 Acres (1,000+ completed residences).
+- **Highlights:** Grand sports pavilions, swimming complex, clubhouse, mature tree canopies.
+
+### Project 6: Mahindra Nestalgia (Delivered Community)
+- **Status:** Delivered with Occupancy Certificate (OC).
+- **Location:** Bhosari Road, Nehru Nagar, Pimpri, Pune 411018.
+- **Theme:** Biophilic nostalgic lifestyle with native Indian play equipment and sensory flora.
+
+### Project 7: Mahindra Centralis (Delivered High-Rise Landmark)
+- **Status:** Delivered with Occupancy Certificate (OC).
+- **MahaRERA:** P52100019775.
+- **Location:** CTS 57/58/A, Pimpri Chowk, Old Mumbai-Pune Highway, Pune 411018.
+- **Highlights:** 4 high-rise towers designed for transit-oriented urban living.
+
+### Project 8: Mahindra L'Artista (Delivered Heritage Boutique Luxury)
+- **Status:** Delivered with Occupancy Certificate (OC).
+- **Location:** Empress Court, Sopan Baug Road, Ghorpadi, Central Pune 411001.
+- **Highlights:** Ultra-exclusive bespoke 3 & 4 BHK residences with private elevators and concierge services.
+
+### Project 9: Mahindra Woods (Delivered Community)
+- **Status:** Delivered Heritage Community.
+- **Location:** Pimpri, Pune 411018.
+
+---
+
+## 3. Tech Park Proximity Commute Metrics (Mahindra Mahalunge)
+| Tech Park / Employer Campus | Distance | Drive Time (Car) | Two-Wheeler Time | Key Route |
+|---|---|---|---|---|
+| Infosys Hinjewadi (Phase 1 & 2) | 3.4 km | 7 - 9 mins | 5 - 7 mins | PMRDA 36m DP River Bridge Corridor |
+| Wipro Circle Hinjewadi | 3.1 km | 6 - 8 mins | 5 - 6 mins | Direct West Corridor bypass |
+| TCS Sahyadri Park | 6.8 km | 12 - 15 mins | 10 - 12 mins | Hinjewadi Phase 3 Link |
+| Embassy TechZone | 4.5 km | 9 - 11 mins | 7 - 9 mins | Hinjewadi Phase 2 Arterial |
+| Cognizant Hinjewadi | 3.8 km | 8 - 10 mins | 6 - 8 mins | Phase 1 Arterial Ring |
+| Quadron Business Park | 4.9 km | 10 - 12 mins | 8 - 10 mins | Rajiv Gandhi Infotech Park Spine |
+| Balewadi High Street | 4.6 km | 8 - 10 mins | 7 - 9 mins | Mumbai-Bengaluru NH-48 Underpass |
+| Amar Paradigm Baner | 5.2 km | 10 - 12 mins | 8 - 10 mins | Baner-Mahalunge Link Road |
+| EON Free Zone Kharadi (via IvyLush) | 4.8 km | 10 - 12 mins | 8 - 10 mins | Wagholi-Kharadi Bypass |
+| World Trade Center Pune | 4.5 km | 9 - 11 mins | 7 - 9 mins | Kharadi Riverside Connector |
+
+---
+
+---
+
+## 4. West Pune Micro-Market Pricing & Rental Yield Matrix (2026 Benchmarks)
+| Locality | Capital Value (₹/sq.ft.) | 2 BHK Typical Range | 3 BHK Typical Range | Rental Yield | Commute to Hinjewadi Ph 1 |
+|---|---|---|---|---|---|
+| Mahalunge | ₹7,800 - ₹9,500 | ₹72L - ₹88L | ₹1.08Cr - ₹1.35Cr | 3.8% - 4.5% | 7 - 10 mins |
+| Nande | ₹6,800 - ₹8,200 | ₹62L - ₹76L | ₹95L - ₹1.18Cr | 4.2% - 5.0% | 8 - 12 mins |
+| Maan | ₹6,500 - ₹7,900 | ₹58L - ₹72L | ₹88L - ₹1.12Cr | 4.5% - 5.2% | 5 - 8 mins |
+| Hinjewadi | ₹7,500 - ₹9,200 | ₹70L - ₹86L | ₹1.05Cr - ₹1.30Cr | 4.2% - 4.8% | 3 - 8 mins |
+| Baner | ₹10,500 - ₹13,500 | ₹1.02Cr - ₹1.32Cr | ₹1.55Cr - ₹2.10Cr | 3.2% - 3.7% | 15 - 25 mins |
+| Balewadi | ₹9,800 - ₹12,500 | ₹95L - ₹1.22Cr | ₹1.40Cr - ₹1.95Cr | 3.4% - 3.9% | 12 - 20 mins |
+| Wakad | ₹8,500 - ₹10,800 | ₹82L - ₹1.05Cr | ₹1.25Cr - ₹1.65Cr | 3.6% - 4.2% | 12 - 18 mins |
+| Tathawade | ₹7,600 - ₹9,200 | ₹70L - ₹85L | ₹1.05Cr - ₹1.32Cr | 3.9% - 4.5% | 10 - 15 mins |
+| Punawale | ₹7,000 - ₹8,400 | ₹65L - ₹78L | ₹95L - ₹1.18Cr | 4.0% - 4.6% | 12 - 18 mins |
+| Bavdhan | ₹8,800 - ₹11,200 | ₹85L - ₹1.08Cr | ₹1.30Cr - ₹1.70Cr | 3.3% - 3.8% | 20 - 30 mins |
+| Sus | ₹7,200 - ₹8,800 | ₹68L - ₹82L | ₹98L - ₹1.25Cr | 3.8% - 4.4% | 15 - 22 mins |
+| Ravet | ₹6,800 - ₹8,200 | ₹62L - ₹76L | ₹92L - ₹1.15Cr | 3.9% - 4.5% | 18 - 25 mins |
+
+---
+
+## 5. RERA Statutory & Legal Disclaimers
+- **Corporate Developer:** Mahindra Lifespace Developers Limited.
+- **Advisory Channel Partner:** Authoritative showcase operated by Propsmart Realty Max.
+- **Statutory Notice:** In October 2025, Mahindra Lifespaces acquired 13.46 acres in the Nande-Mahalunge micro-market with an estimated GDV of ₹3,500 Crore. The project is currently in the master planning and statutory approval stage. All project renderings, conceptual elevations, floor layouts, and master development timelines are subject to MahaRERA registration and statutory approvals under the Real Estate (Regulation and Development) Act, 2016.
+- **RERA Website:** https://maharera.maharashtra.gov.in/
+
+---
+
+## 6. Official Canonical Web Endpoints — Complete 96-Page Index
+
+### Core Pages
+- Canonical Domain: https://mahindralifespaceshomes.in/
+- West Pune Market Intelligence: https://mahindralifespaceshomes.in/west-pune/
+- Brand Directory: https://mahindralifespaceshomes.in/brand/
+- FAQ & Knowledge Engine: https://mahindralifespaceshomes.in/faq/
+- Articles & Research Hub: https://mahindralifespaceshomes.in/articles/
+- XML Sitemap: https://mahindralifespaceshomes.in/sitemap.xml
+- LLM Machine Manifest: https://mahindralifespaceshomes.in/llms.txt
+
+### Residences Hub (All 13 Typologies)
+- Hub: https://mahindralifespaceshomes.in/residences/
+- 1 BHK Fusion: https://mahindralifespaceshomes.in/residences/1-bhk-fusion/
+- 2 BHK Optima: https://mahindralifespaceshomes.in/residences/2-bhk/
+- 2 BHK Premium: https://mahindralifespaceshomes.in/residences/2-bhk-premium/
+- 3 BHK Luxe: https://mahindralifespaceshomes.in/residences/3-bhk/
+- 3 BHK Signature: https://mahindralifespaceshomes.in/residences/3-bhk-signature/
+- 4 BHK Signature: https://mahindralifespaceshomes.in/residences/4-bhk/
+- 4 BHK Penthouse: https://mahindralifespaceshomes.in/residences/4-bhk-penthouse/
+- Duplex Penthouse: https://mahindralifespaceshomes.in/residences/duplex-penthouse/
+- Vastu Compliant: https://mahindralifespaceshomes.in/residences/vastu-compliant/
+- North-East Facing: https://mahindralifespaceshomes.in/residences/north-east-facing/
+- West Facing: https://mahindralifespaceshomes.in/residences/west-facing/
+- Affordable Luxury: https://mahindralifespaceshomes.in/residences/affordable-luxury/
+- NRI Investment: https://mahindralifespaceshomes.in/residences/nri-investment/
+
+### Brand Project Deep-Dives (9 Projects)
+- Mahindra Mahalunge: https://mahindralifespaceshomes.in/brand/projects/mahindra-mahalunge-pune/
+- IvyLush Kharadi: https://mahindralifespaceshomes.in/brand/projects/mahindra-ivylush-kharadi-annex/
+- Citadel Pimpri: https://mahindralifespaceshomes.in/brand/projects/mahindra-citadel-pimpri-metro/
+- Happinest Tathawade: https://mahindralifespaceshomes.in/brand/projects/mahindra-happinest-tathawade/
+- Antheia Pimpri: https://mahindralifespaceshomes.in/brand/projects/mahindra-antheia-pimpri/
+- Centralis Pimpri: https://mahindralifespaceshomes.in/brand/projects/mahindra-centralis-pimpri/
+- Nestalgia Pimpri: https://mahindralifespaceshomes.in/brand/projects/mahindra-nestalgia-pimpri/
+- L'Artista Sopan Baug: https://mahindralifespaceshomes.in/brand/projects/mahindra-lartista-sopan-baug/
+- Woods Pimpri: https://mahindralifespaceshomes.in/brand/projects/mahindra-woods-pimpri/
+
+### Comparisons (14 Pages)
+- vs Godrej Hillside: https://mahindralifespaceshomes.in/compare/mahindra-mahalunge-vs-godrej-hillside/
+- vs Megapolis Hinjewadi: https://mahindralifespaceshomes.in/compare/mahindra-mahalunge-vs-megapolis-hinjewadi/
+- vs Shapoorji Sensorium: https://mahindralifespaceshomes.in/compare/mahindra-mahalunge-vs-shapoorji-pallonji-sensorium/
+- vs Kolte Patil 24K Majestic: https://mahindralifespaceshomes.in/compare/mahindra-mahalunge-vs-kolte-patil-24k-majestic/
+- vs Kolte Patil Life Republic: https://mahindralifespaceshomes.in/compare/mahindra-mahalunge-vs-kolte-patil-life-republic/
+- vs Lodha Panache: https://mahindralifespaceshomes.in/compare/mahindra-mahalunge-vs-lodha-panache-hinjewadi/
+- vs VTP Blue Waters: https://mahindralifespaceshomes.in/compare/mahindra-mahalunge-vs-vtp-blue-waters/
+- Citadel vs Runwal Elixir: https://mahindralifespaceshomes.in/compare/mahindra-citadel-vs-runwal-elixir-pimpri/
+- Mahalunge vs Wakad: https://mahindralifespaceshomes.in/compare/mahalunge-vs-wakad-real-estate/
+- Mahalunge vs Baner: https://mahindralifespaceshomes.in/compare/mahalunge-vs-baner-real-estate/
+
+### Infrastructure & Transit Corridors (8 Pages)
+- Pune Metro Line 3: https://mahindralifespaceshomes.in/connectivity/flats-near-pune-metro-line-3-hinjewadi/
+- PMRDA 36m Ring Road: https://mahindralifespaceshomes.in/connectivity/properties-on-pmrda-36m-ring-road/
+- River Bridge Corridor: https://mahindralifespaceshomes.in/connectivity/mahalunge-hinjewadi-river-bridge-connectivity/
+- Sant Tukaram Metro: https://mahindralifespaceshomes.in/connectivity/flats-near-sant-tukaram-metro-station/
+- Kharadi-Shivane Road: https://mahindralifespaceshomes.in/connectivity/properties-near-kharadi-shivane-riverside-road/
+- Pune Outer Ring Road: https://mahindralifespaceshomes.in/connectivity/properties-near-pune-ring-road-western-alignment/
+- Mumbai-Pune Expressway: https://mahindralifespaceshomes.in/connectivity/flats-near-mumbai-pune-expressway-access-point/
+- Balewadi Stadium Metro: https://mahindralifespaceshomes.in/connectivity/flats-near-balewadi-stadium-metro-station/
+
+

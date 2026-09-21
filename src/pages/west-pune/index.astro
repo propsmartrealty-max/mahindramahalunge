@@ -1,0 +1,174 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { westPuneLocalityData } from '../../data/pSeoWestPuneLocalities';
+
+const pageSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Place",
+      "@id": "https://mahindralifespaceshomes.in/west-pune/#place",
+      "name": "West Pune Real Estate Corridor",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "West Pune",
+        "addressRegion": "Maharashtra",
+        "addressCountry": "IN"
+      }
+    },
+    {
+      "@type": "CollectionPage",
+      "@id": "https://mahindralifespaceshomes.in/west-pune/#collection",
+      "name": "West Pune Residential Market & Locality Network",
+      "url": "https://mahindralifespaceshomes.in/west-pune/",
+      "description": "Comprehensive market intelligence across 12 West Pune micro-markets: Mahalunge, Nande, Maan, Hinjewadi, Baner, Balewadi, Wakad, Tathawade, Punawale, Bavdhan, Sus, and Ravet."
+    }
+  ]
+};
+---
+
+<Layout
+  title="West Pune Real Estate Guide 2026 | Property Prices, Localities & Mahindra Projects"
+  description="Exhaustive guide to West Pune real estate. Compare property prices, rental yields, PMRDA infrastructure, and Mahindra Lifespaces developments across 12 micro-markets."
+  keywords="west pune real estate, best residential projects west pune, flats in west pune, mahindra lifespaces west pune, mahindra mahalunge, flats near hinjewadi, new projects west pune"
+  canonical="https://mahindralifespaceshomes.in/west-pune/"
+  customSchema={pageSchema}
+>
+  <!-- Hero Section -->
+  <section class="pt-32 pb-20 bg-charcoal-950 border-b border-white/10 relative overflow-hidden">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
+      
+      <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-gold-500/10 border border-gold-500/30 text-gold-400 text-xs font-semibold uppercase tracking-widest">
+        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+        <span>West Pune Market Authority • 12 Micro-Markets</span>
+      </div>
+
+      <h1 class="font-serif text-3xl sm:text-5xl lg:text-6xl font-bold text-stone-100 max-w-4xl leading-tight">
+        West Pune Real Estate: <br />
+        <span class="gold-gradient-text">Complete 2026 Micro-Market & Investment Guide</span>
+      </h1>
+
+      <p class="text-stone-300 text-sm sm:text-base max-w-3xl font-light leading-relaxed">
+        From the high-tech employment engine of Hinjewadi and cosmopolitan Baner-Balewadi to the planned billion-dollar growth corridor of Nande-Mahalunge, explore comparative price rates, rental yields, and upcoming institutional developments.
+      </p>
+
+      <!-- Macro Stats Grid -->
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-4 max-w-3xl">
+        <div class="p-4 rounded-xl bg-white/5 border border-white/10">
+          <span class="text-[10px] uppercase tracking-wider text-stone-400 block">IT Workforce</span>
+          <span class="font-serif text-lg font-bold text-gold-400">400,000+</span>
+        </div>
+        <div class="p-4 rounded-xl bg-white/5 border border-white/10">
+          <span class="text-[10px] uppercase tracking-wider text-stone-400 block">Rental Yields</span>
+          <span class="font-serif text-lg font-bold text-emerald-400">4.2% - 5.5%</span>
+        </div>
+        <div class="p-4 rounded-xl bg-white/5 border border-white/10">
+          <span class="text-[10px] uppercase tracking-wider text-stone-400 block">Mahindra Land</span>
+          <span class="font-serif text-lg font-bold text-white">13.46 Acres</span>
+        </div>
+        <div class="p-4 rounded-xl bg-white/5 border border-white/10">
+          <span class="text-[10px] uppercase tracking-wider text-stone-400 block">Transit Spine</span>
+          <span class="font-serif text-lg font-bold text-amber-300">Metro Line 3</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 12 Localities Directory Grid -->
+  <section class="py-20 bg-[#0c1017] border-b border-white/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+      
+      <div class="text-center max-w-3xl mx-auto space-y-3">
+        <span class="text-xs uppercase tracking-widest text-gold-400 font-bold">12 Verified Locality Dossiers</span>
+        <h2 class="font-serif text-2xl sm:text-3xl lg:text-4xl text-stone-50 font-bold">
+          Explore West Pune Micro-Market Profiles
+        </h2>
+        <p class="text-xs sm:text-sm text-stone-400 font-light">
+          Click any micro-market below to view capital rates, appreciation forecasts, Hinjewadi commute matrices, and neighborhood insights.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {westPuneLocalityData.map((loc) => (
+          <a
+            href={`/west-pune/${loc.slug}/`}
+            class="group p-6 rounded-2xl glass-card border border-white/10 hover:border-gold-500/40 transition-all flex flex-col justify-between space-y-4 hover:shadow-xl"
+          >
+            <div class="space-y-3">
+              <div class="flex items-center justify-between">
+                <span class="px-2 py-0.5 rounded-full bg-gold-500/10 border border-gold-500/30 text-gold-400 text-[10px] font-semibold uppercase tracking-wider">
+                  {loc.category}
+                </span>
+                <span class="text-xs text-stone-500 group-hover:text-gold-400 transition-colors">→</span>
+              </div>
+              <h3 class="font-serif text-lg text-stone-100 font-bold group-hover:text-gold-300 transition-colors">
+                {loc.name}
+              </h3>
+              <p class="text-xs text-stone-400 font-light leading-relaxed line-clamp-2">
+                {loc.tagline}
+              </p>
+            </div>
+
+            <div class="pt-3 border-t border-white/5 grid grid-cols-2 gap-2 text-[11px]">
+              <div>
+                <span class="text-stone-500 block text-[10px]">Avg Rate</span>
+                <span class="font-bold text-gold-400">{loc.avgPricePerSqFt}</span>
+              </div>
+              <div>
+                <span class="text-stone-500 block text-[10px]">To Hinjewadi</span>
+                <span class="font-bold text-stone-200">{loc.distanceToHinjewadi}</span>
+              </div>
+            </div>
+          </a>
+        ))}
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Comparative Price & Yield Heatmap Table -->
+  <section class="py-20 bg-[#090c12]">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+      
+      <div class="space-y-2">
+        <span class="text-xs uppercase tracking-widest text-gold-400 font-bold">Data Intelligence</span>
+        <h2 class="font-serif text-2xl sm:text-3xl text-stone-50 font-bold">
+          West Pune Micro-Market Price & Yield Comparison 2026
+        </h2>
+      </div>
+
+      <div class="overflow-x-auto rounded-2xl border border-white/10 glass-card">
+        <table class="w-full text-xs text-left">
+          <thead class="bg-white/5 text-stone-300 font-serif uppercase tracking-wider text-[10px]">
+            <tr>
+              <th class="p-4">Micro-Market</th>
+              <th class="p-4">Avg Rate / Sq.Ft.</th>
+              <th class="p-4">Rental Yield</th>
+              <th class="p-4">5-Yr Appreciation</th>
+              <th class="p-4">Phase 1 Distance</th>
+              <th class="p-4">Dossier Link</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-white/5 text-stone-300 font-light">
+            {westPuneLocalityData.map((loc) => (
+              <tr class="hover:bg-white/[0.02] transition-colors">
+                <td class="p-4 font-semibold text-stone-100">{loc.shortName}</td>
+                <td class="p-4 font-mono text-gold-400">{loc.avgPricePerSqFt}</td>
+                <td class="p-4 font-mono text-emerald-400">{loc.rentalYield}</td>
+                <td class="p-4 font-mono text-stone-300">{loc.fiveYearAppreciation}</td>
+                <td class="p-4 text-stone-400">{loc.distanceToHinjewadi}</td>
+                <td class="p-4">
+                  <a href={`/west-pune/${loc.slug}/`} class="text-gold-400 hover:underline font-medium">
+                    View Guide →
+                  </a>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+  </section>
+</Layout>

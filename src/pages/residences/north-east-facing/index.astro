@@ -1,0 +1,69 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+---
+
+<Layout
+  title="North-East Facing Flats at Mahindra Mahalunge | Vastu Approved Morning Light Homes"
+  description="Explore North-East facing residences at Mahindra Mahalunge: morning sunlight, Vastu Shastra alignment, and positive energy flow. Pre-launch 2, 3 & 4 BHK near Hinjewadi Pune."
+  keywords="north east facing flats mahindra mahalunge, north east facing 2 bhk near hinjewadi, vastu approved north east facing mahindra mahalunge, morning light flats mahalunge pune, north east facing luxury flats west pune"
+  canonical="https://mahindralifespaceshomes.in/residences/north-east-facing/"
+>
+  <section class="pt-32 pb-20 bg-charcoal-950 border-b border-white/10 relative overflow-hidden">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
+      <div class="inline-flex items-center space-x-2 px-3 py-1 rounded bg-gold-500/10 border border-gold-500/30 text-gold-400 text-xs font-semibold uppercase tracking-widest">
+        <span>North-East Facing · Vastu Approved · Morning Light Collection</span>
+      </div>
+      <h1 class="font-serif text-3xl sm:text-5xl lg:text-6xl font-bold text-stone-100 max-w-4xl leading-tight">
+        North-East Facing Residences: <br />
+        <span class="gold-gradient-text">Sacred Orientation & Morning Light</span>
+      </h1>
+      <p class="text-stone-300 text-sm sm:text-base max-w-2xl font-light leading-relaxed">
+        North-East facing flats are the most coveted orientation in Vastu Shastra — capturing the sacred Ishanya energy, morning golden sunrise, and the freshest cross-ventilating breezes. At Mahindra Mahalunge, these residences are the fastest to sell in each tower launch.
+      </p>
+    </div>
+  </section>
+
+  <!-- NE Benefits -->
+  <section class="py-20 bg-charcoal-900 border-b border-white/10">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+      <div class="text-center space-y-2">
+        <span class="text-xs uppercase tracking-widest text-gold-400 font-bold">Why North-East is Most Sought-After</span>
+        <h2 class="font-serif text-2xl sm:text-3xl text-stone-50 font-bold">The North-East Advantage</h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {[
+          { icon: '🌄', title: 'Morning Sunrise Capture', desc: 'First morning sunlight from the East floods living rooms and master bedrooms, energising residents before the workday.' },
+          { icon: '🧘', title: 'Ishanya — Sacred Energy Zone', desc: 'Vastu Shastra identifies North-East (Ishanya) as the most spiritually powerful quadrant — home to positive cosmic energy, prosperity, and mental clarity.' },
+          { icon: '💰', title: 'Highest Resale Premium', desc: 'North-East facing units command the highest resale value and rental demand in every tower — typically fetching 5%–8% above other orientations at secondary market.' },
+          { icon: '🌬', title: 'Natural Cross-Ventilation', desc: 'Prevailing North-East thermal breezes naturally cool interiors year-round, reducing AC dependency and monthly electricity bills.' },
+          { icon: '☀', title: 'Low Summer Heat Gain', desc: 'Unlike West-facing units with intense afternoon sun, North-East orientation minimises heat gain in summer while maximising winter warmth.' },
+          { icon: '📈', title: 'Fast Exit Liquidity', desc: 'North-East and East-facing units historically sell first in every new launch phase due to buyer demand concentration — ensuring superior exit liquidity.' }
+        ].map((b) => (
+          <div class="p-6 rounded-2xl bg-charcoal-950 border border-gold-500/20 space-y-3 hover:border-gold-500/40 transition-all">
+            <div class="text-2xl">{b.icon}</div>
+            <h3 class="font-serif text-sm font-bold text-gold-300">{b.title}</h3>
+            <p class="text-xs text-stone-300 leading-relaxed font-light">{b.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-20 bg-charcoal-950">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
+      <h2 class="font-serif text-3xl text-stone-100 font-bold">Secure Your North-East Facing Unit</h2>
+      <p class="text-stone-300 text-sm font-light leading-relaxed max-w-2xl mx-auto">
+        North-East facing units are always the first to be reserved. Secure your allocation now with an Expression of Interest before the formal tower-wise launch.
+      </p>
+      <button
+        data-open-modal
+        data-unit="North-East Facing"
+        data-interest="North-East Facing Flat Enquiry"
+        class="btn-shimmer px-10 py-4 rounded-full bg-gradient-to-r from-gold-300 via-gold-400 to-gold-500 text-charcoal-950 font-bold uppercase tracking-wider text-xs shadow-lg hover:shadow-gold-500/30 transition-all cursor-pointer"
+      >
+        Reserve My North-East Unit
+      </button>
+    </div>
+  </section>
+</Layout>

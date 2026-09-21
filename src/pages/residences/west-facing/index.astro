@@ -1,0 +1,69 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+---
+
+<Layout
+  title="West Facing Flats at Mahindra Mahalunge | Sunset View Residences Near Hinjewadi"
+  description="Explore West-facing residences at Mahindra Mahalunge: dramatic sunset panoramas over the Sahyadri range, natural afternoon cross-ventilation, and extended evening daylight. Pre-launch near Hinjewadi."
+  keywords="west facing flats mahindra mahalunge, west facing flats near hinjewadi pune, west facing 2 bhk mahindra mahalunge, sunset view flats mahalunge pune, west facing luxury flats west pune"
+  canonical="https://mahindralifespaceshomes.in/residences/west-facing/"
+>
+  <section class="pt-32 pb-20 bg-charcoal-950 border-b border-white/10 relative overflow-hidden">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
+      <div class="inline-flex items-center space-x-2 px-3 py-1 rounded bg-gold-500/10 border border-gold-500/30 text-gold-400 text-xs font-semibold uppercase tracking-widest">
+        <span>West Facing · Sunset Panorama Collection</span>
+      </div>
+      <h1 class="font-serif text-3xl sm:text-5xl lg:text-6xl font-bold text-stone-100 max-w-4xl leading-tight">
+        West-Facing Residences: <br />
+        <span class="gold-gradient-text">Sahyadri Sunset Views at Mahindra Mahalunge</span>
+      </h1>
+      <p class="text-stone-300 text-sm sm:text-base max-w-2xl font-light leading-relaxed">
+        The West-facing residences at Mahindra Mahalunge capture breathtaking panoramic sunsets across the open Sahyadri hill range — offering dramatic amber skies, cool western valley breezes, and extended usable afternoon daylight hours for working-from-home professionals.
+      </p>
+    </div>
+  </section>
+
+  <!-- Sunset View Benefits -->
+  <section class="py-20 bg-charcoal-900 border-b border-white/10">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+      <div class="text-center space-y-2">
+        <span class="text-xs uppercase tracking-widest text-gold-400 font-bold">West Facing Advantages</span>
+        <h2 class="font-serif text-2xl sm:text-3xl text-stone-50 font-bold">Why Choose a West-Facing Flat at Mahalunge?</h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {[
+          { icon: '🌅', title: 'Sahyadri Sunset Panorama', desc: 'Unobstructed 180° westward views of the undeveloped Mahalunge-Mulshi valley and Sahyadri hill ridgeline — exclusive to Mahindra Mahalunge\'s elevated podium towers.' },
+          { icon: '💨', title: 'Cool Western Valley Breezes', desc: 'Prevailing westerly winds from the open Mulshi valley sweep through balconies and living rooms, naturally regulating indoor temperature without mechanical cooling.' },
+          { icon: '🌇', title: 'Extended Afternoon Daylight', desc: 'West-facing units receive maximum afternoon and evening natural light — ideal for professionals working late or families maximising living room use during golden hours.' },
+          { icon: '📸', title: 'Premium Lifestyle Aesthetic', desc: 'Dramatic sunset sky colour palettes from amber to violet create an unmatched daily visual spectacle — a distinct luxury lifestyle differentiator that commands rental and resale premiums.' }
+        ].map((b) => (
+          <div class="p-6 rounded-2xl bg-charcoal-950 border border-gold-500/20 space-y-3 hover:border-gold-500/40 transition-all flex items-start space-x-4">
+            <div class="text-3xl flex-shrink-0">{b.icon}</div>
+            <div>
+              <h3 class="font-serif text-base font-bold text-gold-300 mb-2">{b.title}</h3>
+              <p class="text-xs text-stone-300 leading-relaxed font-light">{b.desc}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-20 bg-charcoal-950">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
+      <h2 class="font-serif text-3xl text-stone-100 font-bold">Reserve a West-Facing Unit</h2>
+      <p class="text-stone-300 text-sm font-light leading-relaxed max-w-2xl mx-auto">
+        West-facing units with unobstructed Sahyadri views are limited. Register your EOI now to receive tower-specific floor plans and priority allocation for sunset-view residences.
+      </p>
+      <button
+        data-open-modal
+        data-unit="West Facing"
+        data-interest="West Facing Flat Enquiry"
+        class="btn-shimmer px-10 py-4 rounded-full bg-gradient-to-r from-gold-300 via-gold-400 to-gold-500 text-charcoal-950 font-bold uppercase tracking-wider text-xs shadow-lg hover:shadow-gold-500/30 transition-all cursor-pointer"
+      >
+        Reserve My Sunset View Unit
+      </button>
+    </div>
+  </section>
+</Layout>

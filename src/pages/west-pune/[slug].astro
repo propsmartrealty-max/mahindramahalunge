@@ -1,0 +1,254 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { westPuneLocalityData, type WestPuneLocalityItem } from '../../data/pSeoWestPuneLocalities';
+
+export async function getStaticPaths() {
+  return westPuneLocalityData.map((item) => ({
+    params: { slug: item.slug },
+    props: { item },
+  }));
+}
+
+interface Props {
+  item: WestPuneLocalityItem;
+}
+
+const { item } = Astro.props;
+
+// Construct Schema.org JSON-LD for this specific West Pune locality page
+const pageSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Place",
+      "@id": `https://mahindralifespaceshomes.in/west-pune/${item.slug}/#place`,
+      "name": `${item.name}, Pune`,
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": item.shortName,
+        "addressRegion": "Maharashtra",
+        "addressCountry": "IN"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": `https://mahindralifespaceshomes.in/west-pune/${item.slug}/#faq`,
+      "mainEntity": item.faqs.map((faq) => ({
+        "@type": "Question",
+        "name": faq.q,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": faq.a
+        }
+      }))
+    }
+  ]
+};
+---
+
+<Layout
+  title={item.metaTitle}
+  description={item.metaDescription}
+  keywords={`${item.shortName.toLowerCase()} real estate, flats in ${item.shortName.toLowerCase()}, apartments in ${item.shortName.toLowerCase()}, new projects ${item.shortName.toLowerCase()}, mahindra ${item.shortName.toLowerCase()}, mahindra lifespaces west pune, mahindra mahalunge`}
+  canonical={`https://mahindralifespaceshomes.in/west-pune/${item.slug}/`}
+  customSchema={pageSchema}
+>
+  <!-- Hero Section -->
+  <section class="pt-32 pb-20 bg-charcoal-950 border-b border-white/10 relative overflow-hidden">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
+      
+      <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-gold-500/10 border border-gold-500/30 text-gold-400 text-xs font-semibold uppercase tracking-widest">
+        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+        <span>{item.category} • West Pune Corridor</span>
+      </div>
+
+      <h1 class="font-serif text-3xl sm:text-5xl lg:text-6xl font-bold text-stone-100 max-w-4xl leading-tight">
+        {item.h1}
+      </h1>
+
+      <p class="text-stone-300 text-sm sm:text-base max-w-3xl font-light leading-relaxed">
+        {item.heroHighlight}. Discover comprehensive micro-market trends, infrastructure milestones, and how the Mahindra Lifespaces Pune ecosystem connects to {item.shortName}.
+      </p>
+
+      <!-- Market Vital Badges -->
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-4 max-w-3xl">
+        <div class="p-3.5 rounded-xl bg-white/5 border border-white/10">
+          <span class="text-[10px] uppercase tracking-wider text-stone-400 block">Avg Rate / Sq.Ft.</span>
+          <span class="font-serif text-base font-bold text-gold-400">{item.avgPricePerSqFt}</span>
+        </div>
+        <div class="p-3.5 rounded-xl bg-white/5 border border-white/10">
+          <span class="text-[10px] uppercase tracking-wider text-stone-400 block">5-Yr Appreciation</span>
+          <span class="font-serif text-base font-bold text-emerald-400">{item.fiveYearAppreciation}</span>
+        </div>
+        <div class="p-3.5 rounded-xl bg-white/5 border border-white/10">
+          <span class="text-[10px] uppercase tracking-wider text-stone-400 block">Rental Yield</span>
+          <span class="font-serif text-base font-bold text-white">{item.rentalYield}</span>
+        </div>
+        <div class="p-3.5 rounded-xl bg-white/5 border border-white/10">
+          <span class="text-[10px] uppercase tracking-wider text-stone-400 block">Hinjewadi Commute</span>
+          <span class="font-serif text-base font-bold text-amber-300">{item.distanceToHinjewadi}</span>
+        </div>
+      </div>
+
+      <!-- Quick Action Buttons -->
+      <div class="flex flex-wrap items-center gap-4 pt-4">
+        <button
+          data-open-modal
+          data-interest={`Market Report - ${item.shortName}`}
+          class="btn-shimmer px-6 py-3 rounded-full bg-gradient-to-r from-gold-300 via-gold-400 to-gold-500 text-charcoal-950 font-bold uppercase tracking-wider text-xs shadow-lg hover:shadow-gold-500/30 transition-all cursor-pointer"
+        >
+          Download {item.shortName} Market Report PDF
+        </button>
+        <button
+          data-open-modal
+          data-interest={`Mahindra Connection - ${item.shortName}`}
+          class="px-6 py-3 rounded-full border border-white/20 hover:border-gold-400 text-stone-200 hover:text-white font-semibold uppercase tracking-wider text-xs transition-all cursor-pointer"
+        >
+          Explore Mahindra Residences
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Micro-Market Overview & Narrative -->
+  <section class="py-16 bg-[#0e121a] border-b border-white/10">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+        
+        <div class="lg:col-span-7 space-y-6">
+          <div class="space-y-2">
+            <span class="text-xs uppercase tracking-widest text-gold-400 font-bold">Micro-Market Analysis</span>
+            <h2 class="font-serif text-2xl sm:text-3xl text-stone-50 font-bold">
+              {item.name}: Real Estate Dynamics & Growth Drivers
+            </h2>
+          </div>
+          
+          <p class="text-stone-300 text-sm leading-relaxed font-light">
+            {item.microMarketOverview}
+          </p>
+
+          <!-- Infrastructure Drivers Checklist -->
+          <div class="p-6 rounded-2xl bg-charcoal-950 border border-white/10 space-y-4">
+            <h3 class="font-serif text-base text-gold-300 font-bold">
+              Infrastructure Catalysts Driving {item.shortName}
+            </h3>
+            <ul class="space-y-2.5 text-xs text-stone-300">
+              {item.infrastructureCatalysts.map((catalyst) => (
+                <li class="flex items-start gap-2.5">
+                  <span class="text-emerald-400 font-bold text-sm">✓</span>
+                  <span class="leading-relaxed">{catalyst}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+
+        <!-- Mahindra Lifespaces Connection Card -->
+        <div class="lg:col-span-5 space-y-6">
+          <div class="p-6 rounded-2xl glass-card border border-gold-500/30 space-y-5 shadow-2xl relative overflow-hidden">
+            <div class="absolute top-0 right-0 w-32 h-32 bg-gold-500/10 rounded-full blur-2xl pointer-events-none"></div>
+
+            <div class="space-y-2">
+              <span class="px-2.5 py-1 rounded-full bg-brand-red/20 text-brand-red text-[10px] font-bold uppercase tracking-wider border border-brand-red/30">
+                Institutional Developer Impact
+              </span>
+              <h3 class="font-serif text-lg text-white font-bold">
+                Mahindra Lifespaces in West Pune
+              </h3>
+            </div>
+
+            <p class="text-stone-300 text-xs leading-relaxed font-light">
+              {item.mahindraConnection}
+            </p>
+
+            <div class="p-4 rounded-xl bg-black/40 border border-white/10 space-y-2 text-xs">
+              <div class="text-gold-300 font-semibold">Flagship Highlights:</div>
+              <ul class="text-[11px] text-stone-300 space-y-1">
+                <li>• 13.46 Acres acquired in Nande-Mahalunge (~₹3,500 Cr GDV)</li>
+                <li>• 80%+ Green Bio-Reserves & Miyawaki afforestation</li>
+                <li>• Happinest Tathawade Phase 4 with 1.5-Acre Skywalk</li>
+                <li>• Direct 7-min access to Hinjewadi Phase 1</li>
+              </ul>
+            </div>
+
+            <button
+              data-open-modal
+              data-interest={`Pre-Launch EOI - via ${item.shortName}`}
+              class="w-full py-2.5 rounded-xl bg-gold-500/20 hover:bg-gold-500 border border-gold-500/40 text-gold-300 hover:text-charcoal-950 font-bold uppercase tracking-wider text-xs transition-all cursor-pointer"
+            >
+              Request Pre-Launch EOI Details
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Key Advantages Grid -->
+  <section class="py-16 bg-charcoal-950 border-b border-white/10">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+      
+      <div class="text-center max-w-2xl mx-auto space-y-2">
+        <span class="text-xs uppercase tracking-widest text-gold-400 font-bold">Buyer Advantage</span>
+        <h2 class="font-serif text-2xl sm:text-3xl text-stone-50 font-bold">
+          Why Homebuyers & Investors Choose {item.shortName}
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        {item.keyAdvantages.map((adv, idx) => (
+          <div class="p-6 rounded-2xl glass-card border border-white/10 hover:border-gold-500/30 transition-all space-y-3">
+            <div class="w-8 h-8 rounded-full bg-gold-500/10 border border-gold-500/30 flex items-center justify-center text-gold-400 font-mono text-xs font-bold">
+              0{idx + 1}
+            </div>
+            <h3 class="font-serif text-base text-stone-100 font-bold">{adv.title}</h3>
+            <p class="text-xs text-stone-400 font-light leading-relaxed">{adv.desc}</p>
+          </div>
+        ))}
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Localized FAQ Accordion -->
+  <section class="py-16 bg-[#0c1017]">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+      
+      <div class="text-center space-y-2">
+        <span class="text-xs uppercase tracking-widest text-gold-400 font-bold">Buyer Intelligence</span>
+        <h2 class="font-serif text-2xl sm:text-3xl text-stone-50 font-bold">
+          Frequently Asked Questions: {item.shortName} Real Estate
+        </h2>
+      </div>
+
+      <div class="space-y-4">
+        {item.faqs.map((faq) => (
+          <details class="group p-5 rounded-2xl glass-card border border-white/10 open:border-gold-500/30 transition-all">
+            <summary class="flex justify-between items-center cursor-pointer font-serif text-sm font-semibold text-stone-200 group-open:text-gold-300 transition-colors">
+              <span>{faq.q}</span>
+              <span class="text-gold-400 transition-transform group-open:rotate-180">▼</span>
+            </summary>
+            <p class="mt-3 text-xs text-stone-400 leading-relaxed font-light pl-1">
+              {faq.a}
+            </p>
+          </details>
+        ))}
+      </div>
+
+      <!-- Bottom Nav -->
+      <div class="pt-8 text-center">
+        <a
+          href="/west-pune/"
+          class="inline-flex items-center space-x-2 text-xs text-gold-400 hover:text-gold-300 transition-colors font-semibold uppercase tracking-wider"
+        >
+          <span>← Back to All West Pune Micro-Markets</span>
+        </a>
+      </div>
+
+    </div>
+  </section>
+</Layout>

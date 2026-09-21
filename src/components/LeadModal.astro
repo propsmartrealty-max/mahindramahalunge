@@ -2,7 +2,13 @@
 // LeadModal.astro - Multi-Step Lead Engine
 ---
 
-<div id="lead-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-black/85 backdrop-blur-md">
+<div 
+  id="lead-modal" 
+  role="dialog" 
+  aria-modal="true" 
+  aria-labelledby="modal-title" 
+  class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-black/85 backdrop-blur-md"
+>
   <div 
     id="lead-modal-card"
     class="relative w-full max-w-lg bg-[#0e121a] border border-white/10 rounded-2xl shadow-2xl overflow-hidden text-stone-200 glass-card"
@@ -20,7 +26,8 @@
       </div>
       <button 
         id="modal-close-btn"
-        class="p-1 rounded-full text-stone-300 hover:text-white hover:bg-white/10 transition-colors"
+        aria-label="Close Expression Modal"
+        class="p-1 rounded-full text-stone-300 hover:text-white hover:bg-white/10 transition-colors cursor-pointer"
       >
         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
@@ -111,6 +118,7 @@
             Step 3 of 3: Contact Verification
           </label>
           <div class="space-y-3">
+            <div id="modal-error-msg" class="hidden p-2.5 rounded-xl bg-red-500/10 border border-red-500/30 text-red-400 text-xs text-center font-medium"></div>
             <input
               type="text"
               id="lead-name"
@@ -241,17 +249,55 @@
     }
   }
 
-  // Open modal event listener
+  // Open modal event listener with contextual detail handling
   window.addEventListener('open-lead-modal', (e: any) => {
     if (modal) {
       currentStep = 1;
       leadForm?.classList.remove('hidden');
       successScreen?.classList.add('hidden');
       modalProgress?.classList.remove('hidden');
-      if (modalTitle) modalTitle.textContent = 'Priority Expression of Interest';
+
+      const customInterest = e.detail?.interest;
+      const customUnit = e.detail?.unit;
+
+      if (customInterest && modalTitle) {
+        modalTitle.textContent = customInterest.includes('Inquiry') || customInterest.includes('Callback')
+          ? customInterest
+          : `Priority Expression: ${customInterest}`;
+      } else if (modalTitle) {
+        modalTitle.textContent = 'Priority Expression of Interest';
+      }
+
+      if (customUnit) {
+        document.querySelectorAll('.conf-btn').forEach((b) => {
+          const conf = b.getAttribute('data-conf');
+          if (conf && customUnit.toLowerCase().includes(conf.toLowerCase().slice(0, 5))) {
+            document.querySelectorAll('.conf-btn').forEach((btn) => {
+              btn.className = 'conf-btn p-3.5 text-left rounded-lg border border-white/10 bg-charcoal-950/60 text-stone-400 hover:border-stone-500';
+            });
+            b.className = 'conf-btn p-3.5 text-left rounded-lg border border-gold-400 bg-gold-500/10 text-white font-semibold';
+            selectedConf = conf;
+          }
+        });
+      }
+
+      const errorEl = document.getElementById('modal-error-msg');
+      if (errorEl) {
+        errorEl.textContent = '';
+        errorEl.classList.add('hidden');
+      }
+
       updateSteps();
       modal.classList.remove('hidden');
       modal.classList.add('flex');
+    }
+  });
+
+  // Dismiss modal on Escape key press
+  window.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modal && !modal.classList.contains('hidden')) {
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
     }
   });
 
@@ -317,23 +363,47 @@
       currentStep++;
       updateSteps();
     } else {
-      // Step 3 submission
+      // Step 3 submission & validation
       const nameInput = document.getElementById('lead-name') as HTMLInputElement;
       const phoneInput = document.getElementById('lead-phone') as HTMLInputElement;
       const emailInput = document.getElementById('lead-email') as HTMLInputElement;
+      const errorEl = document.getElementById('modal-error-msg');
 
-      if (!nameInput?.value || !phoneInput?.value) {
-        alert('Please provide your name and contact phone number.');
+      const nameVal = nameInput?.value?.trim() || '';
+      const phoneVal = phoneInput?.value?.trim() || '';
+      const cleanDigits = phoneVal.replace(/\D/g, '');
+
+      const showError = (msg: string) => {
+        if (errorEl) {
+          errorEl.textContent = msg;
+          errorEl.classList.remove('hidden');
+        }
+      };
+
+      if (!nameVal) {
+        showError('Please provide your full name.');
+        nameInput?.focus();
         return;
       }
 
-      // Store lead
+      if (cleanDigits.length < 10) {
+        showError('Please provide a valid 10-digit mobile number.');
+        phoneInput?.focus();
+        return;
+      }
+
+      if (errorEl) {
+        errorEl.textContent = '';
+        errorEl.classList.add('hidden');
+      }
+
+      // Store lead securely in localStorage
       try {
         const leads = JSON.parse(localStorage.getItem('mahindra_mahalunge_leads') || '[]');
         leads.push({
-          name: nameInput.value,
-          phone: phoneInput.value,
-          email: emailInput?.value || '',
+          name: nameVal,
+          phone: phoneVal,
+          email: emailInput?.value?.trim() || '',
           configuration: selectedConf,
           purpose: selectedPurpose,
           service: selectedService,
@@ -341,16 +411,16 @@
         });
         localStorage.setItem('mahindra_mahalunge_leads', JSON.stringify(leads));
       } catch (e) {
-        console.error(e);
+        console.error('Lead storage error:', e);
       }
 
-      // Show success
+      // Show success screen
       leadForm?.classList.add('hidden');
       modalProgress?.classList.add('hidden');
       successScreen?.classList.remove('hidden');
       if (modalTitle) modalTitle.textContent = 'Priority Pass Registered';
       const successName = document.getElementById('success-name');
-      if (successName) successName.textContent = `Thank You, ${nameInput.value}`;
+      if (successName) successName.textContent = `Thank You, ${nameVal}`;
     }
   });
 </script>

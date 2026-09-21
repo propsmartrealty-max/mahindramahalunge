@@ -1,0 +1,200 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { connectivityData, type ConnectivityItem } from '../../data/pSeoConnectivity';
+
+export async function getStaticPaths() {
+  return connectivityData.map((item) => ({
+    params: { slug: item.slug },
+    props: { item },
+  }));
+}
+
+interface Props {
+  item: ConnectivityItem;
+}
+
+const { item } = Astro.props;
+
+const pageSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Place",
+      "@id": `https://mahindralifespaceshomes.in/connectivity/${item.slug}/#infrastructure`,
+      "name": item.infrastructureName,
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Mahalunge, Pune",
+        "addressRegion": "Maharashtra",
+        "postalCode": "411045",
+        "addressCountry": "IN"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": `https://mahindralifespaceshomes.in/connectivity/${item.slug}/#faq`,
+      "mainEntity": item.faqs.map((faq) => ({
+        "@type": "Question",
+        "name": faq.q,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": faq.a
+        }
+      }))
+    }
+  ]
+};
+---
+
+<Layout
+  title={item.metaTitle}
+  description={item.metaDescription}
+  keywords={`${item.shortName.toLowerCase()}, mahindra mahalunge ${item.shortName.toLowerCase()}, properties near ${item.shortName.toLowerCase()}, mahalunge connectivity infrastructure, flats near ${item.shortName.toLowerCase()}, mahindra lifespaces pune`}
+  canonical={`https://mahindralifespaceshomes.in/connectivity/${item.slug}/`}
+  customSchema={pageSchema}
+>
+  <!-- Hero Section -->
+  <section class="pt-32 pb-20 bg-charcoal-950 border-b border-white/10 relative overflow-hidden">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
+      
+      <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-gold-500/10 border border-gold-500/30 text-gold-400 text-xs font-semibold uppercase tracking-widest">
+        <span>Strategic Infrastructure Corridor • {item.completionTimeline}</span>
+      </div>
+
+      <h1 class="font-serif text-3xl sm:text-5xl lg:text-6xl font-bold text-stone-100 max-w-4xl leading-tight">
+        {item.h1}
+      </h1>
+
+      <div class="p-6 rounded-2xl bg-charcoal-900 border border-gold-500/30 max-w-4xl grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div>
+          <span class="text-xs text-stone-400 uppercase tracking-wider block">Investment Scale</span>
+          <span class="font-serif text-lg font-bold text-white mt-1 block">{item.investmentScale}</span>
+        </div>
+        <div>
+          <span class="text-xs text-stone-400 uppercase tracking-wider block">Transit Impact Rating</span>
+          <span class="font-serif text-lg font-bold text-emerald-400 mt-1 block">{item.impactScore}</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Key Transit Benefits -->
+  <section class="py-20 bg-charcoal-900 border-b border-white/10">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+      
+      <div class="text-center space-y-2">
+        <span class="text-xs uppercase tracking-widest text-gold-400 font-bold">Commute Gamechanger</span>
+        <h2 class="font-serif text-2xl sm:text-3xl text-stone-50 font-bold">
+          Key Transit Advantages
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {item.transitBenefits.map((benefit, i) => (
+          <div class="p-6 rounded-2xl bg-charcoal-950 border border-white/10 flex items-start space-x-4">
+            <span class="w-8 h-8 rounded-full bg-gold-500/20 border border-gold-500/40 text-gold-300 font-bold flex items-center justify-center flex-shrink-0 text-xs font-serif">
+              0{i + 1}
+            </span>
+            <p class="text-xs sm:text-sm text-stone-200 leading-relaxed font-light">
+              {benefit}
+            </p>
+          </div>
+        ))}
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Key Highlights & Route Overview -->
+  <section class="py-20 bg-charcoal-950">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+      
+      <div class="lg:col-span-7 space-y-6">
+        <span class="text-xs uppercase tracking-widest text-gold-400 font-bold">Corridor Intelligence</span>
+        <h2 class="font-serif text-3xl sm:text-4xl text-stone-100 font-bold leading-tight">
+          How {item.shortName} Fuels Capital Growth at Mahindra Mahalunge
+        </h2>
+
+        <p class="text-xs sm:text-sm text-stone-300 leading-relaxed font-light">
+          {item.routeDetails}
+        </p>
+
+        <div class="space-y-4 pt-2">
+          {item.keyHighlights.map((hl) => (
+            <div class="p-4 rounded-xl bg-charcoal-900 border border-white/10 space-y-1">
+              <h3 class="font-serif text-sm font-bold text-gold-300">{hl.title}</h3>
+              <p class="text-xs text-stone-300 leading-relaxed font-light">{hl.desc}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <!-- Action Box -->
+      <div class="lg:col-span-5 glass-card rounded-2xl border border-gold-500/30 p-8 space-y-6 shadow-2xl text-center">
+        <span class="text-xs uppercase tracking-widest text-gold-400 font-bold block">Exclusive Dossier</span>
+        <h3 class="font-serif text-xl text-stone-50 font-bold">
+          Download Complete Infrastructure Map & DP Layout
+        </h3>
+        <p class="text-xs text-stone-300 font-light leading-relaxed">
+          Access high-resolution PMRDA road alignment maps, Metro Line 3 station maps, and Mahindra Mahalunge master layout.
+        </p>
+        <button
+          data-open-modal
+          data-interest={`Infrastructure Dossier - ${item.shortName}`}
+          class="btn-shimmer w-full py-3.5 rounded-full bg-gradient-to-r from-gold-300 via-gold-400 to-gold-500 text-charcoal-950 font-bold uppercase tracking-wider text-xs shadow-md hover:shadow-gold-500/30 transition-all cursor-pointer"
+        >
+          Download Infrastructure PDF
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Localized FAQs -->
+  <section class="py-20 bg-charcoal-900 border-t border-white/10">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+      <div class="text-center space-y-2">
+        <span class="text-xs uppercase tracking-widest text-gold-400 font-bold">Infrastructure Q&A</span>
+        <h2 class="font-serif text-2xl sm:text-3xl text-stone-50 font-bold">
+          Frequently Asked Questions
+        </h2>
+      </div>
+
+      <div class="space-y-4">
+        {item.faqs.map((faq) => (
+          <details class="glass-card group p-5 rounded-xl border border-white/15 hover:border-gold-500/50 cursor-pointer transition-all">
+            <summary class="flex items-center justify-between font-serif text-sm sm:text-base text-stone-100 font-semibold list-none">
+              <span class="group-hover:text-gold-300 transition-colors">{faq.q}</span>
+              <span class="text-gold-400 group-open:rotate-180 transition-transform">▼</span>
+            </summary>
+            <p class="mt-3 text-xs sm:text-sm text-stone-200 leading-relaxed pt-3 border-t border-white/10 font-light">
+              {faq.a}
+            </p>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Cross-Link Other Connectivity Pages -->
+  <section class="py-16 bg-charcoal-950 border-t border-white/10">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
+      <h3 class="font-serif text-lg text-stone-100 font-bold">
+        Explore Other West Pune Infrastructure Corridors:
+      </h3>
+      <div class="flex flex-wrap gap-3">
+        {connectivityData
+          .filter((c) => c.slug !== item.slug)
+          .map((c) => (
+            <a
+              href={`/connectivity/${c.slug}/`}
+              class="px-4 py-2 rounded-xl bg-charcoal-900 border border-white/10 hover:border-gold-500/50 text-xs text-stone-200 hover:text-gold-300 transition-all"
+            >
+              {c.shortName} →
+            </a>
+          ))}
+      </div>
+    </div>
+  </section>
+</Layout>

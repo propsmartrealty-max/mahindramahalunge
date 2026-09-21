@@ -1,0 +1,69 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+---
+
+<Layout
+  title="Vastu Compliant Flats at Mahindra Mahalunge | North-East & East Facing Vastu Homes"
+  description="Mahindra Mahalunge Vastu-compliant residences: all configurations oriented North-East and East as per Vastu Shastra principles. Explore 2, 3 & 4 BHK Vastu homes near Hinjewadi Pune."
+  keywords="vastu compliant flats mahalunge, vastu flats near hinjewadi pune, mahindra mahalunge vastu homes, north east facing flats mahindra mahalunge, east facing 2 bhk mahalunge, vastu compliant luxury flats pune"
+  canonical="https://mahindralifespaceshomes.in/residences/vastu-compliant/"
+>
+  <section class="pt-32 pb-20 bg-charcoal-950 border-b border-white/10 relative overflow-hidden">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
+      <div class="inline-flex items-center space-x-2 px-3 py-1 rounded bg-gold-500/10 border border-gold-500/30 text-gold-400 text-xs font-semibold uppercase tracking-widest">
+        <span>Vastu Shastra Certified · Sacred Space Engineering</span>
+      </div>
+      <h1 class="font-serif text-3xl sm:text-5xl lg:text-6xl font-bold text-stone-100 max-w-4xl leading-tight">
+        Vastu-Compliant Residences: <br />
+        <span class="gold-gradient-text">Harmonised Living at Mahindra Mahalunge</span>
+      </h1>
+      <p class="text-stone-300 text-sm sm:text-base max-w-2xl font-light leading-relaxed">
+        Every residence at Mahindra Mahalunge is meticulously oriented as per Vastu Shastra — with North-East and East-facing configurations designed to maximize natural morning sunlight, positive energy flow, and holistic family wellbeing.
+      </p>
+    </div>
+  </section>
+
+  <!-- Vastu Principles Grid -->
+  <section class="py-20 bg-charcoal-900 border-b border-white/10">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+      <div class="text-center space-y-2">
+        <span class="text-xs uppercase tracking-widest text-gold-400 font-bold">Vastu Shastra Principles</span>
+        <h2 class="font-serif text-2xl sm:text-3xl text-stone-50 font-bold">How Vastu is Integrated at Mahindra Mahalunge</h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {[
+          { dir: '☀', title: 'East-Facing Main Entry', desc: 'Primary entrance facing East captures the first morning sunlight, widely considered most auspicious in Vastu Shastra.' },
+          { dir: '🧭', title: 'North-East Living Room', desc: 'Living and dining zones oriented North-East to ensure maximum positivity, open social energy, and natural ventilation.' },
+          { dir: '💤', title: 'South-West Master Bedroom', desc: 'Master bedrooms placed South-West as per Vastu to ensure deep, restful sleep and marital harmony for occupants.' },
+          { dir: '🍳', title: 'South-East Kitchen Placement', desc: 'Kitchens positioned South-East — the domain of Agni (fire) — promoting health, nourishment, and family prosperity.' },
+          { dir: '💧', title: 'North-East Water Bodies', desc: 'Bathrooms and water features sited North-East to channel fresh, health-giving water energy throughout the home.' },
+          { dir: '🌿', title: 'Central Open Courtyard', desc: 'Brahmasthana (sacred central zone) kept open with landscaped courtyards and communal green spaces.' }
+        ].map((p) => (
+          <div class="p-6 rounded-2xl bg-charcoal-950 border border-gold-500/20 space-y-3 hover:border-gold-500/50 transition-all">
+            <div class="text-2xl">{p.dir}</div>
+            <h3 class="font-serif text-sm font-bold text-gold-300">{p.title}</h3>
+            <p class="text-xs text-stone-300 leading-relaxed font-light">{p.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-20 bg-charcoal-950">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
+      <h2 class="font-serif text-3xl text-stone-100 font-bold">Request Vastu-Compliant Floor Plans</h2>
+      <p class="text-stone-300 text-sm font-light leading-relaxed max-w-2xl mx-auto">
+        Our residential consultants will guide you to the ideal Vastu-certified configuration — East or North-East facing — across 2, 3 & 4 BHK options at Mahindra Mahalunge.
+      </p>
+      <button
+        data-open-modal
+        data-unit="Vastu Compliant"
+        data-interest="Vastu Compliant Flat Enquiry"
+        class="btn-shimmer px-10 py-4 rounded-full bg-gradient-to-r from-gold-300 via-gold-400 to-gold-500 text-charcoal-950 font-bold uppercase tracking-wider text-xs shadow-lg hover:shadow-gold-500/30 transition-all cursor-pointer"
+      >
+        Find My Vastu Flat
+      </button>
+    </div>
+  </section>
+</Layout>

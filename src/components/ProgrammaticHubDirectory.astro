@@ -1,0 +1,173 @@
+---
+import { techParkData } from '../data/pSeoTechParks';
+import { comparisonData } from '../data/pSeoComparisons';
+import { connectivityData } from '../data/pSeoConnectivity';
+import { westPuneLocalityData } from '../data/pSeoWestPuneLocalities';
+import { brandProjectData } from '../data/pSeoBrandProjects';
+---
+
+<section class="py-20 bg-[#090c12] border-t border-gold-500/20 relative">
+  <!-- Ambient glow -->
+  <div class="absolute top-0 right-1/4 w-96 h-96 bg-gold-500/5 rounded-full blur-3xl pointer-events-none"></div>
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12 relative z-10">
+    
+    <div class="reveal flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-white/10 pb-6">
+      <div class="space-y-2">
+        <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-gold-500/10 border border-gold-500/30 text-gold-400 text-xs font-semibold uppercase tracking-widest">
+          <span class="w-1.5 h-1.5 rounded-full bg-gold-400"></span>
+          <span>Programmatic Locality Directory</span>
+        </div>
+        <h2 class="font-serif text-2xl sm:text-3xl lg:text-4xl text-stone-50 font-bold">
+          Mahalunge Real Estate & Transit Intelligence Network
+        </h2>
+        <p class="text-xs sm:text-sm text-stone-300 max-w-2xl font-light leading-relaxed">
+          Comprehensive commute studies, direct head-to-head project comparisons, and PMRDA infrastructure corridors around Mahindra Mahalunge.
+        </p>
+      </div>
+      <div class="text-xs text-stone-400 font-mono">
+        <span>{techParkData.length + comparisonData.length + connectivityData.length + westPuneLocalityData.length + brandProjectData.length} Verified Programmatic Dossiers</span>
+      </div>
+    </div>
+
+    <!-- 5 Columns Programmatic Index Grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 text-xs">
+      
+      <!-- Col 1: Tech Parks & Employer Hubs -->
+      <div class="reveal glass-card p-6 rounded-2xl border border-white/10 space-y-4 hover:border-gold-500/30 transition-all">
+        <div class="border-b border-white/10 pb-3">
+          <span class="text-xs uppercase tracking-widest text-gold-400 font-bold block">Cluster 01</span>
+          <h3 class="font-serif text-base text-stone-100 font-bold mt-1">IT Campuses & Tech Parks</h3>
+          <p class="text-[11px] text-stone-400 font-light mt-0.5">Commute times & tailored residences</p>
+        </div>
+        <ul class="space-y-2.5">
+          {techParkData.map((park) => (
+            <li>
+              <a
+                href={`/near/${park.slug}/`}
+                class="group flex items-center justify-between text-stone-300 hover:text-gold-300 transition-colors py-1"
+              >
+                <span class="truncate pr-2">{park.shortName}</span>
+                <span class="text-[10px] font-mono text-gold-400/80 group-hover:translate-x-0.5 transition-transform flex-shrink-0">
+                  {park.distanceKm} →
+                </span>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <!-- Col 2: Project Comparisons -->
+      <div class="reveal delay-100 glass-card p-6 rounded-2xl border border-white/10 space-y-4 hover:border-gold-500/30 transition-all">
+        <div class="border-b border-white/10 pb-3">
+          <span class="text-xs uppercase tracking-widest text-gold-400 font-bold block">Cluster 02</span>
+          <h3 class="font-serif text-base text-stone-100 font-bold mt-1">Head-to-Head Comparisons</h3>
+          <p class="text-[11px] text-stone-400 font-light mt-0.5">Density, RERA delivery & pricing</p>
+        </div>
+        <ul class="space-y-2.5">
+          {comparisonData.map((comp) => (
+            <li>
+              <a
+                href={`/compare/${comp.slug}/`}
+                class="group flex items-center justify-between text-stone-300 hover:text-gold-300 transition-colors py-1"
+              >
+                <span class="truncate pr-2">vs {comp.competitorName}</span>
+                <span class="text-[10px] font-mono text-gold-400/80 group-hover:translate-x-0.5 transition-transform flex-shrink-0">
+                  Analysis →
+                </span>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <!-- Col 3: Transit & Infrastructure -->
+      <div class="reveal delay-200 glass-card p-6 rounded-2xl border border-white/10 space-y-4 hover:border-gold-500/30 transition-all">
+        <div class="border-b border-white/10 pb-3">
+          <span class="text-xs uppercase tracking-widest text-gold-400 font-bold block">Cluster 03</span>
+          <h3 class="font-serif text-base text-stone-100 font-bold mt-1">Infrastructure Corridors</h3>
+          <p class="text-[11px] text-stone-400 font-light mt-0.5">PMRDA DP roads, bridges & Metro 3</p>
+        </div>
+        <ul class="space-y-2.5">
+          {connectivityData.map((conn) => (
+            <li>
+              <a
+                href={`/connectivity/${conn.slug}/`}
+                class="group flex items-center justify-between text-stone-300 hover:text-gold-300 transition-colors py-1"
+              >
+                <span class="truncate pr-2">{conn.shortName}</span>
+                <span class="text-[10px] font-mono text-emerald-400/80 group-hover:translate-x-0.5 transition-transform flex-shrink-0">
+                  Transit →
+                </span>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <!-- Col 4: West Pune Localities & Micro-Markets -->
+      <div class="reveal delay-300 glass-card p-6 rounded-2xl border border-white/10 space-y-4 hover:border-gold-500/30 transition-all">
+        <div class="border-b border-white/10 pb-3">
+          <span class="text-xs uppercase tracking-widest text-gold-400 font-bold block">Cluster 04</span>
+          <h3 class="font-serif text-base text-stone-100 font-bold mt-1">West Pune Micro-Markets</h3>
+          <p class="text-[11px] text-stone-400 font-light mt-0.5">PMRDA growth zones & rates</p>
+        </div>
+        <ul class="space-y-2.5">
+          {westPuneLocalityData.slice(0, 7).map((loc) => (
+            <li>
+              <a
+                href={`/west-pune/${loc.slug}/`}
+                class="group flex items-center justify-between text-stone-300 hover:text-gold-300 transition-colors py-1"
+              >
+                <span class="truncate pr-2">{loc.shortName}</span>
+                <span class="text-[10px] font-mono text-gold-400/80 group-hover:translate-x-0.5 transition-transform flex-shrink-0">
+                  {loc.avgPricePerSqFt.split(' - ')[0]} →
+                </span>
+              </a>
+            </li>
+          ))}
+        </ul>
+        <a
+          href="/west-pune/"
+          class="inline-flex items-center text-[11px] text-gold-400 hover:text-gold-300 font-semibold pt-1 border-t border-white/5 w-full justify-between"
+        >
+          <span>Explore All 12 Hubs</span>
+          <span>→</span>
+        </a>
+      </div>
+
+      <!-- Col 5: Brand Project Deep-Dives -->
+      <div class="reveal delay-400 glass-card p-6 rounded-2xl border border-white/10 space-y-4 hover:border-gold-500/30 transition-all">
+        <div class="border-b border-white/10 pb-3">
+          <span class="text-xs uppercase tracking-widest text-gold-400 font-bold block">Cluster 05</span>
+          <h3 class="font-serif text-base text-stone-100 font-bold mt-1">Brand Project Deep-Dives</h3>
+          <p class="text-[11px] text-stone-400 font-light mt-0.5">9 Mahindra Pune projects — RERA, pricing & amenities</p>
+        </div>
+        <ul class="space-y-2.5">
+          {brandProjectData.map((proj) => (
+            <li>
+              <a
+                href={`/brand/projects/${proj.slug}/`}
+                class="group flex items-center justify-between text-stone-300 hover:text-gold-300 transition-colors py-1"
+              >
+                <span class="truncate pr-2">{proj.shortName}</span>
+                <span class="text-[10px] font-mono text-cyan-400/80 group-hover:translate-x-0.5 transition-transform flex-shrink-0">
+                  {proj.status === 'Pre-Launch' ? 'Pre-Launch' : proj.status === 'Under Construction' ? 'UC' : 'Delivered'} →
+                </span>
+              </a>
+            </li>
+          ))}
+        </ul>
+        <a
+          href="/brand/"
+          class="inline-flex items-center text-[11px] text-gold-400 hover:text-gold-300 font-semibold pt-1 border-t border-white/5 w-full justify-between"
+        >
+          <span>Full Brand Portfolio</span>
+          <span>→</span>
+        </a>
+      </div>
+
+    </div>
+
+  </div>
+</section>

@@ -1,11 +1,65 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import MahindraPuneEcosystem from '../../components/MahindraPuneEcosystem.astro';
+import MahindraKeywordMatrix from '../../components/MahindraKeywordMatrix.astro';
+import { corporateProfile, mahindraPuneProjects } from '../../data/mahindraPuneEcosystem';
+
+const brandSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://mahindralifespaceshomes.in/#organization",
+      "name": corporateProfile.legalName,
+      "alternateName": [corporateProfile.name, "Mahindra Lifespaces Pune", "Mahindra Lifespace Developers Ltd."],
+      "url": corporateProfile.website,
+      "logo": "https://mahindralifespaceshomes.in/images/mahindra-lifespaces-logo.svg",
+      "tickerSymbol": [`NSE:${corporateProfile.nseSymbol}`, `BSE:${corporateProfile.bseCode}`],
+      "parentOrganization": {
+        "@type": "Organization",
+        "name": corporateProfile.parentOrganization,
+        "url": "https://www.mahindra.com/"
+      },
+      "sameAs": [
+        corporateProfile.wikipediaUrl,
+        `https://www.wikidata.org/wiki/${corporateProfile.wikidataId}`,
+        "https://www.bseindia.com/stock-share-price/mahindra-lifespace-developers-ltd/mahlife/532313/",
+        "https://www.nseindia.com/get-quotes/equity?symbol=MAHLIFE"
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": corporateProfile.headquarters,
+        "addressCountry": "IN"
+      }
+    },
+    {
+      "@type": "ItemList",
+      "name": "Mahindra Lifespaces Pune Portfolio of Residential Developments",
+      "description": "Exhaustive track record of delivered and ongoing residential master communities by Mahindra Lifespaces across Pune.",
+      "itemListElement": mahindraPuneProjects.map((p, idx) => ({
+        "@type": "ListItem",
+        "position": idx + 1,
+        "item": {
+          "@type": "ApartmentComplex",
+          "name": p.name,
+          "description": p.summary,
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": p.location,
+            "addressCountry": "IN"
+          }
+        }
+      }))
+    }
+  ]
+};
 ---
 
 <Layout
-  title="Mahindra Lifespaces Legacy & Pune Portfolio | Homes of Positive Energy"
-  description="Discover the 75+ year legacy of the Mahindra Group, Mahindra Lifespaces' 50+ residential projects, green building pioneer status, and proven track record across Pune."
-  canonical="https://mahindralifespaceshomes.in/brand"
+  title="Mahindra Lifespaces Pune | New Launch Mahalunge & Complete Residential Portfolio"
+  description="Discover Mahindra Lifespaces Pune: 55M+ sq.ft. delivered legacy, stock listed transparency (NSE: MAHLIFE), and the upcoming 13.46-acre Mahindra Mahalunge new project launch."
+  canonical="https://mahindralifespaceshomes.in/brand/"
+  customSchema={brandSchema}
 >
   <!-- Hero Section -->
   <section class="pt-32 pb-20 bg-charcoal-950 border-b border-white/10 relative overflow-hidden">
@@ -100,59 +154,9 @@ import Layout from '../../layouts/Layout.astro';
     </div>
   </section>
 
-  <!-- Pune Portfolio Showcase -->
-  <section class="py-20 bg-charcoal-900 border-t border-white/10">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
-      <div class="text-center space-y-3">
-        <span class="text-xs uppercase tracking-widest text-gold-400 font-bold">Pune Track Record</span>
-        <h2 class="font-serif text-3xl sm:text-4xl text-stone-100 font-bold">Completed & Ongoing Developments</h2>
-        <p class="text-xs text-stone-400 max-w-xl mx-auto leading-relaxed">
-          Explore Mahindra’s proven legacy in creating vibrant residential ecosystems across Pune.
-        </p>
-      </div>
+  <!-- Complete Hardened Pune Portfolio Ecosystem Component -->
+  <MahindraPuneEcosystem />
 
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        
-        <div class="glass-card rounded-xl overflow-hidden border border-white/10 space-y-4">
-          <img
-            src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=600&q=80"
-            alt="Mahindra Antheia Pimpri"
-            class="w-full h-48 object-cover"
-          />
-          <div class="p-6 pt-0 space-y-2">
-            <span class="text-[10px] uppercase tracking-wider text-emerald-400 font-bold">Delivered Landmark</span>
-            <h3 class="font-serif text-lg text-stone-100 font-semibold">Mahindra Antheia</h3>
-            <p class="text-xs text-stone-400">Pimpri-Chinchwad, Pune • 16-acre master community with extensive sports and clubhouse amenities.</p>
-          </div>
-        </div>
-
-        <div class="glass-card rounded-xl overflow-hidden border border-white/10 space-y-4">
-          <img
-            src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=600&q=80"
-            alt="Mahindra Centralis Pimpri"
-            class="w-full h-48 object-cover"
-          />
-          <div class="p-6 pt-0 space-y-2">
-            <span class="text-[10px] uppercase tracking-wider text-emerald-400 font-bold">Delivered Landmark</span>
-            <h3 class="font-serif text-lg text-stone-100 font-semibold">Mahindra Centralis</h3>
-            <p class="text-xs text-stone-400">Pimpri, Pune • Four high-rise residential towers designed around urban lifestyle conveniences.</p>
-          </div>
-        </div>
-
-        <div class="glass-card rounded-xl overflow-hidden border border-white/10 space-y-4">
-          <img
-            src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=600&q=80"
-            alt="Mahindra Happinest Tathawade"
-            class="w-full h-48 object-cover"
-          />
-          <div class="p-6 pt-0 space-y-2">
-            <span class="text-[10px] uppercase tracking-wider text-gold-400 font-bold">Under Construction</span>
-            <h3 class="font-serif text-lg text-stone-100 font-semibold">Mahindra Happinest Tathawade</h3>
-            <p class="text-xs text-stone-400">Tathawade, West Pune • India’s first fusion home development blending indoor and outdoor living.</p>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
+  <!-- Complete Pune Mahindra & Mahalunge Launch Search Matrix -->
+  <MahindraKeywordMatrix />
 </Layout>
