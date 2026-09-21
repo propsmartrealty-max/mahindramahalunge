@@ -146,6 +146,9 @@ Allow: /_astro/
 Allow: /images/
 Allow: /llms.txt
 Allow: /llms-full.txt
+Allow: /rss.xml
+Allow: /site.webmanifest
+Allow: /opensearch.xml
 Disallow: /api/
 Disallow: /cdn-cgi/
 
@@ -154,6 +157,8 @@ Disallow: /cdn-cgi/
 # ------------------------------------------------------------------------------
 Host: https://mahindralifespaceshomes.in
 Sitemap: https://mahindralifespaceshomes.in/sitemap.xml
+# Syndication Feed:
+# https://mahindralifespaceshomes.in/rss.xml
 # AI Search Engine Manifests:
 # https://mahindralifespaceshomes.in/llms.txt
 # https://mahindralifespaceshomes.in/llms-full.txt

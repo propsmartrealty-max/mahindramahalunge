@@ -1,0 +1,18 @@
+{
+  "name": "Mahindra Lifespaces Mahalunge",
+  "short_name": "Mahindra Mahalunge",
+  "description": "Official showcase for Mahindra Mahalunge 13.46-acre master development in West Pune by Mahindra Lifespaces Developers Limited.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0c1017",
+  "theme_color": "#0c1017",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

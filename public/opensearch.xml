@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/">
+  <ShortName>Mahindra Mahalunge</ShortName>
+  <Description>Search Mahindra Mahalunge Real Estate &amp; Transit Intelligence</Description>
+  <InputEncoding>UTF-8</InputEncoding>
+  <Image width="16" height="16" type="image/svg+xml">https://mahindralifespaceshomes.in/favicon.svg</Image>
+  <Url type="text/html" template="https://mahindralifespaceshomes.in/faq/?q={searchTerms}"/>
+</OpenSearchDescription>
