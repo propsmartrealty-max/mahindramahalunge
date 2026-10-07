@@ -1,5 +1,7 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import ResidenceSelector from '../../components/ResidenceSelector.astro';
+import MasterPlanViewer from '../../components/MasterPlanViewer.astro';
 
 const residencesSchema = {
   "@context": "https://schema.org",
@@ -55,6 +57,34 @@ const residencesSchema = {
       <p class="text-stone-300 text-sm sm:text-base max-w-2xl font-light leading-relaxed">
         Officially launched across 13.46 acres in Baner Annex, Mahalunge, Pune. Offering 9 curated configurations from 635 to 1,465 sq.ft. RERA carpet area (688 to 1,651 sq.ft. aggregate) starting from ₹1.85 Cr*.
       </p>
+    </div>
+  </section>
+
+  <!-- Interactive Luxury Floor Plan Explorer -->
+  <section class="py-20 bg-charcoal-900 border-b border-white/10">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+      <div class="text-center max-w-2xl mx-auto space-y-2">
+        <span class="text-xs uppercase tracking-widest text-gold-400 font-bold">Interactive Floor Plans</span>
+        <h2 class="font-serif text-3xl sm:text-4xl text-stone-100 font-bold">Explore Unit Blueprints</h2>
+        <p class="text-xs sm:text-sm text-stone-300">
+          Switch between 2, 3 & 4 BHK luxury residences to inspect layouts, RERA carpet dimensions, and outdoor decks.
+        </p>
+      </div>
+      <ResidenceSelector />
+    </div>
+  </section>
+
+  <!-- Interactive 13.46-Acre Master Layout -->
+  <section class="py-20 bg-charcoal-950 border-b border-white/10">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+      <div class="text-center max-w-2xl mx-auto space-y-2">
+        <span class="text-xs uppercase tracking-widest text-gold-400 font-bold">13.46-Acre Township Topography</span>
+        <h2 class="font-serif text-3xl sm:text-4xl text-stone-100 font-bold">Interactive Master Layout</h2>
+        <p class="text-xs sm:text-sm text-stone-300">
+          Explore the master plan layout across 13.46 acres — ~44,000 sq.ft clubhouse, sunken aqua pool, 6 towers, and 9+ acres of greens.
+        </p>
+      </div>
+      <MasterPlanViewer />
     </div>
   </section>
 

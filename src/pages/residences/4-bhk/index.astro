@@ -76,38 +76,99 @@ import Layout from '../../../layouts/Layout.astro';
       </div>
 
       <div class="lg:col-span-5 space-y-6">
-        <h3 class="font-serif text-2xl text-stone-100 font-bold">Key Architectural Advantages</h3>
-        <ul class="space-y-3 text-xs sm:text-sm text-stone-300">
+        <h3 class="font-serif text-2xl text-stone-100 font-bold">4 BHK Typologies Breakdown</h3>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
+          <div class="p-3 bg-charcoal-950 rounded-lg border border-gold-500/30">
+            <div class="flex items-center justify-between">
+              <span class="font-bold text-gold-400">4 BHK Luxury B</span>
+              <span class="text-[9px] uppercase tracking-wider text-emerald-400 bg-emerald-500/10 px-1.5 py-0.5 rounded">Phase 1</span>
+            </div>
+            <div class="text-stone-300 mt-1">1,438 sq.ft. RERA</div>
+            <div class="text-[10px] text-stone-400">1,615 sq.ft. Aggregate</div>
+          </div>
+          <div class="p-3 bg-charcoal-950 rounded-lg border border-gold-500/30">
+            <div class="flex items-center justify-between">
+              <span class="font-bold text-gold-400">4 BHK Luxury A</span>
+              <span class="text-[9px] uppercase tracking-wider text-gold-400 bg-gold-500/10 px-1.5 py-0.5 rounded">Show Home</span>
+            </div>
+            <div class="text-stone-300 mt-1">1,465 sq.ft. RERA</div>
+            <div class="text-[10px] text-stone-400">1,650 sq.ft. Aggregate</div>
+          </div>
+        </div>
+
+        <div class="p-3 rounded-lg bg-gold-500/10 border border-gold-500/20 text-xs text-stone-200 flex items-center gap-2.5">
+          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+          <span><strong>4 BHK Show Home Experience:</strong> Fully furnished 4 BHK model residence is open for private preview at the on-site sales gallery.</span>
+        </div>
+
+        <h4 class="font-serif text-lg text-stone-100 font-bold">Key Architectural Advantages</h4>
+        <ul class="space-y-2.5 text-xs text-stone-300">
           <li class="flex items-start space-x-2">
             <span class="text-gold-400">✦</span>
-            <span>Private elevator access with dedicated access card vestibule.</span>
+            <span>Private elevator lobby with dedicated access card vestibule.</span>
           </li>
           <li class="flex items-start space-x-2">
             <span class="text-gold-400">✦</span>
-            <span>28-foot living salon opening onto an unobstructed sky deck.</span>
+            <span>28-foot living salon opening onto an unobstructed panoramic sky deck.</span>
           </li>
           <li class="flex items-start space-x-2">
             <span class="text-gold-400">✦</span>
-            <span>Dual master suites with luxury five-fixture soaking bathrooms.</span>
+            <span>Dual presidential suites with luxury five-fixture bathrooms and walk-in closets.</span>
           </li>
           <li class="flex items-start space-x-2">
             <span class="text-gold-400">✦</span>
-            <span>Dedicated house-help quarters with separated service entrance.</span>
+            <span>3-side open layout delivering uninterrupted 270° Sahyadri mountain vistas.</span>
           </li>
         </ul>
 
-        <div class="pt-4 flex flex-col sm:flex-row gap-3">
+        <div class="pt-2 flex flex-col sm:flex-row gap-3">
           <button
             data-open-modal
-            data-unit="4 BHK Signature"
-            data-interest="4 BHK Cost Sheet Request"
-            class="px-6 py-3 rounded bg-gradient-to-r from-gold-400 to-gold-500 text-charcoal-950 text-xs font-bold uppercase tracking-widest hover:shadow-xl transition-all"
+            data-unit="4 BHK Luxury Show Residence"
+            data-interest="Book 4 BHK Show Home Visit"
+            class="btn-shimmer flex-1 py-3 px-4 rounded-xl bg-gradient-to-r from-gold-400 to-gold-500 text-charcoal-950 text-xs font-bold uppercase tracking-widest hover:shadow-xl transition-all"
           >
-            Get 4 BHK Cost Sheet
+            Schedule Show Home Visit
+          </button>
+          <button
+            data-open-modal
+            data-interest="4 BHK Floor Plan PDF"
+            class="py-3 px-4 rounded-xl border border-white/20 hover:border-gold-400/60 bg-white/5 text-stone-200 hover:text-white text-xs uppercase tracking-wider transition-all"
+          >
+            Download 4 BHK Floor Plans PDF
           </button>
         </div>
       </div>
 
+    </div>
+  </section>
+
+  <!-- 13.46-Acre Master Layout Context -->
+  <section class="py-20 bg-charcoal-900 border-t border-white/10">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+      <div class="text-center max-w-2xl mx-auto space-y-2">
+        <span class="text-xs uppercase tracking-widest text-gold-400 font-bold">Township Layout</span>
+        <h2 class="font-serif text-3xl text-stone-100 font-bold">4 BHK Signature Towers in Master Layout</h2>
+        <p class="text-xs sm:text-sm text-stone-300">
+          Positioned on the highest vantage points across the 13.46-acre master development overlooking the valley and central river basin.
+        </p>
+      </div>
+      <div class="p-6 rounded-2xl bg-charcoal-950 border border-white/10">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-xs text-stone-300">
+          <div class="p-4 rounded-xl bg-charcoal-900 border border-white/5 space-y-1.5">
+            <div class="font-bold text-gold-400 text-sm">Highest Elevation Sky Suites</div>
+            <p>4 BHK signature residences are placed on premium elevated floors commanding 270° uninterrupted valley panoramas and Sahyadri horizon sunrises.</p>
+          </div>
+          <div class="p-4 rounded-xl bg-charcoal-900 border border-white/5 space-y-1.5">
+            <div class="font-bold text-gold-400 text-sm">Ultra-Low Density Floor Plate</div>
+            <p>Only 2 to 4 residences per core with dual high-speed elevators and dedicated service lift ensuring supreme exclusivity and minimal wait times.</p>
+          </div>
+          <div class="p-4 rounded-xl bg-charcoal-900 border border-white/5 space-y-1.5">
+            <div class="font-bold text-gold-400 text-sm">Private Green Promenade Access</div>
+            <p>Direct priority elevator access to the vehicle-free 9+ acre central greens, reflexology garden, and private clubhouse dining salon.</p>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 </Layout>

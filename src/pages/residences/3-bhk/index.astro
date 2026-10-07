@@ -76,38 +76,93 @@ import Layout from '../../../layouts/Layout.astro';
       </div>
 
       <div class="lg:col-span-5 space-y-6">
-        <h3 class="font-serif text-2xl text-stone-100 font-bold">Key Architectural Advantages</h3>
-        <ul class="space-y-3 text-xs sm:text-sm text-stone-300">
+        <h3 class="font-serif text-2xl text-stone-100 font-bold">3 BHK Typologies Breakdown</h3>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs">
+          <div class="p-3 bg-charcoal-950 rounded-lg border border-white/10">
+            <div class="font-bold text-gold-400">3 BHK Deluxe C</div>
+            <div class="text-stone-300 mt-1">882 sq.ft. RERA</div>
+            <div class="text-[10px] text-stone-400">995 sq.ft. Aggregate</div>
+          </div>
+          <div class="p-3 bg-charcoal-950 rounded-lg border border-white/10">
+            <div class="font-bold text-gold-400">3 BHK Deluxe B</div>
+            <div class="text-stone-300 mt-1">894 sq.ft. RERA</div>
+            <div class="text-[10px] text-stone-400">1,007 sq.ft. Aggregate</div>
+          </div>
+          <div class="p-3 bg-charcoal-950 rounded-lg border border-white/10">
+            <div class="font-bold text-gold-400">3 BHK Ultra Luxury B</div>
+            <div class="text-stone-300 mt-1">1,065 sq.ft. RERA</div>
+            <div class="text-[10px] text-stone-400">1,206 sq.ft. Aggregate</div>
+          </div>
+        </div>
+
+        <h4 class="font-serif text-lg text-stone-100 font-bold">Key Architectural Advantages</h4>
+        <ul class="space-y-2.5 text-xs text-stone-300">
           <li class="flex items-start space-x-2">
             <span class="text-gold-400">✦</span>
-            <span>24-foot wide living and banquet dining salon.</span>
+            <span>24-foot wide living and banquet dining salon with deep balcony deck.</span>
           </li>
           <li class="flex items-start space-x-2">
             <span class="text-gold-400">✦</span>
-            <span>Master bedroom with dedicated walk-in wardrobe and en-suite bath.</span>
+            <span>Master suite with dedicated walk-in wardrobe alcove and luxury en-suite bathroom.</span>
           </li>
           <li class="flex items-start space-x-2">
             <span class="text-gold-400">✦</span>
-            <span>Flexible third bedroom ideal as a hybrid work office or library.</span>
+            <span>Flexible third bedroom ideal as a hybrid work office, library, or children's study.</span>
           </li>
           <li class="flex items-start space-x-2">
             <span class="text-gold-400">✦</span>
-            <span>Uninterrupted dual vistas overlooking central 4-acre bio-reserve.</span>
+            <span>Double exposure overlooking ~44,000 sq.ft clubhouse and 9+ acres of central greens.</span>
           </li>
         </ul>
 
-        <div class="pt-4 flex flex-col sm:flex-row gap-3">
+        <div class="pt-2 flex flex-col sm:flex-row gap-3">
           <button
             data-open-modal
-            data-unit="3 BHK Luxe"
+            data-unit="3 BHK All Typologies"
             data-interest="3 BHK Cost Sheet Request"
-            class="px-6 py-3 rounded bg-gradient-to-r from-gold-400 to-gold-500 text-charcoal-950 text-xs font-bold uppercase tracking-widest hover:shadow-xl transition-all"
+            class="btn-shimmer flex-1 py-3 px-4 rounded-xl bg-gradient-to-r from-gold-400 to-gold-500 text-charcoal-950 text-xs font-bold uppercase tracking-widest hover:shadow-xl transition-all"
           >
             Get 3 BHK Cost Sheet
+          </button>
+          <button
+            data-open-modal
+            data-interest="3 BHK Floor Plan PDF"
+            class="py-3 px-4 rounded-xl border border-white/20 hover:border-gold-400/60 bg-white/5 text-stone-200 hover:text-white text-xs uppercase tracking-wider transition-all"
+          >
+            Download 3 BHK Floor Plans PDF
           </button>
         </div>
       </div>
 
+    </div>
+  </section>
+
+  <!-- 13.46-Acre Master Layout Context -->
+  <section class="py-20 bg-charcoal-900 border-t border-white/10">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+      <div class="text-center max-w-2xl mx-auto space-y-2">
+        <span class="text-xs uppercase tracking-widest text-gold-400 font-bold">Township Layout</span>
+        <h2 class="font-serif text-3xl text-stone-100 font-bold">3 BHK Towers Position in Master Layout</h2>
+        <p class="text-xs sm:text-sm text-stone-300">
+          Inspect how the 3 BHK luxury towers are nestled adjacent to the sunken aqua bar pool, central forest reserve, and athletic complex.
+        </p>
+      </div>
+      <div class="p-6 rounded-2xl bg-charcoal-950 border border-white/10">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-xs text-stone-300">
+          <div class="p-4 rounded-xl bg-charcoal-900 border border-white/5 space-y-1.5">
+            <div class="font-bold text-gold-400 text-sm">Corner Positioned Floor Plates</div>
+            <p>Most 3 BHK units occupy strategic corner wings ensuring 3-sided open ventilation, panoramic corner vistas, and elevated privacy from neighboring residences.</p>
+          </div>
+          <div class="p-4 rounded-xl bg-charcoal-900 border border-white/5 space-y-1.5">
+            <div class="font-bold text-gold-400 text-sm">Direct Pool & Clubhouse Views</div>
+            <p>Balcony decks look directly onto the central water body, temperature-regulated pool with sunken aqua bar, and ~44,000 sq.ft lifestyle complex.</p>
+          </div>
+          <div class="p-4 rounded-xl bg-charcoal-900 border border-white/5 space-y-1.5">
+            <div class="font-bold text-gold-400 text-sm">G+30 to 37 Storey Elevations</div>
+            <p>Elevated sky residences enjoy unobstructed vistas across the Baner-Mahalunge skyline, Mula river basin, and Sahyadri mountain ridgelines.</p>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 </Layout>

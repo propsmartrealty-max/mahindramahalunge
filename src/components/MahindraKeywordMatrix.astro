@@ -102,30 +102,40 @@ const matrixFaqSchema = {
       ))}
     </div>
 
-    <!-- Exhaustive Keyword Permutations Cloud for Organic SERP Dominance -->
+    <!-- Exhaustive Keyword Permutations Cloud for Organic SERP Dominance (Tucked Behind Collapsible UI) -->
     {showTagsCloud && (
-      <div class="reveal p-8 rounded-2xl bg-charcoal-900/60 border border-white/10 space-y-4">
-        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-white/10 pb-3">
-          <h4 class="font-serif text-sm uppercase tracking-widest text-stone-200 font-bold">
-            Indexed Search Queries & Long-Tail Permutations
-          </h4>
-          <span class="text-[10px] font-mono text-stone-400">
-            {allMahindraKeywordPermutations.length} Verified Google Search Query Variations
-          </span>
-        </div>
-        
-        <p class="text-xs text-stone-400 leading-relaxed">
-          The following keywords represent active buyer search queries across Maharashtra and Pan-India evaluating Mahindra Lifespaces developments in Pune & PCMC (Mahindra Mahalunge, Mahindra IvyLush Kharadi, Mahindra Citadel Pimpri, Mahindra Happinest Tathawade, Antheia, Nestalgia, Centralis, and L'Artista):
-        </p>
-
-        <div class="flex flex-wrap gap-2 pt-2">
-          {allMahindraKeywordPermutations.map((term) => (
-            <span class="px-2.5 py-1 rounded-md bg-white/[0.04] hover:bg-gold-500/10 border border-white/10 hover:border-gold-500/30 text-[11px] text-stone-300 hover:text-gold-300 font-mono transition-colors cursor-default">
-              {term}
+      <details class="group reveal rounded-2xl bg-charcoal-900/60 border border-white/10 overflow-hidden transition-all duration-300 open:border-gold-500/40">
+        <summary class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 p-6 sm:p-8 cursor-pointer list-none select-none hover:bg-white/[0.02] transition-colors">
+          <div class="flex items-center space-x-3">
+            <span class="w-2 h-2 rounded-full bg-gold-400 group-open:animate-ping"></span>
+            <h4 class="font-serif text-sm uppercase tracking-widest text-stone-200 font-bold group-hover:text-gold-300 transition-colors">
+              Indexed Search Queries & Long-Tail Permutations
+            </h4>
+          </div>
+          <div class="flex items-center space-x-3 text-stone-400">
+            <span class="text-[10px] font-mono text-gold-400/80 bg-gold-500/10 border border-gold-500/20 px-2 py-0.5 rounded">
+              {allMahindraKeywordPermutations.length} Verified Google Search Query Variations
             </span>
-          ))}
+            <span class="text-xs text-gold-400 font-semibold group-open:rotate-180 transition-transform duration-300">
+              ▼
+            </span>
+          </div>
+        </summary>
+        
+        <div class="px-6 sm:px-8 pb-8 pt-2 space-y-4 border-t border-white/5">
+          <p class="text-xs text-stone-400 leading-relaxed">
+            The following keywords represent active buyer search queries across Maharashtra and Pan-India evaluating Mahindra Lifespaces developments in Pune & PCMC (Mahindra Rivenza Mahalunge, Mahindra IvyLush Kharadi, Mahindra Citadel Pimpri, Mahindra Happinest Tathawade, Antheia, Nestalgia, Centralis, and L'Artista):
+          </p>
+
+          <div class="flex flex-wrap gap-2 pt-2">
+            {allMahindraKeywordPermutations.map((term) => (
+              <span class="px-2.5 py-1 rounded-md bg-white/[0.04] hover:bg-gold-500/10 border border-white/10 hover:border-gold-500/30 text-[11px] text-stone-300 hover:text-gold-300 font-mono transition-colors cursor-default">
+                {term}
+              </span>
+            ))}
+          </div>
         </div>
-      </div>
+      </details>
     )}
 
   </div>
