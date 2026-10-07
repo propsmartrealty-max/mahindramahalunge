@@ -1,37 +1,37 @@
 ---
-// Navbar.astro - Refined, Clean & Minimal Luxury Navigation
+// Navbar.astro - Pixel-Perfect Aligned, Minimalist Luxury Navigation
 ---
 
 <header id="site-header" class="fixed top-3 sm:top-5 left-0 right-0 z-50 flex justify-center px-3 sm:px-6 transition-all duration-300">
-  <div class="w-full max-w-5xl bg-[#0c1017]/90 backdrop-blur-2xl border border-white/[0.14] hover:border-gold-500/40 rounded-full px-4 sm:px-6 py-2.5 sm:py-3 flex items-center justify-between shadow-[0_12px_40px_rgba(0,0,0,0.6),0_0_20px_rgba(212,175,102,0.08)] transition-all duration-300">
+  <div class="w-full max-w-5xl h-14 sm:h-16 bg-[#0c1017]/92 backdrop-blur-2xl border border-white/[0.14] hover:border-gold-500/40 rounded-full px-4 sm:px-6 flex items-center justify-between shadow-[0_12px_40px_rgba(0,0,0,0.6),0_0_20px_rgba(212,175,102,0.08)] transition-all duration-300">
     
-    <!-- Left: Pure & Clean Brand Logo -->
-    <a href="/" class="flex items-center group flex-shrink-0" aria-label="Mahindra Lifespaces Home">
+    <!-- Left: Pure & Clean Brand Logo (Pixel-Aligned) -->
+    <a href="/" class="flex items-center flex-shrink-0 group py-1" aria-label="Mahindra Lifespaces Home">
       <img 
         src="/images/mahindra-lifespaces-logo.svg" 
         alt="Mahindra Lifespaces" 
-        class="h-4 sm:h-4.5 w-auto object-contain transition-transform group-hover:scale-105"
-        width="168"
-        height="18"
+        class="h-3.5 sm:h-4 w-auto max-w-[135px] sm:max-w-[165px] object-contain transition-transform group-hover:scale-105 block"
+        width="165"
+        height="16"
       />
     </a>
 
     <!-- Center: Refined Minimal Desktop Nav Links -->
-    <nav class="hidden md:flex items-center space-x-1 lg:space-x-2 text-[12px] font-medium tracking-wider uppercase text-stone-300">
-      <a href="/residences/" class="px-3 py-1.5 rounded-full hover:text-white hover:bg-white/10 transition-all">Residences</a>
-      <a href="/pricing/" class="px-3 py-1.5 rounded-full hover:text-white hover:bg-white/10 transition-all">Pricing</a>
-      <a href="/floor-plans/" class="px-3 py-1.5 rounded-full hover:text-white hover:bg-white/10 transition-all">Floor Plans</a>
-      <a href="/amenities/" class="px-3 py-1.5 rounded-full hover:text-white hover:bg-white/10 transition-all">Amenities</a>
-      <a href="/location/" class="px-3 py-1.5 rounded-full hover:text-white hover:bg-white/10 transition-all">Location</a>
-      <a href="/brochure/" class="px-3 py-1.5 rounded-full hover:text-white hover:bg-white/10 transition-all">Brochure</a>
+    <nav class="hidden lg:flex items-center space-x-1 xl:space-x-1.5 text-[12px] font-medium tracking-wider uppercase text-stone-300">
+      <a href="/residences/" class="px-3.5 py-2 rounded-full hover:text-white hover:bg-white/10 transition-all leading-none">Residences</a>
+      <a href="/pricing/" class="px-3.5 py-2 rounded-full hover:text-white hover:bg-white/10 transition-all leading-none">Pricing</a>
+      <a href="/floor-plans/" class="px-3.5 py-2 rounded-full hover:text-white hover:bg-white/10 transition-all leading-none">Floor Plans</a>
+      <a href="/amenities/" class="px-3.5 py-2 rounded-full hover:text-white hover:bg-white/10 transition-all leading-none">Amenities</a>
+      <a href="/location/" class="px-3.5 py-2 rounded-full hover:text-white hover:bg-white/10 transition-all leading-none">Location</a>
+      <a href="/brochure/" class="px-3.5 py-2 rounded-full hover:text-white hover:bg-white/10 transition-all leading-none">Brochure</a>
     </nav>
 
-    <!-- Right: Quick Phone & Schedule Visit CTA -->
-    <div class="flex items-center space-x-2.5 flex-shrink-0">
+    <!-- Right: Unified Height Action Elements (h-9 / 36px) -->
+    <div class="flex items-center space-x-2 sm:space-x-2.5 flex-shrink-0">
       <!-- Minimalist Call Icon Button -->
       <a 
         href="tel:+917744009295" 
-        class="hidden sm:inline-flex w-8 h-8 rounded-full border border-white/15 hover:border-gold-500/50 hover:bg-white/10 items-center justify-center text-stone-300 hover:text-gold-300 transition-all"
+        class="hidden sm:inline-flex w-9 h-9 rounded-full border border-white/15 hover:border-gold-500/50 hover:bg-white/10 items-center justify-center text-stone-300 hover:text-gold-300 transition-all flex-shrink-0"
         title="Call Official Desk: +91 7744009295"
         aria-label="Call Official Desk"
       >
@@ -45,7 +45,7 @@
         type="button"
         data-open-modal
         data-interest="Book Site Visit"
-        class="btn-shimmer inline-flex items-center justify-center px-4 sm:px-5 py-1.5 sm:py-2 text-[11px] sm:text-xs font-bold tracking-wider text-charcoal-950 uppercase transition-all duration-300 bg-gradient-to-r from-gold-300 via-gold-400 to-gold-500 rounded-full hover:shadow-lg hover:shadow-gold-500/30 active:scale-95 cursor-pointer whitespace-nowrap"
+        class="btn-shimmer inline-flex items-center justify-center h-9 px-4 sm:px-5 text-[11px] sm:text-xs font-bold tracking-wider text-charcoal-950 uppercase transition-all duration-300 bg-gradient-to-r from-gold-300 via-gold-400 to-gold-500 rounded-full hover:shadow-lg hover:shadow-gold-500/30 active:scale-95 cursor-pointer whitespace-nowrap leading-none flex-shrink-0"
       >
         Schedule Visit
       </button>
@@ -54,7 +54,7 @@
       <button
         id="mobile-menu-btn"
         aria-label="Toggle Navigation Menu"
-        class="md:hidden p-1.5 rounded-full text-stone-300 hover:text-white hover:bg-white/10 border border-white/10 focus:outline-none transition-colors"
+        class="lg:hidden w-9 h-9 flex items-center justify-center rounded-full text-stone-300 hover:text-white hover:bg-white/10 border border-white/10 focus:outline-none transition-colors flex-shrink-0"
       >
         <svg id="menu-icon-open" class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
@@ -68,7 +68,7 @@
   </div>
 
   <!-- Refined Mobile Dropdown Navigation -->
-  <div id="mobile-menu" class="hidden md:hidden absolute top-16 left-4 right-4 bg-charcoal-950/95 backdrop-blur-2xl border border-white/15 rounded-2xl p-5 space-y-4 animate-fadeIn shadow-2xl">
+  <div id="mobile-menu" class="hidden lg:hidden absolute top-16 left-4 right-4 bg-charcoal-950/95 backdrop-blur-2xl border border-white/15 rounded-2xl p-5 space-y-4 animate-fadeIn shadow-2xl">
     <div class="flex flex-col space-y-2.5 text-xs tracking-wider uppercase divide-y divide-white/5">
       <a href="/residences/" class="pt-2 text-stone-200 hover:text-gold-400 flex items-center justify-between">
         <span>Residences (2, 3 & 4 BHK)</span>
