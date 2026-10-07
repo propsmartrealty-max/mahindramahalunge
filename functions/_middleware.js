@@ -1,15 +1,15 @@
 /**
  * Cloudflare Pages Edge Middleware — Ultra-Advanced Edge SEO & HTMLRewriter Engine
- * Designed for Mahindra Lifespaces Mahalunge & Pune Real Estate Ecosystem
+ * Designed for Mahindra Rivenza (Baner Annex, Mahalunge, Pune) & Mahindra Lifespaces Ecosystem
  * 
  * Features:
- * 1. Zero-Latency Canonical & Trailing Slash Redirection at the Edge
+ * 1. Zero-Latency Canonical & Trailing Slash Redirection at the Cloudflare Edge
  * 2. Malicious / Aggressive Scraper Firewall (Zero-cost 403 rejection)
- * 3. Deep Search Engine Bot & Social Crawler Intelligence (Googlebot, Bingbot, WhatsApp, AI Crawlers)
- * 4. Native Edge HTMLRewriter Dynamic Schema & Metadata Injection (WebSite + RealEstateAgent)
+ * 3. Search Engine Bot & AI Crawler Intelligence (Googlebot, Bingbot, Perplexity, GPTBot, ClaudeBot, Gemini)
+ * 4. Native Edge HTMLRewriter Dynamic Schema & Metadata Injection (WebSite + ApartmentComplex + RealEstateAgent)
  * 5. Real-Time Content Freshness (ISO timestamps on every edge hit)
- * 6. Edge Geo-IP Localization & Micro-Market Coordinate Tagging (Pune 411045)
- * 7. LCP Hero Image Preloading & Preconnect Optimization
+ * 6. Edge Geo-IP Localization & Baner Annex Coordinate Tagging (18.562536 N, 73.727373 E / Plus Code: HP6G+WWF)
+ * 7. LCP Hero Image Preloading & Preconnect Optimization (cms.mahindralifespaces.com)
  * 8. Enterprise Caching, HTTP Link Preconnects & Security Headers
  */
 
@@ -19,22 +19,22 @@ const SOCIAL_BOT_REGEX = /facebookexternalhit|twitterbot|linkedinbot|whatsapp|te
 const AI_CRAWLER_REGEX = /gptbot|chatgpt-user|claudebot|anthropic-ai|perplexitybot|applebot|google-extended/i;
 const BAD_SCRAPER_REGEX = /bytespider|petalbot|mj12bot|dotbot|zoominfobot/i;
 
-// Legacy / Soft-404 Route Normalization Map
+// Legacy / Route Normalization Map
 const LEGACY_REDIRECTS = {
   '/flats': '/residences/',
   '/flats/': '/residences/',
   '/amenities': '/#amenities',
   '/amenities/': '/#amenities',
-  '/gallery': '/#gallery',
-  '/gallery/': '/#gallery',
+  '/gallery': '/#amenities',
+  '/gallery/': '/#amenities',
   '/master-plan': '/#masterplan',
   '/master-plan/': '/#masterplan',
-  '/floor-plans': '/#plans',
-  '/floor-plans/': '/#plans',
+  '/floor-plans': '/residences/',
+  '/floor-plans/': '/residences/',
   '/location': '/mahalunge-pune/',
   '/location/': '/mahalunge-pune/',
-  '/contact': '/#contact',
-  '/contact/': '/#contact',
+  '/contact': '/#pricing',
+  '/contact/': '/#pricing',
 };
 
 export async function onRequest(context) {
@@ -69,7 +69,7 @@ export async function onRequest(context) {
     return Response.redirect(url.toString(), 301);
   }
 
-  // 4. Fetch the upstream static response from Cloudflare Pages storage
+  // 4. Fetch upstream static response from Cloudflare Pages storage
   const response = await next();
 
   // If not an HTML document or error response, return directly with edge cache headers
@@ -88,7 +88,7 @@ export async function onRequest(context) {
   else if (isSocialBot) botCategory = 'Social-Preview-Bot';
   else if (isAiCrawler) botCategory = 'AI-Knowledge-Crawler';
 
-  // 6. Real-Time Timestamp for Googlebot Freshness Signals
+  // 6. Real-Time Timestamp for Freshness Signals
   const now = new Date();
   const currentIsoTimestamp = now.toISOString();
 
@@ -103,6 +103,7 @@ export async function onRequest(context) {
       element.append(
         `<link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />\n` +
         `<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />\n` +
+        `<link rel="preconnect" href="https://cms.mahindralifespaces.com" crossorigin />\n` +
         `<link rel="preconnect" href="https://images.unsplash.com" crossorigin />\n`,
         { html: true }
       );
@@ -115,22 +116,22 @@ export async function onRequest(context) {
         { html: true }
       );
 
-      // Geographic micro-market indexing tags for West Pune / Mahalunge
+      // Geographic micro-market indexing tags for Baner Annex, Mahalunge / West Pune
       element.append(
         `<meta name="geo.region" content="IN-MH" />\n` +
-        `<meta name="geo.placename" content="Mahalunge, Pune, Maharashtra" />\n` +
-        `<meta name="geo.position" content="18.5714;73.7432" />\n` +
-        `<meta name="ICBM" content="18.5714, 73.7432" />\n`,
+        `<meta name="geo.placename" content="Baner Annex, Mahalunge, Pune, Maharashtra 412115" />\n` +
+        `<meta name="geo.position" content="18.562536;73.727373" />\n` +
+        `<meta name="ICBM" content="18.562536, 73.727373" />\n`,
         { html: true }
       );
 
       // Edge SEO Engine Verification Meta
       element.append(
-        `<meta name="generator-edge" content="Cloudflare Pages Edge HTMLRewriter v3.3 - Mahindra Lifespaces Pune Engine" />\n`,
+        `<meta name="generator-edge" content="Cloudflare Pages Edge HTMLRewriter v4.0 - Mahindra Rivenza Engine" />\n`,
         { html: true }
       );
 
-      // SearchAction & Edge WebSite Knowledge Graph Injection
+      // SearchAction & Edge WebSite + ApartmentComplex Knowledge Graph Injection
       const edgeSchema = {
         "@context": "https://schema.org",
         "@graph": [
@@ -138,7 +139,7 @@ export async function onRequest(context) {
             "@type": "WebSite",
             "@id": "https://mahindralifespaceshomes.in/#website",
             "url": "https://mahindralifespaceshomes.in/",
-            "name": "Mahindra Mahalunge | Mahindra Lifespaces Pune Showcase",
+            "name": "Mahindra Rivenza | Baner Annex, Mahalunge, Pune",
             "dateModified": currentIsoTimestamp,
             "potentialAction": {
               "@type": "SearchAction",
@@ -147,24 +148,25 @@ export async function onRequest(context) {
             }
           },
           {
-            "@type": "RealEstateAgent",
-            "@id": "https://mahindralifespaceshomes.in/#agent",
-            "name": "Mahindra Lifespaces Pune Advisory",
+            "@type": ["ApartmentComplex", "RealEstateAgent"],
+            "@id": "https://mahindralifespaceshomes.in/#rivenza",
+            "name": "Mahindra Rivenza",
+            "legalName": "Mahindra Lifespace Developers Limited",
             "url": "https://mahindralifespaceshomes.in/",
-            "priceRange": "₹65 Lakhs - ₹3.50 Crore+",
-            "telephone": "+91-20-6700-0000",
+            "priceRange": "₹1.85 Crore - ₹3.85 Crore+",
+            "telephone": "+91-7744009295",
             "address": {
               "@type": "PostalAddress",
-              "streetAddress": "Nande-Mahalunge Road, Hinjewadi-Mahalunge Corridor",
+              "streetAddress": "HP6G+WWF Baner Annex, off Baner-Hinjawadi Road, Nande",
               "addressLocality": "Mahalunge, Pune",
-              "postalCode": "411045",
+              "postalCode": "412115",
               "addressRegion": "Maharashtra",
               "addressCountry": "IN"
             },
             "geo": {
               "@type": "GeoCoordinates",
-              "latitude": 18.5714,
-              "longitude": 73.7432
+              "latitude": 18.562536,
+              "longitude": 73.727373
             },
             "openingHoursSpecification": [
               {
@@ -209,7 +211,7 @@ export async function onRequest(context) {
     'X-Robots-Tag',
     'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
   );
-  modifiedHeaders.set('X-Edge-SEO-Engine', 'Cloudflare-HTMLRewriter-Engine-v3.3');
+  modifiedHeaders.set('X-Edge-SEO-Engine', 'Cloudflare-HTMLRewriter-Rivenza-v4.0');
   modifiedHeaders.set('X-Edge-Bot-Classification', botCategory);
   modifiedHeaders.set('X-Edge-Timestamp', currentIsoTimestamp);
   modifiedHeaders.set('X-Edge-Geo-Locality', `${cfCity}, ${cfCountry}`);
@@ -218,7 +220,7 @@ export async function onRequest(context) {
   // Early Preconnect Link Headers
   modifiedHeaders.set(
     'Link',
-    '<https://fonts.googleapis.com>; rel=preconnect, <https://fonts.gstatic.com>; rel=preconnect; crossorigin, <https://images.unsplash.com>; rel=preconnect'
+    '<https://fonts.googleapis.com>; rel=preconnect, <https://fonts.gstatic.com>; rel=preconnect; crossorigin, <https://cms.mahindralifespaces.com>; rel=preconnect, <https://images.unsplash.com>; rel=preconnect'
   );
 
   // Edge Security Hardening

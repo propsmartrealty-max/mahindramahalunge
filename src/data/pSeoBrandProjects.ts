@@ -4,7 +4,7 @@ export interface BrandProjectItem {
   shortName: string;
   location: string;
   microMarket: string;
-  status: 'Pre-Launch' | 'Under Construction' | 'Delivered';
+  status: 'Pre-Launch' | 'Under Construction' | 'Delivered' | 'Launched';
   landArea: string;
   typologies: string[];
   unitsCount: string;
@@ -28,55 +28,96 @@ export interface BrandProjectItem {
 export const brandProjectData: BrandProjectItem[] = [
   {
     slug: 'mahindra-mahalunge-pune',
-    name: 'Mahindra Mahalunge',
-    shortName: 'Mahindra Mahalunge',
-    location: 'Nande-Mahalunge Road, Mulshi Taluka, Pune 411045',
-    microMarket: 'Nande-Mahalunge Corridor (West Pune)',
-    status: 'Pre-Launch',
-    landArea: '13.46 Acres',
-    typologies: ['2 BHK Optima Suites (785 – 895 sq.ft.)', '3 BHK Luxe Residences (1,180 – 1,320 sq.ft.)', '4 BHK Signature Estates (1,680 – 1,820 sq.ft.)'],
-    unitsCount: '~1,800 Anticipated Residences',
-    deliveryYear: 'Phased Master Plan (Statutory Approvals In Progress)',
-    greenRating: 'IGBC Pre-Certified Sustainable Biophilic Living',
-    h1: 'Mahindra Mahalunge Pune: 13.46-Acre Pre-Launch Flagship Community',
-    metaTitle: 'Mahindra Mahalunge Pune | Pre-Launch 2 3 4 BHK Flats Near Hinjewadi',
-    metaDescription: 'Mahindra Mahalunge: 13.46-acre flagship biophilic community in Nande-Mahalunge, West Pune. Pre-launch 2, 3 & 4 BHK residences, 7 mins Hinjewadi, ₹3,500 Cr GDV. Register EOI.',
-    heroTagline: '13.46 Acres · 80%+ Open Green · 7-Min Hinjewadi · ₹3,500 Cr GDV Potential',
-    distanceFromMahalunge: 'Subject Property (Epicenter)',
-    transitHighlight: 'Direct PMRDA 36m DP Road, Hinjewadi Bridge, Pune Ring Road Alignment',
+    name: 'Mahindra Rivenza',
+    shortName: 'Mahindra Rivenza',
+    location: 'Mahindra Rivenza, Baner Annex, off Baner-Hinjawadi Road, Pune, Maharashtra 412115',
+    microMarket: 'Baner Annex / Mahalunge (West Pune)',
+    status: 'Launched',
+    landArea: '~13.46 Acres (9+ Acres Landscaped Greens)',
+    typologies: [
+      '2 BHK Premium (688 sq.ft aggregate / 635 sq.ft carpet)',
+      '2 BHK Luxury B (785 sq.ft aggregate / 705 sq.ft carpet)',
+      '2 BHK Luxury A (824 sq.ft aggregate / 711 sq.ft carpet)',
+      '2 BHK Ultra Luxury E (855 sq.ft aggregate / 747 sq.ft carpet)',
+      '3 BHK Deluxe C (995 sq.ft aggregate / 882 sq.ft carpet)',
+      '3 BHK Deluxe B (1,007 sq.ft aggregate / 894 sq.ft carpet)',
+      '3 BHK Ultra Luxury B (1,206 sq.ft aggregate / 1,065 sq.ft carpet)',
+      '4 BHK Luxury B (1,615 sq.ft aggregate / 1,438 sq.ft carpet)',
+      '4 BHK Luxury A (1,650 sq.ft aggregate / 1,465 sq.ft carpet)'
+    ],
+    unitsCount: 'Phased High-Rise Sanctuary (4 BHK Show Residence Live On-Site)',
+    deliveryYear: 'Phase 1 & Phase 2 valid upto 30/12/31 as per MahaRERA',
+    reraNumber: 'PR1261012602102 (Phase 1) | PM1261012602103 (Phase 2)',
+    greenRating: 'Pre-Certified IGBC Gold & Net Zero Waste to Landfill',
+    h1: 'Mahindra Rivenza Pune: 13.46-Acre Landmark in Baner Annex / Mahalunge',
+    metaTitle: 'Mahindra Rivenza in Baner Annex, Pune | 2, 3 & 4 BHK Luxury Homes',
+    metaDescription: 'Discover 2, 3 & 4 BHK flats at Mahindra Rivenza in Baner Annex / Mahalunge, Pune. A 13.46-acre haven with 9+ acres of greens, 44k sq.ft clubhouse, starting ₹1.85 Cr*. MahaRERA PR1261012602102.',
+    heroTagline: '13.46 Acres · 9+ Acres Greens · ~44,000 sq.ft Clubhouse · Starting ₹1.85 Cr*',
+    distanceFromMahalunge: 'Baner Annex / Mahalunge Epicenter (off Baner-Hinjawadi Road)',
+    transitHighlight: 'Direct access to Baner-Hinjawadi Road, upcoming Metro Line 3, & Mumbai-Pune Expressway',
     keySpecs: [
-      { label: 'Land Area', value: '13.46 Acres (₹3,500 Cr GDV)' },
-      { label: 'Configuration', value: '2, 3 & 4 BHK Residences' },
-      { label: 'Carpet Area', value: '785 – 1,820 sq.ft.*' },
-      { label: 'MahaRERA', value: 'Pre-Registration In Progress' },
-      { label: 'Green Rating', value: 'IGBC Pre-Certified' },
-      { label: 'Status', value: 'Pre-Launch EOI Open' }
+      { label: 'Land Area', value: '~13.46 Acres (9+ Acres Greens)' },
+      { label: 'Amenity Spaces', value: '2.65 Lakh+ sq.ft. incl. ~44,000 sq.ft Clubhouses' },
+      { label: 'Configurations', value: '2, 3 & 4 BHK Luxury Residences' },
+      { label: 'Carpet Area', value: '635 – 1,465 sq.ft. RERA (688 – 1,650 sq.ft. Aggregate)' },
+      { label: 'Starting Price', value: '₹1.85 Crore* Onwards' },
+      { label: 'MahaRERA', value: 'Phase 1: PR1261012602102 | Phase 2: PM1261012602103' },
+      { label: 'Green Rating', value: 'Pre-Certified IGBC Gold & Net Zero Waste' },
+      { label: 'Status', value: 'Officially Launched / Bookings Open' }
     ],
     amenityHighlights: [
-      'Miyawaki Micro-Forest & Biophilic Bio-Reserves (80%+ Open Land)',
-      'Grand Clubhouse with Co-Working Alcoves & Wellness Studios',
-      'Olympic-Length Swimming Pool with Sun Deck',
-      'Senior Citizen Sensory Garden & Children Adventure Play',
-      'EV Charging Bays & Smart Visitor Management',
-      'Rooftop Observation Terrace with Sahyadri Hill Views'
+      'Swimming Pool with Sunken Bar & Dedicated Lounging Decks',
+      '~44,000 sq.ft. Grand Multi-Level Clubhouses with 2.65 Lakh+ sq.ft Amenity Spaces',
+      'Yoga Lawn, Meditation Terraces & Biophilic Wellness Reserves',
+      'Multi-Purpose Sports Court & Floodlit Futsal Court',
+      'Glass Roof Library, Co-Working Pods & Executive Lounges',
+      'Net Zero Waste to Landfill & Dedicated EV Charging Infrastructure'
     ],
-    investmentCase: 'Mahalunge mirrors Baner-Balewadi\'s growth trajectory from 10 years ago — pre-launch buyers entering at ₹7,200–₹8,800 per sq.ft. are positioned for 35%–60% capital appreciation as PMRDA ring road, Metro Line 3, and the Hinjewadi river bridge become operational.',
-    rentalYield: '4.8% – 5.4% (Projected Post-Possession)',
+    investmentCase: 'Baner Annex and Mahalunge represent West Pune\'s prime capital appreciation corridor. With prices starting at ₹1.85 Cr*, direct access to Hinjawadi IT Park, Balewadi High Street, and the Pune Metro Line 3, Mahindra Rivenza unites Mahindra\'s institutional delivery governance with unmatched rental and capital appreciation potential.',
+    rentalYield: '4.8% – 5.4% (Projected Hinjewadi & Baner Tech Workforce Demand)',
     faqs: [
       {
-        q: 'What is Mahindra Mahalunge?',
-        a: 'Mahindra Mahalunge is a 13.46-acre flagship pre-launch residential master development by Mahindra Lifespaces in the Nande-Mahalunge micro-market of West Pune, featuring biophilic 2, 3 & 4 BHK residences with 80%+ open green spaces and direct proximity to Hinjewadi Phase 1.'
+        q: 'What is the location of Mahindra Rivenza?',
+        a: 'Site address: Mahindra Rivenza, Baner Annex, off Baner-Hinjawadi Road, Pune, Maharashtra 412115.'
       },
       {
-        q: 'What is the expected price of flats at Mahindra Mahalunge?',
-        a: 'Pre-launch EOI registrations indicate pricing in the range of ₹7,200 – ₹8,800 per sq.ft. for 2 & 3 BHK configurations. Official pricing will be announced at the formal launch along with MahaRERA registration details.'
+        q: 'Which configurations and what apartment sizes are available at Mahindra Rivenza?',
+        a: 'Mahindra Rivenza offers: 2 BHK Premium (688 sq.ft agg. / 635 sq.ft carpet), 2 BHK Luxury B (785 sq.ft agg.), 2 BHK Luxury A (824 sq.ft agg.), 2 BHK Ultra Luxury E (855 sq.ft agg.), 3 BHK Deluxe C (995 sq.ft agg.), 3 BHK Deluxe B (1,007 sq.ft agg.), 3 BHK Ultra Luxury B (1,206 sq.ft agg.), 4 BHK Luxury B (1,615 sq.ft agg.), and 4 BHK Luxury A (1,650 sq.ft agg.).'
       },
       {
-        q: 'How far is Mahindra Mahalunge from Hinjewadi IT Park?',
-        a: 'Mahindra Mahalunge is just 3.4 km from Infosys Hinjewadi Phase 1, translating to a 7–9 minute drive via the proposed PMRDA 36m DP road and Mahalunge-Hinjewadi bridge — bypassing Shivaji Chowk congestion entirely.'
+        q: 'What is the RERA registration number of Mahindra Rivenza?',
+        a: 'The project is registered with MahaRERA as Mahindra Rivenza Phase 1 bearing registration no. PR1261012602102 valid upto 30/12/31 and Mahindra Rivenza Phase 2 bearing registration no. PM1261012602103 valid upto 30/12/31, available on https://maharera.maharashtra.gov.in.'
+      },
+      {
+        q: 'When is the possession expected for Mahindra Rivenza?',
+        a: 'As per the MahaRERA registration of Mahindra Rivenza, Phase 1 and Phase 2 will be delivered upto 30/12/31.'
+      },
+      {
+        q: 'What unique amenities does Mahindra Rivenza offer?',
+        a: 'Mahindra Rivenza spans ~13.46 acres, with 9+ acres of landscaped greens and 2.65 lakh+ sq.ft of amenity spaces, including a ~44,000 sq.ft clubhouse. Key amenities include a swimming pool with sunken bar, multi-purpose court, yoga lawn, futsal court, glass roof library, and biophilic landscaped trails.'
+      },
+      {
+        q: 'What is the starting price for flats at Mahindra Rivenza?',
+        a: 'Prices at Mahindra Rivenza start from ₹1.85 Crore* for 2 BHK Premium residences, with pricing scaling up to ₹3.50 Crore* for 4 BHK Luxury estates.'
+      },
+      {
+        q: 'Is there a show flat available at the sales gallery of Mahindra Rivenza?',
+        a: 'Yes, the sales gallery at Mahindra Rivenza features a fully furnished 4 BHK show residence. You can visit the sales gallery on-site at Baner Annex, off Baner-Hinjawadi Road, Pune 412115.'
+      },
+      {
+        q: 'Is Mahindra Rivenza an eco-friendly and green-certified development?',
+        a: 'Yes, Mahindra Rivenza is a Pre-Certified IGBC Gold rated development and India-leading Net Zero Waste to Landfill development, featuring EV charging infrastructure in parking areas.'
+      },
+      {
+        q: 'How is the connectivity from Mahindra Rivenza?',
+        a: 'Strategically located in Baner Annex, Mahindra Rivenza offers seamless access to Hinjewadi IT parks, Global Capability Centres (GCCs), the Mumbai-Pune Expressway, and upcoming Metro Line 3.'
+      },
+      {
+        q: 'Which banks provide pre-approved home loans for Mahindra Rivenza?',
+        a: 'Mahindra Lifespaces has tied up with leading banks and financial institutions including SBI, HDFC, Canara Bank, ICICI Bank, and Bajaj Finance.'
       }
     ],
-    image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80'
+    image: 'http://cms.mahindralifespaces.com/web/sites/default/files/styles/web_banner_webp/public/2026-10/jpeg-optimizer_Elevation%20Opt%20A..webp'
   },
   {
     slug: 'mahindra-ivylush-kharadi-annex',

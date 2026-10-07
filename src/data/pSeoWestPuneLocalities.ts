@@ -220,15 +220,15 @@ export const westPuneLocalityData: WestPuneLocalityItem[] = [
       { title: 'Corporate Headquarters Hub', desc: 'Hosts top SaaS, fintech, and IT multinational offices.' },
       { title: 'High Capital Base', desc: 'Premium lifestyle addresses commanding top city prestige.' }
     ],
-    mahindraConnection: 'Mahindra Mahalunge is just 8-10 minutes from Baner via wide arterial roads, offering brand-new 2, 3 & 4 BHK sustainable homes at almost half Baner’s capital rate.',
+    mahindraConnection: 'Mahindra Rivenza is just 8-10 minutes from Baner via wide arterial roads, offering brand-new 2, 3 & 4 BHK sustainable homes at almost half Baner’s capital rate.',
     faqs: [
       {
         q: 'Why are homebuyers choosing Mahalunge instead of Baner?',
         a: 'Mahalunge offers large 13+ acre green master communities with 80% open spaces at ₹7,500 - ₹8,800/sq.ft., whereas Baner standalone towers cost ₹14,000+/sq.ft. with congested streets.'
       },
       {
-        q: 'How far is Mahindra Mahalunge from Baner Chowk?',
-        a: 'Mahindra Mahalunge is roughly 6.5 km (10 to 12 minutes) from Baner Chowk via the planned arterial link road.'
+        q: 'How far is Mahindra Rivenza from Baner Chowk?',
+        a: 'Mahindra Rivenza is roughly 6.5 km (10 to 12 minutes) from Baner Chowk via the planned arterial link road.'
       },
       {
         q: 'What is the rental yield comparison between Baner and Mahalunge?',
@@ -263,11 +263,11 @@ export const westPuneLocalityData: WestPuneLocalityItem[] = [
       { title: 'Grade-A Employment Centers', desc: 'Houses global corporations including Siemens, Veritas, and BMC Software.' },
       { title: 'World-Class Sports Facilities', desc: 'Shree Shiv Chhatrapati Sports Complex provides Olympic-grade athletic amenities.' }
     ],
-    mahindraConnection: 'Mahindra Mahalunge is just 4.6 km (8 minutes) from Balewadi High Street, giving residents effortless access to nightlife and dining while returning home to serene biophilic greens.',
+    mahindraConnection: 'Mahindra Rivenza is just 4.6 km (8 minutes) from Balewadi High Street, giving residents effortless access to nightlife and dining while returning home to serene biophilic greens.',
     faqs: [
       {
-        q: 'How far is Mahindra Mahalunge from Balewadi High Street?',
-        a: 'Mahindra Mahalunge is just 4.6 km away, taking approximately 8 to 10 minutes via wide planned roads.'
+        q: 'How far is Mahindra Rivenza from Balewadi High Street?',
+        a: 'Mahindra Rivenza is just 4.6 km away, taking approximately 8 to 10 minutes via wide planned roads.'
       },
       {
         q: 'What are property rates in Balewadi?',
@@ -392,7 +392,7 @@ export const westPuneLocalityData: WestPuneLocalityItem[] = [
       { title: 'Expressway Proximity', desc: 'Fast weekend road connectivity to Mumbai, Lonavala, and Talegaon.' },
       { title: 'Emerging Civic Infrastructure', desc: 'Rapid infrastructure upgrades under PCMC municipal governance.' }
     ],
-    mahindraConnection: 'Punawale buyers seeking institutional construction, higher open space ratios, and brand trust frequently look at Mahindra Happinest Tathawade and the upcoming Mahindra Mahalunge master community.',
+    mahindraConnection: 'Punawale buyers seeking institutional construction, higher open space ratios, and brand trust frequently look at Mahindra Happinest Tathawade and the upcoming Mahindra Rivenza master community.',
     faqs: [
       {
         q: 'Why invest in Punawale real estate?',
@@ -435,7 +435,7 @@ export const westPuneLocalityData: WestPuneLocalityItem[] = [
       { title: 'Pristine Green Air', desc: 'Surrounded by reserved defense forests ensuring permanently low pollution.' },
       { title: 'Smooth Commute', desc: 'Chandani Chowk flyover enables effortless transit to Hinjewadi in 15 minutes.' }
     ],
-    mahindraConnection: 'Bavdhan buyers looking for brand-new master-planned communities with PMRDA 36m roads and lower entry rates find compelling long-term value at Mahindra Mahalunge.',
+    mahindraConnection: 'Bavdhan buyers looking for brand-new master-planned communities with PMRDA 36m roads and lower entry rates find compelling long-term value at Mahindra Rivenza.',
     faqs: [
       {
         q: 'How did Chandani Chowk flyover impact Bavdhan real estate?',

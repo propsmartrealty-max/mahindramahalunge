@@ -15,30 +15,43 @@
 
 ## 2. Complete Pune & PCMC Portfolio Matrix
 
-### Project 1: Mahindra Mahalunge (Upcoming Flagship Launch)
-- **Status:** Pre-Launch / Registration of Expression of Interest (EOI).
-- **Location:** Nande-Mahalunge Road, Mahalunge, West Pune, Maharashtra 411045.
-- **Land Parcel:** 13.46 Acres.
-- **Gross Development Value (GDV):** ₹3,500 Crore.
-- **Residential Development Potential:** ~2.1 Million sq.ft.
-- **Master Plan Density:** Low-density master plan with 80%+ open green spaces, biophilic Miyawaki urban forest, pedestrianized vehicle-free ground boulevard.
-- **Configurations & Areas:**
-  - 2 BHK Optima: 785 - 820 sq.ft. carpet area
-  - 2 BHK Grande: 840 - 860 sq.ft. carpet area
-  - 3 BHK Luxe: 1,050 - 1,180 sq.ft. carpet area
-  - 3 BHK Signature: 1,220 - 1,280 sq.ft. carpet area
-  - 4 BHK Ultra-Luxury: 1,650 - 1,820 sq.ft. carpet area
-- **Price Benchmarks (Indicative Launch Brackets):**
-  - 2 BHK: ₹75 Lakhs to ₹92 Lakhs*
-  - 3 BHK: ₹1.15 Crore to ₹1.45 Crore*
-  - 4 BHK: ₹1.85 Crore to ₹2.35 Crore*
+### Project 1: Mahindra Rivenza (Officially Launched Flagship Landmark)
+- **Official Name:** Mahindra Rivenza
+- **Developer:** Mahindra Lifespace Developers Limited (Mahindra Group)
+- **Status:** Officially Launched (October 6, 2026) / Priority Bookings Active.
+- **Location:** Baner Annex, off Baner-Hinjawadi Road, Pune, Nande, Maharashtra 412115.
+- **Plus Code & Geo:** HP6G+WWF Baner Annex | Coordinates: 18.562536 N, 73.727373 E.
+- **MahaRERA Registration Numbers:**
+  - Phase 1: PR1261012602102 (valid upto 30/12/31)
+  - Phase 2: PM1261012602103 (valid upto 30/12/31)
+  - Verification: https://maharera.maharashtra.gov.in
+- **Land Parcel & Scale:** 13.46 Acres. Phase 1 offers 1,236 units across multiple high-rise towers.
+- **Gross Development Value (GDV):** Approximately ₹3,500 Crore.
+- **Sustainability:** Pre-Certified IGBC Gold, Net Zero Waste to Landfill.
+- **Greens & Amenities:** 9+ Acres landscaped greens, 2.65 Lakh+ sq.ft. amenity area, ~44,000+ sq.ft. grand clubhouse, sunken bar aqua pool, yoga lawn, floodlit futsal and multipurpose sports courts.
+- **Show Residence:** Fully furnished 4 BHK show residence live at on-site sales gallery.
+- **Configurations & Areas (Official 9 Typologies):**
+  - 2 BHK Premium: 59.03 sq.m (635 sq.ft) RERA carpet | 63.91 sq.m (688 sq.ft) aggregate | 4.88 sq.m (53 sq.ft) EBVT
+  - 2 BHK Luxury B: 65.50 sq.m (705 sq.ft) RERA carpet | 72.92 sq.m (785 sq.ft) aggregate | 7.42 sq.m (80 sq.ft) EBVT
+  - 2 BHK Luxury A: 66.04 sq.m (711 sq.ft) RERA carpet | 76.52 sq.m (824 sq.ft) aggregate | 10.48 sq.m (113 sq.ft) EBVT
+  - 2 BHK Ultra Luxury E: 69.37 sq.m (747 sq.ft) RERA carpet | 79.39 sq.m (855 sq.ft) aggregate | 10.02 sq.m (108 sq.ft) EBVT
+  - 3 BHK Deluxe C: 81.92 sq.m (882 sq.ft) RERA carpet | 92.40 sq.m (995 sq.ft) aggregate | 10.48 sq.m (113 sq.ft) EBVT
+  - 3 BHK Deluxe B: 83.03 sq.m (894 sq.ft) RERA carpet | 93.51 sq.m (1,007 sq.ft) aggregate | 10.48 sq.m (113 sq.ft) EBVT
+  - 3 BHK Ultra Luxury B: 98.94 sq.m (1,065 sq.ft) RERA carpet | 112.08 sq.m (1,206 sq.ft) aggregate | 13.14 sq.m (141 sq.ft) EBVT
+  - 4 BHK Luxury B: 133.61 sq.m (1,438 sq.ft) RERA carpet | 150.07 sq.m (1,615 sq.ft) aggregate | 16.46 sq.m (177 sq.ft) EBVT
+  - 4 BHK Luxury A: 136.09 sq.m (1,465 sq.ft) RERA carpet | 153.33 sq.m (1,651 sq.ft) aggregate | 17.24 sq.m (186 sq.ft) EBVT
+- **Launch Pricing Matrix:**
+  - 2 BHK: Starting from ₹1.85 Cr*
+  - 3 BHK: Starting from ₹2.45 Cr*
+  - 4 BHK: Starting from ₹3.65 Cr*
 - **Key Transit Links:**
   - Frontage: PMRDA 36m Town Planning Scheme 1 Ring Road.
-  - Bridge: Upcoming Mahalunge-Hinjewadi River Bridge (bypasses NH-48 & Shivaji Chowk traffic).
-  - Hinjewadi Phase 1 IT Park: 3.4 km / 7 mins.
+  - Bridge: Mahalunge-Hinjewadi River Bridge (7 minutes to Hinjewadi Phase 1 IT Park).
+  - Hinjewadi Phase 1 IT Park (Infosys, Wipro, TCS, Cognizant): 3.4 km / 7 mins.
   - Pune Metro Line 3 Hinjewadi Phase 1 Station: 3.2 km / 7 mins.
   - Balewadi High Street: 4.6 km / 8 mins.
-  - Baner Chowk: 6.5 km / 12 mins.
+  - Baner Chowk: 6.5 km / 10-12 mins.
+- **Global NRI Channels:** Dedicated desk assisting NRI buyers across UAE, Dubai, USA, UK, Europe, and Singapore with FEMA advisory, NRE/NRO accounts, and multi-currency structuring (INR, USD, AED, EUR, SGD).
 
 ### Project 2: Mahindra IvyLush (East Pune - Kharadi Annex)
 - **Status:** Under Construction.

@@ -35,9 +35,9 @@ export const techParkData: TechParkItem[] = [
     metroStatus: 'Direct access via upcoming Metro Line 3 Hinjewadi Station',
     topCompanies: ['Infosys Ltd.', 'Infosys BPM', 'EdgeVerve', 'Infosys McCamish'],
     workforceCount: '35,000+',
-    h1: 'Flats Near Infosys Hinjewadi: Luxury Residences at Mahindra Mahalunge',
-    metaTitle: 'Flats Near Infosys Hinjewadi Pune | 2 & 3 BHK Mahindra Mahalunge',
-    metaDescription: 'Looking for premium flats near Infosys Hinjewadi? Explore Mahindra Mahalunge: 3.4 km & 7 mins away, luxury 2, 3 & 4 BHK homes, 80% green biophilic community.',
+    h1: 'Flats Near Infosys Hinjewadi: Luxury Residences at Mahindra Rivenza',
+    metaTitle: 'Flats Near Infosys Hinjewadi Pune | 2 & 3 BHK Mahindra Rivenza',
+    metaDescription: 'Looking for premium flats near Infosys Hinjewadi? Explore Mahindra Rivenza: 3.4 km & 7 mins away, luxury 2, 3 & 4 BHK homes, 80% green biophilic community.',
     heroHighlight: '7-Minute Commute via 36M PMRDA Arterial DP Road',
     commuteAdvantage: 'Bypass internal Hinjewadi bottleneck traffic via the upcoming Mahalunge-Hinjewadi bridge link directly into Phase 1 gate.',
     recommendedConfig: '2 BHK Optima Suite & 3 BHK Luxe for Senior Software Engineers & Tech Leads',
@@ -46,12 +46,12 @@ export const techParkData: TechParkItem[] = [
     routeOverview: 'Drive west via Nande-Mahalunge Road across the proposed PMRDA 36m DP bridge corridor directly into Hinjewadi Phase 1 without entering the congested Shivaji Chowk.',
     faqs: [
       {
-        q: 'How far is Mahindra Mahalunge from Infosys Phase 1 Hinjewadi?',
-        a: 'Mahindra Mahalunge is just 3.4 km from Infosys Phase 1, equating to an easy 7 to 9 minute drive during peak office hours via the planned PMRDA 36m arterial corridor.'
+        q: 'How far is Mahindra Rivenza from Infosys Phase 1 Hinjewadi?',
+        a: 'Mahindra Rivenza is just 3.4 km from Infosys Phase 1, equating to an easy 7 to 9 minute drive during peak office hours via the planned PMRDA 36m arterial corridor.'
       },
       {
-        q: 'Why choose Mahindra Mahalunge instead of apartments inside Hinjewadi Phase 1?',
-        a: 'Internal Hinjewadi societies face dense traffic gridlocks, high commercial noise, and limited green parcels. Mahindra Mahalunge offers an expansive 13.46-acre master development with 80%+ open spaces, biophilic Miyawaki forests, and institutional Mahindra maintenance just 7 minutes away.'
+        q: 'Why choose Mahindra Rivenza instead of apartments inside Hinjewadi Phase 1?',
+        a: 'Internal Hinjewadi societies face dense traffic gridlocks, high commercial noise, and limited green parcels. Mahindra Rivenza offers an expansive 13.46-acre master development with 80%+ open spaces, biophilic Miyawaki forests, and institutional Mahindra maintenance just 7 minutes away.'
       },
       {
         q: 'What are typical rental yields near Infosys Hinjewadi?',
@@ -71,9 +71,9 @@ export const techParkData: TechParkItem[] = [
     metroStatus: 'Direct connectivity to proposed Megapolis / Hinjewadi Phase 1 Metro station',
     topCompanies: ['Wipro Technologies', 'Tata Technologies', 'Mindtree', 'Persistent Systems'],
     workforceCount: '45,000+',
-    h1: 'Flats Near Wipro Circle Hinjewadi: Mahindra Mahalunge 2, 3 & 4 BHK',
-    metaTitle: 'Flats Near Wipro Circle Hinjewadi Pune | Mahindra Mahalunge',
-    metaDescription: 'Find luxury flats near Wipro Circle Hinjewadi. Mahindra Mahalunge offers 13.46 acres of biophilic living just 3.1 km (6 mins) from Wipro Phase 1 campus.',
+    h1: 'Flats Near Wipro Circle Hinjewadi: Mahindra Rivenza 2, 3 & 4 BHK',
+    metaTitle: 'Flats Near Wipro Circle Hinjewadi Pune | Mahindra Rivenza',
+    metaDescription: 'Find luxury flats near Wipro Circle Hinjewadi. Mahindra Rivenza offers 13.46 acres of biophilic living just 3.1 km (6 mins) from Wipro Phase 1 campus.',
     heroHighlight: '6-Minute Rapid Transit to Pune’s Primary IT Hub',
     commuteAdvantage: 'Avoid the high-density morning commute queues with direct access through the scenic riverfront corridor.',
     recommendedConfig: '2 & 3 BHK residences featuring dedicated home-office study alcoves',
@@ -82,11 +82,11 @@ export const techParkData: TechParkItem[] = [
     routeOverview: 'Connect via the dedicated Mahalunge-Nande DP road straight towards Wipro Circle, enjoying a smooth, signal-free drive.',
     faqs: [
       {
-        q: 'What is the distance from Mahindra Mahalunge to Wipro Circle Hinjewadi?',
+        q: 'What is the distance from Mahindra Rivenza to Wipro Circle Hinjewadi?',
         a: 'The property is approximately 3.1 km from Wipro Circle, making daily commutes under 8 minutes in regular traffic.'
       },
       {
-        q: 'Can tech professionals walk or cycle from Mahindra Mahalunge to Wipro Circle?',
+        q: 'Can tech professionals walk or cycle from Mahindra Rivenza to Wipro Circle?',
         a: 'Yes, the planned PMRDA town planning scheme includes dedicated pedestrian sidewalks and cycle tracks connecting Mahalunge with Hinjewadi Phase 1.'
       },
       {
@@ -107,8 +107,8 @@ export const techParkData: TechParkItem[] = [
     metroStatus: 'Metro Line 3 Phase 3 Terminal within direct feeder distance',
     topCompanies: ['Tata Consultancy Services (TCS)', 'Tech Mahindra', 'Cognizant', 'KPIT'],
     workforceCount: '50,000+',
-    h1: 'Flats Near TCS Sahyadri Park Hinjewadi: Mahindra Mahalunge',
-    metaTitle: 'Flats Near TCS Sahyadri Park Hinjewadi | Mahindra Mahalunge Pune',
+    h1: 'Flats Near TCS Sahyadri Park Hinjewadi: Mahindra Rivenza',
+    metaTitle: 'Flats Near TCS Sahyadri Park Hinjewadi | Mahindra Rivenza Pune',
     metaDescription: 'Discover flats near TCS Sahyadri Park Hinjewadi Phase 3. Live in a 13.46-acre master community by Mahindra Lifespaces with effortless 12-min commute.',
     heroHighlight: '12-Minute Transit to TCS Sahyadri Park Mega-Campus',
     commuteAdvantage: 'Seamless arterial DP connectivity allows TCS associates to bypass Phase 1 bottlenecks and reach Phase 3 directly.',
@@ -118,12 +118,12 @@ export const techParkData: TechParkItem[] = [
     routeOverview: 'Take the scenic Nande-Chande bypass arterial road to reach TCS Sahyadri Park quickly without crossing standard highway junctions.',
     faqs: [
       {
-        q: 'How long does it take to travel from Mahindra Mahalunge to TCS Hinjewadi Phase 3?',
+        q: 'How long does it take to travel from Mahindra Rivenza to TCS Hinjewadi Phase 3?',
         a: 'Driving takes approximately 12 to 15 minutes (6.8 km) via the Nande-Chande link road, providing one of the fastest commute options in West Pune.'
       },
       {
-        q: 'Why do TCS employees prefer Mahindra Mahalunge over local Phase 3 societies?',
-        a: 'Mahindra Mahalunge provides Grade-A institutional governance by Mahindra Group, IGBC green certification, and superior lifestyle amenities that independent societies in Phase 3 lack.'
+        q: 'Why do TCS employees prefer Mahindra Rivenza over local Phase 3 societies?',
+        a: 'Mahindra Rivenza provides Grade-A institutional governance by Mahindra Group, IGBC green certification, and superior lifestyle amenities that independent societies in Phase 3 lack.'
       }
     ]
   },
@@ -139,9 +139,9 @@ export const techParkData: TechParkItem[] = [
     metroStatus: 'Accessible via Metro Line 3 Phase 2 station',
     topCompanies: ['Cisco Systems', 'IBM', 'Synechron', 'Mercedes-Benz R&D', 'Atos Syntel'],
     workforceCount: '40,000+',
-    h1: 'Flats Near Embassy TechZone Hinjewadi: Mahindra Mahalunge',
-    metaTitle: 'Flats Near Embassy TechZone Hinjewadi | Mahindra Mahalunge',
-    metaDescription: 'Premium apartments near Embassy TechZone Hinjewadi Phase 2. Explore 2, 3 & 4 BHK luxury residences at Mahindra Mahalunge with a 9-minute commute.',
+    h1: 'Flats Near Embassy TechZone Hinjewadi: Mahindra Rivenza',
+    metaTitle: 'Flats Near Embassy TechZone Hinjewadi | Mahindra Rivenza',
+    metaDescription: 'Premium apartments near Embassy TechZone Hinjewadi Phase 2. Explore 2, 3 & 4 BHK luxury residences at Mahindra Rivenza with a 9-minute commute.',
     heroHighlight: '9-Minute Commute to Global Fortune 500 Campuses',
     commuteAdvantage: 'Direct transit across the upcoming PMRDA bridge directly into Embassy TechZone gates.',
     recommendedConfig: '2 & 3 BHK luxury configurations with panoramic balconies',
@@ -150,7 +150,7 @@ export const techParkData: TechParkItem[] = [
     routeOverview: 'Travel via the proposed 36m DP road link connecting Mahalunge directly to Hinjewadi Phase 2 without detouring through Phase 1 traffic.',
     faqs: [
       {
-        q: 'What is the commute time to Embassy TechZone from Mahindra Mahalunge?',
+        q: 'What is the commute time to Embassy TechZone from Mahindra Rivenza?',
         a: 'The commute is roughly 9 to 11 minutes (4.5 km) via the planned PMRDA town planning arterial road.'
       },
       {
@@ -171,9 +171,9 @@ export const techParkData: TechParkItem[] = [
     metroStatus: 'Close proximity to Phase 1 Metro station',
     topCompanies: ['Cognizant', 'LTI Mindtree', 'Capgemini', 'KPIT'],
     workforceCount: '30,000+',
-    h1: 'Flats Near Cognizant Hinjewadi: Mahindra Mahalunge Homes',
-    metaTitle: 'Flats Near Cognizant Hinjewadi Pune | Mahindra Mahalunge 2 & 3 BHK',
-    metaDescription: 'Find luxury flats near Cognizant Hinjewadi Phase 1. Mahindra Mahalunge offers 13.46 acres of biophilic greenery just 3.8 km (8 mins) from Cognizant campus.',
+    h1: 'Flats Near Cognizant Hinjewadi: Mahindra Rivenza Homes',
+    metaTitle: 'Flats Near Cognizant Hinjewadi Pune | Mahindra Rivenza 2 & 3 BHK',
+    metaDescription: 'Find luxury flats near Cognizant Hinjewadi Phase 1. Mahindra Rivenza offers 13.46 acres of biophilic greenery just 3.8 km (8 mins) from Cognizant campus.',
     heroHighlight: '8-Minute Smooth Commute to Cognizant Phase 1',
     commuteAdvantage: 'Enjoy an effortless reverse-traffic commute avoiding central Hinjewadi jams.',
     recommendedConfig: '2 BHK Optima & 3 BHK Luxe Residences',
@@ -182,7 +182,7 @@ export const techParkData: TechParkItem[] = [
     routeOverview: 'Direct connection from Nande-Mahalunge road straight onto the Hinjewadi Phase 1 main spine.',
     faqs: [
       {
-        q: 'How far is Cognizant Hinjewadi from Mahindra Mahalunge?',
+        q: 'How far is Cognizant Hinjewadi from Mahindra Rivenza?',
         a: 'It is approximately 3.8 km away, taking about 8 to 10 minutes by car or two-wheeler.'
       }
     ]
@@ -199,9 +199,9 @@ export const techParkData: TechParkItem[] = [
     metroStatus: 'Direct feed into Hinjewadi Phase 2 Metro line',
     topCompanies: ['Barclays', 'eClerx', 'Credit Suisse', 'UBS', 'Exela'],
     workforceCount: '25,000+',
-    h1: 'Flats Near Quadron Business Park Hinjewadi: Mahindra Mahalunge',
-    metaTitle: 'Flats Near Quadron Business Park Hinjewadi | Mahindra Mahalunge',
-    metaDescription: 'Looking for apartments near Quadron Business Park Hinjewadi? Mahindra Mahalunge offers luxury 2, 3 & 4 BHK homes just 10 mins from Barclays & IT MNCs.',
+    h1: 'Flats Near Quadron Business Park Hinjewadi: Mahindra Rivenza',
+    metaTitle: 'Flats Near Quadron Business Park Hinjewadi | Mahindra Rivenza',
+    metaDescription: 'Looking for apartments near Quadron Business Park Hinjewadi? Mahindra Rivenza offers luxury 2, 3 & 4 BHK homes just 10 mins from Barclays & IT MNCs.',
     heroHighlight: '10-Minute Transit to Hinjewadi BFSI & FinTech Hubs',
     commuteAdvantage: 'Fast connection into Phase 2 commercial blocks without highway traffic snarls.',
     recommendedConfig: '2 & 3 BHK residences',
@@ -210,7 +210,7 @@ export const techParkData: TechParkItem[] = [
     routeOverview: 'Quick connection via the PMRDA DP road linking Mahalunge directly with Phase 2 tech corridors.',
     faqs: [
       {
-        q: 'How far is Quadron Business Park from Mahindra Mahalunge?',
+        q: 'How far is Quadron Business Park from Mahindra Rivenza?',
         a: 'It is approximately 4.9 km, taking 10 to 12 minutes in normal traffic conditions.'
       }
     ]
@@ -227,9 +227,9 @@ export const techParkData: TechParkItem[] = [
     metroStatus: 'Direct access via proposed Balewadi Metro station',
     topCompanies: ['Veritas Technologies', 'Siemens', 'Birlasoft', 'Cummins India'],
     workforceCount: '30,000+ (Commercial + Retail)',
-    h1: 'Flats Near Balewadi High Street: Luxury Living at Mahindra Mahalunge',
-    metaTitle: 'Flats Near Balewadi High Street Pune | Mahindra Mahalunge Luxury Homes',
-    metaDescription: 'Explore luxury flats near Balewadi High Street. Mahindra Mahalunge provides 13.46 acres of serene biophilic living just 8 mins from fine dining & retail.',
+    h1: 'Flats Near Balewadi High Street: Luxury Living at Mahindra Rivenza',
+    metaTitle: 'Flats Near Balewadi High Street Pune | Mahindra Rivenza Luxury Homes',
+    metaDescription: 'Explore luxury flats near Balewadi High Street. Mahindra Rivenza provides 13.46 acres of serene biophilic living just 8 mins from fine dining & retail.',
     heroHighlight: '8-Minute Access to Pune’s Premier Dining & Entertainment Boulevard',
     commuteAdvantage: 'Enjoy the vibrant culinary and nightlife culture of Balewadi High Street while residing in a quiet, serene riverfront sanctuary.',
     recommendedConfig: '3 BHK Luxe & 4 BHK Signature Estates for luxury lifestyle seekers',
@@ -238,8 +238,8 @@ export const techParkData: TechParkItem[] = [
     routeOverview: 'Take the planned 36m PMRDA arterial route straight into Balewadi High Street, avoiding regular Pune-Bangalore highway congestion.',
     faqs: [
       {
-        q: 'How far is Balewadi High Street from Mahindra Mahalunge?',
-        a: 'Mahindra Mahalunge is just 4.6 km (8-11 minutes) from Balewadi High Street.'
+        q: 'How far is Balewadi High Street from Mahindra Rivenza?',
+        a: 'Mahindra Rivenza is just 4.6 km (8-11 minutes) from Balewadi High Street.'
       },
       {
         q: 'Why live in Mahalunge instead of Balewadi?',
@@ -259,9 +259,9 @@ export const techParkData: TechParkItem[] = [
     metroStatus: 'Quick feeder to Baner Road Metro station',
     topCompanies: ['GS Lab', 'Calsoft', 'Varian Medical', 'PubMatic', 'FIS'],
     workforceCount: '20,000+',
-    h1: 'Flats Near Amar Paradigm Baner: Mahindra Mahalunge Residences',
-    metaTitle: 'Flats Near Amar Paradigm Baner Pune | Mahindra Mahalunge Pre-Launch',
-    metaDescription: 'Find luxury apartments near Amar Paradigm & Baner IT hub. Mahindra Mahalunge offers 2, 3 & 4 BHK sustainable homes 10 mins from Baner commercial district.',
+    h1: 'Flats Near Amar Paradigm Baner: Mahindra Rivenza Residences',
+    metaTitle: 'Flats Near Amar Paradigm Baner Pune | Mahindra Rivenza Pre-Launch',
+    metaDescription: 'Find luxury apartments near Amar Paradigm & Baner IT hub. Mahindra Rivenza offers 2, 3 & 4 BHK sustainable homes 10 mins from Baner commercial district.',
     heroHighlight: '10-Minute Drive to Baner Commercial & IT Strip',
     commuteAdvantage: 'Direct connectivity to Baner business centers without city center congestion.',
     recommendedConfig: '2 BHK Optima & 3 BHK Luxe Residences',
@@ -270,7 +270,7 @@ export const techParkData: TechParkItem[] = [
     routeOverview: 'Drive east via the PMRDA link road across to Baner Main Road in under 12 minutes.',
     faqs: [
       {
-        q: 'What is the travel time from Mahindra Mahalunge to Baner IT offices?',
+        q: 'What is the travel time from Mahindra Rivenza to Baner IT offices?',
         a: 'The commute is roughly 10 to 13 minutes (5.2 km) via wide planned DP roads.'
       }
     ]
@@ -375,9 +375,9 @@ export const techParkData: TechParkItem[] = [
     metroStatus: 'Adjoining Balewadi Stadium Metro Station',
     topCompanies: ['Siemens', 'Veritas Technologies', 'T-Systems', 'BMC Software'],
     workforceCount: '25,000+',
-    h1: 'Flats Near Panchshil Business Park Baner: Mahindra Mahalunge',
-    metaTitle: 'Flats Near Panchshil Business Park Baner | Mahindra Mahalunge',
-    metaDescription: 'Find luxury residences near Panchshil Business Park Balewadi-Baner. Mahindra Mahalunge offers 13.46 acres of biophilic living just 9 minutes away.',
+    h1: 'Flats Near Panchshil Business Park Baner: Mahindra Rivenza',
+    metaTitle: 'Flats Near Panchshil Business Park Baner | Mahindra Rivenza',
+    metaDescription: 'Find luxury residences near Panchshil Business Park Balewadi-Baner. Mahindra Rivenza offers 13.46 acres of biophilic living just 9 minutes away.',
     heroHighlight: '9-Minute Drive to West Pune’s Flagship Tech Boulevard',
     commuteAdvantage: 'Effortless commute via the Balewadi-Mahalunge arterial road without peak highway slowdowns.',
     recommendedConfig: '3 BHK Luxe & 4 BHK Signature for Senior Engineering Leaders',
@@ -386,7 +386,7 @@ export const techParkData: TechParkItem[] = [
     routeOverview: 'Cross east via Nande-Mahalunge Road across the upcoming DP road directly into Balewadi High Street commercial zone.',
     faqs: [
       {
-        q: 'How far is Panchshil Business Park from Mahindra Mahalunge?',
+        q: 'How far is Panchshil Business Park from Mahindra Rivenza?',
         a: 'It is approximately 4.8 km away, taking 9 to 12 minutes in typical traffic.'
       }
     ]

@@ -22,10 +22,10 @@ export const comparisonData: ComparisonItem[] = [
     slug: 'mahindra-mahalunge-vs-godrej-hillside',
     competitorName: 'Godrej Hillside Mahalunge',
     competitorType: 'Project',
-    h1: 'Mahindra Mahalunge vs Godrej Hillside: Head-to-Head 2026 Comparison',
-    metaTitle: 'Mahindra Mahalunge vs Godrej Hillside Mahalunge | Comparison Guide',
-    metaDescription: 'Unbiased comparison of Mahindra Mahalunge vs Godrej Hillside: land density, open greens, carpet area efficiency, pricing, and Mahindra Lifespaces trust.',
-    summaryVerdict: 'While Godrej Hillside established early traction in Mahalunge, Mahindra Mahalunge offers a far lower density layout, superior biophilic green design (Miyawaki afforestation), larger carpet layouts with zero wasted corridors, and Mahindra Group\'s pristine delivery governance.',
+    h1: 'Mahindra Rivenza vs Godrej Hillside: Head-to-Head 2026 Comparison',
+    metaTitle: 'Mahindra Rivenza vs Godrej Hillside Mahalunge | Comparison Guide',
+    metaDescription: 'Unbiased comparison of Mahindra Rivenza vs Godrej Hillside: land density, open greens, carpet area efficiency, pricing, and Mahindra Lifespaces trust.',
+    summaryVerdict: 'While Godrej Hillside established early traction in Mahalunge, Mahindra Rivenza offers a far lower density layout, superior biophilic green design (Miyawaki afforestation), larger carpet layouts with zero wasted corridors, and Mahindra Group\'s pristine delivery governance.',
     prosMahindra: [
       'Lower unit density per acre ensuring greater privacy and acoustic tranquility',
       '80%+ biophilic open spaces with IGBC Pre-Certified sustainable green construction',
@@ -46,12 +46,12 @@ export const comparisonData: ComparisonItem[] = [
     ],
     faqs: [
       {
-        q: 'Which is better: Mahindra Mahalunge or Godrej Hillside?',
-        a: 'For buyers prioritizing lower residential density, larger usable carpet space, modern sustainable infrastructure, and institutional Mahindra transparency, Mahindra Mahalunge provides superior long-term livability and value retention.'
+        q: 'Which is better: Mahindra Rivenza or Godrej Hillside?',
+        a: 'For buyers prioritizing lower residential density, larger usable carpet space, modern sustainable infrastructure, and institutional Mahindra transparency, Mahindra Rivenza provides superior long-term livability and value retention.'
       },
       {
-        q: 'How do prices compare between Mahindra Mahalunge and Godrej Hillside?',
-        a: 'Godrej Hillside trades at mature secondary market pricing, whereas Mahindra Mahalunge offers advantageous pre-launch Expression of Interest (EOI) entry pricing.'
+        q: 'How do prices compare between Mahindra Rivenza and Godrej Hillside?',
+        a: 'Godrej Hillside trades at mature secondary market pricing, whereas Mahindra Rivenza offers advantageous official launch pricing starting from ₹1.85 Cr*.'
       }
     ]
   },
@@ -59,10 +59,10 @@ export const comparisonData: ComparisonItem[] = [
     slug: 'mahindra-mahalunge-vs-vtp-blue-waters',
     competitorName: 'VTP Blue Waters Mahalunge',
     competitorType: 'Project',
-    h1: 'Mahindra Mahalunge vs VTP Blue Waters: Township vs Biophilic Sanctuary',
-    metaTitle: 'Mahindra Mahalunge vs VTP Blue Waters | Detailed Comparison 2026',
-    metaDescription: 'Compare Mahindra Mahalunge vs VTP Blue Waters: density, tower congestion, green spaces, amenities, developer track record, and long-term resale value.',
-    summaryVerdict: 'VTP Blue Waters is a massive 100+ acre mega-township with tens of thousands of planned apartments, which leads to high resident density and long elevator wait times. Mahindra Mahalunge focuses on a boutique, high-end 13.46-acre master community with strict low-density planning and uncompromised build quality.',
+    h1: 'Mahindra Rivenza vs VTP Blue Waters: Township vs Biophilic Sanctuary',
+    metaTitle: 'Mahindra Rivenza vs VTP Blue Waters | Detailed Comparison 2026',
+    metaDescription: 'Compare Mahindra Rivenza vs VTP Blue Waters: density, tower congestion, green spaces, amenities, developer track record, and long-term resale value.',
+    summaryVerdict: 'VTP Blue Waters is a massive 100+ acre mega-township with tens of thousands of planned apartments, which leads to high resident density and long elevator wait times. Mahindra Rivenza focuses on a boutique, high-end 13.46-acre master community with strict low-density planning and uncompromised build quality.',
     prosMahindra: [
       'Low crowd density with peaceful, exclusive residential enclaves',
       'Mahindra Lifespaces institutional trust vs private regional developer scale',
@@ -81,8 +81,8 @@ export const comparisonData: ComparisonItem[] = [
     ],
     faqs: [
       {
-        q: 'Why choose Mahindra Mahalunge over a large township like VTP Blue Waters?',
-        a: 'Mega-townships often suffer from over-supply of rental units, congested shared amenities, and extended multi-year construction disruption. Mahindra Mahalunge offers privacy, premium brand equity, and faster handover cycles.'
+        q: 'Why choose Mahindra Rivenza over a large township like VTP Blue Waters?',
+        a: 'Mega-townships often suffer from over-supply of rental units, congested shared amenities, and extended multi-year construction disruption. Mahindra Rivenza offers privacy, premium brand equity, and faster handover cycles.'
       }
     ]
   },
@@ -90,10 +90,10 @@ export const comparisonData: ComparisonItem[] = [
     slug: 'mahindra-mahalunge-vs-kolte-patil-life-republic',
     competitorName: 'Kolte Patil Life Republic Hinjewadi',
     competitorType: 'Project',
-    h1: 'Mahindra Mahalunge vs Kolte Patil Life Republic: Location & ROI Analysis',
-    metaTitle: 'Mahindra Mahalunge vs Kolte Patil Life Republic | 2026 Comparison',
-    metaDescription: 'Objective comparison: Mahindra Mahalunge vs Kolte Patil Life Republic Hinjewadi. Analyze location, Baner proximity, travel times, and construction quality.',
-    summaryVerdict: 'Kolte Patil Life Republic is situated further out in Hinjewadi Phase 2 / Marunji, requiring longer travel times to Baner and central Pune. Mahindra Mahalunge is positioned right on the Nande-Mahalunge growth corridor, offering dual proximity to both Hinjewadi IT Park (7 mins) and Balewadi High Street (8 mins).',
+    h1: 'Mahindra Rivenza vs Kolte Patil Life Republic: Location & ROI Analysis',
+    metaTitle: 'Mahindra Rivenza vs Kolte Patil Life Republic | 2026 Comparison',
+    metaDescription: 'Objective comparison: Mahindra Rivenza vs Kolte Patil Life Republic Hinjewadi. Analyze location, Baner proximity, travel times, and construction quality.',
+    summaryVerdict: 'Kolte Patil Life Republic is situated further out in Hinjewadi Phase 2 / Marunji, requiring longer travel times to Baner and central Pune. Mahindra Rivenza is positioned right on the Nande-Mahalunge growth corridor, offering dual proximity to both Hinjewadi IT Park (7 mins) and Balewadi High Street (8 mins).',
     prosMahindra: [
       'Prime location between Hinjewadi and Baner (dual-benefit corridor)',
       'Substantially closer to Pune city center, Balewadi High Street, and Aundh',
@@ -112,8 +112,8 @@ export const comparisonData: ComparisonItem[] = [
     ],
     faqs: [
       {
-        q: 'Is Mahindra Mahalunge better located than Life Republic?',
-        a: 'Yes. Mahindra Mahalunge is directly situated in the PMRDA Town Planning Scheme 1 corridor, cutting commute times to Baner and Balewadi by more than 15 minutes compared to Life Republic.'
+        q: 'Is Mahindra Rivenza better located than Life Republic?',
+        a: 'Yes. Mahindra Rivenza is directly situated in the PMRDA Town Planning Scheme 1 corridor, cutting commute times to Baner and Balewadi by more than 15 minutes compared to Life Republic.'
       }
     ]
   },
@@ -121,10 +121,10 @@ export const comparisonData: ComparisonItem[] = [
     slug: 'mahindra-mahalunge-vs-lodha-panache-hinjewadi',
     competitorName: 'Lodha Panache Hinjewadi Phase 1',
     competitorType: 'Project',
-    h1: 'Mahindra Mahalunge vs Lodha Panache Hinjewadi: Price & Value Review',
-    metaTitle: 'Mahindra Mahalunge vs Lodha Panache Hinjewadi | Comparison 2026',
-    metaDescription: 'Compare Mahindra Mahalunge with Lodha Panache Hinjewadi Phase 1: land parcel, price per sq.ft., open space ratios, and long-term rental appreciation.',
-    summaryVerdict: 'Lodha Panache commands a steep Hinjewadi Phase 1 premium with a smaller land parcel and higher concrete density. Mahindra Mahalunge provides an expansive 13.46-acre master development just 7 minutes away at a much more attractive entry price point, yielding superior capital growth headroom.',
+    h1: 'Mahindra Rivenza vs Lodha Panache Hinjewadi: Price & Value Review',
+    metaTitle: 'Mahindra Rivenza vs Lodha Panache Hinjewadi | Comparison 2026',
+    metaDescription: 'Compare Mahindra Rivenza with Lodha Panache Hinjewadi Phase 1: land parcel, price per sq.ft., open space ratios, and long-term rental appreciation.',
+    summaryVerdict: 'Lodha Panache commands a steep Hinjewadi Phase 1 premium with a smaller land parcel and higher concrete density. Mahindra Rivenza provides an expansive 13.46-acre master development just 7 minutes away at a much more attractive entry price point, yielding superior capital growth headroom.',
     prosMahindra: [
       'Expansive 13.46-acre master development with 80%+ biophilic open spaces',
       'More attractive pre-launch entry price point with higher capital appreciation runway',
@@ -143,8 +143,8 @@ export const comparisonData: ComparisonItem[] = [
     ],
     faqs: [
       {
-        q: 'Why invest in Mahindra Mahalunge instead of Lodha Panache?',
-        a: 'Mahindra Mahalunge offers a larger master parcel with expansive green landscaping and significantly higher upside potential as the PMRDA 36m DP road network completes.'
+        q: 'Why invest in Mahindra Rivenza instead of Lodha Panache?',
+        a: 'Mahindra Rivenza offers a larger master parcel with expansive green landscaping and significantly higher upside potential as the PMRDA 36m DP road network completes.'
       }
     ]
   },
@@ -186,7 +186,7 @@ export const comparisonData: ComparisonItem[] = [
     h1: 'Mahalunge vs Baner Real Estate: Price Disparity & Investment ROI',
     metaTitle: 'Mahalunge vs Baner Real Estate | Property Price Comparison 2026',
     metaDescription: 'Explore the price disparity between Mahalunge and Baner (₹7,500 vs ₹13,500/sqft). Discover why Mahalunge is the ultimate high-growth alternative to Baner.',
-    summaryVerdict: 'Baner property prices have climbed beyond ₹13,000 to ₹16,000/sq.ft., putting luxury homes out of reach for many tech families. Mahalunge sits immediately adjacent to Baner (just 8-10 minutes away) at almost half the capital rate, offering institutional master developments like Mahindra Mahalunge with immense capital appreciation headroom.',
+    summaryVerdict: 'Baner property prices have climbed beyond ₹13,000 to ₹16,000/sq.ft., putting luxury homes out of reach for many tech families. Mahalunge sits immediately adjacent to Baner (just 8-10 minutes away) at almost half the capital rate, offering institutional master developments like Mahindra Rivenza with immense capital appreciation headroom.',
     prosMahindra: [
       '40% to 50% lower entry capital investment for brand-new Grade-A homes',
       'Rapid 8 to 10-minute commute to Baner High Street dining and retail',
@@ -310,7 +310,7 @@ export const comparisonData: ComparisonItem[] = [
     h1: 'Mahindra Lifespaces vs Godrej Properties Pune: Corporate Brand Comparison',
     metaTitle: 'Mahindra Lifespaces vs Godrej Properties Pune | Developer Comparison',
     metaDescription: 'Compare corporate real estate titans in Pune: Mahindra Lifespaces vs Godrej Properties. Analyze construction quality, sustainability, net-zero commitments, and delivery track records.',
-    summaryVerdict: 'Both Mahindra Lifespaces and Godrej Properties represent the gold standard of Indian corporate real estate governance. Mahindra Lifespaces stands out with its unyielding commitment to 100% net-zero carbon development, biophilic low-density master plans (like the 13.46-acre Mahindra Mahalunge and 5.4-acre IvyLush), and exceptional resident satisfaction across delivered communities like Antheia and Centralis.',
+    summaryVerdict: 'Both Mahindra Lifespaces and Godrej Properties represent the gold standard of Indian corporate real estate governance. Mahindra Lifespaces stands out with its unyielding commitment to 100% net-zero carbon development, biophilic low-density master plans (like the 13.46-acre Mahindra Rivenza and 5.4-acre IvyLush), and exceptional resident satisfaction across delivered communities like Antheia and Centralis.',
     prosMahindra: [
       'Pioneer in 100% net-zero carbon development commitment by 2030 across India',
       'Lower residential density per acre with authentic biophilic green conservation',
@@ -338,10 +338,10 @@ export const comparisonData: ComparisonItem[] = [
     slug: 'mahindra-mahalunge-vs-megapolis-hinjewadi',
     competitorName: 'Megapolis Smart Homes Hinjewadi',
     competitorType: 'Project',
-    h1: 'Mahindra Mahalunge vs Megapolis Hinjewadi: 2026 West Pune Showdown',
-    metaTitle: 'Mahindra Mahalunge vs Megapolis Hinjewadi | Smart Homes Comparison 2026',
-    metaDescription: 'Compare Mahindra Mahalunge vs Megapolis Smart Homes Hinjewadi: land parcel, green spaces, Mahindra brand governance, rental yield, and price-per-sq.ft. analysis.',
-    summaryVerdict: 'Megapolis offers a large township scale with established social infrastructure in Hinjewadi, but Mahindra Mahalunge counters with significantly lower residential density, biophilic Miyawaki design, institutional Mahindra Group governance, and an unmatched pre-launch price entry advantage in the rapidly appreciating Nande-Mahalunge corridor.',
+    h1: 'Mahindra Rivenza vs Megapolis Hinjewadi: 2026 West Pune Showdown',
+    metaTitle: 'Mahindra Rivenza vs Megapolis Hinjewadi | Smart Homes Comparison 2026',
+    metaDescription: 'Compare Mahindra Rivenza vs Megapolis Smart Homes Hinjewadi: land parcel, green spaces, Mahindra brand governance, rental yield, and price-per-sq.ft. analysis.',
+    summaryVerdict: 'Megapolis offers a large township scale with established social infrastructure in Hinjewadi, but Mahindra Rivenza counters with significantly lower residential density, biophilic Miyawaki design, institutional Mahindra Group governance, and an unmatched pre-launch price entry advantage in the rapidly appreciating Nande-Mahalunge corridor.',
     prosMahindra: [
       'Far lower unit-per-acre density preserving genuine open green buffer zones',
       '80%+ biophilic land area including Miyawaki micro-forests and sensory gardens',
@@ -362,12 +362,12 @@ export const comparisonData: ComparisonItem[] = [
     ],
     faqs: [
       {
-        q: 'How does Mahindra Mahalunge compare to Megapolis Hinjewadi in terms of green space?',
-        a: 'Mahindra Mahalunge dedicates over 80% of its 13.46-acre land to biophilic open spaces, Miyawaki micro-forests, and sensory gardens, whereas Megapolis allocates a larger proportion to internal roads, commercial podiums, and multi-tower clusters.'
+        q: 'How does Mahindra Rivenza compare to Megapolis Hinjewadi in terms of green space?',
+        a: 'Mahindra Rivenza dedicates over 80% of its 13.46-acre land to biophilic open spaces, Miyawaki micro-forests, and sensory gardens, whereas Megapolis allocates a larger proportion to internal roads, commercial podiums, and multi-tower clusters.'
       },
       {
-        q: 'Is Mahindra Mahalunge closer to Hinjewadi IT parks than Megapolis?',
-        a: 'Megapolis sits inside Hinjewadi Phase 3, while Mahindra Mahalunge is 3.4 km away. However, Mahalunge offers the bypass river bridge route that avoids Hinjewadi\'s notorious internal congestion, often providing a faster effective commute time.'
+        q: 'Is Mahindra Rivenza closer to Hinjewadi IT parks than Megapolis?',
+        a: 'Megapolis sits inside Hinjewadi Phase 3, while Mahindra Rivenza is 3.4 km away. However, Mahalunge offers the bypass river bridge route that avoids Hinjewadi\'s notorious internal congestion, often providing a faster effective commute time.'
       }
     ]
   },
@@ -375,10 +375,10 @@ export const comparisonData: ComparisonItem[] = [
     slug: 'mahindra-mahalunge-vs-shapoorji-pallonji-sensorium',
     competitorName: 'Shapoorji Pallonji Sensorium Hinjewadi',
     competitorType: 'Project',
-    h1: 'Mahindra Mahalunge vs Shapoorji Pallonji Sensorium: Luxury Comparison 2026',
-    metaTitle: 'Mahindra Mahalunge vs Shapoorji Pallonji Sensorium | Hinjewadi Luxury Flats',
-    metaDescription: 'Detailed 2026 comparison: Mahindra Mahalunge vs Shapoorji Pallonji Sensorium Hinjewadi. Explore land density, Mahindra biophilic design, pricing, and MahaRERA transparency.',
-    summaryVerdict: 'Shapoorji Pallonji Sensorium is a respected high-rise luxury project near Hinjewadi Phase 1, but Mahindra Mahalunge offers a compelling counter-proposition: a genuine 13.46-acre low-density master development with 80%+ open biophilic spaces, pre-launch pricing, and Mahindra Group\'s unrivalled governance track record versus Shapoorji\'s mid-market mixed-use tower approach.',
+    h1: 'Mahindra Rivenza vs Shapoorji Pallonji Sensorium: Luxury Comparison 2026',
+    metaTitle: 'Mahindra Rivenza vs Shapoorji Pallonji Sensorium | Hinjewadi Luxury Flats',
+    metaDescription: 'Detailed 2026 comparison: Mahindra Rivenza vs Shapoorji Pallonji Sensorium Hinjewadi. Explore land density, Mahindra biophilic design, pricing, and MahaRERA transparency.',
+    summaryVerdict: 'Shapoorji Pallonji Sensorium is a respected high-rise luxury project near Hinjewadi Phase 1, but Mahindra Rivenza offers a compelling counter-proposition: a genuine 13.46-acre low-density master development with 80%+ open biophilic spaces, pre-launch pricing, and Mahindra Group\'s unrivalled governance track record versus Shapoorji\'s mid-market mixed-use tower approach.',
     prosMahindra: [
       'Expansive 13.46-acre biophilic master plan versus a compact high-rise tower footprint',
       'Mahindra Group USD 20B+ institutional credibility, net-zero commitment, and IGBC Pre-Certified green rating',
@@ -399,11 +399,11 @@ export const comparisonData: ComparisonItem[] = [
     ],
     faqs: [
       {
-        q: 'Which is a better long-term investment — Mahindra Mahalunge or Shapoorji Sensorium?',
-        a: 'Mahindra Mahalunge\'s pre-launch entry pricing combined with the incoming PMRDA 36m road infrastructure and metro connectivity positions it for stronger long-term capital appreciation versus the already-priced-in location premium of Shapoorji Sensorium.'
+        q: 'Which is a better long-term investment — Mahindra Rivenza or Shapoorji Sensorium?',
+        a: 'Mahindra Rivenza\'s pre-launch entry pricing combined with the incoming PMRDA 36m road infrastructure and metro connectivity positions it for stronger long-term capital appreciation versus the already-priced-in location premium of Shapoorji Sensorium.'
       },
       {
-        q: 'How do the green credentials of Mahindra Mahalunge compare to Shapoorji Sensorium?',
+        q: 'How do the green credentials of Mahindra Rivenza compare to Shapoorji Sensorium?',
         a: 'Mahindra Lifespaces has India\'s most aggressive net-zero carbon commitment with IGBC Pre-Certified green building standards, Miyawaki afforestation, and 80%+ open biophilic spaces — setting a higher ecological benchmark than most competitors.'
       }
     ]
@@ -449,10 +449,10 @@ export const comparisonData: ComparisonItem[] = [
     slug: 'mahindra-mahalunge-vs-kolte-patil-24k-majestic',
     competitorName: 'Kolte Patil 24K Majestic Baner',
     competitorType: 'Project',
-    h1: 'Mahindra Mahalunge vs Kolte Patil 24K Majestic: Baner vs Mahalunge',
-    metaTitle: 'Mahindra Mahalunge vs Kolte Patil 24K Majestic Baner | 2026 Comparison',
-    metaDescription: 'Compare Mahindra Mahalunge vs Kolte Patil 24K Majestic Baner: biophilic greens, Mahindra brand, price advantage, and PMRDA 36m road infrastructure analysis.',
-    summaryVerdict: 'Kolte Patil 24K Majestic holds a mature Baner address with premium brand positioning, but Mahindra Mahalunge offers a substantially larger 13.46-acre biophilic land parcel, meaningful pre-launch price entry, direct PMRDA 36m road frontage, and the institutional Mahindra Lifespaces governance — all in a rapidly appreciating Mahalunge corridor that mirrors Baner\'s growth trajectory from a decade ago.',
+    h1: 'Mahindra Rivenza vs Kolte Patil 24K Majestic: Baner vs Mahalunge',
+    metaTitle: 'Mahindra Rivenza vs Kolte Patil 24K Majestic Baner | 2026 Comparison',
+    metaDescription: 'Compare Mahindra Rivenza vs Kolte Patil 24K Majestic Baner: biophilic greens, Mahindra brand, price advantage, and PMRDA 36m road infrastructure analysis.',
+    summaryVerdict: 'Kolte Patil 24K Majestic holds a mature Baner address with premium brand positioning, but Mahindra Rivenza offers a substantially larger 13.46-acre biophilic land parcel, meaningful pre-launch price entry, direct PMRDA 36m road frontage, and the institutional Mahindra Lifespaces governance — all in a rapidly appreciating Mahalunge corridor that mirrors Baner\'s growth trajectory from a decade ago.',
     prosMahindra: [
       '13.46-acre biophilic community vs compact Baner tower footprint',
       'Pre-launch EOI pricing at a significant discount to established Baner market rates',
@@ -473,8 +473,8 @@ export const comparisonData: ComparisonItem[] = [
     ],
     faqs: [
       {
-        q: 'Is Mahindra Mahalunge a better investment than Kolte Patil 24K Majestic?',
-        a: 'For long-term capital appreciation, Mahindra Mahalunge offers a significantly stronger runway — buying in the Mahalunge corridor today mirrors the position Baner buyers were in 8–10 years ago, with incoming infrastructure (Metro Line 3, PMRDA 36m road, Inner Ring Road) set to drive steep value escalation.'
+        q: 'Is Mahindra Rivenza a better investment than Kolte Patil 24K Majestic?',
+        a: 'For long-term capital appreciation, Mahindra Rivenza offers a significantly stronger runway — buying in the Mahalunge corridor today mirrors the position Baner buyers were in 8–10 years ago, with incoming infrastructure (Metro Line 3, PMRDA 36m road, Inner Ring Road) set to drive steep value escalation.'
       },
       {
         q: 'How does Baner compare to Mahalunge for IT professionals?',

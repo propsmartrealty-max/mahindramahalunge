@@ -21,9 +21,9 @@ export const connectivityData: ConnectivityItem[] = [
     shortName: 'Pune Metro Line 3',
     completionTimeline: 'Operational Transition 2026',
     investmentScale: '₹8,313 Crore High-Speed Elevated Corridor',
-    h1: 'Flats Near Pune Metro Line 3: Mahindra Mahalunge Transit Hub',
-    metaTitle: 'Flats Near Pune Metro Line 3 Hinjewadi | Mahindra Mahalunge',
-    metaDescription: 'Explore flats near Pune Metro Line 3 (Hinjewadi-Shivajinagar). Live at Mahindra Mahalunge: seamless elevated transit, rapid airport access, and massive capital upside.',
+    h1: 'Flats Near Pune Metro Line 3: Mahindra Rivenza Transit Hub',
+    metaTitle: 'Flats Near Pune Metro Line 3 Hinjewadi | Mahindra Rivenza',
+    metaDescription: 'Explore flats near Pune Metro Line 3 (Hinjewadi-Shivajinagar). Live at Mahindra Rivenza: seamless elevated transit, rapid airport access, and massive capital upside.',
     impactScore: '9.8 / 10 Transit Transformation Index',
     transitBenefits: [
       'Shrinks travel time from Hinjewadi Phase 1 to Shivajinagar down to just 35 minutes',
@@ -36,14 +36,14 @@ export const connectivityData: ConnectivityItem[] = [
       { title: 'Feeder Bus & EV Transit', desc: 'Dedicated e-bus feeder loops connecting Mahalunge directly to Hinjewadi Phase 1 Metro station.' },
       { title: '15-20% Appreciation Catalyst', desc: 'Historical metro corridor appreciation data across Pune forecasts steep value escalation post-commissioning.' }
     ],
-    routeDetails: 'Residents of Mahindra Mahalunge access the upcoming Hinjewadi Phase 1 station in under 7 minutes via the proposed 36m DP road, ensuring fast, traffic-free transit across central Pune.',
+    routeDetails: 'Residents of Mahindra Rivenza access the upcoming Hinjewadi Phase 1 station in under 7 minutes via the proposed 36m DP road, ensuring fast, traffic-free transit across central Pune.',
     faqs: [
       {
-        q: 'How close is Mahindra Mahalunge to Pune Metro Line 3?',
+        q: 'How close is Mahindra Rivenza to Pune Metro Line 3?',
         a: 'The property is located within 7 minutes (approx 3.2 km) of the proposed Hinjewadi Phase 1 Metro station, providing ideal station proximity without immediate rail noise.'
       },
       {
-        q: 'Will Pune Metro Line 3 increase property prices at Mahindra Mahalunge?',
+        q: 'Will Pune Metro Line 3 increase property prices at Mahindra Rivenza?',
         a: 'Yes. Grade-A developments located within a 5 to 10-minute radius of Pune Metro stations historically experience a 15% to 22% capital appreciation premium over non-transit locations.'
       }
     ]
@@ -54,9 +54,9 @@ export const connectivityData: ConnectivityItem[] = [
     shortName: 'PMRDA 36M Ring Road',
     completionTimeline: 'Active Phased Implementation 2026',
     investmentScale: 'Pune’s Flagship Model Town Planning Scheme',
-    h1: 'Properties on PMRDA 36M Road: Mahindra Mahalunge Master Plan',
+    h1: 'Properties on PMRDA 36M Road: Mahindra Rivenza Master Plan',
     metaTitle: 'Properties on PMRDA 36M Ring Road Mahalunge | Mahindra Lifespaces',
-    metaDescription: 'Discover properties on PMRDA 36-meter Town Planning Ring Road at Mahalunge Pune. Mahindra Mahalunge offers 13.46 acres of planned infrastructure and luxury residences.',
+    metaDescription: 'Discover properties on PMRDA 36-meter Town Planning Ring Road at Mahalunge Pune. Mahindra Rivenza offers 13.46 acres of planned infrastructure and luxury residences.',
     impactScore: '9.9 / 10 Urban Planning Benchmark',
     transitBenefits: [
       'Wide 36-meter multi-lane arterial roads equipped with underground utility tunnels',
@@ -69,7 +69,7 @@ export const connectivityData: ConnectivityItem[] = [
       { title: 'Underground Ducting', desc: 'Zero overhead cables or repeated road digging; all electrical and fiber optic ducts are subterranean.' },
       { title: 'Town Planning Scheme 1', desc: 'PMRDA’s first model town planning scheme serving as the benchmark for entire Maharashtra.' }
     ],
-    routeDetails: 'Mahindra Mahalunge features direct frontage on the PMRDA 36m DP road network, providing seamless travel towards Baner, Balewadi, and the Mumbai-Pune Expressway.',
+    routeDetails: 'Mahindra Rivenza features direct frontage on the PMRDA 36m DP road network, providing seamless travel towards Baner, Balewadi, and the Mumbai-Pune Expressway.',
     faqs: [
       {
         q: 'What is the PMRDA Town Planning Scheme 1 at Mahalunge?',
@@ -88,8 +88,8 @@ export const connectivityData: ConnectivityItem[] = [
     completionTimeline: 'Direct Connectivity Link',
     investmentScale: 'High-Priority Arterial Bypass Bridge',
     h1: 'Mahalunge-Hinjewadi Bridge: Direct 7-Min Hinjewadi Transit',
-    metaTitle: 'Mahalunge-Hinjewadi Bridge Connectivity | Mahindra Mahalunge Flats',
-    metaDescription: 'Explore the Mahalunge-Hinjewadi bridge corridor connecting Mahindra Mahalunge to Hinjewadi Phase 1 in just 7 mins. Bypass highway traffic completely.',
+    metaTitle: 'Mahalunge-Hinjewadi Bridge Connectivity | Mahindra Rivenza Flats',
+    metaDescription: 'Explore the Mahalunge-Hinjewadi bridge corridor connecting Mahindra Rivenza to Hinjewadi Phase 1 in just 7 mins. Bypass highway traffic completely.',
     impactScore: '9.6 / 10 Daily Commute Gamechanger',
     transitBenefits: [
       'Bypasses the infamous Shivaji Chowk and Wakad flyover congestion completely',
@@ -178,12 +178,12 @@ export const connectivityData: ConnectivityItem[] = [
     shortName: 'Pune Ring Road West',
     completionTimeline: 'Under Active NHAI Acquisition 2026–2029',
     investmentScale: '₹26,000+ Crore Pune Ring Road Project',
-    h1: 'Properties Near Pune Ring Road Western Alignment: Mahindra Mahalunge',
-    metaTitle: 'Properties Near Pune Ring Road Western Alignment | Mahindra Mahalunge',
-    metaDescription: 'Discover why properties near the Pune Outer Ring Road western alignment at Mahalunge are India\'s top infrastructure investment bet. Explore Mahindra Mahalunge\'s strategic advantage.',
+    h1: 'Properties Near Pune Ring Road Western Alignment: Mahindra Rivenza',
+    metaTitle: 'Properties Near Pune Ring Road Western Alignment | Mahindra Rivenza',
+    metaDescription: 'Discover why properties near the Pune Outer Ring Road western alignment at Mahalunge are India\'s top infrastructure investment bet. Explore Mahindra Rivenza\'s strategic advantage.',
     impactScore: '9.9 / 10 Macro Infrastructure Multiplier',
     transitBenefits: [
-      'Direct 8-lane highway interchange proposed within 4 km of Mahindra Mahalunge at Nande junction',
+      'Direct 8-lane highway interchange proposed within 4 km of Mahindra Rivenza at Nande junction',
       'Cuts travel time from Mahalunge to Pune Airport and Hadapsar IT hub to under 30 minutes',
       'Eliminates all Hinjewadi, Baner, and Wakad internal arterial congestion completely',
       'Drives massive commercial land appreciation across the entire Nande-Mahalunge micro-market'
@@ -196,8 +196,8 @@ export const connectivityData: ConnectivityItem[] = [
     routeDetails: 'The western alignment passes through Hinjewadi, Nande, and Mahalunge corridor, connecting to Kothrud, Chandni Chowk, and eventually Katraj — transforming Mahalunge from an emerging micro-market into a ring-road-adjacent commercial-residential powerhouse.',
     faqs: [
       {
-        q: 'How close is Mahindra Mahalunge to the Pune Ring Road western interchange?',
-        a: 'The proposed Nande-Hinjewadi interchange on the western alignment of the Pune Outer Ring Road is approximately 3–5 km from Mahindra Mahalunge, positioning it within the prime appreciation zone.'
+        q: 'How close is Mahindra Rivenza to the Pune Ring Road western interchange?',
+        a: 'The proposed Nande-Hinjewadi interchange on the western alignment of the Pune Outer Ring Road is approximately 3–5 km from Mahindra Rivenza, positioning it within the prime appreciation zone.'
       },
       {
         q: 'Will the Pune Ring Road increase property prices near Mahalunge?',
@@ -215,12 +215,12 @@ export const connectivityData: ConnectivityItem[] = [
     shortName: 'Mumbai-Pune Expressway',
     completionTimeline: 'Fully Operational — 6-Lane Premium Expressway',
     investmentScale: '₹1,630 Crore MSRDC Toll Expressway',
-    h1: 'Flats Near Mumbai-Pune Expressway: Mahindra Mahalunge 14-Min Access',
-    metaTitle: 'Flats Near Mumbai-Pune Expressway | Mahindra Mahalunge Baner Balewadi',
-    metaDescription: 'Explore luxury flats near Mumbai-Pune Expressway access at Baner-Balewadi. Mahindra Mahalunge is just 8 mins to Dehu Road interchange — ideal for Mumbai weekenders & NRIs.',
+    h1: 'Flats Near Mumbai-Pune Expressway: Mahindra Rivenza 14-Min Access',
+    metaTitle: 'Flats Near Mumbai-Pune Expressway | Mahindra Rivenza Baner Balewadi',
+    metaDescription: 'Explore luxury flats near Mumbai-Pune Expressway access at Baner-Balewadi. Mahindra Rivenza is just 8 mins to Dehu Road interchange — ideal for Mumbai weekenders & NRIs.',
     impactScore: '9.5 / 10 Weekend Gateway & NRI Investment Magnet',
     transitBenefits: [
-      'Mahindra Mahalunge to Dehu Road Expressway interchange in just 8–10 minutes',
+      'Mahindra Rivenza to Dehu Road Expressway interchange in just 8–10 minutes',
       'Pune city to Mumbai in under 2 hours via 6-lane premium high-speed expressway',
       'Extremely high NRI and Mumbai-based investor demand for properties with quick expressway access',
       'Drives premium rental premiums from BFSI professionals, senior consultants, and CXOs commuting between Mumbai and Pune'
@@ -230,11 +230,11 @@ export const connectivityData: ConnectivityItem[] = [
       { title: 'Mumbai Weekend Retreat', desc: 'Ideal for Mumbai-based NRIs and professionals seeking a luxury Pune base with easy 90-minute expressway access to Mumbai.' },
       { title: 'Blue-Chip Investment Magnet', desc: 'Properties with under 15-minute expressway access command consistent rental premiums of 8%–12% over comparable inland locations.' }
     ],
-    routeDetails: 'From Mahindra Mahalunge, drive west via Nande Road, join the Balewadi-Baner highway, and reach the Dehu Road Expressway interchange in 8 minutes — opening direct 6-lane access to Mumbai, Lonavala, and the Pune Outer Ring Road interchange.',
+    routeDetails: 'From Mahindra Rivenza, drive west via Nande Road, join the Balewadi-Baner highway, and reach the Dehu Road Expressway interchange in 8 minutes — opening direct 6-lane access to Mumbai, Lonavala, and the Pune Outer Ring Road interchange.',
     faqs: [
       {
-        q: 'How far is Mahindra Mahalunge from the Mumbai-Pune Expressway?',
-        a: 'Mahindra Mahalunge is approximately 6–8 km from the Dehu Road toll plaza on the Mumbai-Pune Expressway, translating to an 8–12 minute drive via the PMRDA 36m DP road and Balewadi link.'
+        q: 'How far is Mahindra Rivenza from the Mumbai-Pune Expressway?',
+        a: 'Mahindra Rivenza is approximately 6–8 km from the Dehu Road toll plaza on the Mumbai-Pune Expressway, translating to an 8–12 minute drive via the PMRDA 36m DP road and Balewadi link.'
       },
       {
         q: 'Why does Mumbai-Pune Expressway proximity increase property value?',
@@ -252,12 +252,12 @@ export const connectivityData: ConnectivityItem[] = [
     shortName: 'Balewadi Stadium Metro',
     completionTimeline: 'Balewadi High Street Operational | Metro Alignment Under Planning',
     investmentScale: 'Premier West Pune Urban Lifestyle & Transit Corridor',
-    h1: 'Flats Near Balewadi Stadium Metro Station: Mahindra Mahalunge 8-Min Access',
-    metaTitle: 'Flats Near Balewadi Stadium Metro Station | Mahindra Mahalunge 2026',
-    metaDescription: 'Explore luxury flats near Balewadi High Street and the proposed Metro station corridor. Mahindra Mahalunge is 8 mins from Balewadi — Pune\'s premium lifestyle hub.',
+    h1: 'Flats Near Balewadi Stadium Metro Station: Mahindra Rivenza 8-Min Access',
+    metaTitle: 'Flats Near Balewadi Stadium Metro Station | Mahindra Rivenza 2026',
+    metaDescription: 'Explore luxury flats near Balewadi High Street and the proposed Metro station corridor. Mahindra Rivenza is 8 mins from Balewadi — Pune\'s premium lifestyle hub.',
     impactScore: '9.4 / 10 Lifestyle + Transit Convergence Index',
     transitBenefits: [
-      '8-minute drive from Mahindra Mahalunge to Balewadi High Street — Pune\'s premium retail and F&B destination',
+      '8-minute drive from Mahindra Rivenza to Balewadi High Street — Pune\'s premium retail and F&B destination',
       'Direct proximity to Shree Shiv Chhatrapati Sports Complex (Balewadi Stadium) and D.Y. Patil Hospital',
       'Proposed metro alignment through Balewadi will further compress commute times to Shivajinagar and Pune University',
       'Exceptional rental demand from IT professionals, sports personnel, and MNC lease executives'
@@ -265,17 +265,17 @@ export const connectivityData: ConnectivityItem[] = [
     keyHighlights: [
       { title: 'Balewadi High Street', desc: 'One of Pune\'s fastest-growing premium F&B, retail, and co-working corridors — anchored by Pune FC stadium and luxury hospitality.' },
       { title: 'Proposed Metro Corridor', desc: 'Planned metro alignment through Balewadi would provide direct elevated connectivity to Shivajinagar Court and Pune University Station.' },
-      { title: '8-Min Premium Lifestyle Access', desc: 'Mahindra Mahalunge residents enjoy the full Balewadi High Street ecosystem — premium gyms, breweries, cafes, malls, and hospitals — in under 10 minutes.' }
+      { title: '8-Min Premium Lifestyle Access', desc: 'Mahindra Rivenza residents enjoy the full Balewadi High Street ecosystem — premium gyms, breweries, cafes, malls, and hospitals — in under 10 minutes.' }
     ],
-    routeDetails: 'From Mahindra Mahalunge, take the Nande-Mahalunge Road east toward Baner and reach Balewadi High Street in 8 minutes, gaining access to Shree Shiv Chhatrapati Sports Complex, premium hospitals, and the proposed metro feeder zone.',
+    routeDetails: 'From Mahindra Rivenza, take the Nande-Mahalunge Road east toward Baner and reach Balewadi High Street in 8 minutes, gaining access to Shree Shiv Chhatrapati Sports Complex, premium hospitals, and the proposed metro feeder zone.',
     faqs: [
       {
-        q: 'How far is Mahindra Mahalunge from Balewadi High Street?',
-        a: 'Mahindra Mahalunge is just 4.6 km from Balewadi High Street — approximately 8 minutes by car during standard traffic conditions, making it an ideal lifestyle node for residents.'
+        q: 'How far is Mahindra Rivenza from Balewadi High Street?',
+        a: 'Mahindra Rivenza is just 4.6 km from Balewadi High Street — approximately 8 minutes by car during standard traffic conditions, making it an ideal lifestyle node for residents.'
       },
       {
-        q: 'Will the proposed Balewadi Metro Station benefit Mahindra Mahalunge residents?',
-        a: 'Yes. If the proposed metro alignment through Balewadi is commissioned, Mahindra Mahalunge residents will gain feeder access to Pune Metro Line 3 from Balewadi, extending rapid transit connectivity to Shivajinagar, Pune University, and the Mumbai-Pune Expressway interchange.'
+        q: 'Will the proposed Balewadi Metro Station benefit Mahindra Rivenza residents?',
+        a: 'Yes. If the proposed metro alignment through Balewadi is commissioned, Mahindra Rivenza residents will gain feeder access to Pune Metro Line 3 from Balewadi, extending rapid transit connectivity to Shivajinagar, Pune University, and the Mumbai-Pune Expressway interchange.'
       },
       {
         q: 'Why is Balewadi proximity important for real estate investment?',

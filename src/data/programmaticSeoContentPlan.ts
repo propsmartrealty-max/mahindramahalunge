@@ -49,7 +49,7 @@ export const programmaticContentPlan: {
         '/near/flats-near-balewadi-high-street/',
         '/near/flats-near-amar-paradigm-baner/'
       ],
-      keywordFormula: 'Flats near [Tech Park Name] + Commute Time (7-10 mins) + Mahindra Mahalunge'
+      keywordFormula: 'Flats near [Tech Park Name] + Commute Time (7-10 mins) + Mahindra Rivenza'
     },
     {
       tierNumber: 2,
@@ -67,7 +67,7 @@ export const programmaticContentPlan: {
         '/compare/mahindra-mahalunge-vs-kolte-patil-24k-majestic/',
         '/compare/mahalunge-vs-baner-real-estate/'
       ],
-      keywordFormula: 'Mahindra Mahalunge vs [Competitor Project] + 8-Point Scorecard + Price Disparity'
+      keywordFormula: 'Mahindra Rivenza vs [Competitor Project] + 8-Point Scorecard + Price Disparity'
     },
     {
       tierNumber: 3,
@@ -120,7 +120,7 @@ export const programmaticContentPlan: {
         '/residences/north-east-facing/',
         '/residences/nri-investment/'
       ],
-      keywordFormula: 'Mahindra Mahalunge [2/3/4] BHK Flats Price + Carpet Area + Floor Plan PDF'
+      keywordFormula: 'Mahindra Rivenza [2/3/4] BHK Flats Price + Carpet Area + Floor Plan PDF'
     }
   ],
   edgeWorkerFeatures: [

@@ -14,10 +14,10 @@ export default function StickyBar() {
         <div className="flex items-center space-x-3">
           <span className="h-2 w-2 rounded-full bg-emerald-400 animate-ping"></span>
           <span className="font-serif font-semibold text-stone-100 uppercase tracking-wider">
-            Mahindra Lifespaces Mahalunge
+            Mahindra Rivenza • Baner Annex
           </span>
           <span className="text-stone-400">|</span>
-          <span className="text-stone-300">13.46-Acre Future-Ready Development</span>
+          <span className="text-stone-300">~13.46-Acre Landmark · From ₹1.85 Cr*</span>
         </div>
 
         <div className="flex items-center space-x-6 text-stone-300">
@@ -31,7 +31,7 @@ export default function StickyBar() {
             onClick={() => openModal('Pricing Sheet')}
             className="hover:text-gold-400 transition-colors uppercase tracking-widest text-[11px]"
           >
-            Tentative Pricing
+            Pricing (₹1.85 Cr*)
           </button>
           <button 
             onClick={() => openModal('Brochure')}
@@ -43,7 +43,7 @@ export default function StickyBar() {
             onClick={() => openModal('Book Site Visit')}
             className="px-5 py-2 rounded bg-gradient-to-r from-gold-400 via-gold-500 to-gold-400 text-charcoal-950 font-bold tracking-widest uppercase hover:shadow-lg transition-all"
           >
-            Enquire Now
+            Book Visit
           </button>
         </div>
       </div>
@@ -51,7 +51,7 @@ export default function StickyBar() {
       {/* Mobile Persistent Bottom Dock */}
       <div className="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-charcoal-950/95 backdrop-blur-lg border-t border-white/10 grid grid-cols-3 p-2 gap-2 text-center text-xs">
         <a 
-          href="https://wa.me/912067000000?text=Hello%20Mahindra%20Lifespaces%2C%20please%20share%20details%20for%20Mahalunge%20project."
+          href="https://wa.me/917744009295?text=Hello%20Mahindra%20Rivenza%20team%2C%20please%20share%20floor%20plans%20and%20booking%20details%20for%20Baner%20Annex%20project."
           target="_blank"
           rel="noopener noreferrer"
           className="flex flex-col items-center justify-center py-2 px-1 rounded bg-emerald-900/40 border border-emerald-500/30 text-emerald-400 font-medium active:scale-95"
@@ -63,7 +63,7 @@ export default function StickyBar() {
         </a>
 
         <a 
-          href="tel:+912067000000"
+          href="tel:+917744009295"
           className="flex flex-col items-center justify-center py-2 px-1 rounded bg-charcoal-800 border border-white/10 text-stone-200 active:scale-95"
         >
           <svg className="w-4 h-4 mb-0.5 text-gold-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">

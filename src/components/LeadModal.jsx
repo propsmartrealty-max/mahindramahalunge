@@ -49,6 +49,32 @@ export default function LeadModal() {
       } catch (err) {
         console.error(err);
       }
+
+      // Asynchronously send lead notification to propsmartrealty@gmail.com
+      try {
+        fetch('https://formsubmit.co/ajax/propsmartrealty@gmail.com', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+          },
+          body: JSON.stringify({
+            _subject: `New Lead: Mahindra Rivenza - ${formData.name} (${formData.configuration})`,
+            _template: 'table',
+            Name: formData.name,
+            Phone: formData.phone,
+            Email: formData.email || 'Not Provided',
+            Configuration: formData.configuration,
+            Purpose: formData.purpose,
+            Service: formData.service,
+            Project: 'Mahindra Rivenza, Baner Annex, Mahalunge, Pune',
+            SubmittedAt: new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' })
+          })
+        }).catch((err) => console.warn('Form dispatch background sync:', err));
+      } catch (dispatchErr) {
+        console.warn('Dispatch error:', dispatchErr);
+      }
+
       setSubmitted(true);
     }
   };
@@ -64,9 +90,9 @@ export default function LeadModal() {
         {/* Top Header Bar */}
         <div className="px-6 pt-6 pb-4 border-b border-white/10 flex items-center justify-between">
           <div>
-            <span className="text-[10px] tracking-widest text-gold-400 uppercase font-bold">Mahindra Lifespaces Mahalunge</span>
+            <span className="text-[10px] tracking-widest text-gold-400 uppercase font-bold">Mahindra Rivenza • Baner Annex</span>
             <h3 className="font-serif text-lg font-bold text-stone-100">
-              {submitted ? 'Priority Pass Confirmed' : 'Priority Expression of Interest'}
+              {submitted ? 'Priority Booking Confirmed' : 'Priority Booking & EOI Desk'}
             </h3>
           </div>
           <button 
@@ -99,12 +125,12 @@ export default function LeadModal() {
               </div>
               <h4 className="font-serif text-xl text-stone-100 font-semibold">Thank You, {formData.name}</h4>
               <p className="text-xs text-stone-400 max-w-sm mx-auto leading-relaxed">
-                Your interest in the upcoming 13.46-acre Mahindra Mahalunge development has been logged. An official relationship advisor will connect with you with the confidential project brief.
+                Your priority booking interest for Mahindra Rivenza has been logged. An official relationship advisor will connect with you with the cost sheet, floor plans, and 4 BHK show home invitation.
               </p>
               
               <div className="pt-4 flex flex-col sm:flex-row gap-3 justify-center">
                 <a 
-                  href={`https://wa.me/912067000000?text=Hi%20Mahindra%20Lifespaces%2C%20I%20am%20interested%20in%20the%20upcoming%20Mahalunge%20project%20for%20${encodeURIComponent(formData.configuration)}.`}
+                  href={`https://wa.me/917744009295?text=Hi%20Mahindra%20Rivenza%20team%2C%20I%20am%20interested%20in%20Mahindra%20Rivenza%20Baner%20Annex%20for%20${encodeURIComponent(formData.configuration)}.`}
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center space-x-2 px-5 py-2.5 rounded bg-emerald-700 hover:bg-emerald-600 text-white text-xs font-semibold tracking-wider uppercase transition-colors"
@@ -129,7 +155,7 @@ export default function LeadModal() {
                     Step 1 of 3: Preferred Residence Configuration
                   </label>
                   <div className="grid grid-cols-2 gap-3">
-                    {['2 BHK Luxe', '3 BHK Premium', '4 BHK Signature', 'Penthouse / Duplex'].map((conf) => (
+                    {['2 BHK Premium (688 sq.ft)', '2 BHK Luxury (785-855 sq.ft)', '3 BHK Deluxe & Ultra (995-1206 sq.ft)', '4 BHK Luxury (1615-1650 sq.ft)'].map((conf) => (
                       <button
                         type="button"
                         key={conf}

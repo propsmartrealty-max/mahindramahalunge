@@ -115,6 +115,11 @@ import { mahindraPuneProjects, corporateProfile } from '../data/mahindraPuneEcos
                   {project.microMarket}
                 </span>
 
+                {project.status === 'Officially Launched / Priority Bookings' && (
+                  <span class="px-2.5 py-1 rounded-full bg-emerald-500/20 backdrop-blur-md text-[10px] font-bold tracking-wider uppercase text-emerald-300 border border-emerald-500/40 animate-pulse">
+                    Official Launch • Priority Bookings
+                  </span>
+                )}
                 {project.status === 'Pre-Launch / Master Planning' && (
                   <span class="px-2.5 py-1 rounded-full bg-gold-500/20 backdrop-blur-md text-[10px] font-bold tracking-wider uppercase text-gold-300 border border-gold-500/40 animate-pulse">
                     Pre-Launch Showcase

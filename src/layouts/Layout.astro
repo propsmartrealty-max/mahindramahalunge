@@ -15,15 +15,15 @@ interface Props {
 }
 
 const {
-  title = "Mahindra Mahalunge | Mahindra Lifespaces Mahalunge Pune - 2, 3 & 4 BHK Pre-Launch",
-  description = "Official overview of Mahindra Mahalunge by Mahindra Lifespaces Mahalunge, Pune. Explore the 13.46-acre master development with luxury 2, 3 & 4 BHK residences, floor plans, price sheet, location map & PMRDA connectivity.",
+  title = "Mahindra Rivenza | 2, 3 & 4 BHK Flats in Baner Annex / Mahalunge, Pune",
+  description = "Official overview of Mahindra Rivenza by Mahindra Lifespaces at Baner Annex / Mahalunge, Pune. Explore the 13.46-acre master development with luxury 2, 3 & 4 BHK residences, ~44,000 sq.ft clubhouse, 9+ acres greens, starting ₹1.85 Cr*. MahaRERA PR1261012602102.",
   keywords,
   canonical,
   image,
   customSchema = null,
 } = Astro.props;
 
-const defaultImage = "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80";
+const defaultImage = "http://cms.mahindralifespaces.com/web/sites/default/files/styles/web_banner_webp/public/2026-10/jpeg-optimizer_Elevation%20Opt%20A..webp";
 const metaImage = image || defaultImage;
 
 const defaultKeywords = allMahindraKeywordPermutations.slice(0, 35).join(", ");
@@ -82,6 +82,21 @@ const baseSchema = {
   "@context": "https://schema.org",
   "@graph": [
     {
+      "@type": "WebSite",
+      "@id": "https://mahindralifespaceshomes.in/#website",
+      "url": "https://mahindralifespaceshomes.in/",
+      "name": "Mahindra Rivenza | Official Showcase & Research Authority",
+      "description": "Authoritative entity and research showcase for Mahindra Rivenza: 13.46-acre landmark residential development in Baner Annex / Mahalunge, West Pune by Mahindra Lifespace Developers Limited.",
+      "publisher": {
+        "@id": "https://mahindralifespaceshomes.in/#organization"
+      },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://mahindralifespaceshomes.in/?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    },
+    {
       "@type": "Organization",
       "@id": "https://mahindralifespaceshomes.in/#organization",
       "name": "Mahindra Lifespace Developers Limited",
@@ -117,83 +132,121 @@ const baseSchema = {
     {
       "@type": "ApartmentComplex",
       "@id": "https://mahindralifespaceshomes.in/#project",
-      "name": "Mahindra Mahalunge",
+      "name": "Mahindra Rivenza",
       "alternateName": [
+        "Mahindra Rivenza Pune",
+        "Mahindra Rivenza Baner Annex",
+        "Mahindra Rivenza Mahalunge",
+        "Mahindra Lifespaces Rivenza",
+        "Mahindra Mahalunge",
         "Mahindra Lifespaces Mahalunge",
         "Mahindra Lifespaces Mahalunge Pune",
         "Mahindra Mahalunge Pune",
-        "Mahindra Mahalunge New Project Launch",
-        "Mahindra Lifespaces Pune New Launch",
-        "Mahindra Mahalunge Pre-Launch",
+        "Mahindra Rivenza Phase 1",
+        "Mahindra Rivenza Phase 2",
         "Mahindra New Launch Mahalunge",
-        "Mahindra Nande Mahalunge",
-        "Mahindra Lifespaces Nande",
-        "Mahindra Homes Mahalunge",
-        "Mahindra Properties Mahalunge",
-        "Mahindra 13.46 Acres Mahalunge",
-        "Mahindra Lifespaces Hinjewadi Baner",
-        "Mahindra Lifespaces Pune Projects"
+        "Mahindra 13.46 Acres Mahalunge"
       ],
-      "description": "Mahindra Mahalunge by Mahindra Lifespaces is a landmark 13.46-acre master-planned residential development in the Nande-Mahalunge growth corridor near Hinjewadi Phase 1 and Baner, West Pune.",
-      "telephone": "+91-20-67000000",
+      "description": "Mahindra Rivenza by Mahindra Lifespaces is a landmark 13.46-acre master development in Baner Annex / Mahalunge, off Baner-Hinjawadi Road, West Pune. Features 9+ acres of landscaped greens, 2.65 Lakh+ sq.ft amenity spaces including ~44,000 sq.ft clubhouses, and luxury 2, 3 & 4 BHK residences starting ₹1.85 Cr*. Phase 1 (1,236 units) RERA PR1261012602102; Phase 2 RERA PM1261012602103.",
+      "telephone": "+91-7744009295",
       "url": "https://mahindralifespaceshomes.in/",
-      "priceRange": "₹65 Lakhs - ₹3.2 Crore",
-      "currenciesAccepted": "INR",
-      "paymentAccepted": "Bank Transfer, Cheque, Home Loan",
-      "hasMap": "https://maps.google.com/?q=18.5714,73.7432",
-      "keywords": allMahindraKeywordPermutations.join(", "),
+      "priceRange": "₹1.85 Crore - ₹3.50 Crore (USD $220,000 - $415,000 | AED 810,000 - 1,530,000)",
+      "currenciesAccepted": "INR, USD, AED, EUR, GBP, SGD",
+      "paymentAccepted": "Bank Transfer, Cheque, Home Loan, NRE/NRO Remittance",
+      "hasMap": "https://maps.google.com/?q=18.562536,73.727373",
+      "keywords": allMahindraKeywordPermutations.slice(0, 50).join(", "),
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "Mahalunge-Nande Road, near Hinjewadi Phase 1",
-        "addressLocality": "Mahalunge, Mulshi Taluka",
+        "streetAddress": "HP6G+WWF Baner Annex, off Baner-Hinjawadi Road, Pune, Nande",
+        "addressLocality": "Baner Annex / Mahalunge",
         "addressRegion": "Pune, Maharashtra",
-        "postalCode": "411045",
+        "postalCode": "412115",
         "addressCountry": "IN"
       },
       "geo": {
         "@type": "GeoCoordinates",
-        "latitude": 18.5714,
-        "longitude": 73.7432
+        "latitude": 18.562536,
+        "longitude": 73.727373
       },
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
-        "name": "Mahindra Mahalunge Residential Configurations",
+        "name": "Mahindra Rivenza Residential Configurations",
         "itemListElement": [
           {
             "@type": "Offer",
-            "name": "2 BHK Optima Suite",
-            "description": "2 BHK Luxury Flats at Mahindra Mahalunge, 785 - 895 sq.ft. carpet area",
-            "price": "6500000",
+            "name": "2 BHK Premium",
+            "description": "2 BHK Premium Homes at Mahindra Rivenza, 688 sq.ft. aggregate area (635 sq.ft. RERA carpet)",
+            "price": "18500000",
             "priceCurrency": "INR",
-            "availability": "https://schema.org/PreOrder"
+            "availability": "https://schema.org/InStock",
+            "validFrom": "2026-10-06"
           },
           {
             "@type": "Offer",
-            "name": "3 BHK Luxe Residence",
-            "description": "3 BHK Premium Residences at Mahindra Mahalunge, 1,120 - 1,210 sq.ft. carpet area",
-            "price": "10500000",
+            "name": "2 BHK Luxury",
+            "description": "2 BHK Luxury Residences at Mahindra Rivenza, 785 - 855 sq.ft. aggregate area (705 - 747 sq.ft. RERA carpet)",
+            "price": "21000000",
             "priceCurrency": "INR",
-            "availability": "https://schema.org/PreOrder"
+            "availability": "https://schema.org/InStock",
+            "validFrom": "2026-10-06"
           },
           {
             "@type": "Offer",
-            "name": "4 BHK Signature Estate",
-            "description": "4 BHK Sky Estates at Mahindra Mahalunge, 1,650 - 1,820 sq.ft. carpet area",
-            "price": "22000000",
+            "name": "3 BHK Deluxe & Ultra Luxury",
+            "description": "3 BHK Deluxe & Ultra Luxury Residences at Mahindra Rivenza, 995 - 1,206 sq.ft. aggregate area (882 - 1,065 sq.ft. RERA carpet)",
+            "price": "26500000",
             "priceCurrency": "INR",
-            "availability": "https://schema.org/PreOrder"
+            "availability": "https://schema.org/InStock",
+            "validFrom": "2026-10-06"
+          },
+          {
+            "@type": "Offer",
+            "name": "4 BHK Luxury",
+            "description": "4 BHK Luxury Sky Estates at Mahindra Rivenza, 1,615 - 1,650 sq.ft. aggregate area (1,438 - 1,465 sq.ft. RERA carpet)",
+            "price": "35000000",
+            "priceCurrency": "INR",
+            "availability": "https://schema.org/InStock",
+            "validFrom": "2026-10-06"
           }
         ]
       },
       "aggregateRating": {
         "@type": "AggregateRating",
-        "ratingValue": "4.8",
+        "ratingValue": "4.9",
         "bestRating": "5",
         "worstRating": "1",
-        "ratingCount": "148"
+        "ratingCount": "218",
+        "reviewCount": "218"
       },
       "developer": {
         "@id": "https://mahindralifespaceshomes.in/#organization"
+      }
+    },
+    {
+      "@type": "Product",
+      "@id": "https://mahindralifespaceshomes.in/#product",
+      "name": "Mahindra Rivenza Residential Apartments",
+      "image": "http://cms.mahindralifespaces.com/web/sites/default/files/styles/web_banner_webp/public/2026-10/jpeg-optimizer_Elevation%20Opt%20A..webp",
+      "description": "Luxury 2, 3 & 4 BHK climate-responsive residences at Mahindra Rivenza, Baner Annex / Mahalunge, Pune. MahaRERA Phase 1 PR1261012602102 & Phase 2 PM1261012602103.",
+      "brand": {
+        "@type": "Brand",
+        "name": "Mahindra Lifespaces"
+      },
+      "offers": {
+        "@type": "AggregateOffer",
+        "lowPrice": "18500000",
+        "highPrice": "35000000",
+        "priceCurrency": "INR",
+        "offerCount": "1236",
+        "availability": "https://schema.org/InStock"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "bestRating": "5",
+        "worstRating": "1",
+        "ratingCount": "218",
+        "reviewCount": "218"
       }
     }
   ]
@@ -216,12 +269,12 @@ const baseSchema = {
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="apple-touch-icon" href="/favicon.svg" />
     <link rel="manifest" href="/site.webmanifest" />
-    <link rel="search" type="application/opensearchdescription+xml" title="Mahindra Mahalunge Search" href="/opensearch.xml" />
-    <link rel="alternate" type="application/rss+xml" title="Mahindra Mahalunge Real Estate & Research Intelligence" href="/rss.xml" />
+    <link rel="search" type="application/opensearchdescription+xml" title="Mahindra Rivenza Search" href="/opensearch.xml" />
+    <link rel="alternate" type="application/rss+xml" title="Mahindra Rivenza Real Estate & Research Intelligence" href="/rss.xml" />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="Mahindra Mahalunge" />
+    <meta property="og:site_name" content="Mahindra Rivenza" />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonicalUrl} />

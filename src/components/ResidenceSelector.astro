@@ -80,12 +80,12 @@
       <!-- Key Specs Table -->
       <div class="bg-[#0c1017]/80 rounded-xl border border-white/10 divide-y divide-white/5 text-xs">
         <div class="p-3.5 flex justify-between">
-          <span class="text-stone-400">Tentative Carpet Area</span>
-          <span id="spec-carpet" class="font-semibold text-stone-100">1,120 - 1,210 sq.ft.*</span>
+          <span class="text-stone-400">RERA Carpet Area</span>
+          <span id="spec-carpet" class="font-semibold text-stone-100">882 – 1,065 sq.ft. (995 – 1,206 sq.ft. Agg.)</span>
         </div>
         <div class="p-3.5 flex justify-between">
-          <span class="text-stone-400">Exclusive Balcony Deck</span>
-          <span id="spec-balcony" class="font-semibold text-stone-100">92 sq.ft.*</span>
+          <span class="text-stone-400">Exclusive EBVT / Balcony Deck</span>
+          <span id="spec-balcony" class="font-semibold text-stone-100">113 – 141 sq.ft.*</span>
         </div>
         <div class="p-3.5 flex justify-between">
           <span class="text-stone-400">Primary Orientation</span>
@@ -93,11 +93,11 @@
         </div>
         <div class="p-3.5 flex justify-between">
           <span class="text-stone-400">Facing & Vista</span>
-          <span id="spec-view" class="font-semibold text-stone-100">Central Landscaped Greens</span>
+          <span id="spec-view" class="font-semibold text-stone-100">Central Landscaped Greens & River</span>
         </div>
         <div class="p-3.5 flex justify-between">
-          <span class="text-stone-400">Proposed Towers</span>
-          <span id="spec-tower" class="font-semibold text-stone-100">Towers Delta & Epsilon</span>
+          <span class="text-stone-400">Development Phase</span>
+          <span id="spec-tower" class="font-semibold text-stone-100">Phase 1 & Phase 2</span>
         </div>
       </div>
 
@@ -155,18 +155,18 @@
 <script>
   const data: any = {
     '2 BHK': {
-      label: '2 BHK Collection',
-      name: '2 BHK Optima Suite',
-      carpet: '785 - 895 sq.ft.*',
-      balcony: '68 sq.ft.*',
+      label: '2 BHK Premium & Luxury Collection',
+      name: '2 BHK Premium & Luxury (4 Typologies)',
+      carpet: '635 – 747 sq.ft. RERA (688 – 855 sq.ft. Aggregate)',
+      balcony: '53 – 113 sq.ft. EBVT Deck',
       orient: 'East-Facing (Vastu Compliant)',
-      view: 'Central Landscaped Greens & Courtyard',
-      tower: 'Towers Alpha & Beta',
+      view: 'Central Landscaped Greens & River Vistas',
+      tower: 'Phase 1 (PR1261012602102) & Phase 2',
       highlights: [
-        'Dedicated entry foyer ensuring complete living room privacy',
-        'Cross-ventilation architectural orientation for natural air breeze',
-        'Generous 5-foot deep panoramic deck overlooking central foliage',
-        'Concealed air-conditioning and acoustic insulation provisioning'
+        'Available in Premium (688 sq.ft agg), Luxury B (785 sq.ft), Luxury A (824 sq.ft) & Ultra Luxury E (855 sq.ft)',
+        'Starting from ₹1.85 Crore* with climate responsive daylighting',
+        'Generous EBVT balcony deck overlooking ~44,000 sq.ft clubhouse and 9+ acres greens',
+        'Pre-Certified IGBC Gold and Net Zero Waste sustainability standards'
       ],
       svg: `
         <svg viewBox="0 0 600 420" class="w-full h-auto text-stone-300">
@@ -187,18 +187,18 @@
       `
     },
     '3 BHK': {
-      label: '3 BHK Collection',
-      name: '3 BHK Luxe Residence',
-      carpet: '1,120 - 1,210 sq.ft.*',
-      balcony: '92 sq.ft.*',
+      label: '3 BHK Deluxe & Ultra Luxury Collection',
+      name: '3 BHK Deluxe & Ultra Luxury (3 Typologies)',
+      carpet: '882 – 1,065 sq.ft. RERA (995 – 1,206 sq.ft. Aggregate)',
+      balcony: '113 – 141 sq.ft. EBVT Deck',
       orient: 'East - West Cross Breeze',
-      view: 'Central Landscaped Greens',
-      tower: 'Towers Delta & Epsilon',
+      view: 'Scenic Sahyadri Hills & Landscaped Reserves',
+      tower: 'Phase 1 & Phase 2 High-Rise Towers',
       highlights: [
-        'Triple-exposure cross ventilation maximising daylight and air flow',
-        'Separate guest bedroom flexible as a hybrid work studio / library',
-        'Large double-height balcony overlooking private organic groves',
-        'Zero dead-space corridor architecture for optimal usable carpet area'
+        'Available in Deluxe C (995 sq.ft agg), Deluxe B (1,007 sq.ft agg), and Ultra Luxury B (1,206 sq.ft agg)',
+        'Triple-exposure cross ventilation maximising daylight and fresh natural air flow',
+        'Large double-height balcony overlooking private water features & sunken bar pool',
+        'Zero dead-space corridor architecture with expansive island kitchen setup'
       ],
       svg: `
         <svg viewBox="0 0 600 420" class="w-full h-auto text-stone-300">
@@ -221,18 +221,18 @@
       `
     },
     '4 BHK': {
-      label: '4 BHK Collection',
-      name: '4 BHK Signature Estate',
-      carpet: '1,650 - 1,820 sq.ft.*',
-      balcony: '145 sq.ft.*',
-      orient: 'North-East 270° Panorama',
-      view: 'Scenic Mula-Mutha Riverbed & Skyline',
-      tower: 'Iconic Signature Tower',
+      label: '4 BHK Luxury Collection (Show Home Live)',
+      name: '4 BHK Luxury Estates (1,615 – 1,650 sq.ft)',
+      carpet: '1,438 – 1,465 sq.ft. RERA (1,615 – 1,650 sq.ft. Aggregate)',
+      balcony: '177 – 186 sq.ft. EBVT Deck',
+      orient: 'North-East 270° Panoramic Vista',
+      view: 'Scenic Riverbed, Sahyadri Hills & Green Horizon',
+      tower: 'Premier Towers (4 BHK Show Residence Open On-Site)',
       highlights: [
-        'Exclusive private elevator vestibule entrance lobby',
-        'Grand 28-foot living room opening into an uninterrupted horizon sky deck',
-        'Dual master bedrooms with luxury en-suite soaking bath accommodations',
-        'Staff quarters with separate service ingress and utility corridor'
+        'Available in Luxury B (1,615 sq.ft agg) and Luxury A (1,650 sq.ft agg)',
+        'Full-scale 4 BHK show home experience available now at the on-site sales gallery',
+        'Grand salon opening to uninterrupted horizon sky deck with panoramic hill vistas',
+        'Dual master bedroom layouts with dedicated dressing alcoves and premium baths'
       ],
       svg: `
         <svg viewBox="0 0 600 420" class="w-full h-auto text-stone-300">

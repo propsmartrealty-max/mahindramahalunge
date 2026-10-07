@@ -3,9 +3,9 @@ export interface MahindraPuneProject {
   slug: string;
   name: string;
   location: string;
-  microMarket: 'West Pune' | 'Pimpri-Chinchwad' | 'Nande-Mahalunge Corridor' | 'East Pune (Kharadi Annex)' | 'Central Pune (Ghorpadi / Sopan Baug)';
+  microMarket: 'West Pune' | 'Pimpri-Chinchwad' | 'Nande-Mahalunge Corridor' | 'East Pune (Kharadi Annex)' | 'Central Pune (Ghorpadi / Sopan Baug)' | 'Baner Annex / Mahalunge';
   category: 'Upcoming / Future Development' | 'Current Sales Inventory' | 'Delivered Community';
-  status: 'Pre-Launch / Master Planning' | 'Under Construction' | 'Delivered Landmark';
+  status: 'Pre-Launch / Master Planning' | 'Under Construction' | 'Delivered Landmark' | 'Officially Launched / Priority Bookings';
   landArea: string;
   typologies: string[];
   unitsCount?: string;
@@ -63,21 +63,28 @@ export const mahindraPuneProjects: MahindraPuneProject[] = [
   {
     id: 'mahindra-mahalunge',
     slug: 'mahindra-mahalunge-pune',
-    name: 'Mahindra Mahalunge (Upcoming 13.46-Acre Development)',
-    location: 'Nande-Mahalunge Road, Mulshi Taluka, Pune 411045',
-    microMarket: 'Nande-Mahalunge Corridor',
-    category: 'Upcoming / Future Development',
-    status: 'Pre-Launch / Master Planning',
-    landArea: '13.46 Acres (₹3,500 Cr GDV Potential)',
-    typologies: ['2 BHK Optima Suites', '3 BHK Luxe Residences', '4 BHK Signature Estates'],
-    unitsCount: '~1,800 Anticipated Residences',
-    deliveryYear: 'Statutory Approval / Phased Master Plan',
-    reraStatus: 'Statutory approvals & pre-registration in progress under MahaRERA guidelines',
-    greenRating: 'IGBC Pre-Certified Sustainable Biophilic Living',
-    summary: 'Officially announced in October 2025: 13.46-acre strategic land acquisition in the high-growth Nande-Mahalunge micro-market with an estimated development potential of ~₹3,500 Crore. Next to Hinjewadi with access to proposed PMRDA Town Planning Scheme 1, upcoming Inner Ring Road, and connectivity toward Baner-Balewadi.',
-    image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80',
-    distanceFromMahalunge: 'Subject Property (Mahalunge Epicenter)',
-    transitHighlight: 'Access to proposed PMRDA 36m DP road, upcoming Inner Ring Road & Hinjewadi River Bridge'
+    name: 'Mahindra Rivenza (Baner Annex / Mahalunge)',
+    location: 'Mahindra Rivenza, Baner Annex, off Baner-Hinjawadi Road, Pune, Maharashtra 412115',
+    microMarket: 'Baner Annex / Mahalunge',
+    category: 'Current Sales Inventory',
+    status: 'Officially Launched / Priority Bookings',
+    landArea: '~13.46 Acres (9+ Acres Green Spaces)',
+    typologies: [
+      '2 BHK Premium (688 sq.ft)',
+      '2 BHK Luxury (785 – 855 sq.ft)',
+      '3 BHK Deluxe (995 – 1,007 sq.ft)',
+      '3 BHK Ultra Luxury (1,206 sq.ft)',
+      '4 BHK Luxury (1,615 – 1,650 sq.ft)'
+    ],
+    unitsCount: 'Phased High-Rise Development with 4 BHK Show Residence Live',
+    deliveryYear: 'December 2031 (Phase 1 & Phase 2 as per MahaRERA)',
+    reraStatus: 'MahaRERA Registered (Phase 1: PR1261012602102 | Phase 2: PM1261012602103)',
+    reraNumber: 'PR1261012602102 / PM1261012602103',
+    greenRating: 'IGBC Pre-Certified Gold & Net Zero Waste to Landfill',
+    summary: 'Officially launched: Mahindra Rivenza is a premier 13.46-acre master community by Mahindra Lifespace Developers Limited in Baner Annex / Mahalunge, Pune. Features 9+ acres of landscaped greens, 2.65 Lakh+ sq.ft of amenity spaces including a ~44,000 sq.ft grand clubhouse, swimming pool with sunken bar, yoga lawn, futsal court, and multi-purpose courts. Starting from ₹1.85 Cr*. Registered under MahaRERA: Phase 1 (PR1261012602102) & Phase 2 (PM1261012602103).',
+    image: 'http://cms.mahindralifespaces.com/web/sites/default/files/styles/web_banner_webp/public/2026-10/jpeg-optimizer_Elevation%20Opt%20A..webp',
+    distanceFromMahalunge: 'Subject Property (Baner Annex / Mahalunge Epicenter)',
+    transitHighlight: 'Direct access to Baner-Hinjawadi Road, upcoming Metro Line 3, and Mumbai-Pune Expressway'
   },
   {
     id: 'mahindra-ivylush',
