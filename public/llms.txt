@@ -74,6 +74,7 @@
 
 ### Primary Pages & Dedicated Project Hubs
 - **Home & Flagship Overview:** https://mahindralifespaceshomes.in/
+- **Mahindra Rivenza Master Hub:** https://mahindralifespaceshomes.in/mahindra-rivenza/
 - **Pricing & Cost Sheet Guide:** https://mahindralifespaceshomes.in/pricing/
 - **Interactive Floor Plans Explorer:** https://mahindralifespaceshomes.in/floor-plans/
 - **13.46-Acre Master Township Plan:** https://mahindralifespaceshomes.in/master-plan/
@@ -173,12 +174,17 @@
 - **Ravet North-West Gate:** https://mahindralifespaceshomes.in/west-pune/ravet-residential-projects/
 
 ### In-Depth Research Guides & Market Intelligence
+- **Mahindra Rivenza Launch Price & Carpet Area Analysis 2026:** https://mahindralifespaceshomes.in/articles/mahindra-rivenza-launch-price-carpet-area-analysis-2026/
+- **Mahindra Rivenza vs Baner vs Hinjewadi Investment ROI:** https://mahindralifespaceshomes.in/articles/mahindra-rivenza-vs-baner-vs-hinjewadi-roi-yield/
 - **Mahindra Mahalunge Upcoming Project Guide:** https://mahindralifespaceshomes.in/articles/mahindra-lifespaces-mahalunge-upcoming-project-guide/
 - **13.46-Acre Acquisition Intelligence:** https://mahindralifespaceshomes.in/articles/mahindra-lifespaces-acquires-land-in-nande-mahalunge-what-it-means/
 - **West Pune Real Estate 2026 Guide:** https://mahindralifespaceshomes.in/articles/west-pune-real-estate-complete-2026-guide/
 - **Nande-Mahalunge-Maan Tri-Corridor Analysis:** https://mahindralifespaceshomes.in/articles/nande-mahalunge-maan-real-estate-guide/
 - **Pune Inner Ring Road & West Pune Impact:** https://mahindralifespaceshomes.in/articles/pune-inner-ring-road-and-west-pune-real-estate/
 - **PMRDA Town Planning Scheme Guide:** https://mahindralifespaceshomes.in/articles/pmrda-town-planning-scheme-mahalunge/
+- **Master Sitemap Index:** https://mahindralifespaceshomes.in/sitemap-index.xml
+- **Google Shopping XML Feed:** https://mahindralifespaceshomes.in/google-shopping.xml
+- **Microsoft Bing / Yahoo IndexNow Key:** 9e4f2b8c6a0d4e7f8b1c3a5d7e9f0b2a (https://mahindralifespaceshomes.in/9e4f2b8c6a0d4e7f8b1c3a5d7e9f0b2a.txt)
 
 ---
 

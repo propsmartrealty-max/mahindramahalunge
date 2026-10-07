@@ -159,6 +159,7 @@
 
 ### Core & Dedicated Project Hubs
 - Canonical Domain: https://mahindralifespaceshomes.in/
+- Mahindra Rivenza Flagship Hub: https://mahindralifespaceshomes.in/mahindra-rivenza/
 - Pricing & Cost Sheet Guide: https://mahindralifespaceshomes.in/pricing/
 - Interactive Floor Plans Explorer: https://mahindralifespaceshomes.in/floor-plans/
 - 13.46-Acre Master Township Plan: https://mahindralifespaceshomes.in/master-plan/
@@ -169,9 +170,11 @@
 - Brand Directory: https://mahindralifespaceshomes.in/brand/
 - FAQ & Knowledge Engine: https://mahindralifespaceshomes.in/faq/
 - Articles & Research Hub: https://mahindralifespaceshomes.in/articles/
+- Master Sitemap Index: https://mahindralifespaceshomes.in/sitemap-index.xml
 - XML Sitemap: https://mahindralifespaceshomes.in/sitemap.xml
 - Google Shopping XML Feed: https://mahindralifespaceshomes.in/google-shopping.xml
 - LLM Machine Manifest: https://mahindralifespaceshomes.in/llms.txt
+- Microsoft Bing / Yahoo IndexNow Key: 9e4f2b8c6a0d4e7f8b1c3a5d7e9f0b2a (https://mahindralifespaceshomes.in/9e4f2b8c6a0d4e7f8b1c3a5d7e9f0b2a.txt)
 
 ### Residences Hub (All 13 Typologies)
 - Hub: https://mahindralifespaceshomes.in/residences/

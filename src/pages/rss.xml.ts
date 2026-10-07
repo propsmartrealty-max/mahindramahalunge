@@ -84,6 +84,18 @@ const articles = [
     title: 'Pune Inner Ring Road & West Pune Real Estate: Infrastructure Transformation in Mahalunge & Nande',
     pubDate: 'Tue, 17 Mar 2026 00:00:00 GMT',
     description: 'The planned Pune Inner Ring Road and its alignment through Mahalunge and Nande, connecting directly to Mumbai-Bengaluru Highway and PCMC.'
+  },
+  {
+    slug: 'mahindra-rivenza-launch-price-carpet-area-analysis-2026',
+    title: 'Mahindra Rivenza Launch Price, Carpet Area & Typology Breakdown: Complete 2026 Evaluation',
+    pubDate: 'Tue, 06 Oct 2026 00:00:00 GMT',
+    description: 'Comprehensive buyer breakdown of Mahindra Rivenza launch pricing starting ₹90 Lakhs*, carpet areas (635 - 1,465 sq.ft), aggregate usable areas, and ~44,000 sq.ft clubhouse specifications.'
+  },
+  {
+    slug: 'mahindra-rivenza-vs-baner-vs-hinjewadi-roi-yield',
+    title: 'Mahindra Rivenza vs Baner vs Hinjewadi: Rental Yields, Capital Growth & West Pune IT Tri-Corridor',
+    pubDate: 'Wed, 07 Oct 2026 00:00:00 GMT',
+    description: 'Comparative investment analysis of Mahindra Rivenza at Baner Annex / Mahalunge against core Baner and Hinjewadi Phase 1 micro-markets.'
   }
 ];
 

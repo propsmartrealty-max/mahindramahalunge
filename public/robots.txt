@@ -158,6 +158,7 @@ Disallow: /cdn-cgi/
 # ------------------------------------------------------------------------------
 Host: https://mahindralifespaceshomes.in
 Sitemap: https://mahindralifespaceshomes.in/sitemap.xml
+Sitemap: https://mahindralifespaceshomes.in/sitemap-index.xml
 Sitemap: https://mahindralifespaceshomes.in/google-shopping.xml
 # Syndication Feeds:
 # https://mahindralifespaceshomes.in/rss.xml

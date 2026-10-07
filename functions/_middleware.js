@@ -13,11 +13,16 @@
  * 8. Enterprise Caching, HTTP Link Preconnects & Security Headers
  */
 
-// Bot Classification Regex
-const SEARCH_BOT_REGEX = /googlebot|google-inspectiontool|bingbot|slurp|duckduckbot|baiduspider|yandexbot|sogou|exabot/i;
+// Bot Classification Regex — Multi-Search Engine Whitebot Recognition
+const GOOGLE_BOT_REGEX = /googlebot|google-inspectiontool|storebot-google|googleother|adsbot-google|mediapartners-google/i;
+const MICROSOFT_BING_REGEX = /bingbot|bingpreview|msnbot|slurp|microsoft-search/i;
+const APPLE_BOT_REGEX = /applebot/i;
+const SEARCH_BOT_REGEX = /googlebot|google-inspectiontool|bingbot|slurp|duckduckbot|baiduspider|yandexbot|sogou|exabot|applebot|storebot-google/i;
 const SOCIAL_BOT_REGEX = /facebookexternalhit|twitterbot|linkedinbot|whatsapp|telegrambot|pinterest|slackbot|discordbot/i;
-const AI_CRAWLER_REGEX = /gptbot|chatgpt-user|claudebot|anthropic-ai|perplexitybot|applebot|google-extended/i;
+const AI_CRAWLER_REGEX = /gptbot|chatgpt-user|claudebot|anthropic-ai|perplexitybot|applebot|google-extended|oai-searchbot/i;
 const BAD_SCRAPER_REGEX = /bytespider|petalbot|mj12bot|dotbot|zoominfobot/i;
+
+const INDEXNOW_KEY = '9e4f2b8c6a0d4e7f8b1c3a5d7e9f0b2a';
 
 // Legacy / Route Normalization Map
 const LEGACY_REDIRECTS = {
@@ -38,6 +43,18 @@ export async function onRequest(context) {
   const url = new URL(request.url);
   const userAgent = request.headers.get('user-agent') || '';
   const pathname = url.pathname;
+
+  // 0. IndexNow Key Verification Endpoint (Bing, Microsoft, Yahoo, Yandex)
+  if (pathname === '/indexnow-key.txt' || pathname === `/${INDEXNOW_KEY}.txt`) {
+    return new Response(INDEXNOW_KEY, {
+      status: 200,
+      headers: {
+        'Content-Type': 'text/plain; charset=utf-8',
+        'Cache-Control': 'public, max-age=86400',
+        'X-IndexNow-Key': INDEXNOW_KEY,
+      },
+    });
+  }
 
   // 1. Malicious / Aggressive Scraper Edge Firewall
   if (BAD_SCRAPER_REGEX.test(userAgent)) {
@@ -75,12 +92,18 @@ export async function onRequest(context) {
   }
 
   // 5. Bot Classification & Edge Analytics
+  const isGoogleBot = GOOGLE_BOT_REGEX.test(userAgent);
+  const isMicrosoftBing = MICROSOFT_BING_REGEX.test(userAgent);
+  const isAppleBot = APPLE_BOT_REGEX.test(userAgent);
   const isSearchBot = SEARCH_BOT_REGEX.test(userAgent);
   const isSocialBot = SOCIAL_BOT_REGEX.test(userAgent);
   const isAiCrawler = AI_CRAWLER_REGEX.test(userAgent);
 
   let botCategory = 'Organic-Human';
-  if (isSearchBot) botCategory = 'Search-Engine-Indexer';
+  if (isGoogleBot) botCategory = 'Google-Whitebot-Verified';
+  else if (isMicrosoftBing) botCategory = 'Microsoft-Bing-Verified';
+  else if (isAppleBot) botCategory = 'Apple-Intelligence-Crawler';
+  else if (isSearchBot) botCategory = 'Search-Engine-Indexer';
   else if (isSocialBot) botCategory = 'Social-Preview-Bot';
   else if (isAiCrawler) botCategory = 'AI-Knowledge-Crawler';
 
@@ -144,6 +167,23 @@ export async function onRequest(context) {
             }
           },
           {
+            "@type": "Corporation",
+            "@id": "https://mahindralifespaceshomes.in/#developer",
+            "name": "Mahindra Lifespace Developers Limited",
+            "url": "https://www.mahindralifespaces.com",
+            "parentOrganization": {
+              "@type": "Organization",
+              "name": "Mahindra Group",
+              "url": "https://www.mahindra.com"
+            },
+            "sameAs": [
+              "https://en.wikipedia.org/wiki/Mahindra_Lifespaces",
+              "https://www.nseindia.com/get-quotes/equity?symbol=MAHLIFE",
+              "https://www.bseindia.com/stock-share-price/mahindra-lifespace-developers-ltd/mahlife/532313/",
+              "https://www.linkedin.com/company/mahindra-lifespaces"
+            ]
+          },
+          {
             "@type": ["ApartmentComplex", "RealEstateAgent"],
             "@id": "https://mahindralifespaceshomes.in/#rivenza",
             "name": "Mahindra Rivenza",
@@ -151,6 +191,7 @@ export async function onRequest(context) {
             "url": "https://mahindralifespaceshomes.in/",
             "priceRange": "₹90 Lakhs - ₹2.55 Crore+",
             "telephone": "+91-7744009295",
+            "email": "propsmartrealty@gmail.com",
             "address": {
               "@type": "PostalAddress",
               "streetAddress": "HP6G+WWF Baner Annex, off Baner-Hinjawadi Road, Nande",
@@ -212,6 +253,7 @@ export async function onRequest(context) {
   modifiedHeaders.set('X-Edge-Timestamp', currentIsoTimestamp);
   modifiedHeaders.set('X-Edge-Geo-Locality', `${cfCity}, ${cfCountry}`);
   modifiedHeaders.set('X-IndexNow-Status', 'Ready');
+  modifiedHeaders.set('X-IndexNow-Key', INDEXNOW_KEY);
 
   // Early Preconnect Link Headers
   modifiedHeaders.set(
