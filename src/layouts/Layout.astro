@@ -368,27 +368,100 @@ const baseSchema = {
         background: #d4af66;
       }
       
-      /* Luminous Glass Cards */
+      /* Ultra-Luxury Glassmorphic Design System */
       .glass-card {
-        background: linear-gradient(145deg, rgba(28, 35, 49, 0.75) 0%, rgba(16, 21, 31, 0.88) 100%);
-        backdrop-filter: blur(24px);
-        -webkit-backdrop-filter: blur(24px);
+        position: relative;
+        background: linear-gradient(135deg, rgba(22, 29, 43, 0.72) 0%, rgba(13, 17, 26, 0.88) 100%);
+        backdrop-filter: blur(28px);
+        -webkit-backdrop-filter: blur(28px);
         border: 1px solid rgba(255, 255, 255, 0.12);
-        box-shadow: 0 16px 40px -12px rgba(0, 0, 0, 0.5), inset 0 1px 0 0 rgba(255, 255, 255, 0.1);
+        box-shadow: 0 16px 40px -12px rgba(0, 0, 0, 0.6), inset 0 1px 1px 0 rgba(255, 255, 255, 0.14), inset 0 -1px 1px 0 rgba(0, 0, 0, 0.3);
         transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        overflow: hidden;
+      }
+      .glass-card::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(125deg, transparent 35%, rgba(255, 255, 255, 0.05) 48%, rgba(212, 175, 102, 0.12) 52%, transparent 65%);
+        transform: translateX(-100%);
+        transition: transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+        pointer-events: none;
+        z-index: 1;
+      }
+      .glass-card:hover::before {
+        transform: translateX(100%);
       }
       .glass-card:hover {
         border-color: rgba(212, 175, 102, 0.45);
         transform: translateY(-4px);
-        box-shadow: 0 24px 60px -12px rgba(0, 0, 0, 0.65), 0 0 30px -4px rgba(212, 175, 102, 0.2), inset 0 1px 0 0 rgba(212, 175, 102, 0.3);
+        box-shadow: 0 24px 60px -12px rgba(0, 0, 0, 0.75), 0 0 35px -5px rgba(212, 175, 102, 0.22), inset 0 1px 1px 0 rgba(255, 255, 255, 0.28);
       }
 
       /* Luminous Champagne Highlight Card */
       .glass-card-glow {
+        position: relative;
         background: linear-gradient(145deg, rgba(34, 43, 62, 0.85) 0%, rgba(20, 26, 38, 0.92) 100%);
-        backdrop-filter: blur(28px);
-        border: 1px solid rgba(212, 175, 102, 0.3);
-        box-shadow: 0 20px 50px -10px rgba(0, 0, 0, 0.6), 0 0 40px -10px rgba(212, 175, 102, 0.25);
+        backdrop-filter: blur(32px);
+        -webkit-backdrop-filter: blur(32px);
+        border: 1px solid rgba(212, 175, 102, 0.35);
+        box-shadow: 0 20px 50px -10px rgba(0, 0, 0, 0.6), 0 0 40px -10px rgba(212, 175, 102, 0.25), inset 0 1px 1px 0 rgba(255, 255, 255, 0.2);
+        overflow: hidden;
+      }
+
+      /* Glassmorphic Pill Badges */
+      .glass-pill {
+        background: rgba(18, 24, 36, 0.7);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        border: 1px solid rgba(255, 255, 255, 0.14);
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.15);
+        transition: all 0.3s ease;
+      }
+      .glass-pill:hover {
+        border-color: rgba(212, 175, 102, 0.5);
+        box-shadow: 0 6px 24px rgba(0, 0, 0, 0.5), 0 0 15px rgba(212, 175, 102, 0.2);
+      }
+
+      /* Glassmorphic Action Buttons */
+      .glass-btn {
+        background: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.02) 100%);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border: 1px solid rgba(255, 255, 255, 0.16);
+        box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37), inset 0 1px 0 0 rgba(255, 255, 255, 0.18);
+        transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+      .glass-btn:hover {
+        background: linear-gradient(135deg, rgba(212, 175, 102, 0.22) 0%, rgba(212, 175, 102, 0.06) 100%);
+        border-color: rgba(212, 175, 102, 0.55);
+        transform: translateY(-2px);
+        box-shadow: 0 12px 36px 0 rgba(0, 0, 0, 0.5), 0 0 20px rgba(212, 175, 102, 0.25);
+      }
+
+      /* Glassmorphic Ambient Animations */
+      @keyframes float-ambient {
+        0%, 100% { transform: translate(0px, 0px) scale(1); }
+        33% { transform: translate(25px, -35px) scale(1.06); }
+        66% { transform: translate(-20px, 20px) scale(0.96); }
+      }
+      @keyframes float-ambient-reverse {
+        0%, 100% { transform: translate(0px, 0px) scale(1); }
+        33% { transform: translate(-30px, 25px) scale(1.05); }
+        66% { transform: translate(25px, -20px) scale(0.95); }
+      }
+      @keyframes glass-pulse {
+        0%, 100% { opacity: 0.08; transform: scale(1); }
+        50% { opacity: 0.16; transform: scale(1.08); }
+      }
+      .animate-glass-float {
+        animation: float-ambient 18s ease-in-out infinite;
+      }
+      .animate-glass-float-rev {
+        animation: float-ambient-reverse 22s ease-in-out infinite;
+      }
+      .animate-glass-pulse {
+        animation: glass-pulse 12s ease-in-out infinite;
       }
 
       /* Radiant Warm Gold Gradients */
@@ -479,11 +552,11 @@ const baseSchema = {
     <!-- Geometric Radial Grid Overlay -->
     <div class="fixed inset-0 bg-[radial-gradient(#d4af66_1px,transparent_1px)] [background-size:40px_40px] opacity-[0.035] pointer-events-none -z-10"></div>
 
-    <!-- Radiant Ambient Lighting Orbs -->
-    <div class="fixed -top-40 left-1/4 -translate-x-1/2 w-[800px] h-[600px] bg-gradient-to-br from-gold-500/[0.12] via-gold-600/[0.06] to-transparent rounded-full blur-[140px] pointer-events-none -z-10 animate-float"></div>
-    <div class="fixed top-1/4 -right-40 w-[700px] h-[700px] bg-gradient-to-bl from-emerald-500/[0.08] via-teal-600/[0.04] to-transparent rounded-full blur-[150px] pointer-events-none -z-10 animate-pulse-slow"></div>
-    <div class="fixed top-2/3 -left-40 w-[750px] h-[600px] bg-gradient-to-tr from-brand-red/[0.09] via-rose-700/[0.05] to-transparent rounded-full blur-[160px] pointer-events-none -z-10 animate-float-slow"></div>
-    <div class="fixed bottom-0 right-1/4 w-[600px] h-[500px] bg-gradient-to-t from-gold-500/[0.08] to-transparent rounded-full blur-[130px] pointer-events-none -z-10"></div>
+    <!-- Radiant Ambient Lighting Orbs with Glassmorphic Floating Depth -->
+    <div class="fixed -top-40 left-1/4 -translate-x-1/2 w-[850px] h-[650px] bg-gradient-to-br from-gold-500/[0.14] via-gold-600/[0.07] to-transparent rounded-full blur-[140px] pointer-events-none -z-10 animate-glass-float"></div>
+    <div class="fixed top-1/4 -right-40 w-[750px] h-[750px] bg-gradient-to-bl from-emerald-500/[0.09] via-teal-600/[0.05] to-transparent rounded-full blur-[150px] pointer-events-none -z-10 animate-glass-float-rev"></div>
+    <div class="fixed top-2/3 -left-40 w-[800px] h-[650px] bg-gradient-to-tr from-brand-red/[0.09] via-rose-700/[0.05] to-transparent rounded-full blur-[160px] pointer-events-none -z-10 animate-glass-float"></div>
+    <div class="fixed bottom-0 right-1/4 w-[650px] h-[550px] bg-gradient-to-t from-gold-500/[0.09] to-transparent rounded-full blur-[130px] pointer-events-none -z-10 animate-glass-pulse"></div>
 
     <Navbar />
     
