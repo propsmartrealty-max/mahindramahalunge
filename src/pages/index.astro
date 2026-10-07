@@ -113,13 +113,18 @@ const homepageSchema = {
   <section class="relative min-h-screen flex items-center justify-center overflow-hidden pt-24 pb-20">
     <!-- Cinematic Radiant Background with Multi-Layer Glow -->
     <div class="absolute inset-0 z-0">
-      <img
-        src="https://cms.mahindralifespaces.com/web/sites/default/files/styles/web_banner_webp/public/2026-10/jpeg-optimizer_Elevation%20Opt%20A..webp"
-        alt="Mahindra Rivenza - Mahindra Lifespaces Baner Annex Mahalunge Pune Architecture Elevation"
-        class="w-full h-full object-cover object-center filter brightness-[0.78] contrast-[1.08] saturate-[1.12] scale-105 transform animate-float-slow duration-1000"
-        fetchpriority="high"
-        decoding="async"
-      />
+      <picture>
+        <source media="(max-width: 640px)" srcset="https://cms.mahindralifespaces.com/web/sites/default/files/styles/web_card_webp/public/2026-10/jpeg-optimizer_Elevation%20Opt%20A..webp" width="640" height="480" />
+        <img
+          src="https://cms.mahindralifespaces.com/web/sites/default/files/styles/web_banner_webp/public/2026-10/jpeg-optimizer_Elevation%20Opt%20A..webp"
+          alt="Mahindra Rivenza - Mahindra Lifespaces Baner Annex Mahalunge Pune Architecture Elevation"
+          class="w-full h-full object-cover object-center filter brightness-[0.78] contrast-[1.08] saturate-[1.12] scale-105 transform animate-float-slow duration-1000"
+          width="1280"
+          height="720"
+          fetchpriority="high"
+          decoding="async"
+        />
+      </picture>
       <!-- Radiant Gradient Overlays -->
       <div class="absolute inset-0 bg-gradient-to-t from-[#0c1017] via-[#0c1017]/45 to-black/25"></div>
       <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(212,175,102,0.14)_0%,transparent_75%)]"></div>
