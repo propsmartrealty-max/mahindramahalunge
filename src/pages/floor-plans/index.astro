@@ -1,0 +1,85 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import ResidenceSelector from '../../components/ResidenceSelector.astro';
+
+const floorPlanSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Product",
+      "@id": "https://mahindralifespaceshomes.in/floor-plans/#product",
+      "name": "Mahindra Rivenza Official Floor Plans & Typology Blueprints",
+      "description": "Download official architectural floor plans for 2, 3 & 4 BHK residences at Mahindra Rivenza, Baner Annex / Mahalunge, Pune. MahaRERA PR1261012602102.",
+      "brand": {
+        "@type": "Brand",
+        "name": "Mahindra Lifespaces"
+      }
+    }
+  ]
+};
+---
+
+<Layout
+  title="Mahindra Rivenza Floor Plans PDF | 2, 3 & 4 BHK Unit Layouts Mahalunge"
+  description="Download official floor plans for Mahindra Rivenza by Mahindra Lifespaces in Baner Annex, Mahalunge, Pune. Detailed 2, 3 & 4 BHK blueprints with RERA carpet areas from 635 to 1,465 sq.ft."
+  keywords="mahindra rivenza floor plans, mahindra rivenza 2 bhk floor plan, mahindra rivenza 3 bhk floor plan, mahindra rivenza 4 bhk floor plan, mahindra rivenza unit layout, floor plan pdf mahindra mahalunge"
+  canonical="https://mahindralifespaceshomes.in/floor-plans/"
+  customSchema={floorPlanSchema}
+>
+  <!-- Hero Section -->
+  <section class="pt-32 pb-16 bg-charcoal-950 border-b border-white/10 relative overflow-hidden">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-5">
+      <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-gold-500/10 border border-gold-500/30 text-gold-400 text-xs font-semibold uppercase tracking-widest">
+        <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+        <span>Architectural Blueprints • Phase 1 Release</span>
+      </div>
+      <h1 class="font-serif text-3xl sm:text-5xl lg:text-6xl font-bold text-stone-100 max-w-4xl leading-tight">
+        Mahindra Rivenza Floor Plans: <br />
+        <span class="gold-gradient-text">2, 3 & 4 BHK Architectural Layouts</span>
+      </h1>
+      <p class="text-stone-300 text-sm sm:text-base max-w-2xl font-light leading-relaxed">
+        Engineered with Mahindra Lifespaces' positive energy philosophy — featuring wide cross-ventilation fins, expansive balcony decks, and zero dead-corridor circulation.
+      </p>
+    </div>
+  </section>
+
+  <!-- Interactive Unit Selector -->
+  <section class="py-20 bg-charcoal-900 border-b border-white/10">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+      <div class="text-center max-w-2xl mx-auto space-y-2">
+        <span class="text-xs uppercase tracking-widest text-gold-400 font-bold">Interactive Explorer</span>
+        <h2 class="font-serif text-3xl text-stone-100 font-bold">Inspect Typology Blueprints</h2>
+        <p class="text-xs sm:text-sm text-stone-300">
+          Switch between 2, 3 & 4 BHK units to view layout dimensions, room allocations, and deck placements.
+        </p>
+      </div>
+      <ResidenceSelector />
+    </div>
+  </section>
+
+  <!-- Quick Links to BHK Pages -->
+  <section class="py-16 bg-charcoal-950">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <a href="/residences/2-bhk/" class="glass-card p-6 rounded-2xl border border-white/10 hover:border-gold-500/50 transition-all space-y-3 block group">
+          <span class="text-[10px] uppercase tracking-wider text-gold-400 font-bold">From ₹90 Lakhs*</span>
+          <h3 class="font-serif text-xl font-bold text-stone-100 group-hover:text-gold-300 transition-colors">2 BHK Floor Plans</h3>
+          <p class="text-xs text-stone-400">4 Typologies: Premium, Luxury B, Luxury A & Ultra Luxury E (635 – 747 sq.ft. RERA).</p>
+          <span class="text-xs text-gold-400 font-semibold inline-block">Explore 2 BHK →</span>
+        </a>
+        <a href="/residences/3-bhk/" class="glass-card p-6 rounded-2xl border border-white/10 hover:border-gold-500/50 transition-all space-y-3 block group">
+          <span class="text-[10px] uppercase tracking-wider text-gold-400 font-bold">From ₹1.31 Cr*</span>
+          <h3 class="font-serif text-xl font-bold text-stone-100 group-hover:text-gold-300 transition-colors">3 BHK Floor Plans</h3>
+          <p class="text-xs text-stone-400">3 Typologies: Deluxe C, Deluxe B & Ultra Luxury B (882 – 1,065 sq.ft. RERA).</p>
+          <span class="text-xs text-gold-400 font-semibold inline-block">Explore 3 BHK →</span>
+        </a>
+        <a href="/residences/4-bhk/" class="glass-card p-6 rounded-2xl border border-white/10 hover:border-gold-500/50 transition-all space-y-3 block group">
+          <span class="text-[10px] uppercase tracking-wider text-gold-400 font-bold">From ₹2.20 Cr*</span>
+          <h3 class="font-serif text-xl font-bold text-stone-100 group-hover:text-gold-300 transition-colors">4 BHK Floor Plans</h3>
+          <p class="text-xs text-stone-400">2 Typologies: Luxury B & Luxury A with on-site live show home (1,438 – 1,465 sq.ft. RERA).</p>
+          <span class="text-xs text-gold-400 font-semibold inline-block">Explore 4 BHK →</span>
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>

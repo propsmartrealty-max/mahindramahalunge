@@ -31,7 +31,7 @@ import { allMahindraKeywordPermutations } from '../data/mahindraKeywordsEcosyste
           </div>
         </div>
         <p class="text-stone-300 text-xs leading-relaxed max-w-sm">
-          A landmark ~13.46-acre master community at Baner Annex / Mahalunge, West Pune. Featuring 9+ acres of landscaped greens, ~44,000 sq.ft clubhouses, and 2, 3 & 4 BHK luxury residences starting ₹1.85 Cr*.
+          A landmark ~13.46-acre master community at Baner Annex / Mahalunge, West Pune. Featuring 9+ acres of landscaped greens, ~44,000 sq.ft clubhouses, and 2, 3 & 4 BHK luxury residences starting ₹90 Lakhs*.
         </p>
         <div class="flex flex-wrap items-center gap-2 pt-2">
           <span class="px-2.5 py-1 rounded-lg bg-white/5 border border-white/10 text-[10px] text-stone-200 font-medium">75+ Years Group Legacy</span>
@@ -185,19 +185,23 @@ import { allMahindraKeywordPermutations } from '../data/mahindraKeywordsEcosyste
       </div>
 
 
-      <!-- Strategic Keyword Cloud Tag Strip -->
-      <div class="pt-4 border-t border-white/5 space-y-2">
-        <div class="text-[10px] uppercase tracking-wider text-stone-400 font-mono">
-          Strategic Search Intent Permutations:
-        </div>
-        <div class="flex flex-wrap gap-1.5">
+      <!-- Strategic Keyword Cloud Tag Strip (Tucked Behind Collapsible Drawer) -->
+      <details class="group pt-4 border-t border-white/5 list-none">
+        <summary class="flex items-center justify-between cursor-pointer select-none py-1 text-[10px] uppercase tracking-wider text-stone-400 font-mono hover:text-gold-300 transition-colors">
+          <div class="flex items-center space-x-2">
+            <span class="w-1.5 h-1.5 rounded-full bg-gold-400 group-open:animate-ping"></span>
+            <span>Strategic Search Intent Permutations:</span>
+          </div>
+          <span class="text-gold-400 text-xs font-bold group-open:rotate-180 transition-transform duration-300">▼</span>
+        </summary>
+        <div class="flex flex-wrap gap-1.5 pt-3">
           {allMahindraKeywordPermutations.slice(0, 32).map((term) => (
-            <span class="px-2 py-0.5 rounded bg-white/[0.03] text-[10px] text-stone-400 font-mono border border-white/5">
+            <span class="px-2 py-0.5 rounded bg-white/[0.03] text-[10px] text-stone-400 font-mono border border-white/5 hover:text-gold-300 hover:border-gold-500/20 transition-colors">
               {term}
             </span>
           ))}
         </div>
-      </div>
+      </details>
     </div>
 
     <!-- MahaRERA Compliance Notice Box -->

@@ -1,0 +1,86 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import CommuteDistanceMatrix from '../../components/CommuteDistanceMatrix.astro';
+
+const locationSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Place",
+      "@id": "https://mahindralifespaceshomes.in/location/#place",
+      "name": "Mahindra Rivenza Location & Connectivity Ecosystem",
+      "description": "Strategic Baner Annex, Mahalunge, Pune location analysis for Mahindra Rivenza by Mahindra Lifespaces. Situated between Hinjewadi IT Park and Balewadi High Street.",
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 18.562536,
+        "longitude": 73.727373
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "HP6G+WWF Baner Annex, off Baner-Hinjawadi Road, Nande",
+        "addressLocality": "Mahalunge, Pune",
+        "postalCode": "412115",
+        "addressRegion": "Maharashtra",
+        "addressCountry": "IN"
+      }
+    }
+  ]
+};
+---
+
+<Layout
+  title="Mahindra Rivenza Location | Baner Annex Mahalunge Pune Connectivity"
+  description="Explore the strategic location of Mahindra Rivenza by Mahindra Lifespaces at Baner Annex, Mahalunge, Pune (Plus Code: HP6G+WWF). 7-10 mins to Hinjewadi Phase 1, 10 mins to Balewadi High Street & Metro Line 3."
+  keywords="mahindra rivenza location, mahindra rivenza baner annex, mahindra rivenza mahalunge address, mahindra rivenza plus code, flats near hinjewadi it park, flats near balewadi high street"
+  canonical="https://mahindralifespaceshomes.in/location/"
+  customSchema={locationSchema}
+>
+  <!-- Hero Section -->
+  <section class="pt-32 pb-16 bg-charcoal-950 border-b border-white/10 relative overflow-hidden">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-5">
+      <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-gold-500/10 border border-gold-500/30 text-gold-400 text-xs font-semibold uppercase tracking-widest">
+        <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+        <span>Plus Code: HP6G+WWF • Baner Annex, Mahalunge, Pune</span>
+      </div>
+      <h1 class="font-serif text-3xl sm:text-5xl lg:text-6xl font-bold text-stone-100 max-w-4xl leading-tight">
+        Mahindra Rivenza Location: <br />
+        <span class="gold-gradient-text">The Convergence of Baner & Hinjewadi</span>
+      </h1>
+      <p class="text-stone-300 text-sm sm:text-base max-w-2xl font-light leading-relaxed">
+        Positioned along the high-growth West Pune corridor in Baner Annex / Mahalunge, bridging the commercial power of Hinjewadi Phase 1 with the premier lifestyle enclaves of Baner and Balewadi.
+      </p>
+    </div>
+  </section>
+
+  <!-- Interactive Commute Distance Matrix -->
+  <section class="py-20 bg-charcoal-900 border-b border-white/10">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+      <CommuteDistanceMatrix />
+    </div>
+  </section>
+
+  <!-- Key Transit Advantages -->
+  <section class="py-20 bg-charcoal-950">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+      <div class="text-center max-w-2xl mx-auto space-y-2">
+        <span class="text-xs uppercase tracking-widest text-gold-400 font-bold">Transit Arteries</span>
+        <h2 class="font-serif text-3xl text-stone-100 font-bold">Rapid Connectivity Across West Pune</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-xs text-stone-300">
+        <div class="glass-card p-6 rounded-2xl border border-white/10 space-y-2.5">
+          <div class="text-gold-400 font-bold text-sm uppercase">7-10 Mins: Hinjewadi IT Park</div>
+          <p class="leading-relaxed">Direct transit to Phase 1 tech hubs including Infosys, Wipro, TCS, Cognizant, and Embassy TechZone via the Baner-Hinjawadi link road.</p>
+        </div>
+        <div class="glass-card p-6 rounded-2xl border border-white/10 space-y-2.5">
+          <div class="text-gold-400 font-bold text-sm uppercase">8-12 Mins: Balewadi & Baner</div>
+          <p class="leading-relaxed">Swift access to Balewadi High Street, fine dining cafes, commercial business parks (Amar Paradigm, Panchshil), and retail destinations.</p>
+        </div>
+        <div class="glass-card p-6 rounded-2xl border border-white/10 space-y-2.5">
+          <div class="text-gold-400 font-bold text-sm uppercase">Upcoming Metro Line 3</div>
+          <p class="leading-relaxed">Seamless elevated rail connection via Hinjewadi Phase 1 Metro Station linking directly to Shivajinagar Court in under 35 minutes.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

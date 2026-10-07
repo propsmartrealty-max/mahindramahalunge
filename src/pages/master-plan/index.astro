@@ -1,0 +1,81 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import MasterPlanViewer from '../../components/MasterPlanViewer.astro';
+
+const masterPlanSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Place",
+      "@id": "https://mahindralifespaceshomes.in/master-plan/#place",
+      "name": "Mahindra Rivenza 13.46-Acre Master Township Plan",
+      "description": "Master plan layout of Mahindra Rivenza by Mahindra Lifespaces across 13.46 acres in Baner Annex / Mahalunge, Pune. Features 9+ acres of landscaped greens, 6 Phase 1 high-rise towers, and ~44,000 sq.ft clubhouse with sunken bar pool.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "HP6G+WWF Baner Annex, off Baner-Hinjawadi Road, Nande",
+        "addressLocality": "Mahalunge, Pune",
+        "postalCode": "412115",
+        "addressRegion": "Maharashtra",
+        "addressCountry": "IN"
+      }
+    }
+  ]
+};
+---
+
+<Layout
+  title="Mahindra Rivenza Master Plan | 13.46 Acres Layout Blueprint Mahalunge"
+  description="Explore the official 13.46-acre master plan for Mahindra Rivenza by Mahindra Lifespaces in Baner Annex, Mahalunge, Pune. 9+ acres greens, ~44,000 sq.ft clubhouse, 6 Phase 1 towers, and vehicular-free central sanctuaries."
+  keywords="mahindra rivenza master plan, mahindra rivenza layout, mahindra rivenza 13.46 acres, mahindra rivenza phase 1 master plan, mahindra mahalunge master layout, township blueprint baner annex"
+  canonical="https://mahindralifespaceshomes.in/master-plan/"
+  customSchema={masterPlanSchema}
+>
+  <!-- Hero Section -->
+  <section class="pt-32 pb-16 bg-charcoal-950 border-b border-white/10 relative overflow-hidden">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-5">
+      <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-gold-500/10 border border-gold-500/30 text-gold-400 text-xs font-semibold uppercase tracking-widest">
+        <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+        <span>13.46-Acre Master Development • IGBC Gold Pre-Certified</span>
+      </div>
+      <h1 class="font-serif text-3xl sm:text-5xl lg:text-6xl font-bold text-stone-100 max-w-4xl leading-tight">
+        Mahindra Rivenza Master Plan: <br />
+        <span class="gold-gradient-text">13.46-Acre Master Township Blueprint</span>
+      </h1>
+      <p class="text-stone-300 text-sm sm:text-base max-w-2xl font-light leading-relaxed">
+        A master-planned sanctuary integrating 9+ acres of vehicular-free central green reserves, 6 high-rise towers in Phase 1 (1,236 residences), and ~44,000+ sq.ft. grand clubhouse with sunken aqua bar pool.
+      </p>
+    </div>
+  </section>
+
+  <!-- Interactive Master Plan Island -->
+  <section class="py-20 bg-charcoal-900 border-b border-white/10">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+      <MasterPlanViewer />
+    </div>
+  </section>
+
+  <!-- 5 Master Plan Zones Summary -->
+  <section class="py-20 bg-charcoal-950">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+      <div class="text-center max-w-2xl mx-auto space-y-2">
+        <span class="text-xs uppercase tracking-widest text-gold-400 font-bold">Zonal Planning</span>
+        <h2 class="font-serif text-3xl text-stone-100 font-bold">5 Distinct Lifestyle & Infrastructure Pillars</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-xs text-stone-300">
+        <div class="glass-card p-6 rounded-2xl border border-white/10 space-y-2.5">
+          <div class="text-gold-400 font-bold text-sm uppercase">Zone 01: Clubhouse & Pool</div>
+          <p class="leading-relaxed">~44,000 sq.ft multi-level lifestyle complex featuring resort swimming pool with sunken bar, squash, badminton, and luxury spa.</p>
+        </div>
+        <div class="glass-card p-6 rounded-2xl border border-white/10 space-y-2.5">
+          <div class="text-gold-400 font-bold text-sm uppercase">Zone 02: Phase 1 Towers</div>
+          <p class="leading-relaxed">6 high-rise towers (G+30 to 37 storeys) housing 1,236 luxury residences with 4 units per floor and 2+ high-speed lifts.</p>
+        </div>
+        <div class="glass-card p-6 rounded-2xl border border-white/10 space-y-2.5">
+          <div class="text-gold-400 font-bold text-sm uppercase">Zone 03: 9+ Acres Greens</div>
+          <p class="leading-relaxed">Vehicular-free central green meadow, Miyawaki urban forest, walking trails, and natural bio-diversity reserves.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

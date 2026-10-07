@@ -23,18 +23,14 @@ const BAD_SCRAPER_REGEX = /bytespider|petalbot|mj12bot|dotbot|zoominfobot/i;
 const LEGACY_REDIRECTS = {
   '/flats': '/residences/',
   '/flats/': '/residences/',
-  '/amenities': '/#amenities',
-  '/amenities/': '/#amenities',
-  '/gallery': '/#amenities',
-  '/gallery/': '/#amenities',
-  '/master-plan': '/#masterplan',
-  '/master-plan/': '/#masterplan',
-  '/floor-plans': '/residences/',
-  '/floor-plans/': '/residences/',
-  '/location': '/mahalunge-pune/',
-  '/location/': '/mahalunge-pune/',
-  '/contact': '/#pricing',
-  '/contact/': '/#pricing',
+  '/gallery': '/amenities/',
+  '/gallery/': '/amenities/',
+  '/contact': '/pricing/',
+  '/contact/': '/pricing/',
+  '/price': '/pricing/',
+  '/price/': '/pricing/',
+  '/cost-sheet': '/pricing/',
+  '/cost-sheet/': '/pricing/',
 };
 
 export async function onRequest(context) {

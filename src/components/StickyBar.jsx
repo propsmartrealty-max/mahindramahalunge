@@ -17,7 +17,7 @@ export default function StickyBar() {
             Mahindra Rivenza • Baner Annex
           </span>
           <span className="text-stone-400">|</span>
-          <span className="text-stone-300">~13.46-Acre Landmark · From ₹1.85 Cr*</span>
+          <span className="text-stone-300">~13.46-Acre Landmark · From ₹90 Lakhs*</span>
         </div>
 
         <div className="flex items-center space-x-6 text-stone-300">
@@ -31,7 +31,7 @@ export default function StickyBar() {
             onClick={() => openModal('Pricing Sheet')}
             className="hover:text-gold-400 transition-colors uppercase tracking-widest text-[11px]"
           >
-            Pricing (₹1.85 Cr*)
+            Pricing (₹90 Lakhs*)
           </button>
           <button 
             onClick={() => openModal('Brochure')}

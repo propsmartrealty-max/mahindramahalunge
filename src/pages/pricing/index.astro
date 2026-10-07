@@ -1,0 +1,231 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const pricingSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Product",
+      "@id": "https://mahindralifespaceshomes.in/pricing/#product",
+      "name": "Mahindra Rivenza Launch Price Matrix & Cost Sheet",
+      "description": "Official Phase 1 pricing and payment plans for Mahindra Rivenza by Mahindra Lifespaces in Baner Annex / Mahalunge, Pune. 2, 3 & 4 BHK residences starting from ₹90 Lakhs* onwards.",
+      "brand": {
+        "@type": "Brand",
+        "name": "Mahindra Lifespaces"
+      },
+      "offers": {
+        "@type": "AggregateOffer",
+        "lowPrice": "9000000",
+        "highPrice": "25500000",
+        "priceCurrency": "INR",
+        "offerCount": "1236",
+        "availability": "https://schema.org/InStock"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "bestRating": "5",
+        "worstRating": "1",
+        "ratingCount": "248",
+        "reviewCount": "248"
+      }
+    },
+    {
+      "@type": "Table",
+      "about": "Mahindra Rivenza Official Pricing & Typology Breakdown"
+    }
+  ]
+};
+---
+
+<Layout
+  title="Mahindra Rivenza Price List 2026 | 2, 3 & 4 BHK Cost Sheet Baner Annex Mahalunge"
+  description="Official pricing for Mahindra Rivenza by Mahindra Lifespaces in Baner Annex, Mahalunge, Pune. 2 BHK starting ₹90 Lakhs*, 3 BHK starting ₹1.31 Cr*, 4 BHK starting ₹2.20 Cr*. Download official cost sheet & payment schedule."
+  keywords="mahindra rivenza price, mahindra rivenza cost sheet, mahindra rivenza 2 bhk price, mahindra rivenza 3 bhk price, mahindra rivenza 4 bhk price, mahindra rivenza mahalunge price list, flats in mahalunge price"
+  canonical="https://mahindralifespaceshomes.in/pricing/"
+  customSchema={pricingSchema}
+>
+  <!-- Hero Section -->
+  <section class="pt-32 pb-20 bg-charcoal-950 border-b border-white/10 relative overflow-hidden">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
+      <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-gold-500/10 border border-gold-500/30 text-gold-400 text-xs font-semibold uppercase tracking-widest">
+        <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+        <span>Phase 1 Official Launch Pricing • Bookings Open</span>
+      </div>
+      <h1 class="font-serif text-3xl sm:text-5xl lg:text-6xl font-bold text-stone-100 max-w-4xl leading-tight">
+        Mahindra Rivenza Price List: <br />
+        <span class="gold-gradient-text">Official Cost Sheet & Typology Matrix</span>
+      </h1>
+      <p class="text-stone-300 text-sm sm:text-base max-w-2xl font-light leading-relaxed">
+        Transparent launch pricing for 1,236 Phase 1 residences across 13.46 acres in Baner Annex, Mahalunge, West Pune. Starting from ₹90 Lakhs* with milestone-linked construction plans and pre-approved home loans.
+      </p>
+    </div>
+  </section>
+
+  <!-- Complete Price Matrix Table -->
+  <section class="py-20 bg-charcoal-900 border-b border-white/10">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+      
+      <div class="glass-card rounded-2xl border border-gold-500/35 overflow-hidden shadow-2xl">
+        <div class="p-6 bg-[#131926] border-b border-gold-500/20 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+          <div>
+            <h2 class="font-serif text-xl sm:text-2xl text-stone-100 font-bold">Comprehensive Typology & Price Breakdown</h2>
+            <p class="text-xs text-stone-400 mt-1">MahaRERA Registration: Phase 1 (PR1261012602102) & Phase 2 (PM1261012602103)</p>
+          </div>
+          <button
+            data-open-modal
+            data-interest="Master Cost Sheet PDF"
+            class="btn-shimmer px-5 py-2.5 rounded-full bg-gradient-to-r from-gold-300 via-gold-400 to-gold-500 text-charcoal-950 text-xs font-bold uppercase tracking-wider shadow-lg cursor-pointer"
+          >
+            Download PDF Cost Sheet
+          </button>
+        </div>
+
+        <div class="overflow-x-auto">
+          <table class="w-full text-left text-xs text-stone-200">
+            <thead class="bg-[#0e131e] text-[11px] uppercase tracking-wider text-amber-200/90 border-b border-white/10">
+              <tr>
+                <th class="p-4 sm:p-5 font-semibold">Configuration</th>
+                <th class="p-4 sm:p-5 font-semibold">Typology</th>
+                <th class="p-4 sm:p-5 font-semibold">RERA Carpet</th>
+                <th class="p-4 sm:p-5 font-semibold">Aggregate Area</th>
+                <th class="p-4 sm:p-5 font-semibold text-gold-400">Launch Base Price*</th>
+                <th class="p-4 sm:p-5 font-semibold text-right">Inquiry</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-white/10">
+              <tr class="hover:bg-white/[0.04]">
+                <td class="p-4 sm:p-5 font-bold text-stone-100">2 BHK</td>
+                <td class="p-4 sm:p-5 text-stone-300">Premium</td>
+                <td class="p-4 sm:p-5 text-stone-300">635 sq.ft.</td>
+                <td class="p-4 sm:p-5 text-stone-300">688 sq.ft.</td>
+                <td class="p-4 sm:p-5 font-bold text-gold-400 text-sm">₹90 Lakhs* onwards</td>
+                <td class="p-4 sm:p-5 text-right">
+                  <button data-open-modal data-unit="2 BHK Premium (₹90L*)" data-interest="2 BHK Premium Cost Sheet" class="px-3 py-1.5 rounded-full bg-white/10 hover:bg-gold-500/20 text-stone-200 hover:text-gold-300 text-[10px] uppercase font-bold transition-colors">Quote</button>
+                </td>
+              </tr>
+              <tr class="hover:bg-white/[0.04]">
+                <td class="p-4 sm:p-5 font-bold text-stone-100">2 BHK</td>
+                <td class="p-4 sm:p-5 text-stone-300">Luxury B</td>
+                <td class="p-4 sm:p-5 text-stone-300">718 sq.ft.</td>
+                <td class="p-4 sm:p-5 text-stone-300">785 sq.ft.</td>
+                <td class="p-4 sm:p-5 font-bold text-gold-400 text-sm">₹1.04 Cr* onwards</td>
+                <td class="p-4 sm:p-5 text-right">
+                  <button data-open-modal data-unit="2 BHK Luxury B (₹1.04 Cr*)" data-interest="2 BHK Luxury B Cost Sheet" class="px-3 py-1.5 rounded-full bg-white/10 hover:bg-gold-500/20 text-stone-200 hover:text-gold-300 text-[10px] uppercase font-bold transition-colors">Quote</button>
+                </td>
+              </tr>
+              <tr class="hover:bg-white/[0.04]">
+                <td class="p-4 sm:p-5 font-bold text-stone-100">2 BHK</td>
+                <td class="p-4 sm:p-5 text-stone-300">Luxury A</td>
+                <td class="p-4 sm:p-5 text-stone-300">736 sq.ft.</td>
+                <td class="p-4 sm:p-5 text-stone-300">824 sq.ft.</td>
+                <td class="p-4 sm:p-5 font-bold text-gold-400 text-sm">₹1.10 Cr* onwards</td>
+                <td class="p-4 sm:p-5 text-right">
+                  <button data-open-modal data-unit="2 BHK Luxury A (₹1.10 Cr*)" data-interest="2 BHK Luxury A Cost Sheet" class="px-3 py-1.5 rounded-full bg-white/10 hover:bg-gold-500/20 text-stone-200 hover:text-gold-300 text-[10px] uppercase font-bold transition-colors">Quote</button>
+                </td>
+              </tr>
+              <tr class="hover:bg-white/[0.04]">
+                <td class="p-4 sm:p-5 font-bold text-stone-100">2 BHK</td>
+                <td class="p-4 sm:p-5 text-stone-300">Ultra Luxury E</td>
+                <td class="p-4 sm:p-5 text-stone-300">747 sq.ft.</td>
+                <td class="p-4 sm:p-5 text-stone-300">855 sq.ft.</td>
+                <td class="p-4 sm:p-5 font-bold text-gold-400 text-sm">₹1.14 Cr* onwards</td>
+                <td class="p-4 sm:p-5 text-right">
+                  <button data-open-modal data-unit="2 BHK Ultra Luxury E (₹1.14 Cr*)" data-interest="2 BHK Ultra Luxury E Cost Sheet" class="px-3 py-1.5 rounded-full bg-white/10 hover:bg-gold-500/20 text-stone-200 hover:text-gold-300 text-[10px] uppercase font-bold transition-colors">Quote</button>
+                </td>
+              </tr>
+              <tr class="hover:bg-white/[0.04]">
+                <td class="p-4 sm:p-5 font-bold text-stone-100">3 BHK</td>
+                <td class="p-4 sm:p-5 text-stone-300">Deluxe C</td>
+                <td class="p-4 sm:p-5 text-stone-300">882 sq.ft.</td>
+                <td class="p-4 sm:p-5 text-stone-300">995 sq.ft.</td>
+                <td class="p-4 sm:p-5 font-bold text-gold-400 text-sm">₹1.31 Cr* onwards</td>
+                <td class="p-4 sm:p-5 text-right">
+                  <button data-open-modal data-unit="3 BHK Deluxe C (₹1.31 Cr*)" data-interest="3 BHK Deluxe C Cost Sheet" class="px-3 py-1.5 rounded-full bg-white/10 hover:bg-gold-500/20 text-stone-200 hover:text-gold-300 text-[10px] uppercase font-bold transition-colors">Quote</button>
+                </td>
+              </tr>
+              <tr class="hover:bg-white/[0.04]">
+                <td class="p-4 sm:p-5 font-bold text-stone-100">3 BHK</td>
+                <td class="p-4 sm:p-5 text-stone-300">Deluxe B</td>
+                <td class="p-4 sm:p-5 text-stone-300">894 sq.ft.</td>
+                <td class="p-4 sm:p-5 text-stone-300">1,007 sq.ft.</td>
+                <td class="p-4 sm:p-5 font-bold text-gold-400 text-sm">₹1.45 Cr* onwards</td>
+                <td class="p-4 sm:p-5 text-right">
+                  <button data-open-modal data-unit="3 BHK Deluxe B (₹1.45 Cr*)" data-interest="3 BHK Deluxe B Cost Sheet" class="px-3 py-1.5 rounded-full bg-white/10 hover:bg-gold-500/20 text-stone-200 hover:text-gold-300 text-[10px] uppercase font-bold transition-colors">Quote</button>
+                </td>
+              </tr>
+              <tr class="hover:bg-white/[0.04]">
+                <td class="p-4 sm:p-5 font-bold text-stone-100">3 BHK</td>
+                <td class="p-4 sm:p-5 text-stone-300">Ultra Luxury B</td>
+                <td class="p-4 sm:p-5 text-stone-300">1,065 sq.ft.</td>
+                <td class="p-4 sm:p-5 text-stone-300">1,206 sq.ft.</td>
+                <td class="p-4 sm:p-5 font-bold text-gold-400 text-sm">₹1.60 Cr* onwards</td>
+                <td class="p-4 sm:p-5 text-right">
+                  <button data-open-modal data-unit="3 BHK Ultra Luxury B (₹1.60 Cr*)" data-interest="3 BHK Ultra Luxury B Cost Sheet" class="px-3 py-1.5 rounded-full bg-white/10 hover:bg-gold-500/20 text-stone-200 hover:text-gold-300 text-[10px] uppercase font-bold transition-colors">Quote</button>
+                </td>
+              </tr>
+              <tr class="hover:bg-white/[0.04]">
+                <td class="p-4 sm:p-5 font-bold text-stone-100">4 BHK</td>
+                <td class="p-4 sm:p-5 text-stone-300">Luxury B</td>
+                <td class="p-4 sm:p-5 text-stone-300">1,438 sq.ft.</td>
+                <td class="p-4 sm:p-5 text-stone-300">1,615 sq.ft.</td>
+                <td class="p-4 sm:p-5 font-bold text-gold-400 text-sm">₹2.20 Cr* onwards</td>
+                <td class="p-4 sm:p-5 text-right">
+                  <button data-open-modal data-unit="4 BHK Luxury B (₹2.20 Cr*)" data-interest="4 BHK Luxury B Cost Sheet" class="px-3 py-1.5 rounded-full bg-white/10 hover:bg-gold-500/20 text-stone-200 hover:text-gold-300 text-[10px] uppercase font-bold transition-colors">Quote</button>
+                </td>
+              </tr>
+              <tr class="hover:bg-white/[0.04]">
+                <td class="p-4 sm:p-5 font-bold text-stone-100">4 BHK</td>
+                <td class="p-4 sm:p-5 text-stone-300">Luxury A (Show Home)</td>
+                <td class="p-4 sm:p-5 text-stone-300">1,465 sq.ft.</td>
+                <td class="p-4 sm:p-5 text-stone-300">1,650 sq.ft.</td>
+                <td class="p-4 sm:p-5 font-bold text-gold-400 text-sm">₹2.40 Cr* onwards</td>
+                <td class="p-4 sm:p-5 text-right">
+                  <button data-open-modal data-unit="4 BHK Luxury A Show Home" data-interest="4 BHK Luxury A Cost Sheet" class="px-3 py-1.5 rounded-full bg-white/10 hover:bg-gold-500/20 text-stone-200 hover:text-gold-300 text-[10px] uppercase font-bold transition-colors">Quote</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Payment Plan & Financing -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="glass-card p-6 rounded-2xl border border-white/10 space-y-3">
+          <div class="text-gold-400 font-bold text-sm uppercase tracking-wider">Milestone Linked Plan</div>
+          <p class="text-xs text-stone-300 leading-relaxed">
+            Standard construction-linked payment milestones aligned with MahaRERA guidelines for maximum buyer financial protection.
+          </p>
+        </div>
+        <div class="glass-card p-6 rounded-2xl border border-white/10 space-y-3">
+          <div class="text-gold-400 font-bold text-sm uppercase tracking-wider">Pre-Approved Bank Loans</div>
+          <p class="text-xs text-stone-300 leading-relaxed">
+            Special launch financing arrangements with State Bank of India, HDFC Bank, ICICI Bank, Axis Bank, and Canara Bank.
+          </p>
+        </div>
+        <div class="glass-card p-6 rounded-2xl border border-white/10 space-y-3">
+          <div class="text-gold-400 font-bold text-sm uppercase tracking-wider">NRI Currency Desk</div>
+          <p class="text-xs text-stone-300 leading-relaxed">
+            Dedicated assistance for FEMA compliant NRE/NRO remittances in USD, AED, EUR, GBP, and SGD with digital KYC.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CTA Bar -->
+  <section class="py-16 bg-charcoal-950 text-center">
+    <div class="max-w-3xl mx-auto px-4 space-y-4">
+      <h3 class="font-serif text-2xl text-stone-100 font-bold">Lock in Early Priority Allotment</h3>
+      <p class="text-xs sm:text-sm text-stone-300">Connect with our official project desk at +91 7744009295 or request a customized cost sheet.</p>
+      <button
+        data-open-modal
+        data-interest="Pricing Page Callback"
+        class="btn-shimmer px-8 py-3 rounded-full bg-gradient-to-r from-gold-300 via-gold-400 to-gold-500 text-charcoal-950 text-xs font-bold uppercase tracking-widest shadow-xl cursor-pointer"
+      >
+        Request Official Callback
+      </button>
+    </div>
+  </section>
+</Layout>
