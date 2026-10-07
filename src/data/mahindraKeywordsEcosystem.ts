@@ -1117,8 +1117,8 @@ export const keywordClusters: KeywordCluster[] = [
       },
       {
         question: 'What is the starting price for Mahindra Rivenza?',
-        answer: 'Prices start from ₹1.85 Crore* for 2 BHK Premium residences, with pricing scaling up to ₹3.50 Crore* for 4 BHK Luxury residences. Official booking and EOI are live with pre-approved loans from SBI, HDFC, ICICI, and Canara Bank.',
-        relevantUrl: '/#pricing',
+        answer: 'Prices start from ₹90 Lakhs* for 2 BHK Premium residences, with pricing scaling up to ₹2.55 Crore* for 4 BHK Luxury residences. Official booking and priority allotment are live with pre-approved loans from SBI, HDFC, ICICI, and Canara Bank.',
+        relevantUrl: '/pricing/',
         actionLabel: 'View Price List'
       }
     ]

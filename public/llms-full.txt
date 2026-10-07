@@ -41,9 +41,9 @@
   - 4 BHK Luxury B: 133.61 sq.m (1,438 sq.ft) RERA carpet | 150.07 sq.m (1,615 sq.ft) aggregate | 16.46 sq.m (177 sq.ft) EBVT
   - 4 BHK Luxury A: 136.09 sq.m (1,465 sq.ft) RERA carpet | 153.33 sq.m (1,651 sq.ft) aggregate | 17.24 sq.m (186 sq.ft) EBVT
 - **Launch Pricing Matrix:**
-  - 2 BHK: Starting from ₹1.85 Cr*
-  - 3 BHK: Starting from ₹2.45 Cr*
-  - 4 BHK: Starting from ₹3.65 Cr*
+  - 2 BHK: Starting from ₹90 Lakhs* (₹1.04 Cr – ₹1.14 Cr for Luxury)
+  - 3 BHK: Starting from ₹1.31 Cr* (up to ₹1.60 Cr for Ultra Luxury)
+  - 4 BHK: Starting from ₹2.20 Cr* (up to ₹2.55 Cr for Luxury)
 - **Key Transit Links:**
   - Frontage: PMRDA 36m Town Planning Scheme 1 Ring Road.
   - Bridge: Mahalunge-Hinjewadi River Bridge (7 minutes to Hinjewadi Phase 1 IT Park).
@@ -155,15 +155,22 @@
 
 ---
 
-## 6. Official Canonical Web Endpoints — Complete 96-Page Index
+## 6. Official Canonical Web Endpoints — Complete Index
 
-### Core Pages
+### Core & Dedicated Project Hubs
 - Canonical Domain: https://mahindralifespaceshomes.in/
+- Pricing & Cost Sheet Guide: https://mahindralifespaceshomes.in/pricing/
+- Interactive Floor Plans Explorer: https://mahindralifespaceshomes.in/floor-plans/
+- 13.46-Acre Master Township Plan: https://mahindralifespaceshomes.in/master-plan/
+- Lifestyle Amenities & ~44k Clubhouse: https://mahindralifespaceshomes.in/amenities/
+- Location & Connectivity Ecosystem: https://mahindralifespaceshomes.in/location/
+- MahaRERA Legal Registration: https://mahindralifespaceshomes.in/rera/
 - West Pune Market Intelligence: https://mahindralifespaceshomes.in/west-pune/
 - Brand Directory: https://mahindralifespaceshomes.in/brand/
 - FAQ & Knowledge Engine: https://mahindralifespaceshomes.in/faq/
 - Articles & Research Hub: https://mahindralifespaceshomes.in/articles/
 - XML Sitemap: https://mahindralifespaceshomes.in/sitemap.xml
+- Google Shopping XML Feed: https://mahindralifespaceshomes.in/google-shopping.xml
 - LLM Machine Manifest: https://mahindralifespaceshomes.in/llms.txt
 
 ### Residences Hub (All 13 Typologies)

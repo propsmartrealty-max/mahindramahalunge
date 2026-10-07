@@ -23,7 +23,7 @@ const {
   customSchema = null,
 } = Astro.props;
 
-const defaultImage = "http://cms.mahindralifespaces.com/web/sites/default/files/styles/web_banner_webp/public/2026-10/jpeg-optimizer_Elevation%20Opt%20A..webp";
+const defaultImage = "https://cms.mahindralifespaces.com/web/sites/default/files/styles/web_banner_webp/public/2026-10/jpeg-optimizer_Elevation%20Opt%20A..webp";
 const metaImage = image || defaultImage;
 
 const defaultKeywords = allMahindraKeywordPermutations.slice(0, 35).join(", ");
@@ -227,8 +227,8 @@ const baseSchema = {
       "@id": "https://mahindralifespaceshomes.in/#product",
       "name": "Mahindra Rivenza Residential Apartments",
       "image": [
-        "http://cms.mahindralifespaces.com/web/sites/default/files/styles/web_banner_webp/public/2026-10/jpeg-optimizer_Elevation%20Opt%20A..webp",
-        "http://cms.mahindralifespaces.com/web/sites/default/files/styles/web_banner_webp/public/2026-10/Swimming%20pool%20with%20sunken%20bar_Rivenza_11zon.webp"
+        "https://cms.mahindralifespaces.com/web/sites/default/files/styles/web_banner_webp/public/2026-10/jpeg-optimizer_Elevation%20Opt%20A..webp",
+        "https://cms.mahindralifespaces.com/web/sites/default/files/styles/web_banner_webp/public/2026-10/Swimming%20pool%20with%20sunken%20bar_Rivenza_11zon.webp"
       ],
       "description": "Luxury 2, 3 & 4 BHK climate-responsive residences at Mahindra Rivenza, Baner Annex / Mahalunge, Pune. Starting ₹90 Lakhs*. MahaRERA Phase 1 PR1261012602102 & Phase 2 PM1261012602103.",
       "brand": {
@@ -308,6 +308,7 @@ const baseSchema = {
     <link rel="manifest" href="/site.webmanifest" />
     <link rel="search" type="application/opensearchdescription+xml" title="Mahindra Rivenza Search" href="/opensearch.xml" />
     <link rel="alternate" type="application/rss+xml" title="Mahindra Rivenza Real Estate & Research Intelligence" href="/rss.xml" />
+    <link rel="alternate" type="application/xml" title="Mahindra Rivenza Google Shopping Inventory Feed" href="/google-shopping.xml" />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />

@@ -28,6 +28,86 @@
     </image:image>
   </url>
 
+  <!-- Dedicated Launch & Blueprint Hubs -->
+  <url>
+    <loc>https://mahindralifespaceshomes.in/pricing/</loc>
+    <lastmod>2026-10-07</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.98</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://mahindralifespaceshomes.in/pricing/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mahindralifespaceshomes.in/pricing/" />
+    <image:image>
+      <image:loc>https://cms.mahindralifespaces.com/web/sites/default/files/styles/web_banner_webp/public/2026-10/jpeg-optimizer_Elevation%20Opt%20A..webp</image:loc>
+      <image:title>Mahindra Rivenza Pricing &amp; Cost Sheet</image:title>
+      <image:caption>Complete Price Matrix Starting ₹90 Lakhs* for 2, 3 &amp; 4 BHK Residences</image:caption>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://mahindralifespaceshomes.in/floor-plans/</loc>
+    <lastmod>2026-10-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://mahindralifespaceshomes.in/floor-plans/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mahindralifespaceshomes.in/floor-plans/" />
+    <image:image>
+      <image:loc>https://cms.mahindralifespaces.com/web/sites/default/files/styles/web_banner_webp/public/2026-10/jpeg-optimizer_Elevation%20Opt%20A..webp</image:loc>
+      <image:title>Mahindra Rivenza Floor Plans &amp; Typology Blueprints</image:title>
+      <image:caption>Detailed Carpet Area and Architectural Layouts for 2, 3 &amp; 4 BHK</image:caption>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://mahindralifespaceshomes.in/master-plan/</loc>
+    <lastmod>2026-10-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://mahindralifespaceshomes.in/master-plan/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mahindralifespaceshomes.in/master-plan/" />
+    <image:image>
+      <image:loc>https://cms.mahindralifespaces.com/web/sites/default/files/styles/web_banner_webp/public/2026-10/jpeg-optimizer_Elevation%20Opt%20A..webp</image:loc>
+      <image:title>Mahindra Rivenza 13.46-Acre Master Township Plan</image:title>
+      <image:caption>Master Layout with 9+ Acres Greens and 5 Curated Lifestyle Zones</image:caption>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://mahindralifespaceshomes.in/amenities/</loc>
+    <lastmod>2026-10-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://mahindralifespaceshomes.in/amenities/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mahindralifespaceshomes.in/amenities/" />
+    <image:image>
+      <image:loc>https://cms.mahindralifespaces.com/web/sites/default/files/styles/web_banner_webp/public/2026-10/Swimming%20pool%20with%20sunken%20bar_Rivenza_11zon.webp</image:loc>
+      <image:title>Mahindra Rivenza Sunken Bar Pool &amp; ~44,000 Sq.Ft Clubhouse</image:title>
+      <image:caption>Over 50+ Curated Lifestyle Amenities and Futsal Arena</image:caption>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://mahindralifespaceshomes.in/location/</loc>
+    <lastmod>2026-10-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://mahindralifespaceshomes.in/location/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mahindralifespaceshomes.in/location/" />
+    <image:image>
+      <image:loc>https://cms.mahindralifespaces.com/web/sites/default/files/styles/web_banner_webp/public/2026-10/jpeg-optimizer_Elevation%20Opt%20A..webp</image:loc>
+      <image:title>Mahindra Rivenza Location &amp; Commute Matrix</image:title>
+      <image:caption>Baner Annex &amp; Hinjewadi IT Park Connectivity Analysis</image:caption>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://mahindralifespaceshomes.in/rera/</loc>
+    <lastmod>2026-10-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.90</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://mahindralifespaceshomes.in/rera/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mahindralifespaceshomes.in/rera/" />
+  </url>
+
   <!-- 02. Core Micro-Market & Location Pages -->
   <url>
     <loc>https://mahindralifespaceshomes.in/mahalunge-pune/</loc>

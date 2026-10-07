@@ -51,7 +51,7 @@ export const comparisonData: ComparisonItem[] = [
       },
       {
         q: 'How do prices compare between Mahindra Rivenza and Godrej Hillside?',
-        a: 'Godrej Hillside trades at mature secondary market pricing, whereas Mahindra Rivenza offers advantageous official launch pricing starting from ₹1.85 Cr*.'
+        a: 'Godrej Hillside trades at mature secondary market pricing, whereas Mahindra Rivenza offers advantageous official launch pricing starting from ₹90 Lakhs*.'
       }
     ]
   },

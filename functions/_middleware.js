@@ -149,7 +149,7 @@ export async function onRequest(context) {
             "name": "Mahindra Rivenza",
             "legalName": "Mahindra Lifespace Developers Limited",
             "url": "https://mahindralifespaceshomes.in/",
-            "priceRange": "₹1.85 Crore - ₹3.85 Crore+",
+            "priceRange": "₹90 Lakhs - ₹2.55 Crore+",
             "telephone": "+91-7744009295",
             "address": {
               "@type": "PostalAddress",

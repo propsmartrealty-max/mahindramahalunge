@@ -81,8 +81,8 @@ export const mahindraPuneProjects: MahindraPuneProject[] = [
     reraStatus: 'MahaRERA Registered (Phase 1: PR1261012602102 | Phase 2: PM1261012602103)',
     reraNumber: 'PR1261012602102 / PM1261012602103',
     greenRating: 'IGBC Pre-Certified Gold & Net Zero Waste to Landfill',
-    summary: 'Officially launched: Mahindra Rivenza is a premier 13.46-acre master community by Mahindra Lifespace Developers Limited in Baner Annex / Mahalunge, Pune. Features 9+ acres of landscaped greens, 2.65 Lakh+ sq.ft of amenity spaces including a ~44,000 sq.ft grand clubhouse, swimming pool with sunken bar, yoga lawn, futsal court, and multi-purpose courts. Starting from ₹1.85 Cr*. Registered under MahaRERA: Phase 1 (PR1261012602102) & Phase 2 (PM1261012602103).',
-    image: 'http://cms.mahindralifespaces.com/web/sites/default/files/styles/web_banner_webp/public/2026-10/jpeg-optimizer_Elevation%20Opt%20A..webp',
+    summary: 'Officially launched: Mahindra Rivenza is a premier 13.46-acre master community by Mahindra Lifespace Developers Limited in Baner Annex / Mahalunge, Pune. Features 9+ acres of landscaped greens, 2.65 Lakh+ sq.ft of amenity spaces including a ~44,000 sq.ft grand clubhouse, swimming pool with sunken bar, yoga lawn, futsal court, and multi-purpose courts. Starting from ₹90 Lakhs*. Registered under MahaRERA: Phase 1 (PR1261012602102) & Phase 2 (PM1261012602103).',
+    image: 'https://cms.mahindralifespaces.com/web/sites/default/files/styles/web_banner_webp/public/2026-10/jpeg-optimizer_Elevation%20Opt%20A..webp',
     distanceFromMahalunge: 'Subject Property (Baner Annex / Mahalunge Epicenter)',
     transitHighlight: 'Direct access to Baner-Hinjawadi Road, upcoming Metro Line 3, and Mumbai-Pune Expressway'
   },

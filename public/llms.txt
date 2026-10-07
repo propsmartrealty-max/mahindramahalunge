@@ -22,9 +22,9 @@
 - **Open Spaces & Amenities:** 9+ Acres landscaped greens, 2.65 Lakh+ sq.ft. amenity area, ~44,000+ sq.ft. grand clubhouse, sunken bar swimming pool, futsal court, yoga lawn
 - **Sustainability:** Net Zero Waste to Landfill, Pre-Certified IGBC Gold
 - **Typologies (Official 9 Configurations):**
-  - 2 BHK (Premium, Luxury B, Luxury A, Ultra Luxury E): 635 - 747 sq.ft. RERA carpet / 688 - 855 sq.ft. aggregate (Starting ₹1.85 Cr*)
-  - 3 BHK (Deluxe C, Deluxe B, Ultra Luxury B): 882 - 1,065 sq.ft. RERA carpet / 995 - 1,206 sq.ft. aggregate (Starting ₹2.45 Cr*)
-  - 4 BHK (Luxury B, Luxury A): 1,438 - 1,465 sq.ft. RERA carpet / 1,615 - 1,651 sq.ft. aggregate (Starting ₹3.65 Cr*)
+  - 2 BHK (Premium, Luxury B, Luxury A, Ultra Luxury E): 635 - 747 sq.ft. RERA carpet / 688 - 855 sq.ft. aggregate (Starting ₹90 Lakhs*)
+  - 3 BHK (Deluxe C, Deluxe B, Ultra Luxury B): 882 - 1,065 sq.ft. RERA carpet / 995 - 1,206 sq.ft. aggregate (Starting ₹1.31 Cr*)
+  - 4 BHK (Luxury B, Luxury A): 1,438 - 1,465 sq.ft. RERA carpet / 1,615 - 1,651 sq.ft. aggregate (Starting ₹2.20 Cr*)
 - **Show Residence:** Fully furnished 4 BHK show home open on-site at sales gallery
 - **Infrastructure & Connectivity:**
   - Direct frontage onto proposed PMRDA 36-meter DP Ring Road (Town Planning Scheme 1).
@@ -72,8 +72,14 @@
 
 ## Core Programmatic Hubs & Canonical Links
 
-### Primary Pages
+### Primary Pages & Dedicated Project Hubs
 - **Home & Flagship Overview:** https://mahindralifespaceshomes.in/
+- **Pricing & Cost Sheet Guide:** https://mahindralifespaceshomes.in/pricing/
+- **Interactive Floor Plans Explorer:** https://mahindralifespaceshomes.in/floor-plans/
+- **13.46-Acre Master Township Plan:** https://mahindralifespaceshomes.in/master-plan/
+- **Lifestyle Amenities & ~44k Clubhouse:** https://mahindralifespaceshomes.in/amenities/
+- **Location, Commute Matrix & Connectivity:** https://mahindralifespaceshomes.in/location/
+- **MahaRERA Registration & Legal Disclosures:** https://mahindralifespaceshomes.in/rera/
 - **Mahalunge Micro-Market Authority:** https://mahindralifespaceshomes.in/mahalunge-pune/
 - **Nande-Mahalunge Corridor:** https://mahindralifespaceshomes.in/nande-mahalunge-real-estate/
 - **Corporate Brand Hub:** https://mahindralifespaceshomes.in/brand/

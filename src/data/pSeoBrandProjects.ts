@@ -51,8 +51,8 @@ export const brandProjectData: BrandProjectItem[] = [
     greenRating: 'Pre-Certified IGBC Gold & Net Zero Waste to Landfill',
     h1: 'Mahindra Rivenza Pune: 13.46-Acre Landmark in Baner Annex / Mahalunge',
     metaTitle: 'Mahindra Rivenza in Baner Annex, Pune | 2, 3 & 4 BHK Luxury Homes',
-    metaDescription: 'Discover 2, 3 & 4 BHK flats at Mahindra Rivenza in Baner Annex / Mahalunge, Pune. A 13.46-acre haven with 9+ acres of greens, 44k sq.ft clubhouse, starting ₹1.85 Cr*. MahaRERA PR1261012602102.',
-    heroTagline: '13.46 Acres · 9+ Acres Greens · ~44,000 sq.ft Clubhouse · Starting ₹1.85 Cr*',
+    metaDescription: 'Discover 2, 3 & 4 BHK flats at Mahindra Rivenza in Baner Annex / Mahalunge, Pune. A 13.46-acre haven with 9+ acres of greens, 44k sq.ft clubhouse, starting ₹90 Lakhs*. MahaRERA PR1261012602102.',
+    heroTagline: '13.46 Acres · 9+ Acres Greens · ~44,000 sq.ft Clubhouse · Starting ₹90 Lakhs*',
     distanceFromMahalunge: 'Baner Annex / Mahalunge Epicenter (off Baner-Hinjawadi Road)',
     transitHighlight: 'Direct access to Baner-Hinjawadi Road, upcoming Metro Line 3, & Mumbai-Pune Expressway',
     keySpecs: [
@@ -60,7 +60,7 @@ export const brandProjectData: BrandProjectItem[] = [
       { label: 'Amenity Spaces', value: '2.65 Lakh+ sq.ft. incl. ~44,000 sq.ft Clubhouses' },
       { label: 'Configurations', value: '2, 3 & 4 BHK Luxury Residences' },
       { label: 'Carpet Area', value: '635 – 1,465 sq.ft. RERA (688 – 1,650 sq.ft. Aggregate)' },
-      { label: 'Starting Price', value: '₹1.85 Crore* Onwards' },
+      { label: 'Starting Price', value: '₹90 Lakhs* Onwards' },
       { label: 'MahaRERA', value: 'Phase 1: PR1261012602102 | Phase 2: PM1261012602103' },
       { label: 'Green Rating', value: 'Pre-Certified IGBC Gold & Net Zero Waste' },
       { label: 'Status', value: 'Officially Launched / Bookings Open' }
@@ -73,7 +73,7 @@ export const brandProjectData: BrandProjectItem[] = [
       'Glass Roof Library, Co-Working Pods & Executive Lounges',
       'Net Zero Waste to Landfill & Dedicated EV Charging Infrastructure'
     ],
-    investmentCase: 'Baner Annex and Mahalunge represent West Pune\'s prime capital appreciation corridor. With prices starting at ₹1.85 Cr*, direct access to Hinjawadi IT Park, Balewadi High Street, and the Pune Metro Line 3, Mahindra Rivenza unites Mahindra\'s institutional delivery governance with unmatched rental and capital appreciation potential.',
+    investmentCase: 'Baner Annex and Mahalunge represent West Pune\'s prime capital appreciation corridor. With prices starting at ₹90 Lakhs*, direct access to Hinjawadi IT Park, Balewadi High Street, and the Pune Metro Line 3, Mahindra Rivenza unites Mahindra\'s institutional delivery governance with unmatched rental and capital appreciation potential.',
     rentalYield: '4.8% – 5.4% (Projected Hinjewadi & Baner Tech Workforce Demand)',
     faqs: [
       {
@@ -98,7 +98,7 @@ export const brandProjectData: BrandProjectItem[] = [
       },
       {
         q: 'What is the starting price for flats at Mahindra Rivenza?',
-        a: 'Prices at Mahindra Rivenza start from ₹1.85 Crore* for 2 BHK Premium residences, with pricing scaling up to ₹3.50 Crore* for 4 BHK Luxury estates.'
+        a: 'Prices at Mahindra Rivenza start from ₹90 Lakhs* for 2 BHK Premium residences, with pricing scaling up to ₹2.55 Crore* for 4 BHK Luxury estates.'
       },
       {
         q: 'Is there a show flat available at the sales gallery of Mahindra Rivenza?',
@@ -117,7 +117,7 @@ export const brandProjectData: BrandProjectItem[] = [
         a: 'Mahindra Lifespaces has tied up with leading banks and financial institutions including SBI, HDFC, Canara Bank, ICICI Bank, and Bajaj Finance.'
       }
     ],
-    image: 'http://cms.mahindralifespaces.com/web/sites/default/files/styles/web_banner_webp/public/2026-10/jpeg-optimizer_Elevation%20Opt%20A..webp'
+    image: 'https://cms.mahindralifespaces.com/web/sites/default/files/styles/web_banner_webp/public/2026-10/jpeg-optimizer_Elevation%20Opt%20A..webp'
   },
   {
     slug: 'mahindra-ivylush-kharadi-annex',
