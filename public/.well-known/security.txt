@@ -1,0 +1,10 @@
+# RFC 9116 Enterprise Security & Vulnerability Disclosure Policy
+# Domain: https://mahindralifespaceshomes.in
+Contact: mailto:propsmartrealty@gmail.com
+Contact: tel:+91-7744009295
+Expires: 2027-12-31T23:59:59.000Z
+Preferred-Languages: en
+Canonical: https://mahindralifespaceshomes.in/.well-known/security.txt
+Policy: https://mahindralifespaceshomes.in/privacy/
+Hiring: https://mahindralifespaceshomes.in/
+Acknowledgments: https://mahindralifespaceshomes.in/

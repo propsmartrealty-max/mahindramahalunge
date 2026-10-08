@@ -44,23 +44,72 @@ export async function onRequest(context) {
   const userAgent = request.headers.get('user-agent') || '';
   const pathname = url.pathname;
 
+  const activeGlobalKey = (context.env && (context.env.GLOBAL_KEY || context.env.INDEXNOW_KEY || context.env.CLOUDFLARE_API_KEY)) || INDEXNOW_KEY;
+
   // 0. Apex Canonical Host Enforcement (301 redirect www -> non-www apex domain)
   if (url.hostname.startsWith('www.')) {
     url.hostname = url.hostname.replace(/^www\./, '');
     return Response.redirect(url.toString(), 301);
   }
 
-  // 0b. IndexNow Key Verification Endpoint (Bing, Microsoft, Yahoo, Yandex)
-  if (pathname === '/indexnow-key.txt' || pathname === `/${INDEXNOW_KEY}.txt`) {
-    return new Response(INDEXNOW_KEY, {
+  // 0b. Global Key & IndexNow Verification Endpoint (Bing, Microsoft, Yahoo, Yandex, Naver)
+  if (pathname === '/indexnow-key.txt' || pathname === `/${activeGlobalKey}.txt` || pathname === `/${INDEXNOW_KEY}.txt`) {
+    return new Response(activeGlobalKey, {
       status: 200,
       headers: {
         'Content-Type': 'text/plain; charset=utf-8',
         'Cache-Control': 'public, max-age=86400',
-        'X-IndexNow-Key': INDEXNOW_KEY,
+        'X-IndexNow-Key': activeGlobalKey,
         'Access-Control-Allow-Origin': '*',
+        'X-Content-Type-Options': 'nosniff',
       },
     });
+  }
+
+  // 0c. Edge IndexNow Submission Hook (Triggered securely via Global Key)
+  if (pathname === '/api/indexnow-ping') {
+    const authKey = url.searchParams.get('key') || request.headers.get('x-global-key');
+    if (authKey !== activeGlobalKey) {
+      return new Response(JSON.stringify({ error: 'Unauthorized - Invalid Global Key' }), {
+        status: 401,
+        headers: { 'Content-Type': 'application/json' },
+      });
+    }
+
+    try {
+      const pingPayload = {
+        host: 'mahindralifespaceshomes.in',
+        key: activeGlobalKey,
+        keyLocation: `https://mahindralifespaceshomes.in/${activeGlobalKey}.txt`,
+        urlList: [
+          'https://mahindralifespaceshomes.in/',
+          'https://mahindralifespaceshomes.in/pricing/',
+          'https://mahindralifespaceshomes.in/floor-plans/',
+          'https://mahindralifespaceshomes.in/master-plan/',
+          'https://mahindralifespaceshomes.in/location/',
+          'https://mahindralifespaceshomes.in/amenities/',
+          'https://mahindralifespaceshomes.in/brochure/',
+          'https://mahindralifespaceshomes.in/rera/',
+          'https://mahindralifespaceshomes.in/sitemap/',
+        ],
+      };
+
+      const pingRes = await fetch('https://api.indexnow.org/indexnow', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json; charset=utf-8' },
+        body: JSON.stringify(pingPayload),
+      });
+
+      return new Response(JSON.stringify({ success: true, status: pingRes.status, key: activeGlobalKey }), {
+        status: 200,
+        headers: { 'Content-Type': 'application/json' },
+      });
+    } catch (err) {
+      return new Response(JSON.stringify({ error: err.message }), {
+        status: 500,
+        headers: { 'Content-Type': 'application/json' },
+      });
+    }
   }
 
   // 1. Malicious / Aggressive Scraper Edge Firewall (Whitelisting verified search engines)
@@ -200,7 +249,7 @@ export async function onRequest(context) {
   modifiedHeaders.set('X-Edge-Timestamp', currentIsoTimestamp);
   modifiedHeaders.set('X-Edge-Geo-Locality', `${cfCity}, ${cfCountry}`);
   modifiedHeaders.set('X-IndexNow-Status', 'Ready');
-  modifiedHeaders.set('X-IndexNow-Key', INDEXNOW_KEY);
+  modifiedHeaders.set('X-IndexNow-Key', activeGlobalKey);
 
   // Early Preconnect Link Headers
   modifiedHeaders.set(
@@ -208,9 +257,13 @@ export async function onRequest(context) {
     '<https://fonts.googleapis.com>; rel=preconnect, <https://fonts.gstatic.com>; rel=preconnect; crossorigin, <https://cms.mahindralifespaces.com>; rel=preconnect, <https://images.unsplash.com>; rel=preconnect'
   );
 
-  // Edge Security Hardening
+  // Edge Security & Infrastructure Hardening
   modifiedHeaders.set('X-Frame-Options', 'SAMEORIGIN');
   modifiedHeaders.set('X-Content-Type-Options', 'nosniff');
+  modifiedHeaders.set('X-Permitted-Cross-Domain-Policies', 'none');
+  modifiedHeaders.set('Cross-Origin-Embedder-Policy', 'unsafe-none');
+  modifiedHeaders.set('Cross-Origin-Opener-Policy', 'same-origin-allow-popups');
+  modifiedHeaders.set('Cross-Origin-Resource-Policy', 'cross-origin');
   modifiedHeaders.set('Referrer-Policy', 'strict-origin-when-cross-origin');
   modifiedHeaders.set('Permissions-Policy', 'geolocation=(), camera=(), microphone=(), payment=()');
   modifiedHeaders.set('Strict-Transport-Security', 'max-age=31536000; includeSubDomains; preload');
