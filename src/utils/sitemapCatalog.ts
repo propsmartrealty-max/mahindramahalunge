@@ -11,7 +11,7 @@ export interface SitemapImage {
 export interface SitemapEntry {
   url: string;
   title: string;
-  category: 'core' | 'residences' | 'locations' | 'techparks' | 'connectivity' | 'comparisons' | 'projects' | 'articles';
+  category: 'core' | 'residences' | 'locations' | 'techparks' | 'schools' | 'nri' | 'connectivity' | 'comparisons' | 'projects' | 'articles';
   priority: number;
   changefreq: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly';
   lastmod?: string;
@@ -20,6 +20,9 @@ export interface SitemapEntry {
 
 export const BASE_URL = 'https://mahindralifespaceshomes.in';
 export const CURRENT_DATE = new Date().toISOString().split('T')[0]; // YYYY-MM-DD
+
+import { schoolData } from '../data/pSeoSchools';
+import { nriPortalsData } from '../data/pSeoNriPortals';
 
 // Shared Project Images for Google Image Sitemap Indexation
 export const PRIMARY_IMAGES: SitemapImage[] = [
@@ -366,6 +369,22 @@ export const TECH_PARKS_SLUGS = [
   { slug: 'flats-near-cerebrum-it-park-kalyani-nagar', name: 'Flats Near Cerebrum IT Park Kalyani Nagar' },
   { slug: 'flats-near-commerzone-yerwada', name: 'Flats Near Commerzone Yerwada' },
   { slug: 'flats-near-weikfield-it-citi-info-park', name: 'Flats Near Weikfield IT Citi Info Park' },
+  { slug: 'flats-near-synechron-hinjewadi', name: 'Flats Near Synechron Hinjewadi Phase 1' },
+  { slug: 'flats-near-barclays-hinjewadi', name: 'Flats Near Barclays Global Service Centre Hinjewadi' },
+  { slug: 'flats-near-kpit-hinjewadi', name: 'Flats Near KPIT Technologies Hinjewadi' },
+  { slug: 'flats-near-hexaware-hinjewadi', name: 'Flats Near Hexaware Technologies Hinjewadi Phase 3' },
+  { slug: 'flats-near-veritas-baner', name: 'Flats Near Veritas Technologies Baner' },
+  { slug: 'flats-near-siemens-balewadi', name: 'Flats Near Siemens Balewadi' },
+  { slug: 'flats-near-mindspace-hinjewadi', name: 'Flats Near Mindspace IT Park Hinjewadi' },
+  { slug: 'flats-near-cummins-balewadi', name: 'Flats Near Cummins India Campus Balewadi' },
+  { slug: 'flats-near-tech-mahindra-hinjewadi', name: 'Flats Near Tech Mahindra Hinjewadi Phase 3' },
+  { slug: 'flats-near-capgemini-hinjewadi', name: 'Flats Near Capgemini Hinjewadi Phase 3' },
+  { slug: 'flats-near-persistent-hinjewadi', name: 'Flats Near Persistent Systems Hinjewadi' },
+  { slug: 'flats-near-eaton-pune', name: 'Flats Near Eaton Innovation Center Pune' },
+  { slug: 'flats-near-nvidia-pune', name: 'Flats Near NVIDIA Pune Technology Centre' },
+  { slug: 'flats-near-credit-suisse-pune', name: 'Flats Near UBS Credit Suisse Hinjewadi' },
+  { slug: 'flats-near-atos-syntel-hinjewadi', name: 'Flats Near Atos Syntel Hinjewadi' },
+  { slug: 'flats-near-qualcomm-pune', name: 'Flats Near Qualcomm India Design Centre' },
 ];
 
 export const TECH_PARKS_PAGES: SitemapEntry[] = TECH_PARKS_SLUGS.map((item) => ({
@@ -412,6 +431,12 @@ export const COMPARISONS_SLUGS = [
   { slug: 'mahindra-mahalunge-vs-shapoorji-pallonji-sensorium', name: 'Mahindra Rivenza vs Shapoorji Pallonji Sensorium Hinjewadi' },
   { slug: 'mahindra-citadel-vs-runwal-elixir-pimpri', name: 'Mahindra Citadel vs Runwal Elixir Pimpri' },
   { slug: 'mahindra-mahalunge-vs-kolte-patil-24k-majestic', name: 'Mahindra Rivenza vs Kolte Patil 24K Majestic' },
+  { slug: 'mahindra-rivenza-vs-vtp-earth-one', name: 'Mahindra Rivenza vs VTP Earth One Mahalunge' },
+  { slug: 'mahindra-rivenza-vs-godrej-woodsville', name: 'Mahindra Rivenza vs Godrej Woodsville Hinjewadi' },
+  { slug: 'mahindra-rivenza-vs-rohan-harita', name: 'Mahindra Rivenza vs Rohan Harita Tathawade' },
+  { slug: 'mahindra-rivenza-vs-kasturi-balmoral-riverside', name: 'Mahindra Rivenza vs Kasturi The Balmoral Riverside Balewadi' },
+  { slug: 'mahindra-rivenza-vs-pride-world-city', name: 'Mahindra Rivenza vs Pride World City Charholi' },
+  { slug: 'mahindra-rivenza-vs-amar-landmark', name: 'Mahindra Rivenza vs Amar Landmark Baner' },
 ];
 
 export const COMPARISONS_PAGES: SitemapEntry[] = COMPARISONS_SLUGS.map((item) => ({
@@ -471,12 +496,34 @@ export const ARTICLES_PAGES: SitemapEntry[] = ARTICLES_SLUGS.map((item) => ({
   changefreq: 'monthly',
 }));
 
+// 09. INTERNATIONAL SCHOOLS PROXIMITY (/near/schools/*)
+export const SCHOOLS_PAGES: SitemapEntry[] = schoolData.map((item) => ({
+  url: `${BASE_URL}/near/schools/${item.slug}/`,
+  title: `${item.name} — Family Living & Proximity Guide`,
+  category: 'schools',
+  priority: 0.78,
+  changefreq: 'weekly',
+  lastmod: CURRENT_DATE,
+}));
+
+// 10. GLOBAL NRI INVESTMENT PORTALS (/nri/*)
+export const NRI_PAGES: SitemapEntry[] = nriPortalsData.map((item) => ({
+  url: `${BASE_URL}/nri/${item.slug}/`,
+  title: `Mahindra Rivenza Global NRI Investment — ${item.countryOrRegion}`,
+  category: 'nri',
+  priority: 0.85,
+  changefreq: 'weekly',
+  lastmod: CURRENT_DATE,
+}));
+
 // ALL SITEMAP ENTRIES
 export const ALL_SITEMAP_ENTRIES: SitemapEntry[] = [
   ...CORE_PAGES,
   ...RESIDENCES_PAGES,
   ...LOCATIONS_PAGES,
   ...TECH_PARKS_PAGES,
+  ...SCHOOLS_PAGES,
+  ...NRI_PAGES,
   ...CONNECTIVITY_PAGES,
   ...COMPARISONS_PAGES,
   ...BRAND_PROJECTS_PAGES,

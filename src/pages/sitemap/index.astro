@@ -38,6 +38,8 @@ const subSitemaps = [
   { name: 'Luxury Residences', path: '/sitemap-residences.xml', desc: '2, 3 & 4 BHK Typology Blueprints' },
   { name: 'West Pune Localities', path: '/sitemap-locations.xml', desc: 'Mahalunge, Baner, Hinjewadi & Wakad' },
   { name: 'IT Parks & Tech Hubs', path: '/sitemap-near.xml', desc: 'Infosys, Wipro, TCS & Embassy TechZone' },
+  { name: 'International Schools', path: '/sitemap-schools.xml', desc: 'Top IB, ICSE & CBSE Schools Proximity' },
+  { name: 'Global NRI Portals', path: '/sitemap-nri.xml', desc: 'Dubai, USA, Singapore, UK & GCC Hubs' },
   { name: 'Transit & Infrastructure', path: '/sitemap-connectivity.xml', desc: 'Metro Line 3, PMRDA 36M & Ring Road' },
   { name: 'Project Comparisons', path: '/sitemap-compare.xml', desc: 'vs Godrej, VTP, Kolte Patil & Lodha' },
   { name: 'Mahindra Ecosystem', path: '/sitemap-projects.xml', desc: 'Mahindra Lifespaces Pune Portfolio' },
@@ -57,7 +59,7 @@ const subSitemaps = [
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-5">
       <div class="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full glass-pill text-gold-400 text-xs font-semibold uppercase tracking-widest">
         <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
-        <span>Google Pro Indexed Architecture • 107 Pages Verified</span>
+        <span>Google Pro Indexed Architecture • {ALL_SITEMAP_ENTRIES.length} Pages Verified</span>
       </div>
       <h1 class="font-serif text-3xl sm:text-5xl lg:text-6xl font-bold text-stone-100 max-w-4xl leading-tight">
         Mahindra Rivenza <br />
@@ -97,7 +99,7 @@ const subSitemaps = [
         </span>
       </div>
 
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
         {subSitemaps.map((sm) => (
           <a
             href={sm.path}
@@ -128,28 +130,34 @@ const subSitemaps = [
           All Directory ({ALL_SITEMAP_ENTRIES.length})
         </button>
         <button class="cat-tab px-4 py-2 rounded-lg text-xs font-semibold uppercase tracking-wider bg-charcoal-900 border border-white/10 text-stone-300 hover:text-white transition-all whitespace-nowrap cursor-pointer" data-cat="core">
-          Core Hubs (18)
+          Core Hubs ({ALL_SITEMAP_ENTRIES.filter(e => e.category === 'core').length})
         </button>
         <button class="cat-tab px-4 py-2 rounded-lg text-xs font-semibold uppercase tracking-wider bg-charcoal-900 border border-white/10 text-stone-300 hover:text-white transition-all whitespace-nowrap cursor-pointer" data-cat="residences">
-          Residences (14)
+          Residences ({ALL_SITEMAP_ENTRIES.filter(e => e.category === 'residences').length})
         </button>
         <button class="cat-tab px-4 py-2 rounded-lg text-xs font-semibold uppercase tracking-wider bg-charcoal-900 border border-white/10 text-stone-300 hover:text-white transition-all whitespace-nowrap cursor-pointer" data-cat="locations">
-          West Pune Localities (12)
+          West Pune ({ALL_SITEMAP_ENTRIES.filter(e => e.category === 'locations').length})
         </button>
         <button class="cat-tab px-4 py-2 rounded-lg text-xs font-semibold uppercase tracking-wider bg-charcoal-900 border border-white/10 text-stone-300 hover:text-white transition-all whitespace-nowrap cursor-pointer" data-cat="techparks">
-          Tech Parks (16)
+          Tech Parks ({ALL_SITEMAP_ENTRIES.filter(e => e.category === 'techparks').length})
+        </button>
+        <button class="cat-tab px-4 py-2 rounded-lg text-xs font-semibold uppercase tracking-wider bg-charcoal-900 border border-white/10 text-stone-300 hover:text-white transition-all whitespace-nowrap cursor-pointer" data-cat="schools">
+          Schools ({ALL_SITEMAP_ENTRIES.filter(e => e.category === 'schools').length})
+        </button>
+        <button class="cat-tab px-4 py-2 rounded-lg text-xs font-semibold uppercase tracking-wider bg-charcoal-900 border border-white/10 text-stone-300 hover:text-white transition-all whitespace-nowrap cursor-pointer" data-cat="nri">
+          NRI Portals ({ALL_SITEMAP_ENTRIES.filter(e => e.category === 'nri').length})
         </button>
         <button class="cat-tab px-4 py-2 rounded-lg text-xs font-semibold uppercase tracking-wider bg-charcoal-900 border border-white/10 text-stone-300 hover:text-white transition-all whitespace-nowrap cursor-pointer" data-cat="connectivity">
-          Transit Corridors (8)
+          Transit ({ALL_SITEMAP_ENTRIES.filter(e => e.category === 'connectivity').length})
         </button>
         <button class="cat-tab px-4 py-2 rounded-lg text-xs font-semibold uppercase tracking-wider bg-charcoal-900 border border-white/10 text-stone-300 hover:text-white transition-all whitespace-nowrap cursor-pointer" data-cat="comparisons">
-          Comparisons (14)
+          Comparisons ({ALL_SITEMAP_ENTRIES.filter(e => e.category === 'comparisons').length})
         </button>
         <button class="cat-tab px-4 py-2 rounded-lg text-xs font-semibold uppercase tracking-wider bg-charcoal-900 border border-white/10 text-stone-300 hover:text-white transition-all whitespace-nowrap cursor-pointer" data-cat="projects">
-          Brand Portfolio (9)
+          Brand Portfolio ({ALL_SITEMAP_ENTRIES.filter(e => e.category === 'projects').length})
         </button>
         <button class="cat-tab px-4 py-2 rounded-lg text-xs font-semibold uppercase tracking-wider bg-charcoal-900 border border-white/10 text-stone-300 hover:text-white transition-all whitespace-nowrap cursor-pointer" data-cat="articles">
-          Articles &amp; Guides (16)
+          Articles ({ALL_SITEMAP_ENTRIES.filter(e => e.category === 'articles').length})
         </button>
       </div>
 

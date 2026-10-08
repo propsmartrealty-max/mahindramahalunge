@@ -481,6 +481,193 @@ export const comparisonData: ComparisonItem[] = [
         a: 'Both locations provide strong connectivity to Hinjewadi IT parks, but Mahalunge sits closer at just 3.4 km via the planned 36m DP road and river bridge, while Baner requires navigating through congested Baner-Hinjewadi road junctions.'
       }
     ]
+  },
+  {
+    slug: 'mahindra-rivenza-vs-vtp-earth-one',
+    competitorName: 'VTP Earth One Mahalunge',
+    competitorType: 'Project',
+    h1: 'Mahindra Rivenza vs VTP Earth One Mahalunge: Comparison & Review',
+    metaTitle: 'Mahindra Rivenza vs VTP Earth One Mahalunge | 2026 Head-to-Head',
+    metaDescription: 'Detailed comparison of Mahindra Rivenza vs VTP Earth One Mahalunge. Compare master layouts, ~44,000 sq.ft dual clubhouse, pricing, and IGBC Net Zero ratings.',
+    summaryVerdict: 'While VTP Earth One delivers high-density high-rise towers in Mahalunge, Mahindra Rivenza offers a lower-density 13.46-acre master development with 9+ acres of landscaped greens, ~44,000 sq.ft clubhouses featuring a sunken bar pool, and the backing of the trusted Mahindra Lifespaces brand with Pre-Certified IGBC Gold Net Zero waste standards.',
+    prosMahindra: [
+      '13.46 acres low-density layout with 9+ acres of open greens',
+      '~44,000+ sq.ft multi-level dual clubhouse with sunken aqua bar pool',
+      'Net Zero Waste to Landfill and IGBC Gold pre-certification',
+      'Institutional governance and delivery track record of Mahindra Group'
+    ],
+    prosCompetitor: [
+      'VTP high-rise skyline presence in Mahalunge',
+      'Multiple compact unit configurations'
+    ],
+    metrics: [
+      { feature: 'Land Parcel Scale', mahindra: '13.46 Acres Integrated Master Community', competitor: 'Multi-Tower Cluster', winner: 'Mahindra' },
+      { feature: 'Clubhouse Area', mahindra: '~44,000+ Sq.Ft. Dual Clubhouse', competitor: 'Standard Community Club', winner: 'Mahindra' },
+      { feature: 'Green Open Space', mahindra: '9+ Acres Landscaped Biophilic Zones', competitor: 'Podium Level Greenery', winner: 'Mahindra' },
+      { feature: 'Developer Governance', mahindra: 'Mahindra Lifespaces (Mahindra Group)', competitor: 'Regional Private Developer', winner: 'Mahindra' },
+      { feature: 'Starting Price', mahindra: 'From ₹90 Lakhs* (Pre-launch Advantage)', competitor: 'Comparable Micro-Market Pricing', winner: 'Tie' }
+    ],
+    faqs: [
+      {
+        q: 'Which project has better amenities — Mahindra Rivenza or VTP Earth One?',
+        a: 'Mahindra Rivenza features 2.65 Lakh+ sq.ft of total lifestyle amenity area anchored by two grand clubhouses totaling over 44,000 sq.ft, complete with a temperature-regulated swimming pool with sunken bar, futsal court, and yoga lawns.'
+      },
+      {
+        q: 'Is Mahindra Rivenza RERA registered?',
+        a: 'Yes, Mahindra Rivenza is fully registered under MahaRERA with registration numbers PR1261012602102 (Phase 1) and PM1261012602103 (Phase 2).'
+      }
+    ]
+  },
+  {
+    slug: 'mahindra-rivenza-vs-godrej-woodsville',
+    competitorName: 'Godrej Woodsville Hinjewadi',
+    competitorType: 'Project',
+    h1: 'Mahindra Rivenza vs Godrej Woodsville Hinjewadi: Baner Annex vs Hinjewadi',
+    metaTitle: 'Mahindra Rivenza vs Godrej Woodsville Hinjewadi | Price & Review',
+    metaDescription: 'Compare Mahindra Rivenza Baner Annex with Godrej Woodsville Hinjewadi. 13.46-acre master plan, 7-min IT commute, sunken bar pool, and capital appreciation analysis.',
+    summaryVerdict: 'Godrej Woodsville is located deeper inside Hinjewadi Phase 1, subjecting residents to internal township traffic. Mahindra Rivenza at Baner Annex / Mahalunge offers the ideal sweet spot: 7 minutes to Hinjewadi tech parks, 8 minutes to Balewadi High Street, 9+ acres of greens, and superior dual-direction connectivity.',
+    prosMahindra: [
+      'Baner Annex location provides dual access to Hinjewadi and Baner/Balewadi',
+      '13.46 acres with ~44,000 sq.ft dual clubhouse and 9+ acres greenery',
+      'Net Zero Waste to Landfill and IGBC Gold pre-certified design',
+      'PMRDA 36m DP road frontage avoiding Hinjewadi internal congestion'
+    ],
+    prosCompetitor: [
+      'Located within Hinjewadi Phase 1 boundary',
+      'Brand reputation of Godrej Properties'
+    ],
+    metrics: [
+      { feature: 'Commute Flexibility', mahindra: 'Direct to both Hinjewadi & Balewadi High Street', competitor: 'Hinjewadi internal roads dependent', winner: 'Mahindra' },
+      { feature: 'Clubhouse Scale', mahindra: '~44,000+ Sq.Ft. Dual Grand Clubhouses', competitor: 'Standard Clubhouse', winner: 'Mahindra' },
+      { feature: 'Air Quality & Greenery', mahindra: '9+ Acres Biophilic Landscape with River Breeze', competitor: 'Dense IT corridor setting', winner: 'Mahindra' },
+      { feature: 'Brand Trust', mahindra: 'Mahindra Group (Mahindra Lifespaces)', competitor: 'Godrej Properties', winner: 'Tie' }
+    ],
+    faqs: [
+      {
+        q: 'Why choose Baner Annex / Mahalunge over Hinjewadi Phase 1?',
+        a: 'Mahalunge / Baner Annex avoids the heavy commercial traffic and noise of inner Hinjewadi while maintaining a 7-minute commute, and provides rapid access to schools and high-street dining in Baner and Balewadi.'
+      }
+    ]
+  },
+  {
+    slug: 'mahindra-rivenza-vs-rohan-harita',
+    competitorName: 'Rohan Harita Tathawade',
+    competitorType: 'Project',
+    h1: 'Mahindra Rivenza vs Rohan Harita Tathawade: West Pune Shootout',
+    metaTitle: 'Mahindra Rivenza vs Rohan Harita Tathawade | Project Comparison',
+    metaDescription: 'Compare Mahindra Rivenza Mahalunge and Rohan Harita Tathawade. Master layout scale, ~44,000 sq.ft clubhouse, Hinjewadi commute, and investment upside.',
+    summaryVerdict: 'Rohan Harita serves the Tathawade highway market, but Mahindra Rivenza is situated in the high-growth PMRDA Town Planning Scheme corridor of Mahalunge / Baner Annex, offering 13.46 acres, larger green zones, and closer proximity to Balewadi High Street and Baner commercial amenities.',
+    prosMahindra: [
+      'Closer proximity to Balewadi High Street and prime Baner',
+      '13.46-acre master community with ~44,000 sq.ft dual clubhouse',
+      'Sunken aqua bar resort pool and floodlit sports arenas',
+      'Part of the high-velocity PMRDA Town Planning Scheme 1'
+    ],
+    prosCompetitor: [
+      'Direct highway access from Tathawade',
+      'Rohan Builders PLUS home design concept'
+    ],
+    metrics: [
+      { feature: 'Master Layout', mahindra: '13.46 Acres Integrated Township Setting', competitor: 'Compact Mid-Size Parcel', winner: 'Mahindra' },
+      { feature: 'Balewadi Access', mahindra: '8 Minutes via Balewadi Link Road', competitor: '15-20 Minutes via Highway Chowk', winner: 'Mahindra' },
+      { feature: 'Sustainability', mahindra: 'IGBC Gold Net Zero Waste Certified', competitor: 'Standard Environmental Clearance', winner: 'Mahindra' }
+    ],
+    faqs: [
+      {
+        q: 'Which project offers better long-term appreciation?',
+        a: 'Mahindra Rivenza benefits from the PMRDA Town Planning Scheme (TPS 1) infrastructure, 36m DP roads, and Metro Line 3, driving strong capital appreciation.'
+      }
+    ]
+  },
+  {
+    slug: 'mahindra-rivenza-vs-kasturi-balmoral-riverside',
+    competitorName: 'Kasturi The Balmoral Riverside Balewadi',
+    competitorType: 'Project',
+    h1: 'Mahindra Rivenza vs Kasturi The Balmoral Riverside: Luxury Comparison',
+    metaTitle: 'Mahindra Rivenza vs Kasturi Balmoral Riverside Balewadi | Comparison',
+    metaDescription: 'Luxury head-to-head: Mahindra Rivenza Baner Annex vs Kasturi The Balmoral Riverside Balewadi. Pricing, carpet area, clubhouse amenities, and rental returns.',
+    summaryVerdict: 'Kasturi offers luxury at premium Balewadi ticket sizes (₹2.2Cr - ₹4Cr+), whereas Mahindra Rivenza offers comparable luxury 2, 3 & 4 BHK residences starting at ₹90 Lakhs* on a larger 13.46-acre master plan, delivering much higher rental yields and substantial upside potential.',
+    prosMahindra: [
+      'Accessible price entry starting ₹90 Lakhs* vs ₹2.2Cr+ at Balewadi',
+      'Expansive 13.46 acres with ~44,000 sq.ft dual clubhouse and 9+ acres greens',
+      'Higher rental yield percentage (4.8% - 5.4%)',
+      'Mahindra Group institutional governance and MahaRERA trust'
+    ],
+    prosCompetitor: [
+      'Prestigious core Balewadi riverfront address',
+      'Ultra-luxury boutique fittings and bespoke architecture'
+    ],
+    metrics: [
+      { feature: 'Price Entry', mahindra: '₹90 Lakhs* (2 BHK) to ₹2.55 Cr* (4 BHK)', competitor: '₹2.2 Crore to ₹4.5 Crore+', winner: 'Mahindra' },
+      { feature: 'Rental Yield', mahindra: '4.8% - 5.4%', competitor: '3.0% - 3.5%', winner: 'Mahindra' },
+      { feature: 'Land Parcel Scale', mahindra: '13.46 Acres (9+ Acres Greens)', competitor: 'Boutique Riverfront Parcel', winner: 'Mahindra' }
+    ],
+    faqs: [
+      {
+        q: 'How does Mahindra Rivenza pricing compare to Balewadi luxury apartments?',
+        a: 'Mahindra Rivenza provides luxury residences at roughly 35% to 45% lower ticket size compared to core Balewadi, making it an ideal choice for smart capital allocation.'
+      }
+    ]
+  },
+  {
+    slug: 'mahindra-rivenza-vs-pride-world-city',
+    competitorName: 'Pride World City Charholi',
+    competitorType: 'Project',
+    h1: 'Mahindra Rivenza vs Pride World City: West Pune vs East Pune',
+    metaTitle: 'Mahindra Rivenza vs Pride World City Charholi | West vs East Pune',
+    metaDescription: 'Compare Mahindra Rivenza (West Pune IT Hub) vs Pride World City (Charholi / Airport). Commute analysis, rental yields, IT employment drivers, and appreciation.',
+    summaryVerdict: 'Pride World City serves North-East Pune near the airport, whereas Mahindra Rivenza sits at the center of Pune\'s primary economic engine — the West Pune Hinjewadi IT corridor and Baner-Balewadi commercial district, where high-salaried tech professionals generate sustained rental and capital growth.',
+    prosMahindra: [
+      'Located in Pune\'s highest-paying economic engine (Hinjewadi + Baner)',
+      '13.46-acre master plan with ~44,000 sq.ft dual clubhouse',
+      'IGBC Gold Net Zero waste community',
+      'Close proximity to Balewadi High Street dining and retail'
+    ],
+    prosCompetitor: [
+      'Township scale development in North-East Pune',
+      'Closer to Pune Airport'
+    ],
+    metrics: [
+      { feature: 'Economic Engine', mahindra: 'Hinjewadi IT & Baner High Street Tech Corridor', competitor: 'Airport / Industrial Manufacturing Corridor', winner: 'Mahindra' },
+      { feature: 'Executive Rental Yield', mahindra: '4.8% - 5.4% (IT Tech Tenancy)', competitor: '3.8% - 4.2%', winner: 'Mahindra' },
+      { feature: 'Civic Infrastructure', mahindra: 'Metro Line 3 + PMRDA Smart City TPS 1', competitor: 'Ring Road & Airport Road', winner: 'Mahindra' }
+    ],
+    faqs: [
+      {
+        q: 'Why is West Pune considered a stronger investment corridor than Charholi?',
+        a: 'West Pune generates over 60% of Pune\'s high-income tech employment through Hinjewadi and Baner, creating strong tenant demand and resilient property value appreciation.'
+      }
+    ]
+  },
+  {
+    slug: 'mahindra-rivenza-vs-amar-landmark',
+    competitorName: 'Amar Landmark Baner',
+    competitorType: 'Project',
+    h1: 'Mahindra Rivenza vs Amar Landmark Baner: Residential Analysis',
+    metaTitle: 'Mahindra Rivenza vs Amar Landmark Baner | Project Comparison',
+    metaDescription: 'Compare Mahindra Rivenza Baner Annex with Amar Landmark Baner. Master layout, resort amenities, sunken bar pool, and long-term capital appreciation.',
+    summaryVerdict: 'Amar Landmark is an established luxury commercial-residential node in Baner, but Mahindra Rivenza provides an expansive 13.46-acre nature-integrated sanctuary with over 44,000 sq.ft of dual clubhouses, sunken aqua bar pool, and 9+ acres of greens at an attractive entry valuation.',
+    prosMahindra: [
+      '13.46 acres low-density living vs dense commercial-residential tower',
+      'Over 44,000 sq.ft of dedicated lifestyle clubhouses with resort pool',
+      'Significant price entry advantage in emerging Baner Annex corridor',
+      'IGBC Gold Pre-Certified Net Zero Waste sustainability'
+    ],
+    prosCompetitor: [
+      'Prominent location on main Baner Road',
+      'Established high-street retail downstairs'
+    ],
+    metrics: [
+      { feature: 'Living Environment', mahindra: 'Biophilic 9+ Acres Greens & Mula River Vistas', competitor: 'Busy Arterial Road Setting', winner: 'Mahindra' },
+      { feature: 'Clubhouse & Sports', mahindra: '~44,000 Sq.Ft. Dual Club with Futsal & Tennis', competitor: 'Standard Podium Amenities', winner: 'Mahindra' },
+      { feature: 'Peace of Living', mahindra: 'Tranquil master layout with zero traffic noise', competitor: 'High urban commercial noise levels', winner: 'Mahindra' }
+    ],
+    faqs: [
+      {
+        q: 'What makes Mahindra Rivenza a superior lifestyle choice compared to central Baner?',
+        a: 'Mahindra Rivenza combines the connectivity of Baner Annex with 9+ acres of peaceful biophilic landscape, clean air, and world-class sports amenities that standalone urban towers cannot match.'
+      }
+    ]
   }
 ];
 

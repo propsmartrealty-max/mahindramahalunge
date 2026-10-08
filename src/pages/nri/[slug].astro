@@ -1,0 +1,172 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { nriPortalsData, type NriPortalItem } from '../../data/pSeoNriPortals';
+
+export async function getStaticPaths() {
+  return nriPortalsData.map((item) => ({
+    params: { slug: item.slug },
+    props: { item },
+  }));
+}
+
+interface Props {
+  item: NriPortalItem;
+}
+
+const { item } = Astro.props;
+
+// Construct Schema.org JSON-LD for this specific NRI investor page
+const pageSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "InvestmentOrDeposit",
+      "@id": `https://mahindralifespaceshomes.in/nri/${item.slug}/#investment`,
+      "name": `Mahindra Rivenza Real Estate Investment (${item.countryOrRegion})`,
+      "description": item.metaDescription,
+      "amount": {
+        "@type": "MonetaryAmount",
+        "currency": item.currency,
+        "value": item.startingPriceInCurrency
+      }
+    },
+    {
+      "@type": "ApartmentComplex",
+      "@id": `https://mahindralifespaceshomes.in/nri/${item.slug}/#complex`,
+      "name": "Mahindra Rivenza - Global NRI Showcase",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "HP6G+WWF Baner Annex, off Baner-Hinjawadi Road, Nande",
+        "addressLocality": "Mahalunge, Pune",
+        "postalCode": "412115",
+        "addressRegion": "Maharashtra",
+        "addressCountry": "IN"
+      },
+      "telephone": "+91-7744009295"
+    },
+    {
+      "@type": "FAQPage",
+      "@id": `https://mahindralifespaceshomes.in/nri/${item.slug}/#faq`,
+      "mainEntity": item.faqs.map((faq) => ({
+        "@type": "Question",
+        "name": faq.q,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": faq.a
+        }
+      }))
+    }
+  ]
+};
+---
+
+<Layout
+  title={item.metaTitle}
+  description={item.metaDescription}
+  keywords={`nri property investment ${item.countryOrRegion.toLowerCase()}, buy flat in pune from ${item.countryOrRegion.toLowerCase()}, mahindra rivenza nri desk, nri home loans pune, mahindra lifespaces ${item.currency.toLowerCase()} pricing`}
+  canonical={`https://mahindralifespaceshomes.in/nri/${item.slug}/`}
+  customSchema={pageSchema}
+>
+  <!-- Hero Section -->
+  <section class="pt-32 pb-20 bg-charcoal-950 border-b border-white/10 relative overflow-hidden">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
+      
+      <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-gold-500/10 border border-gold-500/30 text-gold-400 text-xs font-semibold uppercase tracking-widest">
+        <span>Global NRI Investment Portal • {item.countryOrRegion}</span>
+      </div>
+
+      <h1 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight leading-tight">
+        {item.h1}
+      </h1>
+
+      <p class="text-lg text-stone-300 max-w-3xl leading-relaxed">
+        {item.metaDescription}
+      </p>
+
+      <!-- Key Metrics Row -->
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-4">
+        <div class="bg-white/5 border border-white/10 rounded-xl p-4 backdrop-blur-sm">
+          <div class="text-xs text-stone-400 uppercase tracking-wider font-mono">Entry Price</div>
+          <div class="text-2xl font-bold text-gold-300 mt-1">{item.startingPriceInCurrency}</div>
+        </div>
+        <div class="bg-white/5 border border-white/10 rounded-xl p-4 backdrop-blur-sm">
+          <div class="text-xs text-stone-400 uppercase tracking-wider font-mono">Currency Base</div>
+          <div class="text-2xl font-bold text-white mt-1">{item.currency} ({item.currencySymbol})</div>
+        </div>
+        <div class="bg-white/5 border border-white/10 rounded-xl p-4 backdrop-blur-sm">
+          <div class="text-xs text-stone-400 uppercase tracking-wider font-mono">Projected Yield</div>
+          <div class="text-2xl font-bold text-emerald-400 mt-1">4.8% - 5.4%</div>
+        </div>
+        <div class="bg-white/5 border border-white/10 rounded-xl p-4 backdrop-blur-sm">
+          <div class="text-xs text-stone-400 uppercase tracking-wider font-mono">MahaRERA Status</div>
+          <div class="text-sm font-semibold text-sky-400 mt-1">PR1261012602102</div>
+        </div>
+      </div>
+
+      <!-- CTA Action Bar -->
+      <div class="pt-4 flex flex-wrap gap-4 items-center">
+        <a
+          href="/pricing/"
+          class="px-6 py-3 rounded-lg bg-gold-500 hover:bg-gold-400 text-charcoal-950 font-semibold text-sm transition-all shadow-lg shadow-gold-500/20"
+        >
+          Request NRI Cost Sheet & Currency Breakdown
+        </a>
+        <a
+          href="https://wa.me/917744009295?text=Hello%20NRI%20Desk%2C%20I%20am%20inquiring%20about%20Mahindra%20Rivenza%20from%20abroad."
+          target="_blank"
+          rel="noopener noreferrer"
+          class="px-6 py-3 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white font-medium text-sm transition-all flex items-center space-x-2"
+        >
+          <span>Connect via WhatsApp NRI Desk</span>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Content Dossier Section -->
+  <section class="py-16 bg-[#0c1017]">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        
+        <!-- Tax & Legal Card -->
+        <div class="bg-white/[0.03] border border-white/10 rounded-2xl p-6 sm:p-8 space-y-4">
+          <h2 class="font-serif text-2xl font-bold text-white">Tax, Legal & FEMA Compliance</h2>
+          <p class="text-stone-300 leading-relaxed text-sm">
+            {item.taxAndLegalAdvantage}
+          </p>
+          <div class="p-4 rounded-xl bg-gold-500/10 border border-gold-500/20 text-xs text-gold-300">
+            <strong>Repatriation:</strong> {item.repatriationOverview}
+          </div>
+        </div>
+
+        <!-- Rental Yield & Hinjewadi Demand -->
+        <div class="bg-white/[0.03] border border-white/10 rounded-2xl p-6 sm:p-8 space-y-4">
+          <h2 class="font-serif text-2xl font-bold text-white">Rental Yield & Tech Tenancy</h2>
+          <p class="text-stone-300 leading-relaxed text-sm">
+            {item.rentalYieldHighlight}
+          </p>
+          <div class="p-4 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-xs text-emerald-300">
+            <strong>Key Driver:</strong> Hinjewadi IT Park Phase 1 & 2 houses over 400,000+ tech employees, ensuring zero vacancy risk for premium gated residences.
+          </div>
+        </div>
+
+      </div>
+
+      <!-- FAQ Section -->
+      <div class="space-y-6 pt-6">
+        <h3 class="font-serif text-2xl font-bold text-white">Frequently Asked Questions for {item.countryOrRegion} Investors</h3>
+        <div class="space-y-4">
+          {item.faqs.map((faq) => (
+            <div class="border border-white/10 rounded-xl p-5 bg-white/[0.02]">
+              <h4 class="font-semibold text-gold-300 text-base">{faq.q}</h4>
+              <p class="text-stone-300 text-sm mt-2 leading-relaxed">{faq.a}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+    </div>
+  </section>
+</Layout>

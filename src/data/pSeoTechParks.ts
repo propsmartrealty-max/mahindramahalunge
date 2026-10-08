@@ -502,6 +502,462 @@ export const techParkData: TechParkItem[] = [
         a: 'The institutional brand trust of Mahindra Group, 80% open greens, and proximity to retail landmarks like Phoenix Marketcity.'
       }
     ]
+  },
+  {
+    slug: 'flats-near-synechron-hinjewadi',
+    name: 'Synechron Technologies (Hinjewadi Phase 1)',
+    shortName: 'Synechron Hinjewadi',
+    category: 'Fintech & Digital Innovation Hub',
+    distanceKm: '3.6 km',
+    driveTime: '7 - 9 mins',
+    bikeTime: '5 - 7 mins',
+    cycleTime: '12 - 14 mins',
+    metroStatus: 'Direct access via upcoming Metro Line 3 Hinjewadi Phase 1 Station',
+    topCompanies: ['Synechron Technologies Pvt. Ltd.', 'Fintech CoE'],
+    workforceCount: '8,500+',
+    h1: 'Flats Near Synechron Hinjewadi: Premium Residences at Mahindra Rivenza',
+    metaTitle: 'Flats Near Synechron Hinjewadi Pune | 2 & 3 BHK Mahindra Rivenza',
+    metaDescription: 'Luxury 2, 3 & 4 BHK flats near Synechron Hinjewadi Phase 1. Mahindra Rivenza offers a 13.46-acre master plan, 7-minute commute, ~44,000 sq.ft dual clubhouse.',
+    heroHighlight: '7-Min Commute via PMRDA 36M Arterial Road',
+    commuteAdvantage: 'Bypass internal Hinjewadi traffic jams using the direct Mahalunge-Hinjewadi bridge corridor.',
+    recommendedConfig: '2 & 3 BHK Luxury Residences for Fintech Engineers & Solution Architects',
+    rentalYield: '4.9% - 5.3%',
+    rentalDemandOverview: 'Continuous executive rental absorption from Synechron global fintech leadership teams.',
+    routeOverview: 'Short westbound drive through Mahalunge connecting seamlessly into Hinjewadi Phase 1.',
+    faqs: [
+      {
+        q: 'How far is Mahindra Rivenza from Synechron Hinjewadi?',
+        a: 'Mahindra Rivenza is located just 3.6 km from Synechron Phase 1, approximately 7 to 9 minutes by car.'
+      },
+      {
+        q: 'What amenities are available for fintech professionals?',
+        a: 'High-speed co-working pods, soundproof meeting cubicles, 44,000 sq.ft clubhouse with sunken bar pool, and floodlit sports arenas.'
+      }
+    ]
+  },
+  {
+    slug: 'flats-near-barclays-hinjewadi',
+    name: 'Barclays Global Service Centre (Hinjewadi Phase 2)',
+    shortName: 'Barclays Hinjewadi',
+    category: 'Global Investment Banking Tech Centre',
+    distanceKm: '4.8 km',
+    driveTime: '10 - 12 mins',
+    bikeTime: '8 - 10 mins',
+    cycleTime: '16 - 18 mins',
+    metroStatus: '5 minutes from upcoming Metro Line 3 Phase 2 station',
+    topCompanies: ['Barclays Global Service Centre Pvt. Ltd.'],
+    workforceCount: '14,000+',
+    h1: 'Flats Near Barclays Hinjewadi: Ultra-Luxury Homes at Mahindra Rivenza',
+    metaTitle: 'Flats Near Barclays Hinjewadi Pune | 2, 3 & 4 BHK Mahindra Rivenza',
+    metaDescription: 'Find luxury residences near Barclays Hinjewadi Phase 2. Mahindra Rivenza offers 13.46 acres of biophilic living, ~44,000 sq.ft clubhouse, starting ₹90 Lakhs*.',
+    heroHighlight: '10-Minute Smooth Transit to Barclays GSC',
+    commuteAdvantage: 'Direct route via Maan-Mahalunge connectivity without passing through congested Shivaji Chowk.',
+    recommendedConfig: '3 BHK Deluxe & 4 BHK Sky Estates for Senior VP, Directors & Banking Tech Leads',
+    rentalYield: '5.1% - 5.5%',
+    rentalDemandOverview: 'Premium corporate leasing demand with highest rental willingness from investment banking technologists.',
+    routeOverview: 'Drive via Baner-Hinjawadi Road into Phase 2 tech sector.',
+    faqs: [
+      {
+        q: 'What is the commute time from Mahindra Rivenza to Barclays Hinjewadi?',
+        a: 'Commute takes approximately 10 to 12 minutes under standard peak-hour conditions via the upgraded DP road network.'
+      },
+      {
+        q: 'Are 4 BHK luxury residences available near Barclays?',
+        a: 'Yes, Mahindra Rivenza offers 4 BHK Sky Estates (1,438-1,650 sq.ft RERA) with panoramic valley views and premium finishes.'
+      }
+    ]
+  },
+  {
+    slug: 'flats-near-kpit-hinjewadi',
+    name: 'KPIT Technologies Campus (Hinjewadi Phase 1)',
+    shortName: 'KPIT Hinjewadi',
+    category: 'Automotive & Mobility Tech Campus',
+    distanceKm: '3.9 km',
+    driveTime: '8 - 10 mins',
+    bikeTime: '6 - 8 mins',
+    cycleTime: '14 - 16 mins',
+    metroStatus: 'Connected via Hinjewadi Phase 1 Metro station',
+    topCompanies: ['KPIT Technologies', 'KPIT Engineering'],
+    workforceCount: '9,000+',
+    h1: 'Flats Near KPIT Technologies Hinjewadi: Luxury Living at Mahindra Rivenza',
+    metaTitle: 'Flats Near KPIT Technologies Hinjewadi | Mahindra Rivenza Pune',
+    metaDescription: 'Explore apartments near KPIT Hinjewadi. 8 mins commute, 9+ acres landscaped greenery, Pre-Certified IGBC Gold Net Zero waste community.',
+    heroHighlight: '8-Minute Direct Commute to KPIT Campus',
+    commuteAdvantage: 'Bypass internal Hinjewadi bottleneck traffic via the upcoming Mahalunge-Hinjewadi bridge link.',
+    recommendedConfig: '2 & 3 BHK Premium Residences',
+    rentalYield: '4.8% - 5.2%',
+    rentalDemandOverview: 'Consistent rental absorption from automotive software engineers and project managers.',
+    routeOverview: 'Swift drive westbound along PMRDA DP corridor into Phase 1.',
+    faqs: [
+      {
+        q: 'How close is KPIT Technologies to Mahindra Rivenza?',
+        a: 'Just 3.9 km away, providing an 8-minute commute ideal for work-life balance.'
+      }
+    ]
+  },
+  {
+    slug: 'flats-near-hexaware-hinjewadi',
+    name: 'Hexaware Technologies (Hinjewadi Phase 3)',
+    shortName: 'Hexaware Hinjewadi',
+    category: 'Cloud & AI Technology Campus',
+    distanceKm: '6.2 km',
+    driveTime: '12 - 14 mins',
+    bikeTime: '10 - 12 mins',
+    cycleTime: '20 - 22 mins',
+    metroStatus: 'Serviced by Metro Line 3 terminal line extension',
+    topCompanies: ['Hexaware Technologies Ltd.', 'Mobiquity'],
+    workforceCount: '7,500+',
+    h1: 'Flats Near Hexaware Hinjewadi Phase 3: Mahindra Rivenza Residences',
+    metaTitle: 'Flats Near Hexaware Hinjewadi Phase 3 | 2 & 3 BHK Mahindra Rivenza',
+    metaDescription: 'Modern 2 & 3 BHK homes near Hexaware Hinjewadi Phase 3. 12-min drive, 44,000+ sq.ft amenities, IGBC Gold Pre-Certified community.',
+    heroHighlight: '12-Minute Drive via Maan Link Corridor',
+    commuteAdvantage: 'Quick access to Hinjewadi Phase 3 via Maan bypass road avoiding main highway jams.',
+    recommendedConfig: '2 BHK Premium & 3 BHK Comfort Residences',
+    rentalYield: '4.7% - 5.1%',
+    rentalDemandOverview: 'Robust demand from Cloud and IT consultancy specialists.',
+    routeOverview: 'Follow Maan-Mahalunge connectivity directly into Phase 3 tech cluster.',
+    faqs: [
+      {
+        q: 'Why buy at Mahindra Rivenza instead of Hinjewadi Phase 3?',
+        a: 'Mahindra Rivenza is closer to central Baner and Balewadi High Street, giving access to city life alongside seamless Phase 3 commute.'
+      }
+    ]
+  },
+  {
+    slug: 'flats-near-veritas-baner',
+    name: 'Veritas Technologies (Baner High Street)',
+    shortName: 'Veritas Baner',
+    category: 'Enterprise Data & Cloud Campus',
+    distanceKm: '4.1 km',
+    driveTime: '8 - 10 mins',
+    bikeTime: '6 - 8 mins',
+    cycleTime: '14 - 16 mins',
+    metroStatus: 'Direct access via Balewadi Phata / Baner Metro Station',
+    topCompanies: ['Veritas Technologies LLC'],
+    workforceCount: '4,000+',
+    h1: 'Flats Near Veritas Technologies Baner: Luxury Living at Mahindra Rivenza',
+    metaTitle: 'Flats Near Veritas Baner Pune | Luxury Residences Mahindra Rivenza',
+    metaDescription: 'Find luxury apartments near Veritas Technologies Baner. 8 mins commute, 13.46 acres, resort pool with sunken bar, starting ₹90 Lakhs*.',
+    heroHighlight: '8 Minutes to Baner High Street Tech Corridor',
+    commuteAdvantage: 'Effortless eastbound transit into prime Baner commercial hubs without highway delays.',
+    recommendedConfig: '3 BHK Ultra Luxury & 4 BHK Sky Estates',
+    rentalYield: '4.9% - 5.4%',
+    rentalDemandOverview: 'Elite rental demand from enterprise software architects and tech managers.',
+    routeOverview: 'Drive east via Baner-Mahalunge Road directly reaching Baner High Street.',
+    faqs: [
+      {
+        q: 'What is the travel time to Veritas Baner?',
+        a: 'It takes just 8 to 10 minutes from Mahindra Rivenza to the Veritas campus in Baner.'
+      }
+    ]
+  },
+  {
+    slug: 'flats-near-siemens-balewadi',
+    name: 'Siemens Technology Centre (Balewadi)',
+    shortName: 'Siemens Balewadi',
+    category: 'Industrial IoT & Automation Campus',
+    distanceKm: '4.5 km',
+    driveTime: '9 - 11 mins',
+    bikeTime: '7 - 9 mins',
+    cycleTime: '15 - 18 mins',
+    metroStatus: 'Near Balewadi Stadium Metro Station',
+    topCompanies: ['Siemens AG', 'Siemens Industry Software'],
+    workforceCount: '5,500+',
+    h1: 'Flats Near Siemens Balewadi: Luxury Homes at Mahindra Rivenza',
+    metaTitle: 'Flats Near Siemens Balewadi Pune | 2 & 3 BHK Mahindra Rivenza',
+    metaDescription: 'Discover luxury apartments near Siemens Balewadi. 9 mins drive, ~44,000 sq.ft dual clubhouse, 9+ acres green zones, MahaRERA registered.',
+    heroHighlight: '9-Minute Commute to Balewadi High Street Hubs',
+    commuteAdvantage: 'Smooth drive via Balewadi-Mahalunge bridge without passing through expressway bottlenecks.',
+    recommendedConfig: '2 & 3 BHK High-Rise Residences',
+    rentalYield: '4.8% - 5.2%',
+    rentalDemandOverview: 'High tenant preference from international engineering specialists.',
+    routeOverview: 'Short drive across the Mula River link directly into Balewadi.',
+    faqs: [
+      {
+        q: 'How far is Siemens Balewadi from Mahindra Rivenza?',
+        a: 'Located 4.5 km away, requiring less than 10 minutes under regular traffic.'
+      }
+    ]
+  },
+  {
+    slug: 'flats-near-mindspace-hinjewadi',
+    name: 'Mindspace IT Park (Hinjewadi Phase 1)',
+    shortName: 'Mindspace Hinjewadi',
+    category: 'Integrated Special Economic Zone (SEZ)',
+    distanceKm: '3.8 km',
+    driveTime: '8 - 10 mins',
+    bikeTime: '6 - 8 mins',
+    cycleTime: '13 - 15 mins',
+    metroStatus: 'Direct connectivity to Hinjewadi Phase 1 Metro station',
+    topCompanies: ['Cognizant', 'LTI Mindtree', 'Wipro', 'Birlasoft'],
+    workforceCount: '28,000+',
+    h1: 'Flats Near Mindspace IT Park Hinjewadi: Mahindra Rivenza Residences',
+    metaTitle: 'Flats Near Mindspace IT Park Hinjewadi | Mahindra Rivenza Pune',
+    metaDescription: 'Explore residences near Mindspace IT Park Hinjewadi. 8 mins commute, luxury 2, 3 & 4 BHK apartments starting ₹90 Lakhs*. Net Zero community.',
+    heroHighlight: '8-Minute Commute to Mindspace Hinjewadi SEZ',
+    commuteAdvantage: 'Direct bridge approach bypassing Hinjewadi flyover traffic.',
+    recommendedConfig: '2 BHK Premium & 3 BHK Luxury Suites',
+    rentalYield: '5.0% - 5.4%',
+    rentalDemandOverview: 'Strongest rental absorption from multi-tenant IT majors within the Mindspace SEZ.',
+    routeOverview: 'Drive via Mahalunge-Hinjewadi arterial connection.',
+    faqs: [
+      {
+        q: 'What is the rental return near Mindspace Hinjewadi?',
+        a: 'Rental yields range from 5.0% to 5.4%, among the highest in West Pune.'
+      }
+    ]
+  },
+  {
+    slug: 'flats-near-cummins-balewadi',
+    name: 'Cummins India Office Campus (Balewadi High Street)',
+    shortName: 'Cummins Balewadi',
+    category: 'Global Engineering Headquarters',
+    distanceKm: '4.7 km',
+    driveTime: '10 - 12 mins',
+    bikeTime: '8 - 10 mins',
+    cycleTime: '16 - 18 mins',
+    metroStatus: 'Near Balewadi High Street corridor',
+    topCompanies: ['Cummins India Ltd.', 'Cummins Technical Center'],
+    workforceCount: '6,000+',
+    h1: 'Flats Near Cummins Balewadi: Luxury Homes at Mahindra Rivenza',
+    metaTitle: 'Flats Near Cummins Balewadi Pune | Mahindra Rivenza Residences',
+    metaDescription: 'Luxury flats near Cummins India Balewadi. 10 mins away, ~44,000 sq.ft dual clubhouse, 9+ acres lush landscape, starting ₹90 Lakhs*.',
+    heroHighlight: '10-Minute Commute to Cummins Balewadi HQ',
+    commuteAdvantage: 'Direct link to Balewadi High Street commercial district.',
+    recommendedConfig: '3 BHK Deluxe & 4 BHK Sky Estates',
+    rentalYield: '4.9% - 5.3%',
+    rentalDemandOverview: 'Executive housing preferences from senior Cummins engineering leadership.',
+    routeOverview: 'Take the Balewadi Link Road directly to Cummins campus.',
+    faqs: [
+      {
+        q: 'How convenient is the commute to Cummins India Balewadi?',
+        a: 'The commute is a quick 10 minutes via modern 6-lane connecting roads.'
+      }
+    ]
+  },
+  {
+    slug: 'flats-near-tech-mahindra-hinjewadi',
+    name: 'Tech Mahindra Innovation Campus (Hinjewadi Phase 3)',
+    shortName: 'Tech Mahindra Hinjewadi',
+    category: 'Mahindra Group IT Innovation Hub',
+    distanceKm: '5.8 km',
+    driveTime: '11 - 13 mins',
+    bikeTime: '9 - 11 mins',
+    cycleTime: '18 - 20 mins',
+    metroStatus: 'Terminal Phase 3 Metro connectivity',
+    topCompanies: ['Tech Mahindra Ltd.', 'Mahindra Comviva'],
+    workforceCount: '18,000+',
+    h1: 'Flats Near Tech Mahindra Hinjewadi: Synergistic Living at Mahindra Rivenza',
+    metaTitle: 'Flats Near Tech Mahindra Hinjewadi | Mahindra Rivenza Pune',
+    metaDescription: 'Find luxury residences near Tech Mahindra Hinjewadi Phase 3. 11 mins away, Mahindra Group brand excellence, IGBC Gold Pre-Certified.',
+    heroHighlight: 'Mahindra Group Synergy: 11-Minute Commute to Campus',
+    commuteAdvantage: 'Enjoy special Mahindra ecosystem benefits and seamless commute to Hinjewadi Phase 3.',
+    recommendedConfig: '2 & 3 BHK Homes with Work-From-Home Co-working Pods',
+    rentalYield: '5.0% - 5.5%',
+    rentalDemandOverview: 'Preferred residential choice for Tech Mahindra employees valuing group trust.',
+    routeOverview: 'Direct connection via Maan bypass corridor into Phase 3.',
+    faqs: [
+      {
+        q: 'Are there special benefits for Tech Mahindra employees?',
+        a: 'Yes, Tech Mahindra and Mahindra Group associates receive personalized concierge booking advisory.'
+      }
+    ]
+  },
+  {
+    slug: 'flats-near-capgemini-hinjewadi',
+    name: 'Capgemini Technology Services (Hinjewadi Phase 3)',
+    shortName: 'Capgemini Hinjewadi',
+    category: 'Consulting & Technology Campus',
+    distanceKm: '6.5 km',
+    driveTime: '12 - 14 mins',
+    bikeTime: '10 - 12 mins',
+    cycleTime: '20 - 22 mins',
+    metroStatus: 'Hinjewadi Phase 3 Metro corridor',
+    topCompanies: ['Capgemini Technology Services India Ltd.'],
+    workforceCount: '16,000+',
+    h1: 'Flats Near Capgemini Hinjewadi: Premium Homes at Mahindra Rivenza',
+    metaTitle: 'Flats Near Capgemini Hinjewadi Pune | 2 & 3 BHK Mahindra Rivenza',
+    metaDescription: 'Apartments near Capgemini Hinjewadi Phase 3. 12 mins commute, resort swimming pool with sunken bar, 9+ acres landscaped gardens.',
+    heroHighlight: '12-Minute Transit to Capgemini Phase 3',
+    commuteAdvantage: 'Effortless travel along arterial bypass routes without city congestion.',
+    recommendedConfig: '2 BHK Optima & 3 BHK Luxury Residences',
+    rentalYield: '4.8% - 5.2%',
+    rentalDemandOverview: 'Consistent corporate tenant inquiries from consulting professionals.',
+    routeOverview: 'Swift drive westbound via Maan-Mahalunge link.',
+    faqs: [
+      {
+        q: 'What is the distance from Mahindra Rivenza to Capgemini Hinjewadi?',
+        a: 'The distance is 6.5 km, taking around 12 minutes by car.'
+      }
+    ]
+  },
+  {
+    slug: 'flats-near-persistent-hinjewadi',
+    name: 'Persistent Systems (Hinjewadi Phase 1)',
+    shortName: 'Persistent Hinjewadi',
+    category: 'Digital Engineering & Cloud Campus',
+    distanceKm: '3.7 km',
+    driveTime: '8 - 10 mins',
+    bikeTime: '6 - 8 mins',
+    cycleTime: '13 - 15 mins',
+    metroStatus: 'Close to Hinjewadi Phase 1 Metro station',
+    topCompanies: ['Persistent Systems Ltd.'],
+    workforceCount: '7,000+',
+    h1: 'Flats Near Persistent Systems Hinjewadi: Mahindra Rivenza Residences',
+    metaTitle: 'Flats Near Persistent Systems Hinjewadi | Mahindra Rivenza',
+    metaDescription: 'Explore luxury flats near Persistent Systems Hinjewadi. 8 mins away, ~44,000 sq.ft dual clubhouse, starting ₹90 Lakhs*. Net Zero living.',
+    heroHighlight: '8-Minute Transit to Persistent Systems',
+    commuteAdvantage: 'Instant access across the planned PMRDA DP bridge.',
+    recommendedConfig: '2 & 3 BHK Modern Homes',
+    rentalYield: '4.9% - 5.3%',
+    rentalDemandOverview: 'High demand from digital engineering and AI professionals.',
+    routeOverview: 'Short direct westbound drive via Mahalunge-Nande corridor.',
+    faqs: [
+      {
+        q: 'How far is Persistent Systems from Mahindra Rivenza?',
+        a: 'Only 3.7 km away, ensuring a fast 8-minute commute.'
+      }
+    ]
+  },
+  {
+    slug: 'flats-near-eaton-pune',
+    name: 'Eaton India Innovation Center (Kharadi & Magarpatta)',
+    shortName: 'Eaton Pune',
+    category: 'Power Management Innovation Campus',
+    distanceKm: 'East Pune Tech Corridor',
+    driveTime: 'Direct access via Ring Road & Nagar Road',
+    bikeTime: '20 mins',
+    cycleTime: '30 mins',
+    metroStatus: 'Metro corridor connectivity',
+    topCompanies: ['Eaton India Innovation Center'],
+    workforceCount: '5,000+',
+    h1: 'Flats Near Eaton Innovation Center Pune: Mahindra Lifespaces Living',
+    metaTitle: 'Flats Near Eaton Pune | Luxury Homes Mahindra Lifespaces',
+    metaDescription: 'Discover luxury apartments near Eaton Innovation Center Pune. Mahindra Lifespaces offers sustainable green communities across Pune.',
+    heroHighlight: 'Strategic Access for Global Innovation Engineers',
+    commuteAdvantage: 'High-speed transit across Pune ring corridors.',
+    recommendedConfig: '2 & 3 BHK Luxury Apartments',
+    rentalYield: '4.8% - 5.2%',
+    rentalDemandOverview: 'Strong demand from industrial tech engineers and data analysts.',
+    routeOverview: 'Fast transit via Pune arterial express corridors.',
+    faqs: [
+      {
+        q: 'Which Mahindra project suits Eaton employees?',
+        a: 'Mahindra IvyLush at Kharadi Annex provides immediate proximity, while Mahindra Rivenza connects via the Outer Ring Road.'
+      }
+    ]
+  },
+  {
+    slug: 'flats-near-nvidia-pune',
+    name: 'NVIDIA Pune Technology Centre (Yerwada / West Pune Corridor)',
+    shortName: 'Nvidia Pune',
+    category: 'AI & Semiconductor Engineering Centre',
+    distanceKm: 'Convenient Highway Access',
+    driveTime: 'Direct connection via Metro & Highway',
+    bikeTime: '15 mins',
+    cycleTime: '25 mins',
+    metroStatus: 'Direct Metro Line connectivity',
+    topCompanies: ['NVIDIA Corporation'],
+    workforceCount: '4,500+',
+    h1: 'Flats Near NVIDIA Pune: High-Tech Luxury Living at Mahindra Rivenza',
+    metaTitle: 'Flats Near NVIDIA Pune | Luxury Residences Mahindra Rivenza',
+    metaDescription: 'Premium residences for AI & software engineers near NVIDIA Pune. High-speed fiber connectivity, co-working pods, 9+ acres greens.',
+    heroHighlight: 'Designed for High-Tech Innovators & AI Engineers',
+    commuteAdvantage: 'Balanced lifestyle with dedicated hybrid work infrastructure on-site.',
+    recommendedConfig: '3 BHK Ultra Luxury with dedicated private study suites',
+    rentalYield: '5.2% - 5.6%',
+    rentalDemandOverview: 'Highest executive rental appetite from global semiconductor talent.',
+    routeOverview: 'Smooth transit along modern arterial corridors.',
+    faqs: [
+      {
+        q: 'Does Mahindra Rivenza feature work-from-home facilities for tech engineers?',
+        a: 'Yes, it features high-speed Wi-Fi co-working pods, acoustic private meeting rooms, and conference areas in the dual clubhouse.'
+      }
+    ]
+  },
+  {
+    slug: 'flats-near-credit-suisse-pune',
+    name: 'UBS / Credit Suisse Business Hub (Hinjewadi Phase 2)',
+    shortName: 'UBS Hinjewadi',
+    category: 'Global Wealth & Banking Tech Campus',
+    distanceKm: '4.6 km',
+    driveTime: '9 - 11 mins',
+    bikeTime: '7 - 9 mins',
+    cycleTime: '15 - 17 mins',
+    metroStatus: 'Adjacent to Metro Line 3 Phase 2 alignment',
+    topCompanies: ['UBS Group AG', 'Credit Suisse Services'],
+    workforceCount: '8,000+',
+    h1: 'Flats Near UBS / Credit Suisse Hinjewadi: Mahindra Rivenza Luxury Homes',
+    metaTitle: 'Flats Near UBS Hinjewadi Pune | 2 & 3 BHK Mahindra Rivenza',
+    metaDescription: 'Luxury 2, 3 & 4 BHK residences near UBS Hinjewadi Phase 2. 9 mins commute, ~44,000 sq.ft clubhouse, sunken aqua bar, starting ₹90 Lakhs*.',
+    heroHighlight: '9-Minute Commute to UBS Hinjewadi Campus',
+    commuteAdvantage: 'Bypass internal Hinjewadi gridlock via the direct Mahalunge corridor.',
+    recommendedConfig: '3 BHK Deluxe & 4 BHK Sky Estates',
+    rentalYield: '5.1% - 5.5%',
+    rentalDemandOverview: 'High rental spending power from global investment banking technologists.',
+    routeOverview: 'Short westbound drive through Mahalunge DP road network.',
+    faqs: [
+      {
+        q: 'What is the commute to UBS Hinjewadi from Mahindra Rivenza?',
+        a: 'The commute is approximately 9 to 11 minutes (4.6 km) via the PMRDA arterial route.'
+      }
+    ]
+  },
+  {
+    slug: 'flats-near-atos-syntel-hinjewadi',
+    name: 'Atos Syntel Campus (Hinjewadi Phase 1)',
+    shortName: 'Atos Syntel Hinjewadi',
+    category: 'Digital Transformation Campus',
+    distanceKm: '3.5 km',
+    driveTime: '7 - 9 mins',
+    bikeTime: '5 - 7 mins',
+    cycleTime: '12 - 14 mins',
+    metroStatus: 'Direct Phase 1 Metro station proximity',
+    topCompanies: ['Atos Syntel', 'Eviden'],
+    workforceCount: '6,500+',
+    h1: 'Flats Near Atos Syntel Hinjewadi: Modern Living at Mahindra Rivenza',
+    metaTitle: 'Flats Near Atos Syntel Hinjewadi | Mahindra Rivenza Pune',
+    metaDescription: 'Find modern apartments near Atos Syntel Hinjewadi. 7 mins away, 13.46 acres, 9+ acres landscaped greens, starting ₹90 Lakhs*.',
+    heroHighlight: '7-Minute Commute via 36M Arterial Road',
+    commuteAdvantage: 'Immediate access avoiding highway choke points.',
+    recommendedConfig: '2 & 3 BHK Smart Homes',
+    rentalYield: '4.8% - 5.2%',
+    rentalDemandOverview: 'Consistent tenant inquiries from consulting and IT staff.',
+    routeOverview: 'Drive west via Nande-Mahalunge road.',
+    faqs: [
+      {
+        q: 'How far is Atos Syntel from Mahindra Rivenza?',
+        a: 'It is just 3.5 km, about 7 to 9 minutes drive.'
+      }
+    ]
+  },
+  {
+    slug: 'flats-near-qualcomm-pune',
+    name: 'Qualcomm India Design Centre (Hinjewadi / Baner)',
+    shortName: 'Qualcomm Pune',
+    category: 'Wireless & Semiconductor R&D Centre',
+    distanceKm: '4.3 km',
+    driveTime: '8 - 10 mins',
+    bikeTime: '6 - 8 mins',
+    cycleTime: '14 - 16 mins',
+    metroStatus: 'Quick access to Metro Line 3',
+    topCompanies: ['Qualcomm India Pvt. Ltd.'],
+    workforceCount: '3,800+',
+    h1: 'Flats Near Qualcomm Pune: High-End Living at Mahindra Rivenza',
+    metaTitle: 'Flats Near Qualcomm Pune | Luxury Residences Mahindra Rivenza',
+    metaDescription: 'Luxury homes near Qualcomm Design Centre. 8 mins commute, 44,000 sq.ft dual clubhouse, sunken bar pool, starting ₹90 Lakhs*. Net Zero living.',
+    heroHighlight: '8-Minute Commute to Qualcomm Tech Hub',
+    commuteAdvantage: 'Strategic location between Baner lifestyle and Hinjewadi innovation campuses.',
+    recommendedConfig: '3 BHK Ultra Luxury & 4 BHK Sky Estates',
+    rentalYield: '5.0% - 5.5%',
+    rentalDemandOverview: 'Substantial corporate rental allowances from semiconductor specialists.',
+    routeOverview: 'Direct connection via Baner-Hinjawadi arterial bridge.',
+    faqs: [
+      {
+        q: 'How long does it take to reach Qualcomm from Mahindra Rivenza?',
+        a: 'The drive is just 8 to 10 minutes (4.3 km).'
+      }
+    ]
   }
 ];
 
