@@ -118,10 +118,8 @@ export async function onRequest(context) {
   // 7. Edge HTMLRewriter Transformations
   class HeadRewriter {
     element(element) {
-      // Preconnect hints for critical origins
+      // Preconnect hints for external media CDNs (Google Fonts already preconnected in static layout)
       element.append(
-        `<link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />\n` +
-        `<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />\n` +
         `<link rel="preconnect" href="https://cms.mahindralifespaces.com" crossorigin />\n` +
         `<link rel="preconnect" href="https://images.unsplash.com" crossorigin />\n`,
         { html: true }
@@ -146,79 +144,7 @@ export async function onRequest(context) {
 
       // Edge SEO Engine Verification Meta
       element.append(
-        `<meta name="generator-edge" content="Cloudflare Pages Edge HTMLRewriter v4.0 - Mahindra Rivenza Engine" />\n`,
-        { html: true }
-      );
-
-      // SearchAction & Edge WebSite + ApartmentComplex Knowledge Graph Injection
-      const edgeSchema = {
-        "@context": "https://schema.org",
-        "@graph": [
-          {
-            "@type": "WebSite",
-            "@id": "https://mahindralifespaceshomes.in/#website",
-            "url": "https://mahindralifespaceshomes.in/",
-            "name": "Mahindra Rivenza | Baner Annex, Mahalunge, Pune",
-            "dateModified": currentIsoTimestamp,
-            "potentialAction": {
-              "@type": "SearchAction",
-              "target": "https://mahindralifespaceshomes.in/faq/?q={search_term_string}",
-              "query-input": "required name=search_term_string"
-            }
-          },
-          {
-            "@type": "Corporation",
-            "@id": "https://mahindralifespaceshomes.in/#developer",
-            "name": "Mahindra Lifespace Developers Limited",
-            "url": "https://www.mahindralifespaces.com",
-            "parentOrganization": {
-              "@type": "Organization",
-              "name": "Mahindra Group",
-              "url": "https://www.mahindra.com"
-            },
-            "sameAs": [
-              "https://en.wikipedia.org/wiki/Mahindra_Lifespaces",
-              "https://www.nseindia.com/get-quotes/equity?symbol=MAHLIFE",
-              "https://www.bseindia.com/stock-share-price/mahindra-lifespace-developers-ltd/mahlife/532313/",
-              "https://www.linkedin.com/company/mahindra-lifespaces"
-            ]
-          },
-          {
-            "@type": ["ApartmentComplex", "RealEstateAgent"],
-            "@id": "https://mahindralifespaceshomes.in/#rivenza",
-            "name": "Mahindra Rivenza",
-            "legalName": "Mahindra Lifespace Developers Limited",
-            "url": "https://mahindralifespaceshomes.in/",
-            "priceRange": "₹90 Lakhs - ₹2.55 Crore+",
-            "telephone": "+91-7744009295",
-            "email": "propsmartrealty@gmail.com",
-            "address": {
-              "@type": "PostalAddress",
-              "streetAddress": "HP6G+WWF Baner Annex, off Baner-Hinjawadi Road, Nande",
-              "addressLocality": "Mahalunge, Pune",
-              "postalCode": "412115",
-              "addressRegion": "Maharashtra",
-              "addressCountry": "IN"
-            },
-            "geo": {
-              "@type": "GeoCoordinates",
-              "latitude": 18.562536,
-              "longitude": 73.727373
-            },
-            "openingHoursSpecification": [
-              {
-                "@type": "OpeningHoursSpecification",
-                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
-                "opens": "09:00",
-                "closes": "20:00"
-              }
-            ]
-          }
-        ]
-      };
-
-      element.append(
-        `<script type="application/ld+json">${JSON.stringify(edgeSchema)}</script>\n`,
+        `<meta name="generator-edge" content="Cloudflare Pages Edge HTMLRewriter v4.1 - Enterprise Compliance Engine" />\n`,
         { html: true }
       );
     }

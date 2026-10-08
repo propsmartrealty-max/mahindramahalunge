@@ -521,7 +521,7 @@ ${entries.map(generateUrlXml).join('\n')}
 }
 
 export function generateSitemapIndex(sitemapUrls: string[]): string {
-  const timestamp = new Date().toISOString();
+  const timestamp = CURRENT_DATE;
   return `<?xml version="1.0" encoding="UTF-8"?>
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${sitemapUrls
