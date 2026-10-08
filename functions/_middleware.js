@@ -44,7 +44,13 @@ export async function onRequest(context) {
   const userAgent = request.headers.get('user-agent') || '';
   const pathname = url.pathname;
 
-  // 0. IndexNow Key Verification Endpoint (Bing, Microsoft, Yahoo, Yandex)
+  // 0. Apex Canonical Host Enforcement (301 redirect www -> non-www apex domain)
+  if (url.hostname.startsWith('www.')) {
+    url.hostname = url.hostname.replace(/^www\./, '');
+    return Response.redirect(url.toString(), 301);
+  }
+
+  // 0b. IndexNow Key Verification Endpoint (Bing, Microsoft, Yahoo, Yandex)
   if (pathname === '/indexnow-key.txt' || pathname === `/${INDEXNOW_KEY}.txt`) {
     return new Response(INDEXNOW_KEY, {
       status: 200,
@@ -52,12 +58,14 @@ export async function onRequest(context) {
         'Content-Type': 'text/plain; charset=utf-8',
         'Cache-Control': 'public, max-age=86400',
         'X-IndexNow-Key': INDEXNOW_KEY,
+        'Access-Control-Allow-Origin': '*',
       },
     });
   }
 
-  // 1. Malicious / Aggressive Scraper Edge Firewall
-  if (BAD_SCRAPER_REGEX.test(userAgent)) {
+  // 1. Malicious / Aggressive Scraper Edge Firewall (Whitelisting verified search engines)
+  const isSearchEngineBot = GOOGLE_BOT_REGEX.test(userAgent) || MICROSOFT_BING_REGEX.test(userAgent) || APPLE_BOT_REGEX.test(userAgent);
+  if (!isSearchEngineBot && BAD_SCRAPER_REGEX.test(userAgent)) {
     return new Response('Access Denied - Automated Scraping Policy', {
       status: 403,
       headers: {
@@ -88,6 +96,19 @@ export async function onRequest(context) {
   // If not an HTML document or error response, return directly with edge cache headers
   const contentType = response.headers.get('content-type') || '';
   if (!contentType.includes('text/html')) {
+    // Enterprise hardening for XML sitemaps & feeds
+    if (pathname.endsWith('.xml') || contentType.includes('xml')) {
+      const xmlHeaders = new Headers(response.headers);
+      xmlHeaders.set('Content-Type', 'application/xml; charset=utf-8');
+      xmlHeaders.set('Access-Control-Allow-Origin', '*');
+      xmlHeaders.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
+      xmlHeaders.set('X-Content-Type-Options', 'nosniff');
+      return new Response(response.body, {
+        status: response.status,
+        statusText: response.statusText,
+        headers: xmlHeaders,
+      });
+    }
     return response;
   }
 

@@ -1,3 +1,4 @@
-# Cloudflare Pages 301 HTTPS Redirection
+# Cloudflare Pages 301 Apex & HTTPS Redirection
+https://www.mahindralifespaceshomes.in/* https://mahindralifespaceshomes.in/:splat 301!
+http://www.mahindralifespaceshomes.in/* https://mahindralifespaceshomes.in/:splat 301!
 http://mahindralifespaceshomes.in/* https://mahindralifespaceshomes.in/:splat 301!
-http://www.mahindralifespaceshomes.in/* https://www.mahindralifespaceshomes.in/:splat 301!

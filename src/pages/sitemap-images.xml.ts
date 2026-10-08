@@ -9,7 +9,9 @@ export const GET: APIRoute = async () => {
   return new Response(xml.trim(), {
     headers: {
       'Content-Type': 'application/xml; charset=utf-8',
+      'Access-Control-Allow-Origin': '*',
       'Cache-Control': 'public, max-age=3600, stale-while-revalidate=86400',
+      'X-Content-Type-Options': 'nosniff',
     },
   });
 };
