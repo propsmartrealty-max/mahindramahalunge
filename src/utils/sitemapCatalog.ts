@@ -11,7 +11,7 @@ export interface SitemapImage {
 export interface SitemapEntry {
   url: string;
   title: string;
-  category: 'core' | 'residences' | 'locations' | 'techparks' | 'schools' | 'nri' | 'connectivity' | 'comparisons' | 'projects' | 'articles';
+  category: 'core' | 'residences' | 'locations' | 'techparks' | 'schools' | 'hospitals' | 'metro' | 'nri' | 'connectivity' | 'comparisons' | 'projects' | 'articles';
   priority: number;
   changefreq: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly';
   lastmod?: string;
@@ -23,6 +23,9 @@ export const CURRENT_DATE = new Date().toISOString().split('T')[0]; // YYYY-MM-D
 
 import { schoolData } from '../data/pSeoSchools';
 import { nriPortalsData } from '../data/pSeoNriPortals';
+import { hospitalData } from '../data/pSeoHospitals';
+import { metroData } from '../data/pSeoMetroStations';
+
 
 // Shared Project Images for Google Image Sitemap Indexation
 export const PRIMARY_IMAGES: SitemapImage[] = [
@@ -437,6 +440,11 @@ export const COMPARISONS_SLUGS = [
   { slug: 'mahindra-rivenza-vs-kasturi-balmoral-riverside', name: 'Mahindra Rivenza vs Kasturi The Balmoral Riverside Balewadi' },
   { slug: 'mahindra-rivenza-vs-pride-world-city', name: 'Mahindra Rivenza vs Pride World City Charholi' },
   { slug: 'mahindra-rivenza-vs-amar-landmark', name: 'Mahindra Rivenza vs Amar Landmark Baner' },
+  { slug: 'mahindra-rivenza-vs-shapoorji-joyville-hinjewadi', name: 'Mahindra Rivenza vs Shapoorji Joyville Hinjewadi' },
+  { slug: 'mahindra-rivenza-vs-vilas-javdekar-yashwin', name: 'Mahindra Rivenza vs VJ Yashwin Hinjewadi' },
+  { slug: 'mahindra-rivenza-vs-kalpataru-jade-baner', name: 'Mahindra Rivenza vs Kalpataru Jade Baner' },
+  { slug: 'mahindra-rivenza-vs-kohinoor-courtyard-one', name: 'Mahindra Rivenza vs Kohinoor Courtyard One Wakad' },
+  { slug: 'mahindra-rivenza-vs-gera-isle-royale', name: 'Mahindra Rivenza vs Gera Isle Royale Bavdhan' },
 ];
 
 export const COMPARISONS_PAGES: SitemapEntry[] = COMPARISONS_SLUGS.map((item) => ({
@@ -516,6 +524,26 @@ export const NRI_PAGES: SitemapEntry[] = nriPortalsData.map((item) => ({
   lastmod: CURRENT_DATE,
 }));
 
+// 11. HEALTHCARE & SUPER-SPECIALTY HOSPITALS (/near/hospitals/*)
+export const HOSPITALS_PAGES: SitemapEntry[] = hospitalData.map((item) => ({
+  url: `${BASE_URL}/near/hospitals/${item.slug}/`,
+  title: `${item.name} — Healthcare & Wellness Living Guide`,
+  category: 'hospitals',
+  priority: 0.78,
+  changefreq: 'weekly',
+  lastmod: CURRENT_DATE,
+}));
+
+// 12. PUNE METRO LINE 3 TRANSIT STATIONS (/near/metro/*)
+export const METRO_PAGES: SitemapEntry[] = metroData.map((item) => ({
+  url: `${BASE_URL}/near/metro/${item.slug}/`,
+  title: `${item.name} — Transit & Commuter Living Guide`,
+  category: 'metro',
+  priority: 0.80,
+  changefreq: 'weekly',
+  lastmod: CURRENT_DATE,
+}));
+
 // ALL SITEMAP ENTRIES
 export const ALL_SITEMAP_ENTRIES: SitemapEntry[] = [
   ...CORE_PAGES,
@@ -523,12 +551,15 @@ export const ALL_SITEMAP_ENTRIES: SitemapEntry[] = [
   ...LOCATIONS_PAGES,
   ...TECH_PARKS_PAGES,
   ...SCHOOLS_PAGES,
+  ...HOSPITALS_PAGES,
+  ...METRO_PAGES,
   ...NRI_PAGES,
   ...CONNECTIVITY_PAGES,
   ...COMPARISONS_PAGES,
   ...BRAND_PROJECTS_PAGES,
   ...ARTICLES_PAGES,
 ];
+
 
 // XML GENERATOR HELPERS (Google Pro Compliance)
 export function generateUrlXml(entry: SitemapEntry): string {

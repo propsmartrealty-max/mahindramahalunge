@@ -1,0 +1,177 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import { metroData, type MetroItem } from '../../../data/pSeoMetroStations';
+
+export async function getStaticPaths() {
+  return metroData.map((item) => ({
+    params: { slug: item.slug },
+    props: { item },
+  }));
+}
+
+interface Props {
+  item: MetroItem;
+}
+
+const { item } = Astro.props;
+
+// Construct Schema.org JSON-LD for this specific metro proximity page
+const pageSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SubwayStation",
+      "@id": `https://mahindralifespaceshomes.in/near/metro/${item.slug}/#station`,
+      "name": item.name,
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Pune Metro Line 3 Corridor",
+        "addressRegion": "Maharashtra",
+        "addressCountry": "IN"
+      }
+    },
+    {
+      "@type": "RealEstateListing",
+      "@id": `https://mahindralifespaceshomes.in/near/metro/${item.slug}/#listing`,
+      "name": `Transit Residences Near ${item.stationName} - Mahindra Rivenza`,
+      "description": item.metaDescription,
+      "url": `https://mahindralifespaceshomes.in/near/metro/${item.slug}/`,
+      "offers": {
+        "@type": "AggregateOffer",
+        "priceCurrency": "INR",
+        "lowPrice": "9000000",
+        "highPrice": "25500000"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": `https://mahindralifespaceshomes.in/near/metro/${item.slug}/#faq`,
+      "mainEntity": item.faqs.map((faq) => ({
+        "@type": "Question",
+        "name": faq.q,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": faq.a
+        }
+      }))
+    }
+  ]
+};
+---
+
+<Layout
+  title={item.metaTitle}
+  description={item.metaDescription}
+  keywords={`flats near ${item.stationName.toLowerCase()}, apartments near pune metro line 3, flats near metro station hinjewadi, mahalunge metro connectivity, mahindra rivenza metro`}
+  canonical={`https://mahindralifespaceshomes.in/near/metro/${item.slug}/`}
+  customSchema={pageSchema}
+>
+  <!-- Hero Section -->
+  <section class="pt-32 pb-20 bg-charcoal-950 border-b border-white/10 relative overflow-hidden">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
+      
+      <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 text-xs font-semibold uppercase tracking-widest">
+        <span>Pune Metro Line 3 Transit Hub</span>
+      </div>
+
+      <h1 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight leading-tight">
+        {item.h1}
+      </h1>
+
+      <p class="text-lg text-stone-300 max-w-3xl leading-relaxed">
+        {item.metaDescription}
+      </p>
+
+      <!-- Key Metrics Row -->
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-4">
+        <div class="bg-white/5 border border-white/10 rounded-xl p-4 backdrop-blur-sm">
+          <div class="text-xs text-stone-400 uppercase tracking-wider font-mono">Distance</div>
+          <div class="text-2xl font-bold text-cyan-300 mt-1">{item.distanceKm}</div>
+        </div>
+        <div class="bg-white/5 border border-white/10 rounded-xl p-4 backdrop-blur-sm">
+          <div class="text-xs text-stone-400 uppercase tracking-wider font-mono">Transit Time</div>
+          <div class="text-2xl font-bold text-white mt-1">{item.commuteTime}</div>
+        </div>
+        <div class="bg-white/5 border border-white/10 rounded-xl p-4 backdrop-blur-sm">
+          <div class="text-xs text-stone-400 uppercase tracking-wider font-mono">Metro Line</div>
+          <div class="text-sm font-semibold text-gold-300 mt-1 line-clamp-1">Line 3 Elevated</div>
+        </div>
+        <div class="bg-white/5 border border-white/10 rounded-xl p-4 backdrop-blur-sm">
+          <div class="text-xs text-stone-400 uppercase tracking-wider font-mono">Transit Type</div>
+          <div class="text-sm font-semibold text-emerald-400 mt-1 line-clamp-1">Rapid Commute</div>
+        </div>
+      </div>
+
+      <!-- CTA Action Bar -->
+      <div class="pt-4 flex flex-wrap gap-4 items-center">
+        <a
+          href="/pricing/"
+          class="px-6 py-3 rounded-lg bg-gold-500 hover:bg-gold-400 text-charcoal-950 font-semibold text-sm transition-all shadow-lg shadow-gold-500/20"
+        >
+          Check Transit Residences & Floor Plans
+        </a>
+        <a
+          href="tel:+917744009295"
+          class="px-6 py-3 rounded-lg bg-white/10 hover:bg-white/15 border border-white/20 text-white font-medium text-sm transition-all"
+        >
+          Speak with Transit Specialist: +91 7744009295
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Content Dossier Section -->
+  <section class="py-16 bg-[#0c1017]">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        
+        <!-- Transit Advantage Card -->
+        <div class="bg-white/[0.03] border border-white/10 rounded-2xl p-6 sm:p-8 space-y-4">
+          <h2 class="font-serif text-2xl font-bold text-white">The Daily Commuter Advantage</h2>
+          <p class="text-stone-300 leading-relaxed text-sm">
+            {item.transitAdvantage}
+          </p>
+          <div class="p-4 rounded-xl bg-cyan-500/10 border border-cyan-500/20 text-xs text-cyan-300">
+            <strong>Key Destination Hubs:</strong> {item.workplaceReach}
+          </div>
+        </div>
+
+        <!-- Investment & Living Card -->
+        <div class="bg-white/[0.03] border border-white/10 rounded-2xl p-6 sm:p-8 space-y-4">
+          <h2 class="font-serif text-2xl font-bold text-white">Transit-Oriented Capital Appreciation</h2>
+          <p class="text-stone-300 leading-relaxed text-sm">
+            Properties within 5 to 7 minutes of elevated metro corridors consistently outpace wider real estate markets by 18-24% in capital appreciation and command superior rental yields from IT professionals.
+          </p>
+          <div class="p-4 rounded-xl bg-gold-500/10 border border-gold-500/20 text-xs text-gold-300">
+            <strong>Recommended Typology:</strong> {item.recommendedConfig}
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Route Overview -->
+      <div class="bg-white/[0.02] border border-white/10 rounded-2xl p-6 sm:p-8 space-y-4">
+        <h3 class="font-serif text-xl font-bold text-white">Directions to {item.stationName}</h3>
+        <p class="text-stone-300 text-sm leading-relaxed">
+          {item.routeOverview} Mahindra Rivenza is situated in the PMRDA Hi-Tech Smart City with master-planned 36-metre DP roads, ensuring direct connectivity to Metro Line 3.
+        </p>
+      </div>
+
+      <!-- FAQ Section -->
+      <div class="space-y-6 pt-6">
+        <h3 class="font-serif text-2xl font-bold text-white">Metro Proximity & Commute FAQs</h3>
+        <div class="space-y-4">
+          {item.faqs.map((faq) => (
+            <div class="border border-white/10 rounded-xl p-5 bg-white/[0.02]">
+              <h4 class="font-semibold text-cyan-300 text-base">{faq.q}</h4>
+              <p class="text-stone-300 text-sm mt-2 leading-relaxed">{faq.a}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+    </div>
+  </section>
+</Layout>

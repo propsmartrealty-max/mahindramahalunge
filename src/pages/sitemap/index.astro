@@ -39,6 +39,8 @@ const subSitemaps = [
   { name: 'West Pune Localities', path: '/sitemap-locations.xml', desc: 'Mahalunge, Baner, Hinjewadi & Wakad' },
   { name: 'IT Parks & Tech Hubs', path: '/sitemap-near.xml', desc: 'Infosys, Wipro, TCS & Embassy TechZone' },
   { name: 'International Schools', path: '/sitemap-schools.xml', desc: 'Top IB, ICSE & CBSE Schools Proximity' },
+  { name: 'Healthcare & Hospitals', path: '/sitemap-hospitals.xml', desc: 'Jupiter, Manipal, Ruby Hall & Hospitals' },
+  { name: 'Pune Metro Line 3 Stations', path: '/sitemap-metro.xml', desc: 'Balewadi Stadium, Baner & Hinjewadi Metro' },
   { name: 'Global NRI Portals', path: '/sitemap-nri.xml', desc: 'Dubai, USA, Singapore, UK & GCC Hubs' },
   { name: 'Transit & Infrastructure', path: '/sitemap-connectivity.xml', desc: 'Metro Line 3, PMRDA 36M & Ring Road' },
   { name: 'Project Comparisons', path: '/sitemap-compare.xml', desc: 'vs Godrej, VTP, Kolte Patil & Lodha' },
@@ -143,6 +145,12 @@ const subSitemaps = [
         </button>
         <button class="cat-tab px-4 py-2 rounded-lg text-xs font-semibold uppercase tracking-wider bg-charcoal-900 border border-white/10 text-stone-300 hover:text-white transition-all whitespace-nowrap cursor-pointer" data-cat="schools">
           Schools ({ALL_SITEMAP_ENTRIES.filter(e => e.category === 'schools').length})
+        </button>
+        <button class="cat-tab px-4 py-2 rounded-lg text-xs font-semibold uppercase tracking-wider bg-charcoal-900 border border-white/10 text-stone-300 hover:text-white transition-all whitespace-nowrap cursor-pointer" data-cat="hospitals">
+          Healthcare ({ALL_SITEMAP_ENTRIES.filter(e => e.category === 'hospitals').length})
+        </button>
+        <button class="cat-tab px-4 py-2 rounded-lg text-xs font-semibold uppercase tracking-wider bg-charcoal-900 border border-white/10 text-stone-300 hover:text-white transition-all whitespace-nowrap cursor-pointer" data-cat="metro">
+          Metro ({ALL_SITEMAP_ENTRIES.filter(e => e.category === 'metro').length})
         </button>
         <button class="cat-tab px-4 py-2 rounded-lg text-xs font-semibold uppercase tracking-wider bg-charcoal-900 border border-white/10 text-stone-300 hover:text-white transition-all whitespace-nowrap cursor-pointer" data-cat="nri">
           NRI Portals ({ALL_SITEMAP_ENTRIES.filter(e => e.category === 'nri').length})

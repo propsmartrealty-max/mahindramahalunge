@@ -668,6 +668,157 @@ export const comparisonData: ComparisonItem[] = [
         a: 'Mahindra Rivenza combines the connectivity of Baner Annex with 9+ acres of peaceful biophilic landscape, clean air, and world-class sports amenities that standalone urban towers cannot match.'
       }
     ]
+  },
+  {
+    slug: 'mahindra-rivenza-vs-shapoorji-joyville-hinjewadi',
+    competitorName: 'Shapoorji Pallonji Joyville Hinjewadi',
+    competitorType: 'Project',
+    h1: 'Mahindra Rivenza vs Shapoorji Joyville Hinjewadi: Detailed Comparison',
+    metaTitle: 'Mahindra Rivenza vs Shapoorji Joyville Hinjewadi | Comparison 2026',
+    metaDescription: 'Detailed comparison of Mahindra Rivenza Mahalunge and Shapoorji Joyville Hinjewadi. Master layouts, pricing, amenities, and location advantage.',
+    summaryVerdict: 'While Shapoorji Joyville is located inside Hinjewadi Phase 1, Mahindra Rivenza at Baner Annex offers superior strategic positioning—providing fast access to Hinjewadi without being trapped in internal IT park rush-hour bottlenecks, along with a significantly richer ~44,000 sq.ft dual clubhouse lifestyle.',
+    prosMahindra: [
+      'Dual-corridor positioning: Seamless transit to Baner High Street and Hinjewadi',
+      'Extensive 9+ acres biophilic greens with river-view orientation',
+      'Dual clubhouses totaling ~44,000 sq.ft with sunken aqua bar and squash courts',
+      'Higher ceiling heights and premium acoustic glass engineering'
+    ],
+    prosCompetitor: [
+      'Proximity to Phase 1 corporate offices',
+      'Established community with existing handovers'
+    ],
+    metrics: [
+      { feature: 'Location Balance', mahindra: 'Baner Annex / Mahalunge (Zero IT Traffic Gridlock)', competitor: 'Hinjewadi Phase 1 Internal Corridor', winner: 'Mahindra' },
+      { feature: 'Amenity Scale', mahindra: '~44,000 Sq.Ft. Dual Club with Resort Infinity Pool', competitor: 'Standard Clubhouse Facilities', winner: 'Mahindra' },
+      { feature: 'Air Quality & Greens', mahindra: '9+ Acres Biophilic Greens & River Breezes', competitor: 'High Density Urban IT Park Surroundings', winner: 'Mahindra' }
+    ],
+    faqs: [
+      {
+        q: 'Which project is better for working in Hinjewadi IT Park?',
+        a: 'Mahindra Rivenza offers the best of both worlds: a quick 8 to 10-minute commute to Hinjewadi via the new river bridge, while allowing you to escape the IT park noise and traffic after work.'
+      }
+    ]
+  },
+  {
+    slug: 'mahindra-rivenza-vs-vilas-javdekar-yashwin',
+    competitorName: 'Vilas Javdekar Yashwin Hinjewadi',
+    competitorType: 'Project',
+    h1: 'Mahindra Rivenza vs VJ Yashwin Hinjewadi: Master Comparison',
+    metaTitle: 'Mahindra Rivenza vs VJ Yashwin Hinjewadi | 2026 Property Analysis',
+    metaDescription: 'Compare Mahindra Rivenza Mahalunge with Vilas Javdekar Yashwin Hinjewadi. Brand trust, carpet area, construction quality, and pricing breakdown.',
+    summaryVerdict: 'VJ Yashwin targets compact urban living, whereas Mahindra Rivenza delivers an enterprise-grade luxury resort lifestyle backed by the Mahindra Group’s unmatched corporate ethics, transparent escrow management, and expansive 13.46-acre master plan.',
+    prosMahindra: [
+      'Mahindra Group institutional governance & transparent MahaRERA delivery',
+      'Expansive 13.46 acres vs compact high-density plot',
+      'Comprehensive sports arena with futsal turf and tennis court',
+      'Higher carpet-to-super-built-up area efficiency'
+    ],
+    prosCompetitor: [
+      'Compact budget-friendly ticket sizes',
+      'Localized Pune developer recognition'
+    ],
+    metrics: [
+      { feature: 'Developer Governance', mahindra: 'Mahindra Group (Blue-Chip Conglomerate)', competitor: 'Regional Developer', winner: 'Mahindra' },
+      { feature: 'Master Land Parcel', mahindra: '13.46 Acres Integrated Township', competitor: 'High Density Standalone Towers', winner: 'Mahindra' },
+      { feature: 'Sports Infrastructure', mahindra: 'Championship Courts, Futsal & Aqua Bar Pool', competitor: 'Standard Indoor Gym & Play Area', winner: 'Mahindra' }
+    ],
+    faqs: [
+      {
+        q: 'Why choose Mahindra Rivenza over Vilas Javdekar projects?',
+        a: 'Mahindra Rivenza provides institutional build quality, IGBC Gold green standards, extensive sports infrastructure, and higher long-term resale liquidity.'
+      }
+    ]
+  },
+  {
+    slug: 'mahindra-rivenza-vs-kalpataru-jade-baner',
+    competitorName: 'Kalpataru Jade Residences Baner',
+    competitorType: 'Project',
+    h1: 'Mahindra Rivenza vs Kalpataru Jade Residences Baner: Analysis',
+    metaTitle: 'Mahindra Rivenza vs Kalpataru Jade Residences Baner | Comparison',
+    metaDescription: 'Luxury benchmark comparison: Mahindra Rivenza Baner Annex vs Kalpataru Jade Residences Baner. Prices, amenity density, and ROI potential.',
+    summaryVerdict: 'Kalpataru Jade is an ultra-premium legacy development in Baner with high ticket sizes (₹2.5Cr+), whereas Mahindra Rivenza delivers comparable luxury, biophilic architecture, and superior modern club amenities at nearly half the entry capital requirement.',
+    prosMahindra: [
+      'Accessible entry luxury starting from ₹90 Lakhs*',
+      'Brand new 2026 contemporary architectural design and smart layouts',
+      'Double clubhouse layout with resort amenities and work-from-home pods',
+      'Rapidly appreciating PMRDA smart city location'
+    ],
+    prosCompetitor: [
+      'Prime established Baner hill-view location',
+      'Ready-to-move-in status for early phases'
+    ],
+    metrics: [
+      { feature: 'Capital Appreciation Potential', mahindra: 'High Growth Phase (PMRDA Smart City Corridor)', competitor: 'Mature Market (Limited Incremental Upside)', winner: 'Mahindra' },
+      { feature: 'Price Entry Point', mahindra: 'From ₹90 Lakhs* (Exceptional Value)', competitor: 'Starting ₹2.50 Cr+ (High Capital Barrier)', winner: 'Mahindra' },
+      { feature: 'Contemporary Club Facilities', mahindra: 'Modern Biophilic Design & Aqua Lounge', competitor: 'Traditional Legacy Club Layout', winner: 'Mahindra' }
+    ],
+    faqs: [
+      {
+        q: 'Is Mahindra Rivenza a viable alternative to Kalpataru Jade in Baner?',
+        a: 'Yes, located just 7 minutes away in Baner Annex, Mahindra Rivenza offers world-class luxury finishes and amenities at far more competitive pricing.'
+      }
+    ]
+  },
+  {
+    slug: 'mahindra-rivenza-vs-kohinoor-courtyard-one',
+    competitorName: 'Kohinoor Courtyard One Wakad',
+    competitorType: 'Project',
+    h1: 'Mahindra Rivenza vs Kohinoor Courtyard One Wakad: Comparison',
+    metaTitle: 'Mahindra Rivenza vs Kohinoor Courtyard One Wakad | 2026 Guide',
+    metaDescription: 'Side-by-side analysis of Mahindra Rivenza Baner Annex and Kohinoor Courtyard One Wakad. Compare space, connectivity, amenities, and value.',
+    summaryVerdict: 'Kohinoor Courtyard One sits in dense Wakad, whereas Mahindra Rivenza offers a serene 13.46-acre master development in Mahalunge with expansive open greens, avoiding Wakad’s traffic and noise while retaining 8-minute highway connectivity.',
+    prosMahindra: [
+      '9+ acres of landscaped biophilic greens vs compact urban plot',
+      'PMRDA 36m DP road access avoiding Wakad internal chowk congestion',
+      'Mahindra corporate trust and transparent RERA milestones',
+      'Superior floor-to-ceiling heights and ventilation'
+    ],
+    prosCompetitor: [
+      'Proximity to Wakad commercial retail',
+      'Established high-density neighborhood'
+    ],
+    metrics: [
+      { feature: 'Green Open Space', mahindra: '9+ Acres Natural Landscape & River Views', competitor: 'Limited Podium Green Areas', winner: 'Mahindra' },
+      { feature: 'Traffic & Noise Levels', mahindra: 'Peaceful master sanctuary with clean air', competitor: 'High traffic density and road noise', winner: 'Mahindra' },
+      { feature: 'Clubhouse Luxury', mahindra: '~44,000 Sq.Ft. Dual Club with Aqua Bar', competitor: 'Standard Clubhouse Facilities', winner: 'Mahindra' }
+    ],
+    faqs: [
+      {
+        q: 'Why is Mahalunge / Baner Annex preferred over Wakad?',
+        a: 'Mahalunge features planned wide DP roads, PMRDA infrastructure, lower vehicular pollution, and larger green footprints than older, saturated sections of Wakad.'
+      }
+    ]
+  },
+  {
+    slug: 'mahindra-rivenza-vs-gera-isle-royale',
+    competitorName: 'Gera Isle Royale Bavdhan',
+    competitorType: 'Project',
+    h1: 'Mahindra Rivenza vs Gera Isle Royale Bavdhan: Luxury Shootout',
+    metaTitle: 'Mahindra Rivenza vs Gera Isle Royale Bavdhan | Luxury Comparison',
+    metaDescription: 'Compare Mahindra Rivenza Mahalunge with Gera Isle Royale Bavdhan. Master community planning, connectivity to Hinjewadi, and pricing.',
+    summaryVerdict: 'Gera Isle Royale in Bavdhan appeals to south-west commuters, but Mahindra Rivenza provides significantly closer proximity to Hinjewadi IT Park and Baner High Street, paired with a massive 13.46-acre community and competitive ₹90L* launch pricing.',
+    prosMahindra: [
+      '8 to 10 mins commute to Hinjewadi IT Park vs 30+ mins from Bavdhan',
+      'Launch price advantage starting ₹90 Lakhs* with flexible payment plans',
+      'Modern biophilic architecture with Net Zero Waste practices',
+      'Direct access to upcoming Pune Metro Line 3 stations'
+    ],
+    prosCompetitor: [
+      'Scenic Bavdhan valley setting',
+      'Proximity to Kothrud and Paud Road'
+    ],
+    metrics: [
+      { feature: 'Hinjewadi Commute Time', mahindra: '8 - 10 Minutes Direct Access', competitor: '30 - 40 Minutes via NH-48 Bypass', winner: 'Mahindra' },
+      { feature: 'Entry Valuation', mahindra: 'From ₹90 Lakhs*', competitor: 'From ₹1.80 Cr+ (Premium Ticket)', winner: 'Mahindra' },
+      { feature: 'Transit Integration', mahindra: 'PMRDA DP Roads & Pune Metro Line 3', competitor: 'Bavdhan Ghat Highway Dependent', winner: 'Mahindra' }
+    ],
+    faqs: [
+      {
+        q: 'Which project offers better daily convenience for IT professionals?',
+        a: 'Mahindra Rivenza is considerably closer to Hinjewadi, saving IT professionals 40 to 50 minutes of round-trip traffic every single day.'
+      }
+    ]
   }
 ];
+
 

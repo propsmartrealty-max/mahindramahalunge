@@ -182,5 +182,86 @@ export const nriPortalsData: NriPortalItem[] = [
         a: 'Our NRI advisory team provides live 3D walkthroughs, video call site inspections, and quarterly drone updates.'
       }
     ]
+  },
+  {
+    slug: 'abu-dhabi-uae-investors',
+    countryOrRegion: 'United Arab Emirates (Abu Dhabi & Al Ain)',
+    currency: 'AED',
+    currencySymbol: 'AED',
+    startingPriceInCurrency: 'AED 398,000*',
+    h1: 'Mahindra Rivenza Pune: Property Investment for Abu Dhabi NRIs',
+    metaTitle: 'Abu Dhabi NRI Property Investment Pune | Mahindra Rivenza',
+    metaDescription: 'Invest in Mahindra Rivenza Pune from Abu Dhabi & UAE. Starting AED 398,000*, tax-free remittance, 13.46 acres biophilic master layout. MahaRERA registered.',
+    heroHighlight: 'AED 398,000* Starting Ticket | Direct NRE Remittance',
+    taxAndLegalAdvantage: '0% Capital Gains tax under UAE sovereign jurisdiction, with seamless FEMA-compliant repatriable profits.',
+    rentalYieldHighlight: 'Strong Hinjewadi IT Park rental demand generating ~5.2% annualized gross yield.',
+    repatriationOverview: 'Direct NRE transfers via First Abu Dhabi Bank (FAB), ADCB, and Emirates NBD.',
+    faqs: [
+      {
+        q: 'Can Abu Dhabi residents book a home online at Mahindra Rivenza?',
+        a: 'Yes, 100% digital onboarding with e-signature and secure payment gateway allows seamless home allocation from Abu Dhabi.'
+      }
+    ]
+  },
+  {
+    slug: 'usa-texas-tech-corridor',
+    countryOrRegion: 'United States (Texas - Austin, Dallas, Houston)',
+    currency: 'USD',
+    currencySymbol: '$',
+    startingPriceInCurrency: '$108,000*',
+    h1: 'Mahindra Rivenza Pune: Real Estate Investment for Texas Tech NRIs',
+    metaTitle: 'Texas NRIs Pune Real Estate Investment | Mahindra Rivenza',
+    metaDescription: 'Tech diaspora in Austin, Dallas & Houston investing in Mahindra Rivenza Pune. From $108,000*, 9+ acres biophilic greens, high tech rental yields.',
+    heroHighlight: 'Starting $108,000* | Tailored for Silicon Hills Indian Tech Diaspora',
+    taxAndLegalAdvantage: 'Eligible for US-India DTAA tax offset credits on Indian real estate investments.',
+    rentalYieldHighlight: '5.2% rental yield driven by multinational IT tenants in Hinjewadi Phase 1 & 2.',
+    repatriationOverview: 'Direct Wire transfers through Chase, Bank of America, and Wells Fargo into authorized Indian NRE accounts.',
+    faqs: [
+      {
+        q: 'Why are Texas tech NRIs investing heavily in West Pune?',
+        a: 'Pune is India’s fastest growing automotive and AI engineering hub; Mahindra Rivenza offers prime capital upside alongside trusted corporate governance.'
+      }
+    ]
+  },
+  {
+    slug: 'usa-east-coast-tri-state',
+    countryOrRegion: 'United States (New York, New Jersey & Connecticut Tri-State)',
+    currency: 'USD',
+    currencySymbol: '$',
+    startingPriceInCurrency: '$108,000*',
+    h1: 'Mahindra Rivenza Pune: Real Estate Investment for Tri-State NRIs',
+    metaTitle: 'Tri-State NY/NJ NRI Property Investment | Mahindra Rivenza Pune',
+    metaDescription: 'Invest in Mahindra Rivenza Pune from New York & New Jersey. $108,000* starting ticket, biophilic resort amenities, MahaRERA PR1261012602102.',
+    heroHighlight: 'Starting $108,000* | Trusted Mahindra Corporate Governance',
+    taxAndLegalAdvantage: 'Exemption under Indian Section 54/54F LTCG reinvestment provisions with clear title escrow.',
+    rentalYieldHighlight: 'High recurring rental demand and transparent NRI rental management support.',
+    repatriationOverview: 'Direct NRE/NRO wire transfers supported with dedicated NRI wealth managers.',
+    faqs: [
+      {
+        q: 'Can NRIs in New Jersey get a home loan in India for Mahindra Rivenza?',
+        a: 'Yes, leading Indian partner banks (HDFC, ICICI, SBI) offer up to 80% financing for US-based NRIs with streamlined documentation.'
+      }
+    ]
+  },
+  {
+    slug: 'kuwait-city-gulf-expats',
+    countryOrRegion: 'Kuwait (Kuwait City & Ahmadi)',
+    currency: 'KWD',
+    currencySymbol: 'KD',
+    startingPriceInCurrency: 'KD 33,500*',
+    h1: 'Mahindra Rivenza Pune: Property Investment for Kuwait NRIs',
+    metaTitle: 'Kuwait NRI Real Estate Investment Pune | Mahindra Rivenza',
+    metaDescription: 'Exclusive Pune real estate investment for Kuwait-based NRIs. KD 33,500* starting price, ~44,000 sq.ft dual clubhouse, MahaRERA approved.',
+    heroHighlight: 'KD 33,500* Starting Ticket | Prime West Pune Growth Corridor',
+    taxAndLegalAdvantage: 'High currency purchasing power allowing substantial savings and rapid equity build-up.',
+    rentalYieldHighlight: 'Consistent 5%+ rental yield in PMRDA’s premier smart township development.',
+    repatriationOverview: 'Direct remittances via National Bank of Kuwait (NBK) and Gulf Bank.',
+    faqs: [
+      {
+        q: 'What documents do Kuwait NRIs need to book a unit?',
+        a: 'Valid Indian Passport, Kuwait Civil ID copy, PAN card, and NRE/NRO bank account details are all that is required.'
+      }
+    ]
   }
 ];
+
