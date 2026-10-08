@@ -1,0 +1,229 @@
+---
+// OfficialAmenitiesGallery.astro - Official Interactive Amenities & Elevation Gallery
+// Replicated directly from https://www.mahindralifespaces.com/residential/pune-properties/mahindra-rivenza/#amenities
+---
+
+<div class="w-full glass-card rounded-2xl border border-white/10 p-6 lg:p-10 shadow-2xl relative overflow-hidden">
+  
+  <!-- Header with Dual Tabs: Amenities vs Elevation -->
+  <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-6 border-b border-white/10">
+    <div>
+      <span class="text-xs uppercase tracking-widest text-gold-400 font-bold flex items-center gap-1.5">
+        <span class="w-1.5 h-1.5 rounded-full bg-gold-400 animate-pulse"></span>
+        Official Gallery Showcase
+      </span>
+      <h3 class="font-serif text-3xl sm:text-4xl text-stone-100 font-bold mt-2">
+        Amenities &amp; Gallery
+      </h3>
+    </div>
+
+    <!-- Official Dual Tab Buttons -->
+    <div class="flex items-center space-x-2 bg-[#0e121a]/90 p-1.5 rounded-xl border border-white/10 backdrop-blur-md">
+      <button
+        id="tab-amenities-btn"
+        class="amenity-tab-btn px-4 sm:px-6 py-2 rounded-lg text-xs font-bold uppercase tracking-wider bg-gradient-to-r from-gold-400 via-gold-500 to-gold-400 text-charcoal-950 shadow-md transition-all whitespace-nowrap cursor-pointer"
+      >
+        Amenities
+      </button>
+      <button
+        id="tab-elevation-btn"
+        class="amenity-tab-btn px-4 sm:px-6 py-2 rounded-lg text-xs font-semibold uppercase tracking-wider text-stone-300 hover:text-white transition-all whitespace-nowrap cursor-pointer"
+      >
+        Elevation
+      </button>
+    </div>
+  </div>
+
+  <!-- VIEW 1: AMENITIES SHOWCASE -->
+  <div id="amenities-showcase-view" class="mt-8 space-y-6">
+    
+    <!-- Thumbnail Icon Selector Row (Scraped from amenitiesThumbsSwiper) -->
+    <div class="flex items-center gap-3 overflow-x-auto pb-2 scrollbar-none" id="amenity-thumbs-list">
+      <button
+        class="amenity-thumb-btn active flex items-center space-x-2.5 px-4 py-2.5 rounded-xl bg-charcoal-900 border border-gold-400/60 shadow-lg text-xs font-semibold text-gold-300 transition-all cursor-pointer whitespace-nowrap"
+        data-index="0"
+      >
+        <img src="https://cms.mahindralifespaces.com/web/sites/default/files/styles/web_thumb_webp/public/2026-02/Swimming%20pool_0.png" alt="Swimming pool" class="w-6 h-6 object-contain" />
+        <span>Swimming Pool</span>
+      </button>
+
+      <button
+        class="amenity-thumb-btn flex items-center space-x-2.5 px-4 py-2.5 rounded-xl bg-charcoal-950/70 border border-white/10 text-xs font-medium text-stone-300 hover:text-white hover:border-gold-400/40 transition-all cursor-pointer whitespace-nowrap"
+        data-index="1"
+      >
+        <img src="https://cms.mahindralifespaces.com/web/sites/default/files/styles/web_thumb_webp/public/2026-01/multipurpose-court.png" alt="Multipurpose Court" class="w-6 h-6 object-contain" />
+        <span>Multipurpose Court</span>
+      </button>
+
+      <button
+        class="amenity-thumb-btn flex items-center space-x-2.5 px-4 py-2.5 rounded-xl bg-charcoal-950/70 border border-white/10 text-xs font-medium text-stone-300 hover:text-white hover:border-gold-400/40 transition-all cursor-pointer whitespace-nowrap"
+        data-index="2"
+      >
+        <img src="https://cms.mahindralifespaces.com/web/sites/default/files/styles/web_thumb_webp/public/2026-06/yoga_room.png" alt="Yoga room" class="w-6 h-6 object-contain" />
+        <span>Yoga Lawn</span>
+      </button>
+
+      <button
+        class="amenity-thumb-btn flex items-center space-x-2.5 px-4 py-2.5 rounded-xl bg-charcoal-950/70 border border-white/10 text-xs font-medium text-stone-300 hover:text-white hover:border-gold-400/40 transition-all cursor-pointer whitespace-nowrap"
+        data-index="3"
+      >
+        <img src="https://cms.mahindralifespaces.com/web/sites/default/files/styles/web_thumb_webp/public/2026-03/Half-basketball-court.png" alt="Half-basketball-court" class="w-6 h-6 object-contain" />
+        <span>Futsal Court</span>
+      </button>
+    </div>
+
+    <!-- Active Amenity High-Res Showcase Card -->
+    <div class="relative rounded-2xl overflow-hidden border border-white/15 bg-charcoal-950 shadow-2xl group min-h-[360px] sm:min-h-[440px] flex items-end">
+      <img
+        id="amenity-display-img"
+        src="https://cms.mahindralifespaces.com/web/sites/default/files/styles/web_banner_webp/public/2026-10/Swimming%20pool%20with%20sunken%20bar_Rivenza_11zon.webp"
+        alt="Mahindra Rivenza Swimming Pool with Sunken Bar"
+        class="absolute inset-0 w-full h-full object-cover object-center filter brightness-[0.82] contrast-[1.08] saturate-[1.1] transition-transform duration-700 group-hover:scale-105"
+        loading="lazy"
+        width="1280"
+        height="720"
+      />
+      <!-- Vignette Overlay -->
+      <div class="absolute inset-0 bg-gradient-to-t from-[#0a0d14] via-[#0a0d14]/40 to-transparent"></div>
+      
+      <!-- Amenity Details Panel -->
+      <div class="relative z-10 p-6 sm:p-8 max-w-2xl space-y-2">
+        <span id="amenity-badge" class="px-3 py-1 rounded-full bg-gold-500/20 border border-gold-400/40 text-[10px] uppercase tracking-widest text-gold-300 font-bold inline-block">
+          Zone 01 • Aquatic Wellness
+        </span>
+        <h4 id="amenity-title" class="font-serif text-2xl sm:text-3xl font-bold text-white drop-shadow-md">
+          Swimming Pool with Sunken Aqua Bar
+        </h4>
+        <p id="amenity-desc" class="text-xs sm:text-sm text-stone-200 leading-relaxed font-light drop-shadow">
+          Resort-style temperature-regulated swimming pool featuring an integrated sunken aqua bar, dedicated kids' splash pool, and relaxing sun loungers facing the river.
+        </p>
+        <div class="pt-2 flex items-center space-x-4">
+          <button
+            type="button"
+            data-open-modal
+            data-interest="Lifestyle Amenities Tour & Cost Breakdown"
+            class="px-5 py-2.5 rounded-xl bg-gradient-to-r from-gold-400 via-gold-500 to-gold-400 text-charcoal-950 font-bold text-xs uppercase tracking-wider hover:shadow-lg hover:shadow-gold-500/25 transition-all"
+          >
+            Enquire For Amenities
+          </button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- VIEW 2: ELEVATION SHOWCASE (Official High-Res Architecture) -->
+  <div id="elevation-showcase-view" class="mt-8 hidden space-y-6">
+    <div class="relative rounded-2xl overflow-hidden border border-white/15 bg-charcoal-950 shadow-2xl group min-h-[380px] sm:min-h-[480px] flex items-end">
+      <img
+        src="https://cms.mahindralifespaces.com/web/sites/default/files/styles/web_banner_webp/public/2026-10/jpeg-optimizer_Elevation%20Opt%20A..webp"
+        alt="Mahindra Rivenza - High-Rise Tower Architecture Elevation"
+        class="absolute inset-0 w-full h-full object-cover object-center filter brightness-[0.85] contrast-[1.08] saturate-[1.1] transition-transform duration-700 group-hover:scale-105"
+        loading="lazy"
+        width="1920"
+        height="1080"
+      />
+      <div class="absolute inset-0 bg-gradient-to-t from-[#0a0d14] via-[#0a0d14]/30 to-transparent"></div>
+      <div class="relative z-10 p-6 sm:p-8 max-w-2xl space-y-2">
+        <span class="px-3 py-1 rounded-full bg-emerald-500/20 border border-emerald-400/40 text-[10px] uppercase tracking-widest text-emerald-300 font-bold inline-block">
+          Official Architectural Elevation
+        </span>
+        <h4 class="font-serif text-2xl sm:text-3xl font-bold text-white drop-shadow-md">
+          G+34 to G+37 Storey Iconic Skyline
+        </h4>
+        <p class="text-xs sm:text-sm text-stone-200 leading-relaxed font-light drop-shadow">
+          Iconic contemporary architecture engineered by Mahindra Lifespaces across 13.46 acres with staggered wind channels, deep shadow balconies, and climate-responsive living.
+        </p>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const tabAmenities = document.getElementById('tab-amenities-btn');
+    const tabElevation = document.getElementById('tab-elevation-btn');
+    const viewAmenities = document.getElementById('amenities-showcase-view');
+    const viewElevation = document.getElementById('elevation-showcase-view');
+
+    const amenityData = [
+      {
+        title: "Swimming Pool with Sunken Aqua Bar",
+        badge: "Zone 01 • Aquatic Wellness",
+        desc: "Resort-style temperature-regulated swimming pool featuring an integrated sunken aqua bar, dedicated kids' splash pool, and relaxing sun loungers facing the river.",
+        img: "https://cms.mahindralifespaces.com/web/sites/default/files/styles/web_banner_webp/public/2026-10/Swimming%20pool%20with%20sunken%20bar_Rivenza_11zon.webp"
+      },
+      {
+        title: "Multipurpose Sports Court",
+        badge: "Zone 02 • Championship Athletics",
+        desc: "All-weather cushioned synthetic arena configured for basketball, tennis, and volleyball with perimeter spectator seating and Olympic floodlights.",
+        img: "https://cms.mahindralifespaces.com/web/sites/default/files/styles/web_banner_webp/public/2026-10/Multi-purpose_Rivenza__11zon.webp"
+      },
+      {
+        title: "Yoga Lawn & Zen Meadows",
+        badge: "Zone 03 • Mindful Wellness",
+        desc: "Open-sky biophilic landscaped meditation lawn surrounded by indigenous aromatics, zen reflexology pathways, and sunrise pavilions.",
+        img: "https://cms.mahindralifespaces.com/web/sites/default/files/styles/web_banner_webp/public/2026-10/Yoga%20lawn_Rivenza_11zon.webp"
+      },
+      {
+        title: "Floodlit Futsal Arena",
+        badge: "Zone 04 • Fast-Paced Sports",
+        desc: "High-impact rebound fenced turf arena engineered with FIFA-standard artificial grass, automated LED towers, and box football specifications.",
+        img: "https://cms.mahindralifespaces.com/web/sites/default/files/styles/web_banner_webp/public/2026-10/image001_11zon%20%281%29.webp"
+      }
+    ];
+
+    // Toggle Main Tabs
+    if (tabAmenities && tabElevation && viewAmenities && viewElevation) {
+      tabAmenities.addEventListener('click', () => {
+        tabAmenities.className = 'amenity-tab-btn px-4 sm:px-6 py-2 rounded-lg text-xs font-bold uppercase tracking-wider bg-gradient-to-r from-gold-400 via-gold-500 to-gold-400 text-charcoal-950 shadow-md transition-all whitespace-nowrap cursor-pointer';
+        tabElevation.className = 'amenity-tab-btn px-4 sm:px-6 py-2 rounded-lg text-xs font-semibold uppercase tracking-wider text-stone-300 hover:text-white transition-all whitespace-nowrap cursor-pointer';
+        viewAmenities.classList.remove('hidden');
+        viewElevation.classList.add('hidden');
+      });
+
+      tabElevation.addEventListener('click', () => {
+        tabElevation.className = 'amenity-tab-btn px-4 sm:px-6 py-2 rounded-lg text-xs font-bold uppercase tracking-wider bg-gradient-to-r from-gold-400 via-gold-500 to-gold-400 text-charcoal-950 shadow-md transition-all whitespace-nowrap cursor-pointer';
+        tabAmenities.className = 'amenity-tab-btn px-4 sm:px-6 py-2 rounded-lg text-xs font-semibold uppercase tracking-wider text-stone-300 hover:text-white transition-all whitespace-nowrap cursor-pointer';
+        viewElevation.classList.remove('hidden');
+        viewAmenities.classList.add('hidden');
+      });
+    }
+
+    // Toggle Amenity Thumbs
+    const thumbs = document.querySelectorAll<HTMLElement>('.amenity-thumb-btn');
+    const displayImg = document.getElementById('amenity-display-img') as HTMLImageElement;
+    const displayTitle = document.getElementById('amenity-title');
+    const displayBadge = document.getElementById('amenity-badge');
+    const displayDesc = document.getElementById('amenity-desc');
+
+    thumbs.forEach(thumb => {
+      thumb.addEventListener('click', () => {
+        const idx = parseInt(thumb.getAttribute('data-index') || '0', 10);
+        const data = amenityData[idx];
+        if (!data) return;
+
+        thumbs.forEach((t, i) => {
+          if (i === idx) {
+            t.className = 'amenity-thumb-btn active flex items-center space-x-2.5 px-4 py-2.5 rounded-xl bg-charcoal-900 border border-gold-400/60 shadow-lg text-xs font-semibold text-gold-300 transition-all cursor-pointer whitespace-nowrap';
+          } else {
+            t.className = 'amenity-thumb-btn flex items-center space-x-2.5 px-4 py-2.5 rounded-xl bg-charcoal-950/70 border border-white/10 text-xs font-medium text-stone-300 hover:text-white hover:border-gold-400/40 transition-all cursor-pointer whitespace-nowrap';
+          }
+        });
+
+        if (displayImg) {
+          displayImg.style.opacity = '0';
+          setTimeout(() => {
+            displayImg.src = data.img;
+            displayImg.alt = `Mahindra Rivenza - ${data.title}`;
+            displayImg.style.opacity = '1';
+          }, 200);
+        }
+        if (displayTitle) displayTitle.textContent = data.title;
+        if (displayBadge) displayBadge.textContent = data.badge;
+        if (displayDesc) displayDesc.textContent = data.desc;
+      });
+    });
+  });
+</script>

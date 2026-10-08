@@ -1,5 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import HeroBanner from '../components/HeroBanner.astro';
+import OfficialAmenitiesGallery from '../components/OfficialAmenitiesGallery.astro';
 import ResidenceSelector from '../components/ResidenceSelector.astro';
 import MasterPlanViewer from '../components/MasterPlanViewer.astro';
 import RoiEmiCalculator from '../components/RoiEmiCalculator.astro';
@@ -109,146 +111,8 @@ const homepageSchema = {
   canonical="https://mahindralifespaceshomes.in/"
   customSchema={homepageSchema}
 >
-  <!-- 01 CINEMATIC HERO SECTION (Luminous & Vibrant) -->
-  <section class="relative min-h-screen flex items-center justify-center overflow-hidden pt-24 pb-20">
-    <!-- Cinematic Radiant Background with Multi-Layer Glow -->
-    <div class="absolute inset-0 z-0">
-      <picture>
-        <source media="(max-width: 640px)" srcset="https://cms.mahindralifespaces.com/web/sites/default/files/styles/web_card_webp/public/2026-10/jpeg-optimizer_Elevation%20Opt%20A..webp" width="640" height="480" />
-        <img
-          src="https://cms.mahindralifespaces.com/web/sites/default/files/styles/web_banner_webp/public/2026-10/jpeg-optimizer_Elevation%20Opt%20A..webp"
-          alt="Mahindra Rivenza - Mahindra Lifespaces Baner Annex Mahalunge Pune Architecture Elevation"
-          class="w-full h-full object-cover object-center filter brightness-[0.78] contrast-[1.08] saturate-[1.12] scale-105 transform animate-float-slow duration-1000"
-          width="1280"
-          height="720"
-          fetchpriority="high"
-          decoding="async"
-        />
-      </picture>
-      <!-- Radiant Gradient Overlays -->
-      <div class="absolute inset-0 bg-gradient-to-t from-[#0c1017] via-[#0c1017]/45 to-black/25"></div>
-      <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(212,175,102,0.14)_0%,transparent_75%)]"></div>
-    </div>
-
-    <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 text-center space-y-7">
-      <!-- Tagline & Brand Badge with Luminous Shimmer -->
-      <div class="reveal inline-flex items-center space-x-3 px-4 py-1.5 rounded-full bg-charcoal-900/80 border border-gold-400/40 backdrop-blur-xl shadow-[0_0_30px_rgba(212,175,102,0.25)]">
-        <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-ping"></span>
-        <span class="text-[11px] tracking-widest text-amber-100 uppercase font-semibold">
-          Mahindra Lifespaces • Officially Launched • Baner Annex, Mahalunge
-        </span>
-      </div>
-
-      <!-- Official Mahindra Rivenza Emblem Logo -->
-      <div class="reveal delay-100 flex justify-center py-1">
-        <div class="p-3.5 sm:p-5 rounded-2xl bg-charcoal-950/70 border border-gold-400/30 backdrop-blur-md shadow-[0_15px_40px_rgba(0,0,0,0.8)] inline-block">
-          <img
-            src="https://cms.mahindralifespaces.com/web/sites/default/files/styles/web_thumb_webp/public/2026-10/Mahindra%20Rivenza-01_new.png"
-            alt="Mahindra Rivenza - Baner Annex, Mahalunge, Pune Official Logo"
-            class="h-14 sm:h-20 lg:h-24 w-auto object-contain filter drop-shadow-[0_5px_15px_rgba(212,175,102,0.3)] hover:scale-105 transition-transform duration-500"
-            width="280"
-            height="96"
-            fetchpriority="high"
-          />
-        </div>
-      </div>
-
-      <!-- Main Headline (Optimized for Primary Search Queries) -->
-      <div class="space-y-2 reveal delay-150">
-        <h2 class="text-xs sm:text-sm font-sans tracking-widest uppercase text-gold-400 font-bold">
-          MAHINDRA RIVENZA • BANER ANNEX, MAHALUNGE, PUNE • MAHARERA PR1261012602102 & PM1261012602103
-        </h2>
-        <h1 class="font-serif text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white leading-tight drop-shadow-lg">
-          Resort Living Across 13.46 Acres
-          <span class="block text-xl sm:text-2xl lg:text-3xl font-serif text-stone-200 mt-2 font-normal">
-            Crafted by <span class="gold-gradient-text font-bold">Mahindra Lifespaces Developers Ltd.</span>
-          </span>
-        </h1>
-      </div>
-
-      <!-- Official Micro Attribute Quick Badges (Direct from Official Portal) -->
-      <div class="reveal delay-200 inline-flex flex-wrap items-center justify-center gap-3 sm:gap-6 px-6 py-2.5 rounded-full bg-charcoal-900/90 border border-gold-400/40 backdrop-blur-xl shadow-[0_10px_35px_rgba(0,0,0,0.6)]">
-        <div class="flex items-center space-x-2 text-stone-200 text-xs sm:text-sm font-medium">
-          <img src="https://cms.mahindralifespaces.com/web/sites/default/files/2026-01/projetct-page-pin.svg" alt="Location" class="w-4 h-4 filter brightness-0 invert opacity-90" width="16" height="16" />
-          <span>Baner Annex, Mahalunge, Pune</span>
-        </div>
-        <span class="text-gold-500/40 hidden sm:inline">•</span>
-        <div class="flex items-center space-x-2 text-gold-400 text-xs sm:text-sm font-semibold">
-          <img src="https://cms.mahindralifespaces.com/web/sites/default/files/2026-02/rs-icon.svg" alt="Price" class="w-4 h-4 filter brightness-0 invert opacity-90" width="16" height="16" />
-          <span>From ₹90 Lakhs*</span>
-        </div>
-        <span class="text-gold-500/40 hidden sm:inline">•</span>
-        <div class="flex items-center space-x-2 text-emerald-400 text-xs sm:text-sm font-semibold">
-          <img src="https://cms.mahindralifespaces.com/web/sites/default/files/2026-02/projetct-page-bhk.svg" alt="Typology" class="w-4 h-4 filter brightness-0 invert opacity-90" width="16" height="16" />
-          <span>2, 3 & 4 BHK Luxury</span>
-        </div>
-      </div>
-
-      <!-- Subtitle -->
-      <p class="reveal delay-250 text-sm sm:text-base text-stone-100/90 max-w-2xl mx-auto font-light leading-relaxed">
-        Officially launched across 13.46 acres in Baner Annex, Mahalunge, Pune. Phase 1 introduces 1,236 residences with 9+ acres of open greens, ~44,000+ sq.ft. clubhouse, Net Zero Waste to Landfill engineering, and pre-certified IGBC Gold rating starting from ₹90 Lakhs*.
-      </p>
-
-      <!-- Clean Minimal Action CTAs with Shimmer Animation -->
-      <div class="reveal delay-300 pt-1 flex flex-col sm:flex-row items-center justify-center gap-4">
-        <a
-          href="#pricing"
-          class="btn-shimmer w-full sm:w-auto px-8 py-3.5 rounded-full bg-gradient-to-r from-gold-300 via-gold-400 to-gold-500 text-charcoal-950 text-xs font-bold tracking-widest uppercase hover:shadow-xl hover:shadow-gold-500/35 transition-all active:scale-95"
-        >
-          Explore Pricing & Inventory
-        </a>
-        <button
-          type="button"
-          data-open-modal
-          data-interest="Official Launch Brochure & Cost Sheet"
-          class="btn-shimmer w-full sm:w-auto px-8 py-3.5 rounded-full border border-white/30 hover:border-gold-400 text-stone-100 hover:text-white text-xs font-semibold tracking-widest uppercase transition-all backdrop-blur-md hover:bg-white/10"
-        >
-          Download Master Brochure
-        </button>
-      </div>
-
-      <!-- Live Animated Numerical Stat Bar -->
-      <div class="reveal delay-350 pt-4 grid grid-cols-2 md:grid-cols-4 gap-3 max-w-3xl mx-auto">
-        <div class="glass-card p-3.5 rounded-xl border border-white/15 hover:border-gold-500/50 transition-all">
-          <div class="font-serif text-xl sm:text-2xl font-bold text-gold-400" data-counter="13.46" data-decimals="2" data-suffix=" ACRES">13.46 ACRES</div>
-          <div class="text-[10px] uppercase tracking-wider text-stone-300 mt-0.5">Master Land Parcel</div>
-        </div>
-        <div class="glass-card p-3.5 rounded-xl border border-white/15 hover:border-gold-500/50 transition-all">
-          <div class="font-serif text-xl sm:text-2xl font-bold text-white" data-counter="3500" data-prefix="₹" data-suffix=" CR">₹3,500 CR</div>
-          <div class="text-[10px] uppercase tracking-wider text-stone-300 mt-0.5">Development Potential</div>
-        </div>
-        <div class="glass-card p-3.5 rounded-xl border border-white/15 hover:border-gold-500/50 transition-all">
-          <div class="font-serif text-xl sm:text-2xl font-bold text-gold-400" data-counter="1236" data-suffix=" UNITS">1,236 UNITS</div>
-          <div class="text-[10px] uppercase tracking-wider text-stone-300 mt-0.5">Phase 1 Launch</div>
-        </div>
-        <div class="glass-card p-3.5 rounded-xl border border-white/15 hover:border-gold-500/50 transition-all">
-          <div class="font-serif text-xl sm:text-2xl font-bold text-emerald-400">FROM ₹90 LAKHS*</div>
-          <div class="text-[10px] uppercase tracking-wider text-stone-300 mt-0.5">2, 3 & 4 BHK Luxury</div>
-        </div>
-      </div>
-
-      <!-- Floating Site Visit Invitation Note -->
-      <div class="pt-2">
-        <button
-          data-open-modal
-          data-interest="4 BHK Show Residence Site Visit"
-          class="inline-flex items-center space-x-2 text-xs text-stone-300 hover:text-gold-300 transition-colors group cursor-pointer"
-        >
-          <span class="w-2 h-2 rounded-full bg-emerald-400 group-hover:scale-150 transition-transform shadow-[0_0_10px_#10b981]"></span>
-          <span class="border-b border-stone-500 group-hover:border-gold-300 pb-0.5">Book 4 BHK Show Residence Tour at On-Site Sales Gallery (Baner Annex)</span>
-          <span>→</span>
-        </button>
-      </div>
-    </div>
-
-    <!-- Scroll Down Indicator -->
-    <a href="#overview" class="absolute bottom-6 left-1/2 transform -translate-x-1/2 text-stone-300 hover:text-white transition-colors flex flex-col items-center space-y-1">
-      <span class="text-[10px] tracking-widest uppercase">Scroll</span>
-      <svg class="w-4 h-4 animate-bounce text-gold-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-      </svg>
-    </a>
-  </section>
+  <!-- 01 OFFICIAL CINEMATIC VIDEO & ANIMATION HERO BANNER -->
+  <HeroBanner />
 
   <!-- LUXURY INFINITE MARQUEE TICKER RIBBON -->
   <div class="py-3.5 bg-gradient-to-r from-charcoal-950 via-[#151c2a] to-charcoal-950 border-y border-gold-500/30 overflow-hidden relative shadow-lg">
@@ -779,6 +643,11 @@ const homepageSchema = {
         <p class="text-xs sm:text-sm text-stone-200 max-w-md leading-relaxed">
           Over 2.65 Lakh+ sq.ft. of amenity space engineered across 5 distinct lifestyle pillars with a ~44,000+ sq.ft. grand clubhouse, sunken bar pool, and athletic courts.
         </p>
+      </div>
+
+      <!-- Official Amenities & Gallery Tabbed Viewer (Direct from Mahindra Site) -->
+      <div class="reveal">
+        <OfficialAmenitiesGallery />
       </div>
 
       <!-- 5 Categories Grid with Staggered Hover & Scroll Reveal -->
