@@ -159,6 +159,15 @@ Disallow: /cdn-cgi/
 Host: https://mahindralifespaceshomes.in
 Sitemap: https://mahindralifespaceshomes.in/sitemap.xml
 Sitemap: https://mahindralifespaceshomes.in/sitemap-index.xml
+Sitemap: https://mahindralifespaceshomes.in/sitemap-main.xml
+Sitemap: https://mahindralifespaceshomes.in/sitemap-residences.xml
+Sitemap: https://mahindralifespaceshomes.in/sitemap-locations.xml
+Sitemap: https://mahindralifespaceshomes.in/sitemap-near.xml
+Sitemap: https://mahindralifespaceshomes.in/sitemap-connectivity.xml
+Sitemap: https://mahindralifespaceshomes.in/sitemap-compare.xml
+Sitemap: https://mahindralifespaceshomes.in/sitemap-projects.xml
+Sitemap: https://mahindralifespaceshomes.in/sitemap-articles.xml
+Sitemap: https://mahindralifespaceshomes.in/sitemap-images.xml
 Sitemap: https://mahindralifespaceshomes.in/google-shopping.xml
 # Syndication Feeds:
 # https://mahindralifespaceshomes.in/rss.xml

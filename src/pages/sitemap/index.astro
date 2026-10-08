@@ -1,0 +1,292 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { ALL_SITEMAP_ENTRIES, BASE_URL } from '../../utils/sitemapCatalog';
+
+const sitemapSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://mahindralifespaceshomes.in/sitemap/#webpage",
+      "url": "https://mahindralifespaceshomes.in/sitemap/",
+      "name": "Mahindra Rivenza Official HTML Sitemap & Architectural Directory",
+      "description": "Complete hierarchical index of all 107 residential typologies, master layout blueprints, location corridors, IT tech parks, and real estate articles for Mahindra Rivenza by Mahindra Lifespaces in Mahalunge, Baner Annex, Pune.",
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://mahindralifespaceshomes.in/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Sitemap",
+            "item": "https://mahindralifespaceshomes.in/sitemap/"
+          }
+        ]
+      }
+    }
+  ]
+};
+
+const subSitemaps = [
+  { name: 'Master Sitemap Index', path: '/sitemap.xml', desc: 'Google Pro XML Master Index' },
+  { name: 'Core Landing Hubs', path: '/sitemap-main.xml', desc: 'Pricing, Floor Plans, Master Plan & RERA' },
+  { name: 'Luxury Residences', path: '/sitemap-residences.xml', desc: '2, 3 & 4 BHK Typology Blueprints' },
+  { name: 'West Pune Localities', path: '/sitemap-locations.xml', desc: 'Mahalunge, Baner, Hinjewadi & Wakad' },
+  { name: 'IT Parks & Tech Hubs', path: '/sitemap-near.xml', desc: 'Infosys, Wipro, TCS & Embassy TechZone' },
+  { name: 'Transit & Infrastructure', path: '/sitemap-connectivity.xml', desc: 'Metro Line 3, PMRDA 36M & Ring Road' },
+  { name: 'Project Comparisons', path: '/sitemap-compare.xml', desc: 'vs Godrej, VTP, Kolte Patil & Lodha' },
+  { name: 'Mahindra Ecosystem', path: '/sitemap-projects.xml', desc: 'Mahindra Lifespaces Pune Portfolio' },
+  { name: 'Articles & Guides', path: '/sitemap-articles.xml', desc: 'Market Research & Investment Analyses' },
+  { name: 'Google Image Sitemap', path: '/sitemap-images.xml', desc: 'High-Res Elevation, CAD & Amenity Images' },
+];
+---
+
+<Layout
+  title="Mahindra Rivenza HTML Sitemap | Complete Directory & Blueprints"
+  description="Explore the complete hierarchical directory of all 107 pages at Mahindra Rivenza: 2, 3 & 4 BHK residences, 13.46-acre master layout, pricing, Pune tech parks, and research guides."
+  canonical="https://mahindralifespaceshomes.in/sitemap/"
+  customSchema={sitemapSchema}
+>
+  <!-- Hero Section -->
+  <section class="pt-32 pb-16 bg-charcoal-950 border-b border-white/10 relative overflow-hidden">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-5">
+      <div class="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full glass-pill text-gold-400 text-xs font-semibold uppercase tracking-widest">
+        <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+        <span>Google Pro Indexed Architecture • 107 Pages Verified</span>
+      </div>
+      <h1 class="font-serif text-3xl sm:text-5xl lg:text-6xl font-bold text-stone-100 max-w-4xl leading-tight">
+        Mahindra Rivenza <br />
+        <span class="gold-gradient-text">Complete Architectural &amp; Directory Sitemap</span>
+      </h1>
+      <p class="text-stone-300 text-sm sm:text-base max-w-2xl font-light leading-relaxed">
+        Browse the complete directory of Mahindra Rivenza by Mahindra Lifespaces across 13.46 prime acres in Baner Annex, Mahalunge, Pune. Filter across typologies, localities, and market research.
+      </p>
+
+      <!-- Instant Search Filter -->
+      <div class="pt-4 max-w-xl">
+        <div class="relative">
+          <input
+            type="text"
+            id="sitemap-search"
+            placeholder="Search pages by keyword (e.g., 3 BHK, Hinjewadi, Metro, Pricing, Godrej)..."
+            class="w-full px-5 py-3.5 pl-12 rounded-xl bg-charcoal-900/90 border border-gold-400/40 text-stone-100 placeholder-stone-400 text-xs sm:text-sm focus:outline-none focus:border-gold-300 backdrop-blur-md transition-all shadow-inner"
+          />
+          <svg class="w-5 h-5 text-gold-400 absolute left-4 top-1/2 transform -translate-y-1/2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- XML Sitemaps Developer & Crawler Center -->
+  <section class="py-12 bg-charcoal-900/60 border-b border-white/10">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
+      <div class="flex items-center justify-between">
+        <div>
+          <span class="text-[11px] uppercase tracking-widest text-gold-400 font-bold">Search Engine Indexation</span>
+          <h2 class="font-serif text-xl sm:text-2xl text-stone-100 font-bold mt-0.5">Google Pro XML Sitemap Feeds</h2>
+        </div>
+        <span class="hidden sm:inline-block px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-400 text-xs font-semibold border border-emerald-500/30">
+          W3C &amp; Google Schema 1.1 Compliant
+        </span>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3">
+        {subSitemaps.map((sm) => (
+          <a
+            href={sm.path}
+            target="_blank"
+            class="glass-card p-3.5 rounded-xl border border-white/10 hover:border-gold-400/50 transition-all group block"
+          >
+            <div class="flex items-center justify-between text-xs font-bold text-gold-400 group-hover:text-white transition-colors">
+              <span>{sm.name}</span>
+              <svg class="w-3.5 h-3.5 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+              </svg>
+            </div>
+            <p class="text-[10px] text-stone-400 mt-1 line-clamp-1">{sm.desc}</p>
+            <span class="text-[9px] text-stone-400 font-mono mt-1.5 block">{sm.path}</span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Filter Tabs -->
+  <section class="py-16 bg-[#0c1017]">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+      
+      <!-- Filter Button Tabs -->
+      <div class="flex items-center gap-2 overflow-x-auto pb-2 scrollbar-none" id="category-tabs">
+        <button class="cat-tab active px-4 py-2 rounded-lg text-xs font-bold uppercase tracking-wider bg-gradient-to-r from-gold-400 via-gold-500 to-gold-400 text-charcoal-950 shadow-md transition-all whitespace-nowrap cursor-pointer" data-cat="all">
+          All Directory ({ALL_SITEMAP_ENTRIES.length})
+        </button>
+        <button class="cat-tab px-4 py-2 rounded-lg text-xs font-semibold uppercase tracking-wider bg-charcoal-900 border border-white/10 text-stone-300 hover:text-white transition-all whitespace-nowrap cursor-pointer" data-cat="core">
+          Core Hubs (18)
+        </button>
+        <button class="cat-tab px-4 py-2 rounded-lg text-xs font-semibold uppercase tracking-wider bg-charcoal-900 border border-white/10 text-stone-300 hover:text-white transition-all whitespace-nowrap cursor-pointer" data-cat="residences">
+          Residences (14)
+        </button>
+        <button class="cat-tab px-4 py-2 rounded-lg text-xs font-semibold uppercase tracking-wider bg-charcoal-900 border border-white/10 text-stone-300 hover:text-white transition-all whitespace-nowrap cursor-pointer" data-cat="locations">
+          West Pune Localities (12)
+        </button>
+        <button class="cat-tab px-4 py-2 rounded-lg text-xs font-semibold uppercase tracking-wider bg-charcoal-900 border border-white/10 text-stone-300 hover:text-white transition-all whitespace-nowrap cursor-pointer" data-cat="techparks">
+          Tech Parks (16)
+        </button>
+        <button class="cat-tab px-4 py-2 rounded-lg text-xs font-semibold uppercase tracking-wider bg-charcoal-900 border border-white/10 text-stone-300 hover:text-white transition-all whitespace-nowrap cursor-pointer" data-cat="connectivity">
+          Transit Corridors (8)
+        </button>
+        <button class="cat-tab px-4 py-2 rounded-lg text-xs font-semibold uppercase tracking-wider bg-charcoal-900 border border-white/10 text-stone-300 hover:text-white transition-all whitespace-nowrap cursor-pointer" data-cat="comparisons">
+          Comparisons (14)
+        </button>
+        <button class="cat-tab px-4 py-2 rounded-lg text-xs font-semibold uppercase tracking-wider bg-charcoal-900 border border-white/10 text-stone-300 hover:text-white transition-all whitespace-nowrap cursor-pointer" data-cat="projects">
+          Brand Portfolio (9)
+        </button>
+        <button class="cat-tab px-4 py-2 rounded-lg text-xs font-semibold uppercase tracking-wider bg-charcoal-900 border border-white/10 text-stone-300 hover:text-white transition-all whitespace-nowrap cursor-pointer" data-cat="articles">
+          Articles &amp; Guides (16)
+        </button>
+      </div>
+
+      <!-- Live Search Result Count -->
+      <div class="flex items-center justify-between text-xs text-stone-400 border-b border-white/10 pb-3">
+        <span id="results-count">Showing all {ALL_SITEMAP_ENTRIES.length} pages</span>
+        <span class="text-gold-400 font-mono text-[11px]">Canonical Domain: {BASE_URL}</span>
+      </div>
+
+      <!-- Links Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4" id="sitemap-grid">
+        {ALL_SITEMAP_ENTRIES.map((entry) => {
+          const relativePath = entry.url.replace(BASE_URL, '') || '/';
+          return (
+            <a
+              href={relativePath}
+              class="sitemap-card glass-card p-4 rounded-xl border border-white/10 hover:border-gold-400/50 transition-all group flex flex-col justify-between"
+              data-category={entry.category}
+              data-title={entry.title.toLowerCase()}
+              data-path={relativePath.toLowerCase()}
+            >
+              <div>
+                <div class="flex items-center justify-between text-[10px] mb-2">
+                  <span class="uppercase tracking-wider font-semibold text-gold-400 bg-gold-500/10 px-2 py-0.5 rounded border border-gold-400/20">
+                    {entry.category}
+                  </span>
+                  <span class="text-stone-400 font-mono">
+                    Priority: {entry.priority.toFixed(2)}
+                  </span>
+                </div>
+                <h3 class="font-serif text-sm font-semibold text-stone-100 group-hover:text-gold-300 transition-colors line-clamp-2">
+                  {entry.title}
+                </h3>
+              </div>
+              <div class="mt-3 pt-2.5 border-t border-white/5 flex items-center justify-between text-[11px] text-stone-400">
+                <span class="font-mono text-[10px] truncate max-w-[200px]">{relativePath}</span>
+                <span class="text-gold-400 font-semibold group-hover:translate-x-1 transition-transform">→</span>
+              </div>
+            </a>
+          );
+        })}
+      </div>
+
+      <!-- No Results Feedback -->
+      <div id="no-results" class="hidden text-center py-16 space-y-3">
+        <div class="w-12 h-12 rounded-full bg-charcoal-900 border border-gold-400/30 flex items-center justify-center mx-auto text-gold-400">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+        </div>
+        <p class="text-stone-300 text-sm font-medium">No matching pages found for your search query.</p>
+        <button id="reset-search-btn" class="px-4 py-2 rounded-lg bg-gold-500/20 border border-gold-400/40 text-gold-300 text-xs font-semibold uppercase tracking-wider hover:bg-gold-500/30 transition-all cursor-pointer">
+          Reset Filter
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+</Layout>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const searchInput = document.getElementById('sitemap-search') as HTMLInputElement;
+    const catTabs = document.querySelectorAll<HTMLElement>('.cat-tab');
+    const cards = document.querySelectorAll<HTMLElement>('.sitemap-card');
+    const countLabel = document.getElementById('results-count');
+    const noResults = document.getElementById('no-results');
+    const resetBtn = document.getElementById('reset-search-btn');
+
+    let currentCat = 'all';
+    let searchQuery = '';
+
+    function filterCards() {
+      let visibleCount = 0;
+
+      cards.forEach((card) => {
+        const cat = card.getAttribute('data-category') || '';
+        const title = card.getAttribute('data-title') || '';
+        const path = card.getAttribute('data-path') || '';
+
+        const matchesCat = currentCat === 'all' || cat === currentCat;
+        const matchesSearch = !searchQuery || title.includes(searchQuery) || path.includes(searchQuery);
+
+        if (matchesCat && matchesSearch) {
+          card.classList.remove('hidden');
+          visibleCount++;
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+
+      if (countLabel) {
+        countLabel.textContent = `Showing ${visibleCount} of ${cards.length} pages`;
+      }
+
+      if (noResults) {
+        if (visibleCount === 0) {
+          noResults.classList.remove('hidden');
+        } else {
+          noResults.classList.add('hidden');
+        }
+      }
+    }
+
+    if (searchInput) {
+      searchInput.addEventListener('input', (e) => {
+        searchQuery = (e.target as HTMLInputElement).value.trim().toLowerCase();
+        filterCards();
+      });
+    }
+
+    catTabs.forEach((tab) => {
+      tab.addEventListener('click', () => {
+        catTabs.forEach((t) => {
+          t.className = 'cat-tab px-4 py-2 rounded-lg text-xs font-semibold uppercase tracking-wider bg-charcoal-900 border border-white/10 text-stone-300 hover:text-white transition-all whitespace-nowrap cursor-pointer';
+        });
+        tab.className = 'cat-tab active px-4 py-2 rounded-lg text-xs font-bold uppercase tracking-wider bg-gradient-to-r from-gold-400 via-gold-500 to-gold-400 text-charcoal-950 shadow-md transition-all whitespace-nowrap cursor-pointer';
+        currentCat = tab.getAttribute('data-cat') || 'all';
+        filterCards();
+      });
+    });
+
+    if (resetBtn) {
+      resetBtn.addEventListener('click', () => {
+        if (searchInput) searchInput.value = '';
+        searchQuery = '';
+        currentCat = 'all';
+        catTabs.forEach((t, i) => {
+          if (i === 0) {
+            t.className = 'cat-tab active px-4 py-2 rounded-lg text-xs font-bold uppercase tracking-wider bg-gradient-to-r from-gold-400 via-gold-500 to-gold-400 text-charcoal-950 shadow-md transition-all whitespace-nowrap cursor-pointer';
+          } else {
+            t.className = 'cat-tab px-4 py-2 rounded-lg text-xs font-semibold uppercase tracking-wider bg-charcoal-900 border border-white/10 text-stone-300 hover:text-white transition-all whitespace-nowrap cursor-pointer';
+          }
+        });
+        filterCards();
+      });
+    }
+  });
+</script>
