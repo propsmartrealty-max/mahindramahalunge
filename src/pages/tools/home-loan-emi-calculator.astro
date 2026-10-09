@@ -1,0 +1,257 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const toolSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebApplication",
+      "@id": "https://mahindralifespaceshomes.in/tools/home-loan-emi-calculator/#app",
+      "url": "https://mahindralifespaceshomes.in/tools/home-loan-emi-calculator/",
+      "name": "Pune Home Loan EMI & Eligibility Calculator 2026",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "All",
+      "description": "Simulate monthly EMIs, total interest payouts, and Section 24(b) / 80C tax deductions for flats at Mahindra Rivenza with live bank rate benchmarks."
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://mahindralifespaceshomes.in/tools/home-loan-emi-calculator/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Which banks have pre-approved home loans for Mahindra Rivenza?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Mahindra Rivenza is pre-approved by State Bank of India (SBI), HDFC Bank, ICICI Bank, Axis Bank, and Bank of Baroda, providing swift sanction within 48 to 72 hours."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much income tax can I save on a home loan in India?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Under Section 24(b), you can deduct up to ₹2,00,000 annually on home loan interest payments. Under Section 80C, you can claim up to ₹1,50,000 annually on principal repayment."
+          }
+        }
+      ]
+    }
+  ]
+};
+---
+
+<Layout
+  title="Home Loan EMI Calculator Pune | SBI, HDFC & ICICI Rates"
+  description="Calculate monthly home loan EMIs, interest payable & tax savings for Pune flats. Instant calculations with 8.35%* bank rates for Mahindra Rivenza Baner Annex."
+  canonical="https://mahindralifespaceshomes.in/tools/home-loan-emi-calculator/"
+  customSchema={toolSchema}
+>
+  <!-- Hero Section -->
+  <section class="pt-32 pb-16 bg-charcoal-950 border-b border-white/10 relative overflow-hidden">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4">
+      <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-gold-500/10 border border-gold-500/30 text-gold-400 text-xs font-semibold uppercase tracking-widest">
+        <span>Mortgage Analytics • 8.35%* Base Benchmarks</span>
+      </div>
+      
+      <h1 class="font-serif text-3xl sm:text-5xl font-bold text-white tracking-tight leading-tight">
+        Home Loan EMI &amp; <br />
+        <span class="gold-gradient-text">Tax Savings Calculator</span>
+      </h1>
+      
+      <p class="text-stone-300 text-sm sm:text-base max-w-2xl leading-relaxed">
+        Simulate your monthly outflow, total loan interest, and annual income tax deductions for 2, 3 &amp; 4 BHK residences at Mahindra Rivenza Baner Annex.
+      </p>
+    </div>
+  </section>
+
+  <!-- Interactive Calculator Body -->
+  <section class="py-16 bg-[#0c1017]">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+      
+      <div class="bg-charcoal-900/90 border border-white/10 rounded-2xl p-6 sm:p-10 shadow-2xl backdrop-blur-md">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+          
+          <!-- Inputs Column (7 Cols) -->
+          <div class="lg:col-span-7 space-y-6">
+            
+            <!-- Loan Amount Slider -->
+            <div class="space-y-3">
+              <div class="flex justify-between items-center text-sm">
+                <label for="loan-amount" class="text-stone-200 font-medium">Loan Amount (Principal)</label>
+                <span id="loan-display" class="font-mono font-bold text-lg text-gold-300">₹ 72,00,000</span>
+              </div>
+              <input
+                type="range"
+                id="loan-amount"
+                min="3000000"
+                max="25000000"
+                step="200000"
+                value="7200000"
+                class="w-full h-2.5 bg-charcoal-950 rounded-lg appearance-none cursor-pointer accent-gold-400"
+              />
+              <div class="flex justify-between text-[11px] text-stone-500 font-mono">
+                <span>₹30 Lakhs</span>
+                <span>₹1.2 Crores</span>
+                <span>₹2.5 Crores</span>
+              </div>
+            </div>
+
+            <!-- Interest Rate Slider -->
+            <div class="space-y-3">
+              <div class="flex justify-between items-center text-sm">
+                <label for="interest-rate" class="text-stone-200 font-medium">Interest Rate (% p.a.)</label>
+                <span id="rate-display" class="font-mono font-bold text-lg text-gold-300">8.35%</span>
+              </div>
+              <input
+                type="range"
+                id="interest-rate"
+                min="7.5"
+                max="11.0"
+                step="0.05"
+                value="8.35"
+                class="w-full h-2.5 bg-charcoal-950 rounded-lg appearance-none cursor-pointer accent-gold-400"
+              />
+              <div class="flex justify-between text-[11px] text-stone-500 font-mono">
+                <span>7.50% (Subsidized)</span>
+                <span>8.35% (SBI/HDFC Standard)</span>
+                <span>11.00%</span>
+              </div>
+            </div>
+
+            <!-- Tenure Slider -->
+            <div class="space-y-3">
+              <div class="flex justify-between items-center text-sm">
+                <label for="loan-tenure" class="text-stone-200 font-medium">Loan Tenure (Years)</label>
+                <span id="tenure-display" class="font-mono font-bold text-lg text-gold-300">20 Years</span>
+              </div>
+              <input
+                type="range"
+                id="loan-tenure"
+                min="5"
+                max="30"
+                step="1"
+                value="20"
+                class="w-full h-2.5 bg-charcoal-950 rounded-lg appearance-none cursor-pointer accent-gold-400"
+              />
+              <div class="flex justify-between text-[11px] text-stone-500 font-mono">
+                <span>5 Years</span>
+                <span>20 Years (Standard)</span>
+                <span>30 Years</span>
+              </div>
+            </div>
+
+            <!-- Pre-Approved Banks Banner -->
+            <div class="p-4 rounded-xl bg-charcoal-950 border border-white/10 space-y-2">
+              <span class="text-xs font-mono uppercase tracking-wider text-stone-400 font-bold block">Pre-Approved Banking Consortia</span>
+              <div class="flex flex-wrap gap-2 text-xs text-stone-200">
+                <span class="px-2.5 py-1 rounded bg-white/5 border border-white/10 font-semibold">State Bank of India</span>
+                <span class="px-2.5 py-1 rounded bg-white/5 border border-white/10 font-semibold">HDFC Bank</span>
+                <span class="px-2.5 py-1 rounded bg-white/5 border border-white/10 font-semibold">ICICI Bank</span>
+                <span class="px-2.5 py-1 rounded bg-white/5 border border-white/10 font-semibold">Axis Bank</span>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Outputs Column (5 Cols) -->
+          <div class="lg:col-span-5 bg-charcoal-950 border border-gold-500/30 rounded-2xl p-6 space-y-5 shadow-inner">
+            
+            <div>
+              <span class="text-[11px] font-mono uppercase text-stone-400 tracking-wider">Estimated Monthly EMI</span>
+              <div id="monthly-emi" class="font-serif text-3xl sm:text-4xl font-bold text-gold-300 mt-0.5">₹ 61,842</div>
+              <span class="text-xs text-stone-400">Fixed monthly installment</span>
+            </div>
+
+            <div class="space-y-2.5 pt-4 border-t border-white/10 text-xs">
+              <div class="flex justify-between text-stone-300">
+                <span>Principal Amount:</span>
+                <span id="out-principal" class="font-mono font-bold text-white">₹ 72,00,000</span>
+              </div>
+              <div class="flex justify-between text-stone-300">
+                <span>Total Interest Payable:</span>
+                <span id="out-interest" class="font-mono font-bold text-gold-400">₹ 76,42,080</span>
+              </div>
+              <div class="flex justify-between text-stone-300">
+                <span>Total Payment (P + I):</span>
+                <span id="out-total" class="font-mono font-bold text-white">₹ 1,48,42,080</span>
+              </div>
+            </div>
+
+            <div class="p-3.5 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-xs text-emerald-300 space-y-1">
+              <span class="font-bold font-mono uppercase tracking-wider block">Income Tax Relief Potential</span>
+              <p>• Save up to <strong>₹2,00,000/yr</strong> under Section 24(b)</p>
+              <p>• Save up to <strong>₹1,50,000/yr</strong> under Section 80C</p>
+            </div>
+
+            <div class="pt-2">
+              <a
+                href="tel:+917744009295"
+                class="w-full py-3 rounded-lg bg-gold-500 hover:bg-gold-400 text-charcoal-950 font-bold text-xs uppercase tracking-wider text-center block transition-colors"
+              >
+                Apply for Pre-Approved Loan
+              </a>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Client-Side EMI Script -->
+  <script is:inline>
+    const loanSlider = document.getElementById('loan-amount');
+    const rateSlider = document.getElementById('interest-rate');
+    const tenureSlider = document.getElementById('loan-tenure');
+
+    const loanDisplay = document.getElementById('loan-display');
+    const rateDisplay = document.getElementById('rate-display');
+    const tenureDisplay = document.getElementById('tenure-display');
+
+    const emiEl = document.getElementById('monthly-emi');
+    const outPrincipalEl = document.getElementById('out-principal');
+    const outInterestEl = document.getElementById('out-interest');
+    const outTotalEl = document.getElementById('out-total');
+
+    function formatINR(val) {
+      return '₹ ' + Math.round(val).toLocaleString('en-IN');
+    }
+
+    function calculateEMI() {
+      const p = parseFloat(loanSlider.value) || 0;
+      const annualRate = parseFloat(rateSlider.value) || 0;
+      const years = parseFloat(tenureSlider.value) || 0;
+
+      loanDisplay.textContent = formatINR(p);
+      rateDisplay.textContent = annualRate.toFixed(2) + '%';
+      tenureDisplay.textContent = years + ' Years';
+
+      const r = (annualRate / 12) / 100;
+      const n = years * 12;
+
+      let emi = 0;
+      if (r > 0) {
+        emi = (p * r * Math.pow(1 + r, n)) / (Math.pow(1 + r, n) - 1);
+      } else {
+        emi = p / n;
+      }
+
+      const totalPayment = emi * n;
+      const totalInterest = totalPayment - p;
+
+      emiEl.textContent = formatINR(emi);
+      outPrincipalEl.textContent = formatINR(p);
+      outInterestEl.textContent = formatINR(totalInterest);
+      outTotalEl.textContent = formatINR(totalPayment);
+    }
+
+    loanSlider.addEventListener('input', calculateEMI);
+    rateSlider.addEventListener('input', calculateEMI);
+    tenureSlider.addEventListener('input', calculateEMI);
+
+    calculateEMI();
+  </script>
+</Layout>

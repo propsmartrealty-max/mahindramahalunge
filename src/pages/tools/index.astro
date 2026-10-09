@@ -1,0 +1,153 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const toolsSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "CollectionPage",
+      "@id": "https://mahindralifespaceshomes.in/tools/#webpage",
+      "url": "https://mahindralifespaceshomes.in/tools/",
+      "name": "Pune Real Estate Financial Calculators & Decision Tools | Mahindra Rivenza",
+      "description": "Suite of financial calculators for Pune real estate buyers. Calculate Pune stamp duty, home loan EMIs, Hinjewadi rental yields, and capital gains tax savings.",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Mahindra Rivenza",
+        "url": "https://mahindralifespaceshomes.in/"
+      }
+    }
+  ]
+};
+
+const toolsList = [
+  {
+    title: "Pune Stamp Duty & Registration Calculator 2026",
+    slug: "pune-stamp-duty-calculator",
+    badge: "Official 7% Levies",
+    description: "Calculate exact Pune & PMRDA property registration costs: 5% Stamp Duty + 1% Metro Cess + 1% Local Body Tax + ₹30,000 Registration Fee with one-click presets for Mahindra Rivenza.",
+    cta: "Calculate Stamp Duty",
+    icon: "M9 14l6-6m-5.5.5h.01m4.99 5h.01M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16l3.5-2 3.5 2 3.5-2 3.5 2z"
+  },
+  {
+    title: "Home Loan EMI & Eligibility Calculator",
+    slug: "home-loan-emi-calculator",
+    badge: "Pre-Approved 8.35%*",
+    description: "Simulate monthly EMIs, total interest payouts, and income tax deductions under Section 24(b) and 80C. Pre-approved by SBI, HDFC, ICICI, and Axis Bank.",
+    cta: "Calculate Home Loan EMI",
+    icon: "M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+  },
+  {
+    title: "Hinjewadi IT Rental Yield & Cashflow Estimator",
+    slug: "hinjewadi-rental-yield-calculator",
+    badge: "IT Tenant Analytics",
+    description: "Evaluate gross and net rental yields, tenant turnover rates, and projected 5-year capital appreciation in Mahalunge (Baner Annex) vs Hinjewadi Phase 1, 2 & 3.",
+    cta: "Estimate Rental Yield",
+    icon: "M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"
+  },
+  {
+    title: "Section 54 Capital Gains Tax Reinvestment Saver",
+    slug: "capital-gains-tax-calculator",
+    badge: "Tax Exemption Guide",
+    description: "Calculate your 12.5% Long-Term Capital Gains tax liability and learn how to legally eliminate it by reinvesting proceeds into under-construction residences at Mahindra Rivenza.",
+    cta: "Calculate Tax Exemption",
+    icon: "M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
+  }
+];
+---
+
+<Layout
+  title="Real Estate Calculators Pune | Stamp Duty, EMI & Yield Tools"
+  description="Free financial decision tools for Pune real estate buyers. Calculate 7% stamp duty, monthly home loan EMIs, Hinjewadi rental yields, and capital gains exemptions."
+  canonical="https://mahindralifespaceshomes.in/tools/"
+  customSchema={toolsSchema}
+>
+  <!-- Hero Section -->
+  <section class="pt-32 pb-16 bg-charcoal-950 border-b border-white/10 relative overflow-hidden">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-5">
+      <div class="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-gold-500/10 border border-gold-500/30 text-gold-400 text-xs font-semibold uppercase tracking-widest">
+        <span class="w-2 h-2 rounded-full bg-gold-400 animate-pulse"></span>
+        <span>Financial Intelligence Tools • Instant Calculations</span>
+      </div>
+      
+      <h1 class="font-serif text-3xl sm:text-5xl lg:text-6xl font-bold text-white tracking-tight leading-tight">
+        Pune Real Estate <br />
+        <span class="gold-gradient-text">Financial Decision Calculators</span>
+      </h1>
+      
+      <p class="text-stone-300 text-base sm:text-lg max-w-3xl leading-relaxed">
+        Make data-driven property investments with our certified calculators tailored to Pune municipal taxes, PMRDA town planning regulations, and Mahindra Rivenza Baner Annex pricing benchmarks.
+      </p>
+    </div>
+  </section>
+
+  <!-- Tools Grid -->
+  <section class="py-16 bg-[#0c1017]">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        {toolsList.map((tool) => (
+          <div class="bg-charcoal-900/80 border border-white/10 hover:border-gold-400/50 rounded-2xl p-8 backdrop-blur-sm transition-all duration-300 flex flex-col justify-between group shadow-xl">
+            <div class="space-y-4">
+              <div class="flex items-center justify-between">
+                <span class="px-3 py-1 rounded-full bg-gold-500/10 border border-gold-500/30 text-gold-300 text-xs font-bold font-mono uppercase tracking-wider">
+                  {tool.badge}
+                </span>
+                <div class="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-gold-400 group-hover:bg-gold-500 group-hover:text-charcoal-950 transition-colors">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d={tool.icon} />
+                  </svg>
+                </div>
+              </div>
+
+              <h2 class="font-serif text-2xl font-bold text-white group-hover:text-gold-200 transition-colors">
+                {tool.title}
+              </h2>
+
+              <p class="text-stone-300 text-sm leading-relaxed">
+                {tool.description}
+              </p>
+            </div>
+
+            <div class="pt-6 mt-6 border-t border-white/10 flex items-center justify-between">
+              <a
+                href={`/tools/${tool.slug}/`}
+                class="inline-flex items-center space-x-2 text-sm font-bold text-gold-400 hover:text-gold-300 transition-colors group-hover:translate-x-1 duration-200"
+              >
+                <span>{tool.cta}</span>
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <!-- Advisory Banner -->
+      <div class="bg-gradient-to-r from-charcoal-950 via-charcoal-900 to-charcoal-950 border border-gold-500/30 rounded-2xl p-8 sm:p-10 shadow-2xl flex flex-col md:flex-row items-center justify-between gap-6">
+        <div class="space-y-2 text-center md:text-left">
+          <span class="text-xs font-mono uppercase text-gold-400 tracking-widest font-bold">Official Developer Assistance</span>
+          <h3 class="font-serif text-2xl sm:text-3xl font-bold text-white">Need a Tailored Cost Sheet for Mahindra Rivenza?</h3>
+          <p class="text-stone-300 text-sm max-w-xl leading-relaxed">
+            Our finance advisory desk provides custom bank-approved payment plans, down-payment milestones, and tax exemption certificates.
+          </p>
+        </div>
+        <div class="flex flex-col sm:flex-row gap-3">
+          <a
+            href="tel:+917744009295"
+            class="px-6 py-3.5 rounded-lg bg-gold-500 hover:bg-gold-400 text-charcoal-950 font-bold text-sm transition-all shadow-lg text-center"
+          >
+            Call Advisory: +91 7744009295
+          </a>
+          <a
+            href="/pricing/"
+            class="px-6 py-3.5 rounded-lg bg-white/10 hover:bg-white/15 border border-white/20 text-white font-medium text-sm transition-all text-center"
+          >
+            Check Residence Pricing
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</Layout>

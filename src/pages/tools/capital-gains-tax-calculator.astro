@@ -1,0 +1,223 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const toolSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebApplication",
+      "@id": "https://mahindralifespaceshomes.in/tools/capital-gains-tax-calculator/#app",
+      "url": "https://mahindralifespaceshomes.in/tools/capital-gains-tax-calculator/",
+      "name": "Section 54 Capital Gains Tax Exemption Calculator 2026",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "All",
+      "description": "Calculate 12.5% Long-Term Capital Gains tax liability and legal exemption under Section 54/54F by reinvesting into Mahindra Rivenza Pune."
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://mahindralifespaceshomes.in/tools/capital-gains-tax-calculator/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How does Section 54 save capital gains tax on property sales?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Under Section 54 of the Income Tax Act, if you realize Long-Term Capital Gains from selling a residential property, you can claim 100% tax exemption by reinvesting the capital gain into another residential house property in India within 3 years for under-construction homes."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the new LTCG tax rate for real estate in India?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Under the Finance Act 2024, Long-Term Capital Gains on real estate held for more than 24 months are taxed at a flat rate of 12.5% without indexation (or 20% with indexation for properties acquired before July 23, 2024 under grandfathering provisions)."
+          }
+        }
+      ]
+    }
+  ]
+};
+---
+
+<Layout
+  title="Capital Gains Tax Calculator Pune | Section 54 Exemption"
+  description="Calculate your 12.5% LTCG tax and save 100% tax under Section 54/54F by reinvesting into residential property at Mahindra Rivenza Baner Annex Pune."
+  canonical="https://mahindralifespaceshomes.in/tools/capital-gains-tax-calculator/"
+  customSchema={toolSchema}
+>
+  <!-- Hero Section -->
+  <section class="pt-32 pb-16 bg-charcoal-950 border-b border-white/10 relative overflow-hidden">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4">
+      <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-gold-500/10 border border-gold-500/30 text-gold-400 text-xs font-semibold uppercase tracking-widest">
+        <span>Tax Optimization Engine • Section 54 &amp; 54F</span>
+      </div>
+      
+      <h1 class="font-serif text-3xl sm:text-5xl font-bold text-white tracking-tight leading-tight">
+        Section 54 Capital Gains <br />
+        <span class="gold-gradient-text">Tax Saver Calculator</span>
+      </h1>
+      
+      <p class="text-stone-300 text-sm sm:text-base max-w-2xl leading-relaxed">
+        Calculate your statutory LTCG tax liability and legally eliminate taxes by reinvesting asset sale proceeds into under-construction residences at Mahindra Rivenza Baner Annex.
+      </p>
+    </div>
+  </section>
+
+  <!-- Interactive Calculator Body -->
+  <section class="py-16 bg-[#0c1017]">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+      
+      <div class="bg-charcoal-900/90 border border-white/10 rounded-2xl p-6 sm:p-10 shadow-2xl backdrop-blur-md">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+          
+          <!-- Inputs Column (7 Cols) -->
+          <div class="lg:col-span-7 space-y-6">
+            
+            <!-- Sale Value Slider -->
+            <div class="space-y-3">
+              <div class="flex justify-between items-center text-sm">
+                <label for="sale-val" class="text-stone-200 font-medium">Sale Consideration (Total Selling Price)</label>
+                <span id="sale-display" class="font-mono font-bold text-lg text-gold-300">₹ 1,50,00,000</span>
+              </div>
+              <input
+                type="range"
+                id="sale-val"
+                min="5000000"
+                max="40000000"
+                step="500000"
+                value="15000000"
+                class="w-full h-2.5 bg-charcoal-950 rounded-lg appearance-none cursor-pointer accent-gold-400"
+              />
+              <div class="flex justify-between text-[11px] text-stone-500 font-mono">
+                <span>₹50 Lakhs</span>
+                <span>₹2.0 Crores</span>
+                <span>₹4.0 Crores</span>
+              </div>
+            </div>
+
+            <!-- Cost of Acquisition Slider -->
+            <div class="space-y-3">
+              <div class="flex justify-between items-center text-sm">
+                <label for="cost-val" class="text-stone-200 font-medium">Cost of Acquisition (Original Purchase Price)</label>
+                <span id="cost-display" class="font-mono font-bold text-lg text-stone-300">₹ 60,00,000</span>
+              </div>
+              <input
+                type="range"
+                id="cost-val"
+                min="2000000"
+                max="25000000"
+                step="500000"
+                value="6000000"
+                class="w-full h-2.5 bg-charcoal-950 rounded-lg appearance-none cursor-pointer accent-gold-400"
+              />
+              <div class="flex justify-between text-[11px] text-stone-500 font-mono">
+                <span>₹20 Lakhs</span>
+                <span>₹1.2 Crores</span>
+                <span>₹2.5 Crores</span>
+              </div>
+            </div>
+
+            <!-- Tax Rate Benchmark Note -->
+            <div class="p-4 rounded-xl bg-charcoal-950 border border-white/10 text-xs text-stone-300 space-y-1.5">
+              <span class="font-bold text-gold-400 font-mono uppercase tracking-wider block">Statutory Rules (Finance Act 2024)</span>
+              <p>• <strong>12.5%</strong> Flat LTCG tax rate (plus applicable surcharge &amp; 4% cess)</p>
+              <p>• <strong>3 Years Window:</strong> Reinvest in an under-construction project like Mahindra Rivenza</p>
+              <p>• <strong>CGAS Deposit:</strong> Unutilized funds can be deposited into a Capital Gains Account Scheme before filing your ITR</p>
+            </div>
+
+          </div>
+
+          <!-- Outputs Column (5 Cols) -->
+          <div class="lg:col-span-5 bg-charcoal-950 border border-gold-500/30 rounded-2xl p-6 space-y-5 shadow-inner">
+            
+            <div>
+              <span class="text-[11px] font-mono uppercase text-stone-400 tracking-wider">Gross Capital Gains</span>
+              <div id="net-gains" class="font-serif text-3xl font-bold text-white mt-0.5">₹ 90,00,000</div>
+              <span class="text-xs text-stone-400">Taxable amount before Section 54 exemption</span>
+            </div>
+
+            <div class="space-y-2.5 pt-4 border-t border-white/10 text-xs">
+              <div class="flex justify-between text-stone-300">
+                <span>Potential 12.5% Tax Liability:</span>
+                <span id="tax-liability" class="font-mono font-bold text-rose-400">₹ 11,25,000</span>
+              </div>
+              <div class="flex justify-between text-stone-300">
+                <span>Section 54 Tax Saved:</span>
+                <span id="tax-saved" class="font-mono font-bold text-emerald-400">₹ 11,25,000</span>
+              </div>
+              <div class="flex justify-between text-stone-300">
+                <span>Net Tax Payable with Rivenza:</span>
+                <span class="font-mono font-bold text-emerald-400">₹ 0 (100% Exempt)</span>
+              </div>
+            </div>
+
+            <div class="p-3.5 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-xs text-emerald-300 space-y-1">
+              <span class="font-bold font-mono uppercase tracking-wider block">Complete Exemption Reinvestment Target</span>
+              <p>Reinvest <strong id="reinvest-target" class="text-white font-mono">₹ 90,00,000</strong> into a new home at Mahindra Rivenza to pay ZERO capital gains tax.</p>
+            </div>
+
+            <div class="pt-2">
+              <a
+                href="tel:+917744009295"
+                class="w-full py-3 rounded-lg bg-gold-500 hover:bg-gold-400 text-charcoal-950 font-bold text-xs uppercase tracking-wider text-center block transition-colors"
+              >
+                Book Section 54 Consultation
+              </a>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Client-Side Script -->
+  <script is:inline>
+    const saleSlider = document.getElementById('sale-val');
+    const costSlider = document.getElementById('cost-val');
+
+    const saleDisplay = document.getElementById('sale-display');
+    const costDisplay = document.getElementById('cost-display');
+
+    const netGainsEl = document.getElementById('net-gains');
+    const taxLiabilityEl = document.getElementById('tax-liability');
+    const taxSavedEl = document.getElementById('tax-saved');
+    const reinvestTargetEl = document.getElementById('reinvest-target');
+
+    function formatINR(val) {
+      return '₹ ' + Math.round(val).toLocaleString('en-IN');
+    }
+
+    function calculateGains() {
+      const sale = parseFloat(saleSlider.value) || 0;
+      let cost = parseFloat(costSlider.value) || 0;
+
+      if (cost > sale) {
+        cost = sale;
+        costSlider.value = cost;
+      }
+
+      saleDisplay.textContent = formatINR(sale);
+      costDisplay.textContent = formatINR(cost);
+
+      const netGains = Math.max(0, sale - cost);
+      // 12.5% LTCG + 4% Health & Education cess = 13.0% effective
+      const taxRate = 0.125;
+      const taxLiability = netGains * taxRate;
+
+      netGainsEl.textContent = formatINR(netGains);
+      taxLiabilityEl.textContent = formatINR(taxLiability);
+      taxSavedEl.textContent = formatINR(taxLiability);
+      reinvestTargetEl.textContent = formatINR(netGains);
+    }
+
+    saleSlider.addEventListener('input', calculateGains);
+    costSlider.addEventListener('input', calculateGains);
+
+    calculateGains();
+  </script>
+</Layout>

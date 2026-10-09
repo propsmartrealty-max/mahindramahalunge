@@ -1,0 +1,277 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const toolSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebApplication",
+      "@id": "https://mahindralifespaceshomes.in/tools/pune-stamp-duty-calculator/#app",
+      "url": "https://mahindralifespaceshomes.in/tools/pune-stamp-duty-calculator/",
+      "name": "Pune Stamp Duty & Registration Fee Calculator 2026",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "All",
+      "description": "Calculate exact Pune & PMRDA property stamp duty (5%), Metro Cess (1%), Local Body Tax (1%), and registration fees for apartments in Pune."
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://mahindralifespaceshomes.in/tools/pune-stamp-duty-calculator/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is the total stamp duty and registration fee rate in Pune in 2026?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The total government levy in Pune is 7% of the agreement value (5% Stamp Duty + 1% Pune Metro Cess + 1% Local Body Tax / PMRDA Surcharge) plus a fixed registration fee of ₹30,000 for properties valued above ₹30 Lakhs."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is there a stamp duty concession for female homebuyers in Maharashtra?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Maharashtra offers a 1% concession on stamp duty when a residential property is registered exclusively in the name of a female homebuyer, reducing the stamp duty component from 5% to 4% (effective total 6% + registration fee)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much stamp duty is payable on a ₹90 Lakh flat at Mahindra Rivenza?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "For a ₹90,00,000 property: 7% government levies amount to ₹6,30,000 (Stamp Duty ₹4,50,000 + Metro Cess ₹90,000 + LBT ₹90,000) plus ₹30,000 registration fee, totaling ₹6,60,000."
+          }
+        }
+      ]
+    }
+  ]
+};
+---
+
+<Layout
+  title="Pune Stamp Duty Calculator 2026 | 7% Levies & Registration"
+  description="Calculate exact Pune & PMRDA stamp duty (5%), Metro Cess (1%), LBT (1%) & registration charges. Instant calculations for 2, 3 & 4 BHK flats at Mahindra Rivenza."
+  canonical="https://mahindralifespaceshomes.in/tools/pune-stamp-duty-calculator/"
+  customSchema={toolSchema}
+>
+  <!-- Hero Section -->
+  <section class="pt-32 pb-16 bg-charcoal-950 border-b border-white/10 relative overflow-hidden">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4">
+      <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-gold-500/10 border border-gold-500/30 text-gold-400 text-xs font-semibold uppercase tracking-widest">
+        <span>Government Levy Engine • 2026 Updated</span>
+      </div>
+      
+      <h1 class="font-serif text-3xl sm:text-5xl font-bold text-white tracking-tight leading-tight">
+        Pune Stamp Duty &amp; <br />
+        <span class="gold-gradient-text">Registration Fee Calculator 2026</span>
+      </h1>
+      
+      <p class="text-stone-300 text-sm sm:text-base max-w-2xl leading-relaxed">
+        Accurately compute the 7% statutory charges applicable across Pune Municipal Corporation (PMC) and PMRDA town planning zones including Mahalunge, Baner, and Hinjewadi.
+      </p>
+    </div>
+  </section>
+
+  <!-- Interactive Calculator Body -->
+  <section class="py-16 bg-[#0c1017]">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+      
+      <div class="bg-charcoal-900/90 border border-white/10 rounded-2xl p-6 sm:p-10 shadow-2xl backdrop-blur-md">
+        
+        <!-- Preset Buttons -->
+        <div class="space-y-2 mb-8">
+          <label class="text-xs uppercase tracking-wider text-gold-400 font-mono font-bold">One-Click Mahindra Rivenza Configurations</label>
+          <div class="flex flex-wrap gap-2.5 pt-1">
+            <button type="button" data-val="9000000" class="preset-btn px-4 py-2 rounded-lg bg-white/5 hover:bg-gold-500/20 border border-white/10 text-xs font-semibold text-stone-200 transition-colors">
+              2 BHK Smart (₹90 L)
+            </button>
+            <button type="button" data-val="11500000" class="preset-btn px-4 py-2 rounded-lg bg-white/5 hover:bg-gold-500/20 border border-white/10 text-xs font-semibold text-stone-200 transition-colors">
+              2 BHK Premium (₹1.15 Cr)
+            </button>
+            <button type="button" data-val="14800000" class="preset-btn px-4 py-2 rounded-lg bg-white/5 hover:bg-gold-500/20 border border-white/10 text-xs font-semibold text-stone-200 transition-colors">
+              3 BHK Luxury (₹1.48 Cr)
+            </button>
+            <button type="button" data-val="23500000" class="preset-btn px-4 py-2 rounded-lg bg-white/5 hover:bg-gold-500/20 border border-white/10 text-xs font-semibold text-stone-200 transition-colors">
+              4 BHK Sky Villa (₹2.35 Cr)
+            </button>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+          
+          <!-- Inputs Column (7 Cols) -->
+          <div class="lg:col-span-7 space-y-6">
+            
+            <!-- Value Slider -->
+            <div class="space-y-3">
+              <div class="flex justify-between items-center text-sm">
+                <label for="prop-price" class="text-stone-200 font-medium">Agreement Value (Property Cost)</label>
+                <span id="price-display" class="font-mono font-bold text-lg text-gold-300">₹ 90,00,000</span>
+              </div>
+              <input
+                type="range"
+                id="prop-price"
+                min="5000000"
+                max="35000000"
+                step="250000"
+                value="9000000"
+                class="w-full h-2.5 bg-charcoal-950 rounded-lg appearance-none cursor-pointer accent-gold-400"
+              />
+              <div class="flex justify-between text-[11px] text-stone-500 font-mono">
+                <span>₹50 Lakhs</span>
+                <span>₹1.5 Crores</span>
+                <span>₹3.5 Crores</span>
+              </div>
+            </div>
+
+            <!-- Gender Concession Toggle -->
+            <div class="bg-charcoal-950 border border-white/10 rounded-xl p-4 flex items-center justify-between">
+              <div>
+                <span class="text-sm font-semibold text-white block">Female Homebuyer Concession</span>
+                <span class="text-xs text-stone-400">1% Stamp Duty rebate under Maharashtra state policy</span>
+              </div>
+              <label class="relative inline-flex items-center cursor-pointer">
+                <input type="checkbox" id="female-rebate" class="sr-only peer" />
+                <div class="w-11 h-6 bg-stone-700 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-stone-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-gold-500"></div>
+              </label>
+            </div>
+
+            <!-- Formula Summary Note -->
+            <div class="p-4 rounded-xl bg-gold-500/5 border border-gold-500/20 text-xs text-stone-300 space-y-1">
+              <span class="font-bold text-gold-400 font-mono uppercase tracking-wider block">Official Levies Applied</span>
+              <p>• <strong>5.0%</strong> Base Maharashtra Stamp Duty (or 4.0% for female buyers)</p>
+              <p>• <strong>1.0%</strong> Pune Metro Cess (Maharashtra Municipal Corporations Act)</p>
+              <p>• <strong>1.0%</strong> Local Body Tax (LBT) / PMRDA Development Surcharge</p>
+              <p>• <strong>₹30,000</strong> Registration Fee (statutory maximum for properties &gt; ₹30L)</p>
+            </div>
+
+          </div>
+
+          <!-- Outputs Column (5 Cols) -->
+          <div class="lg:col-span-5 bg-charcoal-950 border border-gold-500/30 rounded-2xl p-6 space-y-5 shadow-inner">
+            
+            <div>
+              <span class="text-[11px] font-mono uppercase text-stone-400 tracking-wider">Total Government Outflow</span>
+              <div id="total-govt" class="font-serif text-3xl font-bold text-gold-300 mt-0.5">₹ 6,60,000</div>
+              <span id="rate-badge" class="text-xs text-emerald-400 font-mono">Effective Rate: 7.0% + Fixed Reg</span>
+            </div>
+
+            <div class="space-y-2.5 pt-4 border-t border-white/10 text-xs">
+              <div class="flex justify-between text-stone-300">
+                <span>Base Stamp Duty:</span>
+                <span id="base-duty" class="font-mono font-bold text-white">₹ 4,50,000</span>
+              </div>
+              <div class="flex justify-between text-stone-300">
+                <span>Pune Metro Cess (1%):</span>
+                <span id="metro-cess" class="font-mono font-bold text-white">₹ 90,000</span>
+              </div>
+              <div class="flex justify-between text-stone-300">
+                <span>Local Body Tax (1%):</span>
+                <span id="lbt-charge" class="font-mono font-bold text-white">₹ 90,000</span>
+              </div>
+              <div class="flex justify-between text-stone-300">
+                <span>Registration Fee:</span>
+                <span class="font-mono font-bold text-white">₹ 30,000</span>
+              </div>
+            </div>
+
+            <div class="pt-4 border-t border-white/10">
+              <span class="text-[11px] font-mono uppercase text-stone-400 tracking-wider">Grand Total (Property + Govt Levies)</span>
+              <div id="grand-total" class="font-serif text-2xl font-bold text-white mt-1">₹ 96,60,000</div>
+            </div>
+
+            <div class="pt-2">
+              <a
+                href="tel:+917744009295"
+                class="w-full py-3 rounded-lg bg-gold-500 hover:bg-gold-400 text-charcoal-950 font-bold text-xs uppercase tracking-wider text-center block transition-colors"
+              >
+                Request Official Cost Sheet
+              </a>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Explanatory FAQs -->
+      <div class="space-y-6 pt-4">
+        <h2 class="font-serif text-2xl font-bold text-white">Frequently Asked Questions on Pune Stamp Duty</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="bg-charcoal-900 border border-white/10 rounded-xl p-5 space-y-2">
+            <h3 class="font-semibold text-white text-base">Why is 1% Metro Cess charged in Pune?</h3>
+            <p class="text-stone-300 text-xs leading-relaxed">
+              The 1% Metro Cess was introduced by the Maharashtra state government to fund the mass rapid transit infrastructure of Pune Metro Line 1, 2, and the Hinjewadi-Shivajinagar Line 3.
+            </p>
+          </div>
+          <div class="bg-charcoal-900 border border-white/10 rounded-xl p-5 space-y-2">
+            <h3 class="font-semibold text-white text-base">When must stamp duty be paid?</h3>
+            <p class="text-stone-300 text-xs leading-relaxed">
+              Stamp duty must be paid before or on the day of signing the Agreement for Sale. Payments are conducted electronically via the Maharashtra Government eSBTR / GRAS portal.
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Client-Side Calculation Script -->
+  <script is:inline>
+    const priceSlider = document.getElementById('prop-price');
+    const priceDisplay = document.getElementById('price-display');
+    const femaleRebate = document.getElementById('female-rebate');
+    const baseDutyEl = document.getElementById('base-duty');
+    const metroCessEl = document.getElementById('metro-cess');
+    const lbtEl = document.getElementById('lbt-charge');
+    const totalGovtEl = document.getElementById('total-govt');
+    const grandTotalEl = document.getElementById('grand-total');
+    const rateBadgeEl = document.getElementById('rate-badge');
+
+    function formatINR(val) {
+      return '₹ ' + val.toLocaleString('en-IN');
+    }
+
+    function calculate() {
+      const price = parseFloat(priceSlider.value) || 0;
+      const isFemale = femaleRebate.checked;
+
+      priceDisplay.textContent = formatINR(price);
+
+      const baseRate = isFemale ? 0.04 : 0.05;
+      const metroRate = 0.01;
+      const lbtRate = 0.01;
+      const regFee = 30000;
+
+      const baseDuty = Math.round(price * baseRate);
+      const metroCess = Math.round(price * metroRate);
+      const lbtCharge = Math.round(price * lbtRate);
+      const totalGovt = baseDuty + metroCess + lbtCharge + regFee;
+      const grandTotal = price + totalGovt;
+
+      baseDutyEl.textContent = formatINR(baseDuty);
+      metroCessEl.textContent = formatINR(metroCess);
+      lbtEl.textContent = formatINR(lbtCharge);
+      totalGovtEl.textContent = formatINR(totalGovt);
+      grandTotalEl.textContent = formatINR(grandTotal);
+
+      const totalRatePercent = (baseRate + metroRate + lbtRate) * 100;
+      rateBadgeEl.textContent = `Effective Rate: ${totalRatePercent.toFixed(1)}% + ₹30K Reg`;
+    }
+
+    priceSlider.addEventListener('input', calculate);
+    femaleRebate.addEventListener('change', calculate);
+
+    document.querySelectorAll('.preset-btn').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const val = btn.getAttribute('data-val');
+        if (val) {
+          priceSlider.value = val;
+          calculate();
+        }
+      });
+    });
+
+    calculate();
+  </script>
+</Layout>

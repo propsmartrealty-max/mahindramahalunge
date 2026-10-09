@@ -1064,6 +1064,502 @@ export const westPuneLocalityData: WestPuneLocalityItem[] = [
         a: 'The University Metro Station on Line 3 allows direct high-speed transit to Balewadi Stadium station (3.2 km from Mahindra Rivenza) in under 12 minutes.'
       }
     ]
+  },
+  {
+    slug: 'tathawade-residential-corridor',
+    name: 'Tathawade (Wakad Annex & JSPM Tech Belt)',
+    shortName: 'Tathawade',
+    tagline: 'West Pune’s Premier Educational & Tech Professional Corridor',
+    category: 'High-Growth Tech Corridor',
+    avgPricePerSqFt: '₹7,200 - ₹8,500',
+    fiveYearAppreciation: '11% - 13%',
+    rentalYield: '4.8% - 5.5%',
+    distanceToHinjewadi: '5.2 km (10 mins)',
+    distanceToBalewadi: '6.8 km (12 mins)',
+    h1: 'Tathawade Real Estate: Property Guide, Prices & Hinjewadi Connectivity',
+    metaTitle: 'Tathawade Real Estate Pune | Flats Near Wakad & Hinjewadi',
+    metaDescription: 'Explore Tathawade Pune real estate trends. Discover flats near JSPM, Indira Institute, Wakad bridge, Hinjewadi IT Park and Mahindra Happinest Tathawade.',
+    heroHighlight: 'Wakad Annex Educational Hotspot with Direct Mumbai-Pune Expressway Access',
+    microMarketOverview: 'Tathawade has transformed from a quiet student hub into a bustling residential nerve-center. Positioned directly alongside NH-48 and Wakad, Tathawade offers effortless connectivity to Hinjewadi IT Park, top engineering institutes, and Dange Chowk commercial centers.',
+    infrastructureCatalysts: [
+      'Six-lane widening of the Bhumkar Chowk to Tathawade link road',
+      'Immediate access to Mumbai-Pune Expressway Dehu Road exit',
+      'Feeder bus networks connecting to Hinjewadi Phase 1 & 2'
+    ],
+    keyAdvantages: [
+      { title: 'High Rental Yield', desc: 'Over 5% rental yields driven by students, faculty, and IT engineers.' },
+      { title: 'Affordable Entry Point', desc: 'Attractive rates compared to adjacent Wakad with superior appreciation potential.' }
+    ],
+    mahindraConnection: 'Mahindra Lifespaces established a flagship presence here with Mahindra Happinest Tathawade, catering to smart, tech-forward homebuyers.',
+    faqs: [
+      {
+        q: 'How far is Tathawade from Mahindra Rivenza Mahalunge?',
+        a: 'Tathawade is just 7.5 km (12 minutes) from Mahindra Rivenza via the NH-48 Western Bypass and Hinjewadi link.'
+      }
+    ]
+  },
+  {
+    slug: 'ravet-real-estate-properties',
+    name: 'Ravet (Expressway Gateway & PCMC Smart Belt)',
+    shortName: 'Ravet',
+    tagline: 'The Gateway to Mumbai & PCMC’s Fastest Growing Residential Hub',
+    category: 'Expressway Gateway Corridor',
+    avgPricePerSqFt: '₹6,800 - ₹8,100',
+    fiveYearAppreciation: '10% - 12%',
+    rentalYield: '4.3% - 4.9%',
+    distanceToHinjewadi: '7.8 km (14 mins)',
+    distanceToBalewadi: '9.5 km (16 mins)',
+    h1: 'Ravet Real Estate: Flats Near Pune-Mumbai Expressway & Hinjewadi',
+    metaTitle: 'Ravet Real Estate Pune | Property Prices & Expressway Flats',
+    metaDescription: 'Complete guide to Ravet real estate in PCMC. Property prices near Mukai Chowk, DY Patil Akurdi, Hinjewadi IT corridor, and Mumbai expressway access.',
+    heroHighlight: 'Prime PCMC Gateway Hub Anchored by Mukai Chowk & BRTS Expressways',
+    microMarketOverview: 'Ravet sits at the westernmost entry point of the Mumbai-Pune Expressway and PCMC. Known as the "Gateway to Pune", Ravet features wide BRTS corridors, proximity to DY Patil educational institutes, and rapid access to both Hinjewadi and Talegaon MIDC.',
+    infrastructureCatalysts: [
+      'Mukai Chowk 6-lane grade separator and grade-level flyover network',
+      'Direct 4-lane BRTS corridor linking Ravet to Aundh and Hinjewadi',
+      'Proposed Ring Road interchange connecting Ravet to PMRDA TP schemes'
+    ],
+    keyAdvantages: [
+      { title: 'Mumbai Travel Convenience', desc: 'Zero city traffic when traveling towards Navi Mumbai and Mumbai.' },
+      { title: 'Planned Civic Infrastructure', desc: 'Wide PCMC roads, underground storm drains, and abundant public gardens.' }
+    ],
+    mahindraConnection: 'Homebuyers evaluating Ravet frequently upgrade to Mahindra Rivenza Mahalunge for higher capital appreciation and luxury 13.46-acre resort living.',
+    faqs: [
+      {
+        q: 'What is the commute time from Ravet to Hinjewadi IT Park?',
+        a: 'The commute takes just 12 to 15 minutes via the Dange Chowk - Bhumkar Chowk bypass.'
+      }
+    ]
+  },
+  {
+    slug: 'punawale-residential-corridor',
+    name: 'Punawale (18-Meter DP Road & Hinjewadi Tech Fringe)',
+    shortName: 'Punawale',
+    tagline: 'High-Density Residential Hub Connecting Hinjewadi to NH-48',
+    category: 'High-Growth Tech Corridor',
+    avgPricePerSqFt: '₹6,900 - ₹8,000',
+    fiveYearAppreciation: '11% - 14%',
+    rentalYield: '4.6% - 5.2%',
+    distanceToHinjewadi: '4.8 km (9 mins)',
+    distanceToBalewadi: '7.2 km (13 mins)',
+    h1: 'Punawale Real Estate: High-Yield Flats Near Hinjewadi Phase 1',
+    metaTitle: 'Punawale Real Estate Pune | Flats Near Hinjewadi & NH-48',
+    metaDescription: 'Punawale real estate price trends and guide. Affordable luxury 2 & 3 BHK flats near Hinjewadi IT Park, Malet Chowk, Kate Wasti, and NH-48.',
+    heroHighlight: 'Strategic 9-Minute Hinjewadi Feeder Belt with Rapidly Appreciating Property Values',
+    microMarketOverview: 'Punawale is located immediately north of Tathawade and west of Wakad. Its strategic location makes it an ideal neighborhood for Hinjewadi IT professionals seeking modern gated communities at sensible price points with low commute friction.',
+    infrastructureCatalysts: [
+      'Construction of the 18-meter and 24-meter Town Planning DP roads',
+      'Direct underpass and service lane improvements along NH-48',
+      'PMRDA water supply pipeline integration'
+    ],
+    keyAdvantages: [
+      { title: 'Immediate IT Access', desc: 'Just 9 minutes from Wipro Circle and Infosys Phase 1.' },
+      { title: 'Modern High-Rise Enclaves', desc: 'New gated communities with comprehensive clubhouse amenities.' }
+    ],
+    mahindraConnection: 'Investors eyeing Punawale choose Mahindra Rivenza Mahalunge for the institutional backing and landmark 13.46-acre master development scale.',
+    faqs: [
+      {
+        q: 'Why are IT engineers investing in Punawale?',
+        a: 'Punawale provides under-10-minute access to Hinjewadi Phase 1 at competitive prices from ₹6,900/sq.ft.'
+      }
+    ]
+  },
+  {
+    slug: 'kiwale-expressway-gateway',
+    name: 'Kiwale (Expressway Zero Point & Gahunje Foothills)',
+    shortName: 'Kiwale',
+    tagline: 'Serene Foothill Living at the Very Start of Mumbai-Pune Expressway',
+    category: 'Expressway Gateway Corridor',
+    avgPricePerSqFt: '₹6,400 - ₹7,600',
+    fiveYearAppreciation: '9% - 11%',
+    rentalYield: '4.1% - 4.6%',
+    distanceToHinjewadi: '9.2 km (16 mins)',
+    distanceToBalewadi: '11.0 km (18 mins)',
+    h1: 'Kiwale Real Estate: Flats at Pune-Mumbai Expressway Zero Point',
+    metaTitle: 'Kiwale Real Estate Pune | Flats Near Expressway & Gahunje',
+    metaDescription: 'Guide to Kiwale Pune real estate. Property prices near MCA Cricket Stadium, Mukai Chowk, Ravet link, and Pune-Mumbai Expressway junction.',
+    heroHighlight: 'The Scenic Northern Anchor of Pune’s Western Expressway Growth Corridor',
+    microMarketOverview: 'Kiwale represents the absolute starting point of the Pune-Mumbai Expressway. Flanked by lush greenery and the Gahunje hills, Kiwale appeals to frequent Mumbai commuters, auto engineers, and IT professionals who value clean air and mountain panoramas.',
+    infrastructureCatalysts: [
+      'Kiwale BRTS terminal expansion connecting to Pimpri and Aundh',
+      'Proximity to MCA International Cricket Stadium in Gahunje',
+      'Direct expressway connectivity reducing travel time to Navi Mumbai to 85 minutes'
+    ],
+    keyAdvantages: [
+      { title: 'Zero Pollution Living', desc: 'Nestled against open green hills away from central city congestion.' },
+      { title: 'Strategic Logistics Link', desc: 'Connects effortlessly to Talegaon, Chakan, and Hinjewadi.' }
+    ],
+    mahindraConnection: 'Kiwale residents look to Mahindra Lifespaces for proven green building credentials and high-trust construction benchmarks.',
+    faqs: [
+      {
+        q: 'Is Kiwale suitable for families working in Hinjewadi?',
+        a: 'Yes. The drive to Hinjewadi Phase 1 takes merely 16 minutes via the NH-48 bypass road.'
+      }
+    ]
+  },
+  {
+    slug: 'gahunje-cricket-stadium-living',
+    name: 'Gahunje (MCA Stadium & Riverside Greens)',
+    shortName: 'Gahunje',
+    tagline: 'Scenic Resort Living Flanked by Pavana River & Cricket Stadium',
+    category: 'Scenic Expressway Enclave',
+    avgPricePerSqFt: '₹6,200 - ₹7,400',
+    fiveYearAppreciation: '8% - 10%',
+    rentalYield: '3.9% - 4.4%',
+    distanceToHinjewadi: '11.5 km (18 mins)',
+    distanceToBalewadi: '13.2 km (20 mins)',
+    h1: 'Gahunje Real Estate: Scenic Living Near MCA Cricket Stadium',
+    metaTitle: 'Gahunje Real Estate Pune | Properties Near MCA Stadium & Expressway',
+    metaDescription: 'Discover residential properties in Gahunje Pune. Riverfront apartments, golf course living, MCA Cricket Stadium views, and expressway access.',
+    heroHighlight: 'Luxury Golf and Cricket-Facing Living on Pune’s Western Hilltop Horizon',
+    microMarketOverview: 'Gahunje is famous for the landmark MCA International Cricket Stadium and expansive township developments like Lodha Belmondo. Offering resort-style riverfront and hill views, Gahunje combines weekend getaway tranquillity with weekday tech accessibility.',
+    infrastructureCatalysts: [
+      'Direct expressway spur interchange',
+      'Pavana riverfront environmental conservation zone',
+      'Upcoming PMRDA multi-modal logistics hub corridor'
+    ],
+    keyAdvantages: [
+      { title: 'World-Class Sports Proximity', desc: 'Walk to international IPL and World Cup cricket fixtures.' },
+      { title: 'Expansive Green Vistas', desc: 'Surrounded by river waters and Sahyadri mountain foothills.' }
+    ],
+    mahindraConnection: 'Buyers who appreciate Gahunje’s open-space resort ethos find an even closer urban counterpart in Mahindra Rivenza Mahalunge with its 80% open biophilic greens.',
+    faqs: [
+      {
+        q: 'How far is Gahunje from Hinjewadi IT Park?',
+        a: 'Gahunje is approximately 11.5 km (18 minutes) from Hinjewadi Phase 1 via the bypass.'
+      }
+    ]
+  },
+  {
+    slug: 'sus-road-residential-developments',
+    name: 'Sus Road (Pashan-Baner Foothill Corridor)',
+    shortName: 'Sus Road',
+    tagline: 'Quiet Residential Foothills Connecting Pashan, Baner & Mahalunge',
+    category: 'West Pune Foothill Belt',
+    avgPricePerSqFt: '₹7,800 - ₹9,200',
+    fiveYearAppreciation: '10% - 13%',
+    rentalYield: '4.2% - 4.8%',
+    distanceToHinjewadi: '6.5 km (12 mins)',
+    distanceToBalewadi: '5.0 km (9 mins)',
+    h1: 'Sus Road Real Estate: Scenic Apartments Near Baner & Pashan',
+    metaTitle: 'Sus Road Real Estate Pune | Flats Near Baner & Pashan',
+    metaDescription: 'Comprehensive guide to Sus Road Pune real estate. Explore apartments near Sus Khind, Pashan exit, Symbiosis institutes, and Baner hills.',
+    heroHighlight: 'Tranquil Foothill Corridor Connecting Central West Pune to Mahalunge Valley',
+    microMarketOverview: 'Sus Road extends from Pashan exit towards Nande and Mahalunge. Known for lush hill views, premier institutes like Symbiosis, and clean air, Sus Road has evolved into a premier residential enclave for academicians, researchers, and tech leaders.',
+    infrastructureCatalysts: [
+      'Sus-Mahalunge bridge connectivity providing direct cross-valley linkage',
+      'Widening of the Pashan-Sus Khind arterial road into a 4-lane boulevard',
+      'Feeder routes to Pune Metro Line 3 Balewadi Phata station'
+    ],
+    keyAdvantages: [
+      { title: 'Serene Nature', desc: 'Surrounded by Baner-Pashan biodiversity hills on three sides.' },
+      { title: 'Proximity to Baner High Street', desc: 'Just 8 to 10 minutes from premier dining and retail.' }
+    ],
+    mahindraConnection: 'Mahindra Rivenza is located immediately adjacent to Sus in the Mahalunge valley, benefiting directly from the Sus-Nande infrastructure corridor.',
+    faqs: [
+      {
+        q: 'How does Sus Road connect to Mahindra Rivenza Mahalunge?',
+        a: 'The upcoming TP scheme DP road links Sus Road directly into Mahindra Rivenza in under 5 minutes.'
+      }
+    ]
+  },
+  {
+    slug: 'bavdhan-chandani-chowk-residences',
+    name: 'Bavdhan (Chandani Chowk & Kothrud Annex)',
+    shortName: 'Bavdhan',
+    tagline: 'Upscale Hillside Living with Multi-Tier Chandani Chowk Flyover Link',
+    category: 'Upscale West Pune Hub',
+    avgPricePerSqFt: '₹9,200 - ₹11,800',
+    fiveYearAppreciation: '9% - 12%',
+    rentalYield: '3.9% - 4.5%',
+    distanceToHinjewadi: '11.0 km (17 mins)',
+    distanceToBalewadi: '7.8 km (12 mins)',
+    h1: 'Bavdhan Real Estate: Luxury Properties Near Chandani Chowk & Kothrud',
+    metaTitle: 'Bavdhan Real Estate Pune | Properties Near Chandani Chowk',
+    metaDescription: 'Explore Bavdhan Pune real estate market. Luxury apartments near Chandani Chowk multi-level flyover, DRDO, Kothrud, and Western Bypass link to Hinjewadi.',
+    heroHighlight: 'Strategic West Pune Gateway Benefiting from the New ₹400-Crore Chandani Chowk Flyover',
+    microMarketOverview: 'Bavdhan is nestled between the NDA reserve forest and the NH-48 bypass. Following the completion of the massive Chandani Chowk multi-tier flyover, traffic congestion has been eliminated, making Bavdhan one of Pune’s most desirable premium residential enclaves.',
+    infrastructureCatalysts: [
+      'Multi-level Chandani Chowk grade-separated interchange',
+      'Direct NDA road link into Kothrud and Paud Road',
+      'High-speed Western Bypass connecting Bavdhan to Baner and Mahalunge in 10 minutes'
+    ],
+    keyAdvantages: [
+      { title: 'Protected Greenery', desc: 'Bordered by NDA green belts, ensuring permanently low density.' },
+      { title: 'Dual Connectivity', desc: 'Seamless access to both traditional Central Pune and modern Hinjewadi.' }
+    ],
+    mahindraConnection: 'Affluent families in Bavdhan seeking new-age resort master developments with 40+ amenities look to Mahindra Rivenza Baner Annex for long-term appreciation.',
+    faqs: [
+      {
+        q: 'How long does it take to drive from Bavdhan to Mahindra Rivenza?',
+        a: 'Via the signal-free NH-48 bypass, the drive takes only 12 to 14 minutes (8.5 km).'
+      }
+    ]
+  },
+  {
+    slug: 'kharadi-it-hub-comparison',
+    name: 'Kharadi (EON Free Zone & WTC East Pune)',
+    shortName: 'Kharadi',
+    tagline: 'East Pune’s Mega IT Hub & Premier Real Estate Counterpart',
+    category: 'East Pune IT Mega-Hub',
+    avgPricePerSqFt: '₹9,800 - ₹12,500',
+    fiveYearAppreciation: '10% - 13%',
+    rentalYield: '4.4% - 5.0%',
+    distanceToHinjewadi: '25.0 km (45 mins)',
+    distanceToBalewadi: '21.0 km (38 mins)',
+    h1: 'Kharadi Real Estate vs West Pune: EON IT Park & Property Trends',
+    metaTitle: 'Kharadi Real Estate Pune | Properties Near EON Free Zone & WTC',
+    metaDescription: 'Detailed analysis of Kharadi Pune real estate. Property prices near EON IT Park, World Trade Center, Radisson Blu, and comparison with West Pune Mahalunge.',
+    heroHighlight: 'East Pune’s Premier Commercial Core with Multi-Million Sq.Ft. Grade-A Office Parks',
+    microMarketOverview: 'Kharadi is the dominant tech hub of East Pune, hosting EON Free Zone Phase 1 & 2, World Trade Center, and multinational banking corporations. As prices in Kharadi surpass ₹11,000/sq.ft, real estate investors frequently benchmark Kharadi against West Pune’s Hinjewadi-Mahalunge corridor.',
+    infrastructureCatalysts: [
+      'Pune Metro Line 2 extension towards Kharadi bypass',
+      'Riverside road linking Kharadi to Kalyani Nagar and Koregaon Park',
+      'Wagholi-Kharadi elevated flyover corridor'
+    ],
+    keyAdvantages: [
+      { title: 'Corporate Density', desc: 'Home to Barclays, Credit Suisse, UBS, and Citi corporate headquarters.' },
+      { title: 'Established Hospitality', desc: 'Presence of Radisson Blu, upscale retail, and international schools.' }
+    ],
+    mahindraConnection: 'Mahindra Lifespaces holds strong brand authority in East Pune with Mahindra IvyLush Kharadi Annex, making Mahindra the premier developer bridging East and West Pune.',
+    faqs: [
+      {
+        q: 'How does Mahindra Rivenza Mahalunge compare to Kharadi developments?',
+        a: 'Mahindra Rivenza offers lower entry pricing (from ₹90L) with higher land-bank master development scale (13.46 acres) and proximity to Pune’s largest tech cluster in Hinjewadi.'
+      }
+    ]
+  },
+  {
+    slug: 'viman-nagar-real-estate',
+    name: 'Viman Nagar (Airport Belt & Luxury Promenade)',
+    shortName: 'Viman Nagar',
+    tagline: 'Pune’s Most Cosmopolitan Airport & High-Street Retail District',
+    category: 'East Pune Cosmopolitan Hub',
+    avgPricePerSqFt: '₹12,500 - ₹15,500',
+    fiveYearAppreciation: '8% - 10%',
+    rentalYield: '3.8% - 4.3%',
+    distanceToHinjewadi: '23.0 km (42 mins)',
+    distanceToBalewadi: '18.5 km (35 mins)',
+    h1: 'Viman Nagar Real Estate: Luxury Living Near Pune Airport & Phoenix Mall',
+    metaTitle: 'Viman Nagar Real Estate Pune | Luxury Apartments & Airport Link',
+    metaDescription: 'Explore Viman Nagar Pune real estate. Luxury properties near Phoenix Marketcity, Symbiosis Law Campus, Pune International Airport, and Kalyani Nagar link.',
+    heroHighlight: 'Central East Pune’s Lifestyle Capital with Premium Malls and International Airport',
+    microMarketOverview: 'Viman Nagar is synonymous with upscale cosmopolitan living in Pune. Home to Phoenix Marketcity, Symbiosis International University, and Pune International Airport, this fully saturated micro-market boasts some of the city’s highest residential rental demands.',
+    infrastructureCatalysts: [
+      'Direct access to new Pune International Airport integrated terminal',
+      'Pune Metro Line 2 Ramwadi station connectivity',
+      'Ahmednagar road flyover improvements'
+    ],
+    keyAdvantages: [
+      { title: 'High-Street Retail', desc: 'Walk to Phoenix Marketcity, fine dining, and boutique cafes.' },
+      { title: 'High Expat & Student Demand', desc: 'Consistent rental yields and premium tenant profile.' }
+    ],
+    mahindraConnection: 'Investors from Viman Nagar seeking fresh high-growth land appreciation corridors choose Mahindra Rivenza Mahalunge for its early-stage TP scheme upside.',
+    faqs: [
+      {
+        q: 'Why are East Pune buyers investing in Mahindra Rivenza Mahalunge?',
+        a: 'Mahalunge offers nearly 40% lower capital entry cost than Viman Nagar with larger 2 & 3 BHK carpet areas and 13.46 acres of biophilic resort lifestyle.'
+      }
+    ]
+  },
+  {
+    slug: 'kalyani-nagar-residential',
+    name: 'Kalyani Nagar (Riverside Luxury & Cerebrum IT Park)',
+    shortName: 'Kalyani Nagar',
+    tagline: 'Ultra-Luxury Riverside Enclave Adjacent to Koregaon Park',
+    category: 'Central-East Luxury Enclave',
+    avgPricePerSqFt: '₹13,500 - ₹17,000',
+    fiveYearAppreciation: '7% - 9%',
+    rentalYield: '3.6% - 4.1%',
+    distanceToHinjewadi: '22.0 km (40 mins)',
+    distanceToBalewadi: '17.5 km (32 mins)',
+    h1: 'Kalyani Nagar Real Estate: Premium Waterfront Living Near Cerebrum IT Park',
+    metaTitle: 'Kalyani Nagar Real Estate Pune | Waterfront Luxury Apartments',
+    metaDescription: 'Guide to luxury residential properties in Kalyani Nagar Pune. Waterfront apartments near Cerebrum IT Park, Koregaon Park bridge, and Trump Towers.',
+    heroHighlight: 'Pune’s Legacy Luxury Residential District with Mula-Mutha Riverfront Promenades',
+    microMarketOverview: 'Kalyani Nagar is one of Pune’s most prestigious legacy addresses, featuring leafy boulevards, upscale dining, and Cerebrum IT Park. Connected to Koregaon Park via the iconic landmark bridge, residential options here cater to ultra-high-net-worth individuals and corporate leadership.',
+    infrastructureCatalysts: [
+      'Kalyani Nagar Pune Metro Line 2 station operation',
+      'Riverfront development and pedestrian boulevard upgrades',
+      'Direct arterial link into Pune Railway Station and airport'
+    ],
+    keyAdvantages: [
+      { title: 'Prestige & Pedigree', desc: 'Addresses in Kalyani Nagar carry enduring social prestige.' },
+      { title: 'Walkable Urbanism', desc: 'Shaded streets, wellness clubs, and gourmet supermarkets.' }
+    ],
+    mahindraConnection: 'Corporate executives based in Kalyani Nagar diversify their real estate portfolios into Mahindra Rivenza Mahalunge for high-growth tech corridor capital gains.',
+    faqs: [
+      {
+        q: 'How does Kalyani Nagar compare to West Pune’s Baner Annex?',
+        a: 'While Kalyani Nagar is a mature, high-cost market (₹15,000+/sq.ft), Baner Annex Mahalunge offers early-entry growth velocity driven by PMRDA TP schemes.'
+      }
+    ]
+  },
+  {
+    slug: 'magarpatta-city-hadapsar-corridor',
+    name: 'Magarpatta City & Hadapsar (Cybercity IT Corridor)',
+    shortName: 'Magarpatta Hadapsar',
+    tagline: 'Pune’s Original Self-Sustained 400-Acre Cybercity Township',
+    category: 'East Pune Integrated Township',
+    avgPricePerSqFt: '₹8,500 - ₹10,800',
+    fiveYearAppreciation: '8% - 11%',
+    rentalYield: '4.2% - 4.7%',
+    distanceToHinjewadi: '26.0 km (48 mins)',
+    distanceToBalewadi: '22.0 km (40 mins)',
+    h1: 'Magarpatta City & Hadapsar Real Estate: Cybercity Properties & Trends',
+    metaTitle: 'Magarpatta City Real Estate Pune | Cybercity Flats & Hadapsar',
+    metaDescription: 'Complete overview of Magarpatta City and Hadapsar real estate. Properties near Cybercity IT Park, SP Infocity, Amanora Park Town, and Solapur highway.',
+    heroHighlight: 'Self-Contained Walk-to-Work Ecosystem Pioneering Township Living in Pune',
+    microMarketOverview: 'Magarpatta City in Hadapsar is Pune’s first modern walk-to-work private township. Spanning 400 acres with commercial Cybercity, Seasons Mall, and green solar architecture, Hadapsar is the eastern economic counterbalance to West Pune’s Hinjewadi.',
+    infrastructureCatalysts: [
+      'Hadapsar elevated flyover and Solapur highway widening',
+      'Proposed extension of Pune Metro towards Hadapsar and Saswad Road',
+      'Ring Road connectivity linking Hadapsar to PCMC'
+    ],
+    keyAdvantages: [
+      { title: 'Walk-to-Work Lifestyle', desc: 'Over 100,000 professionals work and reside within the township.' },
+      { title: 'Integrated Schools & Malls', desc: 'Seasons Mall and Amanora Mall offer world-class recreation.' }
+    ],
+    mahindraConnection: 'Engineers relocating from East Pune’s Magarpatta to West Pune’s Hinjewadi IT Park choose Mahindra Rivenza Baner Annex for superior construction quality and resort living.',
+    faqs: [
+      {
+        q: 'Why are Magarpatta professionals looking at Mahindra Rivenza?',
+        a: 'With Hinjewadi dominating tech job creation in AI and semiconductor engineering, techies choose Mahindra Rivenza Mahalunge to avoid cross-city commutes.'
+      }
+    ]
+  },
+  {
+    slug: 'moshi-pcmc-convention-center',
+    name: 'Moshi (International Exhibition Center & PCMC Spine Road)',
+    shortName: 'Moshi',
+    tagline: 'North PCMC’s Mega Infrastructure Hub & Industrial Tech Gateway',
+    category: 'North PCMC Infrastructure Hub',
+    avgPricePerSqFt: '₹5,600 - ₹6,800',
+    fiveYearAppreciation: '10% - 13%',
+    rentalYield: '4.0% - 4.5%',
+    distanceToHinjewadi: '18.0 km (28 mins)',
+    distanceToBalewadi: '16.0 km (25 mins)',
+    h1: 'Moshi Real Estate: Properties Near International Exhibition Center & Spine Road',
+    metaTitle: 'Moshi Real Estate Pune | Flats Near PCMC Spine Road & Nashik Highway',
+    metaDescription: 'Moshi PCMC real estate trends. Affordable properties near Pune International Exhibition and Convention Center, Spine Road, Bhosari, and Chakan auto belt.',
+    heroHighlight: 'Spine Road Industrial Gateway Anchored by the 240-Acre International Convention Center',
+    microMarketOverview: 'Moshi is strategically positioned along the Pune-Nashik highway and PCMC Spine Road. Anchored by the upcoming Pune International Exhibition and Convention Centre (PIECC), Moshi offers planned wide avenues, civic stability, and rapid industrial growth.',
+    infrastructureCatalysts: [
+      '240-acre International Exhibition and Convention Centre (PIECC)',
+      'Nashik Phata to Khed elevated expressway corridor',
+      'Proposed Pune Metro Line extension from PCMC station to Moshi'
+    ],
+    keyAdvantages: [
+      { title: 'High Value-for-Money', desc: 'Affordable entry rates from ₹5,600/sq.ft with massive government investment.' },
+      { title: 'Wide 45m Spine Road', desc: 'Signal-free traffic movement connecting Moshi to Pimpri and Chakan.' }
+    ],
+    mahindraConnection: 'Buyers from Moshi and PCMC frequently invest in Mahindra Lifespaces developments like Mahindra Citadel (Pimpri) and Mahindra Rivenza (Mahalunge) for trusted brand pedigree.',
+    faqs: [
+      {
+        q: 'What is the travel time from Moshi to Mahindra Rivenza Mahalunge?',
+        a: 'Via the Spine Road and NH-48 bypass, the commute takes approximately 25 to 28 minutes.'
+      }
+    ]
+  },
+  {
+    slug: 'charholi-pride-world-city-belt',
+    name: 'Charholi (Pride World City Corridor & Ring Road)',
+    shortName: 'Charholi',
+    tagline: 'North Pune’s Mega Township Growth Belt Near Dighi & Alandi',
+    category: 'North Pune Township Belt',
+    avgPricePerSqFt: '₹5,800 - ₹7,000',
+    fiveYearAppreciation: '10% - 12%',
+    rentalYield: '4.1% - 4.6%',
+    distanceToHinjewadi: '24.0 km (38 mins)',
+    distanceToBalewadi: '20.0 km (32 mins)',
+    h1: 'Charholi Real Estate: Integrated Townships Near Ring Road & Dighi',
+    metaTitle: 'Charholi Real Estate Pune | Properties Near Pride World City & Ring Road',
+    metaDescription: 'Explore Charholi Pune real estate. Mega township properties near Pride World City, Dighi Hills, Alandi road, and upcoming PMRDA Ring Road network.',
+    heroHighlight: 'Scenic Integrated Township Hub Flanked by Dighi Hills and PMRDA Ring Road',
+    microMarketOverview: 'Charholi is located just north of Dhanori and Pune International Airport. Known for massive master-planned communities like Pride World City, Charholi provides suburban township living with schools, clubs, and lakeside promenades.',
+    infrastructureCatalysts: [
+      'Upcoming 128-meter PMRDA Ring Road passing through Charholi',
+      'Dhanori-Charholi 4-lane arterial connection',
+      'Direct link to Pune Airport via the new terminal road'
+    ],
+    keyAdvantages: [
+      { title: 'Township Infrastructure', desc: 'Integrated master communities with self-contained civic facilities.' },
+      { title: 'Ring Road Upside', desc: 'Direct multi-lane linkage to all corners of Pune once the Ring Road completes.' }
+    ],
+    mahindraConnection: 'Homebuyers comparing Charholi townships to West Pune recognize Mahindra Rivenza Mahalunge as the premier IT-corridor choice with unmatched corporate governance.',
+    faqs: [
+      {
+        q: 'How does Charholi compare to Mahalunge in West Pune?',
+        a: 'Mahalunge offers immediate 5-minute access to 400,000 IT jobs in Hinjewadi and Baner, commanding higher rental returns and capital velocity.'
+      }
+    ]
+  },
+  {
+    slug: 'chakan-auto-hub-residential',
+    name: 'Chakan (Automobile Industrial Corridor & Expressway)',
+    shortName: 'Chakan',
+    tagline: 'India’s Automobile Capital & Industrial Employment Dynamo',
+    category: 'Industrial Megahub',
+    avgPricePerSqFt: '₹4,800 - ₹5,800',
+    fiveYearAppreciation: '9% - 11%',
+    rentalYield: '4.5% - 5.2%',
+    distanceToHinjewadi: '25.0 km (38 mins)',
+    distanceToBalewadi: '24.0 km (36 mins)',
+    h1: 'Chakan Real Estate: Affordable Living Near Mercedes, VW & Bajaj Auto',
+    metaTitle: 'Chakan Real Estate Pune | Flats Near Auto Cluster & Talegaon',
+    metaDescription: 'Guide to Chakan Pune real estate. Affordable housing near Mercedes-Benz, Volkswagen, Bajaj Auto, Chakan MIDC, and Pune Ring Road.',
+    heroHighlight: 'The Global Automobile Capital of India Employing Over 250,000 Engineers',
+    microMarketOverview: 'Chakan is globally renowned as India’s premier automobile cluster, housing plants for Mercedes-Benz, Volkswagen, Mahindra & Mahindra, and Bajaj Auto. Industrial growth has fueled steady demand for quality residential housing among engineers and plant managers.',
+    infrastructureCatalysts: [
+      'Pune Ring Road Phase 1 interchange connecting Chakan to West Pune',
+      'Talegaon-Chakan 4-lane industrial corridor upgrades',
+      'Proposed Chakan International Airport connectivity routes'
+    ],
+    keyAdvantages: [
+      { title: 'Endless Industrial Employment', desc: 'Thousands of tier-1 and tier-2 auto component manufacturing facilities.' },
+      { title: 'Very Low Acquisition Cost', desc: 'Entry-level housing from under ₹4,800/sq.ft.' }
+    ],
+    mahindraConnection: 'Mahindra & Mahindra’s colossal manufacturing plant is located in Chakan, creating deep brand loyalty among the workforce towards Mahindra Lifespaces homes.',
+    faqs: [
+      {
+        q: 'Why do Chakan executives buy homes at Mahindra Rivenza Mahalunge?',
+        a: 'Executives looking for luxury residential living with top international schools for their children commute easily to Chakan while living in high-end West Pune.'
+      }
+    ]
+  },
+  {
+    slug: 'model-colony-shivajinagar-prime',
+    name: 'Model Colony & Shivaji Nagar (Central Heritage & Metro)',
+    shortName: 'Model Colony',
+    tagline: 'Central Pune’s Prestigious Residential Enclave & Multi-Modal Metro Hub',
+    category: 'Central Elite Enclave',
+    avgPricePerSqFt: '₹17,500 - ₹22,000',
+    fiveYearAppreciation: '6% - 8%',
+    rentalYield: '3.2% - 3.7%',
+    distanceToHinjewadi: '16.5 km (26 mins)',
+    distanceToBalewadi: '10.5 km (16 mins)',
+    h1: 'Model Colony Real Estate: Ultra-Luxury Residences Near Shivaji Nagar Metro',
+    metaTitle: 'Model Colony Real Estate Pune | Luxury Flats Near Shivaji Nagar',
+    metaDescription: 'Discover luxury real estate in Model Colony & Shivaji Nagar Pune. Premium boutique apartments near Lakaki Lake, Fergusson College, and Central Metro Interchange.',
+    heroHighlight: 'Pune’s Most Aristocratic Central Neighborhood Flanked by Lakaki Lake and High Court',
+    microMarketOverview: 'Model Colony is widely considered the aristocratic crown of Central Pune. Characterized by heritage bungalows, tranquil tree-lined avenues around Lakaki Lake, and elite schools, Model Colony commands astronomical land valuations with virtually zero new supply.',
+    infrastructureCatalysts: [
+      'Shivaji Nagar Multi-Modal Underground Metro Interchange (Lines 1 & 2 & 3)',
+      'University Double-Decker Flyover providing signal-free access to Baner Road',
+      'Restoration of historic heritage precincts and parks'
+    ],
+    keyAdvantages: [
+      { title: 'Peerless Prestige', desc: 'Home to industrialist families, judges, bureaucrats, and physicians.' },
+      { title: 'Central Proximity', desc: 'Minutes from Deccan Gymkhana, FC Road, and Pune Railway Station.' }
+    ],
+    mahindraConnection: 'Old-money families from Model Colony and Shivaji Nagar choose Mahindra Rivenza Mahalunge for spacious second-home luxury and green riverfront family retreats.',
+    faqs: [
+      {
+        q: 'How does Pune Metro Line 3 connect Shivaji Nagar to Mahindra Rivenza?',
+        a: 'Line 3 connects the Shivaji Nagar terminal directly to the Balewadi Stadium station, reaching the Baner Annex threshold in just 18 minutes.'
+      }
+    ]
   }
 ];
+
 

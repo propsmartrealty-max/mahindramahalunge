@@ -26,6 +26,7 @@ import { nriPortalsData } from '../data/pSeoNriPortals';
 import { hospitalData } from '../data/pSeoHospitals';
 import { metroData } from '../data/pSeoMetroStations';
 import { webStoriesData } from '../data/pSeoWebStories';
+import { westPuneLocalityData } from '../data/pSeoWestPuneLocalities';
 
 
 // Shared Project Images for Google Image Sitemap Indexation
@@ -223,6 +224,41 @@ export const CORE_PAGES: SitemapEntry[] = [
     priority: 0.75,
     changefreq: 'weekly',
   },
+  {
+    url: `${BASE_URL}/tools/`,
+    title: 'Pune Real Estate Financial Calculators & Decision Tools Hub',
+    category: 'core',
+    priority: 0.88,
+    changefreq: 'weekly',
+  },
+  {
+    url: `${BASE_URL}/tools/pune-stamp-duty-calculator/`,
+    title: 'Pune Stamp Duty & Registration Calculator 2026 — 7% Official Levies',
+    category: 'core',
+    priority: 0.85,
+    changefreq: 'weekly',
+  },
+  {
+    url: `${BASE_URL}/tools/home-loan-emi-calculator/`,
+    title: 'Home Loan EMI & Eligibility Calculator — SBI, HDFC & ICICI Rates',
+    category: 'core',
+    priority: 0.85,
+    changefreq: 'weekly',
+  },
+  {
+    url: `${BASE_URL}/tools/hinjewadi-rental-yield-calculator/`,
+    title: 'Hinjewadi Rental Yield & Real Estate Cashflow Calculator',
+    category: 'core',
+    priority: 0.85,
+    changefreq: 'weekly',
+  },
+  {
+    url: `${BASE_URL}/tools/capital-gains-tax-calculator/`,
+    title: 'Section 54 Capital Gains Tax Reinvestment Saver Calculator',
+    category: 'core',
+    priority: 0.85,
+    changefreq: 'weekly',
+  },
 ];
 
 // 02. RESIDENCE TYPOLOGY HUBS
@@ -363,9 +399,9 @@ export const WEST_PUNE_SLUGS = [
   { slug: 'senapati-bapat-road-real-estate', name: 'Senapati Bapat Road Prime Living & ICC Tech Park' },
 ];
 
-export const LOCATIONS_PAGES: SitemapEntry[] = WEST_PUNE_SLUGS.map((item) => ({
+export const LOCATIONS_PAGES: SitemapEntry[] = westPuneLocalityData.map((item) => ({
   url: `${BASE_URL}/west-pune/${item.slug}/`,
-  title: `${item.name} — Mahindra Rivenza West Pune Connectivity`,
+  title: `${item.name} — Mahindra Rivenza Pune Connectivity & Real Estate Guide`,
   category: 'locations',
   priority: 0.8,
   changefreq: 'weekly',
@@ -511,6 +547,10 @@ export const ARTICLES_SLUGS = [
   { slug: 'nande-mahalunge-maan-real-estate-guide', name: 'Nande-Mahalunge-Maan Micro-Market Comprehensive Investment Guide' },
   { slug: 'pmrda-town-planning-scheme-mahalunge', name: 'PMRDA Town Planning Scheme (TPS) Mahalunge Infrastructure Masterplan' },
   { slug: 'mahalunge-vs-baner-vs-hinjewadi', name: 'Mahalunge vs Baner vs Hinjewadi Comprehensive Location Comparison' },
+  { slug: 'flats-under-1-crore-in-west-pune', name: 'Flats Under 1 Crore in West Pune: Best Projects & 2 BHK Guide' },
+  { slug: 'luxury-flats-under-2-crore-in-pune', name: 'Luxury Flats Under 2 Crore in Pune: 3 BHK Price Analysis' },
+  { slug: 'flats-near-pune-metro-line-3', name: 'Flats Near Pune Metro Line 3 Hinjewadi-Shivajinagar' },
+  { slug: 'ready-possession-vs-under-construction-pune', name: 'Ready Possession vs Under Construction Flats in Pune' },
 ];
 
 export const ARTICLES_PAGES: SitemapEntry[] = ARTICLES_SLUGS.map((item) => ({

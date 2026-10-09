@@ -1,0 +1,243 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const toolSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebApplication",
+      "@id": "https://mahindralifespaceshomes.in/tools/hinjewadi-rental-yield-calculator/#app",
+      "url": "https://mahindralifespaceshomes.in/tools/hinjewadi-rental-yield-calculator/",
+      "name": "Hinjewadi Rental Yield & Real Estate ROI Calculator 2026",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "All",
+      "description": "Calculate gross & net rental yields and 5-year capital appreciation for residential properties in Mahalunge (Baner Annex) and Hinjewadi IT Park."
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://mahindralifespaceshomes.in/tools/hinjewadi-rental-yield-calculator/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is the average rental yield in Mahalunge and Hinjewadi?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The average residential rental yield in Mahalunge (Baner Annex) ranges between 4.5% and 5.4%, significantly higher than Central Pune averages (3.0% - 3.5%) due to massive IT workforce demand from Hinjewadi Phases 1, 2, and 3."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the average monthly rent for 2 BHK and 3 BHK flats near Hinjewadi?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A modern 2 BHK gated community apartment commands ₹28,000 to ₹38,000 per month, while a 3 BHK luxury residence commands ₹42,000 to ₹60,000 per month depending on furnishing and clubhouse amenities."
+          }
+        }
+      ]
+    }
+  ]
+};
+---
+
+<Layout
+  title="Hinjewadi Rental Yield Calculator | Pune Real Estate ROI"
+  description="Calculate residential rental yields & 5-year ROI for Hinjewadi & Mahalunge Baner Annex properties. Accurate data based on 400,000+ IT tenant demand."
+  canonical="https://mahindralifespaceshomes.in/tools/hinjewadi-rental-yield-calculator/"
+  customSchema={toolSchema}
+>
+  <!-- Hero Section -->
+  <section class="pt-32 pb-16 bg-charcoal-950 border-b border-white/10 relative overflow-hidden">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4">
+      <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-gold-500/10 border border-gold-500/30 text-gold-400 text-xs font-semibold uppercase tracking-widest">
+        <span>Investment Intelligence • IT Tenant Cashflow</span>
+      </div>
+      
+      <h1 class="font-serif text-3xl sm:text-5xl font-bold text-white tracking-tight leading-tight">
+        Hinjewadi &amp; Baner Annex <br />
+        <span class="gold-gradient-text">Rental Yield &amp; ROI Calculator</span>
+      </h1>
+      
+      <p class="text-stone-300 text-sm sm:text-base max-w-2xl leading-relaxed">
+        Model rental cashflows and projected 5-year capital appreciation driven by Hinjewadi’s 400,000+ IT workforce and PMRDA Town Planning Scheme 1.
+      </p>
+    </div>
+  </section>
+
+  <!-- Interactive Calculator Body -->
+  <section class="py-16 bg-[#0c1017]">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+      
+      <div class="bg-charcoal-900/90 border border-white/10 rounded-2xl p-6 sm:p-10 shadow-2xl backdrop-blur-md">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+          
+          <!-- Inputs Column (7 Cols) -->
+          <div class="lg:col-span-7 space-y-6">
+            
+            <!-- Property Cost Slider -->
+            <div class="space-y-3">
+              <div class="flex justify-between items-center text-sm">
+                <label for="inv-price" class="text-stone-200 font-medium">Property Acquisition Cost</label>
+                <span id="inv-price-display" class="font-mono font-bold text-lg text-gold-300">₹ 90,00,000</span>
+              </div>
+              <input
+                type="range"
+                id="inv-price"
+                min="6500000"
+                max="25000000"
+                step="250000"
+                value="9000000"
+                class="w-full h-2.5 bg-charcoal-950 rounded-lg appearance-none cursor-pointer accent-gold-400"
+              />
+              <div class="flex justify-between text-[11px] text-stone-500 font-mono">
+                <span>₹65 Lakhs</span>
+                <span>₹1.4 Crores</span>
+                <span>₹2.5 Crores</span>
+              </div>
+            </div>
+
+            <!-- Expected Rent Slider -->
+            <div class="space-y-3">
+              <div class="flex justify-between items-center text-sm">
+                <label for="monthly-rent" class="text-stone-200 font-medium">Expected Monthly Rental</label>
+                <span id="rent-display" class="font-mono font-bold text-lg text-gold-300">₹ 35,000 / mo</span>
+              </div>
+              <input
+                type="range"
+                id="monthly-rent"
+                min="20000"
+                max="85000"
+                step="1000"
+                value="35000"
+                class="w-full h-2.5 bg-charcoal-950 rounded-lg appearance-none cursor-pointer accent-gold-400"
+              />
+              <div class="flex justify-between text-[11px] text-stone-500 font-mono">
+                <span>₹20,000 (1 BHK)</span>
+                <span>₹35,000 (2 BHK)</span>
+                <span>₹60,000+ (3 BHK Luxury)</span>
+              </div>
+            </div>
+
+            <!-- Annual Maintenance & Tax Deduction -->
+            <div class="space-y-3">
+              <div class="flex justify-between items-center text-sm">
+                <label for="maint-deduct" class="text-stone-200 font-medium">Annual Maintenance &amp; Property Tax</label>
+                <span id="maint-display" class="font-mono font-bold text-lg text-stone-300">₹ 42,000 / yr</span>
+              </div>
+              <input
+                type="range"
+                id="maint-deduct"
+                min="20000"
+                max="90000"
+                step="2000"
+                value="42000"
+                class="w-full h-2.5 bg-charcoal-950 rounded-lg appearance-none cursor-pointer accent-gold-400"
+              />
+            </div>
+
+          </div>
+
+          <!-- Outputs Column (5 Cols) -->
+          <div class="lg:col-span-5 bg-charcoal-950 border border-gold-500/30 rounded-2xl p-6 space-y-5 shadow-inner">
+            
+            <div>
+              <span class="text-[11px] font-mono uppercase text-stone-400 tracking-wider">Gross Rental Yield</span>
+              <div id="gross-yield" class="font-serif text-3xl sm:text-4xl font-bold text-emerald-400 mt-0.5">4.67%</div>
+              <span class="text-xs text-stone-400">Net Yield: <strong id="net-yield" class="text-white">4.20%</strong></span>
+            </div>
+
+            <div class="space-y-2.5 pt-4 border-t border-white/10 text-xs">
+              <div class="flex justify-between text-stone-300">
+                <span>Annual Gross Rent:</span>
+                <span id="annual-gross" class="font-mono font-bold text-white">₹ 4,20,000</span>
+              </div>
+              <div class="flex justify-between text-stone-300">
+                <span>Annual Net Inflow:</span>
+                <span id="annual-net" class="font-mono font-bold text-emerald-400">₹ 3,78,000</span>
+              </div>
+              <div class="flex justify-between text-stone-300">
+                <span>Projected 5-Yr Capital Value:</span>
+                <span id="projected-value" class="font-mono font-bold text-gold-300">₹ 1,58,60,000</span>
+              </div>
+            </div>
+
+            <div class="p-3.5 rounded-xl bg-gold-500/10 border border-gold-500/20 text-xs text-gold-300 space-y-1">
+              <span class="font-bold font-mono uppercase tracking-wider block">5-Year Estimated Total Return</span>
+              <p>Combined Rental + Appreciation: <strong id="total-roi" class="text-white font-mono">~98.4% ROI</strong></p>
+            </div>
+
+            <div class="pt-2">
+              <a
+                href="tel:+917744009295"
+                class="w-full py-3 rounded-lg bg-gold-500 hover:bg-gold-400 text-charcoal-950 font-bold text-xs uppercase tracking-wider text-center block transition-colors"
+              >
+                Discuss High-Yield Inventory
+              </a>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Client-Side Script -->
+  <script is:inline>
+    const priceSlider = document.getElementById('inv-price');
+    const rentSlider = document.getElementById('monthly-rent');
+    const maintSlider = document.getElementById('maint-deduct');
+
+    const priceDisplay = document.getElementById('inv-price-display');
+    const rentDisplay = document.getElementById('rent-display');
+    const maintDisplay = document.getElementById('maint-display');
+
+    const grossYieldEl = document.getElementById('gross-yield');
+    const netYieldEl = document.getElementById('net-yield');
+    const annualGrossEl = document.getElementById('annual-gross');
+    const annualNetEl = document.getElementById('annual-net');
+    const projectedValEl = document.getElementById('projected-value');
+    const totalRoiEl = document.getElementById('total-roi');
+
+    function formatINR(val) {
+      return '₹ ' + Math.round(val).toLocaleString('en-IN');
+    }
+
+    function calculateYield() {
+      const price = parseFloat(priceSlider.value) || 0;
+      const rent = parseFloat(rentSlider.value) || 0;
+      const maint = parseFloat(maintSlider.value) || 0;
+
+      priceDisplay.textContent = formatINR(price);
+      rentDisplay.textContent = formatINR(rent) + ' / mo';
+      maintDisplay.textContent = formatINR(maint) + ' / yr';
+
+      const annualGross = rent * 12;
+      const annualNet = Math.max(0, annualGross - maint);
+
+      const grossYield = (annualGross / price) * 100;
+      const netYield = (annualNet / price) * 100;
+
+      // Projected capital growth at 12% CAGR over 5 years: price * (1.12)^5 = price * 1.7623
+      const projectedVal = price * Math.pow(1.12, 5);
+      const totalRentalInflow5Yr = annualNet * 5;
+      const totalGain = (projectedVal - price) + totalRentalInflow5Yr;
+      const totalRoi = (totalGain / price) * 100;
+
+      grossYieldEl.textContent = grossYield.toFixed(2) + '%';
+      netYieldEl.textContent = netYield.toFixed(2) + '%';
+      annualGrossEl.textContent = formatINR(annualGross);
+      annualNetEl.textContent = formatINR(annualNet);
+      projectedValEl.textContent = formatINR(projectedVal);
+      totalRoiEl.textContent = `~${totalRoi.toFixed(1)}% Total Return`;
+    }
+
+    priceSlider.addEventListener('input', calculateYield);
+    rentSlider.addEventListener('input', calculateYield);
+    maintSlider.addEventListener('input', calculateYield);
+
+    calculateYield();
+  </script>
+</Layout>
