@@ -344,6 +344,22 @@ export const WEST_PUNE_SLUGS = [
   { slug: 'bavdhan-residential-projects', name: 'Bavdhan Residential Projects & Kothrud Proximity' },
   { slug: 'sus-residential-projects', name: 'Sus Residential Projects & Pashan-Baner Ridge' },
   { slug: 'ravet-residential-projects', name: 'Ravet Residential Projects & Expressway Junction' },
+  { slug: 'pashan-residential-projects', name: 'Pashan Residential Projects & Lake Enclave' },
+  { slug: 'aundh-residential-projects', name: 'Aundh Residential Projects & High-Street Corridor' },
+  { slug: 'someshwarwadi-residential-projects', name: 'Someshwarwadi Real Estate & Valley Living' },
+  { slug: 'marunji-residential-projects', name: 'Marunji Real Estate & Hinjewadi Phase 2 SEZ' },
+  { slug: 'pimple-nilakh-residential-projects', name: 'Pimple Nilakh Luxury Flats & Riverside Bridge' },
+  { slug: 'pimple-saudagar-residential-projects', name: 'Pimple Saudagar Properties & Linear Garden' },
+  { slug: 'rahatani-residential-projects', name: 'Rahatani Real Estate & Wakad Annex Living' },
+  { slug: 'chinchwad-residential-projects', name: 'Chinchwad Residential Projects & Auto Cluster' },
+  { slug: 'nigdi-pradhikaran-real-estate', name: 'Nigdi Pradhikaran Planned Green Sector Living' },
+  { slug: 'akurdi-residential-projects', name: 'Akurdi Real Estate & D.Y. Patil University Hub' },
+  { slug: 'thergaon-residential-projects', name: 'Thergaon Properties & Aditya Birla Hospital' },
+  { slug: 'kiwale-residential-projects', name: 'Kiwale Properties & Mumbai Expressway Entry' },
+  { slug: 'mamurdi-residential-projects', name: 'Mamurdi Real Estate & Dehu Road Foothills' },
+  { slug: 'balewadi-high-street-real-estate', name: 'Balewadi High Street Dining & Luxury Living' },
+  { slug: 'kothrud-residential-projects', name: 'Kothrud Luxury Residences & Chandani Chowk Link' },
+  { slug: 'senapati-bapat-road-real-estate', name: 'Senapati Bapat Road Prime Living & ICC Tech Park' },
 ];
 
 export const LOCATIONS_PAGES: SitemapEntry[] = WEST_PUNE_SLUGS.map((item) => ({

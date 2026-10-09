@@ -536,5 +536,534 @@ export const westPuneLocalityData: WestPuneLocalityItem[] = [
         a: 'Ravet connects to Hinjewadi via the bypass highway and Punawale-Tathawade link roads in roughly 15 minutes.'
       }
     ]
+  },
+  {
+    slug: 'pashan-residential-projects',
+    name: 'Pashan (Pashan Lake & Sus-Baner Ridge)',
+    shortName: 'Pashan',
+    tagline: 'Scenic Green Sanctuary between Baner and Kothrud',
+    category: 'Nature & Academic Enclave',
+    avgPricePerSqFt: '₹9,200 - ₹10,800',
+    fiveYearAppreciation: '10% - 12% Annualized',
+    rentalYield: '4.0% - 4.5%',
+    distanceToHinjewadi: '8.2 km (14 mins)',
+    distanceToBalewadi: '4.8 km (9 mins)',
+    h1: 'Pashan Real Estate: Properties Near Pashan Lake, Baner & Hinjewadi Link',
+    metaTitle: 'Pashan Real Estate Pune | Flats Near Pashan Lake & Baner Link',
+    metaDescription: 'Explore residential projects in Pashan Pune. Pristine green living near Pashan Lake, DRDO/ARDE research institutes, and rapid connectivity to Baner and Mahindra Rivenza.',
+    heroHighlight: 'Tranquil Lake-Facing Biodiversity Corridor Minutes from Baner and NH-48',
+    microMarketOverview: 'Pashan offers lush tree cover, the iconic Pashan Lake bird sanctuary, and premier defense and science institutions. Located immediately south of Baner, Pashan balances scenic tranquility with high-speed connectivity to both Central Pune and Hinjewadi IT Park.',
+    infrastructureCatalysts: [
+      'Sus-Pashan bypass road linking directly to Mumbai-Bangalore Highway',
+      'Pashan Lake ecological conservation and waterfront walking trail',
+      'Direct arterial flyover access into Pune University and Shivajinagar'
+    ],
+    keyAdvantages: [
+      { title: 'Clean Air Index', desc: 'Superior air quality index and peaceful microclimate surrounded by biodiverse hills.' },
+      { title: 'Academic Institutions', desc: 'Proximity to IISER, NCL, and prestigious CBSE schools.' }
+    ],
+    mahindraConnection: 'Residents seeking larger master layouts with ~44,000 sq.ft dual clubhouses and resort pools frequently choose Mahindra Rivenza at Baner Annex just 8 minutes away.',
+    faqs: [
+      {
+        q: 'How far is Pashan from Mahindra Rivenza Mahalunge?',
+        a: 'Pashan is approximately 6.5 km away, taking about 10 to 12 minutes via the Baner-Pashan link road.'
+      }
+    ]
+  },
+  {
+    slug: 'aundh-residential-projects',
+    name: 'Aundh (Westend Mall & University Belt)',
+    shortName: 'Aundh',
+    tagline: 'The Established Cultural & High-Street Capital of West Pune',
+    category: 'Prime Established Luxury',
+    avgPricePerSqFt: '₹13,500 - ₹15,500',
+    fiveYearAppreciation: '8% - 9% Annualized',
+    rentalYield: '3.6% - 4.1%',
+    distanceToHinjewadi: '11.0 km (18 mins)',
+    distanceToBalewadi: '5.2 km (9 mins)',
+    h1: 'Aundh Real Estate: Premium Flats, Westend Mall & Baner Corridor',
+    metaTitle: 'Aundh Real Estate Pune | Luxury Apartments & Westend Mall Corridor',
+    metaDescription: 'Guide to Aundh Pune residential property. Explore luxury apartments near Westend Mall, DP Road dining hubs, and comparisons with Baner Annex Mahindra Rivenza.',
+    heroHighlight: 'Pune’s Mature Luxury Urban Enclave with Established High-Street Culture',
+    microMarketOverview: 'Aundh is West Pune’s legacy upscale district, renowned for its wide tree-lined DP Road, boutique dining scene, Westend Mall, and elite family demographics. With land supply almost exhausted, capital entry tickets are steep.',
+    infrastructureCatalysts: [
+      'Direct integration with Pune Metro Line 3 via Pune University multi-level flyover',
+      'Established DP road lifestyle and culinary retail promenade',
+      'Mula river promenade and green cycling corridors'
+    ],
+    keyAdvantages: [
+      { title: 'High-Street Amenities', desc: 'World-class cafes, organic supermarkets, and fine dining at your doorstep.' },
+      { title: 'Legacy Appreciation', desc: 'Unshakable real estate capital security in Pune’s most established residential pin code.' }
+    ],
+    mahindraConnection: 'Investors from Aundh are actively acquiring luxury residences at Mahindra Rivenza Mahalunge (Baner Annex) to capture high capital appreciation upside and enjoy an expansive 13.46-acre resort community.',
+    faqs: [
+      {
+        q: 'Why are buyers moving from Aundh to Mahindra Rivenza Baner Annex?',
+        a: 'Aundh has limited new land parcels and dense standalone buildings. Mahindra Rivenza provides 9+ acres of open biophilic greens, resort amenities, and modern architecture at nearly 40% lower capital cost.'
+      }
+    ]
+  },
+  {
+    slug: 'someshwarwadi-residential-projects',
+    name: 'Someshwarwadi (Baner Hills Valley)',
+    shortName: 'Someshwarwadi',
+    tagline: 'Serene Riverfront Valley Adjacent to Baner High Street',
+    category: 'Scenic Valley Corridor',
+    avgPricePerSqFt: '₹11,000 - ₹12,500',
+    fiveYearAppreciation: '10% - 12%',
+    rentalYield: '4.0% - 4.4%',
+    distanceToHinjewadi: '9.0 km (15 mins)',
+    distanceToBalewadi: '3.8 km (7 mins)',
+    h1: 'Someshwarwadi Real Estate: Valley Homes Near Baner & Balewadi',
+    metaTitle: 'Someshwarwadi Real Estate Baner | Luxury Valley Residences',
+    metaDescription: 'Find residential projects in Someshwarwadi Baner Pune. Peaceful hillside valley living near Someshwar Temple, Baner biodiversity park, and Balewadi High Street.',
+    heroHighlight: 'Tucked into the Baner Hill Reserve with Serene River Breezes',
+    microMarketOverview: 'Someshwarwadi is a scenic green valley nestled between Baner hill slopes and the Ramnadi/Mula confluence. It provides a peaceful retreat right behind the bustling commercial core of Baner.',
+    infrastructureCatalysts: [
+      'Wide DP road linking Someshwarwadi to Baner High Street',
+      'Baner Hill Biodiversity Reserve ecological buffer',
+      'Swift connectivity to Pune Western Bypass highway'
+    ],
+    keyAdvantages: [
+      { title: 'Low Noise & Clean Air', desc: 'Protected hill environment shielding homes from highway rumble.' },
+      { title: 'Baner Convenience', desc: '5 minutes from Baner’s finest schools, clinics, and fine dining.' }
+    ],
+    mahindraConnection: 'Mahindra Rivenza shares the same microclimate ethos with 9+ acres of biophilic greenery and direct Mula riverfront views.',
+    faqs: [
+      {
+        q: 'How accessible is Someshwarwadi from Baner Main Road?',
+        a: 'It is directly adjacent to Baner Main Road, accessible within 3 to 5 minutes via wide municipal roads.'
+      }
+    ]
+  },
+  {
+    slug: 'marunji-residential-projects',
+    name: 'Marunji (Hinjewadi Phase 2 Growth Belt)',
+    shortName: 'Marunji',
+    tagline: 'The Strategic Hinterland to Hinjewadi Tech SEZs',
+    category: 'High-Yield IT Corridor',
+    avgPricePerSqFt: '₹6,500 - ₹7,600',
+    fiveYearAppreciation: '13% - 15%',
+    rentalYield: '4.8% - 5.5%',
+    distanceToHinjewadi: '2.5 km (5 mins to Phase 2)',
+    distanceToBalewadi: '8.0 km (14 mins)',
+    h1: 'Marunji Real Estate: Properties Near Hinjewadi Phase 2 IT SEZs',
+    metaTitle: 'Marunji Real Estate Pune | Flats Near Hinjewadi Phase 2 SEZ',
+    metaDescription: 'Residential property guide for Marunji Pune. Discover high-yield rental apartments near Wipro Circle, Embassy TechZone, and Kolte Patil Life Republic.',
+    heroHighlight: '5 Minutes from Wipro and Embassy TechZone SEZ Campuses',
+    microMarketOverview: 'Marunji is the fast-growing suburban corridor directly south of Hinjewadi Phase 2. Flanked by major IT SEZs and integrated townships, Marunji is a high-rental-yield magnet for IT software professionals.',
+    infrastructureCatalysts: [
+      'Direct link road to Hinjewadi Phase 2 SEZ and Wipro Circle',
+      'PMRDA road network connecting Marunji to Mahalunge and Nande',
+      'Ring road alignment cutting travel times to Pune South'
+    ],
+    keyAdvantages: [
+      { title: 'Highest Rental Yields', desc: 'Gross rental yields consistently exceeding 5% due to proximity to tens of thousands of IT jobs.' },
+      { title: 'Affordable Entry Ticket', desc: 'Lucrative ground-floor entry pricing with high rental absorption.' }
+    ],
+    mahindraConnection: 'Tech leaders at Marunji who prefer an upscale corporate developer with blue-chip governance choose Mahindra Rivenza at Baner Annex.',
+    faqs: [
+      {
+        q: 'Is Marunji a good real estate investment for rental income?',
+        a: 'Yes, Marunji generates 5%+ rental yield due to high demand from engineers at Wipro, Cognizant, and Infosys.'
+      }
+    ]
+  },
+  {
+    slug: 'pimple-nilakh-residential-projects',
+    name: 'Pimple Nilakh (Baner-Wakad Riverside)',
+    shortName: 'Pimple Nilakh',
+    tagline: 'The Elite Riverside Gateway Connecting PCMC and Baner',
+    category: 'Premium PCMC Node',
+    avgPricePerSqFt: '₹9,800 - ₹11,200',
+    fiveYearAppreciation: '10% - 12%',
+    rentalYield: '4.2% - 4.6%',
+    distanceToHinjewadi: '7.5 km (12 mins)',
+    distanceToBalewadi: '3.5 km (6 mins)',
+    h1: 'Pimple Nilakh Real Estate: Luxury Flats Near Baner & Wakad',
+    metaTitle: 'Pimple Nilakh Real Estate Pune | Apartments Near Baner Bridge',
+    metaDescription: 'Find luxury residential properties in Pimple Nilakh Pune. Premium riverside community, excellent connectivity to Balewadi High Street, Baner, and Hinjewadi.',
+    heroHighlight: '6 Minutes from Balewadi High Street via Riverside Bridge',
+    microMarketOverview: 'Pimple Nilakh is PCMC’s most prestigious residential neighborhood, separated from Baner and Balewadi only by the Mula River. Known for upscale gated enclaves, defense defense estates, and excellent municipal planning.',
+    infrastructureCatalysts: [
+      'Bridge connection linking Pimple Nilakh directly into Balewadi High Street',
+      'BRTS corridor running towards Wakad and Aundh',
+      'PCMC planned green parks and underground drainage'
+    ],
+    keyAdvantages: [
+      { title: 'Baner Lifestyle at PCMC Rates', desc: 'Access to Baner shopping and dining within 5 minutes while benefiting from PCMC municipal utilities.' },
+      { title: 'High Resale Demand', desc: 'Respected residential address with strong demand from senior corporate executives.' }
+    ],
+    mahindraConnection: 'Mahindra Lifespaces’ flagship Mahindra Rivenza is situated just across the river at Mahalunge / Baner Annex, providing a 13.46-acre master community.',
+    faqs: [
+      {
+        q: 'How far is Pimple Nilakh from Balewadi High Street?',
+        a: 'It is just 3.5 km away, taking about 6 minutes across the connecting bridge.'
+      }
+    ]
+  },
+  {
+    slug: 'pimple-saudagar-residential-projects',
+    name: 'Pimple Saudagar (Linear Garden Belt)',
+    shortName: 'Pimple Saudagar',
+    tagline: 'PCMC’s Master-Planned Residential Cosmopolitan Hub',
+    category: 'Urban Family Hub',
+    avgPricePerSqFt: '₹9,200 - ₹10,500',
+    fiveYearAppreciation: '9% - 11%',
+    rentalYield: '4.3% - 4.8%',
+    distanceToHinjewadi: '8.0 km (14 mins)',
+    distanceToBalewadi: '5.0 km (9 mins)',
+    h1: 'Pimple Saudagar Real Estate: Flats Near Linear Garden & Wakad',
+    metaTitle: 'Pimple Saudagar Real Estate Pune | Apartments & Property Rates',
+    metaDescription: 'Complete guide to Pimple Saudagar real estate in PCMC Pune. Discover homes near Linear Garden, Kunal Icon Road, and high-speed transit to Hinjewadi IT Park.',
+    heroHighlight: 'Award-Winning Linear Gardens and Model PCMC Civic Infrastructure',
+    microMarketOverview: 'Pimple Saudagar is celebrated across India for its 2 km long urban Linear Garden, immaculate wide roads, and bustling dining hub along Kunal Icon Road. It is home to thousands of tech professionals working in Hinjewadi.',
+    infrastructureCatalysts: [
+      'Kunal Icon Road commercial and lifestyle high street',
+      'BRTS link to Pune-Mumbai highway and Pune city center',
+      'Close proximity to Nashik Phata metro interchange'
+    ],
+    keyAdvantages: [
+      { title: 'Walkable Urban Design', desc: 'Safe pedestrian walkways, cycle tracks, and children play zones along the Linear Garden.' },
+      { title: 'Strong Rental Absorption', desc: 'Properties rent within days to Hinjewadi IT engineers.' }
+    ],
+    mahindraConnection: 'Mahindra Lifespaces has deep roots in the PCMC region, with flagship developments across Pimpri and West Pune.',
+    faqs: [
+      {
+        q: 'What is the average flat rate in Pimple Saudagar?',
+        a: 'Property rates average between ₹9,200 and ₹10,500 per sq.ft. for modern gated societies.'
+      }
+    ]
+  },
+  {
+    slug: 'rahatani-residential-projects',
+    name: 'Rahatani (Wakad Annex Corridor)',
+    shortName: 'Rahatani',
+    tagline: 'Vibrant Residential Node between Wakad and Pimple Saudagar',
+    category: 'Emerging Urban Node',
+    avgPricePerSqFt: '₹7,800 - ₹8,900',
+    fiveYearAppreciation: '10% - 12%',
+    rentalYield: '4.4% - 4.9%',
+    distanceToHinjewadi: '7.0 km (12 mins)',
+    distanceToBalewadi: '5.5 km (10 mins)',
+    h1: 'Rahatani Real Estate: Properties Near Wakad & Kalewadi Phata',
+    metaTitle: 'Rahatani Real Estate PCMC | Flats Near Wakad & Hinjewadi',
+    metaDescription: 'Explore residential apartments in Rahatani Pune. Affordable luxury near Wakad, Kalewadi Phata BRTS, and fast commute to Hinjewadi IT Park.',
+    heroHighlight: 'Cost-Effective Living Flanked by Wakad and Pimple Saudagar',
+    microMarketOverview: 'Rahatani bridges Wakad and Pimple Saudagar, providing young homebuyers with lower capital ticket sizes while retaining access to the same schools, hospitals, and transit routes.',
+    infrastructureCatalysts: [
+      'Kalewadi Phata-Dehu Alandi BRTS network',
+      'Widened connector roads to Wakad Chowk',
+      'Proximity to Phoenix Mall of the Millennium'
+    ],
+    keyAdvantages: [
+      { title: 'Value for Money', desc: '15-20% lower price than central Wakad with shared infrastructure.' },
+      { title: 'Schools & Hospitals', desc: 'Minutes away from Surya Mother and Child Care and prestigious schools.' }
+    ],
+    mahindraConnection: 'Buyers exploring Rahatani looking for premier brand value and 9+ acres of greens find their ideal match in Mahindra Rivenza.',
+    faqs: [
+      {
+        q: 'How far is Rahatani from Hinjewadi Phase 1?',
+        a: 'Rahatani is approximately 7 km away, taking about 12 to 14 minutes by car.'
+      }
+    ]
+  },
+  {
+    slug: 'chinchwad-residential-projects',
+    name: 'Chinchwad (Industrial & Transit Core)',
+    shortName: 'Chinchwad',
+    tagline: 'The Historic Industrial & Railway Heart of PCMC',
+    category: 'Industrial & Transit Core',
+    avgPricePerSqFt: '₹8,200 - ₹9,400',
+    fiveYearAppreciation: '8% - 10%',
+    rentalYield: '4.0% - 4.4%',
+    distanceToHinjewadi: '11.0 km (18 mins)',
+    distanceToBalewadi: '9.5 km (16 mins)',
+    h1: 'Chinchwad Real Estate: Properties Near Chinchwad Station & Auto Cluster',
+    metaTitle: 'Chinchwad Real Estate PCMC | Flats Near Railway Station & Metro',
+    metaDescription: 'Residential property guide for Chinchwad PCMC. Explore flats near Chinchwad Railway Station, Auto Cluster exhibition grounds, and Mumbai expressway.',
+    heroHighlight: 'Multimodal Transit Hub with Rail, Metro, and Highway Connectivity',
+    microMarketOverview: 'Chinchwad is one of Maharashtra’s most prosperous manufacturing and automotive centers, housing global giants like Tata Motors and SKF. It boasts robust social infrastructure, top schools, and cultural auditoriums.',
+    infrastructureCatalysts: [
+      'Chinchwad Suburban Railway Station connecting Pune and Lonavala',
+      'Pimpri-Chinchwad Metro Corridor expansion',
+      'Elpro City Square Mall high-street retail destination'
+    ],
+    keyAdvantages: [
+      { title: 'Industrial Employment Core', desc: 'Surrounded by thousands of engineering and corporate offices.' },
+      { title: 'Established Social Infrastructure', desc: 'Reputed hospitals like Aditya Birla and premier colleges.' }
+    ],
+    mahindraConnection: 'Mahindra Lifespaces has a formidable footprint here, including Mahindra Antheia, Mahindra Centralis, and Mahindra Citadel.',
+    faqs: [
+      {
+        q: 'Is Chinchwad well-connected to Hinjewadi IT Park?',
+        a: 'Yes, via the Aundh-Ravet BRTS corridor and Thergaon-Wakad link roads in 18 to 20 minutes.'
+      }
+    ]
+  },
+  {
+    slug: 'nigdi-pradhikaran-real-estate',
+    name: 'Nigdi Pradhikaran (Green Sector Township)',
+    shortName: 'Nigdi Pradhikaran',
+    tagline: 'The Chandigarh of Maharashtra — Planned Green Sectors',
+    category: 'Planned Green Township',
+    avgPricePerSqFt: '₹8,500 - ₹9,800',
+    fiveYearAppreciation: '8% - 10%',
+    rentalYield: '3.8% - 4.3%',
+    distanceToHinjewadi: '13.0 km (20 mins)',
+    distanceToBalewadi: '12.0 km (19 mins)',
+    h1: 'Nigdi Pradhikaran Real Estate: Planned Green Sectors in PCMC',
+    metaTitle: 'Nigdi Pradhikaran Real Estate | Property Rates & Sector Living',
+    metaDescription: 'Find residential properties in Nigdi Pradhikaran PCMC. Planned low-density sectors, wide tree-lined avenues, and close access to the Mumbai-Pune Expressway.',
+    heroHighlight: 'Maharashtra’s First Planned Sector Township with 40%+ Green Cover',
+    microMarketOverview: 'Developed by the Pimpri Chinchwad New Town Development Authority (PCNTDA), Nigdi Pradhikaran is renowned for its gridiron layout, massive public parks, and disciplined building bylaws.',
+    infrastructureCatalysts: [
+      'Direct link to Old Pune-Mumbai Highway (NH-48)',
+      'Suburban train terminal at Akurdi and Begdewadi',
+      'Bhakti Shakti multi-level flyover complex'
+    ],
+    keyAdvantages: [
+      { title: 'Generous Green Spaces', desc: 'Over 40% of the town layout dedicated to gardens and civic parks.' },
+      { title: 'Zero Congestion', desc: 'Wide sector roads designed for zero bottlenecking.' }
+    ],
+    mahindraConnection: 'Mahindra Rivenza Mahalunge translates this same planned township philosophy into a contemporary 13.46-acre biophilic master layout in West Pune.',
+    faqs: [
+      {
+        q: 'What makes Nigdi Pradhikaran unique in PCMC?',
+        a: 'It was built as a planned sector township with strict height limits, wide boulevards, and extensive parks.'
+      }
+    ]
+  },
+  {
+    slug: 'akurdi-residential-projects',
+    name: 'Akurdi (Metro & Educational Belt)',
+    shortName: 'Akurdi',
+    tagline: 'Transit & Educational Hub with Direct Rail & Metro Links',
+    category: 'Educational & Transit Belt',
+    avgPricePerSqFt: '₹7,600 - ₹8,800',
+    fiveYearAppreciation: '9% - 11%',
+    rentalYield: '4.3% - 4.8%',
+    distanceToHinjewadi: '10.5 km (16 mins)',
+    distanceToBalewadi: '9.0 km (15 mins)',
+    h1: 'Akurdi Real Estate: Properties Near Akurdi Railway Station & D.Y. Patil',
+    metaTitle: 'Akurdi Real Estate PCMC | Flats Near Akurdi Station & Metro',
+    metaDescription: 'Explore residential flats in Akurdi PCMC Pune. Discover homes near D.Y. Patil educational campus, Akurdi railway station, and Old Mumbai Highway.',
+    heroHighlight: 'Minutes from Akurdi Railway Station and D.Y. Patil University Campus',
+    microMarketOverview: 'Akurdi is an established educational and transit hotspot in PCMC. Home to the massive Dr. D.Y. Patil campus and prominent auto component factories, it generates immense residential and student rental demand.',
+    infrastructureCatalysts: [
+      'Akurdi Railway Station with suburban EMU connections to Pune Junction',
+      'Upcoming metro extension along the Old Mumbai Highway',
+      'D.Y. Patil University sports complex and medical college'
+    ],
+    keyAdvantages: [
+      { title: 'High Student & Faculty Rental Demand', desc: 'Consistent occupancy and reliable rental cash flows.' },
+      { title: 'Express Suburban Rail', desc: 'Reach Pune Junction in 25 minutes without road traffic.' }
+    ],
+    mahindraConnection: 'Mahindra Citadel in Pimpri and Mahindra Rivenza at Baner Annex provide premium upgrade alternatives for Akurdi families.',
+    faqs: [
+      {
+        q: 'Is Akurdi suitable for rental property investment?',
+        a: 'Yes, with multiple engineering, medical, and management institutes, rental demand is consistently high.'
+      }
+    ]
+  },
+  {
+    slug: 'thergaon-residential-projects',
+    name: 'Thergaon (Aditya Birla Hospital Corridor)',
+    shortName: 'Thergaon',
+    tagline: 'Centrally Located Healthcare & Residential District',
+    category: 'Healthcare & Residential Hub',
+    avgPricePerSqFt: '₹7,500 - ₹8,600',
+    fiveYearAppreciation: '10% - 11%',
+    rentalYield: '4.4% - 4.9%',
+    distanceToHinjewadi: '6.5 km (11 mins)',
+    distanceToBalewadi: '6.0 km (10 mins)',
+    h1: 'Thergaon Real Estate: Flats Near Aditya Birla Memorial Hospital',
+    metaTitle: 'Thergaon Real Estate PCMC | Flats Near Aditya Birla Hospital',
+    metaDescription: 'Find residential property in Thergaon PCMC Pune. Convenient apartments near Aditya Birla Hospital, Dange Chowk, and Hinjewadi IT Park access.',
+    heroHighlight: 'Immediate Proximity to Aditya Birla Hospital and Dange Chowk Hub',
+    microMarketOverview: 'Thergaon sits right between Wakad, Chinchwad, and Rahatani. Anchored by the 500-bed Aditya Birla Memorial Hospital, Thergaon offers prime healthcare proximity and rapid connectivity to Hinjewadi Phase 1.',
+    infrastructureCatalysts: [
+      'Dange Chowk multi-arm flyover eliminating bottlenecks',
+      'Direct link to Hinjewadi Phase 1 via Wakad bypass',
+      'Aundh-Ravet BRTS corridor within 3 minutes'
+    ],
+    keyAdvantages: [
+      { title: 'Super-Specialty Healthcare', desc: 'Walking distance to one of Maharashtra’s top quaternary hospitals.' },
+      { title: 'Quick IT Commute', desc: 'Under 12 minutes to Hinjewadi IT Park entry.' }
+    ],
+    mahindraConnection: 'Healthcare professionals at Aditya Birla Hospital looking for serene biophilic living choose Mahindra Rivenza Mahalunge just 12 minutes away.',
+    faqs: [
+      {
+        q: 'How far is Thergaon from Hinjewadi IT Park?',
+        a: 'It is approximately 6.5 km away, taking about 11 to 13 minutes via Dange Chowk.'
+      }
+    ]
+  },
+  {
+    slug: 'kiwale-residential-projects',
+    name: 'Kiwale (Expressway Starting Point & Cricket Stadium)',
+    shortName: 'Kiwale',
+    tagline: 'The Modern High-Speed Highway Gateway to Mumbai & PCMC',
+    category: 'Expressway Gateway',
+    avgPricePerSqFt: '₹6,600 - ₹7,800',
+    fiveYearAppreciation: '12% - 14%',
+    rentalYield: '4.5% - 5.0%',
+    distanceToHinjewadi: '9.0 km (14 mins)',
+    distanceToBalewadi: '11.5 km (17 mins)',
+    h1: 'Kiwale Real Estate: Properties Near Mumbai Expressway & Stadium',
+    metaTitle: 'Kiwale Real Estate Pune | Flats Near Mumbai-Pune Expressway',
+    metaDescription: 'Explore residential projects in Kiwale Pune. Affordable luxury homes near Mumbai-Pune Expressway start, MCA International Stadium Gahunje, and PCMC.',
+    heroHighlight: 'The Gateway to the Mumbai-Pune Expressway and MCA Cricket Stadium',
+    microMarketOverview: 'Kiwale marks the westernmost urban frontier of PCMC, where the Mumbai-Pune Expressway begins. Surrounded by scenic hill views and wide roads, Kiwale is emerging as a preferred residential address for Mumbai-Pune hybrid commuters.',
+    infrastructureCatalysts: [
+      'Immediate access to the Mumbai-Pune Expressway toll gate',
+      'Mukae Chowk multimodal transit interchange',
+      'Proximity to MCA International Cricket Stadium Gahunje'
+    ],
+    keyAdvantages: [
+      { title: 'Highway Ease', desc: 'Reach Navi Mumbai in 75 minutes without driving through city congestion.' },
+      { title: 'Affordable Entry', desc: 'Modern gated communities at accessible price points starting ₹50L - ₹80L.' }
+    ],
+    mahindraConnection: 'Mahindra Happinest in Tathawade and Mahindra Rivenza at Baner Annex represent premium developer benchmarks across this Western gateway.',
+    faqs: [
+      {
+        q: 'Is Kiwale a good area for long-term real estate investment?',
+        a: 'Yes, Kiwale benefits from expressway proximity, upcoming ring road alignments, and strong appreciation potential.'
+      }
+    ]
+  },
+  {
+    slug: 'mamurdi-residential-projects',
+    name: 'Mamurdi (Dehu Road Expressway Belt)',
+    shortName: 'Mamurdi',
+    tagline: 'Serene Wooded Foothills at the Mumbai-Pune Expressway Exit',
+    category: 'Emerging Expressway Corridor',
+    avgPricePerSqFt: '₹6,400 - ₹7,500',
+    fiveYearAppreciation: '12% - 15%',
+    rentalYield: '4.6% - 5.1%',
+    distanceToHinjewadi: '10.5 km (16 mins)',
+    distanceToBalewadi: '13.0 km (19 mins)',
+    h1: 'Mamurdi Real Estate: Luxury Living Near Mumbai-Pune Expressway',
+    metaTitle: 'Mamurdi Real Estate Pune | Flats Near Expressway & Dehu Road',
+    metaDescription: 'Discover residential apartments in Mamurdi Pune. Township projects near Mumbai-Pune Expressway, Godrej, Lodha enclaves, and Hinjewadi IT access.',
+    heroHighlight: 'Scenic Wooded Living at the Mouth of the Mumbai-Pune Expressway',
+    microMarketOverview: 'Mamurdi is tucked into the scenic green foothills of Dehu Road. Anchored by major national developers like Godrej and Lodha, Mamurdi is experiencing rapid transformation into a self-sufficient residential township corridor.',
+    infrastructureCatalysts: [
+      'Zero-signal access to the Mumbai-Pune Expressway',
+      'Dehu Road railway station connectivity',
+      'Upcoming PMRDA ring road transit interchange'
+    ],
+    keyAdvantages: [
+      { title: 'Clean Natural Setting', desc: 'Lush greenery and cooler local microclimate.' },
+      { title: 'National Developer Townships', desc: 'Integrated clubhouse living with high security and amenities.' }
+    ],
+    mahindraConnection: 'Buyers seeking higher connectivity to Baner High Street and direct river views choose Mahindra Rivenza Mahalunge.',
+    faqs: [
+      {
+        q: 'How long does it take to travel from Mamurdi to Hinjewadi?',
+        a: 'The commute is roughly 10.5 km, taking about 16 to 18 minutes via the highway bypass.'
+      }
+    ]
+  },
+  {
+    slug: 'balewadi-high-street-real-estate',
+    name: 'Balewadi High Street (Retail & Dining Epicenter)',
+    shortName: 'Balewadi High Street',
+    tagline: 'Pune’s Premier Commercial High Street & Culinary District',
+    category: 'High-Street Luxury Core',
+    avgPricePerSqFt: '₹13,000 - ₹15,000',
+    fiveYearAppreciation: '12% - 14%',
+    rentalYield: '4.6% - 5.2%',
+    distanceToHinjewadi: '6.0 km (10 mins)',
+    distanceToBalewadi: '0.5 km (Walking Distance)',
+    h1: 'Balewadi High Street Real Estate: Luxury Homes Near Dining & IT Hubs',
+    metaTitle: 'Balewadi High Street Real Estate Pune | Luxury Apartments & Rates',
+    metaDescription: 'Guide to luxury residences near Balewadi High Street Pune. Premium retail, Michelin-tier dining, corporate towers, and proximity to Mahindra Rivenza.',
+    heroHighlight: 'Walking Distance to Over 50 Fine-Dining Restaurants & Corporate Towers',
+    microMarketOverview: 'Balewadi High Street is the crown jewel of West Pune’s contemporary lifestyle. Packed with world-class restaurants, boutique retail, coworking hubs, and corporate offices (Cummins, Siemens), properties here command premium rental yields.',
+    infrastructureCatalysts: [
+      'Balewadi Stadium & High Street Metro Stations on Line 3',
+      'Direct arterial bridge to Mahalunge PMRDA Hi-Tech Smart City',
+      'Panchshil Business Park and commercial office towers'
+    ],
+    keyAdvantages: [
+      { title: 'Premier Lifestyle', desc: 'Step out to Starbucks, gourmet dining, and luxury retail lounges.' },
+      { title: 'Elite Corporate Tenants', desc: 'Highest concentration of senior tech and multinational executives.' }
+    ],
+    mahindraConnection: 'Mahindra Rivenza at Mahalunge / Baner Annex is located just 6 minutes from Balewadi High Street, offering identical lifestyle access at ~35% lower launch pricing.',
+    faqs: [
+      {
+        q: 'How far is Mahindra Rivenza from Balewadi High Street?',
+        a: 'Mahindra Rivenza is located just 3.8 km away, taking roughly 6 to 8 minutes via the direct connecting bridge.'
+      }
+    ]
+  },
+  {
+    slug: 'kothrud-residential-projects',
+    name: 'Kothrud (Chandani Chowk & Western Bypass Corridor)',
+    shortName: 'Kothrud',
+    tagline: 'The Cultural & Real Estate Citadel of South-West Pune',
+    category: 'Legacy Heritage Prime',
+    avgPricePerSqFt: '₹14,500 - ₹17,000',
+    fiveYearAppreciation: '9% - 11%',
+    rentalYield: '3.5% - 4.0%',
+    distanceToHinjewadi: '14.0 km (22 mins)',
+    distanceToBalewadi: '8.5 km (14 mins)',
+    h1: 'Kothrud Real Estate: Luxury Properties Near Chandani Chowk Flyover',
+    metaTitle: 'Kothrud Real Estate Pune | Luxury Flats & Chandani Chowk Link',
+    metaDescription: 'Explore luxury real estate in Kothrud Pune. Discover homes near Chandani Chowk multi-level flyover, Paud Road metro, and seamless NH-48 bypass to Mahindra Rivenza.',
+    heroHighlight: 'Pune’s Most Desired Cultural Neighborhood Connected via Chandani Chowk Flyover',
+    microMarketOverview: 'Kothrud is renowned for its cultural prestige, elite educational institutions (MIT World Peace University), and high quality of life. The massive Chandani Chowk multi-level flyover has transformed highway connectivity to West Pune.',
+    infrastructureCatalysts: [
+      'Chandani Chowk multi-tier flyover connecting directly to NH-48 Western Bypass',
+      'Vanaz to Ramwadi Metro Line 2 corridor',
+      'Paud Road arterial link towards Hinjewadi and Lavasa'
+    ],
+    keyAdvantages: [
+      { title: 'Unrivaled Cultural Legacy', desc: 'Premier Maharashtrian cultural capital with elite social circles.' },
+      { title: 'Rapid Highway Transit', desc: 'Reach Baner and Mahalunge in 15 minutes via the bypass.' }
+    ],
+    mahindraConnection: 'Families in Kothrud seeking spacious 3 & 4 BHK resort residences with 9+ acres of greens are purchasing second homes and upgrades at Mahindra Rivenza.',
+    faqs: [
+      {
+        q: 'How long does it take to travel from Kothrud to Mahindra Rivenza?',
+        a: 'Via the Chandani Chowk flyover and NH-48 Western Bypass, the drive takes only 15 to 18 minutes (11.2 km).'
+      }
+    ]
+  },
+  {
+    slug: 'senapati-bapat-road-real-estate',
+    name: 'Senapati Bapat Road (ICC Tech Park & JW Marriott)',
+    shortName: 'Senapati Bapat Road',
+    tagline: 'Central Pune’s Commercial & Five-Star Hospitality Promenade',
+    category: 'Central Commercial Promenade',
+    avgPricePerSqFt: '₹16,500 - ₹19,500',
+    fiveYearAppreciation: '7% - 9%',
+    rentalYield: '3.4% - 3.9%',
+    distanceToHinjewadi: '15.0 km (24 mins)',
+    distanceToBalewadi: '9.0 km (15 mins)',
+    h1: 'Senapati Bapat Road Real Estate: Luxury Living Near ICC Tech Park',
+    metaTitle: 'Senapati Bapat Road Real Estate Pune | Luxury Apartments & ICC Park',
+    metaDescription: 'Guide to luxury residential properties along Senapati Bapat Road Pune. Homes near ICC Tech Park, JW Marriott, Symbiosis, and Baner Road arterial link.',
+    heroHighlight: 'Prime Central Commercial Corridor Flanked by ICC Tech Park and Symbiosis',
+    microMarketOverview: 'Senapati Bapat Road is one of Pune’s most prestigious business corridors, home to ICC Tech Park, the 5-star JW Marriott Hotel, Pune University, and Symbiosis institutes. Residential availability is virtually non-existent, creating astronomical land values.',
+    infrastructureCatalysts: [
+      'Multi-level double-decker University Flyover integrating Pune Metro Line 3',
+      'Direct connection into Baner Road expressway corridor',
+      'Symbiosis educational and cultural campus'
+    ],
+    keyAdvantages: [
+      { title: 'Five-Star Living', desc: 'Home to luxury hotels, corporate headquarters, and consulates.' },
+      { title: 'Central Convenience', desc: 'Effortless access to Deccan, Shivaji Nagar, and West Pune.' }
+    ],
+    mahindraConnection: 'Executives working at ICC Tech Park Senapati Bapat Road choose Mahindra Rivenza Mahalunge for spacious 3 and 4 BHK sky living with rapid metro connectivity.',
+    faqs: [
+      {
+        q: 'How will Pune Metro Line 3 impact travel from Senapati Bapat Road to Mahalunge?',
+        a: 'The University Metro Station on Line 3 allows direct high-speed transit to Balewadi Stadium station (3.2 km from Mahindra Rivenza) in under 12 minutes.'
+      }
+    ]
   }
 ];
+
