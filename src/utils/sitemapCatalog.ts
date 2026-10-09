@@ -565,7 +565,7 @@ export const METRO_PAGES: SitemapEntry[] = metroData.map((item) => ({
 export const WEB_STORIES_PAGES: SitemapEntry[] = [
   {
     url: `${BASE_URL}/web-stories/`,
-    title: 'Google Web Stories — Interior Design in Pune & KS Design Studio Hub',
+    title: 'Google Web Stories — Mahindra Rivenza Baner Annex & Pune Real Estate Market',
     category: 'stories',
     priority: 0.85,
     changefreq: 'daily',
