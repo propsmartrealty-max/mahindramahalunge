@@ -46,6 +46,7 @@ const subSitemaps = [
   { name: 'Project Comparisons', path: '/sitemap-compare.xml', desc: 'vs Godrej, VTP, Kolte Patil & Lodha' },
   { name: 'Mahindra Ecosystem', path: '/sitemap-projects.xml', desc: 'Mahindra Lifespaces Pune Portfolio' },
   { name: 'Articles & Guides', path: '/sitemap-articles.xml', desc: 'Market Research & Investment Analyses' },
+  { name: 'Google Web Stories', path: '/sitemap-web-stories.xml', desc: 'Visual Stories: Interiors in Pune & KS Design' },
   { name: 'Google Image Sitemap', path: '/sitemap-images.xml', desc: 'High-Res Elevation, CAD & Amenity Images' },
 ];
 ---
@@ -166,6 +167,9 @@ const subSitemaps = [
         </button>
         <button class="cat-tab px-4 py-2 rounded-lg text-xs font-semibold uppercase tracking-wider bg-charcoal-900 border border-white/10 text-stone-300 hover:text-white transition-all whitespace-nowrap cursor-pointer" data-cat="articles">
           Articles ({ALL_SITEMAP_ENTRIES.filter(e => e.category === 'articles').length})
+        </button>
+        <button class="cat-tab px-4 py-2 rounded-lg text-xs font-semibold uppercase tracking-wider bg-charcoal-900 border border-white/10 text-stone-300 hover:text-white transition-all whitespace-nowrap cursor-pointer" data-cat="stories">
+          Web Stories ({ALL_SITEMAP_ENTRIES.filter(e => e.category === 'stories').length})
         </button>
       </div>
 

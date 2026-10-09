@@ -15,6 +15,7 @@ export const GET: APIRoute = async () => {
     `${BASE_URL}/sitemap-hospitals.xml`,
     `${BASE_URL}/sitemap-metro.xml`,
     `${BASE_URL}/sitemap-nri.xml`,
+    `${BASE_URL}/sitemap-web-stories.xml`,
     `${BASE_URL}/sitemap-images.xml`,
   ];
 

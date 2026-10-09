@@ -11,7 +11,7 @@ export interface SitemapImage {
 export interface SitemapEntry {
   url: string;
   title: string;
-  category: 'core' | 'residences' | 'locations' | 'techparks' | 'schools' | 'hospitals' | 'metro' | 'nri' | 'connectivity' | 'comparisons' | 'projects' | 'articles';
+  category: 'core' | 'residences' | 'locations' | 'techparks' | 'schools' | 'hospitals' | 'metro' | 'nri' | 'stories' | 'connectivity' | 'comparisons' | 'projects' | 'articles';
   priority: number;
   changefreq: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly';
   lastmod?: string;
@@ -25,6 +25,7 @@ import { schoolData } from '../data/pSeoSchools';
 import { nriPortalsData } from '../data/pSeoNriPortals';
 import { hospitalData } from '../data/pSeoHospitals';
 import { metroData } from '../data/pSeoMetroStations';
+import { webStoriesData } from '../data/pSeoWebStories';
 
 
 // Shared Project Images for Google Image Sitemap Indexation
@@ -560,6 +561,34 @@ export const METRO_PAGES: SitemapEntry[] = metroData.map((item) => ({
   lastmod: CURRENT_DATE,
 }));
 
+// 13. GOOGLE WEB STORIES (/web-stories/*)
+export const WEB_STORIES_PAGES: SitemapEntry[] = [
+  {
+    url: `${BASE_URL}/web-stories/`,
+    title: 'Google Web Stories — Interior Design in Pune & KS Design Studio Hub',
+    category: 'stories',
+    priority: 0.85,
+    changefreq: 'daily',
+    lastmod: CURRENT_DATE,
+  },
+  ...webStoriesData.map((story) => ({
+    url: `${BASE_URL}/web-stories/${story.slug}/`,
+    title: `${story.title} — Visual Web Story`,
+    category: 'stories' as const,
+    priority: 0.85,
+    changefreq: 'weekly' as const,
+    lastmod: CURRENT_DATE,
+    images: [
+      {
+        loc: story.posterPortrait,
+        title: story.title,
+        caption: story.metaDescription,
+        geo: 'Pune, Maharashtra, India',
+      },
+    ],
+  })),
+];
+
 // ALL SITEMAP ENTRIES
 export const ALL_SITEMAP_ENTRIES: SitemapEntry[] = [
   ...CORE_PAGES,
@@ -570,6 +599,7 @@ export const ALL_SITEMAP_ENTRIES: SitemapEntry[] = [
   ...HOSPITALS_PAGES,
   ...METRO_PAGES,
   ...NRI_PAGES,
+  ...WEB_STORIES_PAGES,
   ...CONNECTIVITY_PAGES,
   ...COMPARISONS_PAGES,
   ...BRAND_PROJECTS_PAGES,
