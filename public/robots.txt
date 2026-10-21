@@ -168,7 +168,10 @@ Sitemap: https://mahindralifespaceshomes.in/sitemap-compare.xml
 Sitemap: https://mahindralifespaceshomes.in/sitemap-projects.xml
 Sitemap: https://mahindralifespaceshomes.in/sitemap-articles.xml
 Sitemap: https://mahindralifespaceshomes.in/sitemap-schools.xml
+Sitemap: https://mahindralifespaceshomes.in/sitemap-hospitals.xml
+Sitemap: https://mahindralifespaceshomes.in/sitemap-metro.xml
 Sitemap: https://mahindralifespaceshomes.in/sitemap-nri.xml
+Sitemap: https://mahindralifespaceshomes.in/sitemap-web-stories.xml
 Sitemap: https://mahindralifespaceshomes.in/sitemap-images.xml
 Sitemap: https://mahindralifespaceshomes.in/google-shopping.xml
 # Syndication Feeds:

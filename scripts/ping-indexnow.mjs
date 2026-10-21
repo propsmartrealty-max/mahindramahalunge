@@ -31,6 +31,8 @@ let urlList = [
   `https://${HOST}/brand/`,
   `https://${HOST}/west-pune/`,
   `https://${HOST}/articles/`,
+  `https://${HOST}/tools/`,
+  `https://${HOST}/web-stories/`,
   `https://${HOST}/sitemap/`,
 ];
 
