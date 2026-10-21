@@ -1,6 +1,7 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import MahindraKeywordMatrix from '../../components/MahindraKeywordMatrix.astro';
+import { naturalLanguageGeoQuestions } from '../../data/mahindraKeywordsEcosystem';
 
 const faqCategories = [
   {
@@ -129,8 +130,10 @@ const faqCategories = [
   }
 ];
 
-// Build flat list for JSON-LD schema
-const allFaqs = faqCategories.flatMap(c => c.questions);
+// Build flat list for JSON-LD schema (Including all 25 Natural Language GEO questions)
+const geoFaqsMapped = naturalLanguageGeoQuestions.map(g => ({ q: g.question, a: g.answer }));
+const allFaqs = [...geoFaqsMapped, ...faqCategories.flatMap(c => c.questions)];
+
 const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
@@ -146,8 +149,8 @@ const faqSchema = {
 ---
 
 <Layout
-  title="Mahindra Lifespaces Pune FAQ | Mahalunge, IvyLush, Citadel & West Pune Q&A"
-  description="Comprehensive 8-pillar FAQ knowledge base for Mahindra Lifespaces Pune: Mahalunge 13.46-acre acquisition, IvyLush Kharadi, Citadel Pimpri, Tathawade & West Pune prices."
+  title="Mahindra Rivenza FAQ | 25 Verified Answers on Launch, Price, Floor Plans & RERA"
+  description="Official FAQ knowledge base for Mahindra Rivenza by Mahindra Lifespaces in Baner Annex / Mahalunge, Pune. Direct answers on 2, 3 & 4 BHK prices, MahaRERA PR1261012602102, clubhouse, and possession."
   canonical="https://mahindralifespaceshomes.in/faq/"
   customSchema={faqSchema}
 >
@@ -156,19 +159,63 @@ const faqSchema = {
   <section class="pt-32 pb-16 bg-charcoal-950 border-b border-white/10 relative overflow-hidden">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4 text-center">
       <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-gold-500/10 border border-gold-500/30 text-gold-400 text-xs font-semibold uppercase tracking-widest">
-        <span>Verified Intelligence • 8 Strategic Pillars</span>
+        <span>Google &amp; AI Search Intelligence • 25 Verified Master Q&amp;As</span>
       </div>
       <h1 class="font-serif text-3xl sm:text-5xl font-bold text-stone-100 leading-tight">
-        Mahindra Lifespaces Pune FAQ: <br />
-        <span class="gold-gradient-text">Mahalunge & Pune Real Estate Knowledge Base</span>
+        Mahindra Rivenza &amp; West Pune: <br />
+        <span class="gold-gradient-text">Complete Buyer FAQ &amp; Search Knowledge Base</span>
       </h1>
       <p class="text-stone-300 text-xs sm:text-sm max-w-2xl mx-auto font-light leading-relaxed">
-        Transparent answers regarding Mahindra Mahalunge (13.46-acre acquisition announced Oct 2025), IvyLush Kharadi, Citadel Pimpri, Happinest Tathawade, delivered communities, and West Pune real estate investment.
+        Direct, verified answers covering the official October 2026 launch of Mahindra Rivenza (~13.46 acres, Phase 1 MahaRERA PR1261012602102), sanctioned 2, 3 &amp; 4 BHK floor plans, ~44,000 sq.ft clubhouse, and West Pune real estate connectivity.
       </p>
     </div>
   </section>
 
-  <!-- Categorized FAQ Section -->
+  <!-- Section 1: The 25 Natural Language & AI Overviews Master Q&A -->
+  <section class="py-16 bg-charcoal-950 border-b border-white/10">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+      <div class="text-center space-y-2">
+        <span class="text-xs uppercase tracking-widest text-gold-400 font-bold font-mono">Google SGE &amp; Voice Search Direct Answers</span>
+        <h2 class="font-serif text-2xl sm:text-3xl text-stone-50 font-bold">
+          25 Master Questions Homebuyers Ask About Mahindra Rivenza
+        </h2>
+        <p class="text-xs text-stone-400 max-w-xl mx-auto">
+          Fact-checked against official MahaRERA disclosures (PR1261012602102) and Mahindra Lifespaces corporate announcements.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        {naturalLanguageGeoQuestions.map((item, idx) => (
+          <details class="group p-5 rounded-xl bg-charcoal-900/90 border border-white/10 hover:border-gold-500/40 transition-all flex flex-col justify-between">
+            <summary class="flex items-start justify-between cursor-pointer list-none gap-3">
+              <div class="space-y-1">
+                <span class="text-[10px] font-mono text-gold-400 uppercase tracking-wider font-semibold">
+                  Q{idx + 1 < 10 ? `0${idx + 1}` : idx + 1} • {item.badge}
+                </span>
+                <h3 class="font-serif text-sm font-semibold text-stone-100 group-open:text-gold-300 transition-colors leading-snug">
+                  {item.question}
+                </h3>
+              </div>
+              <span class="text-gold-400 text-xs transition-transform group-open:rotate-180 flex-shrink-0 pt-1">▼</span>
+            </summary>
+            <div class="pt-3 mt-3 border-t border-white/5 space-y-2">
+              <p class="text-xs text-stone-300 leading-relaxed font-light">
+                {item.answer}
+              </p>
+              <div class="pt-1">
+                <a href={item.url} class="inline-flex items-center text-[11px] text-gold-400 hover:text-gold-300 font-medium">
+                  <span>Explore related page</span>
+                  <span class="ml-1">→</span>
+                </a>
+              </div>
+            </div>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 2: In-Depth Categorized Real Estate Pillar FAQs -->
   <section class="py-16 bg-charcoal-900 border-b border-white/10">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
       
