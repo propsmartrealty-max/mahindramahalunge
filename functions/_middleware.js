@@ -19,7 +19,7 @@ const APPLE_BOT_REGEX = /applebot/i;
 const SEARCH_BOT_REGEX = /googlebot|google-inspectiontool|bingbot|slurp|duckduckbot|baiduspider|yandexbot|sogou|exabot|applebot|storebot-google/i;
 const SOCIAL_BOT_REGEX = /facebookexternalhit|twitterbot|linkedinbot|whatsapp|telegrambot|pinterest|slackbot|discordbot/i;
 const AI_CRAWLER_REGEX = /gptbot|chatgpt-user|claudebot|anthropic-ai|perplexitybot|applebot|google-extended|oai-searchbot/i;
-const BAD_SCRAPER_REGEX = /bytespider|petalbot|mj12bot|dotbot|zoominfobot|semrushbot|ahrefsbot/i;
+const BAD_SCRAPER_REGEX = /bytespider|petalbot|mj12bot|dotbot|zoominfobot|semrushbot|ahrefsbot|aspiegelbot|seznam|megaindex|seekport|ccbot/i;
 
 // Enterprise Vulnerability Scanner & Exploit Toolkit Signatures
 const VULN_SCANNER_REGEX = /nikto|sqlmap|acunetix|nuclei|masscan|zgrab|gobuster|dirbuster|wprecon|jorgee|nessus|openvas|havij|nmap/i;
@@ -304,7 +304,7 @@ export async function onRequest(context) {
     "font-src 'self' https://fonts.gstatic.com data:",
     "img-src 'self' data: blob: https://cms.mahindralifespaces.com https://images.unsplash.com https://*.ampproject.org",
     "media-src 'self' https://cms.mahindralifespaces.com",
-    "connect-src 'self' https://api.indexnow.org https://cloudflareinsights.com https://wa.me",
+    "connect-src 'self' https://api.indexnow.org https://cloudflareinsights.com https://wa.me https://formsubmit.co",
     "frame-ancestors 'self'",
     "base-uri 'self'",
     "form-action 'self' https:",
@@ -331,6 +331,12 @@ export async function onRequest(context) {
     'public, max-age=0, s-maxage=86400, stale-while-revalidate=604800, stale-if-error=86400'
   );
   modifiedHeaders.set('Vary', 'User-Agent, Accept-Encoding');
+
+  // Edge Telemetry & Global Anycast PoP Headers
+  if (request.cf) {
+    if (request.cf.colo) modifiedHeaders.set('X-Edge-Pop', request.cf.colo);
+    if (request.cf.country) modifiedHeaders.set('X-Edge-Country', request.cf.country);
+  }
 
   return new Response(transformedResponse.body, {
     status: response.status,
