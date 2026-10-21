@@ -1,0 +1,368 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { floorPlansData, type FloorPlanUnit } from '../../data/pSeoFloorPlans';
+
+export async function getStaticPaths() {
+  return floorPlansData.map((unit) => ({
+    params: { slug: unit.slug },
+    props: { unit },
+  }));
+}
+
+interface Props {
+  unit: FloorPlanUnit;
+}
+
+const { unit } = Astro.props;
+
+const planSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Product",
+      "@id": `https://mahindralifespaceshomes.in/floor-plans/${unit.slug}/#product`,
+      "name": unit.name,
+      "description": unit.metaDescription,
+      "brand": {
+        "@type": "Brand",
+        "name": "Mahindra Lifespaces"
+      },
+      "category": `${unit.bhk} Residential Apartment`,
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "INR",
+        "price": unit.startingPriceInr.replace(/[^0-9.]/g, ''),
+        "priceValidUntil": "2027-12-31",
+        "availability": "https://schema.org/InStock",
+        "url": `https://mahindralifespaceshomes.in/floor-plans/${unit.slug}/`
+      }
+    },
+    {
+      "@type": "Apartment",
+      "@id": `https://mahindralifespaceshomes.in/floor-plans/${unit.slug}/#apartment`,
+      "name": unit.name,
+      "numberOfRooms": unit.bhk === '2 BHK' ? 2 : unit.bhk === '3 BHK' ? 3 : 4,
+      "floorSize": {
+        "@type": "QuantitativeValue",
+        "value": unit.reraCarpetSqFt,
+        "unitCode": "FTK"
+      },
+      "containedInPlace": {
+        "@type": "ApartmentComplex",
+        "name": "Mahindra Rivenza",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Survey No. 42/1, Nande-Mahalunge Road, Baner Annex",
+          "addressLocality": "Mahalunge",
+          "addressRegion": "Pune, Maharashtra",
+          "postalCode": "412115",
+          "addressCountry": "IN"
+        }
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": `https://mahindralifespaceshomes.in/floor-plans/${unit.slug}/#faq`,
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": `What is the carpet area and price of ${unit.name}?`,
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": `${unit.name} offers ${unit.reraCarpetSqFt} sq.ft. of sanctioned MahaRERA carpet area and ${unit.aggregateUsableSqFt} sq.ft. of aggregate usable space including a ${unit.balconySqFt} sq.ft. private balcony deck. Launch price starts from ${unit.startingPriceInr} with an all-inclusive estimated cost of approximately ${unit.approxTotalCostInr}.`
+          }
+        },
+        {
+          "@type": "Question",
+          "name": `Is ${unit.name} Vastu compliant?`,
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": `Yes, ${unit.name} features an ${unit.vastuOrientation} with ${unit.sunlightExposure}, maximizing positive energy and natural illumination throughout the day.`
+          }
+        },
+        {
+          "@type": "Question",
+          "name": `What is the estimated monthly home loan EMI for ${unit.name}?`,
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": `At prevailing home loan interest rates of 8.35%* for a 20-year tenure with 20% down payment, the approximate monthly EMI is ${unit.monthlyEmiApprox}. Buyers can also utilize Section 24(b) and Section 80C tax rebates.`
+          }
+        }
+      ]
+    }
+  ]
+};
+---
+
+<Layout
+  title={unit.metaTitle}
+  description={unit.metaDescription}
+  canonical={`https://mahindralifespaceshomes.in/floor-plans/${unit.slug}/`}
+  customSchema={planSchema}
+>
+  <main class="pt-32 pb-24 bg-charcoal-950 text-stone-300">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+      
+      <!-- Top Breadcrumb & Tag -->
+      <div class="space-y-4 border-b border-white/10 pb-8">
+        <div class="flex items-center space-x-3 text-xs text-gold-400 uppercase tracking-widest font-semibold">
+          <a href="/floor-plans/" class="hover:underline">← All Floor Plans</a>
+          <span>•</span>
+          <span>{unit.bhk} Luxury Collection</span>
+          <span>•</span>
+          <span>MahaRERA Sanctioned</span>
+        </div>
+
+        <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6">
+          <div class="space-y-2">
+            <h1 class="font-serif text-3xl sm:text-5xl font-bold text-stone-100 leading-tight">
+              {unit.name} <br />
+              <span class="gold-gradient-text text-2xl sm:text-4xl">{unit.variant} Layout</span>
+            </h1>
+            <p class="text-xs sm:text-sm text-stone-400 font-light">
+              MahaRERA PR1261012602102 &amp; PM1261012602103 • 13.46-Acre Landmark Community in Baner Annex, Mahalunge
+            </p>
+          </div>
+
+          <div class="bg-charcoal-900/90 border border-gold-500/40 rounded-2xl p-4 sm:p-5 text-right shrink-0">
+            <div class="text-[11px] text-stone-400 uppercase tracking-wider">Starting Launch Price</div>
+            <div class="font-serif text-2xl sm:text-3xl font-bold text-gold-400">{unit.startingPriceInr}</div>
+            <div class="text-[10px] text-emerald-400 font-medium">All-Inclusive: ~{unit.approxTotalCostInr}</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Key Metrics Strip -->
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+        <div class="bg-charcoal-900/70 p-4 rounded-xl border border-white/10 text-center">
+          <div class="text-[10px] text-stone-400 uppercase tracking-wider">RERA Carpet Area</div>
+          <div class="font-serif text-xl sm:text-2xl font-bold text-stone-100 mt-1">{unit.reraCarpetSqFt} <span class="text-xs font-sans text-gold-400">Sq.Ft.</span></div>
+          <div class="text-[10px] text-stone-400 font-mono mt-0.5">({(unit.reraCarpetSqFt * 0.092903).toFixed(1)} m²)</div>
+        </div>
+        <div class="bg-charcoal-900/70 p-4 rounded-xl border border-white/10 text-center">
+          <div class="text-[10px] text-stone-400 uppercase tracking-wider">Aggregate Usable Area</div>
+          <div class="font-serif text-xl sm:text-2xl font-bold text-gold-400 mt-1">{unit.aggregateUsableSqFt} <span class="text-xs font-sans text-stone-100">Sq.Ft.</span></div>
+          <div class="text-[10px] text-emerald-400 mt-0.5">Includes Balcony Deck</div>
+        </div>
+        <div class="bg-charcoal-900/70 p-4 rounded-xl border border-white/10 text-center">
+          <div class="text-[10px] text-stone-400 uppercase tracking-wider">Balcony Deck</div>
+          <div class="font-serif text-xl sm:text-2xl font-bold text-stone-100 mt-1">{unit.balconySqFt} <span class="text-xs font-sans text-gold-400">Sq.Ft.</span></div>
+          <div class="text-[10px] text-stone-400 mt-0.5">Private Outdoor Living</div>
+        </div>
+        <div class="bg-charcoal-900/70 p-4 rounded-xl border border-white/10 text-center">
+          <div class="text-[10px] text-stone-400 uppercase tracking-wider">Approximate EMI</div>
+          <div class="font-serif text-xl sm:text-2xl font-bold text-emerald-400 mt-1">{unit.monthlyEmiApprox}</div>
+          <div class="text-[10px] text-stone-400 mt-0.5">@ 8.35%* for 20 Yrs</div>
+        </div>
+      </div>
+
+      <!-- Blueprint Visual & Room Dimensions Grid -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        
+        <!-- Left: Architectural Schematic Card -->
+        <div class="lg:col-span-7 bg-charcoal-900/80 border border-white/10 rounded-2xl p-6 space-y-6">
+          <div class="flex items-center justify-between border-b border-white/10 pb-4">
+            <h2 class="font-serif text-xl font-bold text-stone-100">Architectural Layout Blueprint</h2>
+            <span class="text-xs bg-gold-500/10 text-gold-400 px-3 py-1 rounded-full border border-gold-500/20 font-mono">
+              Scale 1:50 Model
+            </span>
+          </div>
+
+          <!-- SVG Visual Representation -->
+          <div class="bg-[#0b0e14] p-6 rounded-xl border border-white/5 relative overflow-hidden flex items-center justify-center">
+            <svg viewBox="0 0 540 380" class="w-full h-auto max-h-[360px] text-stone-300">
+              <rect x="15" y="15" width="510" height="350" fill="#10151f" stroke="#c5a368" stroke-width="2" rx="4"/>
+              
+              <!-- Living & Dining -->
+              <rect x="35" y="35" width="260" height="170" fill="#161e2c" stroke="#334155" stroke-dasharray="3,3"/>
+              <text x="165" y="110" fill="#f1f5f9" font-family="Cinzel" font-size="13" font-weight="bold" text-anchor="middle">LIVING &amp; DINING</text>
+              <text x="165" y="130" fill="#94a3b8" font-size="11" text-anchor="middle">{unit.dimensions.livingDining}</text>
+
+              <!-- Balcony Deck -->
+              <rect x="295" y="35" width="105" height="110" fill="#1f2937" stroke="#c5a368" stroke-width="1.5"/>
+              <text x="347" y="85" fill="#c5a368" font-size="10" font-weight="bold" text-anchor="middle">BALCONY DECK</text>
+              <text x="347" y="102" fill="#e2e8f0" font-size="9" text-anchor="middle">{unit.dimensions.balconyDeck}</text>
+
+              <!-- Master Bedroom -->
+              <rect x="35" y="215" width="220" height="130" fill="#161e2c" stroke="#334155"/>
+              <text x="145" y="275" fill="#f1f5f9" font-family="Cinzel" font-size="12" font-weight="bold" text-anchor="middle">MASTER SUITE</text>
+              <text x="145" y="295" fill="#94a3b8" font-size="10" text-anchor="middle">{unit.dimensions.masterBedroom}</text>
+
+              <!-- Second Bedroom -->
+              <rect x="265" y="160" width="240" height="135" fill="#161e2c" stroke="#334155"/>
+              <text x="385" y="225" fill="#f1f5f9" font-family="Cinzel" font-size="12" font-weight="bold" text-anchor="middle">BEDROOM 02</text>
+              <text x="385" y="245" fill="#94a3b8" font-size="10" text-anchor="middle">{unit.dimensions.secondBedroom}</text>
+
+              <!-- Compass -->
+              <circle cx="475" cy="325" r="18" fill="#0b0e14" stroke="#c5a368"/>
+              <text x="475" y="322" fill="#c5a368" font-size="10" font-weight="bold" text-anchor="middle">▲</text>
+              <text x="475" y="335" fill="#c5a368" font-size="8" font-weight="bold" text-anchor="middle">N</text>
+            </svg>
+          </div>
+
+          <!-- Vastu & Orientation Features -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
+            <div class="bg-charcoal-950/60 p-4 rounded-xl border border-white/5 space-y-1">
+              <div class="text-[10px] text-gold-400 uppercase font-semibold">Vastu Orientation</div>
+              <div class="font-medium text-stone-200">{unit.vastuOrientation}</div>
+            </div>
+            <div class="bg-charcoal-950/60 p-4 rounded-xl border border-white/5 space-y-1">
+              <div class="text-[10px] text-gold-400 uppercase font-semibold">Natural Illumination</div>
+              <div class="font-medium text-stone-200">{unit.sunlightExposure}</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Room Dimensions Matrix -->
+        <div class="lg:col-span-5 space-y-6">
+          <div class="bg-charcoal-900/80 border border-white/10 rounded-2xl p-6 space-y-4">
+            <h2 class="font-serif text-xl font-bold text-stone-100">Room-By-Room Carpet Schedule</h2>
+            
+            <div class="divide-y divide-white/5 text-xs">
+              <div class="py-2.5 flex justify-between items-center">
+                <span class="text-stone-300">Grand Living &amp; Dining Salon</span>
+                <span class="font-mono text-gold-400 font-semibold">{unit.dimensions.livingDining}</span>
+              </div>
+              <div class="py-2.5 flex justify-between items-center">
+                <span class="text-stone-300">Master Bedroom Sanctuary</span>
+                <span class="font-mono text-gold-400 font-semibold">{unit.dimensions.masterBedroom}</span>
+              </div>
+              <div class="py-2.5 flex justify-between items-center">
+                <span class="text-stone-300">Second Bedroom Suite</span>
+                <span class="font-mono text-stone-200">{unit.dimensions.secondBedroom}</span>
+              </div>
+              {unit.dimensions.thirdBedroom && (
+                <div class="py-2.5 flex justify-between items-center">
+                  <span class="text-stone-300">Third Bedroom / Study</span>
+                  <span class="font-mono text-stone-200">{unit.dimensions.thirdBedroom}</span>
+                </div>
+              )}
+              {unit.dimensions.fourthBedroom && (
+                <div class="py-2.5 flex justify-between items-center">
+                  <span class="text-stone-300">Fourth Bedroom Suite</span>
+                  <span class="font-mono text-stone-200">{unit.dimensions.fourthBedroom}</span>
+                </div>
+              )}
+              <div class="py-2.5 flex justify-between items-center">
+                <span class="text-stone-300">Gourmet Chef's Kitchen</span>
+                <span class="font-mono text-stone-200">{unit.dimensions.kitchen}</span>
+              </div>
+              <div class="py-2.5 flex justify-between items-center">
+                <span class="text-stone-300">Outdoor Sundeck Terrace</span>
+                <span class="font-mono text-gold-400 font-semibold">{unit.dimensions.balconyDeck}</span>
+              </div>
+              <div class="py-2.5 flex justify-between items-center">
+                <span class="text-stone-300">En-suite Master Bath</span>
+                <span class="font-mono text-stone-200">{unit.dimensions.masterBathroom}</span>
+              </div>
+              <div class="py-2.5 flex justify-between items-center">
+                <span class="text-stone-300">Common Guest Bathroom</span>
+                <span class="font-mono text-stone-200">{unit.dimensions.commonBathroom}</span>
+              </div>
+            </div>
+
+            <!-- Download CAD Plan Button -->
+            <div class="pt-2">
+              <button
+                onclick={`window.dispatchEvent(new CustomEvent('open-lead-modal', { detail: { title: 'Download ${unit.name} Sanctioned CAD Blueprint', type: 'floorplan' } }))`}
+                class="w-full py-3.5 bg-gold-500 hover:bg-gold-400 text-charcoal-950 font-bold text-xs uppercase tracking-wider rounded-xl transition-all cursor-pointer shadow-lg hover:shadow-gold-500/20"
+              >
+                Download Sanctioned CAD Floor Plan (PDF)
+              </button>
+            </div>
+          </div>
+
+          <!-- Cost Sheet Breakdown -->
+          <div class="bg-charcoal-900/80 border border-white/10 rounded-2xl p-6 space-y-4">
+            <h3 class="font-serif text-lg font-bold text-stone-100">Estimated Cost &amp; Tax Structure</h3>
+            <div class="divide-y divide-white/5 text-xs font-mono">
+              <div class="py-2 flex justify-between">
+                <span class="text-stone-400 font-sans">Agreement Base Value</span>
+                <span class="text-stone-200">{unit.startingPriceInr}</span>
+              </div>
+              <div class="py-2 flex justify-between">
+                <span class="text-stone-400 font-sans">Stamp Duty (5%) + Metro Cess (1%) + LBT (1%)</span>
+                <span class="text-stone-200">7.0%</span>
+              </div>
+              <div class="py-2 flex justify-between">
+                <span class="text-stone-400 font-sans">Goods &amp; Services Tax (GST)</span>
+                <span class="text-stone-200">5.0%</span>
+              </div>
+              <div class="py-2 flex justify-between">
+                <span class="text-stone-400 font-sans">Govt. Registration Levy</span>
+                <span class="text-stone-200">₹30,000</span>
+              </div>
+              <div class="py-2 flex justify-between border-t border-gold-500/30 pt-3 text-gold-400 font-bold font-sans">
+                <span>Estimated All-Inclusive Cost</span>
+                <span>{unit.approxTotalCostInr}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Key Architectural Features -->
+      <div class="space-y-4">
+        <h2 class="font-serif text-2xl font-bold text-stone-100">Engineering Highlights for {unit.name}</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          {unit.keyFeatures.map((feat, idx) => (
+            <div class="bg-charcoal-900/60 p-4 rounded-xl border border-white/5 flex items-start space-x-3 text-xs">
+              <span class="text-gold-400 font-bold font-mono text-sm">0{idx + 1}.</span>
+              <span class="text-stone-300 leading-relaxed">{feat}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <!-- FAQ Section -->
+      <div class="space-y-4 border-t border-white/10 pt-8">
+        <h2 class="font-serif text-2xl font-bold text-stone-100">Frequently Asked Questions</h2>
+        <div class="space-y-4">
+          <div class="bg-charcoal-900/60 p-5 rounded-xl border border-white/5">
+            <h3 class="text-base font-semibold text-stone-200">What is the carpet area and price of {unit.name}?</h3>
+            <p class="text-xs text-stone-400 mt-2 leading-relaxed">
+              {unit.name} offers {unit.reraCarpetSqFt} sq.ft. of sanctioned MahaRERA carpet area and {unit.aggregateUsableSqFt} sq.ft. of aggregate usable space including a {unit.balconySqFt} sq.ft. private balcony deck. Launch price starts from {unit.startingPriceInr} with an all-inclusive estimated cost of approximately {unit.approxTotalCostInr}.
+            </p>
+          </div>
+          <div class="bg-charcoal-900/60 p-5 rounded-xl border border-white/5">
+            <h3 class="text-base font-semibold text-stone-200">Is {unit.name} Vastu compliant?</h3>
+            <p class="text-xs text-stone-400 mt-2 leading-relaxed">
+              Yes, {unit.name} features an {unit.vastuOrientation} with {unit.sunlightExposure}, maximizing positive energy and natural illumination throughout the day.
+            </p>
+          </div>
+          <div class="bg-charcoal-900/60 p-5 rounded-xl border border-white/5">
+            <h3 class="text-base font-semibold text-stone-200">What is the estimated monthly home loan EMI for {unit.name}?</h3>
+            <p class="text-xs text-stone-400 mt-2 leading-relaxed">
+              At prevailing home loan interest rates of 8.35%* for a 20-year tenure with 20% down payment, the approximate monthly EMI is {unit.monthlyEmiApprox}. Buyers can also utilize Section 24(b) and Section 80C tax rebates.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Explore Other Sanctioned Typologies -->
+      <div class="space-y-4 border-t border-white/10 pt-8">
+        <h2 class="font-serif text-2xl font-bold text-stone-100">Explore Other Sanctioned Configurations</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+          {floorPlansData
+            .filter((p) => p.slug !== unit.slug)
+            .slice(0, 6)
+            .map((item) => (
+              <a
+                href={`/floor-plans/${item.slug}/`}
+                class="bg-charcoal-900/60 p-4 rounded-xl border border-white/5 hover:border-gold-500/40 transition-all block group"
+              >
+                <div class="text-[10px] text-gold-400 uppercase font-semibold">{item.bhk} • {item.variant}</div>
+                <div class="text-sm font-serif font-bold text-stone-100 group-hover:text-gold-300 mt-1">{item.name}</div>
+                <div class="text-xs text-stone-400 mt-2 flex justify-between font-mono">
+                  <span>{item.aggregateUsableSqFt} Sq.Ft.</span>
+                  <span class="text-gold-400 font-semibold">{item.startingPriceInr}</span>
+                </div>
+              </a>
+            ))}
+        </div>
+      </div>
+
+    </div>
+  </main>
+</Layout>

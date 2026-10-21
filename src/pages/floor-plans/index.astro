@@ -1,107 +1,136 @@
 ---
 import Layout from '../../layouts/Layout.astro';
-import ResidenceSelector from '../../components/ResidenceSelector.astro';
-import MasterPlanViewer from '../../components/MasterPlanViewer.astro';
+import { floorPlansData } from '../../data/pSeoFloorPlans';
 
-const floorPlanSchema = {
+const indexSchema = {
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "Product",
-      "@id": "https://mahindralifespaceshomes.in/floor-plans/#product",
-      "name": "Mahindra Rivenza Official Master Layout & Floor Plan Blueprints",
-      "description": "Download official 13.46-acre master township layout and architectural floor plans for 2, 3 & 4 BHK residences at Mahindra Rivenza, Baner Annex / Mahalunge, Pune. MahaRERA PR1261012602102.",
-      "brand": {
-        "@type": "Brand",
-        "name": "Mahindra Lifespaces"
-      }
+      "@type": "ItemList",
+      "@id": "https://mahindralifespaceshomes.in/floor-plans/#itemlist",
+      "name": "Mahindra Rivenza Sanctioned Floor Plans & Typology Catalog",
+      "description": "Complete directory of official MahaRERA sanctioned 2, 3 & 4 BHK floor plans, carpet area breakdowns, and launch pricing at Mahindra Rivenza Baner Annex Mahalunge.",
+      "itemListElement": floorPlansData.map((unit, idx) => ({
+        "@type": "ListItem",
+        "position": idx + 1,
+        "name": unit.name,
+        "url": `https://mahindralifespaceshomes.in/floor-plans/${unit.slug}/`
+      }))
     }
   ]
 };
 ---
 
 <Layout
-  title="Mahindra Rivenza Floor Plans PDF | 2, 3 & 4 BHK Layouts, Pune"
-  description="Download official floor plans & 13.46-acre master layout for Mahindra Rivenza by Mahindra Lifespaces in Baner Annex, Mahalunge, Pune. Detailed 2, 3 & 4 BHK blueprints with RERA carpet areas from 635 to 1,465 sq.ft."
-  keywords="mahindra rivenza floor plans, mahindra rivenza master layout, mahindra rivenza 3 bhk floor plan, mahindra rivenza 4 bhk floor plan, mahindra rivenza 2 bhk floor plan, mahindra rivenza unit layout, floor plan pdf mahindra mahalunge"
+  title="Mahindra Rivenza Floor Plans | 2, 3 & 4 BHK Sanctioned Blueprints & Prices"
+  description="Explore official MahaRERA floor plans for Mahindra Rivenza Pune. 9 sanctioned typologies across 2, 3 & 4 BHK (635 to 1,651 sq.ft) starting from ₹90 Lakhs*."
   canonical="https://mahindralifespaceshomes.in/floor-plans/"
-  customSchema={floorPlanSchema}
+  customSchema={indexSchema}
 >
-  <!-- Hero Section -->
-  <section class="pt-32 pb-16 bg-charcoal-950 border-b border-white/10 relative overflow-hidden">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-5">
-      <div class="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full glass-pill text-gold-400 text-xs font-semibold uppercase tracking-widest">
-        <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
-        <span>Architectural Blueprints &amp; Master Layout • Phase 1 Release</span>
-      </div>
-      <h1 class="font-serif text-3xl sm:text-5xl lg:text-6xl font-bold text-stone-100 max-w-4xl leading-tight">
-        Mahindra Rivenza Floor Plans: <br />
-        <span class="gold-gradient-text">Master Layout &amp; 2, 3, 4 BHK Blueprints</span>
-      </h1>
-      <p class="text-stone-300 text-sm sm:text-base max-w-2xl font-light leading-relaxed">
-        Engineered with Mahindra Lifespaces' positive energy philosophy — featuring wide cross-ventilation fins, expansive balcony decks, and zero dead-corridor circulation across 13.46 prime acres.
-      </p>
-    </div>
-  </section>
-
-  <!-- Interactive Unit & Master Layout Selector -->
-  <section class="py-20 bg-charcoal-900 border-b border-white/10 relative">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
-      <div class="text-center max-w-2xl mx-auto space-y-2">
-        <span class="text-xs uppercase tracking-widest text-gold-400 font-bold">Interactive Explorer</span>
-        <h2 class="font-serif text-3xl text-stone-100 font-bold">Inspect Typology Blueprints &amp; Master Layout</h2>
-        <p class="text-xs sm:text-sm text-stone-300">
-          Switch between Master Layout, 2 BHK, 3 BHK &amp; 4 BHK to inspect dimensions, room allocations, and deck placements.
-        </p>
-      </div>
-      <ResidenceSelector />
-    </div>
-  </section>
-
-  <!-- 13.46-Acre Master Township Layout Section -->
-  <section class="py-20 bg-charcoal-950 border-b border-white/10 relative">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
-      <div class="text-center max-w-2xl mx-auto space-y-2">
-        <span class="text-xs uppercase tracking-widest text-gold-400 font-bold">Township Master Blueprint</span>
-        <h2 class="font-serif text-3xl text-stone-100 font-bold">13.46-Acre Zonal Master Layout</h2>
-        <p class="text-xs sm:text-sm text-stone-300">
-          Explore the five lifestyle pillars across 13.46 acres — ~44,000+ sq.ft clubhouse with sunken bar pool, 6 high-rise towers, and 9+ acres of contiguous vehicular-free greens.
+  <main class="pt-32 pb-24 bg-charcoal-950 text-stone-300">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+      
+      <!-- Top Header -->
+      <div class="text-center max-w-3xl mx-auto space-y-4">
+        <span class="text-xs uppercase tracking-widest text-gold-400 font-bold flex items-center justify-center gap-1.5">
+          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+          Official MahaRERA Sanctioned Catalog
+        </span>
+        <h1 class="font-serif text-3xl sm:text-5xl font-bold text-stone-100">
+          Mahindra Rivenza Floor Plans <br />
+          <span class="gold-gradient-text">2, 3 &amp; 4 BHK Luxury Layouts</span>
+        </h1>
+        <p class="text-xs sm:text-sm text-stone-400 leading-relaxed">
+          Detailed room-by-room dimensions, Vastu orientations, balcony specifications, and all-inclusive cost sheets across all 9 sanctioned configurations in Mahalunge, Baner Annex.
         </p>
       </div>
 
-      <MasterPlanViewer />
-    </div>
-  </section>
+      <!-- Typology Cards Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {floorPlansData.map((unit) => (
+          <div class="bg-charcoal-900/80 border border-white/10 rounded-2xl p-6 hover:border-gold-500/50 transition-all flex flex-col justify-between group shadow-xl">
+            <div class="space-y-4">
+              <div class="flex items-center justify-between">
+                <span class="px-2.5 py-1 rounded bg-gold-500/10 text-gold-400 border border-gold-500/20 text-[11px] font-semibold uppercase tracking-wider">
+                  {unit.bhk}
+                </span>
+                <span class="text-xs text-stone-400 font-mono">
+                  {unit.reraCarpetSqFt} Sq.Ft. Carpet
+                </span>
+              </div>
 
-  <!-- Quick Links to BHK & Master Plan Pages -->
-  <section class="py-16 bg-charcoal-900">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-        <a href="/master-plan/" class="glass-card p-6 rounded-2xl border border-white/10 hover:border-gold-500/50 transition-all space-y-3 block group">
-          <span class="text-[10px] uppercase tracking-wider text-emerald-400 font-bold">13.46 Acres</span>
-          <h3 class="font-serif text-lg font-bold text-stone-100 group-hover:text-gold-300 transition-colors">Master Layout</h3>
-          <p class="text-xs text-stone-400">9+ acres greens, ~44k sq.ft clubhouse with sunken bar pool, 6 Phase 1 towers.</p>
-          <span class="text-xs text-gold-400 font-semibold inline-block">Explore Master Layout →</span>
-        </a>
-        <a href="/residences/2-bhk/" class="glass-card p-6 rounded-2xl border border-white/10 hover:border-gold-500/50 transition-all space-y-3 block group">
-          <span class="text-[10px] uppercase tracking-wider text-gold-400 font-bold">From ₹90 Lakhs*</span>
-          <h3 class="font-serif text-lg font-bold text-stone-100 group-hover:text-gold-300 transition-colors">2 BHK Floor Plans</h3>
-          <p class="text-xs text-stone-400">4 Typologies: Premium, Luxury B, Luxury A &amp; Ultra Luxury E (635 – 747 sq.ft. RERA).</p>
-          <span class="text-xs text-gold-400 font-semibold inline-block">Explore 2 BHK →</span>
-        </a>
-        <a href="/residences/3-bhk/" class="glass-card p-6 rounded-2xl border border-white/10 hover:border-gold-500/50 transition-all space-y-3 block group">
-          <span class="text-[10px] uppercase tracking-wider text-gold-400 font-bold">From ₹1.31 Cr*</span>
-          <h3 class="font-serif text-lg font-bold text-stone-100 group-hover:text-gold-300 transition-colors">3 BHK Floor Plans</h3>
-          <p class="text-xs text-stone-400">3 Typologies: Deluxe C, Deluxe B &amp; Ultra Luxury B (882 – 1,065 sq.ft. RERA).</p>
-          <span class="text-xs text-gold-400 font-semibold inline-block">Explore 3 BHK →</span>
-        </a>
-        <a href="/residences/4-bhk/" class="glass-card p-6 rounded-2xl border border-white/10 hover:border-gold-500/50 transition-all space-y-3 block group">
-          <span class="text-[10px] uppercase tracking-wider text-gold-400 font-bold">From ₹2.20 Cr*</span>
-          <h3 class="font-serif text-lg font-bold text-stone-100 group-hover:text-gold-300 transition-colors">4 BHK Floor Plans</h3>
-          <p class="text-xs text-stone-400">2 Typologies: Luxury B &amp; Luxury A with on-site live show home (1,438 – 1,465 sq.ft. RERA).</p>
-          <span class="text-xs text-gold-400 font-semibold inline-block">Explore 4 BHK →</span>
-        </a>
+              <div>
+                <h2 class="font-serif text-xl font-bold text-stone-100 group-hover:text-gold-300 transition-colors">
+                  {unit.name}
+                </h2>
+                <div class="text-xs text-stone-400 mt-1 font-medium">{unit.variant}</div>
+              </div>
+
+              <div class="bg-charcoal-950/60 p-4 rounded-xl border border-white/5 space-y-2 text-xs font-mono">
+                <div class="flex justify-between">
+                  <span class="text-stone-400 font-sans">Aggregate Usable</span>
+                  <span class="text-stone-200 font-semibold">{unit.aggregateUsableSqFt} Sq.Ft.</span>
+                </div>
+                <div class="flex justify-between">
+                  <span class="text-stone-400 font-sans">Balcony Sundeck</span>
+                  <span class="text-gold-400 font-semibold">{unit.balconySqFt} Sq.Ft.</span>
+                </div>
+                <div class="flex justify-between">
+                  <span class="text-stone-400 font-sans">Vastu Direction</span>
+                  <span class="text-stone-300 font-sans text-[11px]">{unit.vastuOrientation.split(' ')[0]}</span>
+                </div>
+              </div>
+
+              <div class="pt-1">
+                <div class="text-[11px] text-stone-400 uppercase tracking-wider">Launch Price</div>
+                <div class="font-serif text-2xl font-bold text-gold-400">{unit.startingPriceInr}</div>
+                <div class="text-[10px] text-stone-400 mt-0.5">Approx EMI: {unit.monthlyEmiApprox}</div>
+              </div>
+            </div>
+
+            <div class="pt-6 border-t border-white/5 mt-6 flex gap-3">
+              <a
+                href={`/floor-plans/${unit.slug}/`}
+                class="flex-1 text-center py-2.5 px-4 bg-white/5 hover:bg-gold-500 hover:text-charcoal-950 text-stone-200 text-xs font-bold uppercase tracking-wider rounded-xl transition-all"
+              >
+                Inspect Layout
+              </a>
+              <button
+                onclick={`window.dispatchEvent(new CustomEvent('open-lead-modal', { detail: { title: 'Download ${unit.name} Blueprint', type: 'floorplan' } }))`}
+                class="px-3 py-2.5 border border-white/10 hover:border-gold-400 text-gold-400 text-xs rounded-xl transition-all cursor-pointer"
+                title="Download PDF"
+              >
+                📥
+              </button>
+            </div>
+          </div>
+        ))}
       </div>
+
+      <!-- Conversion Callout -->
+      <div class="bg-gradient-to-r from-gold-600/20 via-charcoal-900 to-gold-600/20 border border-gold-500/40 rounded-2xl p-6 sm:p-8 text-center space-y-4">
+        <h2 class="font-serif text-2xl sm:text-3xl font-bold text-stone-100">
+          Need a Custom Unit Comparison or Sanctioned PDF?
+        </h2>
+        <p class="text-xs sm:text-sm text-stone-300 max-w-xl mx-auto">
+          Our senior residential advisors provide side-by-side CAD comparisons, floor rise matrices, and all-inclusive bank approval estimates.
+        </p>
+        <div class="flex flex-wrap justify-center gap-4 pt-2">
+          <button
+            onclick="window.dispatchEvent(new CustomEvent('open-lead-modal', { detail: { title: 'Request Complete 9-Unit Floor Plan Dossier', type: 'brochure' } }))"
+            class="px-6 py-3 bg-gold-500 hover:bg-gold-400 text-charcoal-950 font-bold text-xs uppercase tracking-wider rounded-lg shadow-lg hover:shadow-gold-500/20 transition-all cursor-pointer"
+          >
+            Download Complete Floor Plan Dossier (PDF)
+          </button>
+          <a
+            href="tel:+917744009295"
+            class="px-6 py-3 border border-white/20 hover:border-gold-400 text-stone-200 hover:text-gold-400 font-semibold text-xs uppercase tracking-wider rounded-lg transition-all"
+          >
+            Advisory Desk: +91 7744009295
+          </a>
+        </div>
+      </div>
+
     </div>
-  </section>
+  </main>
 </Layout>

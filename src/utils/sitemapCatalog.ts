@@ -11,7 +11,7 @@ export interface SitemapImage {
 export interface SitemapEntry {
   url: string;
   title: string;
-  category: 'core' | 'residences' | 'locations' | 'techparks' | 'schools' | 'hospitals' | 'metro' | 'nri' | 'stories' | 'connectivity' | 'comparisons' | 'projects' | 'articles';
+  category: 'core' | 'residences' | 'locations' | 'techparks' | 'schools' | 'hospitals' | 'metro' | 'nri' | 'stories' | 'connectivity' | 'comparisons' | 'projects' | 'articles' | 'floorplans' | 'commute';
   priority: number;
   changefreq: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly';
   lastmod?: string;
@@ -27,6 +27,8 @@ import { hospitalData } from '../data/pSeoHospitals';
 import { metroData } from '../data/pSeoMetroStations';
 import { webStoriesData } from '../data/pSeoWebStories';
 import { westPuneLocalityData } from '../data/pSeoWestPuneLocalities';
+import { floorPlansData } from '../data/pSeoFloorPlans';
+import { commuteMatrixData } from '../data/pSeoCommuteMatrix';
 
 
 // Shared Project Images for Google Image Sitemap Indexation
@@ -667,6 +669,48 @@ export const WEB_STORIES_PAGES: SitemapEntry[] = [
   })),
 ];
 
+// 12. SANCTIONED FLOOR PLANS (/floor-plans/*)
+export const FLOOR_PLANS_PAGES: SitemapEntry[] = [
+  {
+    url: `${BASE_URL}/floor-plans/`,
+    title: 'Mahindra Rivenza Sanctioned Floor Plans & Blueprints Catalog',
+    category: 'floorplans',
+    priority: 0.90,
+    changefreq: 'daily',
+    lastmod: CURRENT_DATE,
+    images: PRIMARY_IMAGES.slice(0, 2),
+  },
+  ...floorPlansData.map((unit) => ({
+    url: `${BASE_URL}/floor-plans/${unit.slug}/`,
+    title: `${unit.name} Layout & Carpet Specifications`,
+    category: 'floorplans' as const,
+    priority: 0.88,
+    changefreq: 'weekly' as const,
+    lastmod: CURRENT_DATE,
+    images: PRIMARY_IMAGES.slice(0, 1),
+  })),
+];
+
+// 13. COMMUTE & TECH TRANSIT MATRICES (/commute/*)
+export const COMMUTE_PAGES: SitemapEntry[] = [
+  {
+    url: `${BASE_URL}/commute/`,
+    title: 'Mahindra Rivenza Commute Matrix & Transit Route Dossier',
+    category: 'commute',
+    priority: 0.85,
+    changefreq: 'weekly',
+    lastmod: CURRENT_DATE,
+  },
+  ...commuteMatrixData.map((dest) => ({
+    url: `${BASE_URL}/commute/${dest.slug}/`,
+    title: `Mahindra Rivenza to ${dest.destinationName} Travel Time`,
+    category: 'commute' as const,
+    priority: 0.80,
+    changefreq: 'weekly' as const,
+    lastmod: CURRENT_DATE,
+  })),
+];
+
 // ALL SITEMAP ENTRIES
 export const ALL_SITEMAP_ENTRIES: SitemapEntry[] = [
   ...CORE_PAGES,
@@ -682,6 +726,8 @@ export const ALL_SITEMAP_ENTRIES: SitemapEntry[] = [
   ...COMPARISONS_PAGES,
   ...BRAND_PROJECTS_PAGES,
   ...ARTICLES_PAGES,
+  ...FLOOR_PLANS_PAGES,
+  ...COMMUTE_PAGES,
 ];
 
 

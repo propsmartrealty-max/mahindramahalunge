@@ -1,0 +1,123 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { commuteMatrixData } from '../../data/pSeoCommuteMatrix';
+
+const indexSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ItemList",
+      "@id": "https://mahindralifespaceshomes.in/commute/#itemlist",
+      "name": "Mahindra Rivenza Commute & Connectivity Directory",
+      "description": "Comprehensive commute and transit intelligence directory for Mahindra Rivenza Mahalunge connecting Hinjewadi IT parks, Baner, Pune airport, and expressways.",
+      "itemListElement": commuteMatrixData.map((item, idx) => ({
+        "@type": "ListItem",
+        "position": idx + 1,
+        "name": `Mahindra Rivenza to ${item.destinationName}`,
+        "url": `https://mahindralifespaceshomes.in/commute/${item.slug}/`
+      }))
+    }
+  ]
+};
+---
+
+<Layout
+  title="Mahindra Rivenza Commute Matrix | Travel Times to Hinjewadi, Baner & Pune Hubs"
+  description="Explore transit times and kilometer distances from Mahindra Rivenza Mahalunge to Hinjewadi IT Park (4 mins), Balewadi High Street (7 mins), and Pune Airport."
+  canonical="https://mahindralifespaceshomes.in/commute/"
+  customSchema={indexSchema}
+>
+  <main class="pt-32 pb-24 bg-charcoal-950 text-stone-300">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+      
+      <!-- Top Header -->
+      <div class="text-center max-w-3xl mx-auto space-y-4">
+        <span class="text-xs uppercase tracking-widest text-gold-400 font-bold flex items-center justify-center gap-1.5">
+          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+          PMRDA Arterial &amp; Mula Bridge Intelligence
+        </span>
+        <h1 class="font-serif text-3xl sm:text-5xl font-bold text-stone-100">
+          Mahindra Rivenza Commute Matrix <br />
+          <span class="gold-gradient-text">Distance &amp; Travel Time Guide</span>
+        </h1>
+        <p class="text-xs sm:text-sm text-stone-400 leading-relaxed">
+          Discover how the upcoming 4-lane Mula River Bridge, 36m DP roads, and Pune Metro Line 3 shrink your daily office transit down to 4 minutes.
+        </p>
+      </div>
+
+      <!-- Commute Destinations Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {commuteMatrixData.map((item) => (
+          <div class="bg-charcoal-900/80 border border-white/10 rounded-2xl p-6 hover:border-gold-500/50 transition-all flex flex-col justify-between group shadow-xl">
+            <div class="space-y-4">
+              <div class="flex items-center justify-between">
+                <span class="px-2.5 py-1 rounded bg-gold-500/10 text-gold-400 border border-gold-500/20 text-[11px] font-semibold uppercase tracking-wider">
+                  {item.category}
+                </span>
+                <span class="text-xs text-stone-400 font-mono">
+                  {item.distanceKm} km
+                </span>
+              </div>
+
+              <div>
+                <h2 class="font-serif text-xl font-bold text-stone-100 group-hover:text-gold-300 transition-colors">
+                  {item.destinationName}
+                </h2>
+                <div class="text-xs text-stone-400 mt-1">{item.roadName}</div>
+              </div>
+
+              <div class="bg-charcoal-950/60 p-4 rounded-xl border border-white/5 space-y-2 text-xs font-mono">
+                <div class="flex justify-between">
+                  <span class="text-stone-400 font-sans">New Bridge Time</span>
+                  <span class="text-gold-400 font-bold">{item.postBridgeDriveTimeMins}</span>
+                </div>
+                <div class="flex justify-between">
+                  <span class="text-stone-400 font-sans">Old Wakad Detour</span>
+                  <span class="text-rose-300 line-through">{item.existingDriveTimeMins}</span>
+                </div>
+                <div class="flex justify-between">
+                  <span class="text-stone-400 font-sans">5-Yr Hours Saved</span>
+                  <span class="text-emerald-400 font-bold">{item.hoursSaved5Years} Hrs</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="pt-6 border-t border-white/5 mt-6">
+              <a
+                href={`/commute/${item.slug}/`}
+                class="block w-full text-center py-2.5 px-4 bg-white/5 hover:bg-gold-500 hover:text-charcoal-950 text-stone-200 text-xs font-bold uppercase tracking-wider rounded-xl transition-all"
+              >
+                Inspect Route &amp; Transit Dossier →
+              </a>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <!-- Conversion Callout -->
+      <div class="bg-gradient-to-r from-gold-600/20 via-charcoal-900 to-gold-600/20 border border-gold-500/40 rounded-2xl p-6 sm:p-8 text-center space-y-4">
+        <h2 class="font-serif text-2xl sm:text-3xl font-bold text-stone-100">
+          Ready to Reclaim 12+ Hours Every Week?
+        </h2>
+        <p class="text-xs sm:text-sm text-stone-300 max-w-xl mx-auto">
+          Mahindra Rivenza places you at the epicenter of Pune’s IT and lifestyle prosperity. Explore 2, 3 &amp; 4 BHK residences starting from ₹90 Lakhs*.
+        </p>
+        <div class="flex flex-wrap justify-center gap-4 pt-2">
+          <button
+            onclick="window.dispatchEvent(new CustomEvent('open-lead-modal', { detail: { title: 'Download West Pune Transit Map', type: 'brochure' } }))"
+            class="px-6 py-3 bg-gold-500 hover:bg-gold-400 text-charcoal-950 font-bold text-xs uppercase tracking-wider rounded-lg shadow-lg hover:shadow-gold-500/20 transition-all cursor-pointer"
+          >
+            Download West Pune Transit Map
+          </button>
+          <a
+            href="tel:+917744009295"
+            class="px-6 py-3 border border-white/20 hover:border-gold-400 text-stone-200 hover:text-gold-400 font-semibold text-xs uppercase tracking-wider rounded-lg transition-all"
+          >
+            Mobility Advisory: +91 7744009295
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </main>
+</Layout>

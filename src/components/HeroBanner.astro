@@ -28,7 +28,7 @@
         muted
         playsinline
         loop
-        preload="auto"
+        preload="none"
       >
         <source src="https://cms.mahindralifespaces.com/web/sites/default/files/2026-10/Mahalunge%20web%20Banner%2016_9_1%202.mp4" type="video/mp4" />
       </video>
@@ -38,7 +38,7 @@
         muted
         playsinline
         loop
-        preload="auto"
+        preload="none"
       >
         <source src="https://cms.mahindralifespaces.com/web/sites/default/files/2026-10/Mahalunge%20web%20Banner%209_16_1%203_mob.mp4" type="video/mp4" />
       </video>
@@ -248,19 +248,19 @@
     
     <!-- Custom Pagination with Animated Fill Progress -->
     <div class="flex items-center justify-center space-x-4 mb-4" id="hero-custom-pagination">
-      <button class="hero-page-btn active group flex items-center space-x-2 text-xs text-stone-300 cursor-pointer focus:outline-none" data-slide="0">
+      <button class="hero-page-btn active group flex items-center space-x-2 text-xs text-stone-300 cursor-pointer focus:outline-none min-h-[48px] px-2 py-3" data-slide="0" aria-label="Slide 1: Tranquility">
         <span class="page-number font-sans text-[11px] tracking-widest text-gold-400 group-hover:text-white transition-colors">01</span>
         <span class="page-bar w-10 sm:w-14 h-[2.5px] rounded-full bg-white/20 relative overflow-hidden block">
           <span class="page-fill-progress absolute inset-0 bg-gradient-to-r from-gold-400 to-amber-200"></span>
         </span>
       </button>
-      <button class="hero-page-btn group flex items-center space-x-2 text-xs text-stone-300 cursor-pointer focus:outline-none" data-slide="1">
+      <button class="hero-page-btn group flex items-center space-x-2 text-xs text-stone-300 cursor-pointer focus:outline-none min-h-[48px] px-2 py-3" data-slide="1" aria-label="Slide 2: A place to pause">
         <span class="page-number font-sans text-[11px] tracking-widest text-stone-400 group-hover:text-white transition-colors">02</span>
         <span class="page-bar w-10 sm:w-14 h-[2.5px] rounded-full bg-white/20 relative overflow-hidden block">
           <span class="page-fill-progress absolute inset-0 bg-gradient-to-r from-gold-400 to-amber-200"></span>
         </span>
       </button>
-      <button class="hero-page-btn group flex items-center space-x-2 text-xs text-stone-300 cursor-pointer focus:outline-none" data-slide="2">
+      <button class="hero-page-btn group flex items-center space-x-2 text-xs text-stone-300 cursor-pointer focus:outline-none min-h-[48px] px-2 py-3" data-slide="2" aria-label="Slide 3: Scenic views">
         <span class="page-number font-sans text-[11px] tracking-widest text-stone-400 group-hover:text-white transition-colors">03</span>
         <span class="page-bar w-10 sm:w-14 h-[2.5px] rounded-full bg-white/20 relative overflow-hidden block">
           <span class="page-fill-progress absolute inset-0 bg-gradient-to-r from-gold-400 to-amber-200"></span>
@@ -413,11 +413,15 @@
       const isMobile = window.innerWidth < 768;
       const videos = activeSlide.querySelectorAll<HTMLVideoElement>('video');
 
+      // On mobile devices, keep videos paused to preserve 4G bandwidth and guarantee sub-second LCP
+      if (isMobile) {
+        videos.forEach(v => v.pause());
+        return;
+      }
+
       videos.forEach(vid => {
         const isDesktopVid = vid.classList.contains('desktop-video');
-        const isMobileVid = vid.classList.contains('mobile-video');
-
-        if ((isMobile && isMobileVid) || (!isMobile && isDesktopVid)) {
+        if (isDesktopVid) {
           vid.currentTime = 0;
           const playPromise = vid.play();
           if (playPromise !== undefined) {
@@ -542,8 +546,14 @@
       }, { passive: true });
     }
 
-    // Start on first slide
-    playSlideVideo(0);
+    // Start on first slide (defer desktop video until after initial paint & LCP)
+    if (window.innerWidth >= 768) {
+      if ('requestIdleCallback' in window) {
+        (window as any).requestIdleCallback(() => playSlideVideo(0), { timeout: 2500 });
+      } else {
+        setTimeout(() => playSlideVideo(0), 1200);
+      }
+    }
     resetAutoplay();
   });
 </script>

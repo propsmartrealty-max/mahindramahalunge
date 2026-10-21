@@ -1,0 +1,265 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { commuteMatrixData, type CommuteDestination } from '../../data/pSeoCommuteMatrix';
+
+export async function getStaticPaths() {
+  return commuteMatrixData.map((item) => ({
+    params: { slug: item.slug },
+    props: { item },
+  }));
+}
+
+interface Props {
+  item: CommuteDestination;
+}
+
+const { item } = Astro.props;
+
+const commuteSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "TravelAction",
+      "@id": `https://mahindralifespaceshomes.in/commute/${item.slug}/#travel`,
+      "name": `Commute from Mahindra Rivenza to ${item.destinationName}`,
+      "fromLocation": {
+        "@type": "Place",
+        "name": "Mahindra Rivenza",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Survey No. 42/1, Nande-Mahalunge Road",
+          "addressLocality": "Mahalunge, Baner Annex",
+          "addressRegion": "Pune",
+          "postalCode": "412115",
+          "addressCountry": "IN"
+        }
+      },
+      "toLocation": {
+        "@type": "Place",
+        "name": item.destinationName
+      },
+      "distance": `${item.distanceKm} km`
+    },
+    {
+      "@type": "FAQPage",
+      "@id": `https://mahindralifespaceshomes.in/commute/${item.slug}/#faq`,
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": `What is the distance from Mahindra Rivenza to ${item.destinationName}?`,
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": `The distance from Mahindra Rivenza at Baner Annex (Mahalunge) to ${item.destinationName} is approximately ${item.distanceKm} km.`
+          }
+        },
+        {
+          "@type": "Question",
+          "name": `How long does it take to travel from Mahindra Rivenza to ${item.destinationName}?`,
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": `With the new 4-lane Mula River Bridge and PMRDA 36m DP road network, the travel time is just ${item.postBridgeDriveTimeMins} (compared to ${item.existingDriveTimeMins} via old detour routes). Peak morning office commute is approximately ${item.peakHoursDriveTime}.`
+          }
+        },
+        {
+          "@type": "Question",
+          "name": `How many hours of commute can a resident save over 5 years?`,
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": `Living at Mahindra Rivenza saves approximately ${item.hoursSaved5Years} hours of traffic commute over a 5-year working period, improving work-life balance and significantly reducing vehicle fuel expenditure.`
+          }
+        }
+      ]
+    }
+  ]
+};
+---
+
+<Layout
+  title={item.metaTitle}
+  description={item.metaDescription}
+  canonical={`https://mahindralifespaceshomes.in/commute/${item.slug}/`}
+  customSchema={commuteSchema}
+>
+  <main class="pt-32 pb-24 bg-charcoal-950 text-stone-300">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+      
+      <!-- Top Breadcrumbs & Header -->
+      <div class="space-y-4 border-b border-white/10 pb-8">
+        <div class="flex items-center space-x-3 text-xs text-gold-400 uppercase tracking-widest font-semibold">
+          <a href="/commute/" class="hover:underline">← All Commute Hubs</a>
+          <span>•</span>
+          <span>{item.category} Connectivity</span>
+          <span>•</span>
+          <span>PMRDA Corridor</span>
+        </div>
+
+        <h1 class="font-serif text-3xl sm:text-5xl font-bold text-stone-100 leading-tight">
+          Mahindra Rivenza to <br />
+          <span class="gold-gradient-text">{item.destinationName}</span>
+        </h1>
+
+        <p class="text-xs sm:text-sm text-stone-400 font-light leading-relaxed">
+          Authoritative transit dossier: Kilometer distance, peak vs off-peak drive duration, Mula River Bridge acceleration, and 5-year quality-of-life savings.
+        </p>
+      </div>
+
+      <!-- Quick Metrics Strip -->
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+        <div class="bg-charcoal-900/70 p-4 rounded-xl border border-white/10 text-center">
+          <div class="text-[10px] text-stone-400 uppercase tracking-wider">Direct Distance</div>
+          <div class="font-serif text-2xl font-bold text-stone-100 mt-1">{item.distanceKm} <span class="text-xs font-sans text-gold-400">km</span></div>
+          <div class="text-[10px] text-emerald-400 mt-0.5">Shortest Corridor</div>
+        </div>
+        <div class="bg-charcoal-900/70 p-4 rounded-xl border border-white/10 text-center">
+          <div class="text-[10px] text-stone-400 uppercase tracking-wider">New Bridge Travel Time</div>
+          <div class="font-serif text-2xl font-bold text-gold-400 mt-1">{item.postBridgeDriveTimeMins}</div>
+          <div class="text-[10px] text-stone-400 mt-0.5">4-Lane River Bridge</div>
+        </div>
+        <div class="bg-charcoal-900/70 p-4 rounded-xl border border-white/10 text-center">
+          <div class="text-[10px] text-stone-400 uppercase tracking-wider">Old Wakad Detour</div>
+          <div class="font-serif text-2xl font-bold text-rose-300 mt-1">{item.existingDriveTimeMins}</div>
+          <div class="text-[10px] text-rose-400 mt-0.5">Congested Chokepoint</div>
+        </div>
+        <div class="bg-charcoal-900/70 p-4 rounded-xl border border-white/10 text-center">
+          <div class="text-[10px] text-stone-400 uppercase tracking-wider">5-Year Life Saved</div>
+          <div class="font-serif text-2xl font-bold text-emerald-400 mt-1">{item.hoursSaved5Years} <span class="text-xs font-sans text-stone-100">Hrs</span></div>
+          <div class="text-[10px] text-emerald-300 mt-0.5">Zero Traffic Stress</div>
+        </div>
+      </div>
+
+      <!-- Detailed Route Analysis Table -->
+      <div class="space-y-4">
+        <h2 class="font-serif text-2xl font-bold text-stone-100">Transit Duration &amp; Peak Hour Matrix</h2>
+        <div class="overflow-x-auto rounded-xl border border-white/10">
+          <table class="w-full text-left text-xs sm:text-sm">
+            <thead class="bg-charcoal-900 text-gold-400 uppercase tracking-wider text-[11px] border-b border-white/10">
+              <tr>
+                <th class="p-4">Time Window</th>
+                <th class="p-4">Average Drive Time</th>
+                <th class="p-4">Key Transit Factors</th>
+                <th class="p-4 text-emerald-400">Mobility Efficiency</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-white/5 bg-charcoal-950/60 font-mono text-stone-300">
+              <tr>
+                <td class="p-4 font-sans font-medium text-stone-100">Morning Peak (8:30 AM – 10:30 AM)</td>
+                <td class="p-4 font-bold text-gold-400">{item.peakHoursDriveTime}</td>
+                <td class="p-4 font-sans text-stone-400">Direct signal-free 36m DP road across river bridge</td>
+                <td class="p-4 text-emerald-400 font-bold">92% On-Time Reliability</td>
+              </tr>
+              <tr>
+                <td class="p-4 font-sans font-medium text-stone-100">Evening Peak (6:00 PM – 8:30 PM)</td>
+                <td class="p-4 font-bold text-gold-400">{item.peakHoursDriveTime}</td>
+                <td class="p-4 font-sans text-stone-400">Bypasses Wakad Chowk and NH-48 bottleneck entirely</td>
+                <td class="p-4 text-emerald-400 font-bold">90% On-Time Reliability</td>
+              </tr>
+              <tr>
+                <td class="p-4 font-sans font-medium text-stone-100">Off-Peak &amp; Weekends</td>
+                <td class="p-4 font-bold text-emerald-400">{item.nonPeakDriveTime}</td>
+                <td class="p-4 font-sans text-stone-400">Swift cruising speed with Sahyadri hill scenic views</td>
+                <td class="p-4 text-emerald-400 font-bold">98% Flow Speed</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Infrastructure Route Dossier -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="bg-charcoal-900/80 p-6 rounded-2xl border border-white/10 space-y-3">
+          <h3 class="font-serif text-lg font-bold text-stone-100">Roadway &amp; Highway Alignment</h3>
+          <p class="text-xs text-stone-300 leading-relaxed">
+            {item.routeOverview}
+          </p>
+          <div class="pt-2 text-xs font-mono text-gold-400">
+            Primary Spine: {item.roadName}
+          </div>
+        </div>
+
+        <div class="bg-charcoal-900/80 p-6 rounded-2xl border border-white/10 space-y-3">
+          <h3 class="font-serif text-lg font-bold text-stone-100">Metro Line 3 Integration</h3>
+          <p class="text-xs text-stone-300 leading-relaxed">
+            {item.metroConnectivity}. The 23.3-km elevated Metro Line 3 connecting Hinjewadi to Shivajinagar provides an electric mass-transit alternative for daily office transit.
+          </p>
+          <div class="pt-2 text-xs font-mono text-emerald-400">
+            Target Audience: {item.targetProfessionals}
+          </div>
+        </div>
+      </div>
+
+      <!-- 5-Year Quality of Life Dividend -->
+      <div class="bg-charcoal-900/80 border border-gold-500/30 rounded-2xl p-6 sm:p-8 space-y-4">
+        <h2 class="font-serif text-xl sm:text-2xl font-bold text-stone-100">
+          The 5-Year Life Dividend: Why Living at Mahindra Rivenza Matters
+        </h2>
+        <p class="text-xs sm:text-sm text-stone-300 leading-relaxed">
+          For IT employees in Hinjewadi, standard daily commutes from Kothrud, Aundh, or Pimple Saudagar devour 60 to 90 minutes round-trip every working day. By choosing Mahindra Rivenza in Mahalunge:
+        </p>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-2">
+          <div class="bg-charcoal-950/60 p-4 rounded-xl border border-white/5 text-center">
+            <div class="font-serif text-xl font-bold text-gold-400">{item.hoursSaved5Years}+ Hours</div>
+            <div class="text-[11px] text-stone-400 mt-1">Reclaimed Family &amp; Health Time</div>
+          </div>
+          <div class="bg-charcoal-950/60 p-4 rounded-xl border border-white/5 text-center">
+            <div class="font-serif text-xl font-bold text-emerald-400">₹2.1 - ₹3.5 Lakhs</div>
+            <div class="text-[11px] text-stone-400 mt-1">Direct Vehicle Fuel &amp; Cab Savings</div>
+          </div>
+          <div class="bg-charcoal-950/60 p-4 rounded-xl border border-white/5 text-center">
+            <div class="font-serif text-xl font-bold text-stone-100">9+ Acres Greens</div>
+            <div class="text-[11px] text-stone-400 mt-1">Resort Atmosphere After Work</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ Section -->
+      <div class="space-y-4 border-t border-white/10 pt-8">
+        <h2 class="font-serif text-2xl font-bold text-stone-100">Frequently Asked Questions</h2>
+        <div class="space-y-4">
+          <div class="bg-charcoal-900/60 p-5 rounded-xl border border-white/5">
+            <h3 class="text-base font-semibold text-stone-200">What is the distance from Mahindra Rivenza to {item.destinationName}?</h3>
+            <p class="text-xs text-stone-400 mt-2 leading-relaxed">
+              The distance from Mahindra Rivenza at Baner Annex (Mahalunge) to {item.destinationName} is approximately {item.distanceKm} km.
+            </p>
+          </div>
+          <div class="bg-charcoal-900/60 p-5 rounded-xl border border-white/5">
+            <h3 class="text-base font-semibold text-stone-200">How long does it take to travel from Mahindra Rivenza to {item.destinationName}?</h3>
+            <p class="text-xs text-stone-400 mt-2 leading-relaxed">
+              With the new 4-lane Mula River Bridge and PMRDA 36m DP road network, the travel time is just {item.postBridgeDriveTimeMins} (compared to {item.existingDriveTimeMins} via old detour routes). Peak morning office commute is approximately {item.peakHoursDriveTime}.
+            </p>
+          </div>
+          <div class="bg-charcoal-900/60 p-5 rounded-xl border border-white/5">
+            <h3 class="text-base font-semibold text-stone-200">How many hours of commute can a resident save over 5 years?</h3>
+            <p class="text-xs text-stone-400 mt-2 leading-relaxed">
+              Living at Mahindra Rivenza saves approximately {item.hoursSaved5Years} hours of traffic commute over a 5-year working period, improving work-life balance and significantly reducing vehicle fuel expenditure.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Call to Action Banner -->
+      <div class="bg-gradient-to-r from-gold-600/20 via-charcoal-900 to-gold-600/20 border border-gold-500/40 rounded-2xl p-6 sm:p-8 text-center space-y-4">
+        <h2 class="font-serif text-2xl sm:text-3xl font-bold text-stone-100">
+          Make Your Daily Commute 4 Minutes Flat
+        </h2>
+        <p class="text-xs sm:text-sm text-stone-300 max-w-xl mx-auto">
+          Explore 2, 3 &amp; 4 BHK luxury residences at Mahindra Rivenza starting from ₹90 Lakhs*. Schedule a VIP site tour or download the full master plan infrastructure brief.
+        </p>
+        <div class="flex flex-wrap justify-center gap-4 pt-2">
+          <button
+            onclick={`window.dispatchEvent(new CustomEvent('open-lead-modal', { detail: { title: 'Download Commute Dossier to ${item.destinationName}', type: 'brochure' } }))`}
+            class="px-6 py-3 bg-gold-500 hover:bg-gold-400 text-charcoal-950 font-bold text-xs uppercase tracking-wider rounded-lg shadow-lg hover:shadow-gold-500/20 transition-all cursor-pointer"
+          >
+            Download Route &amp; Commute Map
+          </button>
+          <a
+            href="tel:+917744009295"
+            class="px-6 py-3 border border-white/20 hover:border-gold-400 text-stone-200 hover:text-gold-400 font-semibold text-xs uppercase tracking-wider rounded-lg transition-all"
+          >
+            Call Mobility Advisory: +91 7744009295
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </main>
+</Layout>
