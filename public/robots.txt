@@ -171,6 +171,8 @@ Sitemap: https://mahindralifespaceshomes.in/sitemap-schools.xml
 Sitemap: https://mahindralifespaceshomes.in/sitemap-hospitals.xml
 Sitemap: https://mahindralifespaceshomes.in/sitemap-metro.xml
 Sitemap: https://mahindralifespaceshomes.in/sitemap-nri.xml
+Sitemap: https://mahindralifespaceshomes.in/sitemap-floor-plans.xml
+Sitemap: https://mahindralifespaceshomes.in/sitemap-commute.xml
 Sitemap: https://mahindralifespaceshomes.in/sitemap-web-stories.xml
 Sitemap: https://mahindralifespaceshomes.in/sitemap-images.xml
 Sitemap: https://mahindralifespaceshomes.in/google-shopping.xml
