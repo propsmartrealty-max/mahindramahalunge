@@ -86,6 +86,16 @@
 /favicon.svg
   Cache-Control: public, max-age=31536000, immutable
 
+# Global Progressive Web App (PWA) Service Worker & Offline Resilience
+/sw.js
+  Content-Type: application/javascript; charset=utf-8
+  Cache-Control: public, max-age=0, must-revalidate
+  Service-Worker-Allowed: /
+
+/offline.html
+  Content-Type: text/html; charset=utf-8
+  Cache-Control: public, max-age=86400, stale-while-revalidate=604800
+
 # Search Engine Crawlers & Discovery
 /robots.txt
   Content-Type: text/plain; charset=utf-8

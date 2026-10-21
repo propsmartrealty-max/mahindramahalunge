@@ -135,7 +135,16 @@ const baseSchema = {
           "https://en.wikipedia.org/wiki/Mahindra_Group",
           "https://www.wikidata.org/wiki/Q1143899"
         ]
-      }
+      },
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "telephone": "+91-7744009295",
+          "contactType": "sales",
+          "areaServed": ["IN", "AE", "US", "GB", "SG", "QA", "SA", "KW", "AU", "DE"],
+          "availableLanguage": ["English", "Hindi", "Marathi"]
+        }
+      ]
     },
     {
       "@type": "ApartmentComplex",
@@ -164,7 +173,8 @@ const baseSchema = {
         "https://en.wikipedia.org/wiki/Mahindra_Lifespaces"
       ],
       "priceRange": "₹90 Lakhs - ₹2.55 Crore (USD $108,000 - $305,000 | AED 395,000 - 1,120,000)",
-      "currenciesAccepted": "INR, USD, AED, EUR, GBP, SGD",
+      "currenciesAccepted": "INR, USD, AED, EUR, GBP, SGD, QAR, SAR, KWD, AUD, CAD",
+      "availableLanguage": ["English", "Hindi", "Marathi"],
       "paymentAccepted": "Bank Transfer, Cheque, Home Loan, NRE/NRO Remittance",
       "hasMap": "https://maps.google.com/?q=18.562536,73.727373",
       "keywords": allMahindraKeywordPermutations.slice(0, 50).join(", "),
@@ -741,6 +751,15 @@ const baseSchema = {
           );
         }
       });
+
+      // Global Enterprise Service Worker Registration
+      if ('serviceWorker' in navigator && window.location.protocol === 'https:') {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js').catch((err) => {
+            console.debug('ServiceWorker registration notice:', err);
+          });
+        });
+      }
     </script>
   </body>
 </html>
