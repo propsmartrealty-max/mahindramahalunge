@@ -583,6 +583,9 @@ export const ARTICLES_SLUGS = [
   { slug: 'luxury-flats-under-2-crore-in-pune', name: 'Luxury Flats Under 2 Crore in Pune: 3 BHK Price Analysis' },
   { slug: 'flats-near-pune-metro-line-3', name: 'Flats Near Pune Metro Line 3 Hinjewadi-Shivajinagar' },
   { slug: 'ready-possession-vs-under-construction-pune', name: 'Ready Possession vs Under Construction Flats in Pune' },
+  { slug: 'mahindra-rivenza-cost-sheet-pricing-breakdown-2026', name: 'Mahindra Rivenza Cost Sheet Breakdown & All-Inclusive Pricing 2026' },
+  { slug: 'rent-vs-buy-in-hinjewadi-mahalunge-2026', name: 'Rent vs Buy in Hinjewadi-Mahalunge 2026: 10-Year Financial Model' },
+  { slug: 'mahindra-rivenza-rera-possession-milestones-escrow', name: 'Mahindra Rivenza MahaRERA Compliance, Milestones & Escrow Security' },
 ];
 
 export const ARTICLES_PAGES: SitemapEntry[] = ARTICLES_SLUGS.map((item) => ({

@@ -120,6 +120,24 @@ const articles = [
     title: 'Ready Possession vs Under Construction Flats in Pune: Which Offers Higher ROI in 2026?',
     pubDate: 'Tue, 21 Oct 2026 00:00:00 GMT',
     description: 'A comprehensive financial comparison of ready vs under-construction apartments in Pune, covering GST exemptions, pre-launch price discounts, and developer RERA escrow compliance.'
+  },
+  {
+    slug: 'mahindra-rivenza-cost-sheet-pricing-breakdown-2026',
+    title: 'Mahindra Rivenza Cost Sheet Breakdown 2026: All-Inclusive Pricing & Payment Milestones',
+    pubDate: 'Wed, 21 Oct 2026 00:00:00 GMT',
+    description: 'Comprehensive buyer breakdown of Mahindra Rivenza cost sheet in Baner Annex, Mahalunge, Pune. Detailed analysis of 2, 3 & 4 BHK base prices, 7% stamp duty, 5% GST, and CLP payment schedules.'
+  },
+  {
+    slug: 'rent-vs-buy-in-hinjewadi-mahalunge-2026',
+    title: 'Rent vs Buy in Hinjewadi-Mahalunge 2026: 10-Year Financial Model for IT Professionals',
+    pubDate: 'Wed, 21 Oct 2026 00:00:00 GMT',
+    description: 'Comprehensive 10-year mathematical analysis comparing renting in Hinjewadi against buying a 2 BHK apartment at Mahindra Rivenza Baner Annex. Analyzes rental inflation and equity accumulation.'
+  },
+  {
+    slug: 'mahindra-rivenza-rera-possession-milestones-escrow',
+    title: 'Mahindra Rivenza MahaRERA Compliance, Possession Milestones & Escrow Security',
+    pubDate: 'Wed, 21 Oct 2026 00:00:00 GMT',
+    description: 'Exhaustive legal and regulatory evaluation of Mahindra Rivenza by Mahindra Lifespaces at Baner Annex (Mahalunge), Pune. Verifies MahaRERA numbers PR1261012602102 and PM1261012602103.'
   }
 ];
 
