@@ -397,6 +397,14 @@
         errorEl.classList.add('hidden');
       }
 
+      // Extract UTM and source attribution parameters
+      const urlParams = new URLSearchParams(window.location.search);
+      const utmSource = urlParams.get('utm_source') || 'direct/organic';
+      const utmMedium = urlParams.get('utm_medium') || 'web';
+      const utmCampaign = urlParams.get('utm_campaign') || 'mahindra-rivenza-ecosystem';
+      const utmContent = urlParams.get('utm_content') || '';
+      const utmTerm = urlParams.get('utm_term') || '';
+
       // Store lead securely in localStorage
       const leadPayload = {
         name: nameVal,
@@ -406,6 +414,13 @@
         purpose: selectedPurpose,
         service: selectedService,
         project: 'Mahindra Rivenza Baner Annex Mahalunge',
+        utmSource,
+        utmMedium,
+        utmCampaign,
+        utmContent,
+        utmTerm,
+        landingPage: window.location.href,
+        referrer: document.referrer || 'direct',
         createdAt: new Date().toISOString()
       };
 
@@ -435,6 +450,8 @@
             Purpose: selectedPurpose,
             Service: selectedService,
             Project: 'Mahindra Rivenza, Baner Annex, Mahalunge, Pune',
+            Campaign: `${utmSource} / ${utmMedium} / ${utmCampaign}`,
+            LandingPage: window.location.href,
             SubmittedAt: new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' })
           })
         }).catch((err) => console.warn('Form dispatch background sync:', err));
