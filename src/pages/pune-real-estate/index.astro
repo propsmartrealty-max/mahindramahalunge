@@ -1,0 +1,239 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { westPuneLocalityData } from '../../data/pSeoWestPuneLocalities';
+
+const marketSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "CollectionPage",
+      "@id": "https://mahindralifespaceshomes.in/pune-real-estate/#webpage",
+      "url": "https://mahindralifespaceshomes.in/pune-real-estate/",
+      "name": "Pune Real Estate Market 2026: Property Prices, Micro-Markets & Investment Guide",
+      "description": "Comprehensive authority guide to Pune real estate in 2026. Explore property price trends across 44 micro-markets, rental yields, PMRDA infrastructure, and Mahindra Rivenza Baner Annex.",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Mahindra Rivenza",
+        "url": "https://mahindralifespaceshomes.in/"
+      }
+    },
+    {
+      "@type": "Table",
+      "about": "Pune Real Estate Micro-Market Price Index 2026"
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://mahindralifespaceshomes.in/pune-real-estate/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Which area in Pune offers the highest real estate capital appreciation in 2026?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Mahalunge (Baner Annex) and the Nande corridor lead Pune with 12% to 15% annualized capital appreciation, driven by PMRDA Town Planning Scheme 1, the Hinjewadi-Mahalunge river bridge, and 36m wide DP road infrastructure."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the average residential property price per sq.ft. in Pune in 2026?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Property prices in Pune range from ₹6,800 - ₹8,500/sq.ft. in high-growth tech corridors (Mahalunge, Tathawade, Ravet), ₹9,500 - ₹13,500/sq.ft. in established hubs (Baner, Wakad, Balewadi), and ₹15,000 - ₹22,000+/sq.ft. in central luxury enclaves (Model Colony, Kothrud, Senapati Bapat Road)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why is West Pune the most preferred real estate investment destination in Maharashtra?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "West Pune houses Rajiv Gandhi Infotech Park in Hinjewadi (employing over 400,000 tech professionals), direct access to Mumbai-Pune Expressway, Pune Metro Line 3, and top international schools, generating consistent 4.5% to 5.4% rental yields and rapid capital gains."
+          }
+        }
+      ]
+    }
+  ]
+};
+
+const corridors = [
+  { name: "All Corridors", cat: "all" },
+  { name: "West Pune IT Hub", cat: "High-Growth Flagship Corridor" },
+  { name: "Tech Fringe & Expressway", cat: "High-Growth Tech Corridor" },
+  { name: "Expressway Gateway", cat: "Expressway Gateway Corridor" },
+  { name: "Central Elite Enclaves", cat: "Central Elite Enclave" },
+  { name: "East Pune Tech Mega-Hub", cat: "East Pune IT Mega-Hub" }
+];
+---
+
+<Layout
+  title="Pune Real Estate Market 2026 | Property Prices & Investment Guide"
+  description="Definitive guide to Pune real estate market in 2026. Micro-market rates across 44 localities, 5-year capital appreciation, PMRDA TP schemes & Mahindra Rivenza."
+  canonical="https://mahindralifespaceshomes.in/pune-real-estate/"
+  customSchema={marketSchema}
+>
+  <!-- Hero Section -->
+  <section class="pt-32 pb-16 bg-charcoal-950 border-b border-white/10 relative overflow-hidden">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-5">
+      <div class="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-gold-500/10 border border-gold-500/30 text-gold-400 text-xs font-semibold uppercase tracking-widest">
+        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+        <span>Market Intelligence • 2026 Comprehensive Evaluation</span>
+      </div>
+      
+      <h1 class="font-serif text-3xl sm:text-5xl lg:text-6xl font-bold text-white tracking-tight leading-tight">
+        Pune Real Estate Market: <br />
+        <span class="gold-gradient-text">Micro-Market Price Index &amp; Growth Guide</span>
+      </h1>
+      
+      <p class="text-stone-300 text-base sm:text-lg max-w-3xl leading-relaxed">
+        Authoritative evaluation of real estate valuations, rental yields, and infrastructure catalysts across 44 micro-markets in Pune, PCMC, and West Pune. Discover why Baner Annex (Mahalunge) is the epicenter of capital growth.
+      </p>
+
+      <!-- Key Market Macro Metrics -->
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-4">
+        <div class="bg-white/5 border border-white/10 rounded-xl p-4 backdrop-blur-sm">
+          <div class="text-xs text-stone-400 uppercase tracking-wider font-mono">Micro-Markets</div>
+          <div class="text-2xl font-bold text-gold-300 mt-1">{westPuneLocalityData.length} Analyzed</div>
+        </div>
+        <div class="bg-white/5 border border-white/10 rounded-xl p-4 backdrop-blur-sm">
+          <div class="text-xs text-stone-400 uppercase tracking-wider font-mono">Avg Tech Yield</div>
+          <div class="text-2xl font-bold text-emerald-400 mt-1">4.5% - 5.4%</div>
+        </div>
+        <div class="bg-white/5 border border-white/10 rounded-xl p-4 backdrop-blur-sm">
+          <div class="text-xs text-stone-400 uppercase tracking-wider font-mono">Hinjewadi Techies</div>
+          <div class="text-2xl font-bold text-sky-400 mt-1">400,000+</div>
+        </div>
+        <div class="bg-white/5 border border-white/10 rounded-xl p-4 backdrop-blur-sm">
+          <div class="text-xs text-stone-400 uppercase tracking-wider font-mono">Top Growth Corridor</div>
+          <div class="text-sm font-semibold text-white mt-1">Mahalunge Baner Annex</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Locality Directory Section -->
+  <section class="py-16 bg-[#0c1017]">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+      
+      <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-white/10 pb-6">
+        <div>
+          <span class="text-xs font-mono uppercase text-gold-400 tracking-wider font-bold">Pune Property Price Index</span>
+          <h2 class="font-serif text-2xl sm:text-3xl font-bold text-white mt-1">Explore 44 Pune &amp; PCMC Localities</h2>
+        </div>
+        <!-- Search Filter Input -->
+        <div class="relative w-full md:w-72">
+          <input
+            type="text"
+            id="locality-search"
+            placeholder="Search locality (e.g. Baner, Wakad)..."
+            class="w-full px-4 py-2.5 rounded-xl bg-charcoal-900 border border-white/10 text-xs text-stone-200 placeholder-stone-500 focus:outline-none focus:border-gold-400 transition-colors"
+          />
+          <svg class="w-4 h-4 text-stone-400 absolute right-3.5 top-3 pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+          </svg>
+        </div>
+      </div>
+
+      <!-- Localities Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="localities-grid">
+        {westPuneLocalityData.map((item) => (
+          <a
+            href={`/west-pune/${item.slug}/`}
+            class="locality-card bg-charcoal-900/80 border border-white/10 hover:border-gold-400/50 rounded-2xl p-6 backdrop-blur-sm transition-all duration-300 flex flex-col justify-between group shadow-xl hover:-translate-y-1"
+            data-name={item.name.toLowerCase()}
+            data-short={item.shortName.toLowerCase()}
+            data-cat={item.category.toLowerCase()}
+          >
+            <div class="space-y-3">
+              <div class="flex items-center justify-between">
+                <span class="px-2.5 py-0.5 rounded-full bg-gold-500/10 border border-gold-500/30 text-gold-300 text-[10px] font-bold font-mono uppercase tracking-wider">
+                  {item.shortName}
+                </span>
+                <span class="text-xs text-emerald-400 font-mono font-semibold">
+                  {item.fiveYearAppreciation}
+                </span>
+              </div>
+
+              <h3 class="font-serif text-lg font-bold text-white group-hover:text-gold-200 transition-colors line-clamp-1">
+                {item.name}
+              </h3>
+
+              <p class="text-stone-300 text-xs line-clamp-2 leading-relaxed">
+                {item.microMarketOverview}
+              </p>
+
+              <div class="grid grid-cols-2 gap-2 pt-2 text-[11px] font-mono border-t border-white/5">
+                <div>
+                  <span class="text-stone-500 block">Avg Rate:</span>
+                  <span class="text-stone-200 font-semibold">{item.avgPricePerSqFt}</span>
+                </div>
+                <div>
+                  <span class="text-stone-500 block">Rental Yield:</span>
+                  <span class="text-stone-200 font-semibold">{item.rentalYield}</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="pt-4 mt-4 border-t border-white/10 flex items-center justify-between text-xs text-gold-400 font-semibold group-hover:translate-x-1 duration-200">
+              <span>View Property Dossier</span>
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+              </svg>
+            </div>
+          </a>
+        ))}
+      </div>
+
+      <!-- Macro Market Comparison Callout -->
+      <div class="bg-gradient-to-r from-charcoal-900 via-charcoal-800 to-charcoal-900 border border-gold-400/30 rounded-2xl p-8 sm:p-10 shadow-2xl space-y-6">
+        <div class="max-w-3xl space-y-2">
+          <span class="text-xs font-mono uppercase text-gold-400 tracking-widest font-bold">Why Baner Annex Leads Pune</span>
+          <h3 class="font-serif text-2xl sm:text-3xl font-bold text-white">Mahindra Rivenza: The Anchor of Pune Real Estate</h3>
+          <p class="text-stone-300 text-sm leading-relaxed">
+            While established micro-markets like Baner, Aundh, and Kothrud trade at saturated valuations exceeding ₹13,000–₹18,000/sq.ft, Mahindra Rivenza at Baner Annex (Mahalunge) offers early-stage entry from ₹90 Lakhs* with institutional master planning, 80% open greens, and direct riverfront connectivity to Hinjewadi Phase 1.
+          </p>
+        </div>
+
+        <div class="flex flex-wrap gap-4 pt-2">
+          <a
+            href="tel:+917744009295"
+            class="px-6 py-3.5 rounded-lg bg-gold-500 hover:bg-gold-400 text-charcoal-950 font-bold text-sm transition-all shadow-lg text-center"
+          >
+            Call Advisory: +91 7744009295
+          </a>
+          <a
+            href="/tools/pune-stamp-duty-calculator/"
+            class="px-6 py-3.5 rounded-lg bg-white/10 hover:bg-white/15 border border-white/20 text-white font-medium text-sm transition-all text-center"
+          >
+            Calculate Pune Stamp Duty
+          </a>
+          <a
+            href="/pricing/"
+            class="px-6 py-3.5 rounded-lg bg-white/10 hover:bg-white/15 border border-white/20 text-white font-medium text-sm transition-all text-center"
+          >
+            View Pricing &amp; Cost Sheets
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Client-Side Search Filtering Script -->
+  <script is:inline>
+    const searchInput = document.getElementById('locality-search');
+    const cards = document.querySelectorAll('.locality-card');
+
+    searchInput?.addEventListener('input', (e) => {
+      const q = e.target.value.toLowerCase().trim();
+      cards.forEach((card) => {
+        const name = card.getAttribute('data-name') || '';
+        const short = card.getAttribute('data-short') || '';
+        const cat = card.getAttribute('data-cat') || '';
+        if (name.includes(q) || short.includes(q) || cat.includes(q)) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+  </script>
+</Layout>

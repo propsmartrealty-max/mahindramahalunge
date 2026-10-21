@@ -259,6 +259,38 @@ export const CORE_PAGES: SitemapEntry[] = [
     priority: 0.85,
     changefreq: 'weekly',
   },
+  {
+    url: `${BASE_URL}/pune-real-estate/`,
+    title: 'Pune Real Estate Market 2026: Property Prices, Micro-Markets & Investment Guide',
+    category: 'core',
+    priority: 0.95,
+    changefreq: 'daily',
+    images: PRIMARY_IMAGES.slice(0, 3),
+  },
+  {
+    url: `${BASE_URL}/flats-in-pune/`,
+    title: 'Flats in Pune 2026: Buy 2, 3 & 4 BHK Apartments in Top Localities',
+    category: 'core',
+    priority: 0.95,
+    changefreq: 'daily',
+    images: PRIMARY_IMAGES.slice(0, 2),
+  },
+  {
+    url: `${BASE_URL}/new-projects-in-pune/`,
+    title: 'New Residential Projects in Pune 2026: Upcoming Launches & Offers',
+    category: 'core',
+    priority: 0.95,
+    changefreq: 'daily',
+    images: PRIMARY_IMAGES.slice(0, 2),
+  },
+  {
+    url: `${BASE_URL}/luxury-apartments-in-pune/`,
+    title: 'Luxury Apartments in Pune: 3 & 4 BHK Sky Villas & Resort Living',
+    category: 'core',
+    priority: 0.95,
+    changefreq: 'daily',
+    images: PRIMARY_IMAGES.slice(0, 3),
+  },
 ];
 
 // 02. RESIDENCE TYPOLOGY HUBS

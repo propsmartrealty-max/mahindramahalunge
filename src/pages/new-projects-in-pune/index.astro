@@ -1,0 +1,174 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const projectsSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "CollectionPage",
+      "@id": "https://mahindralifespaceshomes.in/new-projects-in-pune/#webpage",
+      "url": "https://mahindralifespaceshomes.in/new-projects-in-pune/",
+      "name": "New Residential Projects in Pune 2026: Upcoming Launches & Offers",
+      "description": "Discover new residential projects and upcoming RERA launches in Pune. Compare pre-launch benefits, payment plans, and flagship 13.46-acre development Mahindra Rivenza Baner Annex.",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Mahindra Rivenza",
+        "url": "https://mahindralifespaceshomes.in/"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://mahindralifespaceshomes.in/new-projects-in-pune/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What are the advantages of buying in a new project launch in Pune?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "New project launches offer introductory pre-launch pricing (often 20% to 30% below completion values), flexible construction-linked payment plans (CLP), first choice of premium corner and river-facing inventory, and brand-new modern amenities."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I verify MahaRERA registration for new projects in Pune?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Every new project in Maharashtra must possess a valid MahaRERA registration number. Buyers can verify project plans, developer track record, escrow accounts, and handover dates on maharera.maharashtra.gov.in. Mahindra Rivenza is registered under PR1261012602102 & PM1261012602103."
+          }
+        }
+      ]
+    }
+  ]
+};
+
+const topDevelopers = [
+  {
+    name: "Mahindra Lifespaces",
+    heritage: "75+ Year Mahindra Group Trust",
+    highlight: "India’s 1st Net Zero Developer, IGBC Gold Pre-Certified, 100% On-Time Delivery Track Record.",
+    flagship: "Mahindra Rivenza (13.46 Acres, Mahalunge / Baner Annex)",
+    startingPrice: "From ₹90 Lakhs*",
+    link: "/"
+  },
+  {
+    name: "Godrej Properties",
+    heritage: "125+ Year Godrej Legacy",
+    highlight: "Modern high-rise townships in West & North Pune.",
+    flagship: "Godrej Hillside & Woodsville (Mahalunge / Hinjewadi)",
+    startingPrice: "From ₹88 Lakhs*",
+    link: "/compare/mahindra-rivenza-vs-godrej-woodsville/"
+  },
+  {
+    name: "VTP Realty",
+    heritage: "Prominent Pune Township Builder",
+    highlight: "High-density residential towers in Blue Waters township.",
+    flagship: "VTP Earth One & Blue Waters (Mahalunge)",
+    startingPrice: "From ₹82 Lakhs*",
+    link: "/compare/mahindra-rivenza-vs-vtp-earth-one/"
+  }
+];
+---
+
+<Layout
+  title="New Residential Projects in Pune 2026 | Upcoming RERA Launches"
+  description="Discover new residential projects in Pune. Explore upcoming launches by Mahindra Lifespaces, Godrej & VTP. Spotlight on Mahindra Rivenza 13.46 acres starting ₹90 Lakhs*."
+  canonical="https://mahindralifespaceshomes.in/new-projects-in-pune/"
+  customSchema={projectsSchema}
+>
+  <!-- Hero Section -->
+  <section class="pt-32 pb-16 bg-charcoal-950 border-b border-white/10 relative overflow-hidden">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-5">
+      <div class="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-gold-500/10 border border-gold-500/30 text-gold-400 text-xs font-semibold uppercase tracking-widest">
+        <span>Pre-Launch &amp; New Launches • Pune 2026</span>
+      </div>
+      
+      <h1 class="font-serif text-3xl sm:text-5xl lg:text-6xl font-bold text-white tracking-tight leading-tight">
+        New Residential Projects in Pune: <br />
+        <span class="gold-gradient-text">Upcoming Launches &amp; Pre-Launch Deals</span>
+      </h1>
+      
+      <p class="text-stone-300 text-base sm:text-lg max-w-3xl leading-relaxed">
+        Stay ahead of property appreciation. Explore top newly launched gated communities across West Pune and PCMC, benchmarked against institutional leader Mahindra Lifespaces.
+      </p>
+    </div>
+  </section>
+
+  <!-- Top Developer Spotlight -->
+  <section class="py-16 bg-[#0c1017]">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+      
+      <div class="space-y-2">
+        <span class="text-xs font-mono uppercase text-gold-400 tracking-wider font-bold">Grade-A Developers</span>
+        <h2 class="font-serif text-2xl sm:text-3xl font-bold text-white">Leading Residential Developers in Pune</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {topDevelopers.map((dev) => (
+          <div class="bg-charcoal-900/80 border border-white/10 hover:border-gold-400/50 rounded-2xl p-8 backdrop-blur-sm transition-all duration-300 flex flex-col justify-between group shadow-xl">
+            <div class="space-y-4">
+              <span class="px-3 py-1 rounded-full bg-gold-500/10 border border-gold-500/30 text-gold-300 text-xs font-bold font-mono uppercase">
+                {dev.heritage}
+              </span>
+
+              <h3 class="font-serif text-2xl font-bold text-white group-hover:text-gold-200 transition-colors">
+                {dev.name}
+              </h3>
+
+              <p class="text-stone-300 text-xs leading-relaxed">
+                {dev.highlight}
+              </p>
+
+              <div class="p-3.5 rounded-xl bg-charcoal-950 border border-white/5 space-y-1">
+                <span class="text-[10px] text-stone-500 font-mono uppercase block">Flagship Development:</span>
+                <span class="text-xs text-stone-200 font-semibold block">{dev.flagship}</span>
+                <span class="text-xs text-gold-400 font-bold font-mono">{dev.startingPrice}</span>
+              </div>
+            </div>
+
+            <div class="pt-6 mt-6 border-t border-white/10">
+              <a
+                href={dev.link}
+                class="w-full py-3 rounded-lg bg-gold-500 hover:bg-gold-400 text-charcoal-950 font-bold text-xs uppercase tracking-wider text-center block transition-colors"
+              >
+                View Project Details
+              </a>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <!-- Why Mahindra Rivenza is Pune's #1 Launch -->
+      <div class="bg-gradient-to-r from-charcoal-900 via-charcoal-800 to-charcoal-900 border border-gold-400/30 rounded-2xl p-8 sm:p-10 shadow-2xl space-y-6">
+        <div class="max-w-3xl space-y-2">
+          <span class="text-xs font-mono uppercase text-gold-400 tracking-widest font-bold">Pune's Most Anticipated Launch</span>
+          <h3 class="font-serif text-2xl sm:text-3xl font-bold text-white">Mahindra Rivenza: 13.46-Acre Landmark at Baner Annex</h3>
+          <p class="text-stone-300 text-sm leading-relaxed">
+            With an estimated GDV of ~₹3,500 Crore, Mahindra Rivenza is Pune’s largest institutional residential launch of 2026. Featuring 80% open biophilic greens, 40+ resort amenities, sunken aqua bar pool, and direct riverfront connectivity to Hinjewadi Phase 1.
+          </p>
+        </div>
+
+        <div class="flex flex-wrap gap-4 pt-2">
+          <a
+            href="tel:+917744009295"
+            class="px-6 py-3.5 rounded-lg bg-gold-500 hover:bg-gold-400 text-charcoal-950 font-bold text-sm transition-all shadow-lg text-center"
+          >
+            Connect With Project Desk: +91 7744009295
+          </a>
+          <a
+            href="/master-plan/"
+            class="px-6 py-3.5 rounded-lg bg-white/10 hover:bg-white/15 border border-white/20 text-white font-medium text-sm transition-all text-center"
+          >
+            Explore 13.46-Acre Master Layout
+          </a>
+          <a
+            href="/rera/"
+            class="px-6 py-3.5 rounded-lg bg-white/10 hover:bg-white/15 border border-white/20 text-white font-medium text-sm transition-all text-center"
+          >
+            Verify MahaRERA Documents
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</Layout>

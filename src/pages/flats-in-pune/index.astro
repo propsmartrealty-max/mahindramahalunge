@@ -1,0 +1,241 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const flatsSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "CollectionPage",
+      "@id": "https://mahindralifespaceshomes.in/flats-in-pune/#webpage",
+      "url": "https://mahindralifespaceshomes.in/flats-in-pune/",
+      "name": "Flats in Pune 2026: Buy 2, 3 & 4 BHK Apartments in Top Localities",
+      "description": "Explore premium 2, 3 & 4 BHK flats in Pune. Compare property prices in Mahalunge, Baner, Hinjewadi, and Wakad. Discover Mahindra Rivenza 13.46 acres starting ₹90 Lakhs*.",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Mahindra Rivenza",
+        "url": "https://mahindralifespaceshomes.in/"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://mahindralifespaceshomes.in/flats-in-pune/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is the starting price for 2 BHK flats in Pune in 2026?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Quality 2 BHK apartments in Pune start from ₹75 Lakhs to ₹95 Lakhs in emerging corridors like Mahalunge and Tathawade, while central suburbs like Baner and Aundh range from ₹1.15 Cr to ₹1.50 Cr."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which area is best to buy a flat in Pune for IT professionals?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Mahalunge (Baner Annex) is the #1 recommended destination for IT professionals. Located just 7 minutes from Hinjewadi Phase 1 via the river bridge and 8 minutes from Balewadi High Street, it eliminates highway congestion while offering planned 36m Town Planning boulevards."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What are the additional government charges when buying a flat in Pune?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Government charges include 7% total levies: 5% Maharashtra Stamp Duty + 1% Pune Metro Cess + 1% Local Body Tax, plus a fixed registration fee of ₹30,000 for properties above ₹30 Lakhs."
+          }
+        }
+      ]
+    }
+  ]
+};
+
+const budgetTiers = [
+  {
+    range: "Under ₹1 Crore",
+    title: "2 BHK Smart & Premium Residences",
+    desc: "Ideal for first-time homebuyers and young IT professionals seeking high rental liquidity and lower capital commitments.",
+    startingAt: "From ₹90 Lakhs*",
+    carpet: "635 – 747 Sq.Ft. Carpet",
+    ctaLink: "/residences/2-bhk/",
+    ctaText: "Explore 2 BHK Flats"
+  },
+  {
+    range: "₹1.25 Cr – ₹1.80 Cr",
+    title: "3 BHK Deluxe & Ultra Luxury Homes",
+    desc: "Designed for expanding families desiring private master sanctuaries, double viewing sundecks, and work-from-home alcoves.",
+    startingAt: "From ₹1.31 Crore*",
+    carpet: "882 – 1,065 Sq.Ft. Carpet",
+    ctaLink: "/residences/3-bhk/",
+    ctaText: "Explore 3 BHK Flats"
+  },
+  {
+    range: "₹2.20 Cr – ₹2.55 Cr+",
+    title: "4 BHK Sky Estates & Signature Living",
+    desc: "The pinnacle of architectural grandeur with wrap-around balconies, private foyers, and 270° views over the Mula River and hills.",
+    startingAt: "From ₹2.20 Crore*",
+    carpet: "1,438 – 1,465 Sq.Ft. Carpet",
+    ctaLink: "/residences/4-bhk/",
+    ctaText: "Explore 4 BHK Sky Villas"
+  }
+];
+---
+
+<Layout
+  title="Flats in Pune | Buy 2, 3 & 4 BHK Luxury Apartments 2026"
+  description="Buy premium flats in Pune. Explore 2, 3 & 4 BHK luxury residences in Baner Annex Mahalunge, Hinjewadi & Wakad. Mahindra Rivenza 13.46 acres from ₹90 Lakhs*."
+  canonical="https://mahindralifespaceshomes.in/flats-in-pune/"
+  customSchema={flatsSchema}
+>
+  <!-- Hero Section -->
+  <section class="pt-32 pb-16 bg-charcoal-950 border-b border-white/10 relative overflow-hidden">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-5">
+      <div class="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-gold-500/10 border border-gold-500/30 text-gold-400 text-xs font-semibold uppercase tracking-widest">
+        <span>Verified Pune Property Inventory • 2026 Guide</span>
+      </div>
+      
+      <h1 class="font-serif text-3xl sm:text-5xl lg:text-6xl font-bold text-white tracking-tight leading-tight">
+        Flats in Pune: <br />
+        <span class="gold-gradient-text">2, 3 &amp; 4 BHK Luxury Residences</span>
+      </h1>
+      
+      <p class="text-stone-300 text-base sm:text-lg max-w-3xl leading-relaxed">
+        Discover verified residential apartments in Pune’s highest-growth corridors. From smart 2 BHK tech homes starting at ₹90 Lakhs* to expansive 4 BHK sky estates overlooking the river at Mahindra Rivenza Baner Annex.
+      </p>
+    </div>
+  </section>
+
+  <!-- Budget Categories Grid -->
+  <section class="py-16 bg-[#0c1017]">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+      
+      <div class="space-y-2">
+        <span class="text-xs font-mono uppercase text-gold-400 tracking-wider font-bold">Curated Price Brackets</span>
+        <h2 class="font-serif text-2xl sm:text-3xl font-bold text-white">Find Your Ideal Residence by Budget</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {budgetTiers.map((tier) => (
+          <div class="bg-charcoal-900/80 border border-white/10 hover:border-gold-400/50 rounded-2xl p-8 backdrop-blur-sm transition-all duration-300 flex flex-col justify-between group shadow-xl">
+            <div class="space-y-4">
+              <div class="flex items-center justify-between">
+                <span class="px-3 py-1 rounded-full bg-gold-500/10 border border-gold-500/30 text-gold-300 text-xs font-bold font-mono uppercase">
+                  {tier.range}
+                </span>
+                <span class="text-xs text-stone-400 font-mono">{tier.carpet}</span>
+              </div>
+
+              <h3 class="font-serif text-2xl font-bold text-white group-hover:text-gold-200 transition-colors">
+                {tier.title}
+              </h3>
+
+              <p class="text-stone-300 text-sm leading-relaxed">
+                {tier.desc}
+              </p>
+
+              <div class="pt-2 text-gold-400 font-bold font-mono text-lg">
+                {tier.startingAt}
+              </div>
+            </div>
+
+            <div class="pt-6 mt-6 border-t border-white/10">
+              <a
+                href={tier.ctaLink}
+                class="w-full py-3 rounded-lg bg-gold-500 hover:bg-gold-400 text-charcoal-950 font-bold text-xs uppercase tracking-wider text-center block transition-colors"
+              >
+                {tier.ctaText}
+              </a>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <!-- Prime Locality Breakdown Table -->
+      <div class="space-y-6 pt-6">
+        <div class="space-y-2">
+          <span class="text-xs font-mono uppercase text-gold-400 tracking-wider font-bold">Top Localities Comparison</span>
+          <h2 class="font-serif text-2xl sm:text-3xl font-bold text-white">Where to Buy a Flat in Pune in 2026?</h2>
+        </div>
+
+        <div class="overflow-x-auto border border-white/10 rounded-2xl bg-charcoal-900/50">
+          <table class="w-full text-left text-xs text-stone-300">
+            <thead class="bg-charcoal-950 text-gold-400 font-mono uppercase border-b border-white/10">
+              <tr>
+                <th class="p-4">Locality</th>
+                <th class="p-4">2 BHK Average Cost</th>
+                <th class="p-4">3 BHK Average Cost</th>
+                <th class="p-4">Commute to Hinjewadi</th>
+                <th class="p-4">Recommendation</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-white/5">
+              <tr class="bg-gold-500/5 font-medium">
+                <td class="p-4 font-bold text-white flex items-center gap-2">
+                  <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+                  Mahalunge (Baner Annex)
+                </td>
+                <td class="p-4 text-emerald-400 font-mono">₹88 L – ₹1.05 Cr (Rivenza)</td>
+                <td class="p-4 text-emerald-400 font-mono">₹1.31 Cr – ₹1.60 Cr</td>
+                <td class="p-4">7 mins (River Bridge)</td>
+                <td class="p-4 text-emerald-400 font-bold">#1 Top Investment ROI</td>
+              </tr>
+              <tr>
+                <td class="p-4 font-semibold text-white">Baner (High Street)</td>
+                <td class="p-4 font-mono">₹1.20 Cr – ₹1.55 Cr</td>
+                <td class="p-4 font-mono">₹1.90 Cr – ₹2.70 Cr</td>
+                <td class="p-4">15 – 25 mins</td>
+                <td class="p-4 text-stone-400">Mature / High Entry Cost</td>
+              </tr>
+              <tr>
+                <td class="p-4 font-semibold text-white">Balewadi</td>
+                <td class="p-4 font-mono">₹1.05 Cr – ₹1.35 Cr</td>
+                <td class="p-4 font-mono">₹1.65 Cr – ₹2.25 Cr</td>
+                <td class="p-4">12 – 18 mins</td>
+                <td class="p-4 text-stone-400">Sports &amp; Dining Hub</td>
+              </tr>
+              <tr>
+                <td class="p-4 font-semibold text-white">Wakad</td>
+                <td class="p-4 font-mono">₹85 L – ₹1.10 Cr</td>
+                <td class="p-4 font-mono">₹1.25 Cr – ₹1.65 Cr</td>
+                <td class="p-4">15 – 20 mins</td>
+                <td class="p-4 text-stone-400">High Density Gated Flats</td>
+              </tr>
+              <tr>
+                <td class="p-4 font-semibold text-white">Hinjewadi Phase 1</td>
+                <td class="p-4 font-mono">₹75 L – ₹95 L</td>
+                <td class="p-4 font-mono">₹1.10 Cr – ₹1.45 Cr</td>
+                <td class="p-4">0 – 5 mins</td>
+                <td class="p-4 text-stone-400">High Commercial Activity</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Action Card -->
+      <div class="bg-gradient-to-r from-charcoal-900 via-charcoal-800 to-charcoal-900 border border-gold-400/30 rounded-2xl p-8 sm:p-10 shadow-2xl flex flex-col md:flex-row items-center justify-between gap-6">
+        <div class="space-y-2 text-center md:text-left">
+          <span class="text-xs font-mono uppercase text-gold-400 tracking-widest font-bold">Direct Developer Sales Desk</span>
+          <h3 class="font-serif text-2xl sm:text-3xl font-bold text-white">Booking a Flat at Mahindra Rivenza?</h3>
+          <p class="text-stone-300 text-sm max-w-xl leading-relaxed">
+            Avail launch pricing starting ₹90 Lakhs*, pre-approved bank loans from SBI, HDFC &amp; ICICI, and zero brokerage assistance.
+          </p>
+        </div>
+        <div class="flex flex-col sm:flex-row gap-3">
+          <a
+            href="tel:+917744009295"
+            class="px-6 py-3.5 rounded-lg bg-gold-500 hover:bg-gold-400 text-charcoal-950 font-bold text-sm transition-all shadow-lg text-center"
+          >
+            Call Desk: +91 7744009295
+          </a>
+          <a
+            href="/pricing/"
+            class="px-6 py-3.5 rounded-lg bg-white/10 hover:bg-white/15 border border-white/20 text-white font-medium text-sm transition-all text-center"
+          >
+            Download Price Sheet
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</Layout>

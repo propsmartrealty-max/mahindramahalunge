@@ -32,6 +32,10 @@ let urlList = [
   `https://${HOST}/west-pune/`,
   `https://${HOST}/articles/`,
   `https://${HOST}/tools/`,
+  `https://${HOST}/pune-real-estate/`,
+  `https://${HOST}/flats-in-pune/`,
+  `https://${HOST}/new-projects-in-pune/`,
+  `https://${HOST}/luxury-apartments-in-pune/`,
   `https://${HOST}/web-stories/`,
   `https://${HOST}/sitemap/`,
 ];
