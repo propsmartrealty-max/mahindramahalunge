@@ -1,6 +1,6 @@
 # ==============================================================================
 # Cloudflare Pages Edge Headers — Mahindra Lifespaces Pune Ecosystem
-# Enterprise Edge Security, Core Web Vitals & Search Engine Crawl Optimization
+# Enterprise Edge Security, Core Web Vitals & Zero-Trust WAF Hardening
 # ==============================================================================
 
 # Global Rules for all routes
@@ -8,57 +8,85 @@
   X-Robots-Tag: index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1
   X-Frame-Options: SAMEORIGIN
   X-Content-Type-Options: nosniff
+  X-XSS-Protection: 1; mode=block
+  X-Permitted-Cross-Domain-Policies: none
   Referrer-Policy: strict-origin-when-cross-origin
-  Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=(), usb=(), interest-cohort=()
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=(), usb=(), interest-cohort=(), display-capture=(), serial=()
   Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
-  Cross-Origin-Opener-Policy: same-origin
+  Cross-Origin-Opener-Policy: same-origin-allow-popups
   Cross-Origin-Resource-Policy: cross-origin
+  Cross-Origin-Embedder-Policy: unsafe-none
+  Origin-Agent-Cluster: ?1
   X-DNS-Prefetch-Control: on
   Vary: Accept-Encoding, User-Agent
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: blob: https://cms.mahindralifespaces.com https://images.unsplash.com https://*.ampproject.org; media-src 'self' https://cms.mahindralifespaces.com; connect-src 'self' https://api.indexnow.org https://cloudflareinsights.com https://wa.me; frame-ancestors 'self'; base-uri 'self'; form-action 'self' https:; upgrade-insecure-requests;
+  Link: <https://fonts.googleapis.com>; rel=preconnect, <https://fonts.gstatic.com>; rel=preconnect; crossorigin
 
 # HTML Pages - Instant Edge delivery with Stale-While-Revalidate for Googlebot
 /*.html
   Cache-Control: public, max-age=0, s-maxage=86400, stale-while-revalidate=604800, stale-if-error=86400
+  Cache-Tag: mahindra-rivenza, html-pages, enterprise-edge
 
 # Directory index routes
 /
   Cache-Control: public, max-age=0, s-maxage=86400, stale-while-revalidate=604800, stale-if-error=86400
+  Cache-Tag: mahindra-rivenza, homepage, enterprise-edge
+
+/floor-plans/*
+  Cache-Control: public, max-age=0, s-maxage=86400, stale-while-revalidate=604800, stale-if-error=86400
+  Cache-Tag: mahindra-rivenza, floorplans, enterprise-edge
+
+/commute/*
+  Cache-Control: public, max-age=0, s-maxage=86400, stale-while-revalidate=604800, stale-if-error=86400
+  Cache-Tag: mahindra-rivenza, commute, enterprise-edge
 
 /near/*
   Cache-Control: public, max-age=0, s-maxage=86400, stale-while-revalidate=604800, stale-if-error=86400
+  Cache-Tag: mahindra-rivenza, near-hubs, enterprise-edge
 
 /compare/*
   Cache-Control: public, max-age=0, s-maxage=86400, stale-while-revalidate=604800, stale-if-error=86400
+  Cache-Tag: mahindra-rivenza, comparisons, enterprise-edge
 
 /connectivity/*
   Cache-Control: public, max-age=0, s-maxage=86400, stale-while-revalidate=604800, stale-if-error=86400
+  Cache-Tag: mahindra-rivenza, connectivity, enterprise-edge
 
 /articles/*
   Cache-Control: public, max-age=0, s-maxage=86400, stale-while-revalidate=604800, stale-if-error=86400
+  Cache-Tag: mahindra-rivenza, articles, enterprise-edge
 
 /residences/*
   Cache-Control: public, max-age=0, s-maxage=86400, stale-while-revalidate=604800, stale-if-error=86400
+  Cache-Tag: mahindra-rivenza, residences, enterprise-edge
 
 /brand/*
   Cache-Control: public, max-age=0, s-maxage=86400, stale-while-revalidate=604800, stale-if-error=86400
+  Cache-Tag: mahindra-rivenza, brand-projects, enterprise-edge
 
 /west-pune/*
   Cache-Control: public, max-age=0, s-maxage=86400, stale-while-revalidate=604800, stale-if-error=86400
+  Cache-Tag: mahindra-rivenza, west-pune, enterprise-edge
 
 /tools/*
   Cache-Control: public, max-age=0, s-maxage=86400, stale-while-revalidate=604800, stale-if-error=86400
+  Cache-Tag: mahindra-rivenza, tools, enterprise-edge
 
 /pune-real-estate/*
   Cache-Control: public, max-age=0, s-maxage=86400, stale-while-revalidate=604800, stale-if-error=86400
+  Cache-Tag: mahindra-rivenza, market-guides, enterprise-edge
 
 /flats-in-pune/*
   Cache-Control: public, max-age=0, s-maxage=86400, stale-while-revalidate=604800, stale-if-error=86400
+  Cache-Tag: mahindra-rivenza, market-guides, enterprise-edge
 
 /new-projects-in-pune/*
   Cache-Control: public, max-age=0, s-maxage=86400, stale-while-revalidate=604800, stale-if-error=86400
+  Cache-Tag: mahindra-rivenza, market-guides, enterprise-edge
 
 /luxury-apartments-in-pune/*
   Cache-Control: public, max-age=0, s-maxage=86400, stale-while-revalidate=604800, stale-if-error=86400
+  Cache-Tag: mahindra-rivenza, market-guides, enterprise-edge
 
 /near/schools/*
   Cache-Control: public, max-age=0, s-maxage=86400, stale-while-revalidate=604800, stale-if-error=86400
@@ -71,9 +99,11 @@
 
 /nri/*
   Cache-Control: public, max-age=0, s-maxage=86400, stale-while-revalidate=604800, stale-if-error=86400
+  Cache-Tag: mahindra-rivenza, nri-portals, enterprise-edge
 
 /web-stories/*
   Cache-Control: public, max-age=0, s-maxage=86400, stale-while-revalidate=604800, stale-if-error=86400
+  Cache-Tag: mahindra-rivenza, web-stories, enterprise-edge
 
 # Immutable hashed JS & CSS generated by Astro Vite build
 /_astro/*
@@ -89,7 +119,7 @@
 # Global Progressive Web App (PWA) Service Worker & Offline Resilience
 /sw.js
   Content-Type: application/javascript; charset=utf-8
-  Cache-Control: public, max-age=0, must-revalidate
+  Cache-Control: no-cache, no-store, must-revalidate
   Service-Worker-Allowed: /
 
 /offline.html

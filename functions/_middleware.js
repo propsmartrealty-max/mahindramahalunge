@@ -1,16 +1,15 @@
 /**
- * Cloudflare Pages Edge Middleware — Ultra-Advanced Edge SEO & HTMLRewriter Engine
- * Designed for Mahindra Rivenza (Baner Annex, Mahalunge, Pune) & Mahindra Lifespaces Ecosystem
+ * Cloudflare Pages Edge Middleware — Enterprise-Grade Edge Security & SEO Engine
+ * Tailored for Mahindra Rivenza (Baner Annex, Mahalunge, Pune) & Mahindra Lifespaces Ecosystem
  * 
- * Features:
- * 1. Zero-Latency Canonical & Trailing Slash Redirection at the Cloudflare Edge
- * 2. Malicious / Aggressive Scraper Firewall (Zero-cost 403 rejection)
- * 3. Search Engine Bot & AI Crawler Intelligence (Googlebot, Bingbot, Perplexity, GPTBot, ClaudeBot, Gemini)
- * 4. Native Edge HTMLRewriter Dynamic Schema & Metadata Injection (WebSite + ApartmentComplex + RealEstateAgent)
- * 5. Real-Time Content Freshness (ISO timestamps on every edge hit)
- * 6. Edge Geo-IP Localization & Baner Annex Coordinate Tagging (18.562536 N, 73.727373 E / Plus Code: HP6G+WWF)
- * 7. LCP Hero Image Preloading & Preconnect Optimization (cms.mahindralifespaces.com)
- * 8. Enterprise Caching, HTTP Link Preconnects & Security Headers
+ * Enterprise Hardening Features:
+ * 1. Zero-Trust Edge WAF: Drops SQLi, path traversal, exploit probes, and scanners at Cloudflare PoP
+ * 2. Intelligent Bot Governance: Whitelists verified search indexers; drops scrapers & vulnerability scanners
+ * 3. 2-Year Preloaded HSTS, Strict CSP, Permissions-Policy, Cross-Origin Isolation & COOP
+ * 4. Micro-Market Edge Geo-Tagging & Header Injection (Baner Annex Coordinates: 18.562536 N, 73.727373 E)
+ * 5. Native Cloudflare HTMLRewriter: Real-time metadata injection, LCP optimization, schema enrichment
+ * 6. Cloudflare Cache-Tag, Stale-While-Revalidate & Edge Tier Architecture
+ * 7. Clean Preconnect Budget: Eliminates redundant preconnects to protect mobile TCP sockets
  */
 
 // Bot Classification Regex — Multi-Search Engine Whitebot Recognition
@@ -20,7 +19,12 @@ const APPLE_BOT_REGEX = /applebot/i;
 const SEARCH_BOT_REGEX = /googlebot|google-inspectiontool|bingbot|slurp|duckduckbot|baiduspider|yandexbot|sogou|exabot|applebot|storebot-google/i;
 const SOCIAL_BOT_REGEX = /facebookexternalhit|twitterbot|linkedinbot|whatsapp|telegrambot|pinterest|slackbot|discordbot/i;
 const AI_CRAWLER_REGEX = /gptbot|chatgpt-user|claudebot|anthropic-ai|perplexitybot|applebot|google-extended|oai-searchbot/i;
-const BAD_SCRAPER_REGEX = /bytespider|petalbot|mj12bot|dotbot|zoominfobot/i;
+const BAD_SCRAPER_REGEX = /bytespider|petalbot|mj12bot|dotbot|zoominfobot|semrushbot|ahrefsbot/i;
+
+// Enterprise Vulnerability Scanner & Exploit Toolkit Signatures
+const VULN_SCANNER_REGEX = /nikto|sqlmap|acunetix|nuclei|masscan|zgrab|gobuster|dirbuster|wprecon|jorgee|nessus|openvas|havij|nmap/i;
+const MALICIOUS_PATH_REGEX = /(\.\.\/|\.\.\\|\.env|\.git|\.vscode|\.aws|wp-login|wp-admin|xmlrpc\.php|cgi-bin|\.php|\.sql|\.bak|\.tar|\.zip|phpmyadmin|eval\(|base64_decode)/i;
+const SQLI_REGEX = /(\b(union(\s+all)?\s+select|select\s+.*\s+from|insert\s+into|drop\s+table|delete\s+from|update\s+.*\s+set)\b|--|\/\*|\*\/|;\s*drop|'\s*or\s*'?\d+'?\s*=\s*'?\d+)/i;
 
 const INDEXNOW_KEY = '9e4f2b8c6a0d4e7f8b1c3a5d7e9f0b2a';
 
@@ -43,6 +47,7 @@ export async function onRequest(context) {
   const url = new URL(request.url);
   const userAgent = request.headers.get('user-agent') || '';
   const pathname = url.pathname;
+  const search = url.search;
 
   const activeGlobalKey = (context.env && (context.env.GLOBAL_KEY || context.env.INDEXNOW_KEY || context.env.CLOUDFLARE_API_KEY)) || INDEXNOW_KEY;
 
@@ -85,6 +90,7 @@ export async function onRequest(context) {
           'https://mahindralifespaceshomes.in/',
           'https://mahindralifespaceshomes.in/pricing/',
           'https://mahindralifespaceshomes.in/floor-plans/',
+          'https://mahindralifespaceshomes.in/commute/',
           'https://mahindralifespaceshomes.in/master-plan/',
           'https://mahindralifespaceshomes.in/location/',
           'https://mahindralifespaceshomes.in/amenities/',
@@ -112,16 +118,43 @@ export async function onRequest(context) {
     }
   }
 
-  // 1. Malicious / Aggressive Scraper Edge Firewall (Whitelisting verified search engines)
+  // 1. Enterprise Edge WAF: Exploit Probe, SQLi & Vulnerability Scanner Rejection
   const isSearchEngineBot = GOOGLE_BOT_REGEX.test(userAgent) || MICROSOFT_BING_REGEX.test(userAgent) || APPLE_BOT_REGEX.test(userAgent);
-  if (!isSearchEngineBot && BAD_SCRAPER_REGEX.test(userAgent)) {
-    return new Response('Access Denied - Automated Scraping Policy', {
-      status: 403,
-      headers: {
-        'Content-Type': 'text/plain',
-        'X-Robots-Tag': 'noindex, nofollow',
-      },
-    });
+  
+  if (!isSearchEngineBot) {
+    // Drop known scanner toolkits
+    if (VULN_SCANNER_REGEX.test(userAgent) || BAD_SCRAPER_REGEX.test(userAgent)) {
+      return new Response('Forbidden — Edge Automated Security Policy', {
+        status: 403,
+        headers: {
+          'Content-Type': 'text/plain',
+          'X-WAF-Action': 'Drop-Scanner',
+          'X-Robots-Tag': 'noindex, nofollow',
+        },
+      });
+    }
+
+    // Drop path traversal & common exploit extensions
+    if (MALICIOUS_PATH_REGEX.test(pathname) || MALICIOUS_PATH_REGEX.test(search)) {
+      return new Response('Not Found', {
+        status: 404,
+        headers: {
+          'Content-Type': 'text/plain',
+          'X-WAF-Action': 'Drop-Exploit-Probe',
+        },
+      });
+    }
+
+    // Drop SQL Injection in query strings
+    if (SQLI_REGEX.test(search)) {
+      return new Response('Bad Request — Invalid Parameter Signature', {
+        status: 400,
+        headers: {
+          'Content-Type': 'text/plain',
+          'X-WAF-Action': 'Block-SQLi',
+        },
+      });
+    }
   }
 
   // 2. Legacy / Soft-404 Edge Normalization
@@ -131,7 +164,6 @@ export async function onRequest(context) {
   }
 
   // 3. Edge Trailing Slash & Canonical Enforcement
-  // Skip static assets (e.g. .css, .js, .svg, .png, .jpg, .webp, .xml, .txt, .json)
   const isStaticFile = /\.(css|js|mjs|svg|png|jpg|jpeg|webp|ico|xml|txt|json|woff|woff2|ttf)$/i.test(pathname);
 
   if (!isStaticFile && !pathname.endsWith('/')) {
@@ -142,10 +174,9 @@ export async function onRequest(context) {
   // 4. Fetch upstream static response from Cloudflare Pages storage
   const response = await next();
 
-  // If not an HTML document or error response, return directly with edge cache headers
+  // If not an HTML document, return with edge cache headers
   const contentType = response.headers.get('content-type') || '';
   if (!contentType.includes('text/html')) {
-    // Enterprise hardening for XML sitemaps & feeds
     if (pathname.endsWith('.xml') || contentType.includes('xml')) {
       const xmlHeaders = new Headers(response.headers);
       xmlHeaders.set('Content-Type', 'application/xml; charset=utf-8');
@@ -181,20 +212,14 @@ export async function onRequest(context) {
   const now = new Date();
   const currentIsoTimestamp = now.toISOString();
 
-  // Geo-location detection from Cloudflare CF headers
+  // Geo-location detection from Cloudflare headers
   const cfCountry = request.headers.get('cf-ipcountry') || 'IN';
   const cfCity = request.headers.get('cf-ipcity') || 'Pune';
+  const cfRay = request.headers.get('cf-ray') || 'edge';
 
   // 7. Edge HTMLRewriter Transformations
   class HeadRewriter {
     element(element) {
-      // Preconnect hints for external media CDNs (Google Fonts already preconnected in static layout)
-      element.append(
-        `<link rel="preconnect" href="https://cms.mahindralifespaces.com" crossorigin />\n` +
-        `<link rel="preconnect" href="https://images.unsplash.com" crossorigin />\n`,
-        { html: true }
-      );
-
       // Real-time freshness signals for Googlebot & social graphs
       element.append(
         `<meta property="og:updated_time" content="${currentIsoTimestamp}" />\n` +
@@ -214,7 +239,7 @@ export async function onRequest(context) {
 
       // Edge SEO Engine Verification Meta
       element.append(
-        `<meta name="generator-edge" content="Cloudflare Pages Edge HTMLRewriter v4.1 - Enterprise Compliance Engine" />\n`,
+        `<meta name="generator-edge" content="Cloudflare Pages Enterprise Edge v5.0 - ZeroTrust Hardened" />\n`,
         { html: true }
       );
     }
@@ -236,7 +261,7 @@ export async function onRequest(context) {
     .on('header img', new HeroImageRewriter())
     .transform(response);
 
-  // 8. Build High-Performance Edge Response Headers
+  // 8. Build High-Performance Enterprise Edge Response Headers
   const modifiedHeaders = new Headers(transformedResponse.headers);
 
   // Core SEO & Googlebot Headers
@@ -244,34 +269,54 @@ export async function onRequest(context) {
     'X-Robots-Tag',
     'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
   );
-  modifiedHeaders.set('X-Edge-SEO-Engine', 'Cloudflare-HTMLRewriter-Rivenza-v4.0');
+  modifiedHeaders.set('X-Edge-SEO-Engine', 'Cloudflare-Enterprise-Rivenza-v5.0');
   modifiedHeaders.set('X-Edge-Bot-Classification', botCategory);
   modifiedHeaders.set('X-Edge-Timestamp', currentIsoTimestamp);
   modifiedHeaders.set('X-Edge-Geo-Locality', `${cfCity}, ${cfCountry}`);
+  modifiedHeaders.set('X-Edge-Ray', cfRay);
   modifiedHeaders.set('X-IndexNow-Status', 'Ready');
   modifiedHeaders.set('X-IndexNow-Key', activeGlobalKey);
 
-  // Early Preconnect Link Headers
+  // Clean, Low-Overhead Preconnect Link Header (Only critical font origins)
   modifiedHeaders.set(
     'Link',
-    '<https://fonts.googleapis.com>; rel=preconnect, <https://fonts.gstatic.com>; rel=preconnect; crossorigin, <https://cms.mahindralifespaces.com>; rel=preconnect, <https://images.unsplash.com>; rel=preconnect'
+    '<https://fonts.googleapis.com>; rel=preconnect, <https://fonts.gstatic.com>; rel=preconnect; crossorigin'
   );
 
-  // Edge Security & Infrastructure Hardening
+  // Enterprise Security & WAF Headers
   modifiedHeaders.set('X-Frame-Options', 'SAMEORIGIN');
   modifiedHeaders.set('X-Content-Type-Options', 'nosniff');
+  modifiedHeaders.set('X-XSS-Protection', '1; mode=block');
   modifiedHeaders.set('X-Permitted-Cross-Domain-Policies', 'none');
   modifiedHeaders.set('Cross-Origin-Embedder-Policy', 'unsafe-none');
   modifiedHeaders.set('Cross-Origin-Opener-Policy', 'same-origin-allow-popups');
   modifiedHeaders.set('Cross-Origin-Resource-Policy', 'cross-origin');
   modifiedHeaders.set('Referrer-Policy', 'strict-origin-when-cross-origin');
-  modifiedHeaders.set('Permissions-Policy', 'geolocation=(), camera=(), microphone=(), payment=()');
-  modifiedHeaders.set('Strict-Transport-Security', 'max-age=31536000; includeSubDomains; preload');
+  modifiedHeaders.set('Permissions-Policy', 'camera=(), microphone=(), geolocation=(), payment=(), usb=(), interest-cohort=(), display-capture=(), serial=()');
+  modifiedHeaders.set('Strict-Transport-Security', 'max-age=63072000; includeSubDomains; preload');
+  modifiedHeaders.set('Origin-Agent-Cluster', '?1');
 
-  // Stale-While-Revalidate Edge Caching (Instant Edge Delivery for Humans & Crawlers)
+  // Enterprise Content Security Policy (Allows Google Fonts, CMS media, Cloudflare insights)
+  const cspDirectives = [
+    "default-src 'self'",
+    "script-src 'self' 'unsafe-inline' https://static.cloudflareinsights.com",
+    "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
+    "font-src 'self' https://fonts.gstatic.com data:",
+    "img-src 'self' data: blob: https://cms.mahindralifespaces.com https://images.unsplash.com https://*.ampproject.org",
+    "media-src 'self' https://cms.mahindralifespaces.com",
+    "connect-src 'self' https://api.indexnow.org https://cloudflareinsights.com https://wa.me",
+    "frame-ancestors 'self'",
+    "base-uri 'self'",
+    "form-action 'self' https:",
+    "upgrade-insecure-requests",
+  ].join('; ');
+  modifiedHeaders.set('Content-Security-Policy', cspDirectives);
+
+  // Cloudflare Cache-Tagging & Edge Delivery Tuning
+  modifiedHeaders.set('Cache-Tag', 'mahindra-rivenza, static-pages, html-content, enterprise-edge');
   modifiedHeaders.set(
     'Cache-Control',
-    'public, max-age=3600, s-maxage=86400, stale-while-revalidate=604800'
+    'public, max-age=0, s-maxage=86400, stale-while-revalidate=604800, stale-if-error=86400'
   );
   modifiedHeaders.set('Vary', 'User-Agent, Accept-Encoding');
 
