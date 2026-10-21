@@ -138,6 +138,24 @@ const articles = [
     title: 'Mahindra Rivenza MahaRERA Compliance, Possession Milestones & Escrow Security',
     pubDate: 'Wed, 21 Oct 2026 00:00:00 GMT',
     description: 'Exhaustive legal and regulatory evaluation of Mahindra Rivenza by Mahindra Lifespaces at Baner Annex (Mahalunge), Pune. Verifies MahaRERA numbers PR1261012602102 and PM1261012602103.'
+  },
+  {
+    slug: 'hinjewadi-mahalunge-bridge-connectivity-status-2026',
+    title: 'Hinjewadi-Mahalunge Mula River Bridge Status 2026: Route Map, Commute Impact & Real Estate Boom',
+    pubDate: 'Wed, 21 Oct 2026 00:00:00 GMT',
+    description: 'Comprehensive report on the upcoming Hinjewadi-Mahalunge Mula River Bridge. Detailed analysis of 4-lane direct connectivity, reduction of commute from 25 mins to 4 mins, and price appreciation.'
+  },
+  {
+    slug: 'mahindra-rivenza-construction-status-updates-2026',
+    title: 'Mahindra Rivenza Construction Status 2026: Live Site Progress, Milestones & MahaRERA Timeline',
+    pubDate: 'Wed, 21 Oct 2026 00:00:00 GMT',
+    description: 'Exhaustive construction status report for Mahindra Rivenza in Mahalunge, Baner Annex, Pune. Track live ground progress, foundation piling, Mivan shuttering technology, and MahaRERA audit delivery schedules.'
+  },
+  {
+    slug: 'mahindra-rivenza-sample-flat-virtual-tour-review',
+    title: 'Mahindra Rivenza Sample Flat Review: 2 & 3 BHK Interior Walkthrough, Photos & Floor Specs',
+    pubDate: 'Wed, 21 Oct 2026 00:00:00 GMT',
+    description: 'Exhaustive review and interior walkthrough of the official Mahindra Rivenza sample flats in Mahalunge, Baner Annex, Pune. Detailed analysis of 2 & 3 BHK layout efficiency and 2.95m ceiling heights.'
   }
 ];
 

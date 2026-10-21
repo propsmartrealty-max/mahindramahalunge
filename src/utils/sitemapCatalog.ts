@@ -586,6 +586,9 @@ export const ARTICLES_SLUGS = [
   { slug: 'mahindra-rivenza-cost-sheet-pricing-breakdown-2026', name: 'Mahindra Rivenza Cost Sheet Breakdown & All-Inclusive Pricing 2026' },
   { slug: 'rent-vs-buy-in-hinjewadi-mahalunge-2026', name: 'Rent vs Buy in Hinjewadi-Mahalunge 2026: 10-Year Financial Model' },
   { slug: 'mahindra-rivenza-rera-possession-milestones-escrow', name: 'Mahindra Rivenza MahaRERA Compliance, Milestones & Escrow Security' },
+  { slug: 'hinjewadi-mahalunge-bridge-connectivity-status-2026', name: 'Hinjewadi-Mahalunge Mula River Bridge Status 2026: Route Map & Commute Impact' },
+  { slug: 'mahindra-rivenza-construction-status-updates-2026', name: 'Mahindra Rivenza Construction Status 2026: Live Site Progress & Milestones' },
+  { slug: 'mahindra-rivenza-sample-flat-virtual-tour-review', name: 'Mahindra Rivenza Sample Flat Review: 2 & 3 BHK Walkthrough & Tour' },
 ];
 
 export const ARTICLES_PAGES: SitemapEntry[] = ARTICLES_SLUGS.map((item) => ({
