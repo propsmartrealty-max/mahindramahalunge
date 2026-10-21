@@ -96,6 +96,30 @@ const articles = [
     title: 'Mahindra Rivenza vs Baner vs Hinjewadi: Rental Yields, Capital Growth & West Pune IT Tri-Corridor',
     pubDate: 'Wed, 07 Oct 2026 00:00:00 GMT',
     description: 'Comparative investment analysis of Mahindra Rivenza at Baner Annex / Mahalunge against core Baner and Hinjewadi Phase 1 micro-markets.'
+  },
+  {
+    slug: 'flats-under-1-crore-in-west-pune',
+    title: 'Flats Under ₹1 Crore in West Pune: Best Investment & End-Use Options 2026',
+    pubDate: 'Tue, 21 Oct 2026 00:00:00 GMT',
+    description: 'Explore the best 2 BHK flats under ₹1 Crore in West Pune across Mahalunge, Tathawade, and Hinjewadi. Why Mahindra Rivenza at ₹90 Lakhs* offers institutional quality and top rental yields.'
+  },
+  {
+    slug: 'luxury-flats-under-2-crore-in-pune',
+    title: 'Luxury Flats Under ₹2 Crore in Pune: 3 BHK Sky Suites & Resort Living 2026',
+    pubDate: 'Tue, 21 Oct 2026 00:00:00 GMT',
+    description: 'In-depth buyer guide for luxury 3 BHK flats under ₹2 Crore in Pune. Compare carpet area, green ratio, and ~44,000 sq.ft clubhouse at Mahindra Rivenza.'
+  },
+  {
+    slug: 'flats-near-pune-metro-line-3',
+    title: 'Flats Near Pune Metro Line 3: Hinjewadi to Shivajinagar Property Growth Corridor',
+    pubDate: 'Tue, 21 Oct 2026 00:00:00 GMT',
+    description: 'How Pune Metro Line 3 connects Hinjewadi to Shivajinagar in 23 stations, driving 15% to 20% rental premiums and capital appreciation for residential communities like Mahindra Rivenza.'
+  },
+  {
+    slug: 'ready-possession-vs-under-construction-pune',
+    title: 'Ready Possession vs Under Construction Flats in Pune: Which Offers Higher ROI in 2026?',
+    pubDate: 'Tue, 21 Oct 2026 00:00:00 GMT',
+    description: 'A comprehensive financial comparison of ready vs under-construction apartments in Pune, covering GST exemptions, pre-launch price discounts, and developer RERA escrow compliance.'
   }
 ];
 

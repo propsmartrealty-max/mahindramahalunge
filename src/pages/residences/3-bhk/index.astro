@@ -1,5 +1,39 @@
 ---
 import Layout from '../../../layouts/Layout.astro';
+
+const residenceSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Product",
+      "@id": "https://mahindralifespaceshomes.in/residences/3-bhk/#product",
+      "name": "Mahindra Rivenza 3 BHK Luxury Flats Mahalunge",
+      "description": "Official 3 BHK luxury residences at Mahindra Rivenza by Mahindra Lifespaces in Baner Annex, Mahalunge, Pune. 882 to 1,065 sq.ft. RERA carpet area with ~44,000 sq.ft clubhouse and river views.",
+      "image": "https://cms.mahindralifespaces.com/web/sites/default/files/styles/web_banner_webp/public/2026-10/jpeg-optimizer_Elevation%20Opt%20A..webp",
+      "brand": {
+        "@type": "Brand",
+        "name": "Mahindra Lifespaces"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "13100000",
+        "priceCurrency": "INR",
+        "priceValidUntil": "2026-12-31",
+        "availability": "https://schema.org/InStock",
+        "url": "https://mahindralifespaceshomes.in/residences/3-bhk/",
+        "seller": {
+          "@type": "Organization",
+          "name": "Mahindra Lifespace Developers Limited"
+        }
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "94"
+      }
+    }
+  ]
+};
 ---
 
 <Layout
@@ -7,6 +41,7 @@ import Layout from '../../../layouts/Layout.astro';
   description="Explore official 3 BHK residences at Mahindra Rivenza by Mahindra Lifespaces at Baner Annex, Mahalunge, Pune. 882 to 1,065 sq.ft. RERA carpet area, starting ₹1.31 Cr*. MahaRERA PR1261012602102 & PM1261012602103."
   keywords="mahindra rivenza 3 bhk, mahindra rivenza 3 bhk price, mahindra rivenza 3 bhk floor plan, mahindra rivenza 3 bhk carpet area, mahindra rivenza mahalunge 3 bhk, luxury 3 bhk flats in mahalunge pune, 3 bhk baner annex"
   canonical="https://mahindralifespaceshomes.in/residences/3-bhk/"
+  customSchema={residenceSchema}
 >
   <section class="pt-32 pb-20 bg-charcoal-950 border-b border-white/10 relative overflow-hidden">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">

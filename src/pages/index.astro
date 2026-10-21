@@ -8,6 +8,7 @@ import RoiEmiCalculator from '../components/RoiEmiCalculator.astro';
 import CommuteDistanceMatrix from '../components/CommuteDistanceMatrix.astro';
 import ProgrammaticHubDirectory from '../components/ProgrammaticHubDirectory.astro';
 import MahindraKeywordMatrix from '../components/MahindraKeywordMatrix.astro';
+import { webStoriesData } from '../data/pSeoWebStories';
 
 const homepageSchema = {
   "@context": "https://schema.org",
@@ -1595,6 +1596,65 @@ const homepageSchema = {
 
       </div>
 
+    </div>
+  </section>
+
+  <!-- GOOGLE WEB STORIES VISUAL SHOWCASE -->
+  <section class="py-16 bg-charcoal-950 border-t border-white/10 relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+      <div class="reveal flex flex-col sm:flex-row sm:items-end justify-between gap-4 border-b border-white/10 pb-6">
+        <div>
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-rose-500/10 border border-rose-500/30 text-rose-300 text-xs font-semibold uppercase tracking-widest mb-2">
+            <span class="w-2 h-2 rounded-full bg-rose-500 animate-pulse"></span>
+            <span>AMP Story 1.0 • Google Discover</span>
+          </div>
+          <h2 class="font-serif text-2xl sm:text-3xl text-white font-bold">
+            Google Web Stories: Mahindra Rivenza &amp; Pune Real Estate
+          </h2>
+          <p class="text-xs sm:text-sm text-stone-300 mt-1 max-w-2xl font-light">
+            Fast, full-screen visual stories optimized for mobile discovery and instant real estate decision-making.
+          </p>
+        </div>
+        <a
+          href="/web-stories/"
+          class="inline-flex items-center gap-2 text-xs uppercase tracking-widest text-gold-400 hover:text-white font-bold whitespace-nowrap"
+        >
+          <span>View All 12 Web Stories</span>
+          <span>→</span>
+        </a>
+      </div>
+
+      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
+        {webStoriesData.slice(0, 6).map((story) => (
+          <a
+            href={`/web-stories/${story.slug}/`}
+            class="group relative aspect-[9/16] rounded-2xl overflow-hidden border border-white/10 hover:border-gold-500/50 shadow-xl transition-all duration-300 hover:-translate-y-1 block"
+          >
+            <img
+              src={story.coverImage}
+              alt={story.title}
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              loading="lazy"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-charcoal-950 via-charcoal-950/40 to-transparent"></div>
+            
+            <div class="absolute top-2.5 left-2.5">
+              <span class="px-2 py-0.5 rounded-full bg-charcoal-900/80 backdrop-blur border border-white/20 text-[9px] font-mono text-gold-300">
+                {story.pages.length} Slides
+              </span>
+            </div>
+
+            <div class="absolute bottom-3 left-3 right-3 space-y-1">
+              <span class="text-[9px] font-mono uppercase text-gold-400 font-bold tracking-wider block">
+                {story.category}
+              </span>
+              <h3 class="font-serif text-xs font-bold text-white leading-snug line-clamp-2 group-hover:text-gold-300 transition-colors">
+                {story.title}
+              </h3>
+            </div>
+          </a>
+        ))}
+      </div>
     </div>
   </section>
 
