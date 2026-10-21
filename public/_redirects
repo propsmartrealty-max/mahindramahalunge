@@ -1,4 +1,45 @@
-# Cloudflare Pages 301 Apex & HTTPS Redirection
+# ==============================================================================
+# Cloudflare Pages Edge Redirection Engine — Mahindra Lifespaces Pune
+# Enterprise 301 Canonicalization, Security Hardening & Zero-Drift Routing
+# ==============================================================================
+
+# 1. Canonical Apex & Strict HTTPS Enforcements (301 Permanent Redirects)
 https://www.mahindralifespaceshomes.in/* https://mahindralifespaceshomes.in/:splat 301!
 http://www.mahindralifespaceshomes.in/* https://mahindralifespaceshomes.in/:splat 301!
 http://mahindralifespaceshomes.in/* https://mahindralifespaceshomes.in/:splat 301!
+
+# 2. Key Alias Normalization
+/index.html / 301!
+/index / 301!
+/home / 301!
+/home/ / 301!
+
+# 3. Trailing Slash Normalization for High-Intent Clusters
+/pune-real-estate /pune-real-estate/ 301!
+/flats-in-pune /flats-in-pune/ 301!
+/new-projects-in-pune /new-projects-in-pune/ 301!
+/luxury-apartments-in-pune /luxury-apartments-in-pune/ 301!
+/tools /tools/ 301!
+/web-stories /web-stories/ 301!
+/residences /residences/ 301!
+/pricing /pricing/ 301!
+/floor-plans /floor-plans/ 301!
+/master-plan /master-plan/ 301!
+/amenities /amenities/ 301!
+/location /location/ 301!
+/brochure /brochure/ 301!
+/rera /rera/ 301!
+/faq /faq/ 301!
+/sitemap /sitemap/ 301!
+/articles /articles/ 301!
+/west-pune /west-pune/ 301!
+/brand /brand/ 301!
+
+# 4. Security Hardening & Exploit Mitigation (Instant 404 Drop at Edge)
+/.env* /404.html 404
+/.git* /404.html 404
+/wp-login.php /404.html 404
+/wp-admin/* /404.html 404
+/xmlrpc.php /404.html 404
+/cgi-bin/* /404.html 404
+/*.php /404.html 404

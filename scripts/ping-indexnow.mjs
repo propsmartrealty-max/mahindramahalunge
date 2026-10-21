@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 /**
- * Global IndexNow Push Engine — Mahindra Lifespaces Pune Ecosystem
- * Submits all cataloged URLs to IndexNow (Bing, Microsoft, Yandex, Naver, Seznam)
- * Uses global IndexNow key for instant search engine indexing.
+ * Global Enterprise IndexNow Push Engine — Mahindra Lifespaces Pune Ecosystem
+ * Submits all cataloged URLs to IndexNow endpoints (Bing, Microsoft, Yandex, Naver, Seznam)
+ * Uses Global Key for instantaneous cross-search-engine indexing & edge cache invalidation.
  */
 
 import fs from 'node:fs';
@@ -54,7 +54,7 @@ try {
   // Use fallback list
 }
 
-console.log(`[IndexNow] Preparing submission of ${urlList.length} URLs using Global Key: ${GLOBAL_KEY}`);
+console.log(`[Enterprise IndexNow] Prepared ${urlList.length} URLs using Global Key: ${GLOBAL_KEY}`);
 
 const payload = {
   host: HOST,
@@ -63,22 +63,29 @@ const payload = {
   urlList: urlList,
 };
 
-try {
-  const response = await fetch('https://api.indexnow.org/indexnow', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json; charset=utf-8',
-    },
-    body: JSON.stringify(payload),
-  });
+const endpoints = [
+  { name: 'Global IndexNow Hub', url: 'https://api.indexnow.org/indexnow' },
+  { name: 'Microsoft Bing Gateway', url: 'https://www.bing.com/indexnow' },
+  { name: 'Yandex Search Gateway', url: 'https://yandex.com/indexnow' },
+];
 
-  console.log(`[IndexNow] Response Status: ${response.status} ${response.statusText}`);
-  if (response.status === 200 || response.status === 202) {
-    console.log(`[IndexNow] SUCCESS: All ${urlList.length} URLs submitted to search engines!`);
-  } else {
-    const text = await response.text();
-    console.log(`[IndexNow] Response body: ${text}`);
+for (const ep of endpoints) {
+  try {
+    const response = await fetch(ep.url, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json; charset=utf-8',
+      },
+      body: JSON.stringify(payload),
+    });
+
+    if (response.status === 200 || response.status === 202) {
+      console.log(`[Enterprise IndexNow] ✓ ${ep.name}: SUCCESS (${response.status} ${response.statusText}) - ${urlList.length} URLs active`);
+    } else {
+      const text = await response.text();
+      console.log(`[Enterprise IndexNow] ! ${ep.name} status: ${response.status} ${response.statusText} (${text.slice(0, 100)})`);
+    }
+  } catch (err) {
+    console.warn(`[Enterprise IndexNow] ! ${ep.name} network notice: ${err.message}`);
   }
-} catch (err) {
-  console.error('[IndexNow] Error submitting to IndexNow API:', err.message);
 }
