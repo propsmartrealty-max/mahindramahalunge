@@ -4,6 +4,7 @@ import Footer from '../components/Footer.astro';
 import LeadModal from '../components/LeadModal.astro';
 import StickyBar from '../components/StickyBar.astro';
 import { allMahindraKeywordPermutations } from '../data/mahindraKeywordsEcosystem';
+import { westPuneLocalityData } from '../data/pSeoWestPuneLocalities';
 
 interface Props {
   title?: string;
@@ -180,6 +181,31 @@ const baseSchema = {
         "latitude": 18.562536,
         "longitude": 73.727373
       },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+          "opens": "09:00",
+          "closes": "19:00"
+        }
+      ],
+      "amenityFeature": [
+        { "@type": "LocationFeatureSpecification", "name": "~44,000 Sq.Ft Grand Clubhouse", "value": true },
+        { "@type": "LocationFeatureSpecification", "name": "Temperature-Regulated Pool with Sunken Aqua Bar", "value": true },
+        { "@type": "LocationFeatureSpecification", "name": "Floodlit Futsal & Football Arena", "value": true },
+        { "@type": "LocationFeatureSpecification", "name": "Mindful Yoga Lawn & Biophilic Gardens", "value": true },
+        { "@type": "LocationFeatureSpecification", "name": "Pre-Certified IGBC Gold & Net Zero Waste", "value": true }
+      ],
+      "areaServed": westPuneLocalityData.map(l => ({
+        "@type": "Place",
+        "name": `${l.shortName}, Pune`,
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": l.shortName,
+          "addressRegion": "Pune, Maharashtra",
+          "addressCountry": "IN"
+        }
+      })),
       "developer": {
         "@id": "https://mahindralifespaceshomes.in/#organization"
       },
