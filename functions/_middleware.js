@@ -312,8 +312,20 @@ export async function onRequest(context) {
   ].join('; ');
   modifiedHeaders.set('Content-Security-Policy', cspDirectives);
 
-  // Cloudflare Cache-Tagging & Edge Delivery Tuning
-  modifiedHeaders.set('Cache-Tag', 'mahindra-rivenza, static-pages, html-content, enterprise-edge');
+  // Cloudflare Enterprise Cache-Tagging (Segmented by Ecosystem Cluster)
+  const dynamicTags = ['mahindra-lifespaces', 'enterprise-edge', 'html-content'];
+  if (pathname === '/' || pathname.startsWith('/mahindra-rivenza')) dynamicTags.push('mahindra-rivenza-core');
+  if (pathname.startsWith('/brand')) dynamicTags.push('mahindra-brand-ecosystem', 'mahindra-pune-portfolio');
+  if (pathname.startsWith('/floor-plans')) dynamicTags.push('mahindra-floor-plans', 'rera-sanctioned-blueprints');
+  if (pathname.startsWith('/commute')) dynamicTags.push('mahindra-commute', 'transit-matrix');
+  if (pathname.startsWith('/residences')) dynamicTags.push('mahindra-residences', 'unit-typologies');
+  if (pathname.startsWith('/compare')) dynamicTags.push('mahindra-comparisons', 'competitor-intelligence');
+  if (pathname.startsWith('/articles')) dynamicTags.push('mahindra-articles', 'real-estate-insights');
+  if (pathname.startsWith('/near')) dynamicTags.push('mahindra-localities', 'proximity-matrix');
+  if (pathname.startsWith('/tools')) dynamicTags.push('mahindra-tools', 'financial-calculators');
+  if (pathname.startsWith('/nri')) dynamicTags.push('mahindra-nri', 'global-wealth-hubs');
+
+  modifiedHeaders.set('Cache-Tag', dynamicTags.join(', '));
   modifiedHeaders.set(
     'Cache-Control',
     'public, max-age=0, s-maxage=86400, stale-while-revalidate=604800, stale-if-error=86400'

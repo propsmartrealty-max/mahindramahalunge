@@ -39,6 +39,12 @@ const pageSchema = {
       },
       "image": item.image,
       "numberOfRooms": item.typologies.join(", "),
+      "parentOrganization": {
+        "@type": "Organization",
+        "@id": "https://mahindralifespaceshomes.in/#organization",
+        "name": "Mahindra Lifespace Developers Limited"
+      },
+      ...(item.reraNumber ? { "identifier": item.reraNumber } : {}),
       "floorSize": {
         "@type": "QuantitativeValue",
         "value": item.landArea,

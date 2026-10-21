@@ -8,17 +8,24 @@ const brandSchema = {
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "Organization",
+      "@type": ["Organization", "RealEstateAgent"],
       "@id": "https://mahindralifespaceshomes.in/#organization",
       "name": corporateProfile.legalName,
       "alternateName": [corporateProfile.name, "Mahindra Lifespaces Pune", "Mahindra Lifespace Developers Ltd."],
       "url": corporateProfile.website,
       "logo": "https://mahindralifespaceshomes.in/images/mahindra-lifespaces-logo.svg",
+      "foundingDate": "1994",
       "tickerSymbol": [`NSE:${corporateProfile.nseSymbol}`, `BSE:${corporateProfile.bseCode}`],
       "parentOrganization": {
         "@type": "Organization",
         "name": corporateProfile.parentOrganization,
-        "url": "https://www.mahindra.com/"
+        "url": "https://www.mahindra.com/",
+        "sameAs": "https://www.wikidata.org/wiki/Q151141"
+      },
+      "brand": {
+        "@type": "Brand",
+        "name": "Mahindra Lifespaces",
+        "slogan": "Joyful Spaces. Sustainable Living."
       },
       "sameAs": [
         corporateProfile.wikipediaUrl,
@@ -26,9 +33,32 @@ const brandSchema = {
         "https://www.bseindia.com/stock-share-price/mahindra-lifespace-developers-ltd/mahlife/532313/",
         "https://www.nseindia.com/get-quotes/equity?symbol=MAHLIFE"
       ],
+      "knowsAbout": [
+        "Sustainable Real Estate Development",
+        "Net Zero Energy Residential Homes",
+        "IGBC Platinum Green Certification",
+        "Biophilic Architecture",
+        "MahaRERA Regulatory Compliance",
+        "PMRDA Town Planning Schemes",
+        "Pune Luxury Real Estate"
+      ],
+      "areaServed": {
+        "@type": "AdministrativeArea",
+        "name": "Pune, Maharashtra, India"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+91-7744009295",
+        "contactType": "sales",
+        "areaServed": "IN",
+        "availableLanguage": ["English", "Hindi", "Marathi"]
+      },
       "address": {
         "@type": "PostalAddress",
         "streetAddress": corporateProfile.headquarters,
+        "addressLocality": "Mumbai",
+        "addressRegion": "Maharashtra",
+        "postalCode": "400018",
         "addressCountry": "IN"
       }
     },
