@@ -1,0 +1,38 @@
+; ==============================================================================
+; Cloudflare Enterprise DNS Zone File — mahindralifespaceshomes.in
+; BIND 9 Compatible Export Format for Cloudflare DNS Import
+; ==============================================================================
+$ORIGIN mahindralifespaceshomes.in.
+$TTL 300
+
+; --- Authoritative Nameservers ---
+@               IN      NS      malcolm.ns.cloudflare.com.
+@               IN      NS      margot.ns.cloudflare.com.
+
+; --- Google Search Console Ownership Verification ---
+@               IN      TXT     "google-site-verification=ZkWP-CncVKOeHdtgmsT4UXy9E5pCTAaJNBp-ez3YLEs"
+
+; --- RFC 7505 Null MX (Strict Anti-Spoofing: Declares no email accepted) ---
+@               IN      MX      0 .
+
+; --- Strict SPF (Sender Policy Framework: Declares NO servers send email) ---
+@               IN      TXT     "v=spf1 -all"
+
+; --- Strict DMARC (Domain-based Message Authentication: 100% Reject Fraud) ---
+_dmarc          IN      TXT     "v=DMARC1; p=reject; sp=reject; adkim=s; aspf=s; pct=100;"
+
+; --- Wildcard Inactive DKIM Record ---
+*._domainkey    IN      TXT     "v=DKIM1; p="
+
+; --- RFC 6844 / RFC 8659 Certificate Authority Authorization (CAA) ---
+; Restricts certificate issuance strictly to Google Trust Services, Let's Encrypt & DigiCert
+@               IN      CAA     0 issue "pki.goog"
+@               IN      CAA     0 issue "letsencrypt.org"
+@               IN      CAA     0 issue "digicert.com"
+@               IN      CAA     0 issuewild "pki.goog"
+@               IN      CAA     0 issuewild "letsencrypt.org"
+@               IN      CAA     0 issuewild "digicert.com"
+@               IN      CAA     0 iodef "mailto:security@mahindralifespaceshomes.in"
+
+; --- Microsoft / IndexNow Key Authentication ---
+indexnow        IN      TXT     "9e4f2b8c6a0d4e7f8b1c3a5d7e9f0b2a"

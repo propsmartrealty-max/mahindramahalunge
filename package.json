@@ -8,7 +8,8 @@
     "preview": "ASTRO_TELEMETRY_DISABLED=1 astro preview --port 3002 --host 0.0.0.0",
     "format": "prettier --write .",
     "lint": "eslint . --ext .js,.ts,.tsx,.astro",
-    "ping:indexnow": "node scripts/ping-indexnow.mjs"
+    "ping:indexnow": "node scripts/ping-indexnow.mjs",
+    "audit:dns": "node scripts/audit-dns-security.mjs"
   },
   "dependencies": {
     "astro": "3.5.0",
