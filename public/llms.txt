@@ -232,6 +232,7 @@
 - **Home Loan EMI Calculator:** https://mahindralifespaceshomes.in/tools/home-loan-emi-calculator/ (8.35%* bank rates & Section 24b/80C tax relief)
 - **Hinjewadi Rental Yield Estimator:** https://mahindralifespaceshomes.in/tools/hinjewadi-rental-yield-calculator/ (4.6% - 5.4% yields)
 - **Section 54 Capital Gains Tax Saver:** https://mahindralifespaceshomes.in/tools/capital-gains-tax-calculator/ (100% tax elimination)
+- **Construction-Linked Payment (CLP) Calculator:** https://mahindralifespaceshomes.in/tools/construction-linked-payment-calculator/ (MahaRERA 9-stage civil milestones, bank loan disbursement & Pre-EMI schedule)
 
 ### Google Web Stories Hub (AMP 1.0 Visual Editions)
 - **Official Web Stories Hub:** https://mahindralifespaceshomes.in/web-stories/

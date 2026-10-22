@@ -262,6 +262,13 @@ export const CORE_PAGES: SitemapEntry[] = [
     changefreq: 'weekly',
   },
   {
+    url: `${BASE_URL}/tools/construction-linked-payment-calculator/`,
+    title: 'Mahindra Rivenza Construction-Linked Payment (CLP) & Slab Milestone Calculator',
+    category: 'core',
+    priority: 0.90,
+    changefreq: 'weekly',
+  },
+  {
     url: `${BASE_URL}/pune-real-estate/`,
     title: 'Pune Real Estate Market 2026: Property Prices, Micro-Markets & Investment Guide',
     category: 'core',

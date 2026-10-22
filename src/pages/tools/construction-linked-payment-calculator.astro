@@ -1,0 +1,400 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const clpSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebApplication",
+      "@id": "https://mahindralifespaceshomes.in/tools/construction-linked-payment-calculator/#app",
+      "url": "https://mahindralifespaceshomes.in/tools/construction-linked-payment-calculator/",
+      "name": "Mahindra Rivenza Construction-Linked Payment (CLP) & Slab Milestone Calculator 2026",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "All",
+      "description": "Calculate exact MahaRERA-sanctioned milestone payments, construction slab cash-flows, bank loan disbursements, and Pre-EMI liability for 2, 3 & 4 BHK residences at Mahindra Rivenza, Baner Annex, Pune."
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://mahindralifespaceshomes.in/tools/construction-linked-payment-calculator/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is a Construction-Linked Payment (CLP) plan in Pune real estate?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A Construction-Linked Payment (CLP) plan is a payment schedule where buyer instalments and bank loan disbursements are tied directly to verified civil construction milestones (such as Plinth, Slabs, Masonry, and OC) certified by an architect under MahaRERA guidelines, rather than calendar dates."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does bank loan disbursement work under the CLP plan for Mahindra Rivenza?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Under a standard 80:20 home loan, the buyer contributes their 20% margin money during the initial booking and agreement stages. Thereafter, the lending bank (SBI, HDFC, ICICI, Axis) inspects civil site progress and disburses the remaining 80% directly to Mahindra Lifespaces' designated MahaRERA Escrow Account as each slab milestone is achieved."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the Pre-EMI option and how does it reduce buyer cash-flow pressure?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "During construction, the homebuyer pays interest only on the cumulative amount disbursed by the bank (Pre-EMI), rather than the full loan amount. Full principal + interest EMIs only commence upon formal possession and handover of the residence."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How are buyer funds protected under MahaRERA at Mahindra Rivenza?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Under MahaRERA Section 4(2)(l)(D), 70% of all buyer instalments must be deposited into a dedicated scheduled bank escrow account (MahaRERA Registration PR1261012602102) and can only be withdrawn in proportion to certified construction completion vetted by an engineer, architect, and chartered accountant."
+          }
+        }
+      ]
+    }
+  ]
+};
+---
+
+<Layout
+  title="Mahindra Rivenza CLP Calculator | Slab Milestone Payment Schedule 2026"
+  description="Calculate exact MahaRERA milestone instalments, slab disbursement timelines, Pre-EMI costs, and cash outflows for 2, 3 & 4 BHK flats at Mahindra Rivenza, Baner Annex, Pune."
+  canonical="https://mahindralifespaceshomes.in/tools/construction-linked-payment-calculator/"
+  customSchema={clpSchema}
+>
+  <!-- Hero Section -->
+  <section class="pt-32 pb-16 bg-charcoal-950 border-b border-white/10 relative overflow-hidden">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4">
+      <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-gold-500/10 border border-gold-500/30 text-gold-400 text-xs font-semibold uppercase tracking-widest">
+        <span>MahaRERA Section 4 Escrow Aligned • 2026 Schedule</span>
+      </div>
+      
+      <h1 class="font-serif text-3xl sm:text-5xl font-bold text-white tracking-tight leading-tight">
+        Construction-Linked Payment (CLP) <br />
+        <span class="gold-gradient-text">Milestone &amp; Slab Calculator 2026</span>
+      </h1>
+      
+      <p class="text-stone-300 text-sm sm:text-base max-w-3xl leading-relaxed">
+        Simulate your exact cash-flow outflows, bank loan tranches, and Pre-EMI obligations across every sanctioned civil construction milestone at Mahindra Rivenza, Baner Annex (Mahalunge), Pune.
+      </p>
+    </div>
+  </section>
+
+  <!-- Interactive Calculator Body -->
+  <section class="py-16 bg-[#0c1017]">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+      
+      <div class="bg-charcoal-900/90 border border-white/10 rounded-2xl p-6 sm:p-10 shadow-2xl backdrop-blur-md space-y-8">
+        
+        <!-- One-Click Preset Configurations -->
+        <div class="space-y-2">
+          <label class="text-xs uppercase tracking-wider text-gold-400 font-mono font-bold">Select Official Mahindra Rivenza Configuration</label>
+          <div class="flex flex-wrap gap-2.5 pt-1">
+            <button type="button" data-val="9000000" class="clp-preset-btn px-4 py-2 rounded-lg bg-gold-500/20 border border-gold-500/50 text-xs font-semibold text-gold-300 transition-colors">
+              2 BHK Premium (₹90 L)
+            </button>
+            <button type="button" data-val="10400000" class="clp-preset-btn px-4 py-2 rounded-lg bg-white/5 hover:bg-gold-500/20 border border-white/10 text-xs font-semibold text-stone-200 transition-colors">
+              2 BHK Luxury (₹1.04 Cr)
+            </button>
+            <button type="button" data-val="13100000" class="clp-preset-btn px-4 py-2 rounded-lg bg-white/5 hover:bg-gold-500/20 border border-white/10 text-xs font-semibold text-stone-200 transition-colors">
+              3 BHK Deluxe (₹1.31 Cr)
+            </button>
+            <button type="button" data-val="16000000" class="clp-preset-btn px-4 py-2 rounded-lg bg-white/5 hover:bg-gold-500/20 border border-white/10 text-xs font-semibold text-stone-200 transition-colors">
+              3 BHK Ultra Luxury (₹1.60 Cr)
+            </button>
+            <button type="button" data-val="22000000" class="clp-preset-btn px-4 py-2 rounded-lg bg-white/5 hover:bg-gold-500/20 border border-white/10 text-xs font-semibold text-stone-200 transition-colors">
+              4 BHK Sky Villa (₹2.20 Cr)
+            </button>
+            <button type="button" data-val="23500000" class="clp-preset-btn px-4 py-2 rounded-lg bg-white/5 hover:bg-gold-500/20 border border-white/10 text-xs font-semibold text-stone-200 transition-colors">
+              4 BHK Presidential (₹2.35 Cr)
+            </button>
+          </div>
+        </div>
+
+        <!-- Inputs Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-6 items-end border-y border-white/10 py-6">
+          <div class="md:col-span-6 space-y-2">
+            <label for="flatValue" class="block text-xs uppercase tracking-wider text-stone-400 font-mono">
+              Total Agreement Value (₹)
+            </label>
+            <div class="relative">
+              <span class="absolute inset-y-0 left-0 pl-3.5 flex items-center text-stone-500 font-mono font-bold">₹</span>
+              <input
+                type="number"
+                id="flatValue"
+                value="9000000"
+                min="5000000"
+                max="50000000"
+                step="100000"
+                class="w-full pl-8 pr-4 py-3 bg-black/40 border border-white/15 rounded-xl text-white font-mono text-lg focus:outline-none focus:border-gold-400 transition-colors"
+              />
+            </div>
+          </div>
+
+          <div class="md:col-span-3 space-y-2">
+            <label for="loanRatio" class="block text-xs uppercase tracking-wider text-stone-400 font-mono">
+              Financing Structure
+            </label>
+            <select
+              id="loanRatio"
+              class="w-full px-3 py-3 bg-black/40 border border-white/15 rounded-xl text-white text-sm focus:outline-none focus:border-gold-400 transition-colors"
+            >
+              <option value="80" selected>80% Bank Loan : 20% Self</option>
+              <option value="75">75% Bank Loan : 25% Self</option>
+              <option value="70">70% Bank Loan : 30% Self</option>
+              <option value="0">100% Self-Funded (No Loan)</option>
+            </select>
+          </div>
+
+          <div class="md:col-span-3 space-y-2">
+            <label for="interestRate" class="block text-xs uppercase tracking-wider text-stone-400 font-mono">
+              Home Loan Interest Rate
+            </label>
+            <div class="relative">
+              <input
+                type="number"
+                id="interestRate"
+                value="8.35"
+                min="7.0"
+                max="12.0"
+                step="0.05"
+                class="w-full pl-4 pr-8 py-3 bg-black/40 border border-white/15 rounded-xl text-white font-mono text-sm focus:outline-none focus:border-gold-400 transition-colors"
+              />
+              <span class="absolute inset-y-0 right-0 pr-3.5 flex items-center text-stone-500 font-mono text-sm">%</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Summary KPIs -->
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+          <div class="p-4 rounded-xl bg-white/5 border border-white/10 space-y-1">
+            <span class="text-[10px] uppercase tracking-wider text-stone-400 font-mono">Agreement Value</span>
+            <div id="kpiAgreement" class="text-lg sm:text-xl font-bold font-mono text-white">₹90.00 L</div>
+          </div>
+          <div class="p-4 rounded-xl bg-white/5 border border-white/10 space-y-1">
+            <span class="text-[10px] uppercase tracking-wider text-stone-400 font-mono">Buyer Margin Money</span>
+            <div id="kpiSelf" class="text-lg sm:text-xl font-bold font-mono text-emerald-400">₹18.00 L</div>
+          </div>
+          <div class="p-4 rounded-xl bg-white/5 border border-white/10 space-y-1">
+            <span class="text-[10px] uppercase tracking-wider text-stone-400 font-mono">Sanctioned Bank Loan</span>
+            <div id="kpiLoan" class="text-lg sm:text-xl font-bold font-mono text-gold-400">₹72.00 L</div>
+          </div>
+          <div class="p-4 rounded-xl bg-white/5 border border-white/10 space-y-1">
+            <span class="text-[10px] uppercase tracking-wider text-stone-400 font-mono">Estimated Handover</span>
+            <div class="text-lg sm:text-xl font-bold font-mono text-stone-200">Dec 2030*</div>
+          </div>
+        </div>
+
+        <!-- Milestones Schedule Table -->
+        <div class="space-y-4">
+          <div class="flex items-center justify-between">
+            <h2 class="text-base font-bold text-white tracking-wide uppercase font-mono text-xs text-gold-400">
+              MahaRERA Sanctioned Construction Milestone Breakdown
+            </h2>
+            <span class="text-xs text-stone-400 font-mono">100% Certified Stages</span>
+          </div>
+
+          <div class="overflow-x-auto border border-white/10 rounded-xl">
+            <table class="w-full text-left text-xs sm:text-sm text-stone-300">
+              <thead class="bg-black/60 text-stone-400 font-mono uppercase text-[11px] border-b border-white/10">
+                <tr>
+                  <th class="py-3 px-4">Stage #</th>
+                  <th class="py-3 px-4">Construction Milestone Description</th>
+                  <th class="py-3 px-3 text-center">% Share</th>
+                  <th class="py-3 px-4 text-right">Instalment Amount</th>
+                  <th class="py-3 px-4 text-right">Funded By</th>
+                </tr>
+              </thead>
+              <tbody id="milestonesTableBody" class="divide-y divide-white/5 font-sans">
+                <!-- Dynamically populated via JS -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Statutory Disclosures & Lead Capture Box -->
+        <div class="p-6 rounded-xl bg-gold-950/20 border border-gold-500/30 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+          <div class="space-y-1 max-w-xl">
+            <h3 class="text-white font-bold text-sm">Need a Formal Bank-Approved Cost Sheet for Loan Sanction?</h3>
+            <p class="text-stone-300 text-xs leading-relaxed">
+              Receive the official developer cost sheet with exact stamp duty, registration, GST, and floor-rise breakups approved by SBI, HDFC, ICICI, and Axis Bank.
+            </p>
+          </div>
+          <button
+            type="button"
+            onclick="document.getElementById('lead-modal')?.classList.remove('hidden')"
+            class="px-5 py-3 rounded-xl bg-gold-500 hover:bg-gold-400 text-charcoal-950 font-bold text-xs uppercase tracking-wider transition-colors shrink-0 shadow-lg"
+          >
+            Request Official Cost Sheet
+          </button>
+        </div>
+
+      </div>
+
+      <!-- Educational & Regulatory Explanations -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-stone-300 text-xs sm:text-sm leading-relaxed">
+        <div class="bg-charcoal-900/50 border border-white/10 rounded-xl p-6 space-y-3">
+          <h3 class="font-bold text-white text-base">What is the Pre-EMI Advantage?</h3>
+          <p>
+            Under a Construction-Linked Plan (CLP), the lending financial institution disburses loan amounts in phases matching actual civil progress. During the under-construction phase, you are only liable to pay simple interest on the cumulative amount disbursed (Pre-EMI).
+          </p>
+          <p>
+            This significantly reduces monthly out-of-pocket expenses compared to full EMIs while your apartment is under active construction.
+          </p>
+        </div>
+
+        <div class="bg-charcoal-900/50 border border-white/10 rounded-xl p-6 space-y-3">
+          <h3 class="font-bold text-white text-base">MahaRERA 70% Escrow Protection</h3>
+          <p>
+            Under MahaRERA Section 4(2)(l)(D), 70% of all payments collected for Mahindra Rivenza are deposited directly into a designated scheduled bank escrow account.
+          </p>
+          <p>
+            Funds can only be withdrawn upon tripartite certification from the project engineer, practicing architect, and statutory chartered accountant, guaranteeing timely project delivery.
+          </p>
+        </div>
+      </div>
+
+      <!-- FAQ Section -->
+      <div class="bg-charcoal-900/60 border border-white/10 rounded-2xl p-6 sm:p-10 space-y-6">
+        <h2 class="font-serif text-2xl font-bold text-white">Frequently Asked Questions: Payment Plans &amp; Milestones</h2>
+        
+        <div class="space-y-4 divide-y divide-white/5">
+          <div class="pt-4 space-y-2">
+            <h4 class="font-semibold text-white text-sm">Can I switch between Pre-EMI and Full EMI during construction?</h4>
+            <p class="text-stone-300 text-xs sm:text-sm leading-relaxed">
+              Yes. Most nationalized banks (SBI, HDFC, ICICI) permit buyers to opt for Full EMI even during construction. Doing so reduces the principal loan amount sooner and saves substantial cumulative interest over the loan tenure.
+            </p>
+          </div>
+
+          <div class="pt-4 space-y-2">
+            <h4 class="font-semibold text-white text-sm">What happens if a construction milestone is delayed?</h4>
+            <p class="text-stone-300 text-xs sm:text-sm leading-relaxed">
+              Under MahaRERA rules, the developer cannot raise a payment demand until the specific structural milestone has been completed and certified. If construction halts or slows, your instalment dates naturally pause without penalty.
+            </p>
+          </div>
+
+          <div class="pt-4 space-y-2">
+            <h4 class="font-semibold text-white text-sm">Are GST and Stamp Duty included in the CLP milestone schedule?</h4>
+            <p class="text-stone-300 text-xs sm:text-sm leading-relaxed">
+              GST (5% for non-affordable residential properties) is payable proportionally with each milestone demand notice. The 7% Pune Stamp Duty and registration fee (₹30,000) are paid upfront at the time of registering the Agreement for Sale (Stage 2).
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <script is:inline>
+    const MILESTONES = [
+      { id: 1, name: "Booking Token & Earnest Deposit", pct: 10, source: "self" },
+      { id: 2, name: "Execution & Registration of Agreement for Sale", pct: 10, source: "self" },
+      { id: 3, name: "Completion of Excavation & Foundation Plinth", pct: 15, source: "loan" },
+      { id: 4, name: "Casting of Podium & Lower Slabs (Slabs 1 to 5)", pct: 10, source: "loan" },
+      { id: 5, name: "Mid-Level Superstructure Slabs (Slabs 6 to 15)", pct: 15, source: "loan" },
+      { id: 6, name: "Top-Out of Highest Residential Slab", pct: 10, source: "loan" },
+      { id: 7, name: "Internal Masonry, Plaster & Vitrified Flooring", pct: 10, source: "loan" },
+      { id: 8, name: "External Paint, High-Speed Elevators & MEP Fitting", pct: 10, source: "loan" },
+      { id: 9, name: "Notice of Possession with MahaRERA Occupancy Certificate (OC)", pct: 10, source: "loan" },
+    ];
+
+    function formatINR(val) {
+      if (val >= 10000000) {
+        return '₹' + (val / 10000000).toFixed(2) + ' Cr';
+      }
+      return '₹' + (val / 100000).toFixed(2) + ' L';
+    }
+
+    function formatNumber(val) {
+      return new Intl.NumberFormat('en-IN', { style: 'currency', currency: 'INR', maximumFractionDigits: 0 }).format(val);
+    }
+
+    function calculateCLP() {
+      const valInput = document.getElementById('flatValue');
+      const loanSelect = document.getElementById('loanRatio');
+      if (!valInput || !loanSelect) return;
+
+      const totalVal = parseFloat(valInput.value) || 9000000;
+      const loanPct = parseFloat(loanSelect.value);
+      const selfPct = 100 - loanPct;
+
+      const selfAmount = (totalVal * selfPct) / 100;
+      const loanAmount = (totalVal * loanPct) / 100;
+
+      const kpiAgreement = document.getElementById('kpiAgreement');
+      const kpiSelf = document.getElementById('kpiSelf');
+      const kpiLoan = document.getElementById('kpiLoan');
+
+      if (kpiAgreement) kpiAgreement.innerText = formatINR(totalVal);
+      if (kpiSelf) kpiSelf.innerText = formatINR(selfAmount);
+      if (kpiLoan) kpiLoan.innerText = formatINR(loanAmount);
+
+      const tableBody = document.getElementById('milestonesTableBody');
+      if (!tableBody) return;
+
+      let html = '';
+      let cumulativePaid = 0;
+
+      MILESTONES.forEach((m) => {
+        const instalment = (totalVal * m.pct) / 100;
+        cumulativePaid += instalment;
+
+        let fundedBy = '';
+        let badgeColor = '';
+
+        if (loanPct === 0) {
+          fundedBy = 'Buyer Equity (100%)';
+          badgeColor = 'text-emerald-400 bg-emerald-500/10 border-emerald-500/30';
+        } else if (m.id <= 2 && selfPct >= 20) {
+          fundedBy = 'Buyer Margin (Self)';
+          badgeColor = 'text-emerald-400 bg-emerald-500/10 border-emerald-500/30';
+        } else {
+          fundedBy = 'Bank Loan Disbursement';
+          badgeColor = 'text-gold-400 bg-gold-500/10 border-gold-500/30';
+        }
+
+        html += `
+          <tr class="hover:bg-white/[0.02] transition-colors">
+            <td class="py-3 px-4 font-mono font-bold text-stone-400">#0${m.id}</td>
+            <td class="py-3 px-4 font-medium text-white">${m.name}</td>
+            <td class="py-3 px-3 text-center font-mono font-bold text-stone-200">${m.pct}%</td>
+            <td class="py-3 px-4 text-right font-mono font-bold text-gold-300">${formatNumber(instalment)}</td>
+            <td class="py-3 px-4 text-right">
+              <span class="inline-block px-2.5 py-0.5 rounded-full text-[11px] font-mono border ${badgeColor}">
+                ${fundedBy}
+              </span>
+            </td>
+          </tr>
+        `;
+      });
+
+      tableBody.innerHTML = html;
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      calculateCLP();
+
+      const valInput = document.getElementById('flatValue');
+      const loanSelect = document.getElementById('loanRatio');
+
+      if (valInput) valInput.addEventListener('input', calculateCLP);
+      if (loanSelect) loanSelect.addEventListener('change', calculateCLP);
+
+      const presetBtns = document.querySelectorAll('.clp-preset-btn');
+      presetBtns.forEach((btn) => {
+        btn.addEventListener('click', (e) => {
+          presetBtns.forEach((b) => {
+            b.classList.remove('bg-gold-500/20', 'border-gold-500/50', 'text-gold-300');
+            b.classList.add('bg-white/5', 'border-white/10', 'text-stone-200');
+          });
+          btn.classList.add('bg-gold-500/20', 'border-gold-500/50', 'text-gold-300');
+          btn.classList.remove('bg-white/5', 'border-white/10', 'text-stone-200');
+
+          if (valInput) {
+            valInput.value = btn.getAttribute('data-val') || '9000000';
+            calculateCLP();
+          }
+        });
+      });
+    });
+  </script>
+</Layout>
