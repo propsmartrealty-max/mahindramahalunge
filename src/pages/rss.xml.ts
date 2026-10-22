@@ -169,6 +169,7 @@ export const GET: APIRoute = async () => {
     <language>en-in</language>
     <lastBuildDate>${new Date().toUTCString()}</lastBuildDate>
     <atom:link href="https://mahindralifespaceshomes.in/rss.xml" rel="self" type="application/rss+xml"/>
+    <atom:link rel="hub" href="https://pubsubhubbub.appspot.com/"/>
     ${articles
       .map(
         (art) => `
