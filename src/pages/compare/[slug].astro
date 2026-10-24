@@ -44,11 +44,13 @@ const pageSchema = {
     }
   ]
 };
+const highCtrTitle = `Mahindra Rivenza vs ${item.competitorName} [2026 Comparison] | Price & Reviews`;
+const highCtrDescription = `2026 head-to-head comparison: Mahindra Rivenza vs ${item.competitorName}. Compare prices, carpet area efficiency, 9+ acres greens, and MahaRERA compliance.`;
 ---
 
 <Layout
-  title={item.metaTitle}
-  description={item.metaDescription}
+  title={highCtrTitle}
+  description={highCtrDescription}
   keywords={`${item.competitorName.toLowerCase()}, mahindra mahalunge vs ${item.competitorName.toLowerCase()}, mahindra lifespaces vs ${item.competitorName.toLowerCase()}, mahalunge real estate comparison, mahindra mahalunge price vs ${item.competitorName.toLowerCase()}, mahindra mahalunge reviews`}
   canonical={`https://mahindralifespaceshomes.in/compare/${item.slug}/`}
   customSchema={pageSchema}

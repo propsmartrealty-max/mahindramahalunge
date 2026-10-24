@@ -72,11 +72,13 @@ const commuteSchema = {
     }
   ]
 };
+const highCtrTitle = `Mahindra Rivenza to ${item.destinationName} [${item.postBridgeDriveTimeMins}] | Commute & Route Map`;
+const highCtrDescription = `Exact commute time & driving route from Mahindra Rivenza to ${item.destinationName}. Just ${item.distanceKm} km (${item.postBridgeDriveTimeMins}) via the new 4-lane Mula River Bridge.`;
 ---
 
 <Layout
-  title={item.metaTitle}
-  description={item.metaDescription}
+  title={highCtrTitle}
+  description={highCtrDescription}
   canonical={`https://mahindralifespaceshomes.in/commute/${item.slug}/`}
   customSchema={commuteSchema}
 >

@@ -58,11 +58,13 @@ const pageSchema = {
     }
   ]
 };
+const highCtrTitle = `Mahindra Rivenza NRI Investment [${item.countryOrRegion}] | Starts ${item.startingPriceInCurrency}`;
+const highCtrDescription = `Invest in Mahindra Rivenza Pune from ${item.countryOrRegion}. Pre-approved NRI home loans, ${item.currency} pricing (${item.startingPriceInCurrency}), 4.8%-5.4% rental yields & FEMA advisory.`;
 ---
 
 <Layout
-  title={item.metaTitle}
-  description={item.metaDescription}
+  title={highCtrTitle}
+  description={highCtrDescription}
   keywords={`nri property investment ${item.countryOrRegion.toLowerCase()}, buy flat in pune from ${item.countryOrRegion.toLowerCase()}, mahindra rivenza nri desk, nri home loans pune, mahindra lifespaces ${item.currency.toLowerCase()} pricing`}
   canonical={`https://mahindralifespaceshomes.in/nri/${item.slug}/`}
   customSchema={pageSchema}

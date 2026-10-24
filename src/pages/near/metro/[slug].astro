@@ -57,11 +57,13 @@ const pageSchema = {
     }
   ]
 };
+const highCtrTitle = `Flats Near ${item.stationName} [${item.commuteTime}] | 2, 3 & 4 BHK Starts ₹90L*`;
+const highCtrDescription = `Luxury 2, 3 & 4 BHK flats near ${item.stationName} (Pune Metro Line 3). Just ${item.distanceKm} (${item.commuteTime}) from Mahindra Rivenza. Starting ₹90L*. MahaRERA approved.`;
 ---
 
 <Layout
-  title={item.metaTitle}
-  description={item.metaDescription}
+  title={highCtrTitle}
+  description={highCtrDescription}
   keywords={`flats near ${item.stationName.toLowerCase()}, apartments near pune metro line 3, flats near metro station hinjewadi, mahalunge metro connectivity, mahindra rivenza metro`}
   canonical={`https://mahindralifespaceshomes.in/near/metro/${item.slug}/`}
   customSchema={pageSchema}

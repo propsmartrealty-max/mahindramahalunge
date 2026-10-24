@@ -57,11 +57,13 @@ const pageSchema = {
     }
   ]
 };
+const highCtrTitle = `Flats Near ${item.shortName || item.name} [${item.driveTime}] | 2, 3 & 4 BHK Starts ₹90L*`;
+const highCtrDescription = `Premium 2, 3 & 4 BHK apartments near ${item.shortName || item.name} at Mahindra Rivenza Baner Annex. Just ${item.distanceKm} (${item.driveTime}) away. Starts ₹90L*. MahaRERA approved.`;
 ---
 
 <Layout
-  title={item.metaTitle}
-  description={item.metaDescription}
+  title={highCtrTitle}
+  description={highCtrDescription}
   keywords={`flats near ${item.name.toLowerCase()}, apartments near ${item.shortName.toLowerCase()}, residences near hospital baner, medical hub west pune, mahindra rivenza healthcare`}
   canonical={`https://mahindralifespaceshomes.in/near/hospitals/${item.slug}/`}
   customSchema={pageSchema}
