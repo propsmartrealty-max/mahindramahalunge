@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "ASTRO_TELEMETRY_DISABLED=1 astro dev --port 3002 --host 0.0.0.0",
     "build": "ASTRO_TELEMETRY_DISABLED=1 astro build",
+    "postbuild": "node scripts/ping-indexnow.mjs",
     "preview": "ASTRO_TELEMETRY_DISABLED=1 astro preview --port 3002 --host 0.0.0.0",
     "format": "prettier --write .",
     "lint": "eslint . --ext .js,.ts,.tsx,.astro",

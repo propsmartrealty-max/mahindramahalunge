@@ -13,6 +13,7 @@ interface Props {
   canonical?: string;
   image?: string;
   customSchema?: any;
+  noindex?: boolean;
 }
 
 const {
@@ -22,6 +23,7 @@ const {
   canonical,
   image,
   customSchema = null,
+  noindex = false,
 } = Astro.props;
 
 const defaultImage = "https://cms.mahindralifespaces.com/web/sites/default/files/styles/web_banner_webp/public/2026-10/jpeg-optimizer_Elevation%20Opt%20A..webp";
@@ -476,12 +478,22 @@ const baseSchema = {
     <title>{title}</title>
     <meta name="description" content={description} />
     <meta name="keywords" content={metaKeywords} />
-    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
     <link rel="canonical" href={canonicalUrl} />
     <link rel="alternate" hreflang="en-IN" href={canonicalUrl} />
     <link rel="alternate" hreflang="x-default" href={canonicalUrl} />
-    <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
-    <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    {noindex || path === '/404' ? (
+      <>
+        <meta name="robots" content="noindex, follow" />
+        <meta name="googlebot" content="noindex, follow" />
+        <meta name="bingbot" content="noindex, follow" />
+      </>
+    ) : (
+      <>
+        <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+        <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+        <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+      </>
+    )}
     <meta name="theme-color" content="#0c1017" />
     <meta name="indexnow-key" content="9e4f2b8c6a0d4e7f8b1c3a5d7e9f0b2a" />
     <meta name="google-site-verification" content="ZkWP-CncVKOeHdtgmsT4UXy9E5pCTAaJNBp-ez3YLEs" />
