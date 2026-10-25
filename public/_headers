@@ -20,7 +20,7 @@
   X-DNS-Prefetch-Control: on
   Vary: Accept-Encoding, User-Agent
   Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: blob: https://cms.mahindralifespaces.com https://images.unsplash.com https://*.ampproject.org; media-src 'self' https://cms.mahindralifespaces.com; connect-src 'self' https://api.indexnow.org https://cloudflareinsights.com https://wa.me https://formsubmit.co; frame-ancestors 'self'; base-uri 'self'; form-action 'self' https:; upgrade-insecure-requests;
-  Link: <https://fonts.googleapis.com>; rel=preconnect, <https://fonts.gstatic.com>; rel=preconnect; crossorigin
+  Link: <https://fonts.googleapis.com>; rel=preconnect, <https://fonts.gstatic.com>; rel=preconnect; crossorigin, <https://cms.mahindralifespaces.com>; rel=preconnect; crossorigin
 
 # HTML Pages - Instant Edge delivery with Stale-While-Revalidate for Googlebot
 /*.html

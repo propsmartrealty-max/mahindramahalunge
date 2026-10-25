@@ -486,8 +486,10 @@ const baseSchema = {
     <meta name="indexnow-key" content="9e4f2b8c6a0d4e7f8b1c3a5d7e9f0b2a" />
     <meta name="google-site-verification" content="ZkWP-CncVKOeHdtgmsT4UXy9E5pCTAaJNBp-ez3YLEs" />
 
-    <!-- DNS Prefetch & Edge Performance Acceleration -->
+    <!-- DNS Prefetch, Preconnect & LCP Image Preload Acceleration -->
     <link rel="dns-prefetch" href="https://cms.mahindralifespaces.com" />
+    <link rel="preconnect" href="https://cms.mahindralifespaces.com" crossorigin />
+    <link rel="preload" as="image" href={metaImage} fetchpriority="high" type="image/webp" />
 
     <!-- Favicons & Mobile Icons -->
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
