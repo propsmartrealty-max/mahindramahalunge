@@ -35,6 +35,8 @@ http://mahindralifespaceshomes.in/* https://mahindralifespaceshomes.in/:splat 30
 /articles /articles/ 301!
 /west-pune /west-pune/ 301!
 /brand /brand/ 301!
+/baner-annex /baner-annex/ 301!
+/favicon.ico /favicon.svg 301
 
 # 4. Security Hardening & Exploit Mitigation (Instant 404 Drop at Edge)
 /.env* /404.html 404

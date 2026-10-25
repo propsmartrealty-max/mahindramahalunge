@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 192" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#151c2a" />
+      <stop offset="100%" stop-color="#0c1017" />
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f5e0a9" />
+      <stop offset="50%" stop-color="#d4af66" />
+      <stop offset="100%" stop-color="#9a7b38" />
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#d4af66" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+
+  <!-- Rounded Base Badge for SERP Visual Dominance -->
+  <rect width="192" height="192" rx="42" fill="url(#bgGrad)" stroke="url(#goldGrad)" stroke-width="5" />
+
+  <!-- Geometric Luxury Monogram "M" for Mahindra Rivenza -->
+  <g filter="url(#glow)">
+    <!-- Left Pillar -->
+    <path d="M46 142 L46 54 L66 54 L86 106 L86 142 Z" fill="url(#goldGrad)" />
+    <!-- Right Pillar -->
+    <path d="M146 142 L146 54 L126 54 L106 106 L106 142 Z" fill="url(#goldGrad)" />
+    <!-- Center Apex Jewel (Mahindra Red Ruby) -->
+    <polygon points="96,52 112,88 80,88" fill="#e31837" />
+    <!-- Central Chevrons -->
+    <polygon points="96,84 108,114 84,114" fill="url(#goldGrad)" />
+  </g>
+
+  <!-- Base Baseline Anchor Accent -->
+  <rect x="58" y="148" width="76" height="4" rx="2" fill="url(#goldGrad)" opacity="0.85" />
+</svg>
