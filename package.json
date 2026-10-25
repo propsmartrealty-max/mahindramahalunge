@@ -10,6 +10,7 @@
     "format": "prettier --write .",
     "lint": "eslint . --ext .js,.ts,.tsx,.astro",
     "ping:indexnow": "node scripts/ping-indexnow.mjs",
+    "cron:index": "node scripts/cron-search-indexer.mjs",
     "audit:dns": "node scripts/audit-dns-security.mjs"
   },
   "dependencies": {

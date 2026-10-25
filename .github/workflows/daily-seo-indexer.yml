@@ -1,0 +1,50 @@
+name: Automated Search Engine Indexer Cron
+
+on:
+  schedule:
+    # 02:00 UTC (7:30 AM IST) - Morning search indexation push
+    - cron: '0 2 * * *'
+    # 14:00 UTC (7:30 PM IST) - Evening search indexation push
+    - cron: '0 14 * * *'
+  workflow_dispatch:
+    inputs:
+      reason:
+        description: 'Reason for manual broadcast trigger'
+        required: false
+        default: 'Manual Indexing & Cache Refresh'
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+jobs:
+  broadcast-indexing:
+    name: Broadcast Sitemaps & IndexNow (292 URLs)
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js Environment
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+
+      - name: Install Project Dependencies
+        run: npm ci
+
+      - name: Build Static Production Assets (Zero-Error Verification)
+        run: npm run build
+        env:
+          ASTRO_TELEMETRY_DISABLED: 1
+
+      - name: Execute Search Engine Auto-Indexer Cron
+        run: node scripts/cron-search-indexer.mjs
+        env:
+          GLOBAL_KEY: '9e4f2b8c6a0d4e7f8b1c3a5d7e9f0b2a'
+          INDEXNOW_KEY: '9e4f2b8c6a0d4e7f8b1c3a5d7e9f0b2a'
