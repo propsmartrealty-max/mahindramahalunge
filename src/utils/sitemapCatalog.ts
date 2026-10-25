@@ -192,6 +192,14 @@ export const CORE_PAGES: SitemapEntry[] = [
     changefreq: 'daily',
   },
   {
+    url: `${BASE_URL}/baner-annex/`,
+    title: 'Baner Annex Real Estate Pune 2026 — Mahindra Rivenza Flagship Hub',
+    category: 'core',
+    priority: 0.95,
+    changefreq: 'daily',
+    images: PRIMARY_IMAGES.slice(0, 3),
+  },
+  {
     url: `${BASE_URL}/mahalunge-pune/`,
     title: 'Mahalunge Pune Real Estate Hub — High-Growth Infrastructure Guide',
     category: 'core',
