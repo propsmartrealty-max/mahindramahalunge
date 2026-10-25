@@ -1,25 +1,58 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+
+const brochureSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "DigitalDocument",
+      "@id": "https://mahindralifespaceshomes.in/brochure/#document",
+      "name": "Mahindra Rivenza Official Launch Brochure & Master Kit 2026",
+      "description": "Comprehensive 2026 launch brochure for Mahindra Rivenza by Mahindra Lifespaces in Baner Annex / Mahalunge, Pune. Contains sanctioned floor plans, 13.46-acre master plan, ~44,000 sq.ft clubhouse specifications, all-inclusive price list, and MahaRERA PR1261012602102 details.",
+      "fileFormat": "application/pdf",
+      "author": {
+        "@type": "Organization",
+        "name": "Mahindra Lifespace Developers Limited"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Mahindra Lifespaces"
+      },
+      "inLanguage": "en-IN",
+      "datePublished": "2026-10-06",
+      "dateModified": "2026-10-25"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://mahindralifespaceshomes.in/" },
+        { "@type": "ListItem", "position": 2, "name": "Brochure PDF", "item": "https://mahindralifespaceshomes.in/brochure/" }
+      ]
+    }
+  ]
+};
 ---
 
 <Layout
-  title="Mahindra Rivenza Brochure PDF [Official Download] | Plans & Price List"
-  description="Download official developer brochure for Mahindra Rivenza by Mahindra Lifespaces. 13.46 acres, 9+ acres greens, floor plans, master layout & payment schedule."
+  title="Mahindra Rivenza Brochure PDF [Official 2026 Download] | Floor Plans & Price Sheet"
+  description="Download official 2026 brochure for Mahindra Rivenza by Mahindra Lifespaces. 13.46 acres, ~44,000 sq.ft clubhouse, 2, 3 & 4 BHK floor plans, cost sheet & MahaRERA PR1261012602102 details."
   canonical="https://mahindralifespaceshomes.in/brochure/"
+  customSchema={brochureSchema}
 >
   <section class="pt-32 pb-24 bg-charcoal-950 min-h-screen flex items-center justify-center relative overflow-hidden">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 w-full space-y-12">
       
       <div class="text-center space-y-3">
         <div class="inline-flex items-center space-x-2 px-3 py-1 rounded bg-gold-500/10 border border-gold-500/30 text-gold-400 text-xs font-semibold uppercase tracking-widest">
-          <span>Official Project Literature</span>
+          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+          <span>Official Developer Literature • MahaRERA PR1261012602102</span>
         </div>
         <h1 class="font-serif text-3xl sm:text-5xl font-bold text-stone-100 leading-tight">
-          Mahindra Mahalunge Brochure <br />
-          <span class="gold-gradient-text">by Mahindra Lifespaces Mahalunge</span>
+          Mahindra Rivenza Official Brochure PDF <br />
+          <span class="gold-gradient-text">Baner Annex, Mahalunge, Pune</span>
         </h1>
         <p class="text-stone-300 text-xs sm:text-sm max-w-xl mx-auto leading-relaxed">
-          Access the comprehensive architectural brief covering Mahindra Mahalunge: the 13.46-acre master layout, 2, 3 & 4 BHK residence floor plans, sustainability systems, and location connectivity.
+          Access the comprehensive architectural dossier covering Mahindra Rivenza: the 13.46-acre master layout, 2, 3 &amp; 4 BHK residence floor plans, ~44,000 sq.ft clubhouse specifications, and 2026 launch pricing.
         </p>
       </div>
 
@@ -38,15 +71,15 @@ import Layout from '../../layouts/Layout.astro';
                 height="14"
               />
               <div class="pt-6">
-                <span class="text-[10px] tracking-widest uppercase text-stone-400 font-medium">Confidential Master Dossier</span>
-                <h3 class="font-serif text-2xl font-bold text-white mt-1">MAHALUNGE</h3>
-                <p class="text-[11px] text-gold-400 tracking-wider uppercase mt-0.5">Pune, Maharashtra</p>
+                <span class="text-[10px] tracking-widest uppercase text-stone-400 font-medium">Official Launch Dossier</span>
+                <h3 class="font-serif text-2xl font-bold text-white mt-1">RIVENZA</h3>
+                <p class="text-[11px] text-gold-400 tracking-wider uppercase mt-0.5">Baner Annex, Pune</p>
               </div>
             </div>
 
             <div class="border-t border-white/10 pt-4 flex items-center justify-between text-[10px] text-stone-400">
-              <span>13.46-Acre Development</span>
-              <span class="text-emerald-400 font-medium">Pre-Launch Edition</span>
+              <span>13.46-Acre Master Township</span>
+              <span class="text-emerald-400 font-medium">MahaRERA Approved</span>
             </div>
           </div>
         </div>
@@ -54,24 +87,24 @@ import Layout from '../../layouts/Layout.astro';
         <!-- Download Action -->
         <div class="md:col-span-7 space-y-5">
           <h3 class="font-serif text-xl sm:text-2xl text-stone-100 font-bold">
-            What's Included in This Dossier:
+            What's Included in This Launch Kit:
           </h3>
           <ul class="space-y-2.5 text-xs text-stone-300">
             <li class="flex items-start space-x-2.5">
               <span class="text-gold-400">✦</span>
-              <span><strong>13.46-Acre Master Layout:</strong> High-resolution vector zones & perimeter roads.</span>
+              <span><strong>13.46-Acre Master Layout:</strong> High-resolution vector zones, 9+ acres of landscaped biophilic greens &amp; perimeter roads.</span>
             </li>
             <li class="flex items-start space-x-2.5">
               <span class="text-gold-400">✦</span>
-              <span><strong>Architectural Blueprints:</strong> Conceptual plans for 2 BHK, 3 BHK & 4 BHK residences.</span>
+              <span><strong>Architectural Floor Plans:</strong> Exact RERA carpet areas and CAD plans for 2 BHK (635-747 sq.ft), 3 BHK (882-1,065 sq.ft) &amp; 4 BHK (1,438-1,465 sq.ft).</span>
             </li>
             <li class="flex items-start space-x-2.5">
               <span class="text-gold-400">✦</span>
-              <span><strong>40+ Amenities Spec Sheet:</strong> Breakdown across Wellness, Sports, Social, and Forest Greens.</span>
+              <span><strong>~44,000 Sq.Ft Clubhouse Blueprint:</strong> Sunken aqua bar infinity pool, wellness spa, sports court, and IGBC Gold specs.</span>
             </li>
             <li class="flex items-start space-x-2.5">
               <span class="text-gold-400">✦</span>
-              <span><strong>Radial Transit & Micro-Market Map:</strong> Signal-free access to Hinjewadi Phase 1 & Baner.</span>
+              <span><strong>All-Inclusive Cost Sheet:</strong> Base prices starting ₹90 Lakhs*, stamp duty, registration, GST &amp; CLP milestone schedule.</span>
             </li>
           </ul>
 
@@ -79,14 +112,14 @@ import Layout from '../../layouts/Layout.astro';
             <button
               data-open-modal
               data-interest="Instant Brochure Download"
-              class="w-full sm:w-auto px-8 py-3.5 rounded bg-gradient-to-r from-gold-400 via-gold-500 to-gold-400 text-charcoal-950 text-xs font-bold uppercase tracking-widest hover:shadow-xl transition-all cursor-pointer"
+              class="w-full sm:w-auto px-8 py-3.5 rounded bg-gradient-to-r from-gold-400 via-gold-500 to-gold-400 text-charcoal-950 text-xs font-bold uppercase tracking-widest hover:shadow-xl transition-all cursor-pointer font-bold"
             >
-              Instant Download (PDF)
+              Instant Download Launch Brochure (PDF)
             </button>
           </div>
 
-          <p class="text-[10px] text-stone-500 italic">
-            *Final RERA project brochure will be distributed upon statutory registration and sanction.
+          <p class="text-[10px] text-stone-400 italic">
+            *Official developer literature. MahaRERA Registration: Phase 1 PR1261012602102 &amp; Phase 2 PM1261012602103.
           </p>
         </div>
 
