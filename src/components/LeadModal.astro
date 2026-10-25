@@ -466,6 +466,15 @@
       if (modalTitle) modalTitle.textContent = 'Priority Pass Registered';
       const successName = document.getElementById('success-name');
       if (successName) successName.textContent = `Thank You, ${nameVal}`;
+
+      // Dynamically personalize WhatsApp confirmation button
+      const whatsappChatLink = document.getElementById('whatsapp-chat-link');
+      if (whatsappChatLink) {
+        const customMsg = encodeURIComponent(
+          `Hi Mahindra Rivenza Team, my name is ${nameVal}. I just registered for ${selectedConf} (${selectedPurpose}) via the official portal. Please share the 2026 cost sheet & schedule a site visit.`
+        );
+        whatsappChatLink.setAttribute('href', `https://wa.me/917744009295?text=${customMsg}`);
+      }
     }
   });
 </script>
