@@ -1,0 +1,167 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const constructionSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://mahindralifespaceshomes.in/construction-status/#webpage",
+      "url": "https://mahindralifespaceshomes.in/construction-status/",
+      "name": "Mahindra Rivenza Construction Status & Milestone Tracker 2026",
+      "description": "Official construction progress report, site excavation, plinth progress, and MahaRERA audited timelines for Mahindra Rivenza at Baner Annex, Mahalunge, Pune.",
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://mahindralifespaceshomes.in/" },
+          { "@type": "ListItem", "position": 2, "name": "Construction Status", "item": "https://mahindralifespaceshomes.in/construction-status/" }
+        ]
+      }
+    }
+  ]
+};
+
+const milestones = [
+  {
+    phase: 'Phase 1 (PR1261012602102)',
+    stage: 'Excavation & Substructure Piling',
+    status: 'In Active Progress',
+    pct: 28,
+    completionDate: 'Q4 2028 Target',
+    items: [
+      'Site boundary walls & security barriers: 100% Complete',
+      'On-site luxury sales experience center & 4 BHK show home: Fully Operational',
+      'Excavation & deep pile foundation work across residential towers: Underway',
+      'Internal drainage & stormwater recharge pits: In Progress'
+    ]
+  },
+  {
+    phase: 'Phase 2 (PM1261012602103)',
+    stage: 'Site Mobilization & Engineering Prep',
+    status: 'Sanctioned / Commencing',
+    pct: 12,
+    completionDate: 'Q2 2029 Target',
+    items: [
+      'PMRDA sanctioned master infrastructure alignment: Verified',
+      'Soil stratification & seismic structural testing: Completed',
+      'Tower crane mobilization & material staging bays: Setup Underway',
+      'Civil contract allocation to Grade-A engineering partners: Finalized'
+    ]
+  }
+];
+---
+
+<Layout
+  title="Mahindra Rivenza Construction Status [2026 Milestone Tracker]"
+  description="Track official construction status, excavation, plinth milestones & RERA progress reports for Mahindra Rivenza at Baner Annex, Mahalunge, Pune."
+  canonical="https://mahindralifespaceshomes.in/construction-status/"
+  customSchema={constructionSchema}
+>
+  <!-- Hero Section -->
+  <section class="pt-32 pb-16 bg-charcoal-950 border-b border-white/10 relative overflow-hidden">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4">
+      <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-semibold uppercase tracking-widest">
+        <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+        <span>MahaRERA Audited Construction Progress • 2026</span>
+      </div>
+      <h1 class="font-serif text-3xl sm:text-5xl font-bold text-stone-100 max-w-4xl leading-tight">
+        Mahindra Rivenza Construction Status: <br />
+        <span class="gold-gradient-text">Live Ground Milestones &amp; Timelines</span>
+      </h1>
+      <p class="text-stone-300 text-sm sm:text-base max-w-2xl font-light leading-relaxed">
+        Transparent, verified construction updates for Mahindra Rivenza at Baner Annex, Mahalunge. Governed by statutory MahaRERA 70% escrow accounts ensuring milestone-linked fund utilization.
+      </p>
+    </div>
+  </section>
+
+  <!-- Live Status Highlights -->
+  <section class="py-16 bg-charcoal-900 border-b border-white/10">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+      
+      <!-- Phase Cards -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        {milestones.map((m) => (
+          <div class="glass-card rounded-2xl border border-white/15 p-8 space-y-6 flex flex-col justify-between shadow-xl">
+            <div class="space-y-4">
+              <div class="flex items-center justify-between">
+                <span class="text-xs uppercase tracking-wider font-mono text-gold-400 font-bold">{m.phase}</span>
+                <span class="px-2.5 py-1 rounded-full bg-emerald-500/20 text-emerald-300 text-[10px] font-bold uppercase tracking-wider border border-emerald-500/30">
+                  {m.status}
+                </span>
+              </div>
+              <h3 class="font-serif text-2xl font-bold text-stone-100">{m.stage}</h3>
+              <p class="text-xs text-stone-400 font-light">Target Sanctioned Possession: <span class="text-stone-200 font-semibold">{m.completionDate}</span></p>
+
+              <!-- Progress Bar -->
+              <div class="space-y-1.5 pt-2">
+                <div class="flex justify-between text-xs text-stone-300">
+                  <span>Current Stage Completion</span>
+                  <span class="font-bold text-gold-400">{m.pct}%</span>
+                </div>
+                <div class="w-full h-2.5 rounded-full bg-charcoal-950 border border-white/10 overflow-hidden">
+                  <div
+                    class="h-full bg-gradient-to-r from-gold-500 to-emerald-400 rounded-full transition-all duration-1000"
+                    style={`width: ${m.pct}%`}
+                  ></div>
+                </div>
+              </div>
+
+              <!-- Detailed Items -->
+              <div class="space-y-2.5 pt-4 border-t border-white/10">
+                <span class="text-xs uppercase tracking-widest text-stone-400 font-semibold block">Ground Progress Breakdown:</span>
+                <ul class="space-y-2 text-xs text-stone-300">
+                  {m.items.map((item) => (
+                    <li class="flex items-start space-x-2">
+                      <span class="text-emerald-400 font-bold">✓</span>
+                      <span class="font-light">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+
+            <div class="pt-4 border-t border-white/10">
+              <button
+                data-open-modal
+                data-interest="Construction Video & Site Photos Request"
+                class="w-full py-3 rounded-full bg-white/10 hover:bg-white/20 text-stone-100 text-xs font-bold uppercase tracking-widest border border-white/20 transition-all cursor-pointer text-center"
+              >
+                Request Latest Site Video (WhatsApp)
+              </button>
+            </div>
+          </div>
+        ))}
+      </div>
+
+    </div>
+  </section>
+
+  <!-- RERA Escrow Security Banner -->
+  <section class="py-16 bg-charcoal-950 border-b border-white/10">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6 text-center">
+      <div class="inline-flex items-center space-x-2 px-3 py-1 rounded bg-gold-500/10 border border-gold-500/30 text-gold-400 text-xs font-semibold uppercase tracking-widest">
+        <span>Statutory Buyer Protections</span>
+      </div>
+      <h2 class="font-serif text-2xl sm:text-3xl font-bold text-stone-100">
+        100% MahaRERA Escrow Security &amp; Zero Delay Governance
+      </h2>
+      <p class="text-xs sm:text-sm text-stone-300 leading-relaxed font-light max-w-2xl mx-auto">
+        Under statutory MahaRERA provisions (PR1261012602102 &amp; PM1261012602103), 70% of all customer collections are deposited into a ring-fenced bank escrow account and can only be withdrawn against certified architect &amp; chartered engineer milestone completion certificates.
+      </p>
+      <div class="pt-2 flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a
+          href="/site-visit/"
+          class="w-full sm:w-auto px-8 py-3.5 rounded-full bg-gradient-to-r from-gold-400 via-gold-500 to-gold-400 text-charcoal-950 text-xs font-bold uppercase tracking-widest hover:shadow-xl transition-all"
+        >
+          Inspect Construction In Person
+        </a>
+        <a
+          href="/rera/"
+          class="w-full sm:w-auto px-8 py-3.5 rounded-full bg-white/10 hover:bg-white/20 text-stone-100 text-xs font-bold uppercase tracking-widest border border-white/20 transition-all"
+        >
+          View RERA Certificates
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>

@@ -1,0 +1,202 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const galleryImages = [
+  {
+    category: 'architecture',
+    title: 'Mahindra Rivenza Architectural Elevation',
+    subtitle: '13.46-Acre Biophilic Landmark at Baner Annex',
+    src: 'https://cms.mahindralifespaces.com/web/sites/default/files/styles/web_banner_webp/public/2026-10/jpeg-optimizer_Elevation%20Opt%20A..webp',
+    width: 800,
+    height: 500,
+  },
+  {
+    category: 'amenities',
+    title: 'Resort Swimming Pool with Sunken Bar',
+    subtitle: 'Temperature-Regulated Infinity Aqua Lounge',
+    src: 'https://cms.mahindralifespaces.com/web/sites/default/files/styles/web_banner_webp/public/2026-10/Swimming%20pool%20with%20sunken%20bar_Rivenza_11zon.webp',
+    width: 800,
+    height: 500,
+  },
+  {
+    category: 'interiors',
+    title: '4 BHK Show Residence — Grand Living Room',
+    subtitle: 'Expansive Horizons & Italian Marble Finishes',
+    src: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=85',
+    width: 800,
+    height: 500,
+  },
+  {
+    category: 'amenities',
+    title: 'Floodlit Championship Futsal Court',
+    subtitle: 'FIFA-Grade Rebound Fenced Turf Arena',
+    src: 'https://cms.mahindralifespaces.com/web/sites/default/files/styles/web_banner_webp/public/2026-10/image001_11zon%20%281%29.webp',
+    width: 800,
+    height: 500,
+  },
+  {
+    category: 'amenities',
+    title: 'Multipurpose Synthetic Sports Court',
+    subtitle: 'Cushioned Basketball, Tennis & Volleyball Arena',
+    src: 'https://cms.mahindralifespaces.com/web/sites/default/files/styles/web_banner_webp/public/2026-10/Multi-purpose_Rivenza__11zon.webp',
+    width: 800,
+    height: 500,
+  },
+  {
+    category: 'amenities',
+    title: 'Open Sky Yoga Lawn & Zen Decks',
+    subtitle: 'Reflexology Pathways & Aromatic Herbal Meadows',
+    src: 'https://cms.mahindralifespaces.com/web/sites/default/files/styles/web_banner_webp/public/2026-10/Yoga%20lawn_Rivenza_11zon.webp',
+    width: 800,
+    height: 500,
+  },
+  {
+    category: 'interiors',
+    title: 'Master Bedroom Suite with Panoramic Balcony',
+    subtitle: 'Mula River & Sahyadri Foothill Views',
+    src: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1200&q=85',
+    width: 800,
+    height: 500,
+  },
+  {
+    category: 'interiors',
+    title: 'Designer Modular Kitchen & Breakfast Bar',
+    subtitle: 'Engineered Granite Countertops & Utility Deck',
+    src: 'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1200&q=85',
+    width: 800,
+    height: 500,
+  },
+  {
+    category: 'architecture',
+    title: 'Pre-Certified IGBC Gold & 9+ Acres Greens',
+    subtitle: 'Net Zero Waste & Biophilic Urban Sanctuary',
+    src: 'https://cms.mahindralifespaces.com/web/sites/default/files/2026-10/Mahindra%20Rivenza_IGBC%20GH%20pre-certification.jpg',
+    width: 800,
+    height: 500,
+  },
+  {
+    category: 'architecture',
+    title: 'Sanctioned Architectural CAD Blueprints',
+    subtitle: 'MahaRERA Approved 2, 3 & 4 BHK Layouts',
+    src: 'https://cms.mahindralifespaces.com/web/sites/default/files/styles/web_banner_webp/public/2026-10/2BHK%2520Premium.webp',
+    width: 800,
+    height: 500,
+  },
+  {
+    category: 'architecture',
+    title: 'West Pune Skyline & Connectivity Corridor',
+    subtitle: 'Direct Access to Hinjewadi Phase 1 & Baner',
+    src: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=85',
+    width: 800,
+    height: 500,
+  }
+];
+
+const gallerySchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ImageGallery",
+      "@id": "https://mahindralifespaceshomes.in/gallery/#gallery",
+      "url": "https://mahindralifespaceshomes.in/gallery/",
+      "name": "Mahindra Rivenza Official Photo Gallery & 3D Renders",
+      "description": "High-resolution photo gallery of Mahindra Rivenza at Baner Annex, Mahalunge, Pune. Architectural elevations, 4 BHK show home interiors, sunken bar pool, and ~44k sq.ft clubhouse.",
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://mahindralifespaceshomes.in/" },
+          { "@type": "ListItem", "position": 2, "name": "Gallery", "item": "https://mahindralifespaceshomes.in/gallery/" }
+        ]
+      }
+    }
+  ]
+};
+---
+
+<Layout
+  title="Mahindra Rivenza Gallery [Official Photos & CAD Renders]"
+  description="Explore high-resolution official photos, architectural renders, 4 BHK sample flat interiors, sunken bar pool & master plan for Mahindra Rivenza Pune."
+  canonical="https://mahindralifespaceshomes.in/gallery/"
+  customSchema={gallerySchema}
+>
+  <!-- Hero Section -->
+  <section class="pt-32 pb-16 bg-charcoal-950 border-b border-white/10 relative overflow-hidden">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4">
+      <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-gold-500/10 border border-gold-500/30 text-gold-400 text-xs font-semibold uppercase tracking-widest">
+        <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+        <span>High-Definition Architectural Showcase</span>
+      </div>
+      <h1 class="font-serif text-3xl sm:text-5xl font-bold text-stone-100 max-w-4xl leading-tight">
+        Mahindra Rivenza Photo Gallery: <br />
+        <span class="gold-gradient-text">Elevations, Interiors &amp; Resort Amenities</span>
+      </h1>
+      <p class="text-stone-300 text-sm sm:text-base max-w-2xl font-light leading-relaxed">
+        Browse official architectural perspectives, 4 BHK furnished sample residences, ~44,000 sq.ft. clubhouse features, and the 9+ acres of landscaped biophilic greens at Baner Annex, Mahalunge.
+      </p>
+    </div>
+  </section>
+
+  <!-- Gallery Showcase Grid -->
+  <section class="py-16 bg-charcoal-900 border-b border-white/10">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {galleryImages.map((img) => (
+          <div class="glass-card rounded-2xl overflow-hidden border border-white/15 group hover:border-gold-500/50 transition-all flex flex-col justify-between shadow-xl">
+            <div class="h-60 overflow-hidden relative">
+              <img
+                src={img.src}
+                alt={`${img.title} — ${img.subtitle}`}
+                width={img.width}
+                height={img.height}
+                loading="lazy"
+                decoding="async"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-charcoal-950 via-transparent to-transparent"></div>
+              <span class="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-charcoal-950/80 backdrop-blur-md text-[10px] font-semibold text-gold-400 border border-white/10 uppercase tracking-wider">
+                {img.category}
+              </span>
+            </div>
+            <div class="p-5 space-y-1.5">
+              <h3 class="font-serif text-base font-bold text-stone-100 group-hover:text-gold-300 transition-colors">
+                {img.title}
+              </h3>
+              <p class="text-xs text-stone-400 font-light">
+                {img.subtitle}
+              </p>
+            </div>
+          </div>
+        ))}
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CTA Box -->
+  <section class="py-16 bg-charcoal-950 border-b border-white/10">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
+      <h2 class="font-serif text-2xl sm:text-3xl font-bold text-stone-100">
+        Experience These Spaces Live at the Sales Gallery
+      </h2>
+      <p class="text-xs sm:text-sm text-stone-300 max-w-xl mx-auto font-light leading-relaxed">
+        The 4 BHK show home and sales experience lounge are open 7 days a week from 9:00 AM to 8:00 PM at Baner Annex, Mahalunge.
+      </p>
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-2">
+        <a
+          href="/site-visit/"
+          class="w-full sm:w-auto px-8 py-3.5 rounded-full bg-gradient-to-r from-gold-400 via-gold-500 to-gold-400 text-charcoal-950 text-xs font-bold uppercase tracking-widest hover:shadow-xl transition-all"
+        >
+          Book In-Person Site Visit
+        </a>
+        <button
+          data-open-modal
+          data-interest="HD Gallery Dossier Download"
+          class="w-full sm:w-auto px-8 py-3.5 rounded-full bg-white/10 hover:bg-white/20 text-stone-100 text-xs font-bold uppercase tracking-widest border border-white/20 transition-all cursor-pointer"
+        >
+          Download HD Lookbook (PDF)
+        </button>
+      </div>
+    </div>
+  </section>
+</Layout>

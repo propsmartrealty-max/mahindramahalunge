@@ -1,0 +1,187 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const virtualTourSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "VideoObject",
+      "@id": "https://mahindralifespaceshomes.in/virtual-tour/#video",
+      "name": "Mahindra Rivenza 4 BHK Show Residence 3D Virtual Tour & Walkthrough",
+      "description": "Comprehensive video walkthrough and 3D architectural exploration of the furnished 4 BHK sample home at Mahindra Rivenza, Baner Annex, Mahalunge, Pune.",
+      "thumbnailUrl": [
+        "https://cms.mahindralifespaces.com/web/sites/default/files/styles/web_banner_webp/public/2026-10/jpeg-optimizer_Elevation%20Opt%20A..webp"
+      ],
+      "uploadDate": "2026-10-06T10:00:00+05:30",
+      "contentUrl": "https://mahindralifespaceshomes.in/virtual-tour/",
+      "embedUrl": "https://mahindralifespaceshomes.in/virtual-tour/",
+      "duration": "PT4M15S"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://mahindralifespaceshomes.in/virtual-tour/#webpage",
+      "url": "https://mahindralifespaceshomes.in/virtual-tour/",
+      "name": "Mahindra Rivenza Virtual Tour & 3D Sample Flat",
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://mahindralifespaceshomes.in/" },
+          { "@type": "ListItem", "position": 2, "name": "Virtual Tour", "item": "https://mahindralifespaceshomes.in/virtual-tour/" }
+        ]
+      }
+    }
+  ]
+};
+---
+
+<Layout
+  title="Mahindra Rivenza Virtual Tour [4 BHK 3D Walkthrough Video]"
+  description="Experience official 3D virtual tour & video walkthrough for Mahindra Rivenza Pune. Explore 4 BHK sample flat, ~44k sq.ft clubhouse & aerial flythrough."
+  canonical="https://mahindralifespaceshomes.in/virtual-tour/"
+  customSchema={virtualTourSchema}
+>
+  <!-- Hero Section -->
+  <section class="pt-32 pb-16 bg-charcoal-950 border-b border-white/10 relative overflow-hidden">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4">
+      <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-gold-500/10 border border-gold-500/30 text-gold-400 text-xs font-semibold uppercase tracking-widest">
+        <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+        <span>Interactive 3D Walkthrough &amp; Video Tour</span>
+      </div>
+      <h1 class="font-serif text-3xl sm:text-5xl font-bold text-stone-100 max-w-4xl leading-tight">
+        Mahindra Rivenza Virtual Tour: <br />
+        <span class="gold-gradient-text">4 BHK Show Residence &amp; Master Layout</span>
+      </h1>
+      <p class="text-stone-300 text-sm sm:text-base max-w-2xl font-light leading-relaxed">
+        Explore the on-site 4 BHK show home from the comfort of your screen. Take a digital 360-degree tour of the ~44,000 sq.ft. clubhouse, sunken pool bar, and 13.46-acre master township at Baner Annex, Mahalunge.
+      </p>
+    </div>
+  </section>
+
+  <!-- Video Walkthrough Player Showcase -->
+  <section class="py-16 bg-charcoal-900 border-b border-white/10">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+      
+      <div class="glass-card rounded-2xl sm:rounded-3xl border border-gold-500/30 overflow-hidden shadow-2xl relative group">
+        <div class="relative aspect-video w-full overflow-hidden bg-charcoal-950">
+          <img
+            src="https://cms.mahindralifespaces.com/web/sites/default/files/styles/web_banner_webp/public/2026-10/jpeg-optimizer_Elevation%20Opt%20A..webp"
+            alt="Mahindra Rivenza 4 BHK Show Residence Video Walkthrough"
+            width="1280"
+            height="720"
+            loading="eager"
+            fetchpriority="high"
+            decoding="async"
+            class="w-full h-full object-cover filter brightness-[0.72] contrast-[1.08] group-hover:scale-105 transition-transform duration-1000"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-black/40"></div>
+
+          <!-- Pulsing Play Button Overlay -->
+          <div class="absolute inset-0 flex flex-col items-center justify-center p-6 text-center space-y-4">
+            <button
+              data-open-modal
+              data-interest="Virtual Tour HD Video Access"
+              class="w-20 h-20 sm:w-24 sm:h-24 rounded-full bg-gradient-to-tr from-gold-500 via-amber-300 to-gold-400 p-0.5 shadow-[0_0_50px_rgba(212,175,102,0.8)] hover:scale-110 active:scale-95 transition-all duration-300 flex items-center justify-center group/btn cursor-pointer"
+            >
+              <div class="w-full h-full rounded-full bg-charcoal-950/90 backdrop-blur-md flex items-center justify-center">
+                <svg class="w-8 h-8 sm:w-10 sm:h-10 text-gold-400 ml-1.5 group-hover/btn:text-white transition-colors" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M8 5v14l11-7z"></path>
+                </svg>
+              </div>
+            </button>
+            <div class="space-y-1">
+              <span class="text-xs sm:text-sm font-bold tracking-widest uppercase text-white drop-shadow block">
+                Watch 4K Video Walkthrough &amp; 3D Flythrough
+              </span>
+              <span class="text-[11px] text-stone-300 font-light block">
+                Duration: 4 Mins • Includes 4 BHK Show Home, Sunken Bar Pool &amp; Master Layout
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- NRI / Remote Assisted Virtual Tour Box -->
+      <div class="glass-card rounded-2xl border border-white/15 p-8 flex flex-col md:flex-row items-center justify-between gap-6">
+        <div class="space-y-2 text-center md:text-left">
+          <div class="inline-flex items-center space-x-2 text-xs text-gold-400 font-bold uppercase tracking-wider">
+            <span>🌐 NRI &amp; Remote Buyers</span>
+          </div>
+          <h3 class="font-serif text-xl font-bold text-stone-100">
+            Book a 1-on-1 Guided Virtual Video Tour via Zoom / Google Meet
+          </h3>
+          <p class="text-xs text-stone-300 font-light max-w-xl">
+            Join a live video walkthrough hosted by a senior Mahindra Lifespaces portfolio advisor. Inspect specific floor layouts, balcony views, and get answers to NRI tax, repatriation &amp; NRE/NRO home loan queries.
+          </p>
+        </div>
+        <button
+          data-open-modal
+          data-interest="Guided NRI Video Tour Consultation"
+          class="px-8 py-3.5 rounded-full bg-gradient-to-r from-gold-400 via-gold-500 to-gold-400 text-charcoal-950 text-xs font-bold uppercase tracking-widest hover:shadow-xl transition-all cursor-pointer whitespace-nowrap"
+        >
+          Schedule Video Call
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Virtual Tour Stops Breakdown -->
+  <section class="py-16 bg-charcoal-950 border-b border-white/10">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+      
+      <div class="text-center space-y-2">
+        <span class="text-xs uppercase tracking-widest text-gold-400 font-bold">Guided Chapters</span>
+        <h2 class="font-serif text-2xl sm:text-3xl font-bold text-stone-100">
+          What the Virtual Tour Covers
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+        
+        <div class="glass-card p-6 rounded-2xl border border-white/10 space-y-3">
+          <span class="text-gold-400 font-serif font-bold text-lg">01</span>
+          <h3 class="font-serif text-base font-bold text-stone-100">Grand Living &amp; Dining</h3>
+          <p class="text-xs text-stone-300 font-light leading-relaxed">
+            Double-glazed panoramic glass facade, imported marble flooring, and connected entertainment terrace.
+          </p>
+        </div>
+
+        <div class="glass-card p-6 rounded-2xl border border-white/10 space-y-3">
+          <span class="text-emerald-400 font-serif font-bold text-lg">02</span>
+          <h3 class="font-serif text-base font-bold text-stone-100">Master Bedroom Retreat</h3>
+          <p class="text-xs text-stone-300 font-light leading-relaxed">
+            Walk-in dressing enclave, en-suite spa bath with premium sanitaryware, and private sunset balcony.
+          </p>
+        </div>
+
+        <div class="glass-card p-6 rounded-2xl border border-white/10 space-y-3">
+          <span class="text-gold-400 font-serif font-bold text-lg">03</span>
+          <h3 class="font-serif text-base font-bold text-stone-100">Sunken Pool Bar &amp; Cabanas</h3>
+          <p class="text-xs text-stone-300 font-light leading-relaxed">
+            Architectural 3D model of the temperature-regulated aqua lounge, reflexology decks, and party lawn.
+          </p>
+        </div>
+
+        <div class="glass-card p-6 rounded-2xl border border-white/10 space-y-3">
+          <span class="text-amber-400 font-serif font-bold text-lg">04</span>
+          <h3 class="font-serif text-base font-bold text-stone-100">13.46-Acre Aerial View</h3>
+          <p class="text-xs text-stone-300 font-light leading-relaxed">
+            Drone flyover showcasing the Mula River boundary, 36m DP road access, and Hinjewadi Phase 1 proximity.
+          </p>
+        </div>
+
+      </div>
+
+      <!-- Action Footer -->
+      <div class="pt-6 text-center">
+        <a
+          href="/site-visit/"
+          class="inline-block px-10 py-4 rounded-full bg-gradient-to-r from-gold-400 via-gold-500 to-gold-400 text-charcoal-950 text-xs font-bold uppercase tracking-widest hover:shadow-xl transition-all"
+        >
+          Prefer an In-Person Visit? Book Here →
+        </a>
+      </div>
+
+    </div>
+  </section>
+</Layout>

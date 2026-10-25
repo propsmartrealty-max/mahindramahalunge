@@ -308,6 +308,46 @@ export const CORE_PAGES: SitemapEntry[] = [
     changefreq: 'daily',
     images: PRIMARY_IMAGES.slice(0, 3),
   },
+  {
+    url: `${BASE_URL}/contact/`,
+    title: 'Mahindra Rivenza Official Contact Desk, Phone & Site Office',
+    category: 'core',
+    priority: 0.92,
+    changefreq: 'weekly',
+    images: [PRIMARY_IMAGES[0]],
+  },
+  {
+    url: `${BASE_URL}/site-visit/`,
+    title: 'Book VIP Site Visit to Mahindra Rivenza 4 BHK Show Residence',
+    category: 'core',
+    priority: 0.95,
+    changefreq: 'daily',
+    images: [PRIMARY_IMAGES[0]],
+  },
+  {
+    url: `${BASE_URL}/gallery/`,
+    title: 'Official Photo Gallery & 3D Architectural Renders | Mahindra Rivenza',
+    category: 'core',
+    priority: 0.92,
+    changefreq: 'weekly',
+    images: PRIMARY_IMAGES,
+  },
+  {
+    url: `${BASE_URL}/construction-status/`,
+    title: 'Mahindra Rivenza Construction Status & Ground Milestone Tracker 2026',
+    category: 'core',
+    priority: 0.93,
+    changefreq: 'daily',
+    images: [PRIMARY_IMAGES[0]],
+  },
+  {
+    url: `${BASE_URL}/virtual-tour/`,
+    title: '3D Virtual Tour & 4 BHK Show Residence Video Walkthrough',
+    category: 'core',
+    priority: 0.94,
+    changefreq: 'weekly',
+    images: [PRIMARY_IMAGES[0]],
+  },
 ];
 
 // 02. RESIDENCE TYPOLOGY HUBS
