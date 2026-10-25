@@ -20,7 +20,7 @@ export interface HospitalItem {
 
 export const hospitalData: HospitalItem[] = [
   {
-    slug: 'flats-near-jupiter-hospital-baner',
+    slug: 'mahindra-rivenza-flats-near-jupiter-hospital-baner',
     name: 'Jupiter Hospital (Baner)',
     shortName: 'Jupiter Hospital',
     specialties: 'Quaternary Care, Cardiac Sciences, Neurosciences, Oncology & Organ Transplants',
@@ -52,7 +52,7 @@ export const hospitalData: HospitalItem[] = [
     ]
   },
   {
-    slug: 'flats-near-manipal-hospital-baner',
+    slug: 'mahindra-rivenza-apartments-near-manipal-hospital-baner',
     name: 'Manipal Hospital (Baner)',
     shortName: 'Manipal Hospital',
     specialties: 'Multi-Specialty Care, Orthopaedics, Cardiology, Paediatrics & Laparoscopic Surgery',
@@ -80,7 +80,7 @@ export const hospitalData: HospitalItem[] = [
     ]
   },
   {
-    slug: 'flats-near-ruby-hall-clinic-hinjewadi',
+    slug: 'mahindra-rivenza-residences-near-ruby-hall-clinic-hinjewadi',
     name: 'Ruby Hall Clinic (Hinjewadi)',
     shortName: 'Ruby Hall Hinjewadi',
     specialties: 'Cardiology, Trauma, Critical Care, Dialysis & Minimally Invasive Surgery',
@@ -108,7 +108,7 @@ export const hospitalData: HospitalItem[] = [
     ]
   },
   {
-    slug: 'flats-near-lifepoint-multispecialty-hospital-wakad',
+    slug: 'mahindra-rivenza-near-lifepoint-multispecialty-hospital-wakad',
     name: 'Lifepoint Multispecialty Hospital (Wakad)',
     shortName: 'Lifepoint Wakad',
     specialties: 'Multispecialty Healthcare, Critical Care, Orthopaedics & Gynecology',
@@ -136,7 +136,7 @@ export const hospitalData: HospitalItem[] = [
     ]
   },
   {
-    slug: 'flats-near-surya-mother-and-child-care-wakad',
+    slug: 'mahindra-rivenza-flats-near-surya-mother-and-child-care-wakad',
     name: 'Surya Mother & Child Care Hospital (Wakad)',
     shortName: 'Surya Mother & Child Care',
     specialties: 'Pediatrics, Neonatology (Level 3 NICU), Gynecology, Obstetrics & Fetal Medicine',
@@ -164,7 +164,7 @@ export const hospitalData: HospitalItem[] = [
     ]
   },
   {
-    slug: 'flats-near-medipoint-hospital-aundh',
+    slug: 'mahindra-rivenza-apartments-near-medipoint-hospital-aundh',
     name: 'Medipoint Hospital (Aundh)',
     shortName: 'Medipoint Aundh',
     specialties: 'General Medicine, Laparoscopy, Gynecology, ENT & Urology',
@@ -188,7 +188,7 @@ export const hospitalData: HospitalItem[] = [
     ]
   },
   {
-    slug: 'flats-near-vitalife-clinic-baner',
+    slug: 'mahindra-rivenza-residences-near-vitalife-clinic-baner',
     name: 'Vitalife Clinic & Diagnostic Centre (Baner)',
     shortName: 'Vitalife Baner',
     specialties: 'Family Medicine, Specialist Consultations, Diagnostic Imaging & Pathology',
@@ -212,7 +212,7 @@ export const hospitalData: HospitalItem[] = [
     ]
   },
   {
-    slug: 'flats-near-aditya-birla-memorial-hospital-thergaon',
+    slug: 'mahindra-rivenza-near-aditya-birla-memorial-hospital-thergaon',
     name: 'Aditya Birla Memorial Hospital (Thergaon)',
     shortName: 'Aditya Birla Memorial Hospital',
     specialties: 'Multi-Super Specialty, Cardiac Center of Excellence, Cancer Care & Robotic Surgery',
@@ -240,7 +240,7 @@ export const hospitalData: HospitalItem[] = [
     ]
   },
   {
-    slug: 'flats-near-golden-care-hospital-hinjewadi',
+    slug: 'mahindra-rivenza-flats-near-golden-care-hospital-hinjewadi',
     name: 'Golden Care Hospital (Hinjewadi)',
     shortName: 'Golden Care Hinjewadi',
     specialties: 'General Surgery, Orthopaedics, Critical Care & Dialysis',
@@ -264,7 +264,7 @@ export const hospitalData: HospitalItem[] = [
     ]
   },
   {
-    slug: 'flats-near-sahyadri-speciality-hospital-kothrud',
+    slug: 'mahindra-rivenza-apartments-near-sahyadri-speciality-hospital-kothrud',
     name: 'Sahyadri Speciality Hospital (Kothrud)',
     shortName: 'Sahyadri Kothrud',
     specialties: 'Neurosciences, Hematology, Bone Marrow Transplant & Advanced Cardiology',
@@ -288,7 +288,7 @@ export const hospitalData: HospitalItem[] = [
     ]
   },
   {
-    slug: 'flats-near-sancheti-hospital-pune',
+    slug: 'mahindra-rivenza-residences-near-sancheti-hospital-pune',
     name: 'Sancheti Institute for Orthopaedics (Pune)',
     shortName: 'Sancheti Hospital',
     specialties: 'Asia’s Renowned Orthopaedic Centre, Joint Replacement, Spine Surgery & Sports Rehabilitation',
@@ -312,7 +312,7 @@ export const hospitalData: HospitalItem[] = [
     ]
   },
   {
-    slug: 'flats-near-deenanath-mangeshkar-hospital',
+    slug: 'mahindra-rivenza-near-deenanath-mangeshkar-hospital',
     name: 'Deenanath Mangeshkar Hospital (Erandwane)',
     shortName: 'Deenanath Mangeshkar Hospital',
     specialties: 'Multi-Super Specialty, Cancer Center, Pediatric Cardiology & Advanced ICU',

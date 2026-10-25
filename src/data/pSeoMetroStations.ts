@@ -19,7 +19,7 @@ export interface MetroItem {
 
 export const metroData: MetroItem[] = [
   {
-    slug: 'flats-near-balewadi-stadium-metro-station',
+    slug: 'mahindra-rivenza-metro-connectivity-balewadi-stadium-metro-station',
     name: 'Balewadi Stadium Metro Station (Line 3)',
     stationName: 'Balewadi Stadium Metro',
     metroLine: 'Pune Metro Line 3 (Hinjewadi - Shivajinagar Elevated Corridor)',
@@ -50,7 +50,7 @@ export const metroData: MetroItem[] = [
     ]
   },
   {
-    slug: 'flats-near-balewadi-phata-metro-station',
+    slug: 'mahindra-rivenza-flats-near-balewadi-phata-metro-station',
     name: 'Balewadi Phata Metro Station (Line 3)',
     stationName: 'Balewadi Phata Metro',
     metroLine: 'Pune Metro Line 3 Corridor',
@@ -73,7 +73,7 @@ export const metroData: MetroItem[] = [
     ]
   },
   {
-    slug: 'flats-near-wakad-chowk-metro-station',
+    slug: 'mahindra-rivenza-residences-near-wakad-chowk-metro-station',
     name: 'Wakad Chowk Metro Station (Line 3)',
     stationName: 'Wakad Chowk Metro',
     metroLine: 'Pune Metro Line 3 Elevated Corridor',
@@ -96,7 +96,7 @@ export const metroData: MetroItem[] = [
     ]
   },
   {
-    slug: 'flats-near-baner-metro-station',
+    slug: 'mahindra-rivenza-near-baner-metro-station',
     name: 'Baner Metro Station (Line 3)',
     stationName: 'Baner Metro',
     metroLine: 'Pune Metro Line 3 Elevated Corridor',
@@ -119,7 +119,7 @@ export const metroData: MetroItem[] = [
     ]
   },
   {
-    slug: 'flats-near-megapolis-circle-metro-station',
+    slug: 'mahindra-rivenza-metro-connectivity-megapolis-circle-metro-station',
     name: 'Megapolis Circle Metro Station (Hinjewadi Phase 3)',
     stationName: 'Megapolis Circle Metro',
     metroLine: 'Pune Metro Line 3 Western Terminal Hub',
@@ -142,7 +142,7 @@ export const metroData: MetroItem[] = [
     ]
   },
   {
-    slug: 'flats-near-embassy-techzone-metro-station',
+    slug: 'mahindra-rivenza-flats-near-embassy-techzone-metro-station',
     name: 'Embassy TechZone Metro Station (Hinjewadi Phase 2)',
     stationName: 'Embassy TechZone Metro',
     metroLine: 'Pune Metro Line 3',
@@ -165,7 +165,7 @@ export const metroData: MetroItem[] = [
     ]
   },
   {
-    slug: 'flats-near-wipro-circle-metro-station',
+    slug: 'mahindra-rivenza-residences-near-wipro-circle-metro-station',
     name: 'Wipro Circle Metro Station (Hinjewadi Phase 2)',
     stationName: 'Wipro Circle Metro',
     metroLine: 'Pune Metro Line 3',
@@ -188,7 +188,7 @@ export const metroData: MetroItem[] = [
     ]
   },
   {
-    slug: 'flats-near-infosys-phase-1-metro-station',
+    slug: 'mahindra-rivenza-near-infosys-phase-1-metro-station',
     name: 'Infosys Phase 1 Metro Station (Hinjewadi)',
     stationName: 'Infosys Phase 1 Metro',
     metroLine: 'Pune Metro Line 3',
@@ -211,7 +211,7 @@ export const metroData: MetroItem[] = [
     ]
   },
   {
-    slug: 'flats-near-shivaji-chowk-hinjewadi-metro',
+    slug: 'mahindra-rivenza-metro-connectivity-shivaji-chowk-hinjewadi-metro',
     name: 'Shivaji Chowk Hinjewadi Metro Station (Line 3)',
     stationName: 'Shivaji Chowk Metro',
     metroLine: 'Pune Metro Line 3 Gateway Station',
@@ -234,7 +234,7 @@ export const metroData: MetroItem[] = [
     ]
   },
   {
-    slug: 'flats-near-university-chowk-metro-station',
+    slug: 'mahindra-rivenza-flats-near-university-chowk-metro-station',
     name: 'Savitribai Phule Pune University Metro Station (Line 3)',
     stationName: 'University Chowk Metro',
     metroLine: 'Pune Metro Line 3 Central Interchange',

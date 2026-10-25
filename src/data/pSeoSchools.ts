@@ -20,7 +20,7 @@ export interface SchoolItem {
 
 export const schoolData: SchoolItem[] = [
   {
-    slug: 'flats-near-vibgyor-high-balewadi',
+    slug: 'mahindra-rivenza-flats-near-vibgyor-high-balewadi',
     name: 'VIBGYOR High School (Balewadi)',
     shortName: 'VIBGYOR Balewadi',
     curriculum: 'ICSE & Cambridge (IGCSE)',
@@ -48,7 +48,7 @@ export const schoolData: SchoolItem[] = [
     ]
   },
   {
-    slug: 'flats-near-the-orchid-school-baner',
+    slug: 'mahindra-rivenza-family-homes-near-the-orchid-school-baner',
     name: 'The Orchid School (Baner)',
     shortName: 'The Orchid School',
     curriculum: 'CBSE Curriculum',
@@ -72,7 +72,7 @@ export const schoolData: SchoolItem[] = [
     ]
   },
   {
-    slug: 'flats-near-mercedes-benz-international-school',
+    slug: 'mahindra-rivenza-residences-near-mercedes-benz-international-school',
     name: 'Mercedes-Benz International School (MBIS Hinjewadi)',
     shortName: 'MBIS Hinjewadi',
     curriculum: 'International Baccalaureate (IB Primary, MYP & DP)',
@@ -96,7 +96,7 @@ export const schoolData: SchoolItem[] = [
     ]
   },
   {
-    slug: 'flats-near-blue-ridge-public-school-hinjewadi',
+    slug: 'mahindra-rivenza-near-blue-ridge-public-school-hinjewadi',
     name: 'Blue Ridge Public School (Hinjewadi Phase 1)',
     shortName: 'Blue Ridge Public School',
     curriculum: 'ICSE Board',
@@ -120,7 +120,7 @@ export const schoolData: SchoolItem[] = [
     ]
   },
   {
-    slug: 'flats-near-bharati-vidyapeeth-balewadi',
+    slug: 'mahindra-rivenza-flats-near-bharati-vidyapeeth-balewadi',
     name: 'Bharati Vidyapeeth English Medium School (Balewadi)',
     shortName: 'Bharati Vidyapeeth Balewadi',
     curriculum: 'CBSE Curriculum',
@@ -144,7 +144,7 @@ export const schoolData: SchoolItem[] = [
     ]
   },
   {
-    slug: 'flats-near-indira-college-wakad',
+    slug: 'mahindra-rivenza-family-homes-near-indira-college-wakad',
     name: 'Indira Group of Institutes (Wakad / Tathawade)',
     shortName: 'Indira Institutes',
     curriculum: 'Higher Education & Management / Engineering',
@@ -168,7 +168,7 @@ export const schoolData: SchoolItem[] = [
     ]
   },
   {
-    slug: 'flats-near-symbiosis-hinjewadi',
+    slug: 'mahindra-rivenza-residences-near-symbiosis-hinjewadi',
     name: 'Symbiosis Infotech Campus (SIIB & SCIT Hinjewadi)',
     shortName: 'Symbiosis Hinjewadi',
     curriculum: 'Premier Business & IT Management University',
@@ -192,7 +192,7 @@ export const schoolData: SchoolItem[] = [
     ]
   },
   {
-    slug: 'flats-near-alard-public-school-hinjewadi',
+    slug: 'mahindra-rivenza-near-alard-public-school-hinjewadi',
     name: 'Alard Public School & College (Hinjewadi)',
     shortName: 'Alard Public School',
     curriculum: 'CBSE Curriculum',
@@ -216,7 +216,7 @@ export const schoolData: SchoolItem[] = [
     ]
   },
   {
-    slug: 'flats-near-cm-international-school-balewadi',
+    slug: 'mahindra-rivenza-flats-near-cm-international-school-balewadi',
     name: 'CM International School (Balewadi)',
     shortName: 'CM International School',
     curriculum: 'CBSE Curriculum',
@@ -240,7 +240,7 @@ export const schoolData: SchoolItem[] = [
     ]
   },
   {
-    slug: 'flats-near-akshara-international-school-wakad',
+    slug: 'mahindra-rivenza-family-homes-near-akshara-international-school-wakad',
     name: 'Akshara International School (Wakad)',
     shortName: 'Akshara International School',
     curriculum: 'CBSE & Cambridge Primary',
@@ -264,7 +264,7 @@ export const schoolData: SchoolItem[] = [
     ]
   },
   {
-    slug: 'flats-near-banyan-tree-school-hinjewadi',
+    slug: 'mahindra-rivenza-residences-near-banyan-tree-school-hinjewadi',
     name: 'Banyan Tree International School (Hinjewadi)',
     shortName: 'Banyan Tree School',
     curriculum: 'CBSE Curriculum',
@@ -288,7 +288,7 @@ export const schoolData: SchoolItem[] = [
     ]
   },
   {
-    slug: 'flats-near-mitcon-international-school-balewadi',
+    slug: 'mahindra-rivenza-near-mitcon-international-school-balewadi',
     name: 'MITCON International School (Balewadi)',
     shortName: 'MITCON International',
     curriculum: 'CBSE Curriculum',
@@ -312,7 +312,7 @@ export const schoolData: SchoolItem[] = [
     ]
   },
   {
-    slug: 'flats-near-euroschool-wakad',
+    slug: 'mahindra-rivenza-flats-near-euroschool-wakad',
     name: 'EuroSchool (Wakad)',
     shortName: 'EuroSchool Wakad',
     curriculum: 'ICSE & Cambridge Curriculum',
@@ -336,7 +336,7 @@ export const schoolData: SchoolItem[] = [
     ]
   },
   {
-    slug: 'flats-near-blossom-public-school-tathawade',
+    slug: 'mahindra-rivenza-family-homes-near-blossom-public-school-tathawade',
     name: 'Blossom Public School (Tathawade)',
     shortName: 'Blossom Public School',
     curriculum: 'CBSE Curriculum',
@@ -360,7 +360,7 @@ export const schoolData: SchoolItem[] = [
     ]
   },
   {
-    slug: 'flats-near-jspm-tathawade-campus',
+    slug: 'mahindra-rivenza-residences-near-jspm-tathawade-campus',
     name: 'JSPM Rajarshi Shahu College Campus (Tathawade)',
     shortName: 'JSPM Tathawade',
     curriculum: 'Engineering, Management & Pharmacy University Campus',
@@ -384,7 +384,7 @@ export const schoolData: SchoolItem[] = [
     ]
   },
   {
-    slug: 'flats-near-pawar-public-school-hinjewadi',
+    slug: 'mahindra-rivenza-near-pawar-public-school-hinjewadi',
     name: 'Pawar Public School (Hinjewadi)',
     shortName: 'Pawar Public School',
     curriculum: 'ICSE Curriculum',

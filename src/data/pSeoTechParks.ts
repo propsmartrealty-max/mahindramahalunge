@@ -24,7 +24,7 @@ export interface TechParkItem {
 
 export const techParkData: TechParkItem[] = [
   {
-    slug: 'flats-near-infosys-hinjewadi',
+    slug: 'mahindra-rivenza-flats-near-infosys-hinjewadi',
     name: 'Infosys Hinjewadi (Phase 1 & Phase 2)',
     shortName: 'Infosys Hinjewadi',
     category: 'IT Tech Campus',
@@ -60,7 +60,7 @@ export const techParkData: TechParkItem[] = [
     ]
   },
   {
-    slug: 'flats-near-wipro-circle-hinjewadi',
+    slug: 'mahindra-rivenza-luxury-homes-near-wipro-circle-hinjewadi',
     name: 'Wipro Circle & Hinjewadi Phase 1',
     shortName: 'Wipro Circle Hinjewadi',
     category: 'IT Tech Epicenter',
@@ -96,7 +96,7 @@ export const techParkData: TechParkItem[] = [
     ]
   },
   {
-    slug: 'flats-near-tcs-sahyadri-park-hinjewadi',
+    slug: 'mahindra-rivenza-residences-near-tcs-sahyadri-park-hinjewadi',
     name: 'TCS Sahyadri Park (Hinjewadi Phase 3)',
     shortName: 'TCS Hinjewadi Phase 3',
     category: 'Tech Mega-Campus',
@@ -128,7 +128,7 @@ export const techParkData: TechParkItem[] = [
     ]
   },
   {
-    slug: 'flats-near-embassy-techzone-hinjewadi',
+    slug: 'mahindra-rivenza-apartments-near-embassy-techzone-hinjewadi',
     name: 'Embassy TechZone (Hinjewadi Phase 2)',
     shortName: 'Embassy TechZone',
     category: 'Global SEZ Tech Park',
@@ -160,7 +160,7 @@ export const techParkData: TechParkItem[] = [
     ]
   },
   {
-    slug: 'flats-near-cognizant-hinjewadi',
+    slug: 'mahindra-rivenza-commute-to-cognizant-hinjewadi',
     name: 'Cognizant Technology Solutions Hinjewadi',
     shortName: 'Cognizant Hinjewadi',
     category: 'IT Tech Campus',
@@ -188,7 +188,7 @@ export const techParkData: TechParkItem[] = [
     ]
   },
   {
-    slug: 'flats-near-quadron-business-park-hinjewadi',
+    slug: 'mahindra-rivenza-near-quadron-business-park-hinjewadi',
     name: 'Quadron Business Park (Hinjewadi Phase 2)',
     shortName: 'Quadron Business Park',
     category: 'Integrated IT Park',
@@ -216,7 +216,7 @@ export const techParkData: TechParkItem[] = [
     ]
   },
   {
-    slug: 'flats-near-balewadi-high-street',
+    slug: 'mahindra-rivenza-flats-near-balewadi-high-street',
     name: 'Balewadi High Street & Lifestyle Strip',
     shortName: 'Balewadi High Street',
     category: 'Lifestyle & Retail Hub',
@@ -248,7 +248,7 @@ export const techParkData: TechParkItem[] = [
     ]
   },
   {
-    slug: 'flats-near-amar-paradigm-baner',
+    slug: 'mahindra-rivenza-luxury-homes-near-amar-paradigm-baner',
     name: 'Amar Paradigm & Baner IT Corridor',
     shortName: 'Amar Paradigm Baner',
     category: 'Commercial Tech Center',
@@ -276,7 +276,7 @@ export const techParkData: TechParkItem[] = [
     ]
   },
   {
-    slug: 'flats-near-eon-free-zone-kharadi',
+    slug: 'mahindra-rivenza-residences-near-eon-free-zone-kharadi',
     name: 'EON Free Zone IT Park (Kharadi)',
     shortName: 'EON IT Park Kharadi',
     category: 'Special Economic Zone & IT Hub',
@@ -308,7 +308,7 @@ export const techParkData: TechParkItem[] = [
     ]
   },
   {
-    slug: 'flats-near-world-trade-center-pune',
+    slug: 'mahindra-rivenza-apartments-near-world-trade-center-pune',
     name: 'World Trade Center (WTC) Pune',
     shortName: 'WTC Pune Kharadi',
     category: 'Global Commercial & Financial Center',
@@ -336,7 +336,7 @@ export const techParkData: TechParkItem[] = [
     ]
   },
   {
-    slug: 'flats-near-cybercity-magarpatta',
+    slug: 'mahindra-rivenza-commute-to-cybercity-magarpatta',
     name: 'Cybercity Magarpatta (Hadapsar)',
     shortName: 'Cybercity Magarpatta',
     category: 'Integrated IT City & Commercial Township',
@@ -364,7 +364,7 @@ export const techParkData: TechParkItem[] = [
     ]
   },
   {
-    slug: 'flats-near-panchshil-business-park-baner',
+    slug: 'mahindra-rivenza-near-panchshil-business-park-baner',
     name: 'Panchshil Business Park (Balewadi-Baner)',
     shortName: 'Panchshil Business Park',
     category: 'Grade-A Commercial IT Center',
@@ -392,7 +392,7 @@ export const techParkData: TechParkItem[] = [
     ]
   },
   {
-    slug: 'flats-near-icc-tech-park-senapati-bapat-road',
+    slug: 'mahindra-rivenza-flats-near-icc-tech-park-senapati-bapat-road',
     name: 'ICC Tech Park (Senapati Bapat Road)',
     shortName: 'ICC Tech Park Pune',
     category: 'Central Pune Commercial & IT Landmark',
@@ -420,7 +420,7 @@ export const techParkData: TechParkItem[] = [
     ]
   },
   {
-    slug: 'flats-near-cerebrum-it-park-kalyani-nagar',
+    slug: 'mahindra-rivenza-luxury-homes-near-cerebrum-it-park-kalyani-nagar',
     name: 'Cerebrum IT Park (Kalyani Nagar)',
     shortName: 'Cerebrum IT Park',
     category: 'Premier IT & Commercial Campus',
@@ -448,7 +448,7 @@ export const techParkData: TechParkItem[] = [
     ]
   },
   {
-    slug: 'flats-near-commerzone-yerwada',
+    slug: 'mahindra-rivenza-residences-near-commerzone-yerwada',
     name: 'Commerzone IT Park (Yerwada)',
     shortName: 'Commerzone Yerwada',
     category: 'Grade-A Business & Tech Complex',
@@ -476,7 +476,7 @@ export const techParkData: TechParkItem[] = [
     ]
   },
   {
-    slug: 'flats-near-weikfield-it-citi-info-park',
+    slug: 'mahindra-rivenza-apartments-near-weikfield-it-citi-info-park',
     name: 'Weikfield IT Citi Info Park (Viman Nagar)',
     shortName: 'Weikfield IT Park',
     category: 'Viman Nagar IT & Commercial Park',
@@ -504,7 +504,7 @@ export const techParkData: TechParkItem[] = [
     ]
   },
   {
-    slug: 'flats-near-synechron-hinjewadi',
+    slug: 'mahindra-rivenza-commute-to-synechron-hinjewadi',
     name: 'Synechron Technologies (Hinjewadi Phase 1)',
     shortName: 'Synechron Hinjewadi',
     category: 'Fintech & Digital Innovation Hub',
@@ -536,7 +536,7 @@ export const techParkData: TechParkItem[] = [
     ]
   },
   {
-    slug: 'flats-near-barclays-hinjewadi',
+    slug: 'mahindra-rivenza-near-barclays-hinjewadi',
     name: 'Barclays Global Service Centre (Hinjewadi Phase 2)',
     shortName: 'Barclays Hinjewadi',
     category: 'Global Investment Banking Tech Centre',
@@ -568,7 +568,7 @@ export const techParkData: TechParkItem[] = [
     ]
   },
   {
-    slug: 'flats-near-kpit-hinjewadi',
+    slug: 'mahindra-rivenza-flats-near-kpit-hinjewadi',
     name: 'KPIT Technologies Campus (Hinjewadi Phase 1)',
     shortName: 'KPIT Hinjewadi',
     category: 'Automotive & Mobility Tech Campus',
@@ -596,7 +596,7 @@ export const techParkData: TechParkItem[] = [
     ]
   },
   {
-    slug: 'flats-near-hexaware-hinjewadi',
+    slug: 'mahindra-rivenza-luxury-homes-near-hexaware-hinjewadi',
     name: 'Hexaware Technologies (Hinjewadi Phase 3)',
     shortName: 'Hexaware Hinjewadi',
     category: 'Cloud & AI Technology Campus',
@@ -624,7 +624,7 @@ export const techParkData: TechParkItem[] = [
     ]
   },
   {
-    slug: 'flats-near-veritas-baner',
+    slug: 'mahindra-rivenza-residences-near-veritas-baner',
     name: 'Veritas Technologies (Baner High Street)',
     shortName: 'Veritas Baner',
     category: 'Enterprise Data & Cloud Campus',
@@ -652,7 +652,7 @@ export const techParkData: TechParkItem[] = [
     ]
   },
   {
-    slug: 'flats-near-siemens-balewadi',
+    slug: 'mahindra-rivenza-apartments-near-siemens-balewadi',
     name: 'Siemens Technology Centre (Balewadi)',
     shortName: 'Siemens Balewadi',
     category: 'Industrial IoT & Automation Campus',
@@ -680,7 +680,7 @@ export const techParkData: TechParkItem[] = [
     ]
   },
   {
-    slug: 'flats-near-mindspace-hinjewadi',
+    slug: 'mahindra-rivenza-commute-to-mindspace-hinjewadi',
     name: 'Mindspace IT Park (Hinjewadi Phase 1)',
     shortName: 'Mindspace Hinjewadi',
     category: 'Integrated Special Economic Zone (SEZ)',
@@ -708,7 +708,7 @@ export const techParkData: TechParkItem[] = [
     ]
   },
   {
-    slug: 'flats-near-cummins-balewadi',
+    slug: 'mahindra-rivenza-near-cummins-balewadi',
     name: 'Cummins India Office Campus (Balewadi High Street)',
     shortName: 'Cummins Balewadi',
     category: 'Global Engineering Headquarters',
@@ -736,7 +736,7 @@ export const techParkData: TechParkItem[] = [
     ]
   },
   {
-    slug: 'flats-near-tech-mahindra-hinjewadi',
+    slug: 'mahindra-rivenza-flats-near-tech-mahindra-hinjewadi',
     name: 'Tech Mahindra Innovation Campus (Hinjewadi Phase 3)',
     shortName: 'Tech Mahindra Hinjewadi',
     category: 'Mahindra Group IT Innovation Hub',
@@ -764,7 +764,7 @@ export const techParkData: TechParkItem[] = [
     ]
   },
   {
-    slug: 'flats-near-capgemini-hinjewadi',
+    slug: 'mahindra-rivenza-luxury-homes-near-capgemini-hinjewadi',
     name: 'Capgemini Technology Services (Hinjewadi Phase 3)',
     shortName: 'Capgemini Hinjewadi',
     category: 'Consulting & Technology Campus',
@@ -792,7 +792,7 @@ export const techParkData: TechParkItem[] = [
     ]
   },
   {
-    slug: 'flats-near-persistent-hinjewadi',
+    slug: 'mahindra-rivenza-residences-near-persistent-hinjewadi',
     name: 'Persistent Systems (Hinjewadi Phase 1)',
     shortName: 'Persistent Hinjewadi',
     category: 'Digital Engineering & Cloud Campus',
@@ -820,7 +820,7 @@ export const techParkData: TechParkItem[] = [
     ]
   },
   {
-    slug: 'flats-near-eaton-pune',
+    slug: 'mahindra-rivenza-apartments-near-eaton-pune',
     name: 'Eaton India Innovation Center (Kharadi & Magarpatta)',
     shortName: 'Eaton Pune',
     category: 'Power Management Innovation Campus',
@@ -848,7 +848,7 @@ export const techParkData: TechParkItem[] = [
     ]
   },
   {
-    slug: 'flats-near-nvidia-pune',
+    slug: 'mahindra-rivenza-commute-to-nvidia-pune',
     name: 'NVIDIA Pune Technology Centre (Yerwada / West Pune Corridor)',
     shortName: 'Nvidia Pune',
     category: 'AI & Semiconductor Engineering Centre',
@@ -876,7 +876,7 @@ export const techParkData: TechParkItem[] = [
     ]
   },
   {
-    slug: 'flats-near-credit-suisse-pune',
+    slug: 'mahindra-rivenza-near-credit-suisse-pune',
     name: 'UBS / Credit Suisse Business Hub (Hinjewadi Phase 2)',
     shortName: 'UBS Hinjewadi',
     category: 'Global Wealth & Banking Tech Campus',
@@ -904,7 +904,7 @@ export const techParkData: TechParkItem[] = [
     ]
   },
   {
-    slug: 'flats-near-atos-syntel-hinjewadi',
+    slug: 'mahindra-rivenza-flats-near-atos-syntel-hinjewadi',
     name: 'Atos Syntel Campus (Hinjewadi Phase 1)',
     shortName: 'Atos Syntel Hinjewadi',
     category: 'Digital Transformation Campus',
@@ -932,7 +932,7 @@ export const techParkData: TechParkItem[] = [
     ]
   },
   {
-    slug: 'flats-near-qualcomm-pune',
+    slug: 'mahindra-rivenza-luxury-homes-near-qualcomm-pune',
     name: 'Qualcomm India Design Centre (Hinjewadi / Baner)',
     shortName: 'Qualcomm Pune',
     category: 'Wireless & Semiconductor R&D Centre',

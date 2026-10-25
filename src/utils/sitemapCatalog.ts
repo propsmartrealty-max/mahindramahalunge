@@ -29,6 +29,8 @@ import { webStoriesData } from '../data/pSeoWebStories';
 import { westPuneLocalityData } from '../data/pSeoWestPuneLocalities';
 import { floorPlansData } from '../data/pSeoFloorPlans';
 import { commuteMatrixData } from '../data/pSeoCommuteMatrix';
+import { techParkData } from '../data/pSeoTechParks';
+import { connectivityData } from '../data/pSeoConnectivity';
 
 
 // Shared Project Images for Google Image Sitemap Indexation
@@ -532,7 +534,7 @@ export const TECH_PARKS_SLUGS = [
   { slug: 'flats-near-qualcomm-pune', name: 'Flats Near Qualcomm India Design Centre' },
 ];
 
-export const TECH_PARKS_PAGES: SitemapEntry[] = TECH_PARKS_SLUGS.map((item) => ({
+export const TECH_PARKS_PAGES: SitemapEntry[] = techParkData.map((item) => ({
   url: `${BASE_URL}/near/${item.slug}/`,
   title: `${item.name} — Commute Time & Proximity Guide`,
   category: 'techparks',
@@ -541,18 +543,9 @@ export const TECH_PARKS_PAGES: SitemapEntry[] = TECH_PARKS_SLUGS.map((item) => (
 }));
 
 // 05. CONNECTIVITY & INFRASTRUCTURE CORRIDORS (/connectivity/*)
-export const CONNECTIVITY_SLUGS = [
-  { slug: 'flats-near-pune-metro-line-3-hinjewadi', name: 'Flats Near Pune Metro Line 3 Hinjewadi-Shivajinagar' },
-  { slug: 'properties-on-pmrda-36m-ring-road', name: 'Properties on PMRDA 36M Arterial Ring Road' },
-  { slug: 'mahalunge-hinjewadi-river-bridge-connectivity', name: 'Mahalunge-Hinjewadi Mula River Bridge Connectivity' },
-  { slug: 'flats-near-sant-tukaram-metro-station', name: 'Flats Near Sant Tukaram Metro Station' },
-  { slug: 'properties-near-kharadi-shivane-riverside-road', name: 'Properties Near Kharadi-Shivane Riverside Road' },
-  { slug: 'flats-near-mumbai-pune-expressway-access-point', name: 'Flats Near Mumbai-Pune Expressway Access' },
-  { slug: 'properties-near-pune-ring-road-western-alignment', name: 'Properties Near Pune Ring Road Western Alignment' },
-  { slug: 'flats-near-balewadi-stadium-metro-station', name: 'Flats Near Balewadi Stadium Metro Station' },
-];
+export const CONNECTIVITY_SLUGS = connectivityData.map((item) => ({ slug: item.slug, name: item.name }));
 
-export const CONNECTIVITY_PAGES: SitemapEntry[] = CONNECTIVITY_SLUGS.map((item) => ({
+export const CONNECTIVITY_PAGES: SitemapEntry[] = connectivityData.map((item) => ({
   url: `${BASE_URL}/connectivity/${item.slug}/`,
   title: `${item.name} — Infrastructure & Commute Benchmark`,
   category: 'connectivity',

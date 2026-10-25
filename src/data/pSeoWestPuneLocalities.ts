@@ -22,7 +22,7 @@ export interface WestPuneLocalityItem {
 
 export const westPuneLocalityData: WestPuneLocalityItem[] = [
   {
-    slug: 'mahalunge-real-estate',
+    slug: 'mahindra-rivenza-mahalunge-real-estate-guide',
     name: 'Mahalunge (Nande-Mahalunge Corridor)',
     shortName: 'Mahalunge',
     tagline: 'The PMRDA Town Planning Scheme 1 Epicenter',
@@ -65,7 +65,7 @@ export const westPuneLocalityData: WestPuneLocalityItem[] = [
     ]
   },
   {
-    slug: 'nande-real-estate',
+    slug: 'mahindra-rivenza-luxury-flats-in-nande',
     name: 'Nande (Nande-Mahalunge Belt)',
     shortName: 'Nande',
     tagline: 'Scenic Green Living Bordering Hinjewadi Phase 1',
@@ -108,7 +108,7 @@ export const westPuneLocalityData: WestPuneLocalityItem[] = [
     ]
   },
   {
-    slug: 'maan-real-estate',
+    slug: 'mahindra-rivenza-residences-near-maan',
     name: 'Maan (Maan-Mahalunge Growth Axis)',
     shortName: 'Maan',
     tagline: 'The Western Anchor of Hinjewadi Phase 3 & PMRDA Scheme 1',
@@ -151,7 +151,7 @@ export const westPuneLocalityData: WestPuneLocalityItem[] = [
     ]
   },
   {
-    slug: 'hinjewadi-residential-projects',
+    slug: 'mahindra-rivenza-apartments-in-hinjewadi',
     name: 'Hinjewadi (Phases 1, 2 & 3)',
     shortName: 'Hinjewadi',
     tagline: 'Asia’s Premier Silicon Valley & Tech Employment Epicenter',
@@ -194,7 +194,7 @@ export const westPuneLocalityData: WestPuneLocalityItem[] = [
     ]
   },
   {
-    slug: 'baner-residential-projects',
+    slug: 'mahindra-rivenza-baner-connectivity-hub',
     name: 'Baner (West Pune Commercial Core)',
     shortName: 'Baner',
     tagline: 'Pune’s Cosmopolitan IT & High-Street Lifestyle Destination',
@@ -237,7 +237,7 @@ export const westPuneLocalityData: WestPuneLocalityItem[] = [
     ]
   },
   {
-    slug: 'balewadi-residential-projects',
+    slug: 'mahindra-rivenza-balewadi-real-estate-guide',
     name: 'Balewadi (Balewadi High Street Belt)',
     shortName: 'Balewadi',
     tagline: 'The Sports, Retail & Commercial Epicenter of West Pune',
@@ -280,7 +280,7 @@ export const westPuneLocalityData: WestPuneLocalityItem[] = [
     ]
   },
   {
-    slug: 'wakad-residential-projects',
+    slug: 'mahindra-rivenza-luxury-flats-in-wakad',
     name: 'Wakad (West Pune Transit Node)',
     shortName: 'Wakad',
     tagline: 'Mature Residential & Retail Hub Adjoining Hinjewadi',
@@ -323,7 +323,7 @@ export const westPuneLocalityData: WestPuneLocalityItem[] = [
     ]
   },
   {
-    slug: 'tathawade-residential-projects',
+    slug: 'mahindra-rivenza-residences-near-tathawade',
     name: 'Tathawade (Educational & Biophilic Belt)',
     shortName: 'Tathawade',
     tagline: 'Academic Hub & Home to Mahindra Happinest Fusion Homes',
@@ -366,7 +366,7 @@ export const westPuneLocalityData: WestPuneLocalityItem[] = [
     ]
   },
   {
-    slug: 'punawale-residential-projects',
+    slug: 'mahindra-rivenza-apartments-in-punawale',
     name: 'Punawale (Affordable IT Transit Suburb)',
     shortName: 'Punawale',
     tagline: 'High-Velocity Residential Growth on Mumbai-Pune Expressway',
@@ -409,7 +409,7 @@ export const westPuneLocalityData: WestPuneLocalityItem[] = [
     ]
   },
   {
-    slug: 'bavdhan-residential-projects',
+    slug: 'mahindra-rivenza-bavdhan-connectivity-hub',
     name: 'Bavdhan (South-West Pune Gateway)',
     shortName: 'Bavdhan',
     tagline: 'Scenic Green Living Between Kothrud and Hinjewadi',
@@ -452,7 +452,7 @@ export const westPuneLocalityData: WestPuneLocalityItem[] = [
     ]
   },
   {
-    slug: 'sus-residential-projects',
+    slug: 'mahindra-rivenza-sus-real-estate-guide',
     name: 'Sus (Pashan-Sus Valley)',
     shortName: 'Sus',
     tagline: 'Quiet Valley Living Adjoining Baner and Pashan',
@@ -495,7 +495,7 @@ export const westPuneLocalityData: WestPuneLocalityItem[] = [
     ]
   },
   {
-    slug: 'ravet-residential-projects',
+    slug: 'mahindra-rivenza-luxury-flats-in-ravet',
     name: 'Ravet (PCMC Western Gateway)',
     shortName: 'Ravet',
     tagline: 'The North-West Transit Gateway to Mumbai and Hinjewadi',
@@ -538,7 +538,7 @@ export const westPuneLocalityData: WestPuneLocalityItem[] = [
     ]
   },
   {
-    slug: 'pashan-residential-projects',
+    slug: 'mahindra-rivenza-residences-near-pashan',
     name: 'Pashan (Pashan Lake & Sus-Baner Ridge)',
     shortName: 'Pashan',
     tagline: 'Scenic Green Sanctuary between Baner and Kothrud',
@@ -571,7 +571,7 @@ export const westPuneLocalityData: WestPuneLocalityItem[] = [
     ]
   },
   {
-    slug: 'aundh-residential-projects',
+    slug: 'mahindra-rivenza-apartments-in-aundh',
     name: 'Aundh (Westend Mall & University Belt)',
     shortName: 'Aundh',
     tagline: 'The Established Cultural & High-Street Capital of West Pune',
@@ -604,7 +604,7 @@ export const westPuneLocalityData: WestPuneLocalityItem[] = [
     ]
   },
   {
-    slug: 'someshwarwadi-residential-projects',
+    slug: 'mahindra-rivenza-someshwarwadi-connectivity-hub',
     name: 'Someshwarwadi (Baner Hills Valley)',
     shortName: 'Someshwarwadi',
     tagline: 'Serene Riverfront Valley Adjacent to Baner High Street',
@@ -637,7 +637,7 @@ export const westPuneLocalityData: WestPuneLocalityItem[] = [
     ]
   },
   {
-    slug: 'marunji-residential-projects',
+    slug: 'mahindra-rivenza-marunji-real-estate-guide',
     name: 'Marunji (Hinjewadi Phase 2 Growth Belt)',
     shortName: 'Marunji',
     tagline: 'The Strategic Hinterland to Hinjewadi Tech SEZs',
@@ -670,7 +670,7 @@ export const westPuneLocalityData: WestPuneLocalityItem[] = [
     ]
   },
   {
-    slug: 'pimple-nilakh-residential-projects',
+    slug: 'mahindra-rivenza-luxury-flats-in-pimple-nilakh',
     name: 'Pimple Nilakh (Baner-Wakad Riverside)',
     shortName: 'Pimple Nilakh',
     tagline: 'The Elite Riverside Gateway Connecting PCMC and Baner',
@@ -703,7 +703,7 @@ export const westPuneLocalityData: WestPuneLocalityItem[] = [
     ]
   },
   {
-    slug: 'pimple-saudagar-residential-projects',
+    slug: 'mahindra-rivenza-residences-near-pimple-saudagar',
     name: 'Pimple Saudagar (Linear Garden Belt)',
     shortName: 'Pimple Saudagar',
     tagline: 'PCMC’s Master-Planned Residential Cosmopolitan Hub',
@@ -736,7 +736,7 @@ export const westPuneLocalityData: WestPuneLocalityItem[] = [
     ]
   },
   {
-    slug: 'rahatani-residential-projects',
+    slug: 'mahindra-rivenza-apartments-in-rahatani',
     name: 'Rahatani (Wakad Annex Corridor)',
     shortName: 'Rahatani',
     tagline: 'Vibrant Residential Node between Wakad and Pimple Saudagar',
@@ -769,7 +769,7 @@ export const westPuneLocalityData: WestPuneLocalityItem[] = [
     ]
   },
   {
-    slug: 'chinchwad-residential-projects',
+    slug: 'mahindra-rivenza-chinchwad-connectivity-hub',
     name: 'Chinchwad (Industrial & Transit Core)',
     shortName: 'Chinchwad',
     tagline: 'The Historic Industrial & Railway Heart of PCMC',
@@ -802,7 +802,7 @@ export const westPuneLocalityData: WestPuneLocalityItem[] = [
     ]
   },
   {
-    slug: 'nigdi-pradhikaran-real-estate',
+    slug: 'mahindra-rivenza-nigdi-pradhikaran-real-estate-guide',
     name: 'Nigdi Pradhikaran (Green Sector Township)',
     shortName: 'Nigdi Pradhikaran',
     tagline: 'The Chandigarh of Maharashtra — Planned Green Sectors',
@@ -835,7 +835,7 @@ export const westPuneLocalityData: WestPuneLocalityItem[] = [
     ]
   },
   {
-    slug: 'akurdi-residential-projects',
+    slug: 'mahindra-rivenza-luxury-flats-in-akurdi',
     name: 'Akurdi (Metro & Educational Belt)',
     shortName: 'Akurdi',
     tagline: 'Transit & Educational Hub with Direct Rail & Metro Links',
@@ -868,7 +868,7 @@ export const westPuneLocalityData: WestPuneLocalityItem[] = [
     ]
   },
   {
-    slug: 'thergaon-residential-projects',
+    slug: 'mahindra-rivenza-residences-near-thergaon',
     name: 'Thergaon (Aditya Birla Hospital Corridor)',
     shortName: 'Thergaon',
     tagline: 'Centrally Located Healthcare & Residential District',
@@ -901,7 +901,7 @@ export const westPuneLocalityData: WestPuneLocalityItem[] = [
     ]
   },
   {
-    slug: 'kiwale-residential-projects',
+    slug: 'mahindra-rivenza-apartments-in-kiwale',
     name: 'Kiwale (Expressway Starting Point & Cricket Stadium)',
     shortName: 'Kiwale',
     tagline: 'The Modern High-Speed Highway Gateway to Mumbai & PCMC',
@@ -934,7 +934,7 @@ export const westPuneLocalityData: WestPuneLocalityItem[] = [
     ]
   },
   {
-    slug: 'mamurdi-residential-projects',
+    slug: 'mahindra-rivenza-mamurdi-connectivity-hub',
     name: 'Mamurdi (Dehu Road Expressway Belt)',
     shortName: 'Mamurdi',
     tagline: 'Serene Wooded Foothills at the Mumbai-Pune Expressway Exit',
@@ -967,7 +967,7 @@ export const westPuneLocalityData: WestPuneLocalityItem[] = [
     ]
   },
   {
-    slug: 'balewadi-high-street-real-estate',
+    slug: 'mahindra-rivenza-balewadi-high-street-real-estate-guide',
     name: 'Balewadi High Street (Retail & Dining Epicenter)',
     shortName: 'Balewadi High Street',
     tagline: 'Pune’s Premier Commercial High Street & Culinary District',
@@ -1000,7 +1000,7 @@ export const westPuneLocalityData: WestPuneLocalityItem[] = [
     ]
   },
   {
-    slug: 'kothrud-residential-projects',
+    slug: 'mahindra-rivenza-luxury-flats-in-kothrud',
     name: 'Kothrud (Chandani Chowk & Western Bypass Corridor)',
     shortName: 'Kothrud',
     tagline: 'The Cultural & Real Estate Citadel of South-West Pune',
@@ -1033,7 +1033,7 @@ export const westPuneLocalityData: WestPuneLocalityItem[] = [
     ]
   },
   {
-    slug: 'senapati-bapat-road-real-estate',
+    slug: 'mahindra-rivenza-residences-near-senapati-bapat-road',
     name: 'Senapati Bapat Road (ICC Tech Park & JW Marriott)',
     shortName: 'Senapati Bapat Road',
     tagline: 'Central Pune’s Commercial & Five-Star Hospitality Promenade',
@@ -1066,7 +1066,7 @@ export const westPuneLocalityData: WestPuneLocalityItem[] = [
     ]
   },
   {
-    slug: 'tathawade-residential-corridor',
+    slug: 'mahindra-rivenza-apartments-in-tathawade-residential-corridor',
     name: 'Tathawade (Wakad Annex & JSPM Tech Belt)',
     shortName: 'Tathawade',
     tagline: 'West Pune’s Premier Educational & Tech Professional Corridor',
@@ -1099,7 +1099,7 @@ export const westPuneLocalityData: WestPuneLocalityItem[] = [
     ]
   },
   {
-    slug: 'ravet-real-estate-properties',
+    slug: 'mahindra-rivenza-ravet-real-estate-properties-connectivity-hub',
     name: 'Ravet (Expressway Gateway & PCMC Smart Belt)',
     shortName: 'Ravet',
     tagline: 'The Gateway to Mumbai & PCMC’s Fastest Growing Residential Hub',
@@ -1132,7 +1132,7 @@ export const westPuneLocalityData: WestPuneLocalityItem[] = [
     ]
   },
   {
-    slug: 'punawale-residential-corridor',
+    slug: 'mahindra-rivenza-punawale-residential-corridor-real-estate-guide',
     name: 'Punawale (18-Meter DP Road & Hinjewadi Tech Fringe)',
     shortName: 'Punawale',
     tagline: 'High-Density Residential Hub Connecting Hinjewadi to NH-48',
@@ -1165,7 +1165,7 @@ export const westPuneLocalityData: WestPuneLocalityItem[] = [
     ]
   },
   {
-    slug: 'kiwale-expressway-gateway',
+    slug: 'mahindra-rivenza-luxury-flats-in-kiwale-expressway-gateway',
     name: 'Kiwale (Expressway Zero Point & Gahunje Foothills)',
     shortName: 'Kiwale',
     tagline: 'Serene Foothill Living at the Very Start of Mumbai-Pune Expressway',
@@ -1198,7 +1198,7 @@ export const westPuneLocalityData: WestPuneLocalityItem[] = [
     ]
   },
   {
-    slug: 'gahunje-cricket-stadium-living',
+    slug: 'mahindra-rivenza-residences-near-gahunje-cricket-stadium-living',
     name: 'Gahunje (MCA Stadium & Riverside Greens)',
     shortName: 'Gahunje',
     tagline: 'Scenic Resort Living Flanked by Pavana River & Cricket Stadium',
@@ -1231,7 +1231,7 @@ export const westPuneLocalityData: WestPuneLocalityItem[] = [
     ]
   },
   {
-    slug: 'sus-road-residential-developments',
+    slug: 'mahindra-rivenza-apartments-in-sus-road-residential-developments',
     name: 'Sus Road (Pashan-Baner Foothill Corridor)',
     shortName: 'Sus Road',
     tagline: 'Quiet Residential Foothills Connecting Pashan, Baner & Mahalunge',
@@ -1264,7 +1264,7 @@ export const westPuneLocalityData: WestPuneLocalityItem[] = [
     ]
   },
   {
-    slug: 'bavdhan-chandani-chowk-residences',
+    slug: 'mahindra-rivenza-bavdhan-chandani-chowk-residences-connectivity-hub',
     name: 'Bavdhan (Chandani Chowk & Kothrud Annex)',
     shortName: 'Bavdhan',
     tagline: 'Upscale Hillside Living with Multi-Tier Chandani Chowk Flyover Link',
@@ -1297,7 +1297,7 @@ export const westPuneLocalityData: WestPuneLocalityItem[] = [
     ]
   },
   {
-    slug: 'kharadi-it-hub-comparison',
+    slug: 'mahindra-rivenza-kharadi-it-hub-comparison-real-estate-guide',
     name: 'Kharadi (EON Free Zone & WTC East Pune)',
     shortName: 'Kharadi',
     tagline: 'East Pune’s Mega IT Hub & Premier Real Estate Counterpart',
@@ -1330,7 +1330,7 @@ export const westPuneLocalityData: WestPuneLocalityItem[] = [
     ]
   },
   {
-    slug: 'viman-nagar-real-estate',
+    slug: 'mahindra-rivenza-luxury-flats-in-viman-nagar',
     name: 'Viman Nagar (Airport Belt & Luxury Promenade)',
     shortName: 'Viman Nagar',
     tagline: 'Pune’s Most Cosmopolitan Airport & High-Street Retail District',
@@ -1363,7 +1363,7 @@ export const westPuneLocalityData: WestPuneLocalityItem[] = [
     ]
   },
   {
-    slug: 'kalyani-nagar-residential',
+    slug: 'mahindra-rivenza-residences-near-kalyani-nagar-residential',
     name: 'Kalyani Nagar (Riverside Luxury & Cerebrum IT Park)',
     shortName: 'Kalyani Nagar',
     tagline: 'Ultra-Luxury Riverside Enclave Adjacent to Koregaon Park',
@@ -1396,7 +1396,7 @@ export const westPuneLocalityData: WestPuneLocalityItem[] = [
     ]
   },
   {
-    slug: 'magarpatta-city-hadapsar-corridor',
+    slug: 'mahindra-rivenza-apartments-in-magarpatta-city-hadapsar-corridor',
     name: 'Magarpatta City & Hadapsar (Cybercity IT Corridor)',
     shortName: 'Magarpatta Hadapsar',
     tagline: 'Pune’s Original Self-Sustained 400-Acre Cybercity Township',
@@ -1429,7 +1429,7 @@ export const westPuneLocalityData: WestPuneLocalityItem[] = [
     ]
   },
   {
-    slug: 'moshi-pcmc-convention-center',
+    slug: 'mahindra-rivenza-moshi-pcmc-convention-center-connectivity-hub',
     name: 'Moshi (International Exhibition Center & PCMC Spine Road)',
     shortName: 'Moshi',
     tagline: 'North PCMC’s Mega Infrastructure Hub & Industrial Tech Gateway',
@@ -1462,7 +1462,7 @@ export const westPuneLocalityData: WestPuneLocalityItem[] = [
     ]
   },
   {
-    slug: 'charholi-pride-world-city-belt',
+    slug: 'mahindra-rivenza-charholi-pride-world-city-belt-real-estate-guide',
     name: 'Charholi (Pride World City Corridor & Ring Road)',
     shortName: 'Charholi',
     tagline: 'North Pune’s Mega Township Growth Belt Near Dighi & Alandi',
@@ -1495,7 +1495,7 @@ export const westPuneLocalityData: WestPuneLocalityItem[] = [
     ]
   },
   {
-    slug: 'chakan-auto-hub-residential',
+    slug: 'mahindra-rivenza-luxury-flats-in-chakan-auto-hub-residential',
     name: 'Chakan (Automobile Industrial Corridor & Expressway)',
     shortName: 'Chakan',
     tagline: 'India’s Automobile Capital & Industrial Employment Dynamo',
@@ -1528,7 +1528,7 @@ export const westPuneLocalityData: WestPuneLocalityItem[] = [
     ]
   },
   {
-    slug: 'model-colony-shivajinagar-prime',
+    slug: 'mahindra-rivenza-residences-near-model-colony-shivajinagar-prime',
     name: 'Model Colony & Shivaji Nagar (Central Heritage & Metro)',
     shortName: 'Model Colony',
     tagline: 'Central Pune’s Prestigious Residential Enclave & Multi-Modal Metro Hub',

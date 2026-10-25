@@ -16,7 +16,7 @@ export interface NriPortalItem {
 
 export const nriPortalsData: NriPortalItem[] = [
   {
-    slug: 'dubai-uae-investors',
+    slug: 'mahindra-rivenza-dubai-uae-investors',
     countryOrRegion: 'Dubai & UAE (United Arab Emirates)',
     currency: 'AED',
     currencySymbol: 'AED',
@@ -40,7 +40,7 @@ export const nriPortalsData: NriPortalItem[] = [
     ]
   },
   {
-    slug: 'usa-silicon-valley-tech',
+    slug: 'mahindra-rivenza-nri-investment-usa-silicon-valley-tech',
     countryOrRegion: 'USA (Silicon Valley, Seattle, Austin, NYC)',
     currency: 'USD',
     currencySymbol: '$',
@@ -64,7 +64,7 @@ export const nriPortalsData: NriPortalItem[] = [
     ]
   },
   {
-    slug: 'singapore-southeast-asia',
+    slug: 'mahindra-rivenza-global-desk-singapore-southeast-asia',
     countryOrRegion: 'Singapore & Southeast Asia',
     currency: 'SGD',
     currencySymbol: 'S$',
@@ -84,7 +84,7 @@ export const nriPortalsData: NriPortalItem[] = [
     ]
   },
   {
-    slug: 'uk-london-investors',
+    slug: 'mahindra-rivenza-uk-london-investors',
     countryOrRegion: 'United Kingdom (London & Midlands)',
     currency: 'GBP',
     currencySymbol: '£',
@@ -104,7 +104,7 @@ export const nriPortalsData: NriPortalItem[] = [
     ]
   },
   {
-    slug: 'qatar-doha-investors',
+    slug: 'mahindra-rivenza-nri-investment-qatar-doha',
     countryOrRegion: 'Qatar (Doha)',
     currency: 'QAR',
     currencySymbol: 'QAR',
@@ -124,7 +124,7 @@ export const nriPortalsData: NriPortalItem[] = [
     ]
   },
   {
-    slug: 'saudi-arabia-riyadh-jeddah',
+    slug: 'mahindra-rivenza-global-desk-saudi-arabia-riyadh-jeddah',
     countryOrRegion: 'Saudi Arabia (Riyadh, Jeddah, Dammam)',
     currency: 'SAR',
     currencySymbol: 'SAR',
@@ -144,7 +144,7 @@ export const nriPortalsData: NriPortalItem[] = [
     ]
   },
   {
-    slug: 'germany-europe-expats',
+    slug: 'mahindra-rivenza-germany-europe-expats',
     countryOrRegion: 'Germany & Continental Europe (Frankfurt, Munich, Berlin)',
     currency: 'EUR',
     currencySymbol: '€',
@@ -164,7 +164,7 @@ export const nriPortalsData: NriPortalItem[] = [
     ]
   },
   {
-    slug: 'australia-sydney-melbourne',
+    slug: 'mahindra-rivenza-nri-investment-australia-sydney-melbourne',
     countryOrRegion: 'Australia (Sydney, Melbourne, Brisbane)',
     currency: 'AUD',
     currencySymbol: 'A$',
@@ -184,7 +184,7 @@ export const nriPortalsData: NriPortalItem[] = [
     ]
   },
   {
-    slug: 'abu-dhabi-uae-investors',
+    slug: 'mahindra-rivenza-global-desk-abu-dhabi-uae',
     countryOrRegion: 'United Arab Emirates (Abu Dhabi & Al Ain)',
     currency: 'AED',
     currencySymbol: 'AED',
@@ -204,7 +204,7 @@ export const nriPortalsData: NriPortalItem[] = [
     ]
   },
   {
-    slug: 'usa-texas-tech-corridor',
+    slug: 'mahindra-rivenza-usa-texas-tech-corridor',
     countryOrRegion: 'United States (Texas - Austin, Dallas, Houston)',
     currency: 'USD',
     currencySymbol: '$',
@@ -224,7 +224,7 @@ export const nriPortalsData: NriPortalItem[] = [
     ]
   },
   {
-    slug: 'usa-east-coast-tri-state',
+    slug: 'mahindra-rivenza-nri-investment-usa-east-coast-tri-state',
     countryOrRegion: 'United States (New York, New Jersey & Connecticut Tri-State)',
     currency: 'USD',
     currencySymbol: '$',
@@ -244,7 +244,7 @@ export const nriPortalsData: NriPortalItem[] = [
     ]
   },
   {
-    slug: 'kuwait-city-gulf-expats',
+    slug: 'mahindra-rivenza-global-desk-kuwait-city-gulf-expats',
     countryOrRegion: 'Kuwait (Kuwait City & Ahmadi)',
     currency: 'KWD',
     currencySymbol: 'KD',

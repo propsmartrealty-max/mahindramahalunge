@@ -16,7 +16,7 @@ export interface ConnectivityItem {
 
 export const connectivityData: ConnectivityItem[] = [
   {
-    slug: 'flats-near-pune-metro-line-3-hinjewadi',
+    slug: 'mahindra-rivenza-flats-near-pune-metro-line-3-hinjewadi',
     infrastructureName: 'Pune Metro Line 3 (Hinjewadi - Shivajinagar)',
     shortName: 'Pune Metro Line 3',
     completionTimeline: 'Operational Transition 2026',
@@ -49,7 +49,7 @@ export const connectivityData: ConnectivityItem[] = [
     ]
   },
   {
-    slug: 'properties-on-pmrda-36m-ring-road',
+    slug: 'mahindra-rivenza-corridor-properties-on-pmrda-36m-ring-road',
     infrastructureName: 'PMRDA Town Planning Scheme 1 (36M DP Road Network)',
     shortName: 'PMRDA 36M Ring Road',
     completionTimeline: 'Active Phased Implementation 2026',
@@ -82,7 +82,7 @@ export const connectivityData: ConnectivityItem[] = [
     ]
   },
   {
-    slug: 'mahalunge-hinjewadi-river-bridge-connectivity',
+    slug: 'mahindra-rivenza-route-mahalunge-hinjewadi-river-bridge-connectivity',
     infrastructureName: 'Mahalunge-Hinjewadi Riverfront Bridge Corridor',
     shortName: 'Mahalunge-Hinjewadi Bridge',
     completionTimeline: 'Direct Connectivity Link',
@@ -111,7 +111,7 @@ export const connectivityData: ConnectivityItem[] = [
     ]
   },
   {
-    slug: 'flats-near-sant-tukaram-metro-station',
+    slug: 'mahindra-rivenza-flats-near-sant-tukaram-metro-station',
     infrastructureName: 'Sant Tukaram Nagar Metro Station (Pune Metro Purple Line)',
     shortName: 'Sant Tukaram Metro',
     completionTimeline: 'Operational High-Speed Metro',
@@ -144,7 +144,7 @@ export const connectivityData: ConnectivityItem[] = [
     ]
   },
   {
-    slug: 'properties-near-kharadi-shivane-riverside-road',
+    slug: 'mahindra-rivenza-corridor-properties-near-kharadi-shivane-riverside-road',
     infrastructureName: 'Kharadi-Shivane Mula-Mutha Riverside Arterial Promenade',
     shortName: 'Kharadi-Shivane Riverside Road',
     completionTimeline: 'Phased Urban Corridor',
@@ -173,7 +173,7 @@ export const connectivityData: ConnectivityItem[] = [
     ]
   },
   {
-    slug: 'properties-near-pune-ring-road-western-alignment',
+    slug: 'mahindra-rivenza-route-pune-ring-road-western-alignment',
     infrastructureName: 'Pune Outer Ring Road — Western Alignment (Hinjewadi to Katraj)',
     shortName: 'Pune Ring Road West',
     completionTimeline: 'Under Active NHAI Acquisition 2026–2029',
@@ -210,7 +210,7 @@ export const connectivityData: ConnectivityItem[] = [
     ]
   },
   {
-    slug: 'flats-near-mumbai-pune-expressway-access-point',
+    slug: 'mahindra-rivenza-flats-near-mumbai-pune-expressway-access-point',
     infrastructureName: 'Mumbai-Pune Expressway (Khopoli-Dehu Road Corridor)',
     shortName: 'Mumbai-Pune Expressway',
     completionTimeline: 'Fully Operational — 6-Lane Premium Expressway',
@@ -247,7 +247,7 @@ export const connectivityData: ConnectivityItem[] = [
     ]
   },
   {
-    slug: 'flats-near-balewadi-stadium-metro-station',
+    slug: 'mahindra-rivenza-corridor-balewadi-stadium-metro-station',
     infrastructureName: 'Balewadi High Street & Proposed Metro Station Corridor',
     shortName: 'Balewadi Stadium Metro',
     completionTimeline: 'Balewadi High Street Operational | Metro Alignment Under Planning',
