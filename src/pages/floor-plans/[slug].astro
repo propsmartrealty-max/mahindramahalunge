@@ -28,13 +28,49 @@ const planSchema = {
         "name": "Mahindra Lifespaces"
       },
       "category": `${unit.bhk} Residential Apartment`,
+      "sku": `MR-${unit.slug.toUpperCase()}`,
       "offers": {
         "@type": "Offer",
         "priceCurrency": "INR",
         "price": unit.startingPriceInr.replace(/[^0-9.]/g, ''),
         "priceValidUntil": "2027-12-31",
         "availability": "https://schema.org/InStock",
-        "url": `https://mahindralifespaceshomes.in/floor-plans/${unit.slug}/`
+        "url": `https://mahindralifespaceshomes.in/floor-plans/${unit.slug}/`,
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "applicableCountry": "IN",
+          "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+          "merchantReturnDays": 15,
+          "returnMethod": "https://schema.org/ReturnInStore",
+          "returnFees": "https://schema.org/FreeReturn"
+        },
+        "shippingDetails": {
+          "@type": "OfferShippingDetails",
+          "shippingRate": {
+            "@type": "MonetaryAmount",
+            "value": "0",
+            "currency": "INR"
+          },
+          "shippingDestination": {
+            "@type": "DefinedRegion",
+            "addressCountry": "IN"
+          },
+          "deliveryTime": {
+            "@type": "ShippingDeliveryTime",
+            "handlingTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 1,
+              "unitCode": "DAY"
+            },
+            "transitTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 1,
+              "unitCode": "DAY"
+            }
+          }
+        }
       }
     },
     {

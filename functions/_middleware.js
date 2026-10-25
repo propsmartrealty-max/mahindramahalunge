@@ -316,6 +316,7 @@ export async function onRequest(context) {
   const dynamicTags = ['mahindra-lifespaces', 'enterprise-edge', 'html-content'];
   if (pathname === '/' || pathname.startsWith('/mahindra-rivenza')) dynamicTags.push('mahindra-rivenza-core');
   if (pathname.startsWith('/brand')) dynamicTags.push('mahindra-brand-ecosystem', 'mahindra-pune-portfolio');
+  if (pathname.startsWith('/baner-annex')) dynamicTags.push('mahindra-baner-annex', 'micro-market-hub');
   if (pathname.startsWith('/floor-plans')) dynamicTags.push('mahindra-floor-plans', 'rera-sanctioned-blueprints');
   if (pathname.startsWith('/commute')) dynamicTags.push('mahindra-commute', 'transit-matrix');
   if (pathname.startsWith('/residences')) dynamicTags.push('mahindra-residences', 'unit-typologies');

@@ -32,6 +32,10 @@
   Cache-Control: public, max-age=0, s-maxage=86400, stale-while-revalidate=604800, stale-if-error=86400
   Cache-Tag: mahindra-rivenza, homepage, enterprise-edge
 
+/baner-annex/*
+  Cache-Control: public, max-age=0, s-maxage=86400, stale-while-revalidate=604800, stale-if-error=86400
+  Cache-Tag: mahindra-rivenza, baner-annex, enterprise-edge
+
 /floor-plans/*
   Cache-Control: public, max-age=0, s-maxage=86400, stale-while-revalidate=604800, stale-if-error=86400
   Cache-Tag: mahindra-rivenza, floorplans, enterprise-edge

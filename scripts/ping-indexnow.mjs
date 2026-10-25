@@ -20,6 +20,7 @@ const KEY_LOCATION = `https://${HOST}/${GLOBAL_KEY}.txt`;
 const distDir = path.resolve(__dirname, '../dist');
 let urlList = [
   `https://${HOST}/`,
+  `https://${HOST}/baner-annex/`,
   `https://${HOST}/pricing/`,
   `https://${HOST}/floor-plans/`,
   `https://${HOST}/master-plan/`,

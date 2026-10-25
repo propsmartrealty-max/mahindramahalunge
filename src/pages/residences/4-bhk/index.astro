@@ -14,16 +14,52 @@ const residenceSchema = {
         "@type": "Brand",
         "name": "Mahindra Lifespaces"
       },
+      "sku": "MR-4BHK-PUNE",
       "offers": {
         "@type": "Offer",
         "price": "22000000",
         "priceCurrency": "INR",
-        "priceValidUntil": "2026-12-31",
+        "priceValidUntil": "2027-12-31",
         "availability": "https://schema.org/InStock",
         "url": "https://mahindralifespaceshomes.in/residences/4-bhk/",
         "seller": {
           "@type": "Organization",
           "name": "Mahindra Lifespace Developers Limited"
+        },
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "applicableCountry": "IN",
+          "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+          "merchantReturnDays": 15,
+          "returnMethod": "https://schema.org/ReturnInStore",
+          "returnFees": "https://schema.org/FreeReturn"
+        },
+        "shippingDetails": {
+          "@type": "OfferShippingDetails",
+          "shippingRate": {
+            "@type": "MonetaryAmount",
+            "value": "0",
+            "currency": "INR"
+          },
+          "shippingDestination": {
+            "@type": "DefinedRegion",
+            "addressCountry": "IN"
+          },
+          "deliveryTime": {
+            "@type": "ShippingDeliveryTime",
+            "handlingTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 1,
+              "unitCode": "DAY"
+            },
+            "transitTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 1,
+              "unitCode": "DAY"
+            }
+          }
         }
       },
       "aggregateRating": {
