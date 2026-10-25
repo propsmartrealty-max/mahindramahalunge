@@ -196,6 +196,10 @@ const articles = [
                 src={art.image} 
                 alt={art.title} 
                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 filter brightness-90"
+                loading="lazy"
+                decoding="async"
+                width="600"
+                height="400"
               />
               <span class="absolute top-3 left-3 px-2.5 py-1 rounded bg-charcoal-950/80 backdrop-blur-md text-gold-400 text-[10px] uppercase font-bold tracking-widest border border-white/10">
                 {art.category}
