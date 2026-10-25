@@ -55,6 +55,22 @@ const storySchema = {
     <meta name="description" content={story.metaDescription} />
     <link rel="canonical" href={canonicalUrl} />
 
+    <!-- Open Graph / Discover -->
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="Mahindra Rivenza" />
+    <meta property="og:title" content={story.metaTitle} />
+    <meta property="og:description" content={story.metaDescription} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:image" content={story.posterLandscape || story.posterPortrait} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={story.metaTitle} />
+    <meta name="twitter:description" content={story.metaDescription} />
+    <meta name="twitter:image" content={story.posterLandscape || story.posterPortrait} />
+
     <!-- Google Web Stories AMP Scripts -->
     <script async src="https://cdn.ampproject.org/v0.js"></script>
     <script async custom-element="amp-story" src="https://cdn.ampproject.org/v0/amp-story-1.0.js"></script>
@@ -187,9 +203,15 @@ const storySchema = {
             <p class="story-subtitle" animate-in="fly-in-bottom" animate-in-delay="0.2s">
               {page.subtitle}
             </p>
-            <h2 class="story-title" animate-in="fly-in-bottom" animate-in-delay="0.3s">
-              {page.title}
-            </h2>
+            {idx === 0 ? (
+              <h1 class="story-title" animate-in="fly-in-bottom" animate-in-delay="0.3s">
+                {page.title}
+              </h1>
+            ) : (
+              <h2 class="story-title" animate-in="fly-in-bottom" animate-in-delay="0.3s">
+                {page.title}
+              </h2>
+            )}
             <p class="story-desc" animate-in="fly-in-bottom" animate-in-delay="0.4s">
               {page.description}
             </p>
