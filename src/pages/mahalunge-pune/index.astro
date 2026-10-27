@@ -4,17 +4,48 @@ import MahindraKeywordMatrix from '../../components/MahindraKeywordMatrix.astro'
 
 const breadcrumbSchema = {
   "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://mahindralifespaceshomes.in/" },
-    { "@type": "ListItem", "position": 2, "name": "Why Mahalunge", "item": "https://mahindralifespaceshomes.in/mahalunge-pune/" }
+  "@graph": [
+    {
+      "@type": "Product",
+      "@id": "https://mahindralifespaceshomes.in/mahalunge-pune/#product",
+      "name": "Mahalunge Pune Residential Property Hub",
+      "description": "Comprehensive market guide to Mahalunge Pune real estate and Mahindra Rivenza landmark 13.46-acre development starting from ₹90 Lakhs* onwards.",
+      "brand": {
+        "@type": "Brand",
+        "name": "Mahindra Lifespaces"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "bestRating": "5",
+        "worstRating": "1",
+        "ratingCount": "248",
+        "reviewCount": "248"
+      },
+      "offers": {
+        "@type": "AggregateOffer",
+        "lowPrice": "9000000",
+        "highPrice": "25500000",
+        "priceCurrency": "INR",
+        "offerCount": "1236",
+        "priceValidUntil": "2027-12-31",
+        "availability": "https://schema.org/InStock"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://mahindralifespaceshomes.in/" },
+        { "@type": "ListItem", "position": 2, "name": "Mahalunge Pune", "item": "https://mahindralifespaceshomes.in/mahalunge-pune/" }
+      ]
+    }
   ]
 };
 ---
 
 <Layout
-  title="Mahindra Mahalunge New Project Launch | Mahindra Lifespaces Pune Real Estate Guide 2026"
-  description="Explore the Mahindra Mahalunge new project launch by Mahindra Lifespaces Pune. 13.46 acres, 2, 3 & 4 BHK luxury residences, pre-launch price sheet, floor plans & PMRDA DP road."
+  title="Mahalunge Pune Real Estate [Starts ₹90L*] Mahindra Rivenza Hub"
+  description="Explore Mahalunge Pune real estate market. 13.46 acres, 2, 3 & 4 BHK luxury residences at Mahindra Rivenza Baner Annex, floor plans & PMRDA DP road from ₹90L*."
   canonical="https://mahindralifespaceshomes.in/mahalunge-pune/"
   customSchema={breadcrumbSchema}
 >

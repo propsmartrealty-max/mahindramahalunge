@@ -253,6 +253,7 @@ const baseSchema = {
       "availableLanguage": ["English", "Hindi", "Marathi"],
       "paymentAccepted": "Bank Transfer, Cheque, Home Loan, NRE/NRO Remittance",
       "hasMap": "https://maps.google.com/?q=18.562536,73.727373",
+      "map": "https://www.google.com/maps/place/18%C2%B033'45.1%22N+73%C2%B043'38.5%22E/@18.562536,73.727373,17z",
       "keywords": allMahindraKeywordPermutations.slice(0, 50).join(", "),
       "address": {
         "@type": "PostalAddress",
@@ -266,6 +267,14 @@ const baseSchema = {
         "@type": "GeoCoordinates",
         "latitude": 18.562536,
         "longitude": 73.727373
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "bestRating": "5",
+        "worstRating": "1",
+        "ratingCount": "248",
+        "reviewCount": "248"
       },
       "openingHoursSpecification": [
         {
@@ -467,13 +476,21 @@ const baseSchema = {
     {
       "@type": "RealEstateAgent",
       "@id": "https://mahindralifespaceshomes.in/#advisory-desk",
-      "name": "Mahindra Rivenza Official Advisory Desk",
+      "name": "Mahindra Rivenza Official Advisory Desk & Sales Concierge",
+      "alternateName": [
+        "Mahindra Rivenza Sales Office",
+        "Mahindra Rivenza Experience Center",
+        "Mahindra Lifespaces Pune Sales Desk",
+        "Mahindra Rivenza Mahalunge Office"
+      ],
       "telephone": "+91-7744009295",
       "url": "https://mahindralifespaceshomes.in/",
       "image": "https://cms.mahindralifespaces.com/web/sites/default/files/styles/web_banner_webp/public/2026-10/jpeg-optimizer_Elevation%20Opt%20A..webp",
       "priceRange": "₹90 Lakhs - ₹2.55 Crore",
       "currenciesAccepted": "INR, USD, AED, EUR, GBP, SGD",
       "paymentAccepted": "Bank Transfer, Cheque, Home Loan",
+      "hasMap": "https://maps.google.com/?q=18.562536,73.727373",
+      "map": "https://www.google.com/maps/place/18%C2%B033'45.1%22N+73%C2%B043'38.5%22E/@18.562536,73.727373,17z",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "HP6G+WWF Baner Annex, off Baner-Hinjawadi Road, Pune, Nande",
@@ -492,7 +509,71 @@ const baseSchema = {
           "@type": "OpeningHoursSpecification",
           "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
           "opens": "09:00",
-          "closes": "19:00"
+          "closes": "20:00"
+        }
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "bestRating": "5",
+        "worstRating": "1",
+        "ratingCount": "248",
+        "reviewCount": "248"
+      },
+      "areaServed": [
+        { "@type": "City", "name": "Pune" },
+        { "@type": "AdministrativeArea", "name": "Mahalunge" },
+        { "@type": "AdministrativeArea", "name": "Baner Annex" },
+        { "@type": "AdministrativeArea", "name": "Hinjewadi" },
+        { "@type": "AdministrativeArea", "name": "Balewadi" },
+        { "@type": "AdministrativeArea", "name": "Wakad" },
+        { "@type": "AdministrativeArea", "name": "Pimpri-Chinchwad" },
+        { "@type": "AdministrativeArea", "name": "West Pune" }
+      ],
+      "knowsAbout": [
+        "Mahindra Rivenza",
+        "Pune Real Estate Market",
+        "Flats in Pune",
+        "Mahalunge Property Prices",
+        "Hinjewadi IT Corridor Housing",
+        "MahaRERA Registration PR1261012602102",
+        "MahaRERA Registration PM1261012602103",
+        "PMRDA Town Planning Scheme 1 Mahalunge",
+        "Home Loan Approvals from SBI, HDFC and ICICI"
+      ],
+      "makesOffer": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Apartment",
+            "name": "2 BHK Premium Apartments at Mahindra Rivenza",
+            "description": "635 - 747 sq.ft carpet 2 BHK flats from ₹90 Lakhs*"
+          },
+          "price": "9000000",
+          "priceCurrency": "INR",
+          "availability": "https://schema.org/InStock"
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Apartment",
+            "name": "3 BHK Signature Residences at Mahindra Rivenza",
+            "description": "882 - 1,065 sq.ft carpet 3 BHK luxury residences from ₹1.31 Crore*"
+          },
+          "price": "13100000",
+          "priceCurrency": "INR",
+          "availability": "https://schema.org/InStock"
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Apartment",
+            "name": "4 BHK Presidential Sky Villas at Mahindra Rivenza",
+            "description": "1,438 - 1,465 sq.ft carpet 4 BHK palatial suites from ₹2.20 Crore*"
+          },
+          "price": "22000000",
+          "priceCurrency": "INR",
+          "availability": "https://schema.org/InStock"
         }
       ]
     }

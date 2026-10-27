@@ -4,17 +4,64 @@ import ResidenceSelector from '../../components/ResidenceSelector.astro';
 
 const seoSchema = {
   "@context": "https://schema.org",
-  "@type": "WebPage",
-  "name": "Luxury Flats & Apartments Near Hinjewadi IT Park | Mahindra Mahalunge",
-  "description": "Discover upcoming luxury 2, 3 & 4 BHK flats near Hinjewadi Phase 1 at Mahindra Lifespaces Mahalunge. 7-minute commute, 13.46-acre master green community.",
-  "url": "https://mahindralifespaceshomes.in/flats-near-hinjewadi/"
+  "@graph": [
+    {
+      "@type": "Product",
+      "@id": "https://mahindralifespaceshomes.in/flats-near-hinjewadi/#product",
+      "name": "Luxury Flats Near Hinjewadi IT Park Pune",
+      "description": "Discover 2, 3 & 4 BHK luxury residences at Mahindra Rivenza in Baner Annex / Mahalunge, Pune. 7-minute direct commute to Hinjewadi Phase 1 IT Park, starting ₹90 Lakhs*.",
+      "brand": {
+        "@type": "Brand",
+        "name": "Mahindra Lifespaces"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "bestRating": "5",
+        "worstRating": "1",
+        "ratingCount": "248",
+        "reviewCount": "248"
+      },
+      "offers": {
+        "@type": "AggregateOffer",
+        "lowPrice": "9000000",
+        "highPrice": "25500000",
+        "priceCurrency": "INR",
+        "offerCount": "1236",
+        "priceValidUntil": "2027-12-31",
+        "availability": "https://schema.org/InStock"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://mahindralifespaceshomes.in/flats-near-hinjewadi/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How long is the commute from Mahindra Rivenza to Hinjewadi Phase 1?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The commute from Mahindra Rivenza to Hinjewadi Phase 1 takes just 7 minutes via the operational 4-lane Mula River Bridge, bypassing the congested Wakad and Hinjewadi flyovers."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What are the starting prices for flats near Hinjewadi at Mahindra Rivenza?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "At Mahindra Rivenza, 2 BHK homes start from ₹90 Lakhs*, 3 BHK homes from ₹1.31 Crore*, and 4 BHK sky villas from ₹2.20 Crore* with pre-approved loans from SBI, HDFC and ICICI."
+          }
+        }
+      ]
+    }
+  ]
 };
 ---
 
 <Layout
-  title="Flats Near Hinjewadi IT Park | Mahindra Mahalunge by Mahindra Lifespaces"
-  description="Looking for flats near Hinjewadi? Explore Mahindra Mahalunge by Mahindra Lifespaces: 13.46-acre master development, 7-minute commute, luxury 2, 3 & 4 BHK residences."
-  keywords="flats near hinjewadi, flats near hinjewadi phase 1, mahindra lifespaces near hinjewadi, mahindra mahalunge hinjewadi, apartments near hinjewadi it park, 2 bhk flats near hinjewadi, 3 bhk flats near hinjewadi, mahindra mahalunge pune"
+  title="Flats Near Hinjewadi IT Park [Starts ₹90L*] Mahindra Rivenza"
+  description="Looking for flats near Hinjewadi Phase 1? Explore Mahindra Rivenza Baner Annex: 7-min commute across Mula River Bridge, 13.46 acres, 2, 3 & 4 BHK from ₹90L*."
+  keywords="flats near hinjewadi, flats near hinjewadi phase 1, mahindra rivenza hinjewadi, mahindra lifespaces hinjewadi, apartments near hinjewadi it park, 2 bhk flats near hinjewadi, 3 bhk flats near hinjewadi"
   canonical="https://mahindralifespaceshomes.in/flats-near-hinjewadi/"
   customSchema={seoSchema}
 >

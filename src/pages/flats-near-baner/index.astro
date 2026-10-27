@@ -1,12 +1,68 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+
+const banerSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Product",
+      "@id": "https://mahindralifespaceshomes.in/flats-near-baner/#product",
+      "name": "Luxury Flats Near Baner & Balewadi Pune",
+      "description": "Premium 2, 3 & 4 BHK residences at Mahindra Rivenza in Baner Annex / Mahalunge, Pune. 8-10 mins from Balewadi High Street, ~44,000 sq.ft clubhouse starting ₹90 Lakhs*.",
+      "brand": {
+        "@type": "Brand",
+        "name": "Mahindra Lifespaces"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "bestRating": "5",
+        "worstRating": "1",
+        "ratingCount": "248",
+        "reviewCount": "248"
+      },
+      "offers": {
+        "@type": "AggregateOffer",
+        "lowPrice": "9000000",
+        "highPrice": "25500000",
+        "priceCurrency": "INR",
+        "offerCount": "1236",
+        "priceValidUntil": "2027-12-31",
+        "availability": "https://schema.org/InStock"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://mahindralifespaceshomes.in/flats-near-baner/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How far is Mahindra Rivenza from Baner and Balewadi High Street?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Mahindra Rivenza is located just 4.6 km (8 to 10 minutes drive) from Balewadi High Street and Baner via wide 36m PMRDA Town Planning roads."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the price comparison between Baner central flats and Mahindra Rivenza Baner Annex?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "While Baner central flats range between ₹11,500 to ₹15,000 per sq.ft. in congested pockets, Mahindra Rivenza in Baner Annex offers ground-floor launch rates starting at ₹90 Lakhs* with 9+ acres of greens and a ~44,000 sq.ft. clubhouse."
+          }
+        }
+      ]
+    }
+  ]
+};
 ---
 
 <Layout
-  title="Flats Near Baner & Balewadi | Mahindra Mahalunge by Mahindra Lifespaces"
-  description="Seeking luxury flats near Baner and Balewadi High Street? Discover Mahindra Mahalunge by Mahindra Lifespaces: 13.46-acre master community, 10-min drive, 80% open greens."
-  keywords="flats near baner, flats near balewadi high street, mahindra lifespaces baner, mahindra mahalunge baner, luxury flats in baner pune, 3 bhk flats in baner, 4 bhk flats in baner, apartments near baner pune"
+  title="Flats Near Baner Pune [Starts ₹90L*] Mahindra Rivenza Annex"
+  description="Seeking luxury flats near Baner & Balewadi High Street? Discover Mahindra Rivenza Baner Annex: 13.46 acres, 8-min drive, ~44,000 sq.ft clubhouse from ₹90L*."
+  keywords="flats near baner, flats near balewadi high street, mahindra rivenza baner annex, mahindra lifespaces baner, luxury flats in baner pune, 2 bhk flats near baner, 3 bhk flats near baner"
   canonical="https://mahindralifespaceshomes.in/flats-near-baner/"
+  customSchema={banerSchema}
 >
   <section class="pt-32 pb-20 bg-charcoal-950 border-b border-white/10 relative overflow-hidden">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">

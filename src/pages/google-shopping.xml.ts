@@ -118,6 +118,10 @@ export const GET: APIRoute = async () => {
       <g:description><![CDATA[${p.description}]]></g:description>
       <g:link>${p.link}</g:link>
       <g:image_link>${p.imageLink}</g:image_link>
+      <g:additional_image_link>https://cms.mahindralifespaces.com/web/sites/default/files/styles/web_banner_webp/public/2026-10/Swimming%20pool%20with%20sunken%20bar_Rivenza_11zon.webp</g:additional_image_link>
+      <g:additional_image_link>https://cms.mahindralifespaces.com/web/sites/default/files/styles/web_banner_webp/public/2026-10/Multi-purpose_Rivenza__11zon.webp</g:additional_image_link>
+      <g:additional_image_link>https://cms.mahindralifespaces.com/web/sites/default/files/styles/web_banner_webp/public/2026-10/Yoga%20lawn_Rivenza_11zon.webp</g:additional_image_link>
+      <g:additional_image_link>https://cms.mahindralifespaces.com/web/sites/default/files/styles/web_banner_webp/public/2026-10/2BHK%2520Premium.webp</g:additional_image_link>
       <g:availability>in stock</g:availability>
       <g:price>${p.price}</g:price>
       <g:sale_price>${p.salePrice}</g:sale_price>
@@ -127,6 +131,11 @@ export const GET: APIRoute = async () => {
       <g:product_type>Real Estate &gt; Residential Apartments &gt; Baner Annex Mahalunge Pune</g:product_type>
       <g:mpn>${p.id.toUpperCase()}</g:mpn>
       <g:identifier_exists>no</g:identifier_exists>
+      <g:shipping>
+        <g:country>IN</g:country>
+        <g:service>On-Site Physical Allotment &amp; Key Handover</g:service>
+        <g:price>0.00 INR</g:price>
+      </g:shipping>
       <g:custom_label_0>Mahindra Rivenza</g:custom_label_0>
       <g:custom_label_1>Baner Annex Mahalunge</g:custom_label_1>
       <g:custom_label_2>${p.carpetArea}</g:custom_label_2>
