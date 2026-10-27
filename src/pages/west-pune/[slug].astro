@@ -44,10 +44,24 @@ const pageSchema = {
     }
   ]
 };
+function buildLocalityTitle(shortName: string): string {
+  const c1 = `${shortName} Real Estate Pune [Starts ₹90L*] Mahindra Rivenza`;
+  if (c1.length <= 64) return c1;
+
+  const c2 = `${shortName} Real Estate [Starts ₹90L*] Mahindra Rivenza`;
+  if (c2.length <= 64) return c2;
+
+  const c3 = `${shortName} Property Rates [Starts ₹90L*] Rivenza`;
+  if (c3.length <= 64) return c3;
+
+  return `${shortName} Flats [Starts ₹90L*] Rivenza`.slice(0, 62);
+}
+
+const adaptiveTitle = buildLocalityTitle(item.shortName);
 ---
 
 <Layout
-  title={item.metaTitle}
+  title={adaptiveTitle}
   description={item.metaDescription}
   keywords={`${item.shortName.toLowerCase()} real estate, flats in ${item.shortName.toLowerCase()}, apartments in ${item.shortName.toLowerCase()}, new projects ${item.shortName.toLowerCase()}, mahindra ${item.shortName.toLowerCase()}, mahindra lifespaces west pune, mahindra mahalunge`}
   canonical={`https://mahindralifespaceshomes.in/west-pune/${item.slug}/`}

@@ -58,7 +58,28 @@ const pageSchema = {
     }
   ]
 };
-const highCtrTitle = `Mahindra Rivenza NRI Investment [${item.countryOrRegion}] | Starts ${item.startingPriceInCurrency}`;
+function buildNriTitle(region: string, price: string): string {
+  const cleanRegion = region
+    .replace(/\s*\(.*?\)/g, '')
+    .replace(/& Continental Europe/g, '')
+    .replace(/& Southeast Asia/g, '')
+    .replace(/Tech Corridor/g, 'Tech')
+    .replace(/Tech/g, '')
+    .trim();
+
+  const c1 = `Mahindra Rivenza NRI Desk [${cleanRegion}] Starts ${price}`;
+  if (c1.length >= 50 && c1.length <= 66) return c1;
+
+  const c2 = `Mahindra Rivenza NRI Desk [${cleanRegion} Expats] Starts ${price}`;
+  if (c2.length <= 66) return c2;
+
+  const c3 = `Rivenza NRI [${cleanRegion}] Starts ${price}`;
+  if (c3.length <= 66) return c3;
+
+  return `Mahindra Rivenza NRI [${cleanRegion}]`.slice(0, 65);
+}
+
+const highCtrTitle = buildNriTitle(item.countryOrRegion, item.startingPriceInCurrency);
 const highCtrDescription = `Invest in Mahindra Rivenza Pune from ${item.countryOrRegion}. Pre-approved NRI home loans, ${item.currency} pricing (${item.startingPriceInCurrency}), 4.8%-5.4% rental yields & FEMA advisory.`;
 ---
 

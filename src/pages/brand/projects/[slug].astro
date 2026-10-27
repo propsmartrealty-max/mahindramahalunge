@@ -73,10 +73,27 @@ const pageSchema = {
     }
   ]
 };
+function buildProjectTitle(name: string, shortName: string): string {
+  if (shortName === 'The Woods' || name === 'Mahindra Woods') {
+    return 'Mahindra The Woods Pimpri Pune [Project Review & Status]';
+  }
+  const c1 = `${name} Pune [Project Review & Status]`;
+  if (c1.length <= 66) return c1;
+
+  const c2 = `${shortName} Pune [Project Review & Status]`;
+  if (c2.length <= 66) return c2;
+
+  const c3 = `${shortName} Pune [Review & Status]`;
+  if (c3.length <= 66) return c3;
+
+  return `${shortName} Pune Review`.slice(0, 65);
+}
+
+const adaptiveTitle = buildProjectTitle(item.name, item.shortName);
 ---
 
 <Layout
-  title={item.metaTitle}
+  title={adaptiveTitle}
   description={item.metaDescription}
   keywords={`${item.name.toLowerCase()}, ${item.shortName.toLowerCase()} pune, ${item.shortName.toLowerCase()} price, ${item.shortName.toLowerCase()} floor plan, mahindra lifespaces ${item.microMarket.toLowerCase()}, ${item.typologies.map(t => t.toLowerCase()).join(', ')}`}
   canonical={`https://mahindralifespaceshomes.in/brand/projects/${item.slug}/`}

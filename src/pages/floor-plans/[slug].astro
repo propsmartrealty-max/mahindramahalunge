@@ -128,7 +128,21 @@ const planSchema = {
     }
   ]
 };
-const highCtrTitle = `${unit.name} [Starts ${unit.startingPriceInr}] Floor Plan PDF & CAD`;
+function buildFloorPlanTitle(name: string, price: string): string {
+  const shortName = name.replace('Mahindra Rivenza', 'Rivenza').trim();
+  const c1 = `${shortName} [Starts ${price}] CAD Floor Plan`;
+  if (c1.length <= 66) return c1;
+
+  const c2 = `${shortName} [${price}] Layout CAD`;
+  if (c2.length <= 66) return c2;
+
+  const c3 = `${shortName} [${price}] CAD PDF`;
+  if (c3.length <= 66) return c3;
+
+  return `${shortName} Floor Plan [${price}]`.slice(0, 65);
+}
+
+const highCtrTitle = buildFloorPlanTitle(unit.name, unit.startingPriceInr);
 const highCtrDescription = `Download official MahaRERA CAD floor plan for ${unit.name} (${unit.reraCarpetSqFt} sq.ft carpet / ${unit.aggregateUsableSqFt} sq.ft usable). Starting ${unit.startingPriceInr} in Baner Annex Pune. Get official cost sheet.`;
 ---
 

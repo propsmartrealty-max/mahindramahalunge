@@ -72,7 +72,26 @@ const commuteSchema = {
     }
   ]
 };
-const highCtrTitle = `Mahindra Rivenza to ${item.destinationName} [${item.postBridgeDriveTimeMins}] | Commute & Route Map`;
+function buildCommuteTitle(destination: string, driveTime: string): string {
+  const cleanDest = destination
+    .replace(/\s*\(.*?\)/g, '')
+    .replace(/& Central Baner/g, '')
+    .replace(/& Retail Hub/g, '')
+    .trim();
+
+  const c1 = `Mahindra Rivenza to ${cleanDest} [${driveTime}] Route`;
+  if (c1.length <= 66) return c1;
+
+  const c2 = `Rivenza to ${cleanDest} [${driveTime}] Commute Map`;
+  if (c2.length <= 66) return c2;
+
+  const c3 = `Rivenza to ${cleanDest} [${driveTime}] Route`;
+  if (c3.length <= 66) return c3;
+
+  return `Rivenza to ${cleanDest} [${driveTime}]`.slice(0, 65);
+}
+
+const highCtrTitle = buildCommuteTitle(item.destinationName, item.postBridgeDriveTimeMins);
 const highCtrDescription = `Exact commute time & driving route from Mahindra Rivenza to ${item.destinationName}. Just ${item.distanceKm} km (${item.postBridgeDriveTimeMins}) via the new 4-lane Mula River Bridge.`;
 ---
 

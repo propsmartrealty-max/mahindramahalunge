@@ -44,7 +44,30 @@ const pageSchema = {
     }
   ]
 };
-const highCtrTitle = `Mahindra Rivenza vs ${item.competitorName} [2026 Comparison] | Price & Reviews`;
+function buildCompareTitle(competitor: string): string {
+  const cleanComp = competitor
+    .replace(/\s*\(.*?\)/g, '')
+    .replace(/Micro-Market/g, '')
+    .replace(/Projects/g, '')
+    .replace(/Vilas Javdekar/g, 'VJ')
+    .trim();
+  
+  const c1 = `Mahindra Rivenza vs ${cleanComp} [Starts ₹90L*]`;
+  if (c1.length >= 50 && c1.length <= 64) return c1;
+
+  const c2 = `Mahindra Rivenza vs ${cleanComp} Pune [Starts ₹90L*]`;
+  if (c2.length >= 50 && c2.length <= 64) return c2;
+  
+  const c3 = `Mahindra Rivenza vs ${cleanComp} [Price & Specs]`;
+  if (c3.length >= 50 && c3.length <= 64) return c3;
+
+  const c4 = `Rivenza vs ${cleanComp} [Starts ₹90L*]`;
+  if (c4.length >= 50 && c4.length <= 64) return c4;
+
+  return `Rivenza vs ${cleanComp} [Starts ₹90L*]`.slice(0, 62);
+}
+
+const highCtrTitle = buildCompareTitle(item.competitorName);
 const highCtrDescription = `2026 head-to-head comparison: Mahindra Rivenza vs ${item.competitorName}. Compare prices, carpet area efficiency, 9+ acres greens, and MahaRERA compliance.`;
 ---
 
