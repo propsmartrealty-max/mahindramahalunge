@@ -57,7 +57,21 @@ const pageSchema = {
     }
   ]
 };
-const highCtrTitle = `Flats Near ${item.stationName} [${item.commuteTime}] | 2, 3 & 4 BHK Starts ₹90L*`;
+function buildAdaptiveTitle(station: string, price = 'Starts ₹90L*') {
+  const brand = 'Mahindra Rivenza';
+  const priceTag = `[${price}]`;
+  const cleanName = station.replace(/ Metro Station$/i, '').replace(/ Metro$/i, '');
+  let full = `${cleanName} Metro ${priceTag} ${brand} Baner Annex`;
+  if (full.length <= 66) return full;
+  full = `${cleanName} Metro ${priceTag} ${brand} Pune`;
+  if (full.length <= 66) return full;
+  full = `${cleanName} Metro ${priceTag} ${brand}`;
+  if (full.length <= 66) return full;
+  const maxNameLen = 66 - (priceTag.length + brand.length + 8);
+  return `${cleanName.slice(0, maxNameLen).trim()} Metro ${priceTag} ${brand}`;
+}
+
+const highCtrTitle = buildAdaptiveTitle(item.stationName);
 const highCtrDescription = `Luxury 2, 3 & 4 BHK flats near ${item.stationName} (Pune Metro Line 3). Just ${item.distanceKm} (${item.commuteTime}) from Mahindra Rivenza. Starting ₹90L*. MahaRERA approved.`;
 ---
 

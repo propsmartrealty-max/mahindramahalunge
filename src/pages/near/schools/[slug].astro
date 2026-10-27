@@ -57,7 +57,20 @@ const pageSchema = {
     }
   ]
 };
-const highCtrTitle = `Flats Near ${item.shortName || item.name} [${item.driveTime}] | 2, 3 & 4 BHK Starts ₹90L*`;
+function buildAdaptiveTitle(name: string, price = 'Starts ₹90L*') {
+  const brand = 'Mahindra Rivenza';
+  const priceTag = `[${price}]`;
+  let full = `${name} ${priceTag} ${brand} Baner Annex`;
+  if (full.length <= 66) return full;
+  full = `${name} ${priceTag} ${brand} Pune`;
+  if (full.length <= 66) return full;
+  full = `${name} ${priceTag} ${brand}`;
+  if (full.length <= 66) return full;
+  const maxNameLen = 66 - (priceTag.length + brand.length + 2);
+  return `${name.slice(0, maxNameLen).trim()} ${priceTag} ${brand}`;
+}
+
+const highCtrTitle = buildAdaptiveTitle(item.shortName || item.name);
 const highCtrDescription = `Family-friendly 2, 3 & 4 BHK homes near ${item.shortName || item.name} at Mahindra Rivenza Baner Annex. Just ${item.distanceKm} (${item.driveTime}) away. Starts ₹90L*. MahaRERA approved.`;
 ---
 
