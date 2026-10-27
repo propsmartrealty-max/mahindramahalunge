@@ -1036,7 +1036,79 @@ export const rivenzaTop150MoneyKeywords = [
 ];
 
 // ==============================================================================
-// 32. 5-DIMENSIONAL PROGRAMMATIC MATRIX ENGINE
+// 32. BANK LOANS & INSTITUTIONAL MORTGAGE KEYWORDS
+// ==============================================================================
+export const rivenzaBankLoanHomeLoanKeywords = [
+  'Mahindra Rivenza SBI home loan approval',
+  'Mahindra Rivenza HDFC home loan approval',
+  'Mahindra Rivenza ICICI bank approved project',
+  'Mahindra Rivenza Axis Bank home loan project code',
+  'Mahindra Rivenza bank loan interest rate',
+  'Mahindra Rivenza pre approved home loans',
+  'Mahindra Rivenza home loan eligibility calculator',
+  'Mahindra Rivenza Bank of Baroda approval',
+  'Mahindra Rivenza PNB housing finance',
+  'Mahindra Rivenza home loan down payment 10 percent',
+  'home loans for flats in Mahindra Rivenza Mahalunge',
+  'SBI pre approved projects Mahalunge Pune',
+  'HDFC pre approved residential projects West Pune',
+  'ICICI Bank approved builder projects Baner Hinjewadi'
+];
+
+// ==============================================================================
+// 33. MAINTENANCE CHARGES & SOCIETY CORPUS KEYWORDS
+// ==============================================================================
+export const rivenzaMaintenanceSocietyKeywords = [
+  'Mahindra Rivenza maintenance charges per sq ft',
+  'Mahindra Rivenza monthly maintenance cost',
+  'Mahindra Rivenza society maintenance charges Pune',
+  'Mahindra Rivenza maintenance cost breakdown',
+  'Mahindra Rivenza sinking fund and corpus charges',
+  'Mahindra Rivenza clubhouse maintenance charges',
+  'Mahindra Rivenza clubhouse and swimming pool maintenance',
+  'Mahindra Rivenza property tax Mahalunge PMRDA',
+  'Mahindra Rivenza estimated monthly maintenance 2 BHK',
+  'Mahindra Rivenza estimated monthly maintenance 3 BHK',
+  'Mahindra Lifespaces society maintenance standards',
+  'how much is maintenance in Mahindra Rivenza Pune'
+];
+
+// ==============================================================================
+// 34. POSSESSION DATE & RERA HANDOVER TIMELINE KEYWORDS
+// ==============================================================================
+export const rivenzaPossessionHandoverKeywords = [
+  'Mahindra Rivenza possession date 2026',
+  'Mahindra Rivenza Phase 1 possession timeline',
+  'Mahindra Rivenza Phase 2 possession schedule',
+  'Mahindra Rivenza RERA possession date December 2031',
+  'Mahindra Rivenza early handover timeline',
+  'Mahindra Rivenza construction milestone updates',
+  'Mahindra Rivenza current construction status 2026',
+  'Mahindra Rivenza tower slab completion date',
+  'Mahindra Rivenza delivery date Mahalunge',
+  'Mahindra Lifespaces on time possession track record Pune',
+  'Mahindra Rivenza handover schedule and key handover'
+];
+
+// ==============================================================================
+// 35. PRIORITY BOOKING PASS & TOKEN EOI KEYWORDS
+// ==============================================================================
+export const rivenzaPriorityBookingPassKeywords = [
+  'Mahindra Rivenza priority booking pass',
+  'Mahindra Rivenza pre launch token amount',
+  'Mahindra Rivenza booking pass benefits and discount',
+  'Mahindra Rivenza EOI expression of interest',
+  'Mahindra Rivenza official booking procedure',
+  'Mahindra Rivenza launch day allotment pass',
+  'Mahindra Rivenza token refund policy',
+  'Mahindra Rivenza VIP booking desk contact',
+  'book Mahindra Rivenza flat online',
+  'Mahindra Rivenza payment plan 10 90 20 80',
+  'Mahindra Rivenza construction linked payment schedule'
+];
+
+// ==============================================================================
+// 36. 5-DIMENSIONAL PROGRAMMATIC MATRIX ENGINE
 // Project × Location × Configuration × Intent × Modifier
 // ==============================================================================
 export function generate5DMatrixKeywords(): string[] {
@@ -1049,7 +1121,9 @@ export function generate5DMatrixKeywords(): string[] {
   locations.forEach(loc => {
     configurations.forEach(cfg => {
       intents.forEach(intent => {
-        results.push();
+        results.push(`${project} ${loc} ${cfg} ${intent}`);
+        results.push(`${cfg} in ${loc} ${project} ${intent}`);
+        results.push(`${project} ${intent} for ${cfg} ${loc}`);
       });
     });
   });
@@ -1087,6 +1161,10 @@ export const allMahindraKeywordPermutations: string[] = Array.from(
     ...rivenzaCompetitorKeywords,
     ...rivenzaBestNearMeKeywords,
     ...rivenzaPhaseAndScaleKeywords,
+    ...rivenzaBankLoanHomeLoanKeywords,
+    ...rivenzaMaintenanceSocietyKeywords,
+    ...rivenzaPossessionHandoverKeywords,
+    ...rivenzaPriorityBookingPassKeywords,
     ...generate5DMatrixKeywords()
   ])
 );
