@@ -102,7 +102,10 @@ const baseSchema = {
       },
       "potentialAction": {
         "@type": "SearchAction",
-        "target": "https://mahindralifespaceshomes.in/?q={search_term_string}",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://mahindralifespaceshomes.in/pune-real-estate/?q={search_term_string}"
+        },
         "query-input": "required name=search_term_string"
       }
     },
@@ -1047,6 +1050,25 @@ const baseSchema = {
               detail: { interest, unit },
             })
           );
+        }
+
+        // Automatic Conversion Tracking for Direct Call & WhatsApp Clicks
+        const link = (e.target as HTMLElement).closest('a');
+        if (link) {
+          const href = link.getAttribute('href') || '';
+          if (href.startsWith('tel:') || href.includes('wa.me') || href.includes('whatsapp.com')) {
+            if (typeof (window as any).triggerLeadConversion === 'function') {
+              (window as any).triggerLeadConversion();
+            }
+            if (typeof (window as any).gtag === 'function') {
+              const eventAction = href.startsWith('tel:') ? 'phone_call_click' : 'whatsapp_click';
+              (window as any).gtag('event', eventAction, {
+                event_category: 'Direct Lead Channel',
+                event_label: href,
+                value: 1
+              });
+            }
+          }
         }
       });
 
