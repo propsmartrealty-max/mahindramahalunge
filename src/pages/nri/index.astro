@@ -1,0 +1,132 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { nriPortalsData } from '../../data/pSeoNriPortals';
+
+const nriIndexSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "CollectionPage",
+      "@id": "https://mahindralifespaceshomes.in/nri/#collection",
+      "url": "https://mahindralifespaceshomes.in/nri/",
+      "name": "Global NRI Real Estate Investment Portals — Mahindra Rivenza Pune",
+      "description": "Dedicated international real estate investment desks for Non-Resident Indians (NRIs) residing in UAE, USA, UK, Singapore, Australia, Canada, and Saudi Arabia.",
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://mahindralifespaceshomes.in/" },
+          { "@type": "ListItem", "position": 2, "name": "Global NRI Desks", "item": "https://mahindralifespaceshomes.in/nri/" }
+        ]
+      }
+    },
+    {
+      "@type": "ItemList",
+      "@id": "https://mahindralifespaceshomes.in/nri/#itemlist",
+      "name": "Global NRI Real Estate Portals for Mahindra Rivenza",
+      "numberOfItems": nriPortalsData.length,
+      "itemListElement": nriPortalsData.map((item, idx) => ({
+        "@type": "ListItem",
+        "position": idx + 1,
+        "name": `NRI Investment from ${item.countryOrRegion}`,
+        "url": `https://mahindralifespaceshomes.in/nri/${item.slug}/`
+      }))
+    }
+  ]
+};
+---
+
+<Layout
+  title="Mahindra Rivenza Global NRI Real Estate Desks [Dubai, USA, UK]"
+  description="Invest in Mahindra Rivenza Pune from Dubai (AED), USA (USD), UK (GBP), Singapore (SGD). FEMA, repatriation, pre-approved NRI mortgages & video walkthroughs."
+  canonical="https://mahindralifespaceshomes.in/nri/"
+  customSchema={nriIndexSchema}
+>
+  <main class="pt-32 pb-24 bg-charcoal-950 text-stone-300">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+      
+      <!-- Top Header -->
+      <div class="text-center max-w-3xl mx-auto space-y-4">
+        <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-gold-500/10 border border-gold-500/30 text-gold-400 text-xs font-semibold uppercase tracking-widest">
+          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+          <span>Global NRI Wealth Desks • 12 International Corridors</span>
+        </div>
+        <h1 class="font-serif text-3xl sm:text-5xl font-bold text-stone-100">
+          Global NRI Real Estate Investment Portals <br />
+          <span class="gold-gradient-text">Seamless Cross-Border Wealth in Pune</span>
+        </h1>
+        <p class="text-xs sm:text-sm text-stone-300 max-w-2xl mx-auto leading-relaxed font-light">
+          Invest in India's highest-performing tech capital with complete institutional transparency. Dedicated advisory desks catering to expatriates in Dubai, Silicon Valley, London, Singapore, Sydney, and Riyadh.
+        </p>
+      </div>
+
+      <!-- NRI Desks Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {nriPortalsData.map((item) => (
+          <div class="bg-charcoal-900/80 border border-white/10 rounded-2xl p-6 hover:border-gold-500/50 transition-all flex flex-col justify-between group shadow-xl">
+            <div class="space-y-4">
+              <div class="flex items-center justify-between">
+                <span class="px-2.5 py-1 rounded bg-gold-500/10 text-gold-400 border border-gold-500/20 text-[11px] font-semibold uppercase tracking-wider">
+                  {item.currency} Currency Guide
+                </span>
+                <span class="text-xs text-emerald-400 font-mono font-bold">
+                  Starts {item.startingPriceInCurrency}
+                </span>
+              </div>
+
+              <div>
+                <h2 class="font-serif text-xl font-bold text-stone-100 group-hover:text-gold-300 transition-colors">
+                  {item.countryOrRegion}
+                </h2>
+                <div class="text-xs text-stone-400 mt-1 line-clamp-2">{item.heroHighlight}</div>
+              </div>
+
+              <div class="bg-charcoal-950/60 p-3.5 rounded-xl border border-white/5 space-y-2 text-xs">
+                <div class="flex justify-between">
+                  <span class="text-stone-400">Repatriation:</span>
+                  <span class="text-emerald-400 font-semibold">100% RBI / FEMA Compliant</span>
+                </div>
+                <div class="flex justify-between">
+                  <span class="text-stone-400">Rental Yield:</span>
+                  <span class="text-gold-400 font-bold">4.8% - 5.4%</span>
+                </div>
+              </div>
+
+              <p class="text-[11px] text-stone-400 line-clamp-2">
+                {item.taxAndLegalAdvantage}
+              </p>
+            </div>
+
+            <div class="pt-6 border-t border-white/5 mt-6">
+              <a
+                href={`/nri/${item.slug}/`}
+                class="block w-full text-center py-2.5 px-4 bg-white/5 hover:bg-gold-500 hover:text-charcoal-950 text-stone-200 text-xs font-bold uppercase tracking-wider rounded-xl transition-all"
+              >
+                Inspect Country Investment Guide →
+              </a>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <!-- Bottom Advisory Box -->
+      <div class="bg-gradient-to-r from-gold-600/20 via-charcoal-900 to-gold-600/20 border border-gold-500/40 rounded-2xl p-6 sm:p-8 text-center space-y-4">
+        <h2 class="font-serif text-2xl sm:text-3xl font-bold text-stone-100">
+          Book a 1-on-1 Virtual NRI Video Consultation
+        </h2>
+        <p class="text-xs sm:text-sm text-stone-300 max-w-2xl mx-auto leading-relaxed">
+          Convenient video appointments scheduled in your local time zone (GST, EST, PST, GMT, SGT, AEST). We handle digital booking, PoA drafting, and pre-approved home loan underwriting.
+        </p>
+        <div class="pt-2">
+          <button
+            data-open-modal
+            data-interest="NRI Virtual Consultation"
+            class="btn-shimmer px-6 py-3 rounded-full bg-gradient-to-r from-gold-300 via-gold-400 to-gold-500 text-charcoal-950 font-bold uppercase text-xs tracking-wider shadow-lg hover:shadow-gold-500/30 transition-all cursor-pointer"
+          >
+            Schedule Global NRI Video Call →
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </main>
+</Layout>

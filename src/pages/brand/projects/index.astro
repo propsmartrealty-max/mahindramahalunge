@@ -1,0 +1,120 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import { brandProjectData } from '../../../data/pSeoBrandProjects';
+
+const brandProjectsIndexSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "CollectionPage",
+      "@id": "https://mahindralifespaceshomes.in/brand/projects/#collection",
+      "url": "https://mahindralifespaceshomes.in/brand/projects/",
+      "name": "Mahindra Lifespaces Projects Portfolio in Pune",
+      "description": "Comprehensive portfolio showcase of Mahindra Lifespaces residential developments across Pune: Mahalunge Baner Annex, Pimpri, Tathawade, and Kharadi Annex.",
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://mahindralifespaceshomes.in/" },
+          { "@type": "ListItem", "position": 2, "name": "Mahindra Brand", "item": "https://mahindralifespaceshomes.in/brand/" },
+          { "@type": "ListItem", "position": 3, "name": "Projects Portfolio", "item": "https://mahindralifespaceshomes.in/brand/projects/" }
+        ]
+      }
+    },
+    {
+      "@type": "ItemList",
+      "@id": "https://mahindralifespaceshomes.in/brand/projects/#itemlist",
+      "name": "Mahindra Lifespaces Pune Projects",
+      "numberOfItems": brandProjectData.length,
+      "itemListElement": brandProjectData.map((item, idx) => ({
+        "@type": "ListItem",
+        "position": idx + 1,
+        "name": item.name,
+        "url": `https://mahindralifespaceshomes.in/brand/projects/${item.slug}/`
+      }))
+    }
+  ]
+};
+---
+
+<Layout
+  title="Mahindra Lifespaces Projects in Pune [Rivenza, Citadel, IvyLush]"
+  description="Explore all landmark Mahindra Lifespaces residential projects in Pune: Mahindra Rivenza Mahalunge, Mahindra Citadel Pimpri, Mahindra IvyLush Kharadi Annex."
+  canonical="https://mahindralifespaceshomes.in/brand/projects/"
+  customSchema={brandProjectsIndexSchema}
+>
+  <main class="pt-32 pb-24 bg-charcoal-950 text-stone-300">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+      
+      <!-- Top Header -->
+      <div class="text-center max-w-3xl mx-auto space-y-4">
+        <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-gold-500/10 border border-gold-500/30 text-gold-400 text-xs font-semibold uppercase tracking-widest">
+          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+          <span>Mahindra Lifespaces Developers Ltd. • Pune Portfolio</span>
+        </div>
+        <h1 class="font-serif text-3xl sm:text-5xl font-bold text-stone-100">
+          Mahindra Residential Communities Across Pune <br />
+          <span class="gold-gradient-text">75+ Years of Trust &amp; Sustainable Engineering</span>
+        </h1>
+        <p class="text-xs sm:text-sm text-stone-300 max-w-2xl mx-auto leading-relaxed font-light">
+          Discover the complete footprint of Mahindra Lifespaces in Pune. From the flagship 13.46-acre sanctuary at Mahindra Rivenza to transit-oriented landmarks at Citadel and IvyLush.
+        </p>
+      </div>
+
+      <!-- Projects Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {brandProjectData.map((item) => (
+          <div class="bg-charcoal-900/80 border border-white/10 rounded-2xl p-6 hover:border-gold-500/50 transition-all flex flex-col justify-between group shadow-xl">
+            <div class="space-y-4">
+              <div class="flex items-center justify-between">
+                <span class="px-2.5 py-1 rounded bg-gold-500/10 text-gold-400 border border-gold-500/20 text-[11px] font-semibold uppercase tracking-wider">
+                  {item.status}
+                </span>
+                <span class="text-xs text-stone-400 font-mono">
+                  {item.microMarket.split('(')[0].trim()}
+                </span>
+              </div>
+
+              <div>
+                <h2 class="font-serif text-xl font-bold text-stone-100 group-hover:text-gold-300 transition-colors">
+                  {item.name}
+                </h2>
+                <div class="text-xs text-stone-400 mt-1 line-clamp-2">{item.heroTagline}</div>
+              </div>
+
+              <div class="bg-charcoal-950/60 p-3.5 rounded-xl border border-white/5 space-y-1.5 text-xs">
+                <div class="flex justify-between">
+                  <span class="text-stone-400">Land Parcel:</span>
+                  <span class="text-white font-medium">{item.landArea}</span>
+                </div>
+                <div class="flex justify-between">
+                  <span class="text-stone-400">Green Rating:</span>
+                  <span class="text-emerald-400 font-semibold">{item.greenRating}</span>
+                </div>
+                {item.reraNumber && (
+                  <div class="flex justify-between">
+                    <span class="text-stone-400">MahaRERA:</span>
+                    <span class="text-gold-400 font-mono text-[10px] truncate max-w-[150px]">{item.reraNumber.split('|')[0]}</span>
+                  </div>
+                )}
+              </div>
+
+              <p class="text-[11px] text-stone-400 line-clamp-2">
+                {item.investmentCase}
+              </p>
+            </div>
+
+            <div class="pt-6 border-t border-white/5 mt-6">
+              <a
+                href={`/brand/projects/${item.slug}/`}
+                class="block w-full text-center py-2.5 px-4 bg-white/5 hover:bg-gold-500 hover:text-charcoal-950 text-stone-200 text-xs font-bold uppercase tracking-wider rounded-xl transition-all"
+              >
+                Inspect Project Blueprint →
+              </a>
+            </div>
+          </div>
+        ))}
+      </div>
+
+    </div>
+  </main>
+</Layout>

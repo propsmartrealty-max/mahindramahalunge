@@ -1,0 +1,127 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import { metroData } from '../../../data/pSeoMetroStations';
+
+const metroIndexSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "CollectionPage",
+      "@id": "https://mahindralifespaceshomes.in/near/metro/#collection",
+      "url": "https://mahindralifespaceshomes.in/near/metro/",
+      "name": "Flats Near Pune Metro Line 3 Stations — Mahindra Rivenza",
+      "description": "Directory of luxury apartments near 16 Pune Metro Line 3 elevated transit stations between Hinjewadi and Shivajinagar with travel times and feeder routes.",
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://mahindralifespaceshomes.in/" },
+          { "@type": "ListItem", "position": 2, "name": "Tech Hub Proximity", "item": "https://mahindralifespaceshomes.in/near/" },
+          { "@type": "ListItem", "position": 3, "name": "Metro Stations", "item": "https://mahindralifespaceshomes.in/near/metro/" }
+        ]
+      }
+    },
+    {
+      "@type": "ItemList",
+      "@id": "https://mahindralifespaceshomes.in/near/metro/#itemlist",
+      "name": "Pune Metro Line 3 Stations Near Mahindra Rivenza",
+      "numberOfItems": metroData.length,
+      "itemListElement": metroData.map((item, idx) => ({
+        "@type": "ListItem",
+        "position": idx + 1,
+        "name": `Flats Near ${item.stationName}`,
+        "url": `https://mahindralifespaceshomes.in/near/metro/${item.slug}/`
+      }))
+    }
+  ]
+};
+---
+
+<Layout
+  title="Flats Near Pune Metro Line 3 Stations [Starts ₹90L*] Rivenza"
+  description="Find luxury flats near Pune Metro Line 3 stations from Mahindra Rivenza. Balewadi Stadium, Megapolis, Wipro Circle, Infosys Phase 1 with 5 to 10 min transit."
+  canonical="https://mahindralifespaceshomes.in/near/metro/"
+  customSchema={metroIndexSchema}
+>
+  <main class="pt-32 pb-24 bg-charcoal-950 text-stone-300">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+      
+      <!-- Top Header -->
+      <div class="text-center max-w-3xl mx-auto space-y-4">
+        <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-gold-500/10 border border-gold-500/30 text-gold-400 text-xs font-semibold uppercase tracking-widest">
+          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+          <span>Pune Metro Line 3 Corridor • 16 Stations</span>
+        </div>
+        <h1 class="font-serif text-3xl sm:text-5xl font-bold text-stone-100">
+          Residences Near Pune Metro Line 3 Stations <br />
+          <span class="gold-gradient-text">Rapid Transit from Hinjewadi to Shivajinagar</span>
+        </h1>
+        <p class="text-xs sm:text-sm text-stone-300 max-w-2xl mx-auto leading-relaxed font-light">
+          Enjoy car-free, traffic-immune commutes across Pune. Located in Baner Annex / Mahalunge, Mahindra Rivenza is minutes from Balewadi Stadium Metro, Wipro Circle Metro, and Megapolis Metro hubs.
+        </p>
+      </div>
+
+      <!-- Quick Category Navigation -->
+      <div class="flex flex-wrap items-center justify-center gap-2">
+        <a href="/near/" class="px-3.5 py-1.5 rounded-full bg-white/5 hover:bg-gold-500/20 border border-white/10 hover:border-gold-500/40 text-xs text-stone-300 hover:text-gold-300 transition-colors">
+          ← All Tech Parks (32)
+        </a>
+        <a href="/near/schools/" class="px-3.5 py-1.5 rounded-full bg-white/5 hover:bg-gold-500/20 border border-white/10 hover:border-gold-500/40 text-xs text-stone-300 hover:text-gold-300 transition-colors">
+          Nearby Schools (16) →
+        </a>
+        <a href="/near/hospitals/" class="px-3.5 py-1.5 rounded-full bg-white/5 hover:bg-gold-500/20 border border-white/10 hover:border-gold-500/40 text-xs text-stone-300 hover:text-gold-300 transition-colors">
+          Nearby Hospitals (16) →
+        </a>
+      </div>
+
+      <!-- Metro Stations Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {metroData.map((item) => (
+          <div class="bg-charcoal-900/80 border border-white/10 rounded-2xl p-6 hover:border-gold-500/50 transition-all flex flex-col justify-between group shadow-xl">
+            <div class="space-y-4">
+              <div class="flex items-center justify-between">
+                <span class="px-2.5 py-1 rounded bg-sky-500/10 text-sky-300 border border-sky-500/20 text-[11px] font-semibold uppercase tracking-wider">
+                  Line 3 Elevated
+                </span>
+                <span class="text-xs text-emerald-400 font-mono font-semibold">
+                  {item.distanceKm} ({item.commuteTime})
+                </span>
+              </div>
+
+              <div>
+                <h2 class="font-serif text-xl font-bold text-stone-100 group-hover:text-gold-300 transition-colors">
+                  {item.stationName}
+                </h2>
+                <div class="text-xs text-stone-400 mt-1 line-clamp-2">{item.interchangeType}</div>
+              </div>
+
+              <div class="bg-charcoal-950/60 p-3.5 rounded-xl border border-white/5 space-y-1.5 text-xs">
+                <div class="flex justify-between">
+                  <span class="text-stone-400">Reach:</span>
+                  <span class="text-white font-medium">{item.workplaceReach}</span>
+                </div>
+                <div class="flex justify-between">
+                  <span class="text-stone-400">Recommended:</span>
+                  <span class="text-gold-400 font-medium">{item.recommendedConfig}</span>
+                </div>
+              </div>
+
+              <p class="text-[11px] text-stone-400 line-clamp-2">
+                {item.transitAdvantage}
+              </p>
+            </div>
+
+            <div class="pt-6 border-t border-white/5 mt-6">
+              <a
+                href={`/near/metro/${item.slug}/`}
+                class="block w-full text-center py-2.5 px-4 bg-white/5 hover:bg-gold-500 hover:text-charcoal-950 text-stone-200 text-xs font-bold uppercase tracking-wider rounded-xl transition-all"
+              >
+                Inspect Metro Commute Dossier →
+              </a>
+            </div>
+          </div>
+        ))}
+      </div>
+
+    </div>
+  </main>
+</Layout>

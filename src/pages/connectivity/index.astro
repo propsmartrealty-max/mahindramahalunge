@@ -1,0 +1,114 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { connectivityData } from '../../data/pSeoConnectivity';
+
+const connectivityIndexSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "CollectionPage",
+      "@id": "https://mahindralifespaceshomes.in/connectivity/#collection",
+      "url": "https://mahindralifespaceshomes.in/connectivity/",
+      "name": "Civic Infrastructure & Strategic Transit Corridors — Mahindra Rivenza",
+      "description": "Comprehensive guide to multi-crore civic infrastructure projects connecting Mahindra Rivenza: Pune Metro Line 3, PMRDA 36m Ring Roads, Mula River Bridge, and Pune Outer Ring Road.",
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://mahindralifespaceshomes.in/" },
+          { "@type": "ListItem", "position": 2, "name": "Civic Infrastructure", "item": "https://mahindralifespaceshomes.in/connectivity/" }
+        ]
+      }
+    },
+    {
+      "@type": "ItemList",
+      "@id": "https://mahindralifespaceshomes.in/connectivity/#itemlist",
+      "name": "Key Infrastructure Projects Connecting Mahindra Rivenza",
+      "numberOfItems": connectivityData.length,
+      "itemListElement": connectivityData.map((item, idx) => ({
+        "@type": "ListItem",
+        "position": idx + 1,
+        "name": item.infrastructureName,
+        "url": `https://mahindralifespaceshomes.in/connectivity/${item.slug}/`
+      }))
+    }
+  ]
+};
+---
+
+<Layout
+  title="Mahindra Rivenza Connectivity [Metro Line 3, Ring Road] Pune"
+  description="Explore Pune Metro Line 3, PMRDA 36m DP Road, Mula River bridge & Pune Ring Road connectivity at Mahindra Rivenza Mahalunge. High-growth transit infrastructure."
+  canonical="https://mahindralifespaceshomes.in/connectivity/"
+  customSchema={connectivityIndexSchema}
+>
+  <main class="pt-32 pb-24 bg-charcoal-950 text-stone-300">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+      
+      <!-- Top Header -->
+      <div class="text-center max-w-3xl mx-auto space-y-4">
+        <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-gold-500/10 border border-gold-500/30 text-gold-400 text-xs font-semibold uppercase tracking-widest">
+          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+          <span>Strategic Civic Infrastructure Directory • 18 Transit Links</span>
+        </div>
+        <h1 class="font-serif text-3xl sm:text-5xl font-bold text-stone-100">
+          Civic Infrastructure &amp; Arterial Road Corridors <br />
+          <span class="gold-gradient-text">Catalysts for West Pune's Real Estate Boom</span>
+        </h1>
+        <p class="text-xs sm:text-sm text-stone-300 max-w-2xl mx-auto leading-relaxed font-light">
+          Discover how ₹25,000+ Crore in government and PMRDA infrastructure investments—including Pune Metro Line 3, the 4-lane Mula River Bridge, and the Pune Ring Road—are driving extraordinary capital appreciation at Mahindra Rivenza.
+        </p>
+      </div>
+
+      <!-- Infrastructure Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {connectivityData.map((item) => (
+          <div class="bg-charcoal-900/80 border border-white/10 rounded-2xl p-6 hover:border-gold-500/50 transition-all flex flex-col justify-between group shadow-xl">
+            <div class="space-y-4">
+              <div class="flex items-center justify-between">
+                <span class="px-2.5 py-1 rounded bg-emerald-500/10 text-emerald-300 border border-emerald-500/20 text-[11px] font-semibold uppercase tracking-wider">
+                  {item.completionTimeline}
+                </span>
+                <span class="text-xs text-gold-400 font-mono font-bold">
+                  {item.impactScore}
+                </span>
+              </div>
+
+              <div>
+                <h2 class="font-serif text-xl font-bold text-stone-100 group-hover:text-gold-300 transition-colors">
+                  {item.shortName || item.infrastructureName}
+                </h2>
+                <div class="text-xs text-stone-400 mt-1 line-clamp-2">{item.investmentScale}</div>
+              </div>
+
+              <div class="bg-charcoal-950/60 p-3.5 rounded-xl border border-white/5 space-y-2 text-xs">
+                <span class="text-[10px] uppercase tracking-wider text-amber-200 font-bold block">Key Transit Benefits:</span>
+                <ul class="space-y-1 text-stone-300">
+                  {item.transitBenefits.slice(0, 2).map((benefit) => (
+                    <li class="flex items-start gap-1.5 text-[11px]">
+                      <span class="text-emerald-400 flex-shrink-0">✓</span>
+                      <span class="line-clamp-2">{benefit}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <p class="text-[11px] text-stone-400 line-clamp-2">
+                {item.routeDetails}
+              </p>
+            </div>
+
+            <div class="pt-6 border-t border-white/5 mt-6">
+              <a
+                href={`/connectivity/${item.slug}/`}
+                class="block w-full text-center py-2.5 px-4 bg-white/5 hover:bg-gold-500 hover:text-charcoal-950 text-stone-200 text-xs font-bold uppercase tracking-wider rounded-xl transition-all"
+              >
+                Inspect Infrastructure Dossier →
+              </a>
+            </div>
+          </div>
+        ))}
+      </div>
+
+    </div>
+  </main>
+</Layout>

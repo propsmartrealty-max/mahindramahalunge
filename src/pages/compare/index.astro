@@ -1,0 +1,133 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { comparisonData } from '../../data/pSeoComparisons';
+
+const compareIndexSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "CollectionPage",
+      "@id": "https://mahindralifespaceshomes.in/compare/#collection",
+      "url": "https://mahindralifespaceshomes.in/compare/",
+      "name": "Mahindra Rivenza Head-to-Head Real Estate Comparisons — West Pune",
+      "description": "Exhaustive factual comparison scorecard analyzing Mahindra Rivenza against premier West Pune developments including Godrej, VTP, Kolte Patil, and Vilas Javdekar.",
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://mahindralifespaceshomes.in/" },
+          { "@type": "ListItem", "position": 2, "name": "Project Comparisons", "item": "https://mahindralifespaceshomes.in/compare/" }
+        ]
+      }
+    },
+    {
+      "@type": "ItemList",
+      "@id": "https://mahindralifespaceshomes.in/compare/#itemlist",
+      "name": "West Pune Project & Developer Comparisons",
+      "numberOfItems": comparisonData.length,
+      "itemListElement": comparisonData.map((item, idx) => ({
+        "@type": "ListItem",
+        "position": idx + 1,
+        "name": `Mahindra Rivenza vs ${item.competitorName}`,
+        "url": `https://mahindralifespaceshomes.in/compare/${item.slug}/`
+      }))
+    }
+  ]
+};
+---
+
+<Layout
+  title="Mahindra Rivenza Comparisons [Godrej, VTP, Kolte Patil] Pune"
+  description="Unbiased head-to-head project comparisons: Mahindra Rivenza vs Godrej Hillside, VTP Blue Waters, Kolte Patil Life Republic & 24K Majestic. Pricing & RERA."
+  canonical="https://mahindralifespaceshomes.in/compare/"
+  customSchema={compareIndexSchema}
+>
+  <main class="pt-32 pb-24 bg-charcoal-950 text-stone-300">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+      
+      <!-- Top Header -->
+      <div class="text-center max-w-3xl mx-auto space-y-4">
+        <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-gold-500/10 border border-gold-500/30 text-gold-400 text-xs font-semibold uppercase tracking-widest">
+          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+          <span>Factual Market Due Diligence • 25 Comparisons</span>
+        </div>
+        <h1 class="font-serif text-3xl sm:text-5xl font-bold text-stone-100">
+          Mahindra Rivenza vs Competitor Projects <br />
+          <span class="gold-gradient-text">Unbiased West Pune Real Estate Scorecards</span>
+        </h1>
+        <p class="text-xs sm:text-sm text-stone-300 max-w-2xl mx-auto leading-relaxed font-light">
+          Make an informed buying decision. Compare land parcel size, unit density, usable carpet efficiency, clubhouse amenities, price per sq.ft, and MahaRERA milestones side-by-side.
+        </p>
+      </div>
+
+      <!-- Comparisons Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {comparisonData.map((item) => (
+          <div class="bg-charcoal-900/80 border border-white/10 rounded-2xl p-6 hover:border-gold-500/50 transition-all flex flex-col justify-between group shadow-xl">
+            <div class="space-y-4">
+              <div class="flex items-center justify-between">
+                <span class="px-2.5 py-1 rounded bg-gold-500/10 text-gold-400 border border-gold-500/20 text-[11px] font-semibold uppercase tracking-wider">
+                  {item.competitorType} Comparison
+                </span>
+                <span class="text-xs text-stone-400 font-mono">
+                  {item.metrics.length} Metrics Analyzed
+                </span>
+              </div>
+
+              <div>
+                <h2 class="font-serif text-xl font-bold text-stone-100 group-hover:text-gold-300 transition-colors">
+                  vs {item.competitorName}
+                </h2>
+                <div class="text-xs text-stone-400 mt-1 line-clamp-2">{item.h1}</div>
+              </div>
+
+              <div class="bg-charcoal-950/60 p-3.5 rounded-xl border border-white/5 space-y-2 text-xs">
+                <span class="text-[10px] uppercase tracking-wider text-amber-200 font-bold block">Key Architectural Differences:</span>
+                <ul class="space-y-1 text-stone-300">
+                  {item.prosMahindra.slice(0, 2).map((pro) => (
+                    <li class="flex items-start gap-1.5 text-[11px]">
+                      <span class="text-emerald-400 flex-shrink-0">✓</span>
+                      <span class="line-clamp-2">{pro}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <p class="text-[11px] text-stone-400 line-clamp-2 italic">
+                "{item.summaryVerdict}"
+              </p>
+            </div>
+
+            <div class="pt-6 border-t border-white/5 mt-6">
+              <a
+                href={`/compare/${item.slug}/`}
+                class="block w-full text-center py-2.5 px-4 bg-white/5 hover:bg-gold-500 hover:text-charcoal-950 text-stone-200 text-xs font-bold uppercase tracking-wider rounded-xl transition-all"
+              >
+                Inspect Head-to-Head Scorecard →
+              </a>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <!-- Bottom Advisory Box -->
+      <div class="bg-gradient-to-r from-gold-600/20 via-charcoal-900 to-gold-600/20 border border-gold-500/40 rounded-2xl p-6 sm:p-8 text-center space-y-4">
+        <h2 class="font-serif text-2xl sm:text-3xl font-bold text-stone-100">
+          Want a Custom Financial &amp; Cost Sheet Comparison?
+        </h2>
+        <p class="text-xs sm:text-sm text-stone-300 max-w-2xl mx-auto leading-relaxed">
+          Our senior real estate advisors will provide an itemized comparison showing all-inclusive agreement values, GST, stamp duty, and construction quality audits.
+        </p>
+        <div class="pt-2">
+          <button
+            data-open-modal
+            data-interest="Project Comparison Consultation"
+            class="btn-shimmer px-6 py-3 rounded-full bg-gradient-to-r from-gold-300 via-gold-400 to-gold-500 text-charcoal-950 font-bold uppercase text-xs tracking-wider shadow-lg hover:shadow-gold-500/30 transition-all cursor-pointer"
+          >
+            Request Free Factual Comparison Dossier →
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </main>
+</Layout>
