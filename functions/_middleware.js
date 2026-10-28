@@ -82,33 +82,91 @@ export async function onRequest(context) {
     }
 
     try {
+      let submitUrls = [
+        'https://mahindralifespaceshomes.in/',
+        'https://mahindralifespaceshomes.in/mahindra-rivenza/',
+        'https://mahindralifespaceshomes.in/baner-annex/',
+        'https://mahindralifespaceshomes.in/pricing/',
+        'https://mahindralifespaceshomes.in/floor-plans/',
+        'https://mahindralifespaceshomes.in/master-plan/',
+        'https://mahindralifespaceshomes.in/location/',
+        'https://mahindralifespaceshomes.in/amenities/',
+        'https://mahindralifespaceshomes.in/brochure/',
+        'https://mahindralifespaceshomes.in/rera/',
+        'https://mahindralifespaceshomes.in/faq/',
+        'https://mahindralifespaceshomes.in/site-visit/',
+        'https://mahindralifespaceshomes.in/virtual-tour/',
+        'https://mahindralifespaceshomes.in/gallery/',
+        'https://mahindralifespaceshomes.in/construction-status/',
+        'https://mahindralifespaceshomes.in/contact/',
+        'https://mahindralifespaceshomes.in/brand/',
+        'https://mahindralifespaceshomes.in/west-pune/',
+        'https://mahindralifespaceshomes.in/commute/',
+        'https://mahindralifespaceshomes.in/articles/',
+        'https://mahindralifespaceshomes.in/tools/',
+        'https://mahindralifespaceshomes.in/pune-real-estate/',
+        'https://mahindralifespaceshomes.in/flats-in-pune/',
+        'https://mahindralifespaceshomes.in/new-projects-in-pune/',
+        'https://mahindralifespaceshomes.in/luxury-apartments-in-pune/',
+        'https://mahindralifespaceshomes.in/web-stories/',
+        'https://mahindralifespaceshomes.in/sitemap/',
+      ];
+
+      if (request.method === 'POST') {
+        try {
+          const body = await request.json();
+          if (Array.isArray(body.urlList) && body.urlList.length > 0) {
+            submitUrls = body.urlList;
+          } else if (Array.isArray(body.urls) && body.urls.length > 0) {
+            submitUrls = body.urls;
+          }
+        } catch (_) {}
+      }
+
       const pingPayload = {
         host: 'mahindralifespaceshomes.in',
         key: activeGlobalKey,
         keyLocation: `https://mahindralifespaceshomes.in/${activeGlobalKey}.txt`,
-        urlList: [
-          'https://mahindralifespaceshomes.in/',
-          'https://mahindralifespaceshomes.in/pricing/',
-          'https://mahindralifespaceshomes.in/floor-plans/',
-          'https://mahindralifespaceshomes.in/commute/',
-          'https://mahindralifespaceshomes.in/master-plan/',
-          'https://mahindralifespaceshomes.in/location/',
-          'https://mahindralifespaceshomes.in/amenities/',
-          'https://mahindralifespaceshomes.in/brochure/',
-          'https://mahindralifespaceshomes.in/rera/',
-          'https://mahindralifespaceshomes.in/sitemap/',
-        ],
+        urlList: submitUrls,
       };
 
-      const pingRes = await fetch('https://api.indexnow.org/indexnow', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json; charset=utf-8' },
-        body: JSON.stringify(pingPayload),
-      });
+      // Broadcast across all 3 IndexNow gateways concurrently
+      const gateways = [
+        'https://api.indexnow.org/indexnow',
+        'https://www.bing.com/indexnow',
+        'https://yandex.com/indexnow',
+      ];
 
-      return new Response(JSON.stringify({ success: true, status: pingRes.status, key: activeGlobalKey }), {
+      const results = await Promise.allSettled(
+        gateways.map(async (gw) => {
+          const res = await fetch(gw, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json; charset=utf-8' },
+            body: JSON.stringify(pingPayload),
+          });
+          return { gateway: gw, status: res.status };
+        })
+      );
+
+      // Trigger Google WebSub Hub (PubSubHubbub) asynchronously
+      fetch('https://pubsubhubbub.appspot.com/publish', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: `hub.mode=publish&hub.url=${encodeURIComponent('https://mahindralifespaceshomes.in/rss.xml')}`,
+      }).catch(() => {});
+
+      return new Response(JSON.stringify({
+        success: true,
+        key: activeGlobalKey,
+        submittedUrlsCount: submitUrls.length,
+        gateways: results.map((r) => r.status === 'fulfilled' ? r.value : { error: r.reason?.message }),
+      }), {
         status: 200,
-        headers: { 'Content-Type': 'application/json' },
+        headers: {
+          'Content-Type': 'application/json',
+          'X-IndexNow-Key': activeGlobalKey,
+          'X-IndexNow-Status': 'Dispatched',
+        },
       });
     } catch (err) {
       return new Response(JSON.stringify({ error: err.message }), {
