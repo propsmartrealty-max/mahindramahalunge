@@ -780,6 +780,64 @@ const baseSchema = {
         animation: glass-pulse 12s ease-in-out infinite;
       }
 
+      /* Enhanced Glassmorphic Shimmer & Aura Animations */
+      @keyframes glass-shimmer-sweep {
+        0% { transform: translateX(-150%) skewX(-20deg); }
+        100% { transform: translateX(250%) skewX(-20deg); }
+      }
+      .glass-shimmer {
+        position: relative;
+        overflow: hidden;
+      }
+      .glass-shimmer::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 60%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.08), rgba(212, 175, 102, 0.2), transparent);
+        animation: glass-shimmer-sweep 7s infinite cubic-bezier(0.4, 0, 0.2, 1);
+        pointer-events: none;
+      }
+
+      @keyframes glass-bob {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-7px); }
+      }
+      .glass-floating {
+        animation: glass-bob 6s ease-in-out infinite;
+      }
+
+      @keyframes glass-ring-pulse {
+        0%, 100% {
+          box-shadow: 0 0 15px rgba(212, 175, 102, 0.18), inset 0 1px 0 rgba(255, 255, 255, 0.16);
+          border-color: rgba(212, 175, 102, 0.35);
+        }
+        50% {
+          box-shadow: 0 0 32px rgba(212, 175, 102, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.32);
+          border-color: rgba(212, 175, 102, 0.7);
+        }
+      }
+      .glass-glow-ring {
+        animation: glass-ring-pulse 4.5s ease-in-out infinite;
+      }
+
+      .glass-card-interactive {
+        position: relative;
+        background: linear-gradient(135deg, rgba(22, 29, 43, 0.65) 0%, rgba(13, 17, 26, 0.85) 100%);
+        backdrop-filter: blur(28px);
+        -webkit-backdrop-filter: blur(28px);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        box-shadow: 0 16px 40px -10px rgba(0, 0, 0, 0.55), inset 0 1px 1px 0 rgba(255, 255, 255, 0.14);
+        transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+      .glass-card-interactive:hover {
+        transform: translateY(-6px) scale(1.01);
+        border-color: rgba(212, 175, 102, 0.5);
+        box-shadow: 0 24px 60px -10px rgba(0, 0, 0, 0.75), 0 0 35px rgba(212, 175, 102, 0.25), inset 0 1px 2px 0 rgba(255, 255, 255, 0.25);
+      }
+
       /* Radiant Warm Gold Gradients */
       .gold-gradient-text {
         background: linear-gradient(135deg, #ffffff 0%, #faecd7 25%, #d4af66 70%, #b88d3e 100%);
