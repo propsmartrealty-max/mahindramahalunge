@@ -126,6 +126,11 @@
   Cache-Control: public, max-age=0, s-maxage=86400, stale-while-revalidate=604800, stale-if-error=86400
   Cache-Tag: mahindra-rivenza, press-room, digital-pr, enterprise-edge
 
+/syndication/*
+  Content-Type: application/json; charset=utf-8
+  Cache-Control: public, max-age=3600, stale-while-revalidate=86400
+  Access-Control-Allow-Origin: *
+
 /web-stories/*
   Cache-Control: public, max-age=0, s-maxage=86400, stale-while-revalidate=604800, stale-if-error=86400
   Cache-Tag: mahindra-rivenza, web-stories, enterprise-edge

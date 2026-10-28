@@ -956,6 +956,29 @@ const baseSchema = {
       .delay-300 { transition-delay: 300ms; }
       .delay-400 { transition-delay: 400ms; }
     </style>
+
+    <!-- Speculation Rules API for Instant (0ms) Next-Page Navigation -->
+    <script type="speculationrules">
+      {
+        "prefetch": [
+          {
+            "source": "list",
+            "urls": [
+              "/residences/",
+              "/pricing/",
+              "/floor-plans/",
+              "/mahindra-rivenza/baner-annex/",
+              "/amenities/",
+              "/location/",
+              "/site-visit/",
+              "/brochure/",
+              "/press/"
+            ],
+            "eagerness": "moderate"
+          }
+        ]
+      }
+    </script>
   </head>
   <body class="bg-[#0c1017] text-stone-100 antialiased selection:bg-brand-red/30 selection:text-white relative">
     

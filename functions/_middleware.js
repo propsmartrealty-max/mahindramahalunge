@@ -19,7 +19,7 @@ const APPLE_BOT_REGEX = /applebot/i;
 const SEARCH_BOT_REGEX = /googlebot|google-inspectiontool|bingbot|slurp|duckduckbot|baiduspider|yandexbot|sogou|exabot|applebot|storebot-google/i;
 const SOCIAL_BOT_REGEX = /facebookexternalhit|twitterbot|linkedinbot|whatsapp|telegrambot|pinterest|slackbot|discordbot/i;
 const AI_CRAWLER_REGEX = /gptbot|chatgpt-user|claudebot|anthropic-ai|perplexitybot|applebot|google-extended|oai-searchbot/i;
-const BAD_SCRAPER_REGEX = /bytespider|petalbot|mj12bot|dotbot|zoominfobot|semrushbot|ahrefsbot|aspiegelbot|seznam|megaindex|seekport|ccbot/i;
+const BAD_SCRAPER_REGEX = /bytespider|petalbot|mj12bot|dotbot|zoominfobot|semrushbot|ahrefsbot|aspiegelbot|megaindex|seekport|ccbot/i;
 
 // Enterprise Vulnerability Scanner & Exploit Toolkit Signatures
 const VULN_SCANNER_REGEX = /nikto|sqlmap|acunetix|nuclei|masscan|zgrab|gobuster|dirbuster|wprecon|jorgee|nessus|openvas|havij|nmap/i;
