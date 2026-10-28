@@ -84,6 +84,7 @@ User-agent: GPTBot
 Allow: /
 Allow: /llms.txt
 Allow: /llms-full.txt
+Allow: /llm-knowledge-graph.json
 
 User-agent: ChatGPT-User
 Allow: /
@@ -92,6 +93,7 @@ User-agent: ClaudeBot
 Allow: /
 Allow: /llms.txt
 Allow: /llms-full.txt
+Allow: /llm-knowledge-graph.json
 
 User-agent: anthropic-ai
 Allow: /
@@ -100,6 +102,7 @@ User-agent: PerplexityBot
 Allow: /
 Allow: /llms.txt
 Allow: /llms-full.txt
+Allow: /llm-knowledge-graph.json
 
 User-agent: Google-Extended
 Allow: /
@@ -123,21 +126,25 @@ User-agent: OAI-SearchBot
 Allow: /
 Allow: /llms.txt
 Allow: /llms-full.txt
+Allow: /llm-knowledge-graph.json
 
 User-agent: ChatGPT-User
 Allow: /
 Allow: /llms.txt
 Allow: /llms-full.txt
+Allow: /llm-knowledge-graph.json
 
 User-agent: PerplexityBot
 Allow: /
 Allow: /llms.txt
 Allow: /llms-full.txt
+Allow: /llm-knowledge-graph.json
 
 User-agent: ClaudeBot
 Allow: /
 Allow: /llms.txt
 Allow: /llms-full.txt
+Allow: /llm-knowledge-graph.json
 
 User-agent: Applebot-Extended
 Allow: /
@@ -172,6 +179,7 @@ Allow: /_astro/
 Allow: /images/
 Allow: /llms.txt
 Allow: /llms-full.txt
+Allow: /llm-knowledge-graph.json
 Allow: /rss.xml
 Allow: /google-shopping.xml
 Allow: /site.webmanifest
@@ -208,5 +216,6 @@ Sitemap: https://mahindralifespaceshomes.in/google-shopping.xml
 # AI Search Engine Manifests:
 # https://mahindralifespaceshomes.in/llms.txt
 # https://mahindralifespaceshomes.in/llms-full.txt
+# https://mahindralifespaceshomes.in/llm-knowledge-graph.json
 
 

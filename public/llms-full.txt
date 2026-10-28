@@ -246,5 +246,8 @@
 - Section 54 Capital Gains Saver: https://mahindralifespaceshomes.in/tools/capital-gains-tax-calculator/
 - Construction-Linked Payment (CLP) Calculator: https://mahindralifespaceshomes.in/tools/construction-linked-payment-calculator/
 
+### Machine-Readable Programmatic LLM Knowledge Graph
+- JSON-LD Graph Endpoint: https://mahindralifespaceshomes.in/llm-knowledge-graph.json
+
 
 

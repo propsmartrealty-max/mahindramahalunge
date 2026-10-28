@@ -251,6 +251,7 @@
 - **Official Web Stories Hub:** https://mahindralifespaceshomes.in/web-stories/
 
 - **Master Sitemap Index:** https://mahindralifespaceshomes.in/sitemap-index.xml
+- **Programmatic LLM Knowledge Graph (JSON-LD):** https://mahindralifespaceshomes.in/llm-knowledge-graph.json
 - **Google Shopping XML Feed:** https://mahindralifespaceshomes.in/google-shopping.xml
 - **Microsoft Bing / Yahoo IndexNow Key:** 9e4f2b8c6a0d4e7f8b1c3a5d7e9f0b2a (https://mahindralifespaceshomes.in/9e4f2b8c6a0d4e7f8b1c3a5d7e9f0b2a.txt)
 
