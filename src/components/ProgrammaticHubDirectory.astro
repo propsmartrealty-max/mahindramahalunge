@@ -4,6 +4,7 @@ import { comparisonData } from '../data/pSeoComparisons';
 import { connectivityData } from '../data/pSeoConnectivity';
 import { westPuneLocalityData } from '../data/pSeoWestPuneLocalities';
 import { brandProjectData } from '../data/pSeoBrandProjects';
+import { rievenzaCorridorData } from '../data/pSeoMahindraRivenzaCorridor';
 ---
 
 <section class="py-20 bg-[#090c12] border-t border-gold-500/20 relative">
@@ -217,6 +218,55 @@ import { brandProjectData } from '../data/pSeoBrandProjects';
         </a>
       </div>
 
+    </div>
+
+    <!-- Dynamic Mahindra Rivenza Baner Annexe Authority Dossiers Grid -->
+    <div class="reveal p-6 sm:p-8 rounded-2xl bg-gradient-to-r from-[#0d121c] via-[#101726] to-[#0d121c] border border-gold-500/30 space-y-6 shadow-2xl">
+      <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-white/10 pb-4">
+        <div>
+          <div class="inline-flex items-center space-x-2 text-[10px] font-mono uppercase tracking-widest text-gold-400 font-bold">
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+            <span>Mahindra Rivenza Baner Annexe Knowledge Hub</span>
+          </div>
+          <h3 class="font-serif text-xl sm:text-2xl font-bold text-white mt-1">
+            45 Dedicated Programmatic Deep-Dive Guides
+          </h3>
+          <p class="text-xs text-stone-300 font-light mt-0.5">
+            Exact pricing, verified CAD floor plans, MahaRERA certificates, transit studies &amp; developer due diligence for Baner Annexe, Mahalunge.
+          </p>
+        </div>
+        <a
+          href="/mahindra-rivenza/"
+          class="px-5 py-2 rounded-full bg-gradient-to-r from-gold-400 to-gold-500 hover:from-gold-300 hover:to-gold-400 text-charcoal-950 font-bold text-xs uppercase tracking-wider transition-all shadow-lg whitespace-nowrap self-start md:self-auto"
+        >
+          Explore All Guides →
+        </a>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3 text-xs">
+        {rievenzaCorridorData.map((item) => (
+          <a
+            href={`/mahindra-rivenza/${item.slug}/`}
+            class="p-3 rounded-xl bg-white/[0.03] hover:bg-gold-500/10 border border-white/10 hover:border-gold-400/50 transition-all flex flex-col justify-between group"
+          >
+            <div>
+              <span class="text-[9px] font-mono text-gold-400 uppercase tracking-wider block font-semibold truncate">
+                {item.badge.split('•')[0] || 'Baner Annexe'}
+              </span>
+              <h4 class="font-serif text-xs font-bold text-stone-100 group-hover:text-gold-200 transition-colors mt-1 line-clamp-1">
+                {item.topic}
+              </h4>
+              <p class="text-[10px] text-stone-400 line-clamp-2 mt-1 leading-snug">
+                {item.summary}
+              </p>
+            </div>
+            <div class="pt-2 mt-2 border-t border-white/5 flex items-center justify-between text-[10px] text-gold-400/90 font-mono">
+              <span>Read Guide</span>
+              <span class="group-hover:translate-x-0.5 transition-transform">→</span>
+            </div>
+          </a>
+        ))}
+      </div>
     </div>
 
   </div>
