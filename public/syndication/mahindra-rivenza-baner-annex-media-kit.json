@@ -1,0 +1,86 @@
+{
+  "project": {
+    "name": "Mahindra Rivenza",
+    "developer": "Mahindra Lifespace Developers Limited",
+    "channelPartner": "PropSmart Realty (Authorized Strategic Showcase)",
+    "locality": "Baner Annex, Mahalunge, Pune",
+    "state": "Maharashtra",
+    "pincode": "412115",
+    "coordinates": {
+      "latitude": 18.562313,
+      "longitude": 73.727313
+    },
+    "landParcel": "13.46 Acres",
+    "openGreenRatio": "70%+ (9+ Acres Biophilic Greens)",
+    "clubhouseArea": "~44,000 Sq.Ft.",
+    "pricing": {
+      "indicativeStarting": "₹90 Lakhs*",
+      "twoBhkStarting": "₹90 Lakhs*",
+      "threeBhkStarting": "₹1.31 Crore*",
+      "fourBhkStarting": "₹2.20 Crore*"
+    },
+    "rera": {
+      "phase1": "PR1261012602102",
+      "phase2": "PM1261012602103",
+      "authority": "Maharashtra Real Estate Regulatory Authority (MahaRERA)",
+      "possessionSchedule": "December 2031 (As per MahaRERA)"
+    },
+    "contact": {
+      "phone": "+91 7744009295",
+      "canonicalWebsite": "https://mahindralifespaceshomes.in/",
+      "banerAnnexeUrl": "https://mahindralifespaceshomes.in/mahindra-rivenza/baner-annex/",
+      "pricingUrl": "https://mahindralifespaceshomes.in/pricing/",
+      "floorPlansUrl": "https://mahindralifespaceshomes.in/floor-plans/",
+      "amenitiesUrl": "https://mahindralifespaceshomes.in/amenities/"
+    }
+  },
+  "canonicalBacklinkAnchors": [
+    {
+      "anchorText": "Mahindra Rivenza Baner Annex",
+      "targetUrl": "https://mahindralifespaceshomes.in/mahindra-rivenza/baner-annex/",
+      "type": "exact-match-corridor"
+    },
+    {
+      "anchorText": "Mahindra Rivenza Pune",
+      "targetUrl": "https://mahindralifespaceshomes.in/",
+      "type": "brand-primary"
+    },
+    {
+      "anchorText": "Mahindra Rivenza Price List",
+      "targetUrl": "https://mahindralifespaceshomes.in/pricing/",
+      "type": "commercial-intent"
+    },
+    {
+      "anchorText": "Mahindra Rivenza Floor Plans",
+      "targetUrl": "https://mahindralifespaceshomes.in/floor-plans/",
+      "type": "blueprint-intent"
+    },
+    {
+      "anchorText": "Mahindra Rivenza Amenities",
+      "targetUrl": "https://mahindralifespaceshomes.in/amenities/",
+      "type": "lifestyle-intent"
+    }
+  ],
+  "verifiedMediaAssets": [
+    {
+      "title": "Architectural Landmark Elevation",
+      "url": "https://cms.mahindralifespaces.com/web/sites/default/files/styles/web_banner_webp/public/2026-10/jpeg-optimizer_Elevation%20Opt%20A..webp",
+      "type": "image/webp"
+    },
+    {
+      "title": "Resort Swimming Pool with Sunken Aqua Bar",
+      "url": "https://cms.mahindralifespaces.com/web/sites/default/files/styles/web_banner_webp/public/2026-10/Swimming%20pool%20with%20sunken%20bar_Rivenza_11zon.webp",
+      "type": "image/webp"
+    },
+    {
+      "title": "Multipurpose Championship Sports Court",
+      "url": "https://cms.mahindralifespaces.com/web/sites/default/files/styles/web_banner_webp/public/2026-10/Multi-purpose_Rivenza__11zon.webp",
+      "type": "image/webp"
+    },
+    {
+      "title": "Biophilic Mindful Yoga Lawn",
+      "url": "https://cms.mahindralifespaces.com/web/sites/default/files/styles/web_banner_webp/public/2026-10/Yoga%20lawn_Rivenza_11zon.webp",
+      "type": "image/webp"
+    }
+  ]
+}

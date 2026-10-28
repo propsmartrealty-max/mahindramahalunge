@@ -122,6 +122,10 @@
   Cache-Control: public, max-age=0, s-maxage=86400, stale-while-revalidate=604800, stale-if-error=86400
   Cache-Tag: mahindra-rivenza, nri-portals, enterprise-edge
 
+/press/*
+  Cache-Control: public, max-age=0, s-maxage=86400, stale-while-revalidate=604800, stale-if-error=86400
+  Cache-Tag: mahindra-rivenza, press-room, digital-pr, enterprise-edge
+
 /web-stories/*
   Cache-Control: public, max-age=0, s-maxage=86400, stale-while-revalidate=604800, stale-if-error=86400
   Cache-Tag: mahindra-rivenza, web-stories, enterprise-edge

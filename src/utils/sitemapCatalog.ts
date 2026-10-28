@@ -443,6 +443,14 @@ export const CORE_PAGES: SitemapEntry[] = [
     changefreq: 'weekly',
     images: [PRIMARY_IMAGES[1]],
   },
+  {
+    url: `${BASE_URL}/press/`,
+    title: 'Mahindra Rivenza Press Room, Media Assets & Digital PR Kit',
+    category: 'core',
+    priority: 0.90,
+    changefreq: 'weekly',
+    images: PRIMARY_IMAGES.slice(0, 3),
+  },
 ];
 
 // 02. RESIDENCE TYPOLOGY HUBS
