@@ -61,12 +61,12 @@ function buildAdaptiveTitle(name: string, price = 'Starts ₹90L*') {
   const brand = 'Mahindra Rivenza';
   const priceTag = `[${price}]`;
   let full = `${name} ${priceTag} ${brand} Baner Annex`;
-  if (full.length <= 66) return full;
+  if (full.length <= 64) return full;
   full = `${name} ${priceTag} ${brand} Pune`;
-  if (full.length <= 66) return full;
+  if (full.length <= 64) return full;
   full = `${name} ${priceTag} ${brand}`;
-  if (full.length <= 66) return full;
-  const maxNameLen = 66 - (priceTag.length + brand.length + 2);
+  if (full.length <= 64) return full;
+  const maxNameLen = 64 - (priceTag.length + brand.length + 2);
   return `${name.slice(0, maxNameLen).trim()} ${priceTag} ${brand}`;
 }
 

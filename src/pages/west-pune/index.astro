@@ -2,6 +2,8 @@
 import Layout from '../../layouts/Layout.astro';
 import { westPuneLocalityData } from '../../data/pSeoWestPuneLocalities';
 
+const totalLocalities = westPuneLocalityData.length;
+
 const pageSchema = {
   "@context": "https://schema.org",
   "@graph": [
@@ -19,9 +21,27 @@ const pageSchema = {
     {
       "@type": "CollectionPage",
       "@id": "https://mahindralifespaceshomes.in/west-pune/#collection",
-      "name": "West Pune Residential Market & Locality Network",
+      "name": `West Pune Real Estate Corridor & ${totalLocalities} Locality Network`,
       "url": "https://mahindralifespaceshomes.in/west-pune/",
-      "description": "Comprehensive market intelligence across 12 West Pune micro-markets: Mahalunge, Nande, Maan, Hinjewadi, Baner, Balewadi, Wakad, Tathawade, Punawale, Bavdhan, Sus, and Ravet."
+      "description": `Comprehensive market intelligence across ${totalLocalities} West Pune micro-markets: Baner, Hinjewadi, Mahalunge, Wakad, Balewadi, Sus, Pashan, Bavdhan, Tathawade, Punawale, Ravet, and surrounding corridors.`
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://mahindralifespaceshomes.in/west-pune/#breadcrumbs",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://mahindralifespaceshomes.in/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "West Pune Real Estate",
+          "item": "https://mahindralifespaceshomes.in/west-pune/"
+        }
+      ]
     }
   ]
 };
@@ -29,8 +49,8 @@ const pageSchema = {
 
 <Layout
   title="West Pune Real Estate 2026 [Property Prices & Rates Guide]"
-  description="Exhaustive guide to West Pune real estate 2026. Micro-market rates, PMRDA infrastructure & Mahindra Rivenza Baner Annex starting from ₹90 Lakhs*."
-  keywords="west pune real estate, best residential projects west pune, flats in west pune, mahindra lifespaces west pune, mahindra mahalunge, flats near hinjewadi, new projects west pune"
+  description={`Exhaustive guide to West Pune real estate 2026 across ${totalLocalities} micro-markets. Baner, Hinjewadi, Mahalunge rates & Mahindra Rivenza starting from ₹90 Lakhs*.`}
+  keywords="west pune real estate, best residential projects west pune, flats in west pune, mahindra lifespaces west pune, mahindra mahalunge, flats near hinjewadi, new projects west pune, mahindra rivenza baner"
   canonical="https://mahindralifespaceshomes.in/west-pune/"
   customSchema={pageSchema}
 >
@@ -38,9 +58,24 @@ const pageSchema = {
   <section class="pt-32 pb-20 bg-charcoal-950 border-b border-white/10 relative overflow-hidden">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
       
-      <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-gold-500/10 border border-gold-500/30 text-gold-400 text-xs font-semibold uppercase tracking-widest">
-        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-        <span>West Pune Market Authority • 12 Micro-Markets</span>
+      <!-- Badges with Mahindra Rivenza Flagship -->
+      <div class="flex flex-wrap items-center gap-3">
+        <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-gold-500/10 border border-gold-500/30 text-gold-400 text-xs font-semibold uppercase tracking-widest">
+          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+          <span>West Pune Market Authority • {totalLocalities} Micro-Markets</span>
+        </div>
+
+        <div class="glass-floating inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/5 border border-gold-500/30 backdrop-blur-md">
+          <img
+            src="/images/mahindra-rivenza-logo.png"
+            alt="Mahindra Rivenza"
+            class="h-4.5 w-auto object-contain brightness-110"
+            width="110"
+            height="18"
+            loading="eager"
+          />
+          <span class="text-[11px] text-stone-300 font-medium border-l border-white/20 pl-2">Baner Annex Flagship • Starts ₹90L*</span>
+        </div>
       </div>
 
       <h1 class="font-serif text-3xl sm:text-5xl lg:text-6xl font-bold text-stone-100 max-w-4xl leading-tight">
@@ -49,43 +84,67 @@ const pageSchema = {
       </h1>
 
       <p class="text-stone-300 text-sm sm:text-base max-w-3xl font-light leading-relaxed">
-        From the high-tech employment engine of Hinjewadi and cosmopolitan Baner-Balewadi to the planned billion-dollar growth corridor of Nande-Mahalunge, explore comparative price rates, rental yields, and upcoming institutional developments.
+        From the high-tech employment engine of Hinjewadi and cosmopolitan Baner-Balewadi to the planned billion-dollar growth corridor of Nande-Mahalunge, explore comparative price rates, rental yields, and institutional developments across {totalLocalities} distinct micro-markets.
       </p>
 
       <!-- Macro Stats Grid -->
       <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-4 max-w-3xl">
-        <div class="p-4 rounded-xl bg-white/5 border border-white/10">
+        <div class="p-4 rounded-xl bg-white/5 border border-white/10 hover:border-gold-500/30 transition-all">
           <span class="text-[10px] uppercase tracking-wider text-stone-400 block">IT Workforce</span>
           <span class="font-serif text-lg font-bold text-gold-400">400,000+</span>
         </div>
-        <div class="p-4 rounded-xl bg-white/5 border border-white/10">
+        <div class="p-4 rounded-xl bg-white/5 border border-white/10 hover:border-emerald-500/30 transition-all">
           <span class="text-[10px] uppercase tracking-wider text-stone-400 block">Rental Yields</span>
           <span class="font-serif text-lg font-bold text-emerald-400">4.2% - 5.5%</span>
         </div>
-        <div class="p-4 rounded-xl bg-white/5 border border-white/10">
-          <span class="text-[10px] uppercase tracking-wider text-stone-400 block">Mahindra Land</span>
+        <div class="p-4 rounded-xl bg-white/5 border border-white/10 hover:border-white/30 transition-all">
+          <span class="text-[10px] uppercase tracking-wider text-stone-400 block">Rivenza Land Parcel</span>
           <span class="font-serif text-lg font-bold text-white">13.46 Acres</span>
         </div>
-        <div class="p-4 rounded-xl bg-white/5 border border-white/10">
+        <div class="p-4 rounded-xl bg-white/5 border border-white/10 hover:border-amber-500/30 transition-all">
           <span class="text-[10px] uppercase tracking-wider text-stone-400 block">Transit Spine</span>
           <span class="font-serif text-lg font-bold text-amber-300">Metro Line 3</span>
         </div>
       </div>
 
+      <!-- Quick Action Buttons -->
+      <div class="flex flex-wrap items-center gap-4 pt-4">
+        <button
+          data-open-modal
+          data-interest="West Pune 2026 Micro-Market Report"
+          class="btn-shimmer px-6 py-3 rounded-full bg-gradient-to-r from-gold-300 via-gold-400 to-gold-500 text-charcoal-950 font-bold uppercase tracking-wider text-xs shadow-lg hover:shadow-gold-500/30 transition-all cursor-pointer"
+        >
+          Download West Pune 2026 Investment Report
+        </button>
+        <button
+          data-open-modal
+          data-interest="VIP Cab Tour - West Pune"
+          class="px-6 py-3 rounded-full border border-gold-500/40 hover:border-gold-400 text-gold-300 hover:text-white font-semibold uppercase tracking-wider text-xs transition-all cursor-pointer bg-white/5"
+        >
+          Book VIP Site Tour & Free Cab
+        </button>
+        <a
+          href="tel:+917744009295"
+          class="px-5 py-3 rounded-full border border-white/20 hover:border-white/40 text-stone-300 hover:text-white font-medium uppercase tracking-wider text-xs transition-all inline-flex items-center gap-2"
+        >
+          <span>Advisory: +91 7744009295</span>
+        </a>
+      </div>
+
     </div>
   </section>
 
-  <!-- 12 Localities Directory Grid -->
+  <!-- Localities Directory Grid -->
   <section class="py-20 bg-[#0c1017] border-b border-white/10">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
       
       <div class="text-center max-w-3xl mx-auto space-y-3">
-        <span class="text-xs uppercase tracking-widest text-gold-400 font-bold">12 Verified Locality Dossiers</span>
+        <span class="text-xs uppercase tracking-widest text-gold-400 font-bold">{totalLocalities} Verified Locality Dossiers</span>
         <h2 class="font-serif text-2xl sm:text-3xl lg:text-4xl text-stone-50 font-bold">
           Explore West Pune Micro-Market Profiles
         </h2>
         <p class="text-xs sm:text-sm text-stone-400 font-light">
-          Click any micro-market below to view capital rates, appreciation forecasts, Hinjewadi commute matrices, and neighborhood insights.
+          Click any micro-market below to view capital rates, appreciation forecasts, Hinjewadi commute matrices, and how each compares to Mahindra Rivenza Baner Annex.
         </p>
       </div>
 
@@ -100,7 +159,7 @@ const pageSchema = {
                 <span class="px-2 py-0.5 rounded-full bg-gold-500/10 border border-gold-500/30 text-gold-400 text-[10px] font-semibold uppercase tracking-wider">
                   {loc.category}
                 </span>
-                <span class="text-xs text-stone-500 group-hover:text-gold-400 transition-colors">→</span>
+                <span class="text-xs text-stone-500 group-hover:text-gold-400 transition-colors font-bold">Explore →</span>
               </div>
               <h3 class="font-serif text-lg text-stone-100 font-bold group-hover:text-gold-300 transition-colors">
                 {loc.name}
@@ -136,6 +195,9 @@ const pageSchema = {
         <h2 class="font-serif text-2xl sm:text-3xl text-stone-50 font-bold">
           West Pune Micro-Market Price & Yield Comparison 2026
         </h2>
+        <p class="text-xs text-stone-400 font-light">
+          Official benchmark across all {totalLocalities} micro-markets with direct comparison to Mahindra Rivenza Baner Annex (Starting ₹90L*).
+        </p>
       </div>
 
       <div class="overflow-x-auto rounded-2xl border border-white/10 glass-card">

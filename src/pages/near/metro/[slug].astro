@@ -62,12 +62,12 @@ function buildAdaptiveTitle(station: string, price = 'Starts ₹90L*') {
   const priceTag = `[${price}]`;
   const cleanName = station.replace(/ Metro Station$/i, '').replace(/ Metro$/i, '');
   let full = `${cleanName} Metro ${priceTag} ${brand} Baner Annex`;
-  if (full.length <= 66) return full;
+  if (full.length <= 64) return full;
   full = `${cleanName} Metro ${priceTag} ${brand} Pune`;
-  if (full.length <= 66) return full;
+  if (full.length <= 64) return full;
   full = `${cleanName} Metro ${priceTag} ${brand}`;
-  if (full.length <= 66) return full;
-  const maxNameLen = 66 - (priceTag.length + brand.length + 8);
+  if (full.length <= 64) return full;
+  const maxNameLen = 64 - (priceTag.length + brand.length + 8);
   return `${cleanName.slice(0, maxNameLen).trim()} Metro ${priceTag} ${brand}`;
 }
 

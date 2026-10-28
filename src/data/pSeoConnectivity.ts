@@ -179,7 +179,7 @@ export const connectivityData: ConnectivityItem[] = [
     completionTimeline: 'Under Active NHAI Acquisition 2026–2029',
     investmentScale: '₹26,000+ Crore Pune Ring Road Project',
     h1: 'Properties Near Pune Ring Road Western Alignment: Mahindra Rivenza',
-    metaTitle: 'Properties Near Pune Ring Road Western Alignment | Mahindra Rivenza',
+    metaTitle: 'Properties Near Pune Ring Road Western Route | Mahindra Rivenza',
     metaDescription: 'Discover why properties near the Pune Outer Ring Road western alignment at Mahalunge are India\'s top infrastructure investment bet. Explore Mahindra Rivenza\'s strategic advantage.',
     impactScore: '9.9 / 10 Macro Infrastructure Multiplier',
     transitBenefits: [
@@ -216,7 +216,7 @@ export const connectivityData: ConnectivityItem[] = [
     completionTimeline: 'Fully Operational — 6-Lane Premium Expressway',
     investmentScale: '₹1,630 Crore MSRDC Toll Expressway',
     h1: 'Flats Near Mumbai-Pune Expressway: Mahindra Rivenza 14-Min Access',
-    metaTitle: 'Flats Near Mumbai-Pune Expressway | Mahindra Rivenza Baner Balewadi',
+    metaTitle: 'Flats Near Mumbai-Pune Expressway | Mahindra Rivenza Baner',
     metaDescription: 'Explore luxury flats near Mumbai-Pune Expressway access at Baner-Balewadi. Mahindra Rivenza is just 8 mins to Dehu Road interchange — ideal for Mumbai weekenders & NRIs.',
     impactScore: '9.5 / 10 Weekend Gateway & NRI Investment Magnet',
     transitBenefits: [

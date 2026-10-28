@@ -31,6 +31,69 @@ const pageSchema = {
       }
     },
     {
+      "@type": "Product",
+      "@id": `https://mahindralifespaceshomes.in/west-pune/${item.slug}/#project`,
+      "name": `Mahindra Rivenza - Premium Residences near ${item.shortName}`,
+      "description": `13.46-acre landmark residential development in Baner Annex / Mahalunge, offering luxury 2, 3 & 4 BHK apartments with ~44,000 sq.ft clubhouse and 9+ acres greens near ${item.shortName}, Pune. Starting ₹90 Lakhs*.`,
+      "brand": {
+        "@type": "Brand",
+        "name": "Mahindra Lifespaces"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "bestRating": "5",
+        "worstRating": "1",
+        "ratingCount": "248",
+        "reviewCount": "248"
+      },
+      "offers": {
+        "@type": "AggregateOffer",
+        "lowPrice": "9000000",
+        "highPrice": "25500000",
+        "priceCurrency": "INR",
+        "offerCount": "1236",
+        "priceValidUntil": "2027-12-31",
+        "availability": "https://schema.org/InStock"
+      }
+    },
+    {
+      "@type": "RealEstateAgent",
+      "@id": `https://mahindralifespaceshomes.in/west-pune/${item.slug}/#agent`,
+      "name": `Mahindra Rivenza Advisory Desk for ${item.shortName}`,
+      "legalName": "PropSmart Realty",
+      "telephone": "+91 7744009295",
+      "url": "https://mahindralifespaceshomes.in/",
+      "areaServed": [
+        { "@type": "City", "name": "Pune" },
+        { "@type": "AdministrativeArea", "name": item.shortName }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": `https://mahindralifespaceshomes.in/west-pune/${item.slug}/#breadcrumbs`,
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://mahindralifespaceshomes.in/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "West Pune Real Estate",
+          "item": "https://mahindralifespaceshomes.in/west-pune/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": `${item.shortName} Real Estate`,
+          "item": `https://mahindralifespaceshomes.in/west-pune/${item.slug}/`
+        }
+      ]
+    },
+    {
       "@type": "FAQPage",
       "@id": `https://mahindralifespaceshomes.in/west-pune/${item.slug}/#faq`,
       "mainEntity": item.faqs.map((faq) => ({
@@ -44,6 +107,7 @@ const pageSchema = {
     }
   ]
 };
+
 function buildLocalityTitle(shortName: string): string {
   const c1 = `${shortName} Real Estate Pune [Starts ₹90L*] Mahindra Rivenza`;
   if (c1.length <= 64) return c1;
@@ -71,9 +135,28 @@ const adaptiveTitle = buildLocalityTitle(item.shortName);
   <section class="pt-32 pb-20 bg-charcoal-950 border-b border-white/10 relative overflow-hidden">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
       
-      <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-gold-500/10 border border-gold-500/30 text-gold-400 text-xs font-semibold uppercase tracking-widest">
-        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-        <span>{item.category} • West Pune Corridor</span>
+      <!-- Badges Row with Official Rivenza Insignia -->
+      <div class="flex flex-wrap items-center gap-3">
+        <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-gold-500/10 border border-gold-500/30 text-gold-400 text-xs font-semibold uppercase tracking-widest">
+          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+          <span>{item.category} • West Pune Corridor</span>
+        </div>
+
+        <div class="glass-floating inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/5 border border-gold-500/30 backdrop-blur-md">
+          <img
+            src="/images/mahindra-rivenza-logo.png"
+            alt="Mahindra Rivenza"
+            class="h-4.5 w-auto object-contain brightness-110"
+            width="110"
+            height="18"
+            loading="eager"
+          />
+          <span class="text-[11px] text-stone-300 font-medium border-l border-white/20 pl-2">Baner Annex • Starts ₹90L*</span>
+        </div>
+
+        <span class="px-2.5 py-1 rounded-full bg-emerald-500/10 text-emerald-400 text-[10px] font-mono font-semibold border border-emerald-500/30">
+          MahaRERA: PR1261012602102
+        </span>
       </div>
 
       <h1 class="font-serif text-3xl sm:text-5xl lg:text-6xl font-bold text-stone-100 max-w-4xl leading-tight">
@@ -86,19 +169,19 @@ const adaptiveTitle = buildLocalityTitle(item.shortName);
 
       <!-- Market Vital Badges -->
       <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-4 max-w-3xl">
-        <div class="p-3.5 rounded-xl bg-white/5 border border-white/10">
+        <div class="p-3.5 rounded-xl bg-white/5 border border-white/10 hover:border-gold-500/30 transition-all">
           <span class="text-[10px] uppercase tracking-wider text-stone-400 block">Avg Rate / Sq.Ft.</span>
           <span class="font-serif text-base font-bold text-gold-400">{item.avgPricePerSqFt}</span>
         </div>
-        <div class="p-3.5 rounded-xl bg-white/5 border border-white/10">
+        <div class="p-3.5 rounded-xl bg-white/5 border border-white/10 hover:border-emerald-500/30 transition-all">
           <span class="text-[10px] uppercase tracking-wider text-stone-400 block">5-Yr Appreciation</span>
           <span class="font-serif text-base font-bold text-emerald-400">{item.fiveYearAppreciation}</span>
         </div>
-        <div class="p-3.5 rounded-xl bg-white/5 border border-white/10">
+        <div class="p-3.5 rounded-xl bg-white/5 border border-white/10 hover:border-white/30 transition-all">
           <span class="text-[10px] uppercase tracking-wider text-stone-400 block">Rental Yield</span>
           <span class="font-serif text-base font-bold text-white">{item.rentalYield}</span>
         </div>
-        <div class="p-3.5 rounded-xl bg-white/5 border border-white/10">
+        <div class="p-3.5 rounded-xl bg-white/5 border border-white/10 hover:border-amber-500/30 transition-all">
           <span class="text-[10px] uppercase tracking-wider text-stone-400 block">Hinjewadi Commute</span>
           <span class="font-serif text-base font-bold text-amber-300">{item.distanceToHinjewadi}</span>
         </div>
@@ -111,15 +194,21 @@ const adaptiveTitle = buildLocalityTitle(item.shortName);
           data-interest={`Market Report - ${item.shortName}`}
           class="btn-shimmer px-6 py-3 rounded-full bg-gradient-to-r from-gold-300 via-gold-400 to-gold-500 text-charcoal-950 font-bold uppercase tracking-wider text-xs shadow-lg hover:shadow-gold-500/30 transition-all cursor-pointer"
         >
-          Download {item.shortName} Market Report PDF
+          Download {item.shortName} Market Report & Cost Sheet
         </button>
         <button
           data-open-modal
-          data-interest={`Mahindra Connection - ${item.shortName}`}
-          class="px-6 py-3 rounded-full border border-white/20 hover:border-gold-400 text-stone-200 hover:text-white font-semibold uppercase tracking-wider text-xs transition-all cursor-pointer"
+          data-interest={`VIP Cab Tour - from ${item.shortName}`}
+          class="px-6 py-3 rounded-full border border-gold-500/40 hover:border-gold-400 text-gold-300 hover:text-white font-semibold uppercase tracking-wider text-xs transition-all cursor-pointer bg-white/5"
         >
-          Explore Mahindra Residences
+          Book VIP Cab from {item.shortName}
         </button>
+        <a
+          href="tel:+917744009295"
+          class="px-5 py-3 rounded-full border border-white/20 hover:border-white/40 text-stone-300 hover:text-white font-medium uppercase tracking-wider text-xs transition-all inline-flex items-center gap-2"
+        >
+          <span>Direct: +91 7744009295</span>
+        </a>
       </div>
 
     </div>
@@ -164,39 +253,134 @@ const adaptiveTitle = buildLocalityTitle(item.shortName);
           <div class="p-6 rounded-2xl glass-card border border-gold-500/30 space-y-5 shadow-2xl relative overflow-hidden">
             <div class="absolute top-0 right-0 w-32 h-32 bg-gold-500/10 rounded-full blur-2xl pointer-events-none"></div>
 
-            <div class="space-y-2">
+            <div class="flex items-center justify-between">
               <span class="px-2.5 py-1 rounded-full bg-brand-red/20 text-brand-red text-[10px] font-bold uppercase tracking-wider border border-brand-red/30">
                 Institutional Developer Impact
               </span>
-              <h3 class="font-serif text-lg text-white font-bold">
-                Mahindra Lifespaces in West Pune
-              </h3>
+              <span class="text-[10px] text-emerald-400 font-mono font-semibold">Active Bookings Live</span>
             </div>
+
+            <!-- Official Rivenza Logo in Card -->
+            <div class="pt-1 flex items-center justify-between gap-4">
+              <img
+                src="/images/mahindra-rivenza-logo.png"
+                alt="Mahindra Rivenza Baner Annex"
+                class="h-7 w-auto object-contain brightness-110"
+                width="160"
+                height="26"
+                loading="lazy"
+              />
+              <span class="text-xs font-serif font-bold text-gold-400">Starts ₹90L*</span>
+            </div>
+
+            <h3 class="font-serif text-lg text-white font-bold">
+              Mahindra Rivenza: Landmark Community for {item.shortName} Buyers
+            </h3>
 
             <p class="text-stone-300 text-xs leading-relaxed font-light">
               {item.mahindraConnection}
             </p>
 
-            <div class="p-4 rounded-xl bg-black/40 border border-white/10 space-y-2 text-xs">
-              <div class="text-gold-300 font-semibold">Flagship Highlights:</div>
-              <ul class="text-[11px] text-stone-300 space-y-1">
-                <li>• 13.46 Acres acquired in Nande-Mahalunge (~₹3,500 Cr GDV)</li>
-                <li>• 80%+ Green Bio-Reserves & Miyawaki afforestation</li>
-                <li>• Happinest Tathawade Phase 4 with 1.5-Acre Skywalk</li>
-                <li>• Direct 7-min access to Hinjewadi Phase 1</li>
+            <div class="p-4 rounded-xl bg-black/40 border border-white/10 space-y-2.5 text-xs">
+              <div class="flex items-center justify-between text-gold-300 font-semibold border-b border-white/10 pb-1.5">
+                <span>Flagship Specifications</span>
+                <span class="text-[10px] text-stone-400 font-mono">2, 3 & 4 BHK Luxury</span>
+              </div>
+              <ul class="text-[11px] text-stone-300 space-y-1.5">
+                <li class="flex items-center gap-2">
+                  <span class="text-gold-400 font-bold">•</span>
+                  <span><strong>13.46-Acre Master Development</strong> in Baner Annex / Mahalunge</span>
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="text-gold-400 font-bold">•</span>
+                  <span><strong>9+ Acres Green Open Spaces</strong> with biophilic Miyawaki groves</span>
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="text-gold-400 font-bold">•</span>
+                  <span><strong>~44,000 Sq.Ft. Luxury Clubhouse</strong> with sunken bar pool & sports</span>
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="text-gold-400 font-bold">•</span>
+                  <span><strong>MahaRERA Registered:</strong> PR1261012602102 & PM1261012602103</span>
+                </li>
               </ul>
             </div>
 
-            <button
-              data-open-modal
-              data-interest={`Pre-Launch EOI - via ${item.shortName}`}
-              class="w-full py-2.5 rounded-xl bg-gold-500/20 hover:bg-gold-500 border border-gold-500/40 text-gold-300 hover:text-charcoal-950 font-bold uppercase tracking-wider text-xs transition-all cursor-pointer"
-            >
-              Request Pre-Launch EOI Details
-            </button>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1">
+              <button
+                data-open-modal
+                data-interest={`VIP Site Tour - via ${item.shortName}`}
+                class="w-full py-2.5 rounded-xl bg-gold-500/20 hover:bg-gold-500 border border-gold-500/40 text-gold-300 hover:text-charcoal-950 font-bold uppercase tracking-wider text-[11px] transition-all cursor-pointer text-center"
+              >
+                Book VIP Cab from {item.shortName}
+              </button>
+              <button
+                data-open-modal
+                data-interest={`Floor Plans & Cost - via ${item.shortName}`}
+                class="w-full py-2.5 rounded-xl bg-white/5 hover:bg-white/15 border border-white/20 text-stone-200 hover:text-white font-semibold uppercase tracking-wider text-[11px] transition-all cursor-pointer text-center"
+              >
+                Cost Sheet & CAD Plans
+              </button>
+            </div>
           </div>
         </div>
 
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Comparative Matrix: Locality vs Mahindra Rivenza -->
+  <section class="py-16 bg-[#090c12] border-b border-white/10">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+      
+      <div class="text-center max-w-3xl mx-auto space-y-3">
+        <span class="text-xs uppercase tracking-widest text-gold-400 font-bold">Comparative Advantage</span>
+        <h2 class="font-serif text-2xl sm:text-3xl text-stone-50 font-bold">
+          {item.shortName} Real Estate vs. Mahindra Rivenza Baner Annex
+        </h2>
+        <p class="text-xs sm:text-sm text-stone-400 font-light">
+          Why discerning homeowners and investors in {item.shortName} are upgrading to Mahindra Rivenza's 13.46-acre master community.
+        </p>
+      </div>
+
+      <div class="overflow-x-auto rounded-2xl border border-white/10 glass-card">
+        <table class="w-full text-xs text-left">
+          <thead class="bg-white/5 text-stone-300 font-serif uppercase tracking-wider text-[10px]">
+            <tr>
+              <th class="p-4 w-1/4">Evaluation Benchmark</th>
+              <th class="p-4 w-3/8 text-stone-400">Typical {item.shortName} Project</th>
+              <th class="p-4 w-3/8 text-gold-400 font-bold bg-gold-500/10 border-l border-gold-500/20">Mahindra Rivenza Baner Annex</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-white/5 text-stone-300 font-light">
+            <tr class="hover:bg-white/[0.02] transition-colors">
+              <td class="p-4 font-semibold text-stone-100">Pricing & Entry Ticket</td>
+              <td class="p-4 font-mono text-stone-400">{item.avgPricePerSqFt} avg</td>
+              <td class="p-4 font-mono text-gold-400 font-bold bg-gold-500/5 border-l border-gold-500/20">Starts ₹90 Lakhs* (High ROI Phase 1 Entry)</td>
+            </tr>
+            <tr class="hover:bg-white/[0.02] transition-colors">
+              <td class="p-4 font-semibold text-stone-100">Open Greens & Land Parcel</td>
+              <td class="p-4 text-stone-400">1 to 3 acres standalone plot, 20-30% open space</td>
+              <td class="p-4 text-emerald-400 font-medium bg-gold-500/5 border-l border-gold-500/20">13.46 Acres with 9+ Acres Landscaped Greens (70%+ Open)</td>
+            </tr>
+            <tr class="hover:bg-white/[0.02] transition-colors">
+              <td class="p-4 font-semibold text-stone-100">Clubhouse & Amenities</td>
+              <td class="p-4 text-stone-400">Standard 4,000 – 10,000 sq.ft clubhouse</td>
+              <td class="p-4 text-white font-medium bg-gold-500/5 border-l border-gold-500/20">~44,000 Sq.Ft. Grand Club with Sunken Bar Pool & Futsal</td>
+            </tr>
+            <tr class="hover:bg-white/[0.02] transition-colors">
+              <td class="p-4 font-semibold text-stone-100">Commute to IT & Metro</td>
+              <td class="p-4 text-stone-400">{item.distanceToHinjewadi}</td>
+              <td class="p-4 text-amber-300 font-medium bg-gold-500/5 border-l border-gold-500/20">7 mins to Hinjewadi Phase 1 via upcoming 4-lane link</td>
+            </tr>
+            <tr class="hover:bg-white/[0.02] transition-colors">
+              <td class="p-4 font-semibold text-stone-100">Developer Pedigree</td>
+              <td class="p-4 text-stone-400">Local or regional builder</td>
+              <td class="p-4 text-gold-300 font-bold bg-gold-500/5 border-l border-gold-500/20">Mahindra Lifespaces (US $20+ Billion Mahindra Group)</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
 
     </div>
@@ -254,12 +438,19 @@ const adaptiveTitle = buildLocalityTitle(item.shortName);
       </div>
 
       <!-- Bottom Nav -->
-      <div class="pt-8 text-center">
+      <div class="pt-8 text-center flex flex-wrap items-center justify-center gap-4">
         <a
           href="/west-pune/"
           class="inline-flex items-center space-x-2 text-xs text-gold-400 hover:text-gold-300 transition-colors font-semibold uppercase tracking-wider"
         >
           <span>← Back to All West Pune Micro-Markets</span>
+        </a>
+        <span class="text-stone-600">•</span>
+        <a
+          href="/pune-real-estate/"
+          class="inline-flex items-center space-x-2 text-xs text-stone-400 hover:text-gold-300 transition-colors font-semibold uppercase tracking-wider"
+        >
+          <span>Pune Real Estate Dominance Hub →</span>
         </a>
       </div>
 

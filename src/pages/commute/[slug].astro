@@ -80,15 +80,15 @@ function buildCommuteTitle(destination: string, driveTime: string): string {
     .trim();
 
   const c1 = `Mahindra Rivenza to ${cleanDest} [${driveTime}] Route`;
-  if (c1.length <= 66) return c1;
+  if (c1.length <= 64) return c1;
 
   const c2 = `Rivenza to ${cleanDest} [${driveTime}] Commute Map`;
-  if (c2.length <= 66) return c2;
+  if (c2.length <= 64) return c2;
 
   const c3 = `Rivenza to ${cleanDest} [${driveTime}] Route`;
-  if (c3.length <= 66) return c3;
+  if (c3.length <= 64) return c3;
 
-  return `Rivenza to ${cleanDest} [${driveTime}]`.slice(0, 65);
+  return `Rivenza to ${cleanDest} [${driveTime}]`.slice(0, 63);
 }
 
 const highCtrTitle = buildCommuteTitle(item.destinationName, item.postBridgeDriveTimeMins);
