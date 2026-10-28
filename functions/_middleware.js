@@ -354,15 +354,15 @@ export async function onRequest(context) {
   modifiedHeaders.set('Strict-Transport-Security', 'max-age=63072000; includeSubDomains; preload');
   modifiedHeaders.set('Origin-Agent-Cluster', '?1');
 
-  // Enterprise Content Security Policy (Allows Google Fonts, CMS media, Cloudflare insights)
+  // Enterprise Content Security Policy (Allows Google Fonts, CMS media, Cloudflare insights, Google Ads & GTM)
   const cspDirectives = [
     "default-src 'self'",
-    "script-src 'self' 'unsafe-inline' https://static.cloudflareinsights.com",
+    "script-src 'self' 'unsafe-inline' https://static.cloudflareinsights.com https://www.googletagmanager.com",
     "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
     "font-src 'self' https://fonts.gstatic.com data:",
-    "img-src 'self' data: blob: https://cms.mahindralifespaces.com https://images.unsplash.com https://*.ampproject.org",
+    "img-src 'self' data: blob: https://cms.mahindralifespaces.com https://images.unsplash.com https://*.ampproject.org https://www.googletagmanager.com https://*.google-analytics.com https://www.google.com https://www.google.co.in https://googleads.g.doubleclick.net https://www.googleadservices.com",
     "media-src 'self' https://cms.mahindralifespaces.com",
-    "connect-src 'self' https://api.indexnow.org https://cloudflareinsights.com https://wa.me https://formsubmit.co",
+    "connect-src 'self' https://api.indexnow.org https://cloudflareinsights.com https://wa.me https://formsubmit.co https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com https://*.g.doubleclick.net https://googleads.g.doubleclick.net https://www.googleadservices.com",
     "frame-ancestors 'self'",
     "base-uri 'self'",
     "form-action 'self' https:",

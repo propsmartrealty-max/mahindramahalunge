@@ -576,6 +576,16 @@ const baseSchema = {
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Google tag (gtag.js) - Google Ads: AW-17430583486 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17430583486"></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'AW-17430583486');
+    </script>
     <title>{title}</title>
     <meta name="description" content={description} />
     <meta name="keywords" content={metaKeywords} />
@@ -602,6 +612,8 @@ const baseSchema = {
     <!-- DNS Prefetch, Preconnect & LCP Image Preload Acceleration -->
     <link rel="dns-prefetch" href="https://cms.mahindralifespaces.com" />
     <link rel="preconnect" href="https://cms.mahindralifespaces.com" crossorigin />
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+    <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin />
     <link rel="preload" as="image" href={metaImage} fetchpriority="high" type="image/webp" />
 
     <!-- Google SERP Verified Favicons & Brand Marks -->
