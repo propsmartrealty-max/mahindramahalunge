@@ -13,6 +13,18 @@ http://mahindralifespaceshomes.in/* https://mahindralifespaceshomes.in/:splat 30
 /index / 301!
 /home / 301!
 /home/ / 301!
+/flats-in-baner /flats-near-baner/ 301!
+/flats-in-baner/ /flats-near-baner/ 301!
+/flats-in-hinjewadi /flats-near-hinjewadi/ 301!
+/flats-in-hinjewadi/ /flats-near-hinjewadi/ 301!
+/flats-in-wakad /flats-near-wakad/ 301!
+/flats-in-wakad/ /flats-near-wakad/ 301!
+/flats-in-balewadi /flats-near-balewadi/ 301!
+/flats-in-balewadi/ /flats-near-balewadi/ 301!
+/flats-in-tathawade /flats-near-tathawade/ 301!
+/flats-in-tathawade/ /flats-near-tathawade/ 301!
+/flats-in-pashan /flats-near-pashan/ 301!
+/flats-in-pashan/ /flats-near-pashan/ 301!
 
 # 3. Trailing Slash Normalization for High-Intent Clusters
 /mahindra-rivenza /mahindra-rivenza/ 301!
