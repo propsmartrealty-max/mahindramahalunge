@@ -38,6 +38,18 @@
   Cache-Control: public, max-age=0, s-maxage=86400, stale-while-revalidate=604800, stale-if-error=86400
   Cache-Tag: mahindra-rivenza, baner-annex, enterprise-edge
 
+/flats-near-*
+  Cache-Control: public, max-age=0, s-maxage=86400, stale-while-revalidate=604800, stale-if-error=86400
+  Cache-Tag: mahindra-rivenza, micro-markets, enterprise-edge
+
+/west-pune/*
+  Cache-Control: public, max-age=0, s-maxage=86400, stale-while-revalidate=604800, stale-if-error=86400
+  Cache-Tag: mahindra-rivenza, west-pune, enterprise-edge
+
+/pune-real-estate/*
+  Cache-Control: public, max-age=0, s-maxage=86400, stale-while-revalidate=604800, stale-if-error=86400
+  Cache-Tag: mahindra-rivenza, pune-market, enterprise-edge
+
 /floor-plans/*
   Cache-Control: public, max-age=0, s-maxage=86400, stale-while-revalidate=604800, stale-if-error=86400
   Cache-Tag: mahindra-rivenza, floorplans, enterprise-edge
