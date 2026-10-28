@@ -109,34 +109,111 @@ for (const ep of indexNowEndpoints) {
   }
 }
 
-// 3. Google WebSub Hub Notification (Instant RSS Real-Time Feed Trigger)
-console.log('\n--- 2. Notifying Google WebSub Hub (PubSubHubbub) ---');
-try {
-  const webSubResponse = await fetch('https://pubsubhubbub.appspot.com/publish', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/x-www-form-urlencoded',
-    },
-    body: `hub.mode=publish&hub.url=${encodeURIComponent(RSS_FEED_URL)}`,
-  });
+// 3. Google WebSub Hub & Sitemaps Real-Time Notification
+console.log('\n--- 2. Notifying Google WebSub Hub & Sitemap Ping ---');
+const feedsToPing = [
+  RSS_FEED_URL,
+  `${BASE_URL}/sitemap.xml`,
+  `${BASE_URL}/google-shopping.xml`
+];
 
-  if (webSubResponse.status === 204 || webSubResponse.status === 200) {
-    console.log(`[Auto-Indexer Cron] ✓ Google WebSub Hub: SUCCESS (${webSubResponse.status}) - Notified Googlebot of updated RSS syndication`);
-  } else {
-    console.log(`[Auto-Indexer Cron] ! Google WebSub Hub: HTTP ${webSubResponse.status}`);
+for (const feed of feedsToPing) {
+  try {
+    const webSubResponse = await fetch('https://pubsubhubbub.appspot.com/publish', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: `hub.mode=publish&hub.url=${encodeURIComponent(feed)}`,
+    });
+    if (webSubResponse.status === 204 || webSubResponse.status === 200) {
+      console.log(`[Auto-Indexer Cron] ✓ Google WebSub Hub: SUCCESS (${webSubResponse.status}) - Feed: ${feed}`);
+    }
+  } catch (err) {
+    console.warn(`[Auto-Indexer Cron] ! WebSub ping notice (${feed}): ${err.message}`);
   }
-} catch (webSubErr) {
-  console.warn(`[Auto-Indexer Cron] ! Google WebSub notice: ${webSubErr.message}`);
 }
 
-// 4. Optional Google Indexing API (Service Account Token Auth)
+// 4. Google Indexing API (Service Account Token Auth via Native Crypto)
 console.log('\n--- 3. Checking Google Indexing API Service Account ---');
 const serviceAccountPath = path.resolve(__dirname, '../google-indexing-key.json');
-const hasEnvKey = !!process.env.GOOGLE_SERVICE_ACCOUNT_KEY;
+let serviceAccount = null;
 
-if (fs.existsSync(serviceAccountPath) || hasEnvKey) {
-  console.log(`[Auto-Indexer Cron] Found Google Service Account Credentials. Disagreeing with API...`);
-  // If service account is present, dispatches Google Indexing API publish calls
+if (process.env.GOOGLE_SERVICE_ACCOUNT_KEY) {
+  try {
+    serviceAccount = JSON.parse(process.env.GOOGLE_SERVICE_ACCOUNT_KEY);
+  } catch (e) {
+    console.warn('[Auto-Indexer Cron] Invalid GOOGLE_SERVICE_ACCOUNT_KEY JSON string.');
+  }
+} else if (fs.existsSync(serviceAccountPath)) {
+  try {
+    serviceAccount = JSON.parse(fs.readFileSync(serviceAccountPath, 'utf8'));
+  } catch (e) {
+    console.warn('[Auto-Indexer Cron] Failed reading google-indexing-key.json');
+  }
+}
+
+if (serviceAccount && serviceAccount.private_key && serviceAccount.client_email) {
+  console.log(`[Auto-Indexer Cron] Authenticating with Google Indexing API as ${serviceAccount.client_email}...`);
+  try {
+    const crypto = await import('node:crypto');
+    const now = Math.floor(Date.now() / 1000);
+    const header = Buffer.from(JSON.stringify({ alg: 'RS256', typ: 'JWT' })).toString('base64url');
+    const claimSet = Buffer.from(JSON.stringify({
+      iss: serviceAccount.client_email,
+      scope: 'https://www.googleapis.com/auth/indexing',
+      aud: 'https://oauth2.googleapis.com/token',
+      exp: now + 3600,
+      iat: now,
+    })).toString('base64url');
+
+    const sign = crypto.createSign('RSA-SHA256');
+    sign.update(`${header}.${claimSet}`);
+    const signature = sign.sign(serviceAccount.private_key, 'base64url');
+    const jwt = `${header}.${claimSet}.${signature}`;
+
+    const tokenRes = await fetch('https://oauth2.googleapis.com/token', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: `grant_type=urn:ietf:params:oauth:grant-type:jwt-bearer&assertion=${jwt}`,
+    });
+
+    const tokenData = await tokenRes.json();
+    if (tokenData.access_token) {
+      console.log(`[Auto-Indexer Cron] ✓ Successfully obtained Google OAuth2 Token.`);
+      const priorityUrls = [
+        `${BASE_URL}/`,
+        `${BASE_URL}/mahindra-rivenza/`,
+        `${BASE_URL}/baner-annex/`,
+        `${BASE_URL}/pricing/`,
+        `${BASE_URL}/floor-plans/`,
+        `${BASE_URL}/master-plan/`,
+        `${BASE_URL}/location/`,
+        `${BASE_URL}/amenities/`,
+        `${BASE_URL}/contact/`,
+        `${BASE_URL}/brochure/`,
+        `${BASE_URL}/rera/`,
+      ];
+
+      for (const targetUrl of priorityUrls) {
+        const pubRes = await fetch('https://indexing.googleapis.com/v3/urlNotifications:publish', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            Authorization: `Bearer ${tokenData.access_token}`,
+          },
+          body: JSON.stringify({
+            url: targetUrl,
+            type: 'URL_UPDATED',
+          }),
+        });
+        const pubJson = await pubRes.json();
+        console.log(`[Auto-Indexer Cron] Google Indexing API (${pubRes.status}): ${targetUrl}`);
+      }
+    } else {
+      console.warn('[Auto-Indexer Cron] Failed to get access token:', tokenData);
+    }
+  } catch (apiErr) {
+    console.warn(`[Auto-Indexer Cron] Google Indexing API notice: ${apiErr.message}`);
+  }
 } else {
   console.log(`[Auto-Indexer Cron] Google Service Account key not present locally.`);
   console.log(`[Auto-Indexer Cron] (Googlebot continues crawling via Sitemaps, Robots.txt, and WebSub notifications.)`);
