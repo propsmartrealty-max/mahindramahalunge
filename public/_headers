@@ -34,6 +34,10 @@
   Cache-Control: public, max-age=0, s-maxage=86400, stale-while-revalidate=604800, stale-if-error=86400
   Cache-Tag: mahindra-rivenza, homepage, enterprise-edge
 
+/mahindra-rivenza/*
+  Cache-Control: public, max-age=0, s-maxage=86400, stale-while-revalidate=604800, stale-if-error=86400
+  Cache-Tag: mahindra-rivenza, corridor-pages, baner-annex, enterprise-edge
+
 /baner-annex/*
   Cache-Control: public, max-age=0, s-maxage=86400, stale-while-revalidate=604800, stale-if-error=86400
   Cache-Tag: mahindra-rivenza, baner-annex, enterprise-edge
@@ -58,9 +62,25 @@
   Cache-Control: public, max-age=0, s-maxage=86400, stale-while-revalidate=604800, stale-if-error=86400
   Cache-Tag: mahindra-rivenza, commute, enterprise-edge
 
+/amenities/*
+  Cache-Control: public, max-age=0, s-maxage=86400, stale-while-revalidate=604800, stale-if-error=86400
+  Cache-Tag: mahindra-rivenza, amenities-master, resort-lifestyle, enterprise-edge
+
 /near/*
   Cache-Control: public, max-age=0, s-maxage=86400, stale-while-revalidate=604800, stale-if-error=86400
   Cache-Tag: mahindra-rivenza, near-hubs, enterprise-edge
+
+/near/schools/*
+  Cache-Control: public, max-age=0, s-maxage=86400, stale-while-revalidate=604800, stale-if-error=86400
+  Cache-Tag: mahindra-rivenza, schools-hub, enterprise-edge
+
+/near/hospitals/*
+  Cache-Control: public, max-age=0, s-maxage=86400, stale-while-revalidate=604800, stale-if-error=86400
+  Cache-Tag: mahindra-rivenza, hospitals-hub, enterprise-edge
+
+/near/metro/*
+  Cache-Control: public, max-age=0, s-maxage=86400, stale-while-revalidate=604800, stale-if-error=86400
+  Cache-Tag: mahindra-rivenza, metro-hub, enterprise-edge
 
 /compare/*
   Cache-Control: public, max-age=0, s-maxage=86400, stale-while-revalidate=604800, stale-if-error=86400
@@ -68,7 +88,7 @@
 
 /connectivity/*
   Cache-Control: public, max-age=0, s-maxage=86400, stale-while-revalidate=604800, stale-if-error=86400
-  Cache-Tag: mahindra-rivenza, connectivity, enterprise-edge
+  Cache-Tag: mahindra-rivenza, connectivity, infrastructure, enterprise-edge
 
 /articles/*
   Cache-Control: public, max-age=0, s-maxage=86400, stale-while-revalidate=604800, stale-if-error=86400
@@ -82,17 +102,9 @@
   Cache-Control: public, max-age=0, s-maxage=86400, stale-while-revalidate=604800, stale-if-error=86400
   Cache-Tag: mahindra-rivenza, brand-projects, enterprise-edge
 
-/west-pune/*
-  Cache-Control: public, max-age=0, s-maxage=86400, stale-while-revalidate=604800, stale-if-error=86400
-  Cache-Tag: mahindra-rivenza, west-pune, enterprise-edge
-
 /tools/*
   Cache-Control: public, max-age=0, s-maxage=86400, stale-while-revalidate=604800, stale-if-error=86400
   Cache-Tag: mahindra-rivenza, tools, enterprise-edge
-
-/pune-real-estate/*
-  Cache-Control: public, max-age=0, s-maxage=86400, stale-while-revalidate=604800, stale-if-error=86400
-  Cache-Tag: mahindra-rivenza, market-guides, enterprise-edge
 
 /flats-in-pune/*
   Cache-Control: public, max-age=0, s-maxage=86400, stale-while-revalidate=604800, stale-if-error=86400
@@ -105,15 +117,6 @@
 /luxury-apartments-in-pune/*
   Cache-Control: public, max-age=0, s-maxage=86400, stale-while-revalidate=604800, stale-if-error=86400
   Cache-Tag: mahindra-rivenza, market-guides, enterprise-edge
-
-/near/schools/*
-  Cache-Control: public, max-age=0, s-maxage=86400, stale-while-revalidate=604800, stale-if-error=86400
-
-/near/hospitals/*
-  Cache-Control: public, max-age=0, s-maxage=86400, stale-while-revalidate=604800, stale-if-error=86400
-
-/near/metro/*
-  Cache-Control: public, max-age=0, s-maxage=86400, stale-while-revalidate=604800, stale-if-error=86400
 
 /nri/*
   Cache-Control: public, max-age=0, s-maxage=86400, stale-while-revalidate=604800, stale-if-error=86400
@@ -150,16 +153,6 @@
   Cache-Control: public, max-age=86400
   Access-Control-Allow-Origin: *
 
-/9e4f2b8c6a0d4e7f8b1c3a5d7e9f0b2a.txt
-  Content-Type: text/plain; charset=utf-8
-  Cache-Control: public, max-age=86400
-  Access-Control-Allow-Origin: *
-
-/indexnow-key.txt
-  Content-Type: text/plain; charset=utf-8
-  Cache-Control: public, max-age=86400
-  Access-Control-Allow-Origin: *
-
 /dns-records.zone
   Content-Type: text/plain; charset=utf-8
   Cache-Control: public, max-age=86400
@@ -173,6 +166,12 @@
 /.well-known/traffic-advice
   Content-Type: application/trafficadvice+json; charset=utf-8
   Cache-Control: public, max-age=86400
+  Access-Control-Allow-Origin: *
+
+# Master Knowledge Graph Endpoint for LLMs & AI Search Engines
+/llm-knowledge-graph.json
+  Content-Type: application/json; charset=utf-8
+  Cache-Control: public, max-age=3600, stale-while-revalidate=86400
   Access-Control-Allow-Origin: *
 
 # Master XML Sitemap Cluster (Google Search Console & Crawlers)

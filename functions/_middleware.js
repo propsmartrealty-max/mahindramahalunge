@@ -377,12 +377,15 @@ export async function onRequest(context) {
   if (pathname.startsWith('/baner-annex')) dynamicTags.push('mahindra-baner-annex', 'micro-market-hub');
   if (pathname.startsWith('/floor-plans')) dynamicTags.push('mahindra-floor-plans', 'rera-sanctioned-blueprints');
   if (pathname.startsWith('/commute')) dynamicTags.push('mahindra-commute', 'transit-matrix');
+  if (pathname.startsWith('/connectivity')) dynamicTags.push('mahindra-connectivity', 'infrastructure-corridor');
+  if (pathname.startsWith('/amenities')) dynamicTags.push('mahindra-amenities', 'resort-lifestyle');
   if (pathname.startsWith('/residences')) dynamicTags.push('mahindra-residences', 'unit-typologies');
   if (pathname.startsWith('/compare')) dynamicTags.push('mahindra-comparisons', 'competitor-intelligence');
   if (pathname.startsWith('/articles')) dynamicTags.push('mahindra-articles', 'real-estate-insights');
   if (pathname.startsWith('/near')) dynamicTags.push('mahindra-localities', 'proximity-matrix');
   if (pathname.startsWith('/tools')) dynamicTags.push('mahindra-tools', 'financial-calculators');
   if (pathname.startsWith('/nri')) dynamicTags.push('mahindra-nri', 'global-wealth-hubs');
+  if (pathname.startsWith('/flats-near')) dynamicTags.push('mahindra-micro-markets', 'locality-search');
 
   modifiedHeaders.set('Cache-Tag', dynamicTags.join(', '));
   modifiedHeaders.set(

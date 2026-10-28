@@ -15,10 +15,23 @@ http://mahindralifespaceshomes.in/* https://mahindralifespaceshomes.in/:splat 30
 /home/ / 301!
 
 # 3. Trailing Slash Normalization for High-Intent Clusters
+/mahindra-rivenza /mahindra-rivenza/ 301!
+/near /near/ 301!
+/near/schools /near/schools/ 301!
+/near/hospitals /near/hospitals/ 301!
+/near/metro /near/metro/ 301!
+/compare /compare/ 301!
+/connectivity /connectivity/ 301!
+/nri /nri/ 301!
+/brand/projects /brand/projects/ 301!
 /pune-real-estate /pune-real-estate/ 301!
 /flats-in-pune /flats-in-pune/ 301!
 /new-projects-in-pune /new-projects-in-pune/ 301!
 /luxury-apartments-in-pune /luxury-apartments-in-pune/ 301!
+/flats-near-wakad /flats-near-wakad/ 301!
+/flats-near-balewadi /flats-near-balewadi/ 301!
+/flats-near-pashan /flats-near-pashan/ 301!
+/flats-near-tathawade /flats-near-tathawade/ 301!
 /tools /tools/ 301!
 /web-stories /web-stories/ 301!
 /residences /residences/ 301!
@@ -31,6 +44,9 @@ http://mahindralifespaceshomes.in/* https://mahindralifespaceshomes.in/:splat 30
 /brochure /brochure/ 301!
 /rera /rera/ 301!
 /faq /faq/ 301!
+/site-visit /site-visit/ 301!
+/virtual-tour /virtual-tour/ 301!
+/construction-status /construction-status/ 301!
 /sitemap /sitemap/ 301!
 /articles /articles/ 301!
 /west-pune /west-pune/ 301!
