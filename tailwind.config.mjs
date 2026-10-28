@@ -17,8 +17,8 @@ export default {
           100: '#f7f5f0',
           200: '#ebe7de',
           300: '#dad4c7',
-          400: '#b8b2a5',
-          500: '#8e877a',
+          400: '#cfc9be', // Brighter, high-contrast readable silver-stone
+          500: '#a8a194', // Crisp secondary label text
         },
         champagne: {
           50: '#fdfbf7',

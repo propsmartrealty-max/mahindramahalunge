@@ -1,0 +1,226 @@
+---
+// RiverFlowingEmblem.astro - Live Animated River Flowing Brand Insignia
+// Incorporates the authentic 3-wave river emblem (Copper/Earth, Green/Foliage, Turquoise/Mula River) + Golden Sun
+interface Props {
+  size?: 'xs' | 'sm' | 'md' | 'lg' | 'hero';
+  layout?: 'horizontal' | 'vertical' | 'icon-only';
+  showSubtitle?: boolean;
+  class?: string;
+}
+
+const {
+  size = 'md',
+  layout = 'horizontal',
+  showSubtitle = true,
+  class: className = '',
+} = Astro.props;
+
+// Dimension mapping
+const dimensions = {
+  xs: { iconW: 42, iconH: 25, textMahindra: 'text-[9px]', textRivenza: 'text-[12px]', textSub: 'text-[7px]' },
+  sm: { iconW: 56, iconH: 33, textMahindra: 'text-[10px]', textRivenza: 'text-[15px]', textSub: 'text-[8px]' },
+  md: { iconW: 78, iconH: 46, textMahindra: 'text-xs', textRivenza: 'text-lg', textSub: 'text-[9px]' },
+  lg: { iconW: 110, iconH: 65, textMahindra: 'text-sm', textRivenza: 'text-2xl', textSub: 'text-[10px]' },
+  hero: { iconW: 160, iconH: 95, textMahindra: 'text-base', textRivenza: 'text-3xl sm:text-4xl', textSub: 'text-xs' },
+};
+
+const d = dimensions[size] || dimensions.md;
+---
+
+<div class={`river-emblem-container inline-flex ${layout === 'vertical' ? 'flex-col items-center text-center' : 'items-center gap-3.5'} ${className}`}>
+  <!-- Live Flowing River Wave SVG Canvas -->
+  <div class="relative flex-shrink-0 river-water-buoyancy">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 220 130"
+      width={d.iconW}
+      height={d.iconH}
+      class="river-emblem-svg overflow-visible drop-shadow-[0_4px_16px_rgba(32,199,185,0.25)]"
+      aria-label="Mahindra Rivenza Flowing River & Sun Crest"
+    >
+      <defs>
+        <!-- Luminous Solar Gradient -->
+        <linearGradient id="emblemSunGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#ffe082" />
+          <stop offset="60%" stop-color="#f5a623" />
+          <stop offset="100%" stop-color="#e65100" />
+        </linearGradient>
+
+        <!-- Copper / Earth Terracotta Gradient -->
+        <linearGradient id="emblemCopperGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stop-color="#8d4a34" />
+          <stop offset="35%" stop-color="#b6634b" />
+          <stop offset="70%" stop-color="#d48067" />
+          <stop offset="100%" stop-color="#8d4a34" />
+        </linearGradient>
+
+        <!-- Nature Canopy Green Gradient -->
+        <linearGradient id="emblemGreenGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stop-color="#4e9929" />
+          <stop offset="35%" stop-color="#6bc23d" />
+          <stop offset="70%" stop-color="#8ae057" />
+          <stop offset="100%" stop-color="#4e9929" />
+        </linearGradient>
+
+        <!-- Mula River Turquoise Water Gradient -->
+        <linearGradient id="emblemTealGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stop-color="#129288" />
+          <stop offset="35%" stop-color="#1ec1b3" />
+          <stop offset="70%" stop-color="#43f3e3" />
+          <stop offset="100%" stop-color="#129288" />
+        </linearGradient>
+
+        <!-- Fluid River Flow Filter Glow -->
+        <filter id="riverFluidGlow" x="-20%" y="-20%" width="140%" height="140%">
+          <feDropShadow dx="0" dy="1" stdDeviation="2.5" flood-color="#28d7c7" flood-opacity="0.35" />
+        </filter>
+        <filter id="sunAuraGlow" x="-30%" y="-30%" width="160%" height="160%">
+          <feDropShadow dx="0" dy="0" stdDeviation="3.5" flood-color="#f5a623" flood-opacity="0.55" />
+        </filter>
+      </defs>
+
+      <!-- Golden Sun with Breathing Radiant Aura -->
+      <g filter="url(#sunAuraGlow)" class="sun-pulse-anim">
+        <circle cx="144" cy="18" r="9.5" fill="url(#emblemSunGrad)" />
+      </g>
+
+      <!-- Top Wave: Earth / Terracotta Ridge -->
+      <path
+        d="M 30.0 36.0 C 40.2 28.0, 47.8 28.0, 58.0 36.0 C 68.2 44.0, 75.8 44.0, 86.0 36.0 C 96.2 28.0, 103.8 28.0, 114.0 36.0 C 124.2 44.0, 131.8 44.0, 142.0 36.0 C 152.2 28.0, 159.8 28.0, 170.0 36.0 C 180.2 44.0, 187.8 44.0, 198.0 36.0"
+        stroke="url(#emblemCopperGrad)"
+        stroke-width="8.5"
+        stroke-linecap="round"
+        fill="none"
+        class="river-wave wave-top"
+      />
+
+      <!-- Middle Wave: Foliage / 9+ Acres Greens -->
+      <path
+        d="M 4.0 74.0 C 14.2 66.0, 21.8 66.0, 32.0 74.0 C 42.2 82.0, 49.8 82.0, 60.0 74.0 C 70.2 66.0, 77.8 66.0, 88.0 74.0 C 98.2 82.0, 105.8 82.0, 116.0 74.0 C 126.2 66.0, 133.8 66.0, 144.0 74.0 C 154.2 82.0, 161.8 82.0, 172.0 74.0"
+        stroke="url(#emblemGreenGrad)"
+        stroke-width="8.5"
+        stroke-linecap="round"
+        fill="none"
+        class="river-wave wave-mid"
+      />
+
+      <!-- Bottom Wave: Living Mula River Flow with Turquoise Ripple -->
+      <path
+        d="M 30.0 112.0 C 40.2 104.0, 47.8 104.0, 58.0 112.0 C 68.2 120.0, 75.8 120.0, 86.0 112.0 C 96.2 104.0, 103.8 104.0, 114.0 112.0 C 124.2 120.0, 131.8 120.0, 142.0 112.0 C 152.2 104.0, 159.8 104.0, 170.0 112.0 C 180.2 120.0, 187.8 120.0, 198.0 112.0"
+        stroke="url(#emblemTealGrad)"
+        stroke-width="8.5"
+        stroke-linecap="round"
+        fill="none"
+        filter="url(#riverFluidGlow)"
+        class="river-wave wave-bot"
+      />
+    </svg>
+  </div>
+
+  {layout !== 'icon-only' && (
+    <!-- Brand Typography: High-Contrast Mahindra Red + Luminous White Rivenza -->
+    <div class={`flex flex-col ${layout === 'vertical' ? 'items-center mt-2' : 'justify-center'} leading-tight`}>
+      <div class="flex items-baseline gap-1.5 flex-wrap">
+        <span class={`font-sans font-bold tracking-tight text-[#ff2a4b] lowercase ${d.textMahindra}`}>
+          mahindra
+        </span>
+        <span class={`font-serif font-bold tracking-wide text-white ${d.textRivenza} drop-shadow-[0_2px_10px_rgba(255,255,255,0.2)]`}>
+          Rivenza
+        </span>
+      </div>
+      
+      {showSubtitle && (
+        <span class={`font-sans tracking-[0.22em] uppercase text-gold-400 font-semibold italic opacity-95 ${d.textSub} mt-0.5`}>
+          Home of Positive Energy • Baner Annex
+        </span>
+      )}
+    </div>
+  )}
+</div>
+
+<style>
+  /* River Water Buoyancy Physics Animation */
+  .river-water-buoyancy {
+    animation: riverFloat 4.5s ease-in-out infinite;
+    transform-origin: center;
+  }
+
+  @keyframes riverFloat {
+    0%, 100% {
+      transform: translateY(0px) rotate(0deg);
+    }
+    30% {
+      transform: translateY(-2px) rotate(0.4deg);
+    }
+    70% {
+      transform: translateY(1.5px) rotate(-0.3deg);
+    }
+  }
+
+  /* Sun Breathing Pulse */
+  .sun-pulse-anim {
+    animation: sunBreath 3.2s ease-in-out infinite;
+    transform-origin: 144px 18px;
+  }
+
+  @keyframes sunBreath {
+    0%, 100% {
+      transform: scale(1);
+      opacity: 0.95;
+    }
+    50% {
+      transform: scale(1.1);
+      opacity: 1;
+    }
+  }
+
+  /* Fluid River Wave Currents */
+  .river-wave {
+    stroke-dasharray: 220;
+    stroke-dashoffset: 0;
+  }
+
+  .wave-top {
+    animation: waveFlowTop 5s linear infinite;
+  }
+
+  .wave-mid {
+    animation: waveFlowMid 4.2s linear infinite;
+  }
+
+  .wave-bot {
+    animation: waveFlowBot 3.4s linear infinite;
+  }
+
+  @keyframes waveFlowTop {
+    0% {
+      stroke-dashoffset: 0;
+    }
+    100% {
+      stroke-dashoffset: -112;
+    }
+  }
+
+  @keyframes waveFlowMid {
+    0% {
+      stroke-dashoffset: 0;
+    }
+    100% {
+      stroke-dashoffset: 112;
+    }
+  }
+
+  @keyframes waveFlowBot {
+    0% {
+      stroke-dashoffset: 0;
+      opacity: 0.9;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      stroke-dashoffset: -112;
+      opacity: 0.9;
+    }
+  }
+</style>

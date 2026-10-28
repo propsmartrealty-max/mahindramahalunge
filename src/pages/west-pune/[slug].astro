@@ -1,6 +1,7 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import { westPuneLocalityData, type WestPuneLocalityItem } from '../../data/pSeoWestPuneLocalities';
+import RiverFlowingEmblem from '../../components/RiverFlowingEmblem.astro';
 
 export async function getStaticPaths() {
   return westPuneLocalityData.map((item) => ({
@@ -142,15 +143,8 @@ const adaptiveTitle = buildLocalityTitle(item.shortName);
           <span>{item.category} • West Pune Corridor</span>
         </div>
 
-        <div class="glass-floating inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/5 border border-gold-500/30 backdrop-blur-md">
-          <img
-            src="/images/mahindra-rivenza-logo.png"
-            alt="Mahindra Rivenza"
-            class="h-4.5 w-auto object-contain brightness-110"
-            width="110"
-            height="18"
-            loading="eager"
-          />
+        <div class="glass-floating inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/5 border border-gold-500/30 backdrop-blur-md">
+          <RiverFlowingEmblem size="xs" layout="horizontal" showSubtitle={false} />
           <span class="text-[11px] text-stone-300 font-medium border-l border-white/20 pl-2">Baner Annex • Starts ₹90L*</span>
         </div>
 
@@ -260,17 +254,10 @@ const adaptiveTitle = buildLocalityTitle(item.shortName);
               <span class="text-[10px] text-emerald-400 font-mono font-semibold">Active Bookings Live</span>
             </div>
 
-            <!-- Official Rivenza Logo in Card -->
-            <div class="pt-1 flex items-center justify-between gap-4">
-              <img
-                src="/images/mahindra-rivenza-logo.png"
-                alt="Mahindra Rivenza Baner Annex"
-                class="h-7 w-auto object-contain brightness-110"
-                width="160"
-                height="26"
-                loading="lazy"
-              />
-              <span class="text-xs font-serif font-bold text-gold-400">Starts ₹90L*</span>
+            <!-- Official Rivenza Logo & Live River Waves in Card -->
+            <div class="pt-1 flex items-center justify-between gap-4 border-b border-white/10 pb-3">
+              <RiverFlowingEmblem size="sm" layout="horizontal" showSubtitle={true} />
+              <span class="text-xs font-serif font-bold text-gold-400 bg-gold-500/10 px-2.5 py-1 rounded-full border border-gold-500/30 whitespace-nowrap">Starts ₹90L*</span>
             </div>
 
             <h3 class="font-serif text-lg text-white font-bold">

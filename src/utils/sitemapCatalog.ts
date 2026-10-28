@@ -31,6 +31,7 @@ import { floorPlansData } from '../data/pSeoFloorPlans';
 import { commuteMatrixData } from '../data/pSeoCommuteMatrix';
 import { techParkData } from '../data/pSeoTechParks';
 import { connectivityData } from '../data/pSeoConnectivity';
+import { rievenzaCorridorData } from '../data/pSeoMahindraRivenzaCorridor';
 
 
 // Shared Project Images for Google Image Sitemap Indexation
@@ -611,6 +612,16 @@ export const BRAND_PROJECTS_PAGES: SitemapEntry[] = BRAND_PROJECTS_SLUGS.map((it
   changefreq: 'weekly',
 }));
 
+// 07b. MAHINDRA RIVENZA EXPANSION CORRIDOR DOSSIERS (/mahindra-rivenza/*)
+export const RIVENZA_CORRIDOR_PAGES: SitemapEntry[] = rievenzaCorridorData.map((item) => ({
+  url: `${BASE_URL}/mahindra-rivenza/${item.slug}/`,
+  title: item.metaTitle,
+  category: 'core',
+  priority: 0.88,
+  changefreq: 'daily',
+  images: [PRIMARY_IMAGES[0]],
+}));
+
 // 08. EDITORIAL ARTICLES & MARKET GUIDES (/articles/*)
 export const ARTICLES_SLUGS = [
   { slug: 'why-mahalunge-nande-maan-is-punes-next-billion-dollar-growth-corridor', name: 'Why Mahalunge-Nande-Maan is Pune’s Next Billion-Dollar Corridor' },
@@ -776,6 +787,7 @@ export const ALL_SITEMAP_ENTRIES: SitemapEntry[] = [
   ...CONNECTIVITY_PAGES,
   ...COMPARISONS_PAGES,
   ...BRAND_PROJECTS_PAGES,
+  ...RIVENZA_CORRIDOR_PAGES,
   ...ARTICLES_PAGES,
   ...FLOOR_PLANS_PAGES,
   ...COMMUTE_PAGES,

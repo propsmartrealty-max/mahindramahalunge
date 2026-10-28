@@ -1,6 +1,7 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import { westPuneLocalityData } from '../../data/pSeoWestPuneLocalities';
+import RiverFlowingEmblem from '../../components/RiverFlowingEmblem.astro';
 
 const totalLocalities = westPuneLocalityData.length;
 
@@ -65,15 +66,8 @@ const pageSchema = {
           <span>West Pune Market Authority • {totalLocalities} Micro-Markets</span>
         </div>
 
-        <div class="glass-floating inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/5 border border-gold-500/30 backdrop-blur-md">
-          <img
-            src="/images/mahindra-rivenza-logo.png"
-            alt="Mahindra Rivenza"
-            class="h-4.5 w-auto object-contain brightness-110"
-            width="110"
-            height="18"
-            loading="eager"
-          />
+        <div class="glass-floating inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/5 border border-gold-500/30 backdrop-blur-md">
+          <RiverFlowingEmblem size="xs" layout="horizontal" showSubtitle={false} />
           <span class="text-[11px] text-stone-300 font-medium border-l border-white/20 pl-2">Baner Annex Flagship • Starts ₹90L*</span>
         </div>
       </div>

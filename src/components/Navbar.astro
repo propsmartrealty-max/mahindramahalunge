@@ -1,5 +1,6 @@
 ---
 // Navbar.astro - Pixel-Perfect Aligned, Minimalist Luxury Navigation
+import RiverFlowingEmblem from './RiverFlowingEmblem.astro';
 ---
 
 <header id="site-header" class="fixed top-3 sm:top-5 left-0 right-0 z-50 flex justify-center px-3 sm:px-6 transition-all duration-300">
@@ -15,13 +16,7 @@
         height="14"
       />
       <div class="h-4 w-px bg-white/20 hidden sm:block"></div>
-      <img 
-        src="/images/mahindra-rivenza-logo.png" 
-        alt="Mahindra Rivenza" 
-        class="h-4 sm:h-5 w-auto max-w-[95px] sm:max-w-[125px] object-contain transition-transform group-hover:scale-105 block filter brightness-110 drop-shadow-[0_2px_8px_rgba(212,175,102,0.25)]"
-        width="125"
-        height="20"
-      />
+      <RiverFlowingEmblem size="xs" layout="horizontal" showSubtitle={false} />
     </a>
 
     <!-- Center: Refined Minimal Desktop Nav Links -->

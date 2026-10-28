@@ -1,8 +1,8 @@
 import type { APIRoute } from 'astro';
-import { BRAND_PROJECTS_PAGES, generateUrlset } from '../utils/sitemapCatalog';
+import { BRAND_PROJECTS_PAGES, RIVENZA_CORRIDOR_PAGES, generateUrlset } from '../utils/sitemapCatalog';
 
 export const GET: APIRoute = async () => {
-  const xml = generateUrlset(BRAND_PROJECTS_PAGES);
+  const xml = generateUrlset([...BRAND_PROJECTS_PAGES, ...RIVENZA_CORRIDOR_PAGES]);
 
   return new Response(xml.trim(), {
     headers: {

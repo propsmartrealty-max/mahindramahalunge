@@ -1,6 +1,7 @@
 ---
 // Footer.astro - RERA Compliance, Brand Credentials & Strategic Keyword Silo
 import { mahindraPuneProjects, corporateProfile } from '../data/mahindraPuneEcosystem';
+import RiverFlowingEmblem from './RiverFlowingEmblem.astro';
 ---
 
 <footer class="bg-[#0c1017] border-t border-white/10 pt-16 pb-28 sm:pb-20 text-stone-300 text-xs relative overflow-hidden">
@@ -24,13 +25,7 @@ import { mahindraPuneProjects, corporateProfile } from '../data/mahindraPuneEcos
               height="16"
             />
             <div class="h-4 w-px bg-white/20"></div>
-            <img 
-              src="/images/mahindra-rivenza-logo.png" 
-              alt="Mahindra Rivenza Logo" 
-              class="h-4 sm:h-5 w-auto object-contain filter brightness-110 drop-shadow"
-              width="120"
-              height="20"
-            />
+            <RiverFlowingEmblem size="xs" layout="horizontal" showSubtitle={false} />
           </div>
           <div class="flex items-center space-x-2">
             <span class="h-1.5 w-1.5 rounded-full bg-brand-red animate-pulse"></span>
