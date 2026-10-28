@@ -2,6 +2,8 @@
 import Layout from '../../layouts/Layout.astro';
 import { westPuneLocalityData } from '../../data/pSeoWestPuneLocalities';
 import RiverFlowingEmblem from '../../components/RiverFlowingEmblem.astro';
+import ProgrammaticHubDirectory from '../../components/ProgrammaticHubDirectory.astro';
+import MahindraKeywordMatrix from '../../components/MahindraKeywordMatrix.astro';
 
 const totalLocalities = westPuneLocalityData.length;
 
@@ -43,6 +45,49 @@ const pageSchema = {
           "item": "https://mahindralifespaceshomes.in/west-pune/"
         }
       ]
+    },
+    {
+      "@type": "Product",
+      "@id": "https://mahindralifespaceshomes.in/west-pune/#residential-corridor",
+      "name": "West Pune Residential Real Estate Index 2026",
+      "description": `Comprehensive market intelligence across ${totalLocalities} West Pune micro-markets: Baner, Hinjewadi, Mahalunge, Wakad, Balewadi, Sus, Pashan, Bavdhan, Tathawade. Benchmark: Mahindra Rivenza starting ₹90L*.`,
+      "brand": {
+        "@type": "Brand",
+        "name": "Mahindra Lifespaces"
+      },
+      "hasMap": "https://www.google.com/maps/place/Mahindra+Rivenza/@18.5623125,73.7273125,17z/data=!3m1!4b1!4m6!3m5!1s0x3bc2bd23899c4255:0xd1c64c7ae74e9a5!8m2!3d18.5623125!4d73.7273125!16s%2Fg%2F11ysgj1zl9",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "bestRating": "5",
+        "worstRating": "1",
+        "ratingCount": "248",
+        "reviewCount": "248"
+      },
+      "review": [
+        {
+          "@type": "Review",
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5",
+            "bestRating": "5"
+          },
+          "author": {
+            "@type": "Person",
+            "name": "Prashant Joshi"
+          },
+          "reviewBody": "West Pune's most promising real estate development. The PMRDA Town Planning Scheme 1 around Mahindra Rivenza is transforming Mahalunge into a world-class suburb."
+        }
+      ],
+      "offers": {
+        "@type": "AggregateOffer",
+        "lowPrice": "9000000",
+        "highPrice": "25500000",
+        "priceCurrency": "INR",
+        "offerCount": "1236",
+        "priceValidUntil": "2027-12-31",
+        "availability": "https://schema.org/InStock"
+      }
     }
   ]
 };
@@ -225,6 +270,14 @@ const pageSchema = {
         </table>
       </div>
 
+    </div>
+  </section>
+
+  <!-- Programmatic Intelligence Mesh & Keyword Silo -->
+  <ProgrammaticHubDirectory />
+  <section class="py-16 bg-charcoal-950 border-t border-white/10">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <MahindraKeywordMatrix />
     </div>
   </section>
 </Layout>

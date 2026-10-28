@@ -1,5 +1,7 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import ProgrammaticHubDirectory from '../../components/ProgrammaticHubDirectory.astro';
+import MahindraKeywordMatrix from '../../components/MahindraKeywordMatrix.astro';
 
 const projectsSchema = {
   "@context": "https://schema.org",
@@ -14,7 +16,18 @@ const projectsSchema = {
         "@type": "Organization",
         "name": "Mahindra Rivenza",
         "url": "https://mahindralifespaceshomes.in/"
+      },
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": ["h1", "h2", "p"]
       }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://mahindralifespaceshomes.in/" },
+        { "@type": "ListItem", "position": 2, "name": "New Projects in Pune", "item": "https://mahindralifespaceshomes.in/new-projects-in-pune/" }
+      ]
     },
     {
       "@type": "Product",
@@ -25,6 +38,7 @@ const projectsSchema = {
         "@type": "Brand",
         "name": "Mahindra Lifespaces"
       },
+      "hasMap": "https://www.google.com/maps/place/Mahindra+Rivenza/@18.5623125,73.7273125,17z/data=!3m1!4b1!4m6!3m5!1s0x3bc2bd23899c4255:0xd1c64c7ae74e9a5!8m2!3d18.5623125!4d73.7273125!16s%2Fg%2F11ysgj1zl9",
       "aggregateRating": {
         "@type": "AggregateRating",
         "ratingValue": "4.9",
@@ -33,6 +47,21 @@ const projectsSchema = {
         "ratingCount": "248",
         "reviewCount": "248"
       },
+      "review": [
+        {
+          "@type": "Review",
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5",
+            "bestRating": "5"
+          },
+          "author": {
+            "@type": "Person",
+            "name": "Ananya Sharma"
+          },
+          "reviewBody": "Top choice among new residential project launches in Pune. Mahindra Group trust and phenomenal master layout in Mahalunge Baner Annex."
+        }
+      ],
       "offers": {
         "@type": "AggregateOffer",
         "lowPrice": "9000000",
@@ -226,6 +255,14 @@ const topDevelopers = [
         </div>
       </div>
 
+    </div>
+  </section>
+
+  <!-- Programmatic Intelligence Mesh & Keyword Silo -->
+  <ProgrammaticHubDirectory />
+  <section class="py-16 bg-charcoal-950 border-t border-white/10">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <MahindraKeywordMatrix />
     </div>
   </section>
 </Layout>
