@@ -83,7 +83,7 @@ export const PRIMARY_IMAGES: SitemapImage[] = [
 export const CORE_PAGES: SitemapEntry[] = [
   {
     url: `${BASE_URL}/`,
-    title: 'Mahindra Rivenza Mahalunge | Official Launch Homepage',
+    title: 'Mahindra Rivenza Mahalunge Pune | Luxury 2, 3 & 4 BHK',
     category: 'core',
     priority: 1.0,
     changefreq: 'daily',
@@ -139,7 +139,7 @@ export const CORE_PAGES: SitemapEntry[] = [
   },
   {
     url: `${BASE_URL}/brochure/`,
-    title: 'Official Launch Brochure PDF, Floor Plan Kit & Payment Schedule',
+    title: 'Project Brochure PDF, Floor Plan Kit & Payment Schedule',
     category: 'core',
     priority: 0.92,
     changefreq: 'daily',
@@ -147,7 +147,7 @@ export const CORE_PAGES: SitemapEntry[] = [
   },
   {
     url: `${BASE_URL}/rera/`,
-    title: 'Official MahaRERA Compliance: PR1261012602102 & PM1261012602103',
+    title: 'MahaRERA Compliance: PR1261012602102 & PM1261012602103',
     category: 'core',
     priority: 0.88,
     changefreq: 'monthly',
@@ -312,7 +312,7 @@ export const CORE_PAGES: SitemapEntry[] = [
   },
   {
     url: `${BASE_URL}/contact/`,
-    title: 'Mahindra Rivenza Official Contact Desk, Phone & Site Office',
+    title: 'Mahindra Rivenza Advisory Desk, Phone & Site Office',
     category: 'core',
     priority: 0.92,
     changefreq: 'weekly',
@@ -328,7 +328,7 @@ export const CORE_PAGES: SitemapEntry[] = [
   },
   {
     url: `${BASE_URL}/gallery/`,
-    title: 'Official Photo Gallery & 3D Architectural Renders | Mahindra Rivenza',
+    title: 'Photo Gallery & 3D Architectural Renders | Mahindra Rivenza',
     category: 'core',
     priority: 0.92,
     changefreq: 'weekly',

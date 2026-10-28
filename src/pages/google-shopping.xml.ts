@@ -108,7 +108,7 @@ export const GET: APIRoute = async () => {
   <channel>
     <title>Mahindra Rivenza - Baner Annex Mahalunge Luxury Residences Inventory</title>
     <link>https://mahindralifespaceshomes.in/</link>
-    <description>Official residential inventory, floor plans, and pricing catalog for Mahindra Rivenza by Mahindra Lifespace Developers Limited in Baner Annex, Mahalunge, Pune.</description>
+    <description>Verified residential inventory, floor plans, and pricing catalog for Mahindra Rivenza by Mahindra Lifespace Developers Limited in Baner Annex, Mahalunge, Pune.</description>
     ${products
       .map(
         (p) => `

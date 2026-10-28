@@ -3,7 +3,6 @@ import Navbar from '../components/Navbar.astro';
 import Footer from '../components/Footer.astro';
 import LeadModal from '../components/LeadModal.astro';
 import StickyBar from '../components/StickyBar.astro';
-import { allMahindraKeywordPermutations } from '../data/mahindraKeywordsEcosystem';
 import { westPuneLocalityData } from '../data/pSeoWestPuneLocalities';
 
 interface Props {
@@ -17,8 +16,8 @@ interface Props {
 }
 
 const {
-  title = "Mahindra Rivenza | Official Site | 2, 3 & 4 BHK Flats Pune",
-  description = "Official overview of Mahindra Rivenza by Mahindra Lifespaces at Baner Annex / Mahalunge, Pune. Explore the 13.46-acre master development with luxury 2, 3 & 4 BHK residences, ~44,000 sq.ft clubhouse, 9+ acres greens, starting ₹90 Lakhs*. MahaRERA PR1261012602102.",
+  title = "Mahindra Rivenza Pune [Starts ₹90L*] 2, 3 & 4 BHK Flats",
+  description = "Mahindra Rivenza by Mahindra Lifespaces at Baner Annex, Mahalunge, Pune. 13.46-acre master development with luxury 2, 3 & 4 BHK residences starting ₹90 Lakhs*. MahaRERA PR1261012602102.",
   keywords,
   canonical,
   image,
@@ -29,7 +28,7 @@ const {
 const defaultImage = "https://cms.mahindralifespaces.com/web/sites/default/files/styles/web_banner_webp/public/2026-10/jpeg-optimizer_Elevation%20Opt%20A..webp";
 const metaImage = image || defaultImage;
 
-const defaultKeywords = allMahindraKeywordPermutations.slice(0, 35).join(", ");
+const defaultKeywords = "Mahindra Rivenza, Mahindra Rivenza Pune, Mahindra Rivenza Mahalunge, Mahindra Rivenza Baner Annex, 2 BHK Mahindra Rivenza, 3 BHK Mahindra Rivenza, 4 BHK Mahindra Rivenza, flats in Mahalunge Pune";
 const metaKeywords = keywords || defaultKeywords;
 
 // Ensure strictly normalized canonical URLs with trailing slashes matching Google Search Console sitemap standards
@@ -174,7 +173,7 @@ const baseSchema = {
         },
         {
           "@type": "WebPage",
-          "name": "Official Sales Desk & Site Office Contact",
+          "name": "Partner Advisory Desk & Site Office Contact",
           "url": "https://mahindralifespaceshomes.in/contact/",
           "description": "Direct phone +91 7744009295, Plus Code HP6G+WWF, and driving directions from Baner & Hinjewadi."
         }
@@ -182,14 +181,13 @@ const baseSchema = {
     },
     {
       "@type": "Organization",
-      "@id": "https://mahindralifespaceshomes.in/#organization",
+      "@id": "https://www.mahindralifespaces.com/#organization",
       "name": "Mahindra Lifespace Developers Limited",
       "legalName": "Mahindra Lifespace Developers Limited",
       "alternateName": [
         "Mahindra Lifespaces",
         "Mahindra Lifespaces Developers Ltd.",
-        "MLDL",
-        "Mahindra Homes"
+        "MLDL"
       ],
       "url": "https://www.mahindralifespaces.com/",
       "logo": "https://mahindralifespaceshomes.in/images/mahindra-lifespaces-logo.svg",
@@ -211,16 +209,7 @@ const baseSchema = {
           "https://en.wikipedia.org/wiki/Mahindra_Group",
           "https://www.wikidata.org/wiki/Q1143899"
         ]
-      },
-      "contactPoint": [
-        {
-          "@type": "ContactPoint",
-          "telephone": "+91-7744009295",
-          "contactType": "sales",
-          "areaServed": ["IN", "AE", "US", "GB", "SG", "QA", "SA", "KW", "AU", "DE"],
-          "availableLanguage": ["English", "Hindi", "Marathi"]
-        }
-      ]
+      }
     },
     {
       "@type": "ApartmentComplex",
@@ -254,7 +243,7 @@ const baseSchema = {
       "paymentAccepted": "Bank Transfer, Cheque, Home Loan, NRE/NRO Remittance",
       "hasMap": "https://maps.google.com/?q=18.562536,73.727373",
       "map": "https://www.google.com/maps/place/18%C2%B033'45.1%22N+73%C2%B043'38.5%22E/@18.562536,73.727373,17z",
-      "keywords": allMahindraKeywordPermutations.slice(0, 50).join(", "),
+      "keywords": "Mahindra Rivenza, Mahindra Rivenza Pune, Mahindra Rivenza Mahalunge, Mahindra Rivenza Baner Annex, 2 BHK Mahindra Rivenza, 3 BHK Mahindra Rivenza, 4 BHK Mahindra Rivenza, flats in Mahalunge Pune",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "HP6G+WWF Baner Annex, off Baner-Hinjawadi Road, Pune, Nande",
@@ -475,14 +464,15 @@ const baseSchema = {
     },
     {
       "@type": "RealEstateAgent",
-      "@id": "https://mahindralifespaceshomes.in/#advisory-desk",
-      "name": "Mahindra Rivenza Official Advisory Desk & Sales Concierge",
+      "@id": "https://mahindralifespaceshomes.in/#agent",
+      "name": "Mahindra Rivenza Partner Advisory Desk",
+      "legalName": "PropSmart Realty",
       "alternateName": [
-        "Mahindra Rivenza Sales Office",
-        "Mahindra Rivenza Experience Center",
-        "Mahindra Lifespaces Pune Sales Desk",
-        "Mahindra Rivenza Mahalunge Office"
+        "PropSmart Realty",
+        "Mahindra Rivenza Advisory Desk",
+        "Mahindra Rivenza Experience Center"
       ],
+      "description": "Authorized Strategic Channel Partner for Mahindra Rivenza by Mahindra Lifespaces in Baner Annex, Mahalunge, Pune. Facilitating direct consultations, floor plans, cost sheets, and site tours.",
       "telephone": "+91-7744009295",
       "url": "https://mahindralifespaceshomes.in/",
       "image": "https://cms.mahindralifespaces.com/web/sites/default/files/styles/web_banner_webp/public/2026-10/jpeg-optimizer_Elevation%20Opt%20A..webp",
