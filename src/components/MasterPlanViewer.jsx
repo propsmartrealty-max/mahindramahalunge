@@ -154,16 +154,16 @@ export default function MasterPlanViewer() {
             {activeZone.category} • {activeZone.tag}
           </div>
           
-          <h4 className="font-serif text-2xl text-stone-100 font-bold">
+          <h3 className="font-serif text-2xl text-stone-100 font-bold">
             {activeZone.name}
-          </h4>
+          </h3>
 
           <p className="text-xs text-stone-400 leading-relaxed">
             {activeZone.description}
           </p>
 
           <div className="pt-2">
-            <h5 className="text-xs uppercase tracking-widest text-stone-300 font-semibold mb-3">Zone Highlights</h5>
+            <h4 className="text-xs uppercase tracking-widest text-stone-300 font-semibold mb-3">Zone Highlights</h4>
             <div className="space-y-2">
               {activeZone.highlights.map((h, i) => (
                 <div key={i} className="flex items-center space-x-2 text-xs text-stone-300">

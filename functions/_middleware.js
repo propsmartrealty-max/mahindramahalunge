@@ -342,7 +342,6 @@ export async function onRequest(context) {
     `<${canonicalUrl}>; rel="canonical", ` +
     `<https://pubsubhubbub.appspot.com/>; rel="hub", ` +
     `<https://mahindralifespaceshomes.in/rss.xml>; rel="self", ` +
-    `<https://fonts.googleapis.com>; rel=preconnect, ` +
     `<https://fonts.gstatic.com>; rel=preconnect; crossorigin`
   );
 

@@ -630,12 +630,15 @@ const baseSchema = {
     <meta name="geo.position" content="18.5775;73.7438" />
     <meta name="ICBM" content="18.5775, 73.7438" />
 
-    <!-- DNS Prefetch, Preconnect & LCP Image Preload Acceleration -->
-    <link rel="dns-prefetch" href="https://cms.mahindralifespaces.com" />
-    <link rel="preconnect" href="https://cms.mahindralifespaces.com" crossorigin />
+    <!-- DNS Prefetch, Conserved Preconnect (Max 2 Origins) & Responsive LCP Preload -->
     <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
-    <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin />
-    <link rel="preload" as="image" href={metaImage} fetchpriority="high" type="image/webp" />
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://cms.mahindralifespaces.com" crossorigin />
+    
+    <!-- Responsive LCP Image Preload: Saves 390 KiB Mobile Bandwidth -->
+    <link rel="preload" as="image" href="https://cms.mahindralifespaces.com/web/sites/default/files/styles/web_card_webp/public/2026-10/jpeg-optimizer_Elevation%20Opt%20A..webp" media="(max-width: 767px)" fetchpriority="high" type="image/webp" />
+    <link rel="preload" as="image" href={metaImage} media="(min-width: 768px)" fetchpriority="high" type="image/webp" />
 
     <!-- Google SERP Verified Favicons & Brand Marks -->
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -675,8 +678,6 @@ const baseSchema = {
     <meta name="twitter:image:alt" content="Mahindra Rivenza Baner Annex Luxury Residences" />
 
     <!-- Google Fonts: Asynchronous Non-Render-Blocking Loading (Eliminates 1,920ms mobile delay) -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" media="print" onload="this.media='all'" />
     <noscript>
@@ -934,7 +935,6 @@ const baseSchema = {
         opacity: 0;
         transform: translateY(32px);
         transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
-        will-change: opacity, transform;
       }
       .reveal.revealed {
         opacity: 1;

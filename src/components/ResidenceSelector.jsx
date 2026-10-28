@@ -288,7 +288,7 @@ export default function ResidenceSelector() {
         <div className="lg:col-span-5 space-y-6">
           <div>
             <div className="text-xs uppercase tracking-widest text-gold-400 font-semibold">{activeTab} Collection</div>
-            <h4 className="font-serif text-2xl text-stone-100 font-bold mt-1">{currentPlan.name}</h4>
+            <h3 className="font-serif text-2xl text-stone-100 font-bold mt-1">{currentPlan.name}</h3>
             <p className="text-xs text-stone-400 mt-2 leading-relaxed">
               Engineered with Mahindra Lifespaces' "Homes of Positive Energy" philosophy, prioritizing abundant natural ventilation, deep daylight penetration, and generous outdoor decks.
             </p>
@@ -320,7 +320,7 @@ export default function ResidenceSelector() {
 
           {/* Architectural Highlights */}
           <div>
-            <h5 className="text-xs uppercase tracking-widest text-stone-300 font-semibold mb-3">Architectural Highlights</h5>
+            <h4 className="text-xs uppercase tracking-widest text-stone-300 font-semibold mb-3">Architectural Highlights</h4>
             <ul className="space-y-2">
               {currentPlan.highlights.map((h, i) => (
                 <li key={i} className="flex items-start space-x-2 text-xs text-stone-400">
