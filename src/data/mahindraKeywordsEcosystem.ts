@@ -1292,191 +1292,265 @@ export const keywordClusters: KeywordCluster[] = [
 ];
 
 // ==============================================================================
-// 12. NATURAL LANGUAGE & GEO SEARCH (Generative Engine Optimization) BLUEPRINT
+// 12. 2026 WEST PUNE MARKET RESEARCH & BENCHMARK DATASET (Section 9)
+// Knight Frank H1 2026 & Housing.com Verified Data Intelligence
+// ==============================================================================
+export interface MarketBenchmarkLocality {
+  locality: string;
+  indicativePricePerSqFt: number;
+  priceFormatted: string;
+  profile: string;
+  distanceToHinjewadi: string;
+  fiveYearCAGR: string;
+}
+
+export const westPuneMarketResearch2026 = {
+  source: 'Knight Frank Research H1 2026 & Punekar News',
+  cityWideSalesH1: '24,890 Units',
+  cityWideSalesGrowthYoY: '2% YoY Growth',
+  newLaunchesH1: '31,116 Units',
+  newLaunchesGrowthYoY: '17% YoY Growth',
+  puneAverageResidentialPrice: '₹10,063 / sq.ft.',
+  priceGrowthYoY: '5% YoY (H1 2026)',
+  portalBenchmarkSource: 'Housing.com Indicative Average Rates (H1 2026)',
+  disclaimer: 'Indicative listing-platform price estimates reported by Knight Frank and Housing.com. These figures reflect market survey averages and platform asking rates, not guaranteed sale prices or verified transaction registers.',
+  localities: [
+    { locality: 'Baner', indicativePricePerSqFt: 12017, priceFormatted: '₹12,017 / sq.ft.', profile: 'Established lifestyle, high commercial density, premium retail', distanceToHinjewadi: '25–35 Mins', fiveYearCAGR: '6–8%' },
+    { locality: 'Balewadi', indicativePricePerSqFt: 11709, priceFormatted: '₹11,709 / sq.ft.', profile: 'High Street dining, sports complex, cosmopolitan hub', distanceToHinjewadi: '18–25 Mins', fiveYearCAGR: '7–9%' },
+    { locality: 'Pashan', indicativePricePerSqFt: 10999, priceFormatted: '₹10,999 / sq.ft.', profile: 'Green residential enclave, proximity to Pune University', distanceToHinjewadi: '20–30 Mins', fiveYearCAGR: '6–7%' },
+    { locality: 'Bavdhan', indicativePricePerSqFt: 9515, priceFormatted: '₹9,515 / sq.ft.', profile: 'Chandani Chowk corridor, scenic hills, established families', distanceToHinjewadi: '22–35 Mins', fiveYearCAGR: '6–8%' },
+    { locality: 'Mahalunge', indicativePricePerSqFt: 9253, priceFormatted: '₹9,253 / sq.ft.', profile: 'PMRDA Town Planning Scheme 1, 36m DP roads, river bridge', distanceToHinjewadi: '4–7 Mins', fiveYearCAGR: '12–15%' },
+    { locality: 'Hinjewadi', indicativePricePerSqFt: 9229, priceFormatted: '₹9,229 / sq.ft.', profile: 'Rajiv Gandhi Infotech Park, 400k+ tech employees, high rental yield', distanceToHinjewadi: '0–5 Mins', fiveYearCAGR: '8–10%' },
+    { locality: 'Wakad', indicativePricePerSqFt: 8715, priceFormatted: '₹8,715 / sq.ft.', profile: 'High-density tech residential suburb, Datta Mandir corridor', distanceToHinjewadi: '15–22 Mins', fiveYearCAGR: '6–8%' },
+    { locality: 'Sus', indicativePricePerSqFt: 8493, priceFormatted: '₹8,493 / sq.ft.', profile: 'Emerging tech corridor linking Baner and Mahalunge', distanceToHinjewadi: '12–18 Mins', fiveYearCAGR: '8–11%' },
+    { locality: 'Tathawade', indicativePricePerSqFt: 7923, priceFormatted: '₹7,923 / sq.ft.', profile: 'Education hub (JSPM, Indira), Mumbai-Pune expressway junction', distanceToHinjewadi: '15–25 Mins', fiveYearCAGR: '7–9%' },
+    { locality: 'Bhugaon', indicativePricePerSqFt: 7311, priceFormatted: '₹7,311 / sq.ft.', profile: 'Scenic lake enclave, luxury villas, green second homes', distanceToHinjewadi: '35–45 Mins', fiveYearCAGR: '5–7%' }
+  ] as MarketBenchmarkLocality[]
+};
+
+// ==============================================================================
+// 13. MASTER 30 LONG-TAIL QUESTIONS & DIRECT ANSWERS (Section 8)
+// Ultra-Compliant with Google Helpful Content & AI Search Engines
 // ==============================================================================
 export interface GeoQuestionAnswer {
   question: string;
   answer: string;
-  category: 'Overview' | 'Pricing' | 'Floor Plans' | 'RERA' | 'Amenities' | 'Location' | 'Investment';
+  category: 'Overview' | 'Pricing' | 'Floor Plans' | 'RERA' | 'Amenities' | 'Location' | 'Investment' | 'Market Data';
   url: string;
   badge: string;
 }
 
 export const naturalLanguageGeoQuestions: GeoQuestionAnswer[] = [
   {
-    question: 'What is Mahindra Rivenza in Pune?',
-    answer: 'Mahindra Rivenza is an officially launched 13.46-acre luxury residential master community by Mahindra Lifespace Developers Limited in Baner Annex, Mahalunge, Pune. Phase 1 offers 1,236 residences in 2, 3 and 4 BHK layouts with 9+ acres of landscaped greens and a ~44,000+ sq.ft. grand clubhouse.',
-    category: 'Overview',
-    url: '/#overview',
-    badge: 'Project Identity'
-  },
-  {
-    question: 'Where is Mahindra Rivenza located?',
-    answer: 'Site address: Baner Annex, off Baner-Hinjawadi Road, Pune, Nande, Maharashtra 412115, India (Coordinates: 18.562536 N, 73.727373 E). It is positioned 7 minutes from Hinjewadi Phase 1 IT Park and 8 minutes from Balewadi High Street.',
+    question: 'Where is Mahindra Rivenza located in Pune?',
+    answer: 'Mahindra Rivenza is situated in Baner Annex / Mahalunge, off Baner-Hinjawadi Road, Pune, Nande, Maharashtra 412115 (Google Maps Plus Code: HP6G+WWF; Coordinates: 18.5623125°N, 73.7273125°E). It is located 7 minutes from Hinjewadi Phase 1 via the 4-lane Mula River Bridge and 8 minutes from Balewadi High Street.',
     category: 'Location',
     url: '/location/',
-    badge: 'Coordinates & Address'
+    badge: 'Coordinates & Location'
   },
   {
-    question: 'Who is the developer of Mahindra Rivenza?',
-    answer: 'Mahindra Rivenza is developed by Mahindra Lifespace Developers Limited, the publicly listed real estate and infrastructure development arm of the USD 20+ Billion Mahindra Group (NSE: MAHLIFE, BSE: 532313, CIN: L45200MH1999PLC118949).',
-    category: 'Overview',
-    url: '/brand/',
-    badge: 'Corporate Entity'
+    question: 'What is the price of Mahindra Rivenza?',
+    answer: 'At Mahindra Rivenza, 2 BHK homes start from ₹90 Lakhs* (635–747 sq.ft carpet), 3 BHK residences start from ₹1.31 Crore* (882–1,065 sq.ft carpet), and exclusive 4 BHK sky villas start from ₹2.20 Crore* up to ₹2.55 Crore* (1,438–1,465 sq.ft carpet). Flexible construction-linked payment (CLP) plans and 10:90 schemes are available.',
+    category: 'Pricing',
+    url: '/pricing/',
+    badge: 'Starts ₹90L*'
   },
   {
-    question: 'What configurations are available in Mahindra Rivenza?',
-    answer: 'Mahindra Rivenza offers 9 sanctioned typologies across 2, 3 & 4 BHK residences: 2 BHK Premium (688 sq.ft aggregate), 2 BHK Luxury (785–855 sq.ft), 3 BHK Deluxe (995–1,007 sq.ft), 3 BHK Ultra Luxury (1,206 sq.ft), and 4 BHK Luxury (1,615–1,650 sq.ft).',
+    question: 'What configurations are available at Mahindra Rivenza?',
+    answer: 'Mahindra Rivenza offers 9 MahaRERA-sanctioned architectural typologies: 2 BHK Premium (688 sq.ft aggregate), 2 BHK Luxury (785–855 sq.ft), 3 BHK Deluxe (995–1,007 sq.ft), 3 BHK Ultra Luxury (1,206 sq.ft), and 4 BHK Luxury Presidential Suites (1,615–1,651 sq.ft aggregate usable area).',
     category: 'Floor Plans',
     url: '/floor-plans/',
-    badge: 'Sanctioned Typologies'
+    badge: '2, 3 & 4 BHK Typologies'
   },
   {
-    question: 'What is the price of Mahindra Rivenza 2 BHK?',
-    answer: '2 BHK residences start from ₹90 Lakhs* for 2 BHK Premium (688 sq.ft), scaling from ₹1.04 Cr to ₹1.14 Cr* for 2 BHK Luxury residences (785–855 sq.ft) depending on floor rise and orientation.',
-    category: 'Pricing',
-    url: '/pricing/',
-    badge: 'Starting ₹90L*'
-  },
-  {
-    question: 'What is the price of Mahindra Rivenza 3 BHK?',
-    answer: '3 BHK residences start from ₹1.31 Cr* for 3 BHK Deluxe (995 sq.ft aggregate) up to ₹1.60 Cr* for 3 BHK Ultra Luxury (1,206 sq.ft aggregate) with sprawling sundeck terraces.',
-    category: 'Pricing',
-    url: '/pricing/',
-    badge: 'Starting ₹1.31 Cr*'
-  },
-  {
-    question: 'What is the price of Mahindra Rivenza 4 BHK?',
-    answer: '4 BHK luxury residences start from ₹2.20 Cr* up to ₹2.55 Cr* for 4 BHK Luxury A (1,650 sq.ft aggregate) featuring private foyer entries, servant quarters, and panoramic hill views.',
-    category: 'Pricing',
-    url: '/pricing/',
-    badge: 'Starting ₹2.20 Cr*'
+    question: 'What is the carpet area of Mahindra Rivenza apartments?',
+    answer: 'RERA carpet areas range from 635 to 747 sq.ft. for 2 BHK units, 882 to 1,065 sq.ft. for 3 BHK units, and 1,438 to 1,465 sq.ft. for 4 BHK units. Each apartment includes expansive private sundeck balconies (EBVT) ranging from 53 to 186 sq.ft. with zero internal corridor wastage.',
+    category: 'Floor Plans',
+    url: '/floor-plans/',
+    badge: '635 to 1,465 Sq.Ft. Carpet'
   },
   {
     question: 'How can I get the Mahindra Rivenza brochure?',
-    answer: 'The official digital e-brochure containing master layouts, floor plans, and amenity specifications can be downloaded at /brochure/ or requested instantly on WhatsApp at +91 7744009295.',
+    answer: 'The official architectural e-brochure containing full master plans, CAD floor layouts, and amenity specifications can be downloaded instantly in PDF format at /brochure/ or requested on WhatsApp (+91 7744009295).',
     category: 'Overview',
     url: '/brochure/',
-    badge: 'Digital Brochure'
+    badge: 'Download PDF Brochure'
   },
   {
-    question: 'How can I download the Mahindra Rivenza floor plan?',
-    answer: 'Architectural CAD blueprints and MahaRERA sanctioned room dimensions for all 9 unit variants (2, 3 & 4 BHK) can be inspected and downloaded at /floor-plans/.',
-    category: 'Floor Plans',
-    url: '/floor-plans/',
-    badge: 'CAD Blueprints'
-  },
-  {
-    question: 'How do I book a flat in Mahindra Rivenza?',
-    answer: 'Prospective buyers can register priority allocations through the official booking desk. Leading financial institutions including SBI, HDFC, ICICI, and Axis Bank offer pre-approved home loan financing.',
+    question: 'How can I get the latest Mahindra Rivenza cost sheet?',
+    answer: 'The verified all-inclusive cost sheet—detailing base price, floor rise charges, covered car parking, 7% stamp duty and registration levies, GST, and maintenance corpus—is available upon request at /pricing/ or via the on-site sales gallery.',
     category: 'Pricing',
     url: '/pricing/',
-    badge: 'Booking Protocol'
+    badge: 'All-Inclusive Cost Sheet'
   },
   {
-    question: 'How can I arrange a Mahindra Rivenza site visit?',
-    answer: 'The on-site sales gallery and fully furnished 4 BHK show home are open daily from 9:30 AM to 7:00 PM off Baner-Hinjawadi Road. Site tours can be reserved via the booking bar or by calling +91 7744009295.',
-    category: 'Overview',
-    url: '/#overview',
-    badge: '4 BHK Show Flat Live'
-  },
-  {
-    question: 'Is Mahindra Rivenza MahaRERA registered?',
-    answer: 'Yes. Mahindra Rivenza holds official statutory registrations: Phase 1 (MahaRERA No. PR1261012602102 valid upto 30/12/31) and Phase 2 (MahaRERA No. PM1261012602103 valid upto 30/12/31), verifiable on https://maharera.maharashtra.gov.in.',
+    question: 'What is the MahaRERA number of Mahindra Rivenza?',
+    answer: 'Mahindra Rivenza holds two official statutory registrations with Maharashtra RERA: Phase 1 (MahaRERA Registration No. PR1261012602102 valid upto 30/12/31) and Phase 2 (MahaRERA Registration No. PM1261012602103 valid upto 30/12/31), verifiable on https://maharera.maharashtra.gov.in.',
     category: 'RERA',
     url: '/rera/',
     badge: 'PR1261012602102'
   },
   {
     question: 'What is the possession date of Mahindra Rivenza?',
-    answer: 'As per official MahaRERA disclosures, the statutory completion date for Phase 1 and Phase 2 is committed up to December 30, 2031, with phased tower construction handovers planned in tranches.',
+    answer: 'As per statutory MahaRERA filings, the official commitment date for completion and possession of Phase 1 and Phase 2 is December 30, 2031. Construction is executing through phased milestone schedules backed by Mahindra Lifespaces’ governance.',
     category: 'RERA',
     url: '/rera/',
-    badge: 'Dec 2031 MahaRERA'
+    badge: 'Possession Dec 2031'
   },
   {
     question: 'What amenities are available at Mahindra Rivenza?',
-    answer: 'Amenities span 2.65 Lakh+ sq.ft including a ~44,000+ sq.ft grand clubhouse, resort swimming pool with sunken aqua bar, yoga lawn, floodlit futsal turf, badminton, squash, pickleball, jogging tracks, glass-roof library, and co-working lounge.',
+    answer: 'The project features over 2.65 Lakh sq.ft of lifestyle infrastructure, including a ~44,000 sq.ft grand clubhouse, temperature-controlled resort pool with sunken aqua bar, 9+ acres of landscaped biophilic greens, floodlit futsal turf, badminton, squash, pickleball, jogging trails, glass-roof library, and co-working pods.',
     category: 'Amenities',
     url: '/amenities/',
-    badge: '44k Sq.Ft. Clubhouse'
+    badge: '~44,000 Sq.Ft. Clubhouse'
   },
   {
-    question: 'How large is the Mahindra Rivenza project?',
-    answer: 'The project spans approximately 13.46 acres of freehold master planning with an estimated Gross Development Value (GDV) of ~₹3,500 Crore, making it one of West Pune’s largest institutional landmarks.',
+    question: 'Is Mahindra Rivenza a good residential project?',
+    answer: 'Yes. Backed by the USD 20+ Billion Mahindra Group, Mahindra Rivenza offers institutional land title security, Pre-Certified IGBC Gold sustainability, Net Zero Waste to Landfill design, and early entry pricing in Maharashtra’s first PMRDA Town Planning Scheme.',
     category: 'Overview',
-    url: '/#overview',
-    badge: '13.46 Acres'
-  },
-  {
-    question: 'How much open space is available at Mahindra Rivenza?',
-    answer: 'Over 9 acres (approx 68% of the total land parcel) is preserved as landscaped biophilic greens, nature trails, Miyawaki forests, and open-air recreation spaces.',
-    category: 'Amenities',
-    url: '/amenities/',
-    badge: '9+ Acres Greens'
-  },
-  {
-    question: 'Is Mahindra Rivenza near Hinjewadi IT Park?',
-    answer: 'Yes. It is situated just 3.4 km from Hinjewadi Phase 1 (Infosys, Wipro, TCS, Cognizant, Tech Mahindra) with a 7-minute direct commute via the newly operational 4-lane Mula River bridge.',
-    category: 'Location',
-    url: '/commute/mahindra-rivenza-to-infosys-hinjewadi/',
-    badge: '7 Mins to Infosys'
-  },
-  {
-    question: 'Is Mahindra Rivenza close to Baner and Balewadi?',
-    answer: 'Yes. Balewadi High Street is 4.6 km (8 mins), Balewadi Sports Complex is 4.0 km (7 mins), and Baner Chowk is 6.5 km (10–12 mins) via wide 36m PMRDA DP roads.',
-    category: 'Location',
-    url: '/commute/mahindra-rivenza-to-balewadi-high-street/',
-    badge: '8 Mins to Balewadi'
+    url: '/brand/',
+    badge: 'Mahindra Group Trust'
   },
   {
     question: 'Is Mahindra Rivenza suitable for families?',
-    answer: 'Yes. The development features high security, dedicated children’s play zones, crèche, senior citizen wellness gardens, and close proximity to premier schools (VIBGYOR Balewadi, The Orchid School Baner, Mercedes-Benz International School).',
+    answer: 'Yes. Over 68% of the 13.46-acre master layout is preserved as vehicle-free open greens. It offers multi-tier 24x7 security, children’s adventure parks, crèche facilities, senior wellness lawns, and is within 10–15 minutes of top schools like VIBGYOR, The Orchid School, and Mercedes-Benz International.',
     category: 'Overview',
     url: '/#overview',
     badge: 'Family Sanctuary'
   },
   {
-    question: 'Is Mahindra Rivenza worth considering for investment?',
-    answer: 'Yes. Backed by the USD 20B+ Mahindra Group, positioned in Maharashtra’s first PMRDA Town Planning Scheme (TPS 1) with direct access to Pune Metro Line 3, offering projected ~4.8% to 5.4% rental yields and strong capital appreciation.',
+    question: 'Is Mahindra Rivenza suitable for property investors?',
+    answer: 'Yes. With its 7-minute direct commute to Hinjewadi Phase 1 (400,000+ IT professionals) and upcoming Pune Metro Line 3, Mahindra Rivenza projects strong 4.8% to 5.4% rental yields and 12% to 15% annualized capital appreciation driven by PMRDA infrastructure.',
     category: 'Investment',
     url: '/residences/nri-investment/',
-    badge: 'High ROI & Yield'
+    badge: 'High Rental Yield & ROI'
   },
   {
-    question: 'What are the advantages of living in Mahalunge Pune?',
-    answer: 'Mahalunge is Pune’s premier smart suburb featuring 36m wide planned DP roads, underground utility cabling, civic park reservations, clean riverfront air, and immediate transit to both Baner and Hinjewadi.',
+    question: 'What are the advantages of buying a flat in Mahalunge?',
+    answer: 'Mahalunge is the epicenter of PMRDA Town Planning Scheme 1, featuring planned 36m wide DP roads with underground utility cabling, planned open reservations, the operational 4-lane Mula River Bridge connecting Hinjewadi, and significantly lower entry prices than Baner (42% arbitrage).',
     category: 'Location',
     url: '/mahalunge-pune/',
-    badge: 'PMRDA TPS 1'
+    badge: 'PMRDA Town Planning 1'
   },
   {
-    question: 'What is the difference between Baner and Baner Annex?',
-    answer: 'Baner is an established micro-market with mature retail but heavy traffic congestion and high property rates (₹11,000–₹14,000/sq.ft). Baner Annex (Mahalunge) is a modern town-planned extension offering wider 36m roads, larger green reserves, and superior entry pricing (₹7,500–₹9,000/sq.ft).',
+    question: 'What is Baner Annex known for?',
+    answer: 'Baner Annex is West Pune’s prime growth expansion corridor bridging cosmopolitan Baner and Rajiv Gandhi Infotech Park in Hinjewadi. It is known for wider master-planned roads, lower air pollution, scenic biodiversity hill views, and Grade-A institutional developments.',
     category: 'Location',
-    url: '/location/',
-    badge: 'Micro-Market Analysis'
+    url: '/baner-annex/',
+    badge: 'Baner Annex Hub'
   },
   {
-    question: 'Which new launch projects are available in West Pune?',
-    answer: 'Mahindra Rivenza in Baner Annex / Mahalunge is the flagship new residential launch in West Pune, offering 1,236 units in Phase 1 with ₹3,500 Cr GDV by Mahindra Lifespaces.',
+    question: 'How far is Mahalunge from Hinjewadi IT Park?',
+    answer: 'Mahalunge is just 3.4 km from Hinjewadi Phase 1. The operational 4-lane Mula River Bridge enables a direct 7-minute commute to Infosys, Wipro, TCS, and Cognizant, completely bypassing highway traffic at Bhumkar Chowk.',
+    category: 'Location',
+    url: '/commute/mahindra-rivenza-to-infosys-hinjewadi/',
+    badge: '7 Mins to Hinjewadi'
+  },
+  {
+    question: 'How does Mahalunge compare with Baner?',
+    answer: 'While Baner Central has saturated land parcels trading at ₹12,000–₹16,000/sq.ft. with heavy vehicular congestion, Mahalunge (Baner Annex) offers master-planned 36m roads, larger 13.46-acre gated reserves, and ground-floor pricing starting at ₹7,500–₹8,800/sq.ft.',
+    category: 'Investment',
+    url: '/compare/mahalunge-vs-baner-real-estate/',
+    badge: '42% Price Arbitrage'
+  },
+  {
+    question: 'What are the best new residential projects in Mahalunge?',
+    answer: 'Mahindra Rivenza by Mahindra Lifespaces is the flagship Grade-A development in Mahalunge (13.46 acres, ~₹3,500 Cr GDV), alongside established township projects like Godrej Hillside, VTP Blue Waters, and Godrej Park World.',
     category: 'Overview',
     url: '/new-projects-in-pune/',
-    badge: 'Flagship 2026 Launch'
+    badge: 'Flagship Launch 2026'
   },
   {
-    question: 'Which Mahindra Lifespaces projects are available in Pune?',
-    answer: 'Mahindra’s Pune footprint includes Mahindra Rivenza (Mahalunge), Mahindra IvyLush (Kharadi Annex), Mahindra Citadel (Pimpri), Mahindra Happinest (Tathawade), Mahindra Antheia, Mahindra Centralis, Mahindra Nestalgia, Mahindra L’Artista, and Mahindra Woods.',
-    category: 'Overview',
-    url: '/brand/',
-    badge: '9 Landmark Projects'
+    question: 'Which West Pune areas are suitable for IT professionals?',
+    answer: 'Mahalunge (Baner Annex), Hinjewadi Phase 1, Wakad, Balewadi, and Tathawade are the top micro-markets for IT professionals due to proximity to Rajiv Gandhi Infotech Park, upcoming Pune Metro Line 3, and Balewadi High Street entertainment.',
+    category: 'Location',
+    url: '/west-pune/',
+    badge: 'West Pune IT Belt'
   },
   {
-    question: 'How does Mahindra Rivenza compare with other Mahalunge projects?',
-    answer: 'Mahindra Rivenza stands apart with lower residential density per acre, 9+ acres of greens, a ~44,000 sq.ft clubhouse, Pre-Certified IGBC Gold sustainability, zero-corridor layout efficiency, and the corporate governance of the Mahindra Group.',
+    question: 'What is the average property price in West Pune?',
+    answer: 'According to Knight Frank H1 2026 data, Pune’s average residential price is ₹10,063/sq.ft. In West Pune, rates vary from ₹7,500–₹8,800/sq.ft. in growth corridors (Mahalunge, Tathawade) to ₹11,500–₹15,000/sq.ft. in mature enclaves (Baner, Balewadi).',
+    category: 'Market Data',
+    url: '/pune-real-estate/',
+    badge: 'Market Intelligence 2026'
+  },
+  {
+    question: 'Which West Pune locality offers affordable 3 BHK apartments?',
+    answer: 'Mahalunge (Baner Annex) and Tathawade offer the best value for 3 BHK homes. At Mahindra Rivenza, 3 BHK Deluxe homes start from ₹1.31 Crore* (995 sq.ft aggregate) compared to ₹1.85 Cr to ₹2.30 Cr for similar configurations in central Baner.',
+    category: 'Pricing',
+    url: '/pricing/',
+    badge: '3 BHK Starts ₹1.31 Cr*'
+  },
+  {
+    question: 'Is Wakad better than Mahalunge for buying a flat?',
+    answer: 'Wakad is an established, high-density residential hub with severe rush-hour traffic gridlocks at Bhumkar Chowk and Datta Mandir Road. Mahalunge offers planned 36m DP boulevards, 80% open greens, newer institutional projects, and direct 7-min river bridge access to Hinjewadi.',
     category: 'Investment',
-    url: '/compare/mahindra-mahalunge-vs-godrej-hillside/',
-    badge: 'Institutional Trust'
+    url: '/compare/mahalunge-vs-wakad-real-estate/',
+    badge: 'Mahalunge vs Wakad'
+  },
+  {
+    question: 'Which West Pune areas have strong rental demand?',
+    answer: 'Hinjewadi Phase 1, Mahalunge (Baner Annex), and Wakad have the highest rental demand in Pune, driven by 400,000+ tech professionals. High-quality 2 & 3 BHK gated communities generate steady 4.5% to 5.4% rental yields.',
+    category: 'Investment',
+    url: '/flats-in-pune/',
+    badge: '4.5% - 5.4% Rental Yield'
+  },
+  {
+    question: 'What are the upcoming residential developments in West Pune?',
+    answer: 'The most notable upcoming launch is Mahindra Rivenza in Baner Annex / Mahalunge (13.46 acres, 1,236 units), alongside new phases by Godrej Properties, Kolte-Patil Life Republic, and VTP Realty in the Nande-Mahalunge corridor.',
+    category: 'Overview',
+    url: '/new-projects-in-pune/',
+    badge: 'Upcoming Launches'
+  },
+  {
+    question: 'How should buyers compare new launches in Pune?',
+    answer: 'Buyers should evaluate: 1) Developer institutional track record and balance sheet safety; 2) MahaRERA registration certificate and litigation-free title; 3) Usable carpet area efficiency; 4) Infrastructure approvals (PMRDA DP roads, water connections); and 5) Commute velocity to employment hubs.',
+    category: 'Overview',
+    url: '/faq/',
+    badge: 'Buyer Due Diligence'
+  },
+  {
+    question: 'What charges are included in a new flat\'s total cost?',
+    answer: 'A new flat\'s total all-inclusive cost includes: Agreement Value (base price + floor rise + premium view + parking), 7% Maharashtra Stamp Duty & Registration, 5% GST (for under-construction non-affordable), Society Maintenance Deposit, and legal/documentation fees.',
+    category: 'Pricing',
+    url: '/tools/pune-stamp-duty-calculator/',
+    badge: 'Total Cost Structure'
+  },
+  {
+    question: 'How do I verify a project\'s MahaRERA registration?',
+    answer: 'Visit the official portal https://maharera.maharashtra.gov.in, navigate to "Search Project Details", and enter the registration number (e.g. PR1261012602102 for Mahindra Rivenza Phase 1) to inspect sanctioned building plans, bank accounts, and quarterly progress disclosures.',
+    category: 'RERA',
+    url: '/rera/',
+    badge: 'Official MahaRERA Verification'
+  },
+  {
+    question: 'Should I buy a ready-to-move or under-construction flat?',
+    answer: 'Under-construction launches offer 20% to 35% lower capital acquisition rates and staggered payment milestones (10:90 or CLP), maximizing capital gains during construction. Ready flats require 100% upfront capital and attract higher prices with no GST.',
+    category: 'Investment',
+    url: '/faq/',
+    badge: 'Ready vs Under-Construction'
+  },
+  {
+    question: 'What should I check before booking a new-launch apartment?',
+    answer: 'Before booking: 1) Verify MahaRERA registration number on the government portal; 2) Confirm environmental clearance and sanctioned building plans; 3) Check approved bank tie-ups (SBI, HDFC, ICICI); 4) Inspect the draft Agreement for Sale; and 5) Ensure the booking token is non-forfeitable before signing.',
+    category: 'Overview',
+    url: '/pricing/',
+    badge: 'Booking Checklist'
+  },
+  {
+    question: 'How do I compare carpet area and built-up area?',
+    answer: 'RERA Carpet Area measures the net usable floor area inside internal apartment walls (excluding external walls, service shafts, and common areas). Built-up area includes wall thicknesses, and super built-up area adds a 25%–35% loading for common corridors, lobbies, and lifts.',
+    category: 'Floor Plans',
+    url: '/floor-plans/',
+    badge: 'RERA Carpet vs Super Built-Up'
+  },
+  {
+    question: 'What infrastructure developments could affect West Pune property demand?',
+    answer: 'Key catalysts include: 1) Operational Hinjewadi-Mahalunge 4-lane river bridge; 2) Pune Metro Line 3 (Hinjewadi to Shivajinagar); 3) PMRDA Town Planning Scheme 1 with 36m wide boulevards; and 4) Proposed Pune Ring Road connecting West Pune to PCMC and Mumbai Expressway.',
+    category: 'Location',
+    url: '/connectivity/',
+    badge: 'Transit Infrastructure Catalysts'
   }
 ];
+
 

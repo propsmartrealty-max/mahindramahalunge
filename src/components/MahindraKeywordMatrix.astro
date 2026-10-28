@@ -1,5 +1,5 @@
 ---
-import { keywordClusters } from '../data/mahindraKeywordsEcosystem';
+import { keywordClusters, naturalLanguageGeoQuestions, westPuneMarketResearch2026 } from '../data/mahindraKeywordsEcosystem';
 
 interface Props {
   className?: string;
@@ -8,19 +8,30 @@ interface Props {
 
 const { className = "", showTagsCloud = false } = Astro.props;
 
-// Compile all FAQ pairs for JSON-LD schema injection
+// Compile all 30 natural language Q&A pairs for JSON-LD schema injection
 const matrixFaqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
-  "mainEntity": keywordClusters.flatMap(c => c.qaPairs.map(qa => ({
+  "mainEntity": naturalLanguageGeoQuestions.map(qa => ({
     "@type": "Question",
     "name": qa.question,
     "acceptedAnswer": {
       "@type": "Answer",
       "text": qa.answer
     }
-  })))
+  }))
 };
+
+const categories = [
+  'All Topics',
+  'Pricing',
+  'Floor Plans',
+  'Location',
+  'Amenities',
+  'RERA',
+  'Investment',
+  'Market Data'
+];
 ---
 
 <section id="search-matrix" class={`py-20 bg-charcoal-950 border-t border-white/10 relative overflow-hidden ${className}`}>
@@ -30,80 +41,173 @@ const matrixFaqSchema = {
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-16">
     
     <!-- Section Heading -->
-    <div class="reveal text-center max-w-3xl mx-auto space-y-4">
-      <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-gold-500/10 border border-gold-500/30 text-gold-400 text-xs font-semibold uppercase tracking-widest">
-        <span>Buyer Search & Knowledge Matrix</span>
+    <div class="text-center max-w-3xl mx-auto space-y-4">
+      <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-gold-500/10 border border-gold-500/30 text-gold-400 text-xs font-semibold uppercase tracking-widest font-mono">
+        <span>Strategic Search & Knowledge Authority</span>
       </div>
       <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl text-stone-50 font-bold leading-tight">
-        Mahindra Lifespaces Pune Ecosystem: <br />
-        <span class="gold-gradient-text">Complete Buyer Search & Knowledge Matrix</span>
+        Mahindra Rivenza Baner Annex: <br />
+        <span class="gold-gradient-text">Complete Real Estate Search Ecosystem</span>
       </h2>
       <p class="text-xs sm:text-sm text-stone-300 leading-relaxed font-light">
-        Direct answers covering every permutation of pricing, 1, 2, 3 & 4 BHK floor plans, MahaRERA statutory records, and connectivity across Mahalunge, Kharadi, Pimpri, and Tathawade.
+        Authoritative intelligence covering every stage of the homebuyer journey: pricing, CAD floor plans, ~44,000 sq.ft clubhouse amenities, MahaRERA statutory records, and comparative price trends across West Pune.
+      </p>
+    </div>
+
+    <!-- 2026 Market Research & Benchmark Snapshot (Section 9) -->
+    <div class="glass-card rounded-2xl p-6 sm:p-8 border border-gold-500/30 space-y-6 shadow-2xl">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-white/10 pb-5">
+        <div class="space-y-1">
+          <span class="px-2.5 py-0.5 rounded-full bg-emerald-500/10 text-emerald-400 text-[10px] font-mono uppercase tracking-wider font-semibold border border-emerald-500/20">
+            H1 2026 Market Intelligence
+          </span>
+          <h3 class="font-serif text-xl sm:text-2xl font-bold text-white">
+            West Pune Property Price Trends & Market Snapshot
+          </h3>
+          <p class="text-xs text-stone-400 font-light">
+            City-wide figures reported by Knight Frank Research (Punekar News). Indicative locality rates compiled from Housing.com.
+          </p>
+        </div>
+
+        <div class="flex items-center gap-3 text-xs font-mono">
+          <div class="p-2.5 rounded-xl bg-white/5 border border-white/10 text-center">
+            <span class="text-stone-400 block text-[10px]">Pune Avg Price</span>
+            <span class="text-gold-300 font-bold">{westPuneMarketResearch2026.puneAverageResidentialPrice}</span>
+          </div>
+          <div class="p-2.5 rounded-xl bg-white/5 border border-white/10 text-center">
+            <span class="text-stone-400 block text-[10px]">Sales Volume H1</span>
+            <span class="text-emerald-400 font-bold">{westPuneMarketResearch2026.cityWideSalesH1}</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Price Index Benchmark Table -->
+      <div class="overflow-x-auto rounded-xl border border-white/10">
+        <table class="w-full text-xs text-left">
+          <thead class="bg-white/5 text-stone-300 font-serif uppercase tracking-wider text-[10px]">
+            <tr>
+              <th class="p-3.5">Micro-Market</th>
+              <th class="p-3.5">Indicative Avg Rate</th>
+              <th class="p-3.5">Key Micro-Market Profile</th>
+              <th class="p-3.5">Hinjewadi Transit</th>
+              <th class="p-3.5">5-Yr CAGR</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-white/5 text-stone-300 font-light">
+            <!-- Benchmark Row: Mahindra Rivenza -->
+            <tr class="bg-gold-500/10 border-l-4 border-l-gold-400 font-medium">
+              <td class="p-3.5 font-bold text-gold-300">
+                <a href="/mahindra-rivenza/" class="hover:underline">Mahindra Rivenza (Baner Annex)</a>
+                <span class="block text-[10px] text-emerald-400 font-mono">★ Benchmark Flagship</span>
+              </td>
+              <td class="p-3.5 font-mono text-gold-300 font-bold">Starts ₹90L* (₹7,800/sq.ft base)</td>
+              <td class="p-3.5 text-stone-200">13.46-acre sanctuary, 9+ acres greens, ~44k clubhouse</td>
+              <td class="p-3.5 text-emerald-300 font-mono">7 Mins (River Bridge Bypass)</td>
+              <td class="p-3.5 text-emerald-300 font-bold font-mono">12% - 15%</td>
+            </tr>
+            {westPuneMarketResearch2026.localities.map((loc) => (
+              <tr class="hover:bg-white/[0.02] transition-colors">
+                <td class="p-3.5 font-semibold text-stone-200">{loc.locality}</td>
+                <td class="p-3.5 font-mono text-stone-300">{loc.priceFormatted}</td>
+                <td class="p-3.5 text-stone-400">{loc.profile}</td>
+                <td class="p-3.5 text-stone-400 font-mono">{loc.distanceToHinjewadi}</td>
+                <td class="p-3.5 font-mono text-stone-300">{loc.fiveYearCAGR}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <p class="text-[11px] text-stone-400 font-light leading-relaxed">
+        <strong class="text-stone-300">Editorial Disclaimer:</strong> {westPuneMarketResearch2026.disclaimer} Property prices vary by floor rise, orientation, carpet efficiency, and infrastructure completion stages.
       </p>
     </div>
 
     <!-- Cluster Cards Grid -->
-    <div class="space-y-12">
-      {keywordClusters.map((cluster) => (
-        <div class="reveal glass-card rounded-2xl p-6 sm:p-8 border border-white/10 hover:border-gold-500/30 transition-all duration-300 space-y-6">
-          
-          <!-- Cluster Header -->
-          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-white/10 pb-5">
-            <div class="space-y-1">
+    <div class="space-y-10">
+      <div class="text-center max-w-2xl mx-auto space-y-2">
+        <span class="text-xs uppercase tracking-widest text-gold-400 font-bold font-mono">Topical Keyword Silos</span>
+        <h3 class="font-serif text-2xl sm:text-3xl text-white font-bold">Project & Micro-Market Knowledge Pillars</h3>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {keywordClusters.map((cluster) => (
+          <div class="glass-card rounded-2xl p-6 border border-white/10 hover:border-gold-500/30 transition-all duration-300 space-y-4 flex flex-col justify-between">
+            <div class="space-y-2.5">
               <span class="px-2.5 py-0.5 rounded-full bg-gold-500/10 text-gold-400 text-[10px] font-mono uppercase tracking-wider font-semibold border border-gold-500/20">
                 {cluster.badge}
               </span>
-              <h3 class="font-serif text-xl sm:text-2xl font-bold text-stone-100">
+              <h4 class="font-serif text-lg font-bold text-stone-100">
                 {cluster.categoryTitle}
-              </h3>
-              <p class="text-xs text-stone-400 font-light">
+              </h4>
+              <p class="text-xs text-stone-400 font-light leading-relaxed">
                 {cluster.description}
               </p>
             </div>
-            
-            <!-- Long-Tail Keyword Badges -->
-            <div class="flex flex-wrap gap-1.5 sm:max-w-md justify-start sm:justify-end">
-              {cluster.keywords.slice(0, 3).map((kw) => (
-                <span class="px-2 py-0.5 rounded bg-white/5 border border-white/10 text-[10px] text-stone-400 font-mono">
-                  {kw}
-                </span>
-              ))}
+
+            <!-- Key Targeted Terms -->
+            <div class="pt-3 border-t border-white/10 space-y-2">
+              <span class="text-[10px] uppercase font-mono text-stone-500 block">Core Search Intents:</span>
+              <div class="flex flex-wrap gap-1.5">
+                {cluster.keywords.slice(0, 4).map((kw) => (
+                  <span class="px-2 py-0.5 rounded bg-white/5 border border-white/10 text-[10px] text-stone-300 font-mono">
+                    {kw}
+                  </span>
+                ))}
+              </div>
             </div>
           </div>
+        ))}
+      </div>
+    </div>
 
-          <!-- Q&A Pairs in Two-Column Responsive Layout -->
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-2">
-            {cluster.qaPairs.map((qa) => (
-              <div class="p-5 rounded-xl bg-charcoal-900/90 border border-white/5 space-y-3 flex flex-col justify-between hover:border-white/20 transition-colors">
-                <div class="space-y-2.5">
-                  <h4 class="font-serif text-sm font-semibold text-stone-100 leading-snug">
-                    {qa.question}
-                  </h4>
-                  <p class="text-xs text-stone-300 leading-relaxed font-light">
-                    {qa.answer}
-                  </p>
-                </div>
-                
-                <div class="pt-3 border-t border-white/10">
-                  <a
-                    href={qa.relevantUrl}
-                    class="inline-flex items-center space-x-1 text-[11px] font-medium text-gold-400 hover:text-gold-300 font-mono transition-colors"
-                  >
-                    <span>{qa.actionLabel}</span>
-                    <span>→</span>
-                  </a>
-                </div>
-              </div>
-            ))}
-          </div>
-
+    <!-- Master 30 Long-Tail Questions (Google & AI Search Engine Q&A) -->
+    <div class="space-y-8 pt-8">
+      <div class="text-center max-w-3xl mx-auto space-y-3">
+        <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-semibold uppercase tracking-widest font-mono">
+          <span>Google Helpful Content &amp; AI Search Answers</span>
         </div>
-      ))}
+        <h3 class="font-serif text-2xl sm:text-4xl text-stone-50 font-bold leading-tight">
+          30 Most Frequent Buyer Questions &amp; Verified Facts
+        </h3>
+        <p class="text-xs sm:text-sm text-stone-300 font-light leading-relaxed">
+          Structured, verified responses addressing pricing, carpet areas, transit times, MahaRERA compliance, and micro-market comparisons.
+        </p>
+      </div>
+
+      <!-- Responsive Grid of 30 Questions -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+        {naturalLanguageGeoQuestions.map((qa, idx) => (
+          <div class="p-5 rounded-2xl bg-charcoal-900/90 border border-white/5 hover:border-gold-500/30 transition-all flex flex-col justify-between space-y-3">
+            <div class="space-y-2">
+              <div class="flex items-center justify-between text-[10px] font-mono">
+                <span class="text-gold-400 font-bold">Q{idx + 1} • {qa.category}</span>
+                <span class="px-2 py-0.5 rounded bg-white/5 text-stone-400">{qa.badge}</span>
+              </div>
+              <h4 class="font-serif text-sm font-semibold text-stone-100 leading-snug">
+                {qa.question}
+              </h4>
+              <p class="text-xs text-stone-300 font-light leading-relaxed">
+                {qa.answer}
+              </p>
+            </div>
+
+            <div class="pt-2 border-t border-white/5">
+              <a
+                href={qa.url}
+                class="inline-flex items-center space-x-1 text-[11px] font-medium text-gold-400 hover:text-gold-300 font-mono transition-colors"
+              >
+                <span>Explore Details</span>
+                <span>→</span>
+              </a>
+            </div>
+          </div>
+        ))}
+      </div>
     </div>
 
   </div>
 </section>
 
-<!-- Inject FAQ Schema for this matrix -->
+<!-- Inject 30-Question FAQ Schema for Google Search Console & AI Search Engines -->
 <script type="application/ld+json" set:html={JSON.stringify(matrixFaqSchema)} />
