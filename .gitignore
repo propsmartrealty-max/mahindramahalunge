@@ -22,3 +22,6 @@ Thumbs.db
 
 # Cloudflare Wrangler Local Cache
 .wrangler/
+
+# Indexing State Journal
+.indexing-journal.json

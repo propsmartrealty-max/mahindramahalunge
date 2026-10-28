@@ -1,6 +1,7 @@
 import type { APIRoute } from 'astro';
+import { rievenzaCorridorData } from '../data/pSeoMahindraRivenzaCorridor';
 
-const articles = [
+const editorialArticles = [
   {
     slug: 'mahindra-lifespaces-13-acres-mahalunge-project-preview',
     title: 'Mahindra Lifespaces Acquires 13.46 Acres in Mahalunge: ₹3,500 Cr Master Plan Preview',
@@ -159,6 +160,58 @@ const articles = [
   }
 ];
 
+// Combine editorial articles with programmatic corridor dossiers and category hubs
+const allRssItems = [
+  ...editorialArticles.map(art => ({
+    title: art.title,
+    link: `https://mahindralifespaceshomes.in/articles/${art.slug}/`,
+    description: art.description,
+    pubDate: art.pubDate,
+  })),
+  ...rievenzaCorridorData.map(item => ({
+    title: item.h1,
+    link: `https://mahindralifespaceshomes.in/mahindra-rivenza/${item.slug}/`,
+    description: item.metaDescription,
+    pubDate: 'Wed, 28 Oct 2026 12:00:00 GMT',
+  })),
+  {
+    title: 'Mahindra Rivenza Baner Annex: 50+ Curated Resort Lifestyle Amenities',
+    link: 'https://mahindralifespaceshomes.in/amenities/',
+    description: 'Comprehensive directory of 50+ resort lifestyle amenities across Aquatics, Athletics, Biophilic Nature, and ~44,000 sq.ft Clubhouses.',
+    pubDate: 'Wed, 28 Oct 2026 12:00:00 GMT',
+  },
+  {
+    title: 'Flats Near Hinjewadi IT Parks: Commute Times & Proximity Matrix',
+    link: 'https://mahindralifespaceshomes.in/near/',
+    description: 'Master directory of 32 top IT and tech parks near Mahindra Rivenza Baner Annex with commute benchmarks.',
+    pubDate: 'Wed, 28 Oct 2026 12:00:00 GMT',
+  },
+  {
+    title: 'Mahindra Rivenza Project Comparisons: Pune Landmark Developments',
+    link: 'https://mahindralifespaceshomes.in/compare/',
+    description: 'Objective comparative dossiers comparing Mahindra Rivenza against Godrej, VTP, Kolte Patil, and Pune landmarks.',
+    pubDate: 'Wed, 28 Oct 2026 12:00:00 GMT',
+  },
+  {
+    title: 'Mahindra Rivenza Infrastructure & Transit Connectivity Matrix',
+    link: 'https://mahindralifespaceshomes.in/connectivity/',
+    description: 'Connectivity matrix covering Pune Metro Line 3, PMRDA 36m Ring Road, and Hinjewadi-Mahalunge Mula River Bridge.',
+    pubDate: 'Wed, 28 Oct 2026 12:00:00 GMT',
+  },
+  {
+    title: 'Mahindra Rivenza Global NRI Real Estate Investment Desks',
+    link: 'https://mahindralifespaceshomes.in/nri/',
+    description: 'Dedicated wealth advisory and NRI investment portals for Dubai UAE, Silicon Valley USA, Singapore, and UK expat investors.',
+    pubDate: 'Wed, 28 Oct 2026 12:00:00 GMT',
+  },
+  {
+    title: 'Mahindra Lifespaces Pune Portfolio & Landmark Residential Projects',
+    link: 'https://mahindralifespaceshomes.in/brand/projects/',
+    description: 'Portfolio review of Mahindra Lifespaces developments in Pune including Rivenza, Citadel, Ivylush, and Happinest.',
+    pubDate: 'Wed, 28 Oct 2026 12:00:00 GMT',
+  }
+];
+
 export const GET: APIRoute = async () => {
   const rssXml = `<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
@@ -170,13 +223,13 @@ export const GET: APIRoute = async () => {
     <lastBuildDate>${new Date().toUTCString()}</lastBuildDate>
     <atom:link href="https://mahindralifespaceshomes.in/rss.xml" rel="self" type="application/rss+xml"/>
     <atom:link rel="hub" href="https://pubsubhubbub.appspot.com/"/>
-    ${articles
+    ${allRssItems
       .map(
         (art) => `
     <item>
       <title><![CDATA[${art.title}]]></title>
-      <link>https://mahindralifespaceshomes.in/articles/${art.slug}/</link>
-      <guid isPermaLink="true">https://mahindralifespaceshomes.in/articles/${art.slug}/</guid>
+      <link>${art.link}</link>
+      <guid isPermaLink="true">${art.link}</guid>
       <description><![CDATA[${art.description}]]></description>
       <pubDate>${art.pubDate}</pubDate>
     </item>`

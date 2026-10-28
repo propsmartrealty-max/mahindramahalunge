@@ -335,10 +335,15 @@ export async function onRequest(context) {
   modifiedHeaders.set('X-IndexNow-Status', 'Ready');
   modifiedHeaders.set('X-IndexNow-Key', activeGlobalKey);
 
-  // Clean, Low-Overhead Preconnect Link Header (Only critical font origins)
+  // Enterprise WebSub Hub Discovery, Canonical & Preconnect Link Headers
+  const canonicalUrl = `https://mahindralifespaceshomes.in${pathname}`;
   modifiedHeaders.set(
     'Link',
-    '<https://fonts.googleapis.com>; rel=preconnect, <https://fonts.gstatic.com>; rel=preconnect; crossorigin'
+    `<${canonicalUrl}>; rel="canonical", ` +
+    `<https://pubsubhubbub.appspot.com/>; rel="hub", ` +
+    `<https://mahindralifespaceshomes.in/rss.xml>; rel="self", ` +
+    `<https://fonts.googleapis.com>; rel=preconnect, ` +
+    `<https://fonts.gstatic.com>; rel=preconnect; crossorigin`
   );
 
   // Enterprise Security & WAF Headers
