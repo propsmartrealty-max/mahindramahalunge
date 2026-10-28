@@ -121,7 +121,7 @@ export const GET: APIRoute = async () => {
       <g:additional_image_link>https://cms.mahindralifespaces.com/web/sites/default/files/styles/web_banner_webp/public/2026-10/Swimming%20pool%20with%20sunken%20bar_Rivenza_11zon.webp</g:additional_image_link>
       <g:additional_image_link>https://cms.mahindralifespaces.com/web/sites/default/files/styles/web_banner_webp/public/2026-10/Multi-purpose_Rivenza__11zon.webp</g:additional_image_link>
       <g:additional_image_link>https://cms.mahindralifespaces.com/web/sites/default/files/styles/web_banner_webp/public/2026-10/Yoga%20lawn_Rivenza_11zon.webp</g:additional_image_link>
-      <g:additional_image_link>https://cms.mahindralifespaces.com/web/sites/default/files/styles/web_banner_webp/public/2026-10/2BHK%2520Premium.webp</g:additional_image_link>
+      <g:additional_image_link>https://cms.mahindralifespaces.com/web/sites/default/files/2026-10/2%20BHK%20premium%20%28687%20sqft%29_Rivenza.webp</g:additional_image_link>
       <g:availability>in stock</g:availability>
       <g:price>${p.price}</g:price>
       <g:sale_price>${p.salePrice}</g:sale_price>

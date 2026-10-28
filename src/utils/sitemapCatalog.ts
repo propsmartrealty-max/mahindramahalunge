@@ -73,7 +73,7 @@ export const PRIMARY_IMAGES: SitemapImage[] = [
     geo: 'Mahalunge, Baner Annex, Pune, India',
   },
   {
-    loc: 'https://cms.mahindralifespaces.com/web/sites/default/files/styles/web_banner_webp/public/2026-10/2BHK%2520Premium.webp',
+    loc: 'https://cms.mahindralifespaces.com/web/sites/default/files/2026-10/2%20BHK%20premium%20%28687%20sqft%29_Rivenza.webp',
     title: 'Official Sanctioned Architectural CAD Floor Plan',
     caption: 'MahaRERA sanctioned architectural layout blueprint for Mahindra Rivenza',
     geo: 'Pune, Maharashtra, India',

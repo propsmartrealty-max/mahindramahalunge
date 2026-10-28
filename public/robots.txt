@@ -117,6 +117,32 @@ User-agent: Baiduspider
 Allow: /
 
 # ------------------------------------------------------------------------------
+# 8b. Generative AI Search & Knowledge Indexers (Full Citation Authority)
+# ------------------------------------------------------------------------------
+User-agent: OAI-SearchBot
+Allow: /
+Allow: /llms.txt
+Allow: /llms-full.txt
+
+User-agent: ChatGPT-User
+Allow: /
+Allow: /llms.txt
+Allow: /llms-full.txt
+
+User-agent: PerplexityBot
+Allow: /
+Allow: /llms.txt
+Allow: /llms-full.txt
+
+User-agent: ClaudeBot
+Allow: /
+Allow: /llms.txt
+Allow: /llms-full.txt
+
+User-agent: Applebot-Extended
+Allow: /
+
+# ------------------------------------------------------------------------------
 # 9. Aggressive Non-Search Scraper Bots (Protect Serverless Edge & Bandwidth)
 # ------------------------------------------------------------------------------
 User-agent: AhrefsBot

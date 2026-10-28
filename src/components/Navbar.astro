@@ -6,17 +6,12 @@ import RiverFlowingEmblem from './RiverFlowingEmblem.astro';
 <header id="site-header" class="fixed top-3 sm:top-5 left-0 right-0 z-50 flex justify-center px-3 sm:px-6 transition-all duration-300">
   <div class="w-full max-w-6xl h-14 sm:h-16 bg-[#0c1017]/85 backdrop-blur-2xl border border-white/[0.16] hover:border-gold-500/50 rounded-full px-3.5 sm:px-6 flex items-center justify-between shadow-[0_16px_45px_rgba(0,0,0,0.7),0_0_25px_rgba(212,175,102,0.12)] transition-all duration-300 glass-shimmer">
     
-    <!-- Left: Dual Brand Identity (Mahindra Lifespaces + Mahindra Rivenza) -->
-    <a href="/" class="flex items-center space-x-2 sm:space-x-3.5 flex-shrink-0 group py-1" aria-label="Mahindra Rivenza Showcase">
-      <img 
-        src="/images/mahindra-lifespaces-logo.svg" 
-        alt="Mahindra Lifespaces" 
-        class="h-3 sm:h-3.5 w-auto max-w-[105px] sm:max-w-[130px] object-contain transition-transform group-hover:scale-105 block opacity-90 group-hover:opacity-100"
-        width="130"
-        height="14"
-      />
-      <div class="h-4 w-px bg-white/20 hidden sm:block"></div>
-      <RiverFlowingEmblem size="xs" layout="horizontal" showSubtitle={false} />
+    <!-- Left: Authentic Brand Identity (Animated River Crest + Mahindra Rivenza Typography) -->
+    <a href="/" class="flex items-center gap-2 sm:gap-3 flex-shrink-0 group py-0.5 whitespace-nowrap" aria-label="Mahindra Rivenza Showcase">
+      <RiverFlowingEmblem size="sm" layout="horizontal" showSubtitle={false} />
+      <span class="hidden xl:inline-flex items-center text-[9px] uppercase tracking-[0.22em] font-semibold text-gold-400 pl-2.5 border-l border-white/20">
+        Baner Annex
+      </span>
     </a>
 
     <!-- Center: Refined Minimal Desktop Nav Links -->

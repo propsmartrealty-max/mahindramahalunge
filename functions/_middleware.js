@@ -289,9 +289,9 @@ export async function onRequest(context) {
       // Geographic micro-market indexing tags for Baner Annex, Mahalunge / West Pune
       element.append(
         `<meta name="geo.region" content="IN-MH" />\n` +
-        `<meta name="geo.placename" content="Baner Annex, Mahalunge, Pune, Maharashtra 412115" />\n` +
-        `<meta name="geo.position" content="18.562536;73.727373" />\n` +
-        `<meta name="ICBM" content="18.562536, 73.727373" />\n`,
+        `<meta name="geo.placename" content="Mahindra Rivenza, Baner Annex, Mahalunge, Pune, Maharashtra 412115" />\n` +
+        `<meta name="geo.position" content="18.562313;73.727313" />\n` +
+        `<meta name="ICBM" content="18.562313, 73.727313" />\n`,
         { html: true }
       );
 
