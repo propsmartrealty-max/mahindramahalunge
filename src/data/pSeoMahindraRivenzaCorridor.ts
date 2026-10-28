@@ -1644,5 +1644,805 @@ export const rievenzaCorridorData: RivenzaDossierItem[] = [
       }
     ],
     ctaText: 'Schedule 1-on-1 Consultation with Global NRI Concierge'
+  },
+  {
+    slug: 'mahindra-rivenza-baner-annexe-price-list',
+    topic: 'Official Price List 2026',
+    h1: 'Mahindra Rivenza Baner Annexe Price List 2026: 2, 3 & 4 BHK Rates',
+    metaTitle: 'Mahindra Rivenza Baner Annexe Price List [Starts ₹90L*]',
+    metaDescription: 'Official 2026 price list for Mahindra Rivenza Baner Annexe. 2 BHK from ₹90L*, 3 BHK from ₹1.31 Cr*, 4 BHK from ₹2.20 Cr*. Download all-inclusive payment matrix.',
+    badge: 'Price Master List • 2026 Release',
+    summary: 'The official configuration-wise price list for Mahindra Rivenza Baner Annexe. Compare starting prices, agreement values, and all-inclusive estimates across all 9 sanctioned typologies.',
+    keyStats: [
+      { label: '2 BHK Optima', value: 'Starts ₹90 Lakhs*', color: 'text-gold-400' },
+      { label: '2 BHK Luxury', value: '₹1.04 Cr - ₹1.14 Cr*', color: 'text-white' },
+      { label: '3 BHK Deluxe', value: 'Starts ₹1.31 Cr*', color: 'text-emerald-400' },
+      { label: '4 BHK Sky Villa', value: 'Starts ₹2.20 Cr*', color: 'text-amber-300' }
+    ],
+    contentSections: [
+      {
+        title: 'Complete Typology-Wise Pricing Spectrum',
+        paragraphs: [
+          'Mahindra Rivenza at Baner Annexe provides competitive price-to-specification value in West Pune. While core Baner commands ₹11,500 to ₹14,000 per sq.ft, Mahindra Rivenza delivers institutional Mahindra Group construction quality starting from ₹90 Lakhs* for a 635 sq.ft carpet 2 BHK.',
+          'Larger family layouts including the 3 BHK Deluxe (882–894 sq.ft carpet) and 3 BHK Ultra Luxury (1,065 sq.ft carpet) range from ₹1.31 Crore to ₹1.60 Crore*, offering significant carpet area efficiency with zero wasted passages.'
+        ],
+        highlights: [
+          'Pre-launch pricing advantage for early priority expressions of interest',
+          'RERA-registered transparent cost sheet with zero hidden infrastructure charges',
+          'Phase 1 MahaRERA PR1261012602102 valid upto December 30, 2031'
+        ]
+      }
+    ],
+    faqs: [
+      {
+        q: 'What is the starting price at Mahindra Rivenza Baner Annexe?',
+        a: 'Residences at Mahindra Rivenza Baner Annexe start from ₹90 Lakhs* for 2 BHK Premium homes, ₹1.31 Crore* for 3 BHK homes, and ₹2.20 Crore* for 4 BHK sky estates.'
+      },
+      {
+        q: 'Does the price include car parking and clubhouse charges?',
+        a: 'Yes, the all-inclusive quotation covers covered basement/podium car parking, club membership, and infrastructure development charges.'
+      }
+    ],
+    ctaText: 'Download Complete Baner Annexe Price List PDF'
+  },
+  {
+    slug: 'mahindra-rivenza-baner-annexe-cost-sheet',
+    topic: 'Itemized Cost Sheet Breakdown',
+    h1: 'Mahindra Rivenza Baner Annexe Cost Sheet: Taxes & Levies Breakdown',
+    metaTitle: 'Mahindra Rivenza Baner Annexe Cost Sheet [Starts ₹90L*]',
+    metaDescription: 'Detailed unit-wise cost sheet for Mahindra Rivenza Baner Annexe. Agreement value, 7% stamp duty, 5% GST, parking & clubhouse charges. Transparent pricing.',
+    badge: 'Statutory Transparency • Zero Hidden Fees',
+    summary: 'A transparent, itemized cost sheet breakdown for Mahindra Rivenza Baner Annexe. Understand agreement value, statutory taxes (GST, Stamp Duty), and society formation charges.',
+    keyStats: [
+      { label: 'Agreement Base', value: 'Carpet Area Rate', color: 'text-white' },
+      { label: 'Stamp Duty', value: '7% Official Levies', color: 'text-gold-400' },
+      { label: 'GST Charge', value: '5% Residential', color: 'text-emerald-400' },
+      { label: 'Registration', value: '₹30,000 Govt Cap', color: 'text-amber-300' }
+    ],
+    contentSections: [
+      {
+        title: 'Itemized Breakdown of Taxes & Infrastructure Levies',
+        paragraphs: [
+          'Purchasing a home at Mahindra Rivenza is backed by Mahindra Lifespaces corporate governance. The sanctioned cost sheet details clubhouse development fees, electrical sub-station levies, water connection charges, and legal documentation fees upfront.',
+          'Government levies comprise 5% Stamp Duty, 1% Local Body Tax (LBT), and 1% Pune Metro Cess, totaling 7% payable at registration, alongside 5% GST without input tax credit for residential properties.'
+        ],
+        highlights: [
+          'Ring-fenced 70% customer collections deposited in MahaRERA escrow bank account',
+          'Bank APF approvals sanctioned across SBI, HDFC Bank, ICICI Bank, and Axis Bank',
+          'Slab-wise construction linked payment milestones aligned to architect certificates'
+        ]
+      }
+    ],
+    faqs: [
+      {
+        q: 'How much are the total taxes and registration charges for Mahindra Rivenza?',
+        a: 'Statutory taxes total 7% for Maharashtra Stamp Duty & Metro Cess plus 5% GST, along with a government registration fee capped at ₹30,000.'
+      },
+      {
+        q: 'When do I need to pay the stamp duty and registration charges?',
+        a: 'Stamp duty and registration are payable at the time of executing the registered Agreement for Sale, usually within 30 to 45 days of booking.'
+      }
+    ],
+    ctaText: 'Request Personalized Unit Cost Sheet Calculation'
+  },
+  {
+    slug: 'mahindra-rivenza-baner-annexe-booking-process',
+    topic: 'Official Booking & Allotment',
+    h1: 'Mahindra Rivenza Baner Annexe Booking Process: Token & Allotment Guide',
+    metaTitle: 'Mahindra Rivenza Baner Annexe Booking Token [Starts ₹90L*]',
+    metaDescription: 'Step-by-step booking guide for Mahindra Rivenza Baner Annexe. Priority EOI token ₹5 Lakhs, KYC checklist, digital allotment & pre-approved home loan desk.',
+    badge: 'Step-by-Step Guide • Priority Allotment',
+    summary: 'The comprehensive booking and allotment process for Mahindra Rivenza Baner Annexe. From Expression of Interest (EOI) token submission to MahaRERA agreement registration.',
+    keyStats: [
+      { label: 'Token Booking', value: '₹5 Lakhs Priority', color: 'text-gold-400' },
+      { label: 'KYC Required', value: 'PAN + Aadhaar', color: 'text-white' },
+      { label: 'NRI Allotment', value: 'Digital E-Sign', color: 'text-emerald-400' },
+      { label: 'Bank Sanction', value: '3-Day Fast Track', color: 'text-amber-300' }
+    ],
+    contentSections: [
+      {
+        title: 'Step-by-Step Reservation & Allotment Procedure',
+        paragraphs: [
+          'Booking a home at Mahindra Rivenza is streamlined and transparent. Prospective buyers submit an Expression of Interest (EOI) along with standard KYC documentation (PAN card and Aadhaar card; passport and OCI/PIO for NRI buyers).',
+          'Upon unit preference confirmation and floor selection, a priority booking token of ₹5 Lakhs is deposited directly into the designated Mahindra Lifespaces RERA project escrow bank account, generating an official booking receipt and allotment letter.'
+        ],
+        highlights: [
+          '100% digital paperwork and video verification available for outstation buyers',
+          'Zero cancellation penalty during the initial priority window period',
+          'Dedicated relationship manager assigned to coordinate bank loan disbursement'
+        ]
+      }
+    ],
+    faqs: [
+      {
+        q: 'What is the booking token amount for Mahindra Rivenza Baner Annexe?',
+        a: 'The standard priority booking token is ₹5 Lakhs, payable by account-payee cheque, demand draft, or secure RTGS/NEFT to the project escrow account.'
+      },
+      {
+        q: 'Can outstation or NRI buyers complete the booking online?',
+        a: 'Yes, our sales desk facilitates 100% digital KYC verification, virtual floor plan walkthroughs, and online payment gateways.'
+      }
+    ],
+    ctaText: 'Start Priority Booking & Unit Reservation'
+  },
+  {
+    slug: 'mahindra-rivenza-baner-annexe-floor-plans',
+    topic: 'Sanctioned Floor Plans & CAD Layouts',
+    h1: 'Mahindra Rivenza Baner Annexe Floor Plans: 2, 3 & 4 BHK Layouts',
+    metaTitle: 'Mahindra Rivenza Baner Annexe Floor Plans [Starts ₹90L*]',
+    metaDescription: 'Download sanctioned 2, 3 & 4 BHK CAD floor plans for Mahindra Rivenza Baner Annexe. 635 to 1,465 sq.ft carpet areas with zero corridor waste architecture.',
+    badge: 'CAD Blueprints • Sanctioned Plans',
+    summary: 'Detailed architectural CAD floor plans and carpet area breakdowns for 2, 3, and 4 BHK residences at Mahindra Rivenza Baner Annexe. Zero-corridor efficiency with private decks.',
+    keyStats: [
+      { label: '2 BHK Carpet', value: '635 - 747 Sq.Ft.', color: 'text-gold-400' },
+      { label: '3 BHK Carpet', value: '882 - 1,065 Sq.Ft.', color: 'text-white' },
+      { label: '4 BHK Carpet', value: '1,438 - 1,465 Sq.Ft.', color: 'text-emerald-400' },
+      { label: 'Efficiency', value: 'Zero Wasted Passages', color: 'text-amber-300' }
+    ],
+    contentSections: [
+      {
+        title: 'Biophilic Architectural Spatial Engineering',
+        paragraphs: [
+          'Every residence at Mahindra Rivenza Baner Annexe is sculpted with zero-corridor planning, ensuring that every square foot of carpet area is functional living space. Living rooms open directly onto deep extended balconies capturing riverfront and hill breezes.',
+          'The floor plans incorporate dedicated utility balconies adjacent to modular kitchens, separate dining foyers, and study alcoves designed specifically for modern hybrid work lifestyles.'
+        ],
+        highlights: [
+          'Master bedrooms engineered with dedicated walk-in wardrobe alcoves',
+          'Acoustically insulated sliding doors and powder-coated aluminum framing',
+          'Only 4 apartments per tower core ensuring dual-side open ventilation'
+        ]
+      }
+    ],
+    faqs: [
+      {
+        q: 'What is the RERA carpet area of 2 BHK at Mahindra Rivenza Baner Annexe?',
+        a: '2 BHK residences offer RERA carpet areas ranging from 635 sq.ft (688 sq.ft aggregate) up to 747 sq.ft (855 sq.ft aggregate) with private study alcoves.'
+      },
+      {
+        q: 'Are the floor plans approved by PMRDA and MahaRERA?',
+        a: 'Yes, all 9 configuration layouts are fully sanctioned under MahaRERA registration numbers PR1261012602102 and PM1261012602103.'
+      }
+    ],
+    ctaText: 'Download High-Resolution CAD Floor Plan PDF'
+  },
+  {
+    slug: 'mahindra-rivenza-baner-annexe-master-plan-layout',
+    topic: '13.46-Acre Township Master Plan',
+    h1: 'Mahindra Rivenza Baner Annexe Master Plan: 13.46-Acre Township Layout',
+    metaTitle: 'Mahindra Rivenza Baner Annexe Master Plan [Starts ₹90L*]',
+    metaDescription: 'Inspect 13.46-acre master layout of Mahindra Rivenza Baner Annexe. 9+ acres biophilic greens, 6 residential towers, 2 entry gates & ~44,000 sq.ft clubhouse.',
+    badge: 'Master Blueprint • 80%+ Open Area',
+    summary: 'The 13.46-acre master development layout of Mahindra Rivenza Baner Annexe. Explore tower positioning, 9+ acres central greens, vehicular-free podiums, and dual clubhouses.',
+    keyStats: [
+      { label: 'Total Land', value: '13.46 Acres', color: 'text-white' },
+      { label: 'Open Space', value: '9+ Acres (70%+)', color: 'text-emerald-400' },
+      { label: 'Residential Towers', value: '6 High-Rise Towers', color: 'text-gold-400' },
+      { label: 'Clubhouses', value: '~44,000 Sq.Ft. Dual', color: 'text-amber-300' }
+    ],
+    contentSections: [
+      {
+        title: 'Zoned Township Master Planning & Circulation',
+        paragraphs: [
+          'The master layout of Mahindra Rivenza separates vehicular circulation from pedestrian and residential recreation. Basements and dedicated ring roads absorb vehicular transit immediately at entry gates, leaving the central 9+ acres completely car-free.',
+          'Residential towers are arranged in an open horseshoe orientation, maximizing natural cross-ventilation from the Mula River corridor and preventing any tower from blocking sunlight or vistas of another.'
+        ],
+        highlights: [
+          'Dual grand entrance plazas along the planned PMRDA 36m DP road network',
+          'Central resort lagoon with sunken pool bar serving as the community nucleus',
+          'Peripheral jogging trails, futsal arenas, and tennis courts situated away from bedrooms'
+        ]
+      }
+    ],
+    faqs: [
+      {
+        q: 'How much open green space is planned at Mahindra Rivenza Baner Annexe?',
+        a: 'Over 9 contiguous acres—more than 70% of the entire 13.46-acre parcel—is dedicated to landscaped gardens, Miyawaki forests, and open-air athletic facilities.'
+      },
+      {
+        q: 'Is vehicular traffic allowed inside the central green park?',
+        a: 'No, the central greens are 100% vehicular-free, ensuring complete safety for walking seniors and playing children.'
+      }
+    ],
+    ctaText: 'Inspect Master Plan Blueprint with Numbered Key'
+  },
+  {
+    slug: 'mahindra-rivenza-baner-annexe-address-location-map',
+    topic: 'Address & Google Maps Directions',
+    h1: 'Mahindra Rivenza Baner Annexe Address: Google Maps & Directions',
+    metaTitle: 'Mahindra Rivenza Baner Annexe Location Map [Starts ₹90L*]',
+    metaDescription: 'Exact Google Maps address and route directions for Mahindra Rivenza Baner Annexe, Mahalunge. Seamless access from Baner, Balewadi High Street & Hinjewadi.',
+    badge: 'Exact Plus Code • HP6G+WWF',
+    summary: 'Detailed address, geographical coordinates, and driving directions to the Mahindra Rivenza sales gallery and site in Baner Annexe, Mahalunge, Pune 412115.',
+    keyStats: [
+      { label: 'Plus Code', value: 'HP6G+WWF Pune', color: 'text-gold-400' },
+      { label: 'Coordinates', value: '18.5625° N, 73.7273° E', color: 'text-white' },
+      { label: 'Pin Code', value: 'Pune 412115', color: 'text-emerald-400' },
+      { label: 'Baner Distance', value: '8 - 10 Mins Drive', color: 'text-amber-300' }
+    ],
+    contentSections: [
+      {
+        title: 'Arterial Road Access from Baner, Balewadi & Hinjewadi',
+        paragraphs: [
+          'Mahindra Rivenza is located at Baner Annexe / Mahalunge, off Baner-Hinjawadi Road, Pune 412115. Traveling from Baner or Balewadi High Street, drive westbound along the Balewadi-Mahalunge road directly to the site gallery in 8 to 12 minutes.',
+          'From Hinjewadi Phase 1, the upcoming 4-lane Mula River Bridge provides an immediate 7-minute direct route, eliminating the traditional traffic congestion of Wakad Chowk.'
+        ],
+        highlights: [
+          'Frontage on the 36m Town Planning Scheme DP road connecting directly to Sus and Pashan',
+          'Only 12 minutes from the Mumbai-Pune Expressway entry interchange',
+          'Ample visitor parking and air-conditioned experience lounge at on-site sales office'
+        ]
+      }
+    ],
+    faqs: [
+      {
+        q: 'What is the exact site address of Mahindra Rivenza?',
+        a: 'The site address is: Mahindra Rivenza, Baner Annex, off Baner-Hinjawadi Road, Mahalunge / Nande, Pune, Maharashtra 412115 (Plus Code: HP6G+WWF).'
+      },
+      {
+        q: 'How far is Mahindra Rivenza from Balewadi High Street?',
+        a: 'Balewadi High Street is located approximately 5.8 km away, taking around 10 to 12 minutes by car.'
+      }
+    ],
+    ctaText: 'Get Turn-by-Turn Google Maps GPS Route'
+  },
+  {
+    slug: 'mahindra-rivenza-baner-annexe-mula-bridge-route',
+    topic: 'Mula River Bridge Transit Velocity',
+    h1: 'Mahindra Rivenza Baner Annexe Mula Bridge: 7-Min Hinjewadi Transit',
+    metaTitle: 'Mahindra Rivenza Baner Annexe Mula Bridge [Starts ₹90L*]',
+    metaDescription: 'Drive time analysis via the upcoming 4-lane Mula River Bridge connecting Mahindra Rivenza Baner Annexe directly to Hinjewadi Phase 1 in under 7 minutes.',
+    badge: 'Infrastructure Catalyst • 4-Lane Bridge',
+    summary: 'How the upcoming 4-lane Mula River Bridge connects Mahindra Rivenza Baner Annexe directly to Hinjewadi Phase 1, cutting commute times from 35 minutes down to 7 minutes.',
+    keyStats: [
+      { label: 'New Bridge Transit', value: '7 Minutes Direct', color: 'text-emerald-400' },
+      { label: 'Old Wakad Detour', value: '35 - 45 Mins', color: 'text-rose-400' },
+      { label: 'Time Saved', value: '50+ Mins / Day', color: 'text-gold-400' },
+      { label: 'Lane Width', value: '4-Lane Heavy Duty', color: 'text-white' }
+    ],
+    contentSections: [
+      {
+        title: 'The Single Greatest Commute Transformation in West Pune',
+        paragraphs: [
+          'For thousands of IT professionals working in Rajiv Gandhi Infotech Park, crossing Wakad bridge during evening peak hours has been a persistent headache. The new 4-lane Mula River Bridge links Mahalunge and Baner Annexe directly to Hinjewadi Phase 1.',
+          'Residents of Mahindra Rivenza can step out of the main gate, cross the river corridor, and reach campus gates at Infosys, Wipro, and TCS in under 7 minutes without encountering a single highway signal.'
+        ],
+        highlights: [
+          'Saves over 250 hours annually in daily office transit for working professionals',
+          'Anticipated to drive a 20% to 25% capital appreciation boost upon commercial commissioning',
+          'Features segregated cycle tracks and pedestrian river promenades alongside vehicular lanes'
+        ]
+      }
+    ],
+    faqs: [
+      {
+        q: 'When will the Mula River Bridge connecting Mahalunge to Hinjewadi open?',
+        a: 'The 4-lane bridge structure is in advanced completion stages under PMRDA infrastructure scheduling for opening in 2026.'
+      },
+      {
+        q: 'How much commute time does the bridge save for Mahindra Rivenza residents?',
+        a: 'It shrinks the commute to Hinjewadi Phase 1 from 35–45 minutes down to approximately 6 to 8 minutes.'
+      }
+    ],
+    ctaText: 'Inspect Commute Time Savings Dossier'
+  },
+  {
+    slug: 'mahindra-rivenza-baner-annexe-metro-connectivity',
+    topic: 'Pune Metro Line 3 Connectivity',
+    h1: 'Mahindra Rivenza Baner Annexe Metro Connectivity: Line 3 Stations',
+    metaTitle: 'Mahindra Rivenza Baner Annexe Metro Line 3 [Starts ₹90L*]',
+    metaDescription: 'Explore Pune Metro Line 3 rapid transit connectivity from Mahindra Rivenza Baner Annexe. Minutes from Balewadi Stadium & Hinjewadi Phase 1 metro stations.',
+    badge: 'Rapid Transit • Line 3 Elevated',
+    summary: 'Evaluate Pune Metro Line 3 connectivity for Mahindra Rivenza Baner Annexe. Swift access to elevated metro stations connecting Hinjewadi Megapolis to Shivajinagar Court.',
+    keyStats: [
+      { label: 'Nearest Station', value: 'Balewadi Stadium (6m)', color: 'text-gold-400' },
+      { label: 'Hinjewadi Station', value: 'Phase 1 Metro (7m)', color: 'text-emerald-400' },
+      { label: 'Route Length', value: '23.3 KM Elevated', color: 'text-white' },
+      { label: 'Total Stations', value: '23 Stations on Line 3', color: 'text-amber-300' }
+    ],
+    contentSections: [
+      {
+        title: 'Zero-Car Rapid Transit Across Pune Urban Core',
+        paragraphs: [
+          'Pune Metro Line 3 is an ₹8,313 Crore high-speed elevated transit corridor connecting the western IT hub at Hinjewadi directly to the cultural and administrative heart at Shivajinagar. Mahindra Rivenza is strategically flanked by two Line 3 stations.',
+          'Residents can board at Balewadi Stadium Metro or Hinjewadi Phase 1 Metro station and travel across Pune University, Aundh, Baner, and Deccan without experiencing road traffic or parking hassles.'
+        ],
+        highlights: [
+          'Planned PMPML electric feeder bus loops connecting Mahalunge DP road to stations',
+          'Transit-oriented development premium historically boosts rental yields by 1.2% to 1.8%',
+          'Reduces carbon footprint in alignment with Mahindra Rivenza Net Zero living'
+        ]
+      }
+    ],
+    faqs: [
+      {
+        q: 'Which metro station is closest to Mahindra Rivenza Baner Annexe?',
+        a: 'The closest station is Balewadi Stadium Metro Station on Line 3, located approximately 3.2 km (5 to 7 mins) from the project.'
+      },
+      {
+        q: 'Can I travel to Pune Railway Station and Airport via Metro Line 3?',
+        a: 'Yes, Line 3 interchanges with Pune Metro Line 1 and Line 2 at Shivajinagar District Court, allowing seamless connections across Pune.'
+      }
+    ],
+    ctaText: 'Inspect Metro Feeder Map & Transit Timelines'
+  },
+  {
+    slug: 'mahindra-rivenza-baner-annexe-sunken-bar-swimming-pool',
+    topic: 'Aquatic Sunken Aqua Bar Pool',
+    h1: 'Mahindra Rivenza Baner Annexe Sunken Pool Bar: Resort Aqua Living',
+    metaTitle: 'Mahindra Rivenza Baner Annexe Sunken Pool [Starts ₹90L*]',
+    metaDescription: 'Explore resort aquatic living at Mahindra Rivenza Baner Annexe. Temperature-regulated swimming pool featuring an integrated sunken aqua bar & sun decks.',
+    badge: 'Signature Amenity • Aquatic Luxury',
+    summary: 'A signature lifestyle feature: the temperature-regulated resort swimming pool with an integrated sunken aqua bar, shallow kids pool, and riverfront sun decks at Mahindra Rivenza.',
+    keyStats: [
+      { label: 'Pool Design', value: 'Sunken Aqua Bar', color: 'text-gold-400' },
+      { label: 'Water System', value: 'Temperature Regulated', color: 'text-emerald-400' },
+      { label: 'Kids Area', value: 'Shallow Splash Deck', color: 'text-white' },
+      { label: 'Orientation', value: 'Riverfront Deck View', color: 'text-amber-300' }
+    ],
+    contentSections: [
+      {
+        title: 'Five-Star Resort Living at Your Doorstep',
+        paragraphs: [
+          'The swimming pool at Mahindra Rivenza is engineered to recreate five-star tropical resort living. Swimmers can swim directly up to the sunken aqua bar counter, enjoy chilled refreshments, and unwind on submerged loungers.',
+          'The pool is temperature-regulated to ensure comfortable year-round swimming, complemented by a dedicated shallow water zone for toddlers and acoustic water cascades buffering ambient sound.'
+        ],
+        highlights: [
+          'Submerged underwater seating stools and LED night illumination rings',
+          'Shaded poolside cabanas designed for weekend gatherings and relaxing reads',
+          'Advanced multi-stage sand and UV filtration providing clean, chlorine-gentle water'
+        ]
+      }
+    ],
+    faqs: [
+      {
+        q: 'Is the swimming pool at Mahindra Rivenza heated or temperature regulated?',
+        a: 'Yes, the pool features heat-pump temperature regulation, allowing pleasant swimming during cooler Pune winter months.'
+      },
+      {
+        q: 'Is there a separate splash pool for children?',
+        a: 'Yes, a separate 1.5-foot shallow kids wading pool with gentle water fountains is integrated alongside the main pool deck.'
+      }
+    ],
+    ctaText: 'Inspect Resort Amenities Dossier & Gallery'
+  },
+  {
+    slug: 'mahindra-rivenza-baner-annexe-clubhouse-amenities-50-plus',
+    topic: '50+ Curated Resort Amenities',
+    h1: 'Mahindra Rivenza Baner Annexe Amenities: ~44,000 Sq.Ft. Clubhouse',
+    metaTitle: 'Mahindra Rivenza Baner Annexe 50+ Amenities [Starts ₹90L*]',
+    metaDescription: 'Complete guide to 50+ curated resort amenities across 6 lifestyle zones at Mahindra Rivenza Baner Annexe, featuring ~44,000 sq.ft grand dual clubhouses.',
+    badge: '6 Lifestyle Zones • 50+ Amenities',
+    summary: 'Over 2.65 Lakh sq.ft of recreational enclaves and ~44,000 sq.ft dual clubhouses at Mahindra Rivenza Baner Annexe. Athletic courts, biophilic parks, and co-working lounges.',
+    keyStats: [
+      { label: 'Total Amenities', value: '50+ Curated Features', color: 'text-gold-400' },
+      { label: 'Amenity Parcel', value: '2.65 Lakh+ Sq.Ft.', color: 'text-white' },
+      { label: 'Clubhouse Area', value: '~44,000 Sq.Ft. Total', color: 'text-emerald-400' },
+      { label: 'Sports Arenas', value: 'Futsal, Tennis, Squash', color: 'text-amber-300' }
+    ],
+    contentSections: [
+      {
+        title: 'Six Curated Lifestyle Zones for Multi-Generational Living',
+        paragraphs: [
+          'The amenities at Mahindra Rivenza are systematically categorized into six distinct lifestyle zones: Aquatic Wellness, Championship Athletics, Biophilic Nature & Forest, The Grand Clubhouse, Kids & Family Adventure, and Smart Sustainability.',
+          'Whether you are an athlete seeking a FIFA-grade futsal cage, a remote executive needing soundproof Zoom pods in the business lounge, or a senior citizen enjoying reflexology paths, every age group is catered to.'
+        ],
+        highlights: [
+          'Championship indoor sports including 2 wooden badminton courts and squash court',
+          'Private 24-seater mini-cineplex with Dolby Atmos surround sound for movie nights',
+          'Double-height celebration banquet hall accommodating up to 250 guests with lawn'
+        ]
+      }
+    ],
+    faqs: [
+      {
+        q: 'What sports facilities are included at Mahindra Rivenza Baner Annexe?',
+        a: 'The township features a floodlit synthetic futsal arena, championship tennis court, 2 indoor badminton courts, glass-back squash court, pickleball court, and half basketball court.'
+      },
+      {
+        q: 'Are there work-from-home facilities in the clubhouse?',
+        a: 'Yes, an executive co-working lounge equipped with high-speed fiber internet and private soundproof video-call booths is available to all residents.'
+      }
+    ],
+    ctaText: 'Download Complete 50+ Amenities Master Brochure'
+  },
+  {
+    slug: 'mahindra-rivenza-baner-annexe-tower-configuration-floors',
+    topic: 'Tower Configuration & High-Rise Floors',
+    h1: 'Mahindra Rivenza Baner Annexe Tower Configuration: G+32 to G+37 Storeys',
+    metaTitle: 'Mahindra Rivenza Baner Annexe Tower Floors [Starts ₹90L*]',
+    metaDescription: 'Architectural tower specifications of Mahindra Rivenza Baner Annexe. G+32 to G+37 high-rise towers, 4 units per core, 3 high-speed lifts & panoramic views.',
+    badge: 'Tower Architecture • 4 Units Per Core',
+    summary: 'The vertical architectural design of Mahindra Rivenza Baner Annexe: 6 high-rise towers rising G+32 to G+37 storeys with 4 apartments per floor plate and 3 high-speed lifts.',
+    keyStats: [
+      { label: 'Tower Heights', value: 'G+32 to G+37 Storeys', color: 'text-gold-400' },
+      { label: 'Units Per Core', value: 'Only 4 Residences', color: 'text-emerald-400' },
+      { label: 'Lifts Per Tower', value: '3 High-Speed Lifts', color: 'text-white' },
+      { label: 'Ceiling Height', value: '10.2 Ft Clear Volume', color: 'text-amber-300' }
+    ],
+    contentSections: [
+      {
+        title: 'Privacy-Centric Floor Plates with Monolithic Engineering',
+        paragraphs: [
+          'High-density living is avoided at Mahindra Rivenza. Each tower core is engineered with only 4 residences per landing, eliminating long shared corridors and ensuring that living room walls do not touch adjacent neighbors.',
+          'Constructed using precision monolithic Aluform / Mivan shuttering technology, the structural framework delivers seismically certified Zone III structural resilience with superior acoustic privacy between floors.'
+        ],
+        highlights: [
+          'Three high-speed 2.5 m/s elevators (Schindler / Otis) including a dedicated stretcher lift',
+          'Dual fire-refuge terraces and pressurized smoke-free fire escape staircases',
+          'Elevated floor rise options capturing panoramic 270-degree hill and river vistas'
+        ]
+      }
+    ],
+    faqs: [
+      {
+        q: 'How many flats are there on each floor at Mahindra Rivenza Baner Annexe?',
+        a: 'Each tower floor plate features only 4 residential apartments, providing maximum acoustic tranquility and cross-ventilation.'
+      },
+      {
+        q: 'How many elevators serve each tower?',
+        a: 'Each residential high-rise tower is serviced by 3 high-speed automatic elevators, including 2 passenger lifts and 1 large stretcher service lift with power backup.'
+      }
+    ],
+    ctaText: 'Inspect Tower Stacking Plans & Floor Availability'
+  },
+  {
+    slug: 'mahindra-rivenza-baner-annexe-vastu-compliant-homes',
+    topic: 'Vastu-Compliant East-Facing Layouts',
+    h1: 'Mahindra Rivenza Baner Annexe Vastu Homes: East & North-East Entry',
+    metaTitle: 'Mahindra Rivenza Baner Annexe Vastu Homes [Starts ₹90L*]',
+    metaDescription: '100% Vastu-compliant 2, 3 & 4 BHK apartments at Mahindra Rivenza Baner Annexe. East-facing entry, North-East balconies, optimum morning sunlight & wind flow.',
+    badge: 'Vastu Shastra • Harmonious Living',
+    summary: 'A curated analysis of Vastu-compliant configurations at Mahindra Rivenza Baner Annexe. Discover East and North-East facing entrance apartments with optimal cosmic alignment.',
+    keyStats: [
+      { label: 'Entrance Facing', value: 'East & North-East Options', color: 'text-gold-400' },
+      { label: 'Kitchen Placement', value: 'South-East (Agni Zone)', color: 'text-emerald-400' },
+      { label: 'Master Bedroom', value: 'South-West Stability', color: 'text-white' },
+      { label: 'Living Balconies', value: 'North & East Sun Catchers', color: 'text-amber-300' }
+    ],
+    contentSections: [
+      {
+        title: 'Ancient Spatial Wisdom Integrated with Contemporary Architecture',
+        paragraphs: [
+          'For Indian families and investors, Vastu Shastra alignment is an essential criterion. The architectural team at Mahindra Lifespaces harmonized traditional directional principles with bioclimatic structural design.',
+          'Select inventory at Mahindra Rivenza offers auspicious East and North-East entrance doorways, South-East fire corners for modular kitchens, and South-West master suites fostering peace and familial prosperity.'
+        ],
+        highlights: [
+          'Optimal natural morning sunlight bathing the living room and prayer puja alcove',
+          'Unobstructed air circulation from North-East to South-West maximizing positive energy',
+          'Step-free entrance thresholds compliant with universal accessibility and Vastu rules'
+        ]
+      }
+    ],
+    faqs: [
+      {
+        q: 'Are Vastu-compliant flats available at Mahindra Rivenza Baner Annexe?',
+        a: 'Yes, a significant proportion of 2, 3, and 4 BHK layouts feature East and North-East entrance alignments with South-East kitchen locations.'
+      },
+      {
+        q: 'Can I specifically request a Vastu-certified inventory unit?',
+        a: 'Yes, our sales advisory desk can filter available inventory by directional orientation and entrance facing.'
+      }
+    ],
+    ctaText: 'Request Vastu Layout Consultation & Inventory Filter'
+  },
+  {
+    slug: 'mahindra-rivenza-baner-annexe-igbc-gold-net-zero',
+    topic: 'Net Zero Waste & IGBC Gold Green Living',
+    h1: 'Mahindra Rivenza Baner Annexe Net Zero: IGBC Gold Green Homes',
+    metaTitle: 'Mahindra Rivenza Baner Annexe Net Zero Homes [Starts ₹90L*]',
+    metaDescription: 'Experience Net Zero Waste to Landfill & IGBC Gold Pre-Certified sustainable residences at Mahindra Rivenza Baner Annexe with solar microgrid & clean design.',
+    badge: 'Sustainability Leader • Net Zero Waste',
+    summary: 'The green engineering moat of Mahindra Rivenza Baner Annexe. Pre-certified IGBC Gold, Net Zero Waste to Landfill, solar power microgrids, and 100% rainwater harvesting.',
+    keyStats: [
+      { label: 'Green Rating', value: 'Pre-Certified IGBC Gold', color: 'text-emerald-400' },
+      { label: 'Waste Mandate', value: 'Net Zero to Landfill', color: 'text-gold-400' },
+      { label: 'Energy Savings', value: '~22% Lower HVAC Load', color: 'text-white' },
+      { label: 'Water Security', value: '100% Rainwater Recharged', color: 'text-amber-300' }
+    ],
+    contentSections: [
+      {
+        title: 'Building Responsibly for Generational Longevity',
+        paragraphs: [
+          'Mahindra Lifespaces is India’s foremost pioneer in green real estate development. Mahindra Rivenza is designed from the foundation as an eco-smart biophilic development holding pre-certification for IGBC Gold standards.',
+          'Organic Waste Converters process 100% of wet domestic waste on-site into rich compost for the 9+ acres of landscaped gardens, while dual plumbing lines recycle treated STP water for toilet flushing and landscape irrigation.'
+        ],
+        highlights: [
+          'Rooftop solar photovoltaic panels generating clean renewable energy for common amenities',
+          'Low-VOC paints, reflective roof tiles, and double-glazed windows curbing heat absorption',
+          'Extensive electric vehicle charging bays throughout both basements and visitor parking'
+        ]
+      }
+    ],
+    faqs: [
+      {
+        q: 'What does Net Zero Waste to Landfill mean at Mahindra Rivenza?',
+        a: 'It means over 95% of all solid and organic waste produced within the township is segregated, recycled, or composted on-site, diverting it from municipal landfills.'
+      },
+      {
+        q: 'Will living in an IGBC Gold building reduce my electricity bills?',
+        a: 'Yes, energy-efficient building orientation and solar-powered common utilities reduce individual air conditioning loads and lower monthly society maintenance costs.'
+      }
+    ],
+    ctaText: 'Download IGBC Gold Green Building Dossier'
+  },
+  {
+    slug: 'mahindra-rivenza-baner-annexe-for-it-professionals',
+    topic: 'Workplace Living for IT Engineers',
+    h1: 'Mahindra Rivenza Baner Annexe for IT Engineers: Hinjewadi Tech Homes',
+    metaTitle: 'Mahindra Rivenza Baner Annexe For IT Pros [Starts ₹90L*]',
+    metaDescription: 'Why tech professionals from Infosys, Wipro, TCS & Cognizant choose Mahindra Rivenza Baner Annexe. 7 mins commute, EV bays, acoustic glazing & co-working.',
+    badge: 'IT Workforce Choice • 7 Mins Commute',
+    summary: 'A tailored analysis for software engineers, product managers, and tech leadership working in Hinjewadi Phase 1, 2, and 3 evaluating residences at Mahindra Rivenza Baner Annexe.',
+    keyStats: [
+      { label: 'Infosys Distance', value: '7 Mins Commute', color: 'text-gold-400' },
+      { label: 'Wipro Circle', value: '6 Mins Commute', color: 'text-emerald-400' },
+      { label: 'High-Speed Fiber', value: 'FTTH in Every Home', color: 'text-white' },
+      { label: 'Hybrid Living', value: 'Co-Working & Zoom Pods', color: 'text-amber-300' }
+    ],
+    contentSections: [
+      {
+        title: 'Reclaiming Life Balance for Pune’s Technology Leadership',
+        paragraphs: [
+          'Long traffic snarls along Hinjewadi-Wakad road drain precious personal hours. Mahindra Rivenza Baner Annexe provides software engineers with an immediate 7-minute direct route to Infosys, Cognizant, TCS Sahyadri, and Tech Mahindra via the 4-lane river bridge.',
+          'Residences are architected for the hybrid work era, featuring dedicated study alcoves with pre-installed high-speed FTTH fiber connections, acoustic double-glazed windows, and quiet co-working pods in the clubhouse.'
+        ],
+        highlights: [
+          'Fast EV vehicle charging infrastructure for eco-conscious tech commuters',
+          'Strong rental demand from expat and senior IT managers delivering 4.8% to 5.4% yields',
+          'Proximity to Balewadi High Street breweries, restaurants, and shopping for weekend unwinding'
+        ]
+      }
+    ],
+    faqs: [
+      {
+        q: 'How long does it take to reach Infosys Phase 1 from Mahindra Rivenza?',
+        a: 'Via the upcoming 4-lane Mula River Bridge, the drive to Infosys Phase 1 takes approximately 6 to 8 minutes under normal driving conditions.'
+      },
+      {
+        q: 'Are home loans pre-approved for IT corporate employees?',
+        a: 'Yes, special corporate home loan processing with concessional processing fees is available for employees of tier-1 IT firms through SBI, HDFC, and ICICI.'
+      }
+    ],
+    ctaText: 'Inspect IT Commute Advantage & Corporate Loan Desk'
+  },
+  {
+    slug: 'mahindra-rivenza-baner-annexe-sample-flat-video-tour',
+    topic: '3D Sample Flat & Video Walkthrough',
+    h1: 'Mahindra Rivenza Baner Annexe Sample Flat: 4 BHK Show Home Video',
+    metaTitle: 'Mahindra Rivenza Baner Annexe Virtual Tour [Starts ₹90L*]',
+    metaDescription: 'Take an interactive 3D virtual tour of the on-site 4 BHK show residence at Mahindra Rivenza Baner Annexe. Walk through luxury living rooms & modular kitchens.',
+    badge: 'On-Site Show Home • 4 BHK Ready',
+    summary: 'Experience the on-site 4 BHK show residence at Mahindra Rivenza Baner Annexe virtually. Explore the imported marble finish, panoramic balconies, and master bedroom craftsmanship.',
+    keyStats: [
+      { label: 'Show Residence', value: '4 BHK Fully Furnished', color: 'text-gold-400' },
+      { label: 'Sales Gallery', value: 'Open 7 Days a Week', color: 'text-white' },
+      { label: '3D Walkthrough', value: 'High-Res Virtual Tour', color: 'text-emerald-400' },
+      { label: 'Private Preview', value: 'VIP Escorted Tour', color: 'text-amber-300' }
+    ],
+    contentSections: [
+      {
+        title: 'Step Inside Your Future Luxury Sanctuary',
+        paragraphs: [
+          'A fully finished, furnished 4 BHK model residence is open for private viewings at the on-site experience centre in Baner Annexe. Prospective homebuyers can physically examine the craftsmanship, acoustic window sealing, ceiling heights, and door hardware.',
+          'For overseas NRI investors and outstation buyers, our sales desk offers guided 1-on-1 virtual walkthroughs via high-definition video calls, walking through room dimensions and finish mockups in real time.'
+        ],
+        highlights: [
+          'Inspect the living-dining foyer with 800×800 mm glazed vitrified tiles',
+          'Tour the modular kitchen setup with quartz worktops and piped natural gas points',
+          'Step out onto the deep river-facing balcony and experience the Sahyadri breeze'
+        ]
+      }
+    ],
+    faqs: [
+      {
+        q: 'Is the show flat at Mahindra Rivenza Baner Annexe open for site visits?',
+        a: 'Yes, the 4 BHK show flat is open daily from 9:30 AM to 7:00 PM at the Baner Annexe sales gallery. Prior booking is recommended for private parking.'
+      },
+      {
+        q: 'Can I book a video call walkthrough if I live outside Pune?',
+        a: 'Yes, our sales advisors provide dedicated live Zoom and Google Meet video walkthroughs tailored to your timezone.'
+      }
+    ],
+    ctaText: 'Schedule Private Show Flat Walkthrough or Video Call'
+  },
+  {
+    slug: 'mahindra-rivenza-baner-annexe-maintenance-charges',
+    topic: 'Society Maintenance Charges & Sinking Fund',
+    h1: 'Mahindra Rivenza Baner Annexe Maintenance Charges: Cost Breakdown',
+    metaTitle: 'Mahindra Rivenza Baner Annexe Maintenance [Starts ₹90L*]',
+    metaDescription: 'Estimated monthly maintenance charges & society formation breakdown for Mahindra Rivenza Baner Annexe. Transparent calculations based on carpet area sq.ft.',
+    badge: 'Society Maintenance • Transparent Estimations',
+    summary: 'A detailed projection of monthly society maintenance charges, sinking fund contributions, and operational utility costs at Mahindra Rivenza Baner Annexe.',
+    keyStats: [
+      { label: 'Est. Maintenance', value: '₹3.50 - ₹4.50 / Sq.Ft.', color: 'text-gold-400' },
+      { label: 'Advance Deposit', value: '12 - 24 Months Initial', color: 'text-white' },
+      { label: 'Solar Offset', value: 'Reduces Utility Bills', color: 'text-emerald-400' },
+      { label: 'RERA Compliance', value: 'Escrow Ring-Fenced', color: 'text-amber-300' }
+    ],
+    contentSections: [
+      {
+        title: 'Cost-Optimized Common Utility Management via Solar',
+        paragraphs: [
+          'Operating 2.65 Lakh+ sq.ft of luxury amenities could typically lead to high monthly maintenance bills. However, Mahindra Rivenza leverages rooftop solar microgrids and smart LED automation to power clubhouse lighting, elevators, and water pumps.',
+          'Estimated maintenance charges range between ₹3.50 and ₹4.50 per sq.ft of carpet area per month, covering 24/7 security, professional landscape gardening, swimming pool lifeguards, and generator diesel backups.'
+        ],
+        highlights: [
+          'Zero profit markup on initial maintenance funds managed by Mahindra facility team',
+          '100% transparent audit accounts transitioned to the cooperative housing society at handover',
+          'Separate sinking fund reserves established for long-term structural maintenance and repainting'
+        ]
+      }
+    ],
+    faqs: [
+      {
+        q: 'What are the estimated maintenance charges at Mahindra Rivenza Baner Annexe?',
+        a: 'The estimated monthly maintenance charges are projected at ₹3.50 to ₹4.50 per sq.ft of carpet area, subject to final society formation.'
+      },
+      {
+        q: 'Is maintenance collected in advance at possession?',
+        a: 'Yes, as per standard real estate practice, 12 to 24 months of advance maintenance is deposited into an interest-bearing society escrow account at handover.'
+      }
+    ],
+    ctaText: 'Request Detailed Maintenance & Sinking Fund Sheet'
+  },
+  {
+    slug: 'mahindra-rivenza-baner-annexe-stamp-duty-registration-gst',
+    topic: 'Stamp Duty, Registration & GST Levies',
+    h1: 'Mahindra Rivenza Baner Annexe Stamp Duty & GST: 2026 Levies Guide',
+    metaTitle: 'Mahindra Rivenza Baner Annexe Stamp Duty [Starts ₹90L*]',
+    metaDescription: 'Government levy calculations for Mahindra Rivenza Baner Annexe: 5% Stamp Duty + 1% LBT + 1% Metro Cess (7% Total) plus 5% GST without input tax credit.',
+    badge: 'Government Levies • 2026 Rates',
+    summary: 'The exact calculation of Maharashtra Government taxes, Stamp Duty (7%), Metro Cess, and Goods & Services Tax (GST) for properties at Mahindra Rivenza Baner Annexe.',
+    keyStats: [
+      { label: 'Stamp Duty Rate', value: '5% Base Duty', color: 'text-gold-400' },
+      { label: 'Local Body Tax', value: '1% LBT Surcharge', color: 'text-white' },
+      { label: 'Metro Cess', value: '1% Infrastructure Cess', color: 'text-emerald-400' },
+      { label: 'GST on Value', value: '5% Standard Rate', color: 'text-amber-300' }
+    ],
+    contentSections: [
+      {
+        title: 'Navigating Maharashtra Real Estate Taxation Accurately',
+        paragraphs: [
+          'Calculating the total acquisition cost of an apartment requires evaluating statutory state and central levies. In Pune municipal and PMRDA jurisdiction, the total stamp duty is 7% (5% Stamp Duty + 1% Local Body Tax + 1% Metro Infrastructure Cess).',
+          'Additionally, under-construction residential properties in India attract 5% GST on the agreement value. Ready-possession homes with an Occupancy Certificate (OC) are exempt from GST, offering savings at later project stages.'
+        ],
+        highlights: [
+          'Registration fee capped at ₹30,000 for residential properties above ₹30 Lakhs in Maharashtra',
+          'Concessions available on home loan stamp duty for women co-borrowers in designated brackets',
+          'Tax deductions under Section 80C up to ₹1.5 Lakhs on principal stamp duty reimbursement'
+        ]
+      }
+    ],
+    faqs: [
+      {
+        q: 'What is the total stamp duty percentage in Baner Annexe Pune?',
+        a: 'The total stamp duty payable is 7% of the agreement value (5% Stamp Duty + 1% LBT + 1% Metro Cess).'
+      },
+      {
+        q: 'Is GST applicable on Mahindra Rivenza apartment purchases?',
+        a: 'Yes, 5% GST is applicable on under-construction residential units under Indian tax regulations.'
+      }
+    ],
+    ctaText: 'Calculate Exact Stamp Duty & Taxes for Your Unit'
+  },
+  {
+    slug: 'mahindra-rivenza-baner-annexe-vs-kasturi-apostrophe-hinjewadi',
+    topic: 'Mahindra vs Kasturi Apostrophe',
+    h1: 'Mahindra Rivenza Baner Annexe vs Kasturi Apostrophe: 2026 Comparison',
+    metaTitle: 'Mahindra Rivenza Baner Annexe vs Kasturi [Starts ₹90L*]',
+    metaDescription: 'Head-to-head comparison of Mahindra Rivenza Baner Annexe vs Kasturi Apostrophe Hinjewadi. Evaluate land scale, open green acreage, pricing & build quality.',
+    badge: 'Project Scorecard • Factual Analysis',
+    summary: 'A head-to-head architectural and investment comparison between Mahindra Rivenza Baner Annexe and Kasturi Apostrophe Hinjewadi. Land density, open greens, and pricing.',
+    keyStats: [
+      { label: 'Land Parcel', value: '13.46 Acres vs 5.5 Acres', color: 'text-gold-400' },
+      { label: 'Open Green Area', value: '9+ Acres vs ~3 Acres', color: 'text-emerald-400' },
+      { label: 'Clubhouse Area', value: '~44,000 vs ~18,000 Sq.Ft.', color: 'text-white' },
+      { label: 'Starting Price', value: '₹90L* vs ₹1.10Cr*', color: 'text-amber-300' }
+    ],
+    contentSections: [
+      {
+        title: 'Master Development Scale vs Boutique Enclave',
+        paragraphs: [
+          'Kasturi Apostrophe has built a respected reputation in Hinjewadi for boutique luxury finishes and contemporary architecture. However, Mahindra Rivenza offers a significantly larger 13.46-acre master township with 9+ contiguous acres of central biophilic parks.',
+          'For buyers prioritizing expansive open spaces, Olympic-caliber sports facilities, dual clubhouses totaling ~44,000 sq.ft, and institutional Mahindra Group governance, Mahindra Rivenza presents superior long-term livability.'
+        ],
+        highlights: [
+          'Mahindra Rivenza features a lower residential density per acre than typical Hinjewadi projects',
+          'Wider 36m DP road connectivity compared to congested internal Hinjewadi Phase 1 lanes',
+          'Pre-certified IGBC Gold Net Zero waste design lowering monthly carbon footprint'
+        ]
+      }
+    ],
+    faqs: [
+      {
+        q: 'Which project offers larger open space: Mahindra Rivenza or Kasturi Apostrophe?',
+        a: 'Mahindra Rivenza offers over 9 acres of landscaped open spaces within a 13.46-acre township, providing more than triple the open area of boutique developments.'
+      },
+      {
+        q: 'How does the starting price compare between both projects?',
+        a: 'Mahindra Rivenza offers early entry starting at ₹90 Lakhs* for 2 BHK units compared to higher boutique tickets at Kasturi Apostrophe.'
+      }
+    ],
+    ctaText: 'Inspect Comprehensive Comparison Matrix & Scorecard'
+  },
+  {
+    slug: 'mahindra-rivenza-baner-annexe-vs-vj-yashwin-encore',
+    topic: 'Mahindra vs Vilas Javdekar Yashwin',
+    h1: 'Mahindra Rivenza Baner Annexe vs VJ Yashwin Encore: Comparison',
+    metaTitle: 'Mahindra Rivenza Baner Annexe vs VJ Encore [Starts ₹90L*]',
+    metaDescription: 'Factual comparison: Mahindra Rivenza Baner Annexe vs Vilas Javdekar (VJ) Yashwin Encore. Carpet area efficiency, density, open green space & brand pedigree.',
+    badge: 'Developer Comparison • Factual Due Diligence',
+    summary: 'Evaluating Mahindra Rivenza Baner Annexe against Vilas Javdekar Yashwin Encore in West Pune. Compare construction quality, unit densities, green reserves, and RERA delivery.',
+    keyStats: [
+      { label: 'Brand Pedigree', value: 'Mahindra Group vs Regional', color: 'text-gold-400' },
+      { label: 'Land Parcel', value: '13.46 Acres vs 4 Acres', color: 'text-white' },
+      { label: 'Clubhouse Size', value: '~44,000 vs ~15,000 Sq.Ft.', color: 'text-emerald-400' },
+      { label: 'Green Ratio', value: '70%+ Open Bio-Reserve', color: 'text-amber-300' }
+    ],
+    contentSections: [
+      {
+        title: 'Institutional Grade-A Heritage vs Local Development',
+        paragraphs: [
+          'Vilas Javdekar (VJ) is an active regional Pune builder with multiple projects in Wakad and Tathawade. However, Mahindra Rivenza operates under the institutional umbrella of the $21+ Billion Mahindra Group, listed on both NSE and BSE.',
+          'The scale of 13.46 acres allows Mahindra Rivenza to deliver dual clubhouses, sunken aqua bar swimming pools, and 1.2 km running loops that smaller 4-acre urban infill plots cannot accommodate.'
+        ],
+        highlights: [
+          'Zero-corridor floor plate planning delivering larger usable carpet rooms',
+          'Strict adherence to MahaRERA escrow ring-fencing under PR1261012602102 and PM1261012602103',
+          'Superior resale liquidity supported by Mahindra Lifespaces pan-India brand reputation'
+        ]
+      }
+    ],
+    faqs: [
+      {
+        q: 'Why choose Mahindra Rivenza over Vilas Javdekar projects?',
+        a: 'Mahindra Rivenza offers a much larger 13.46-acre master community with 9+ acres of greens, ~44,000 sq.ft dual clubhouses, and institutional Mahindra corporate governance.'
+      },
+      {
+        q: 'Are the construction specifications superior at Mahindra Rivenza?',
+        a: 'Yes, monolithic Aluform / Mivan shuttering, Grohe/Kohler sanitaryware, and IGBC Gold pre-certification ensure premium durability.'
+      }
+    ],
+    ctaText: 'Download Complete Developer Comparison Scorecard'
+  },
+  {
+    slug: 'mahindra-rivenza-baner-annexe-resale-and-rental-forecast-2026',
+    topic: 'Resale & Rental Yield Forecast',
+    h1: 'Mahindra Rivenza Baner Annexe Resale & Rental Forecast Through 2031',
+    metaTitle: 'Mahindra Rivenza Baner Annexe Resale & ROI [Starts ₹90L*]',
+    metaDescription: 'Capital appreciation forecast & rental yield analysis for Mahindra Rivenza Baner Annexe through 2031. Infrastructure multipliers & Hinjewadi tenant demand.',
+    badge: 'ROI & Wealth Forecast • 2026-2031',
+    summary: 'Comprehensive economic and capital appreciation forecast for Mahindra Rivenza Baner Annexe. Explore projected rental yields of 4.8%-5.4% and infrastructure-driven multipliers.',
+    keyStats: [
+      { label: 'Rental Yield', value: '4.8% - 5.4% Projected', color: 'text-emerald-400' },
+      { label: '5-Yr Appreciation', value: '45% - 58% Forecast', color: 'text-gold-400' },
+      { label: 'Tenant Base', value: 'Hinjewadi IT Leadership', color: 'text-white' },
+      { label: 'Catalysts', value: 'Mula Bridge + Metro Line 3', color: 'text-amber-300' }
+    ],
+    contentSections: [
+      {
+        title: 'The Multiplier Effect of Mega Civic Infrastructure',
+        paragraphs: [
+          'Baner Annexe and Mahalunge are benefiting from over ₹25,000 Crore in sanctioned PMRDA infrastructure projects. The completion of the 4-lane Mula River Bridge, Pune Metro Line 3, and the PMRDA 36m Town Planning Ring Road will establish Baner Annexe as the primary residential address for West Pune.',
+          'Knight Frank and Housing.com market research data forecasts property price appreciation of 45% to 58% in the Mahalunge-Baner corridor through 2031, driven by relentless tenant demand from the 400,000+ tech workforce in Hinjewadi.'
+        ],
+        highlights: [
+          '2 BHK projected monthly rentals of ₹32,000 to ₹38,000 upon possession handover',
+          '3 BHK projected monthly rentals of ₹45,000 to ₹58,000 catering to senior tech executives',
+          'Institutional exit liquidity with strong secondary resale market preference for Mahindra homes'
+        ]
+      }
+    ],
+    faqs: [
+      {
+        q: 'What is the projected rental yield at Mahindra Rivenza Baner Annexe?',
+        a: 'Projected gross rental yields range between 4.8% and 5.4%, significantly higher than standard residential yields of 3% in central Pune.'
+      },
+      {
+        q: 'What factors will drive property price appreciation at Mahindra Rivenza?',
+        a: 'The opening of the 4-lane Mula River Bridge, operational Pune Metro Line 3, and PMRDA 36m DP road network are the primary capital appreciation catalysts.'
+      }
+    ],
+    ctaText: 'Download Complete 5-Year Investment & ROI Dossier'
   }
 ];
