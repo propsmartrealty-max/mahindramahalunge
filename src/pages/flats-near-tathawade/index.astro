@@ -1,0 +1,221 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import ResidenceSelector from '../../components/ResidenceSelector.astro';
+import RiverFlowingEmblem from '../../components/RiverFlowingEmblem.astro';
+
+const tathawadeSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Place",
+      "@id": "https://mahindralifespaceshomes.in/flats-near-tathawade/#place",
+      "name": "Tathawade & Expressway Residential Corridor",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Tathawade",
+        "addressRegion": "Maharashtra",
+        "addressCountry": "IN"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "18.5623125",
+        "longitude": "73.7273125"
+      }
+    },
+    {
+      "@type": "Product",
+      "@id": "https://mahindralifespaceshomes.in/flats-near-tathawade/#product",
+      "name": "Luxury Flats Near Tathawade Pune - Mahindra Rivenza",
+      "description": "Looking for flats near Tathawade & Wakad? Discover Mahindra Rivenza in Baner Annex / Mahalunge. 12 mins from Tathawade, 13.46 acres, ~44,000 sq.ft clubhouse with sunken aqua bar, 9+ acres greens from ₹90 Lakhs*.",
+      "brand": {
+        "@type": "Brand",
+        "name": "Mahindra Lifespaces"
+      },
+      "hasMap": "https://www.google.com/maps/place/Mahindra+Rivenza/@18.5623125,73.7273125,17z/data=!3m1!4b1!4m6!3m5!1s0x3bc2bd23899c4255:0xd1c64c7ae74e9a5!8m2!3d18.5623125!4d73.7273125!16s%2Fg%2F11ysgj1zl9",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "bestRating": "5",
+        "worstRating": "1",
+        "ratingCount": "248",
+        "reviewCount": "248"
+      },
+      "offers": {
+        "@type": "AggregateOffer",
+        "lowPrice": "9000000",
+        "highPrice": "25500000",
+        "priceCurrency": "INR",
+        "offerCount": "1236",
+        "priceValidUntil": "2027-12-31",
+        "availability": "https://schema.org/InStock"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://mahindralifespaceshomes.in/flats-near-tathawade/#breadcrumbs",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://mahindralifespaceshomes.in/" },
+        { "@type": "ListItem", "position": 2, "name": "West Pune", "item": "https://mahindralifespaceshomes.in/west-pune/" },
+        { "@type": "ListItem", "position": 3, "name": "Flats Near Tathawade", "item": "https://mahindralifespaceshomes.in/flats-near-tathawade/" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://mahindralifespaceshomes.in/flats-near-tathawade/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How far is Mahindra Rivenza from Tathawade?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Mahindra Rivenza is located approximately 6.8 km (12 minutes drive) from Tathawade via the Mumbai-Pune Expressway connector and PMRDA arterial roads."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why choose Mahindra Rivenza over residential developments in Tathawade?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Tathawade has experienced rapid, unplanned student and rental housing growth with limited institutional master-planning. Mahindra Rivenza offers a prestigious corporate-backed development by Mahindra Lifespaces with 13.46 acres of biophilic greens, close proximity to Balewadi High Street, and superior long-term capital appreciation."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What are the starting prices for flats near Tathawade at Mahindra Rivenza?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "At Mahindra Rivenza, 2 BHK homes start from ₹90 Lakhs*, 3 BHK residences from ₹1.31 Cr*, and exclusive 4 BHK sky villas from ₹2.20 Cr*."
+          }
+        }
+      ]
+    }
+  ]
+};
+---
+
+<Layout
+  title="Flats Near Tathawade Pune [Starts ₹90L*] Mahindra Rivenza Annex"
+  description="Seeking luxury flats near Tathawade & Wakad Pune? Discover Mahindra Rivenza in Baner Annex: 12 mins to Tathawade, 13.46 acres, ~44k sq.ft clubhouse from ₹90L*."
+  keywords="flats near tathawade, luxury flats in tathawade pune, apartments near jspm tathawade, 2 bhk flats near tathawade, 3 bhk flats near tathawade, mahindra rivenza tathawade, tathawade real estate"
+  canonical="https://mahindralifespaceshomes.in/flats-near-tathawade/"
+  customSchema={tathawadeSchema}
+>
+  <!-- Hero Section -->
+  <section class="pt-32 pb-20 bg-charcoal-950 border-b border-white/10 relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
+      
+      <!-- Badges Row -->
+      <div class="flex flex-wrap items-center gap-3">
+        <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-gold-500/10 border border-gold-500/30 text-gold-400 text-xs font-semibold uppercase tracking-widest">
+          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+          <span>Education & Tech Corridor • 12 Mins to Tathawade</span>
+        </div>
+        <div class="glass-floating inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/5 border border-gold-500/30 backdrop-blur-md">
+          <RiverFlowingEmblem size="xs" layout="horizontal" showSubtitle={false} />
+          <span class="text-[11px] text-stone-300 font-medium border-l border-white/20 pl-2">Baner Annex • Starts ₹90L*</span>
+        </div>
+        <span class="px-2.5 py-1 rounded-full bg-emerald-500/10 text-emerald-400 text-[10px] font-mono font-semibold border border-emerald-500/30">
+          MahaRERA: PR1261012602102
+        </span>
+      </div>
+
+      <h1 class="font-serif text-3xl sm:text-5xl lg:text-6xl font-bold text-stone-100 max-w-4xl leading-tight">
+        Flats Near Tathawade: <br />
+        <span class="gold-gradient-text">Institutional Luxury at Mahindra Rivenza</span>
+      </h1>
+
+      <p class="text-stone-300 text-sm sm:text-base max-w-2xl font-light leading-relaxed">
+        Upgrade from crowded student pockets and congested local lanes. Discover Mahindra Rivenza in Baner Annex—an institutional 13.46-acre master development by Mahindra Lifespaces with 9+ acres of open greens and a ~44,000 sq.ft resort clubhouse.
+      </p>
+
+      <!-- Market Stats Strip -->
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-4 max-w-3xl">
+        <div class="p-3.5 rounded-xl bg-white/5 border border-white/10 hover:border-gold-500/30 transition-all">
+          <span class="text-[10px] uppercase tracking-wider text-stone-400 block">Starting Ticket</span>
+          <span class="font-serif text-base font-bold text-gold-400">Starts ₹90L*</span>
+        </div>
+        <div class="p-3.5 rounded-xl bg-white/5 border border-white/10 hover:border-emerald-500/30 transition-all">
+          <span class="text-[10px] uppercase tracking-wider text-stone-400 block">Brand Trust</span>
+          <span class="font-serif text-base font-bold text-emerald-400">Mahindra Group</span>
+        </div>
+        <div class="p-3.5 rounded-xl bg-white/5 border border-white/10 hover:border-white/30 transition-all">
+          <span class="text-[10px] uppercase tracking-wider text-stone-400 block">Tathawade Drive</span>
+          <span class="font-serif text-base font-bold text-white">12 Minutes</span>
+        </div>
+        <div class="p-3.5 rounded-xl bg-white/5 border border-white/10 hover:border-amber-500/30 transition-all">
+          <span class="text-[10px] uppercase tracking-wider text-stone-400 block">Clubhouse Scale</span>
+          <span class="font-serif text-base font-bold text-amber-300">~44,000 Sq.Ft</span>
+        </div>
+      </div>
+      
+      <!-- Quick Action Buttons -->
+      <div class="pt-4 flex flex-wrap gap-4">
+        <button
+          data-open-modal
+          data-interest="Tathawade Corridor Buyer EOI - Cost Sheet"
+          class="btn-shimmer px-8 py-3.5 rounded-full bg-gradient-to-r from-gold-400 via-gold-500 to-gold-400 text-charcoal-950 text-xs font-bold uppercase tracking-widest hover:shadow-xl transition-all cursor-pointer"
+        >
+          Download Tathawade vs Rivenza Cost Sheet
+        </button>
+        <button
+          data-open-modal
+          data-interest="VIP Cab Tour from Tathawade"
+          class="px-8 py-3.5 rounded-full border border-gold-500/40 text-gold-300 hover:text-white text-xs font-semibold uppercase tracking-widest text-center hover:bg-white/5 transition-colors cursor-pointer"
+        >
+          Book VIP Site Visit from Tathawade
+        </button>
+        <a
+          href="tel:+917744009295"
+          class="px-5 py-3.5 rounded-full border border-white/20 hover:border-white/40 text-stone-300 hover:text-white text-xs font-medium uppercase tracking-wider inline-flex items-center gap-2"
+        >
+          <span>Direct Advisory: +91 7744009295</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Residence Selector Section -->
+  <section id="explore-residences" class="py-20 bg-charcoal-950">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+      <div class="text-center max-w-2xl mx-auto space-y-2">
+        <span class="text-xs uppercase tracking-widest text-gold-400 font-bold">2, 3 & 4 BHK Floor Plans</span>
+        <h2 class="font-serif text-3xl sm:text-4xl text-stone-100 font-bold">Explore Residences Near Tathawade</h2>
+        <p class="text-xs text-stone-400 leading-relaxed">
+          Sanctioned MahaRERA CAD floor plans with zero corridor wastage and sprawling sundecks.
+        </p>
+      </div>
+
+      <ResidenceSelector />
+    </div>
+  </section>
+
+  <!-- CTA Priority Box -->
+  <section class="py-16 bg-charcoal-950 text-center border-t border-white/10">
+    <div class="max-w-3xl mx-auto px-4 space-y-5">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gold-500/10 border border-gold-500/30 text-gold-400 text-xs font-mono font-semibold">
+        <span>MahaRERA: PR1261012602102 &amp; PM1261012602103</span>
+      </div>
+      <h3 class="font-serif text-2xl sm:text-4xl text-stone-100 font-bold">Elevate Your Lifestyle at Baner Annex</h3>
+      <p class="text-xs sm:text-sm text-stone-400 max-w-xl mx-auto leading-relaxed">
+        Register now to receive early access cost sheets, personalized payment schedules, and a complimentary VIP chauffeured site visit from Tathawade or Punawale.
+      </p>
+      <div class="flex flex-wrap justify-center gap-4 pt-2">
+        <button
+          data-open-modal
+          data-interest="Tathawade Corridor Priority Booking"
+          class="px-8 py-3.5 rounded-full bg-gradient-to-r from-gold-400 to-gold-500 text-charcoal-950 text-xs font-bold uppercase tracking-widest hover:shadow-xl transition-all cursor-pointer"
+        >
+          Download Cost Sheet & Floor Plans
+        </button>
+        <a
+          href="https://wa.me/917744009295?text=Hello%20Mahindra%20Rivenza%2C%20I%20am%20interested%20in%20flats%20near%20Tathawade%20and%20would%20like%20the%20cost%20sheet."
+          target="_blank"
+          rel="noopener noreferrer"
+          class="px-6 py-3.5 rounded-full border border-emerald-500/40 text-emerald-400 hover:text-white hover:bg-emerald-500/10 text-xs font-bold uppercase tracking-wider transition-all inline-flex items-center gap-2"
+        >
+          <span>Chat on WhatsApp</span>
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>
