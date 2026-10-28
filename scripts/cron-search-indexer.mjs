@@ -250,20 +250,8 @@ for (const feed of feedsToPing) {
   }
 }
 
-// Search Engine Sitemap Direct Ping Gateways
-try {
-  const bingPing = await fetch(`https://www.bing.com/ping?sitemap=${encodeURIComponent(`${BASE_URL}/sitemap.xml`)}`);
-  console.log(`[Enterprise Indexer] ✓ Microsoft Bing Sitemap Ping: ${bingPing.status}`);
-} catch (err) {
-  console.warn(`[Enterprise Indexer] ! Bing Sitemap Ping notice: ${err.message}`);
-}
-
-try {
-  const googlePing = await fetch(`https://www.google.com/ping?sitemap=${encodeURIComponent(`${BASE_URL}/sitemap.xml`)}`);
-  console.log(`[Enterprise Indexer] ✓ Google Sitemap Ping: ${googlePing.status}`);
-} catch (err) {
-  console.warn(`[Enterprise Indexer] ! Google Sitemap Ping notice: ${err.message}`);
-}
+// Note: Google & Bing have officially deprecated legacy /ping endpoints in favor of WebSub and IndexNow
+// which are fully active above.
 
 // -----------------------------------------------------------------------------
 // 5. Google Indexing API Multi-Account Pool & Stateful Queue
