@@ -21,7 +21,7 @@ permissions:
 
 jobs:
   broadcast-indexing:
-    name: Broadcast Sitemaps & IndexNow (292 URLs)
+    name: Broadcast Sitemaps, Google Indexing API & IndexNow (315 URLs)
     runs-on: ubuntu-latest
     timeout-minutes: 10
 
@@ -48,3 +48,6 @@ jobs:
         env:
           GLOBAL_KEY: '9e4f2b8c6a0d4e7f8b1c3a5d7e9f0b2a'
           INDEXNOW_KEY: '9e4f2b8c6a0d4e7f8b1c3a5d7e9f0b2a'
+          GOOGLE_SERVICE_ACCOUNT_KEY: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_KEY }}
+          CLOUDFLARE_ZONE_ID: ${{ secrets.CLOUDFLARE_ZONE_ID }}
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}

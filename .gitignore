@@ -6,10 +6,14 @@ node_modules/
 dist/
 .astro/
 
-# Environment Variables
+# Environment Variables & Keys
 .env
 .env.*
 !.env.example
+service-account.json
+google-indexing-key.json
+*key*.json
+*.pem
 
 # macOS & System Files
 .DS_Store

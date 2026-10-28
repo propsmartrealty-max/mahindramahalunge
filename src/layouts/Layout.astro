@@ -257,14 +257,6 @@ const baseSchema = {
         "latitude": 18.562536,
         "longitude": 73.727373
       },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.9",
-        "bestRating": "5",
-        "worstRating": "1",
-        "ratingCount": "248",
-        "reviewCount": "248"
-      },
       "openingHoursSpecification": [
         {
           "@type": "OpeningHoursSpecification",
@@ -502,14 +494,6 @@ const baseSchema = {
           "closes": "20:00"
         }
       ],
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.9",
-        "bestRating": "5",
-        "worstRating": "1",
-        "ratingCount": "248",
-        "reviewCount": "248"
-      },
       "areaServed": [
         { "@type": "City", "name": "Pune" },
         { "@type": "AdministrativeArea", "name": "Mahalunge" },
@@ -582,9 +566,19 @@ const baseSchema = {
     <script is:inline>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
+      window.gtag = gtag;
       gtag('js', new Date());
 
       gtag('config', 'AW-17430583486');
+
+      // Global Lead Form Conversion Dispatched to Google Ads
+      window.triggerLeadConversion = function() {
+        if (typeof window.gtag === 'function') {
+          window.gtag('event', 'conversion', {
+            'send_to': 'AW-17430583486/2oseCKuOodYcEL6xxvdA'
+          });
+        }
+      };
     </script>
     <title>{title}</title>
     <meta name="description" content={description} />

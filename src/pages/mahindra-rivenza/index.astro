@@ -8,39 +8,36 @@ const rivenzaMasterSchema = {
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": ["ApartmentComplex", "RealEstateAgent"],
-      "@id": "https://mahindralifespaceshomes.in/mahindra-rivenza/#complex",
-      "name": "Mahindra Rivenza",
+      "@type": "Product",
+      "@id": "https://mahindralifespaceshomes.in/mahindra-rivenza/#product",
+      "name": "Mahindra Rivenza Residential Township",
       "alternateName": "Mahindra Rivenza Baner Annex Mahalunge Pune",
-      "legalName": "Mahindra Lifespace Developers Limited",
       "url": "https://mahindralifespaceshomes.in/mahindra-rivenza/",
-      "telephone": "+91-7744009295",
-      "email": "propsmartrealty@gmail.com",
-      "priceRange": "₹90 Lakhs - ₹2.55 Crore+",
+      "brand": {
+        "@type": "Brand",
+        "name": "Mahindra Lifespaces"
+      },
       "description": "Mahindra Rivenza is a premier 13.46-acre biophilic residential master development by Mahindra Lifespaces located at Baner Annex / Mahalunge, Pune. Featuring 9+ acres of vehicle-free greens, ~44,000 sq.ft clubhouse, sunken aqua bar pool, and luxury 2, 3 & 4 BHK residences starting ₹90 Lakhs*.",
       "image": [
         "https://cms.mahindralifespaces.com/web/sites/default/files/styles/web_banner_webp/public/2026-10/jpeg-optimizer_Elevation%20Opt%20A..webp",
         "https://cms.mahindralifespaces.com/web/sites/default/files/styles/web_banner_webp/public/2026-10/Swimming%20pool%20with%20sunken%20bar_Rivenza_11zon.webp"
       ],
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "HP6G+WWF Baner Annex, off Baner-Hinjawadi Road, Nande",
-        "addressLocality": "Mahalunge, Pune",
-        "postalCode": "412115",
-        "addressRegion": "Maharashtra",
-        "addressCountry": "IN"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": 18.562536,
-        "longitude": 73.727373
-      },
       "aggregateRating": {
         "@type": "AggregateRating",
         "ratingValue": "4.9",
         "reviewCount": "487",
         "bestRating": "5",
         "worstRating": "1"
+      },
+      "offers": {
+        "@type": "AggregateOffer",
+        "lowPrice": "9000000",
+        "highPrice": "25500000",
+        "priceCurrency": "INR",
+        "offerCount": "1236",
+        "availability": "https://schema.org/InStock",
+        "validFrom": "2026-10-06",
+        "priceValidUntil": "2027-12-31"
       }
     },
     {

@@ -75,6 +75,17 @@ export default function LeadModal() {
         console.warn('Dispatch error:', dispatchErr);
       }
 
+      // Google Ads Lead Form Conversion Tracking
+      if (typeof window !== 'undefined') {
+        if (typeof window.triggerLeadConversion === 'function') {
+          window.triggerLeadConversion();
+        } else if (typeof window.gtag === 'function') {
+          window.gtag('event', 'conversion', {
+            'send_to': 'AW-17430583486/2oseCKuOodYcEL6xxvdA'
+          });
+        }
+      }
+
       setSubmitted(true);
     }
   };
