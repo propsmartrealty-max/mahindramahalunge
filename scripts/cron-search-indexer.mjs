@@ -174,47 +174,51 @@ for (const feed of feedsToPing) {
 // -----------------------------------------------------------------------------
 console.log('\n--- 3. Google Indexing API (Service Account Authentication) ---');
 
-// Search multiple credential locations
+// Search multiple credential locations for pool
 const keyCandidatePaths = [
   path.resolve(__dirname, '../service-account.json'),
+  path.resolve(__dirname, '../service-account-2.json'),
   path.resolve(__dirname, '../google-indexing-key.json'),
   path.resolve(process.cwd(), 'service-account.json'),
+  path.resolve(process.cwd(), 'service-account-2.json'),
   path.resolve(process.cwd(), 'google-indexing-key.json'),
 ];
 
-let serviceAccount = null;
+const serviceAccountPool = [];
 
 if (process.env.GOOGLE_SERVICE_ACCOUNT_KEY) {
   try {
-    serviceAccount = JSON.parse(process.env.GOOGLE_SERVICE_ACCOUNT_KEY);
-    console.log('[Auto-Indexer Cron] Loaded Service Account from environment variable GOOGLE_SERVICE_ACCOUNT_KEY.');
+    const envSa = JSON.parse(process.env.GOOGLE_SERVICE_ACCOUNT_KEY);
+    if (envSa.private_key && envSa.client_email) {
+      serviceAccountPool.push(envSa);
+      console.log('[Auto-Indexer Cron] Loaded Service Account from environment variable GOOGLE_SERVICE_ACCOUNT_KEY.');
+    }
   } catch (e) {
     console.warn('[Auto-Indexer Cron] Could not parse GOOGLE_SERVICE_ACCOUNT_KEY JSON string.');
   }
 }
 
-if (!serviceAccount) {
-  for (const candidate of keyCandidatePaths) {
-    if (fs.existsSync(candidate)) {
-      try {
-        serviceAccount = JSON.parse(fs.readFileSync(candidate, 'utf8'));
-        console.log(`[Auto-Indexer Cron] Loaded Service Account from file: ${path.basename(candidate)}`);
-        break;
-      } catch (e) {
-        console.warn(`[Auto-Indexer Cron] Error reading ${candidate}: ${e.message}`);
+for (const candidate of keyCandidatePaths) {
+  if (fs.existsSync(candidate)) {
+    try {
+      const sa = JSON.parse(fs.readFileSync(candidate, 'utf8'));
+      if (sa.private_key && sa.client_email && !serviceAccountPool.some(s => s.client_email === sa.client_email)) {
+        serviceAccountPool.push(sa);
+        console.log(`[Auto-Indexer Cron] Loaded Service Account into pool: ${sa.client_email} (${path.basename(candidate)})`);
       }
+    } catch (e) {
+      console.warn(`[Auto-Indexer Cron] Error reading ${candidate}: ${e.message}`);
     }
   }
 }
 
-if (serviceAccount && serviceAccount.private_key && serviceAccount.client_email) {
-  console.log(`[Auto-Indexer Cron] Authenticating as: ${serviceAccount.client_email}`);
+async function obtainGoogleAccessToken(sa) {
   try {
     const crypto = await import('node:crypto');
     const now = Math.floor(Date.now() / 1000);
     const header = Buffer.from(JSON.stringify({ alg: 'RS256', typ: 'JWT' })).toString('base64url');
     const claimSet = Buffer.from(JSON.stringify({
-      iss: serviceAccount.client_email,
+      iss: sa.client_email,
       scope: 'https://www.googleapis.com/auth/indexing',
       aud: 'https://oauth2.googleapis.com/token',
       exp: now + 3600,
@@ -223,7 +227,7 @@ if (serviceAccount && serviceAccount.private_key && serviceAccount.client_email)
 
     const sign = crypto.createSign('RSA-SHA256');
     sign.update(`${header}.${claimSet}`);
-    const signature = sign.sign(serviceAccount.private_key, 'base64url');
+    const signature = sign.sign(sa.private_key, 'base64url');
     const jwt = `${header}.${claimSet}.${signature}`;
 
     const tokenRes = await fetch('https://oauth2.googleapis.com/token', {
@@ -233,64 +237,86 @@ if (serviceAccount && serviceAccount.private_key && serviceAccount.client_email)
     });
 
     const tokenData = await tokenRes.json();
-    if (tokenData.access_token) {
-      console.log(`[Auto-Indexer Cron] ✓ Google OAuth2 Bearer Token Acquired Successfully.`);
-
-      // Select high-priority URLs up to 80 URLs per run to stay safely inside Google's 200/day quota
-      const MAX_GOOGLE_URLS = parseInt(process.env.MAX_GOOGLE_INDEX_URLS || '80', 10);
-      const googleUrlsToSubmit = allUrls.slice(0, MAX_GOOGLE_URLS);
-
-      console.log(`[Auto-Indexer Cron] Submitting ${googleUrlsToSubmit.length} priority URLs to Google Indexing API (URL_UPDATED)...`);
-
-      let successCount = 0;
-      let failureCount = 0;
-
-      for (let i = 0; i < googleUrlsToSubmit.length; i++) {
-        const targetUrl = googleUrlsToSubmit[i];
-        try {
-          const pubRes = await fetch('https://indexing.googleapis.com/v3/urlNotifications:publish', {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json',
-              Authorization: `Bearer ${tokenData.access_token}`,
-            },
-            body: JSON.stringify({
-              url: targetUrl,
-              type: 'URL_UPDATED',
-            }),
-          });
-
-          const pubJson = await pubRes.json().catch(() => ({}));
-          if (pubRes.status === 200) {
-            successCount++;
-            if (i < 10 || i === googleUrlsToSubmit.length - 1) {
-              console.log(`[Auto-Indexer Cron] [${i + 1}/${googleUrlsToSubmit.length}] ✓ Google Indexing API (200 OK): ${targetUrl}`);
-            }
-          } else if (pubRes.status === 429) {
-            failureCount++;
-            console.log(`[Auto-Indexer Cron] ! Google API Quota Reached (429): ${pubJson.error?.message || 'Daily Publish requests limit reached'}`);
-            console.log(`[Auto-Indexer Cron] Google Indexing API quota resets daily at midnight PT. Googlebot remains fully synchronized via WebSub, Sitemaps, and IndexNow.`);
-            break;
-          } else {
-            failureCount++;
-            console.log(`[Auto-Indexer Cron] [${i + 1}/${googleUrlsToSubmit.length}] ! Google API (${pubRes.status}): ${targetUrl} - ${pubJson.error?.message || ''}`);
-          }
-        } catch (postErr) {
-          failureCount++;
-          console.warn(`[Auto-Indexer Cron] ! Request error for ${targetUrl}: ${postErr.message}`);
-        }
-
-        // 120ms rate-limit spacing between requests
-        await sleep(120);
-      }
-
-      console.log(`[Auto-Indexer Cron] Google Indexing API Batch Summary: ${successCount} Succeeded, ${failureCount} Failed out of ${googleUrlsToSubmit.length} submitted.`);
-    } else {
-      console.warn('[Auto-Indexer Cron] Google OAuth token response error:', tokenData);
-    }
-  } catch (apiErr) {
-    console.warn(`[Auto-Indexer Cron] Google Indexing API exception: ${apiErr.message}`);
+    return tokenData.access_token || null;
+  } catch (err) {
+    console.warn(`[Auto-Indexer Cron] Token error for ${sa.client_email}:`, err.message);
+    return null;
   }
+}
+
+if (serviceAccountPool.length > 0) {
+  console.log(`[Auto-Indexer Cron] Active Service Account Pool Size: ${serviceAccountPool.length}`);
+
+  const MAX_GOOGLE_URLS = parseInt(process.env.MAX_GOOGLE_INDEX_URLS || '80', 10);
+  const googleUrlsToSubmit = allUrls.slice(0, MAX_GOOGLE_URLS);
+
+  console.log(`[Auto-Indexer Cron] Submitting ${googleUrlsToSubmit.length} priority URLs to Google Indexing API (URL_UPDATED)...`);
+
+  let currentSaIdx = 0;
+  let activeToken = await obtainGoogleAccessToken(serviceAccountPool[currentSaIdx]);
+  if (activeToken) {
+    console.log(`[Auto-Indexer Cron] ✓ Authenticated with Service Account: ${serviceAccountPool[currentSaIdx].client_email}`);
+  }
+
+  let successCount = 0;
+  let failureCount = 0;
+
+  for (let i = 0; i < googleUrlsToSubmit.length; i++) {
+    const targetUrl = googleUrlsToSubmit[i];
+    if (!activeToken) break;
+
+    try {
+      const pubRes = await fetch('https://indexing.googleapis.com/v3/urlNotifications:publish', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Authorization: `Bearer ${activeToken}`,
+        },
+        body: JSON.stringify({
+          url: targetUrl,
+          type: 'URL_UPDATED',
+        }),
+      });
+
+      const pubJson = await pubRes.json().catch(() => ({}));
+      if (pubRes.status === 200) {
+        successCount++;
+        if (i < 10 || i === googleUrlsToSubmit.length - 1) {
+          console.log(`[Auto-Indexer Cron] [${i + 1}/${googleUrlsToSubmit.length}] ✓ Google Indexing API (200 OK): ${targetUrl}`);
+        }
+      } else if (pubRes.status === 429) {
+        failureCount++;
+        console.log(`[Auto-Indexer Cron] ! Quota reached on ${serviceAccountPool[currentSaIdx].client_email}: ${pubJson.error?.message || 'Daily limit reached'}`);
+        
+        // Attempt rotation to next service account in pool
+        if (currentSaIdx + 1 < serviceAccountPool.length) {
+          currentSaIdx++;
+          console.log(`[Auto-Indexer Cron] Rotating to fallback Service Account: ${serviceAccountPool[currentSaIdx].client_email}...`);
+          activeToken = await obtainGoogleAccessToken(serviceAccountPool[currentSaIdx]);
+          if (activeToken) {
+            console.log(`[Auto-Indexer Cron] ✓ Fallback Token Acquired. Continuing URL submissions...`);
+            i--; // Retry this URL with the new account
+            continue;
+          }
+        }
+        
+        console.log(`[Auto-Indexer Cron] All service accounts exhausted for today. Google Indexing quota resets daily at midnight PT (12:30 PM IST).`);
+        console.log(`[Auto-Indexer Cron] Search engines remain 100% synchronized via Google WebSub, Sitemaps, and IndexNow.`);
+        break;
+      } else {
+        failureCount++;
+        console.log(`[Auto-Indexer Cron] [${i + 1}/${googleUrlsToSubmit.length}] ! Google API (${pubRes.status}): ${targetUrl} - ${pubJson.error?.message || ''}`);
+      }
+    } catch (postErr) {
+      failureCount++;
+      console.warn(`[Auto-Indexer Cron] ! Request error for ${targetUrl}: ${postErr.message}`);
+    }
+
+    // 120ms rate-limit spacing between requests
+    await sleep(120);
+  }
+
+  console.log(`[Auto-Indexer Cron] Google Indexing API Batch Summary: ${successCount} Succeeded, ${failureCount} Failed out of ${googleUrlsToSubmit.length} submitted.`);
 } else {
   console.log(`[Auto-Indexer Cron] Google Service Account key not detected.`);
   console.log(`[Auto-Indexer Cron] (Place service-account.json or set GOOGLE_SERVICE_ACCOUNT_KEY in environment)`);
