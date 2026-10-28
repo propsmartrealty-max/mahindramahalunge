@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 export default function LeadModal() {
   const [isOpen, setIsOpen] = useState(false);
   const [step, setStep] = useState(1);
+  const [isExitIntent, setIsExitIntent] = useState(false);
   const [formData, setFormData] = useState({
     configuration: '3 BHK',
     purpose: 'Self Use',
@@ -22,13 +23,58 @@ export default function LeadModal() {
       if (e.detail?.interest) {
         setFormData((prev) => ({ ...prev, interaction: e.detail.interest }));
       }
+      setIsExitIntent(false);
       setSubmitted(false);
       setStep(1);
       setIsOpen(true);
     };
 
+    // Exit intent on desktop (mouse leave to top bar)
+    const handleMouseLeave = (e) => {
+      if (
+        e.clientY <= 12 && 
+        typeof window !== 'undefined' && 
+        !sessionStorage.getItem('mldl_lead_prompted') && 
+        !localStorage.getItem('mahindra_leads')
+      ) {
+        sessionStorage.setItem('mldl_lead_prompted', 'true');
+        setIsExitIntent(true);
+        setFormData((prev) => ({
+          ...prev,
+          interaction: 'Instant Cost Sheet & PDF Brochure',
+        }));
+        setSubmitted(false);
+        setStep(1);
+        setIsOpen(true);
+      }
+    };
+
+    // Soft delayed engagement trigger (45 seconds)
+    const timer = setTimeout(() => {
+      if (
+        typeof window !== 'undefined' && 
+        !sessionStorage.getItem('mldl_lead_prompted') && 
+        !localStorage.getItem('mahindra_leads')
+      ) {
+        sessionStorage.setItem('mldl_lead_prompted', 'true');
+        setIsExitIntent(false);
+        setFormData((prev) => ({
+          ...prev,
+          interaction: 'Priority Pre-Launch Price & Payment Plan',
+        }));
+        setSubmitted(false);
+        setStep(1);
+        setIsOpen(true);
+      }
+    }, 45000);
+
     window.addEventListener('open-lead-modal', handleOpen);
-    return () => window.removeEventListener('open-lead-modal', handleOpen);
+    document.addEventListener('mouseleave', handleMouseLeave);
+    return () => {
+      window.removeEventListener('open-lead-modal', handleOpen);
+      document.removeEventListener('mouseleave', handleMouseLeave);
+      clearTimeout(timer);
+    };
   }, []);
 
   const handleNext = (e) => {
@@ -50,6 +96,17 @@ export default function LeadModal() {
         console.error(err);
       }
 
+      // Extract UTM parameters, GCLID and current page attribution
+      const urlParams = typeof window !== 'undefined' ? new URLSearchParams(window.location.search) : new URLSearchParams();
+      const attribution = {
+        PageUrl: typeof window !== 'undefined' ? window.location.href : '',
+        GCLID: urlParams.get('gclid') || 'None',
+        UtmSource: urlParams.get('utm_source') || 'Direct / Organic',
+        UtmMedium: urlParams.get('utm_medium') || 'None',
+        UtmCampaign: urlParams.get('utm_campaign') || 'None',
+        UtmTerm: urlParams.get('utm_term') || 'None',
+      };
+
       // Asynchronously send lead notification to propsmartrealty@gmail.com
       try {
         fetch('https://formsubmit.co/ajax/propsmartrealty@gmail.com', {
@@ -66,8 +123,9 @@ export default function LeadModal() {
             Email: formData.email || 'Not Provided',
             Configuration: formData.configuration,
             Purpose: formData.purpose,
-            Service: formData.service,
+            Interaction: formData.interaction,
             Project: 'Mahindra Rivenza, Baner Annex, Mahalunge, Pune',
+            ...attribution,
             SubmittedAt: new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' })
           })
         }).catch((err) => console.warn('Form dispatch background sync:', err));
@@ -101,9 +159,11 @@ export default function LeadModal() {
         {/* Top Header Bar */}
         <div className="px-6 pt-6 pb-4 border-b border-white/10 flex items-center justify-between">
           <div>
-            <span className="text-[10px] tracking-widest text-gold-400 uppercase font-bold">Mahindra Rivenza • Baner Annex</span>
+            <span className="text-[10px] tracking-widest text-gold-400 uppercase font-bold">
+              {isExitIntent ? '⚡ Special Pre-Launch Access' : 'Mahindra Rivenza • Baner Annex'}
+            </span>
             <h3 className="font-serif text-lg font-bold text-stone-100">
-              {submitted ? 'Priority Booking Confirmed' : 'Priority Booking & EOI Desk'}
+              {submitted ? 'Priority Booking Confirmed' : (isExitIntent ? 'Instant Cost Sheet & Floor Plans' : 'Priority Booking & EOI Desk')}
             </h3>
           </div>
           <button 

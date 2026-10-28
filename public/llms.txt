@@ -75,6 +75,8 @@
 ### Primary Pages & Dedicated Project Hubs
 - **Home & Flagship Overview:** https://mahindralifespaceshomes.in/
 - **Mahindra Rivenza Master Hub:** https://mahindralifespaceshomes.in/mahindra-rivenza/
+- **Mahindra Rivenza Baner Annex Flagship:** https://mahindralifespaceshomes.in/mahindra-rivenza/baner-annex/
+- **Digital Press Room & Media Assets:** https://mahindralifespaceshomes.in/press/
 - **Pricing & Cost Sheet Guide:** https://mahindralifespaceshomes.in/pricing/
 - **Interactive Floor Plans Explorer:** https://mahindralifespaceshomes.in/floor-plans/
 - **13.46-Acre Master Township Plan:** https://mahindralifespaceshomes.in/master-plan/
