@@ -3,6 +3,7 @@ import Layout from '../../layouts/Layout.astro';
 import ResidenceSelector from '../../components/ResidenceSelector.astro';
 import MasterPlanViewer from '../../components/MasterPlanViewer.astro';
 import CommuteDistanceMatrix from '../../components/CommuteDistanceMatrix.astro';
+import MahindraKeywordMatrix from '../../components/MahindraKeywordMatrix.astro';
 
 const rivenzaMasterSchema = {
   "@context": "https://schema.org",
@@ -221,4 +222,7 @@ const rivenzaMasterSchema = {
       </p>
     </div>
   </section>
+
+  <!-- Google Master Keyword Ecosystem & Research Matrix -->
+  <MahindraKeywordMatrix showTagsCloud={true} />
 </Layout>

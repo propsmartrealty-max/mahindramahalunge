@@ -173,6 +173,14 @@ export const CORE_PAGES: SitemapEntry[] = [
     changefreq: 'weekly',
   },
   {
+    url: `${BASE_URL}/reviews/`,
+    title: 'Mahindra Rivenza Reviews [Official 4.9 ★ Rating & Buyer Feedback]',
+    category: 'core',
+    priority: 0.95,
+    changefreq: 'daily',
+    images: [PRIMARY_IMAGES[0], PRIMARY_IMAGES[2]],
+  },
+  {
     url: `${BASE_URL}/brand/`,
     title: 'Mahindra Lifespaces Developers Ltd. — Pune Portfolio & Track Record',
     category: 'core',

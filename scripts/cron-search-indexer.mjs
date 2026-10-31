@@ -93,6 +93,7 @@ const corePriorityUrls = [
   `${BASE_URL}/site-visit/`,
   `${BASE_URL}/virtual-tour/`,
   `${BASE_URL}/gallery/`,
+  `${BASE_URL}/reviews/`,
   `${BASE_URL}/construction-status/`,
   `${BASE_URL}/contact/`,
   `${BASE_URL}/brand/`,

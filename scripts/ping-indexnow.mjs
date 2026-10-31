@@ -33,6 +33,7 @@ let urlList = [
   `https://${HOST}/mahindra-rivenza/`,
   `https://${HOST}/mahindra-rivenza/baner-annex/`,
   `https://${HOST}/press/`,
+  `https://${HOST}/reviews/`,
   `https://${HOST}/baner-annex/`,
   `https://${HOST}/pricing/`,
   `https://${HOST}/floor-plans/`,

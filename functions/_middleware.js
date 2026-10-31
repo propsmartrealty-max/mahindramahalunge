@@ -390,6 +390,7 @@ export async function onRequest(context) {
   if (pathname.startsWith('/tools')) dynamicTags.push('mahindra-tools', 'financial-calculators');
   if (pathname.startsWith('/nri')) dynamicTags.push('mahindra-nri', 'global-wealth-hubs');
   if (pathname.startsWith('/flats-near')) dynamicTags.push('mahindra-micro-markets', 'locality-search');
+  if (pathname.startsWith('/reviews')) dynamicTags.push('mahindra-reviews', 'verified-buyer-ratings');
 
   modifiedHeaders.set('Cache-Tag', dynamicTags.join(', '));
   modifiedHeaders.set(

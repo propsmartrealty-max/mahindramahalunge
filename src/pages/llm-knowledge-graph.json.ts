@@ -36,7 +36,7 @@ export const GET: APIRoute = async () => {
     status: 200,
     headers: {
       'Content-Type': 'application/json; charset=utf-8',
-      'Cache-Control': 'public, max-age=0, s-maxage=86400, stale-while-revalidate=604800',
+      'Cache-Control': 'public, max-age=0, s-maxage=3600, stale-while-revalidate=86400',
       'X-Robots-Tag': 'index, follow, max-snippet:-1',
       'Access-Control-Allow-Origin': '*'
     }
