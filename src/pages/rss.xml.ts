@@ -213,8 +213,10 @@ const allRssItems = [
 ];
 
 export const GET: APIRoute = async () => {
+  const defaultRssImage = 'https://cms.mahindralifespaces.com/web/sites/default/files/styles/web_banner_webp/public/2026-10/jpeg-optimizer_Elevation%20Opt%20A..webp';
+
   const rssXml = `<?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Mahindra Lifespaces Mahalunge &amp; Pune Real Estate Research</title>
     <link>https://mahindralifespaceshomes.in/articles/</link>
@@ -231,7 +233,13 @@ export const GET: APIRoute = async () => {
       <link>${art.link}</link>
       <guid isPermaLink="true">${art.link}</guid>
       <description><![CDATA[${art.description}]]></description>
+      <content:encoded><![CDATA[<p>${art.description}</p><p><a href="${art.link}">Read full dossier on Mahindra Rivenza</a></p>]]></content:encoded>
       <pubDate>${art.pubDate}</pubDate>
+      <enclosure url="${defaultRssImage}" length="156400" type="image/webp"/>
+      <media:content url="${defaultRssImage}" medium="image" type="image/webp" width="1920" height="1080">
+        <media:title><![CDATA[${art.title}]]></media:title>
+        <media:description><![CDATA[${art.description}]]></media:description>
+      </media:content>
     </item>`
       )
       .join('')}
