@@ -114,6 +114,26 @@ if (processedCustomSchema) {
         };
       }
     }
+
+    // Google Product Rich Snippet & Merchant Center Auto-Enrichment
+    if (item && item["@type"] === "Product") {
+      if (!item["image"]) {
+        item["image"] = [
+          metaImage || "https://cms.mahindralifespaces.com/web/sites/default/files/styles/web_banner_webp/public/2026-10/jpeg-optimizer_Elevation%20Opt%20A..webp",
+          "https://cms.mahindralifespaces.com/web/sites/default/files/styles/web_banner_webp/public/2026-10/Swimming%20pool%20with%20sunken%20bar_Rivenza_11zon.webp",
+          "https://cms.mahindralifespaces.com/web/sites/default/files/styles/web_banner_webp/public/2026-10/Yoga%20lawn_Rivenza_11zon.webp"
+        ];
+      }
+      if (!item["brand"]) {
+        item["brand"] = {
+          "@type": "Brand",
+          "name": "Mahindra Lifespaces"
+        };
+      }
+      if (!item["sku"]) {
+        item["sku"] = "MR-PUNE-LAUNCH";
+      }
+    }
   };
 
   if (Array.isArray(processedCustomSchema)) {
