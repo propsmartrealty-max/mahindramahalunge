@@ -394,7 +394,7 @@ export async function onRequest(context) {
   modifiedHeaders.set('Cache-Tag', dynamicTags.join(', '));
   modifiedHeaders.set(
     'Cache-Control',
-    'public, max-age=0, s-maxage=86400, stale-while-revalidate=604800, stale-if-error=86400'
+    'public, max-age=0, s-maxage=3600, stale-while-revalidate=86400, stale-if-error=86400'
   );
   modifiedHeaders.set('Vary', 'User-Agent, Accept-Encoding');
 

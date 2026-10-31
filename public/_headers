@@ -26,104 +26,104 @@
 
 # HTML Pages - Instant Edge delivery with Stale-While-Revalidate for Googlebot
 /*.html
-  Cache-Control: public, max-age=0, s-maxage=86400, stale-while-revalidate=604800, stale-if-error=86400
+  Cache-Control: public, max-age=0, s-maxage=3600, stale-while-revalidate=86400, stale-if-error=86400
   Cache-Tag: mahindra-rivenza, html-pages, enterprise-edge
 
 # Directory index routes
 /
-  Cache-Control: public, max-age=0, s-maxage=86400, stale-while-revalidate=604800, stale-if-error=86400
+  Cache-Control: public, max-age=0, s-maxage=3600, stale-while-revalidate=86400, stale-if-error=86400
   Cache-Tag: mahindra-rivenza, homepage, enterprise-edge
 
 /mahindra-rivenza/*
-  Cache-Control: public, max-age=0, s-maxage=86400, stale-while-revalidate=604800, stale-if-error=86400
+  Cache-Control: public, max-age=0, s-maxage=3600, stale-while-revalidate=86400, stale-if-error=86400
   Cache-Tag: mahindra-rivenza, corridor-pages, baner-annex, enterprise-edge
 
 /baner-annex/*
-  Cache-Control: public, max-age=0, s-maxage=86400, stale-while-revalidate=604800, stale-if-error=86400
+  Cache-Control: public, max-age=0, s-maxage=3600, stale-while-revalidate=86400, stale-if-error=86400
   Cache-Tag: mahindra-rivenza, baner-annex, enterprise-edge
 
 /flats-near-*
-  Cache-Control: public, max-age=0, s-maxage=86400, stale-while-revalidate=604800, stale-if-error=86400
+  Cache-Control: public, max-age=0, s-maxage=3600, stale-while-revalidate=86400, stale-if-error=86400
   Cache-Tag: mahindra-rivenza, micro-markets, enterprise-edge
 
 /west-pune/*
-  Cache-Control: public, max-age=0, s-maxage=86400, stale-while-revalidate=604800, stale-if-error=86400
+  Cache-Control: public, max-age=0, s-maxage=3600, stale-while-revalidate=86400, stale-if-error=86400
   Cache-Tag: mahindra-rivenza, west-pune, enterprise-edge
 
 /pune-real-estate/*
-  Cache-Control: public, max-age=0, s-maxage=86400, stale-while-revalidate=604800, stale-if-error=86400
+  Cache-Control: public, max-age=0, s-maxage=3600, stale-while-revalidate=86400, stale-if-error=86400
   Cache-Tag: mahindra-rivenza, pune-market, enterprise-edge
 
 /floor-plans/*
-  Cache-Control: public, max-age=0, s-maxage=86400, stale-while-revalidate=604800, stale-if-error=86400
+  Cache-Control: public, max-age=0, s-maxage=3600, stale-while-revalidate=86400, stale-if-error=86400
   Cache-Tag: mahindra-rivenza, floorplans, enterprise-edge
 
 /commute/*
-  Cache-Control: public, max-age=0, s-maxage=86400, stale-while-revalidate=604800, stale-if-error=86400
+  Cache-Control: public, max-age=0, s-maxage=3600, stale-while-revalidate=86400, stale-if-error=86400
   Cache-Tag: mahindra-rivenza, commute, enterprise-edge
 
 /amenities/*
-  Cache-Control: public, max-age=0, s-maxage=86400, stale-while-revalidate=604800, stale-if-error=86400
+  Cache-Control: public, max-age=0, s-maxage=3600, stale-while-revalidate=86400, stale-if-error=86400
   Cache-Tag: mahindra-rivenza, amenities-master, resort-lifestyle, enterprise-edge
 
 /near/*
-  Cache-Control: public, max-age=0, s-maxage=86400, stale-while-revalidate=604800, stale-if-error=86400
+  Cache-Control: public, max-age=0, s-maxage=3600, stale-while-revalidate=86400, stale-if-error=86400
   Cache-Tag: mahindra-rivenza, near-hubs, enterprise-edge
 
 /near/schools/*
-  Cache-Control: public, max-age=0, s-maxage=86400, stale-while-revalidate=604800, stale-if-error=86400
+  Cache-Control: public, max-age=0, s-maxage=3600, stale-while-revalidate=86400, stale-if-error=86400
   Cache-Tag: mahindra-rivenza, schools-hub, enterprise-edge
 
 /near/hospitals/*
-  Cache-Control: public, max-age=0, s-maxage=86400, stale-while-revalidate=604800, stale-if-error=86400
+  Cache-Control: public, max-age=0, s-maxage=3600, stale-while-revalidate=86400, stale-if-error=86400
   Cache-Tag: mahindra-rivenza, hospitals-hub, enterprise-edge
 
 /near/metro/*
-  Cache-Control: public, max-age=0, s-maxage=86400, stale-while-revalidate=604800, stale-if-error=86400
+  Cache-Control: public, max-age=0, s-maxage=3600, stale-while-revalidate=86400, stale-if-error=86400
   Cache-Tag: mahindra-rivenza, metro-hub, enterprise-edge
 
 /compare/*
-  Cache-Control: public, max-age=0, s-maxage=86400, stale-while-revalidate=604800, stale-if-error=86400
+  Cache-Control: public, max-age=0, s-maxage=3600, stale-while-revalidate=86400, stale-if-error=86400
   Cache-Tag: mahindra-rivenza, comparisons, enterprise-edge
 
 /connectivity/*
-  Cache-Control: public, max-age=0, s-maxage=86400, stale-while-revalidate=604800, stale-if-error=86400
+  Cache-Control: public, max-age=0, s-maxage=3600, stale-while-revalidate=86400, stale-if-error=86400
   Cache-Tag: mahindra-rivenza, connectivity, infrastructure, enterprise-edge
 
 /articles/*
-  Cache-Control: public, max-age=0, s-maxage=86400, stale-while-revalidate=604800, stale-if-error=86400
+  Cache-Control: public, max-age=0, s-maxage=3600, stale-while-revalidate=86400, stale-if-error=86400
   Cache-Tag: mahindra-rivenza, articles, enterprise-edge
 
 /residences/*
-  Cache-Control: public, max-age=0, s-maxage=86400, stale-while-revalidate=604800, stale-if-error=86400
+  Cache-Control: public, max-age=0, s-maxage=3600, stale-while-revalidate=86400, stale-if-error=86400
   Cache-Tag: mahindra-rivenza, residences, enterprise-edge
 
 /brand/*
-  Cache-Control: public, max-age=0, s-maxage=86400, stale-while-revalidate=604800, stale-if-error=86400
+  Cache-Control: public, max-age=0, s-maxage=3600, stale-while-revalidate=86400, stale-if-error=86400
   Cache-Tag: mahindra-rivenza, brand-projects, enterprise-edge
 
 /tools/*
-  Cache-Control: public, max-age=0, s-maxage=86400, stale-while-revalidate=604800, stale-if-error=86400
+  Cache-Control: public, max-age=0, s-maxage=3600, stale-while-revalidate=86400, stale-if-error=86400
   Cache-Tag: mahindra-rivenza, tools, enterprise-edge
 
 /flats-in-pune/*
-  Cache-Control: public, max-age=0, s-maxage=86400, stale-while-revalidate=604800, stale-if-error=86400
+  Cache-Control: public, max-age=0, s-maxage=3600, stale-while-revalidate=86400, stale-if-error=86400
   Cache-Tag: mahindra-rivenza, market-guides, enterprise-edge
 
 /new-projects-in-pune/*
-  Cache-Control: public, max-age=0, s-maxage=86400, stale-while-revalidate=604800, stale-if-error=86400
+  Cache-Control: public, max-age=0, s-maxage=3600, stale-while-revalidate=86400, stale-if-error=86400
   Cache-Tag: mahindra-rivenza, market-guides, enterprise-edge
 
 /luxury-apartments-in-pune/*
-  Cache-Control: public, max-age=0, s-maxage=86400, stale-while-revalidate=604800, stale-if-error=86400
+  Cache-Control: public, max-age=0, s-maxage=3600, stale-while-revalidate=86400, stale-if-error=86400
   Cache-Tag: mahindra-rivenza, market-guides, enterprise-edge
 
 /nri/*
-  Cache-Control: public, max-age=0, s-maxage=86400, stale-while-revalidate=604800, stale-if-error=86400
+  Cache-Control: public, max-age=0, s-maxage=3600, stale-while-revalidate=86400, stale-if-error=86400
   Cache-Tag: mahindra-rivenza, nri-portals, enterprise-edge
 
 /press/*
-  Cache-Control: public, max-age=0, s-maxage=86400, stale-while-revalidate=604800, stale-if-error=86400
+  Cache-Control: public, max-age=0, s-maxage=3600, stale-while-revalidate=86400, stale-if-error=86400
   Cache-Tag: mahindra-rivenza, press-room, digital-pr, enterprise-edge
 
 /syndication/*
@@ -132,7 +132,7 @@
   Access-Control-Allow-Origin: *
 
 /web-stories/*
-  Cache-Control: public, max-age=0, s-maxage=86400, stale-while-revalidate=604800, stale-if-error=86400
+  Cache-Control: public, max-age=0, s-maxage=3600, stale-while-revalidate=86400, stale-if-error=86400
   Cache-Tag: mahindra-rivenza, web-stories, enterprise-edge
 
 # Immutable hashed JS & CSS generated by Astro Vite build
