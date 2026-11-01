@@ -272,6 +272,7 @@ if (journal.quotaCooldownUntil && new Date(journal.quotaCooldownUntil).getTime()
 const keyCandidatePaths = [
   path.join(projectRoot, 'service-account.json'),
   path.join(projectRoot, 'service-account-2.json'),
+  path.join(projectRoot, 'service-account-3.json'),
   path.join(projectRoot, 'google-indexing-key.json'),
 ];
 
