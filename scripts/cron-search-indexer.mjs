@@ -1,17 +1,18 @@
 #!/usr/bin/env node
 /**
- * Enterprise Search Engine Indexing Engine & Stateful Quota Orchestrator (v6.0 Enterprise)
+ * Enterprise Search Engine Indexing Engine & Stateful Quota Orchestrator (v7.0 Enterprise)
  * Mahindra Lifespaces Pune Ecosystem (https://mahindralifespaceshomes.in)
  * 
  * Hardened Capabilities:
- * 1. Stateful Indexing Journal (.indexing-journal.json):
+ * 1. Multi-Project GCP Federation & Project-Aware Quota Governance:
+ *    - Service accounts grouped by Google Cloud `project_id`.
+ *    - Per-project daily quota tracking & independent cooldown isolation.
+ *    - Instant failover across distinct GCP projects when a project hits its 200/day boundary.
+ *    - Granular discrimination between burst per-minute limits (backoff & retry) vs daily per-project limits.
+ * 2. Stateful Indexing Journal (.indexing-journal.json):
  *    - Content-hash (SHA256) tracking to detect newly created or modified pages.
- *    - LRU (Least Recently Used) round-robin queue across all 372 URLs to prevent quota starvation.
- *    - Preserves submission timestamps and status per URL.
- * 2. Google Indexing API Multi-Account Pool & Quota Governance:
- *    - Service account pooling with automated JWT rotation.
- *    - Priority queueing: Tier 0 (new/modified), Tier 1 (core/corridor targets), Tier 2 (LRU rotation).
- *    - Respects 200 publish requests/day quota; records cooldown (resets midnight PT / 12:30 PM IST).
+ *    - LRU (Least Recently Used) round-robin queue across all canonical URLs.
+ *    - Per-project quota cooldown timestamps and URL audit history.
  * 3. Real-Time Google WebSub Hub (PubSubHubbub):
  *    - Broadcasts RSS feeds and Master XML sitemaps.
  * 4. Chunked Global IndexNow Broadcast:
@@ -36,12 +37,12 @@ const KEY_LOCATION = `${BASE_URL}/${GLOBAL_KEY}.txt`;
 const JOURNAL_FILE = path.join(projectRoot, '.indexing-journal.json');
 
 console.log('='.repeat(80));
-console.log(`[Enterprise Indexer v6.0] Master Search Engine Broadcaster & Quota Engine`);
+console.log(`[Enterprise Indexer v7.0] Master Search Engine Broadcaster & Multi-Project GCP Engine`);
 console.log(`[Enterprise Indexer] Target Host: ${HOST}`);
 console.log(`[Enterprise Indexer] Timestamp: ${new Date().toISOString()}`);
 console.log('='.repeat(80));
 
-// Helper: sleep
+// Helper: sleep with optional jitter
 const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
 // Helper: compute file sha256
@@ -59,24 +60,30 @@ function computeFileHash(filePath) {
 // 1. Load or Initialize Indexing Journal
 // -----------------------------------------------------------------------------
 let journal = {
-  version: '6.0',
+  version: '7.0',
   lastRun: null,
   quotaCooldownUntil: null,
+  projectCooldowns: {},
   urls: {},
 };
 
 if (fs.existsSync(JOURNAL_FILE)) {
   try {
-    journal = JSON.parse(fs.readFileSync(JOURNAL_FILE, 'utf8'));
-    if (!journal.urls) journal.urls = {};
+    const raw = JSON.parse(fs.readFileSync(JOURNAL_FILE, 'utf8'));
+    journal = {
+      ...journal,
+      ...raw,
+      version: '7.0',
+      projectCooldowns: raw.projectCooldowns || {},
+      urls: raw.urls || {},
+    };
   } catch (err) {
     console.warn(`[Enterprise Indexer] Notice loading journal: ${err.message}. Initializing clean store.`);
-    journal = { version: '6.0', lastRun: null, quotaCooldownUntil: null, urls: {} };
   }
 }
 
 // -----------------------------------------------------------------------------
-// 2. Discover All 372 Canonical URLs
+// 2. Discover All Canonical URLs
 // -----------------------------------------------------------------------------
 const distDir = path.join(projectRoot, 'dist');
 const corePriorityUrls = [
@@ -204,7 +211,7 @@ for (const ep of indexNowEndpoints) {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json; charset=utf-8',
-          'User-Agent': 'Enterprise-IndexNow-Client/6.0 (Mahindra-Rivenza)',
+          'User-Agent': 'Enterprise-IndexNow-Client/7.0 (Mahindra-Rivenza)',
         },
         body: JSON.stringify(payload),
       });
@@ -251,24 +258,12 @@ for (const feed of feedsToPing) {
   }
 }
 
-// Note: Google & Bing have officially deprecated legacy /ping endpoints in favor of WebSub and IndexNow
-// which are fully active above.
-
 // -----------------------------------------------------------------------------
-// 5. Google Indexing API Multi-Account Pool & Stateful Queue
+// 5. Multi-Project GCP Federation & Google Indexing API Orchestration
 // -----------------------------------------------------------------------------
-console.log('\n--- 3. Google Indexing API (Service Account OAuth2 JWT & Priority Queue) ---');
+console.log('\n--- 3. Google Indexing API (Multi-Project GCP Federation & Stateful Queue) ---');
 
-// Check quota cooldown
-const nowMs = Date.now();
-let isGoogleQuotaCoolingDown = false;
-if (journal.quotaCooldownUntil && new Date(journal.quotaCooldownUntil).getTime() > nowMs) {
-  const remainingHours = ((new Date(journal.quotaCooldownUntil).getTime() - nowMs) / (1000 * 60 * 60)).toFixed(1);
-  console.log(`[Enterprise Indexer] Daily Google Indexing quota in active cooldown until ${journal.quotaCooldownUntil} (~${remainingHours}h remaining).`);
-  console.log(`[Enterprise Indexer] All URLs remain fully synchronized via WebSub, Sitemaps, and IndexNow.`);
-  isGoogleQuotaCoolingDown = true;
-}
-
+// Scan and pool all available service account credentials
 const keyCandidatePaths = [
   ...fs.readdirSync(projectRoot)
     .filter(f => f.startsWith('service-account') && f.endsWith('.json'))
@@ -277,14 +272,13 @@ const keyCandidatePaths = [
   path.join(projectRoot, 'google-indexing-key.json'),
 ];
 
-const serviceAccountPool = [];
+const allLoadedAccounts = [];
 
 if (process.env.GOOGLE_SERVICE_ACCOUNT_KEY) {
   try {
     const envSa = JSON.parse(process.env.GOOGLE_SERVICE_ACCOUNT_KEY);
     if (envSa.private_key && envSa.client_email) {
-      serviceAccountPool.push(envSa);
-      console.log('[Enterprise Indexer] Loaded Service Account from GOOGLE_SERVICE_ACCOUNT_KEY.');
+      allLoadedAccounts.push({ ...envSa, source: 'ENV:GOOGLE_SERVICE_ACCOUNT_KEY' });
     }
   } catch (_) {}
 }
@@ -293,11 +287,52 @@ for (const candidate of keyCandidatePaths) {
   if (fs.existsSync(candidate)) {
     try {
       const sa = JSON.parse(fs.readFileSync(candidate, 'utf8'));
-      if (sa.private_key && sa.client_email && !serviceAccountPool.some(s => s.client_email === sa.client_email)) {
-        serviceAccountPool.push(sa);
-        console.log(`[Enterprise Indexer] Loaded Service Account into pool: ${sa.client_email} (${path.basename(candidate)})`);
+      if (sa.private_key && sa.client_email && !allLoadedAccounts.some(s => s.client_email === sa.client_email)) {
+        allLoadedAccounts.push({ ...sa, source: path.basename(candidate) });
       }
     } catch (_) {}
+  }
+}
+
+// Group service accounts by GCP project_id
+const projectMap = new Map();
+for (const sa of allLoadedAccounts) {
+  const pId = sa.project_id || 'default-project';
+  if (!projectMap.has(pId)) {
+    projectMap.set(pId, []);
+  }
+  projectMap.get(pId).push(sa);
+}
+
+console.log(`[Enterprise Indexer] Discovered ${allLoadedAccounts.length} Service Account(s) across ${projectMap.size} GCP Project(s):`);
+const nowMs = Date.now();
+
+// Helper to compute next midnight PT (07:00 UTC)
+function getNextMidnightPt() {
+  const target = new Date();
+  target.setUTCHours(7, 0, 0, 0); // 07:00 UTC = 00:00 PST / 12:30 IST
+  if (target.getTime() <= Date.now()) {
+    target.setDate(target.getDate() + 1);
+  }
+  return target.toISOString();
+}
+
+// Filter projects that are NOT in active daily quota cooldown
+const activeProjects = [];
+for (const [pId, saList] of projectMap.entries()) {
+  const cooldownUntil = journal.projectCooldowns[pId];
+  const isCooldown = cooldownUntil && new Date(cooldownUntil).getTime() > nowMs;
+  const statusStr = isCooldown 
+    ? `[IN COOLDOWN until ${cooldownUntil}]` 
+    : `[READY - ${saList.length} SA(s)]`;
+  
+  console.log(`  • GCP Project: "${pId}" -> ${statusStr}`);
+  for (const sa of saList) {
+    console.log(`    └─ ${sa.client_email} (${sa.source})`);
+  }
+
+  if (!isCooldown) {
+    activeProjects.push({ projectId: pId, accounts: saList });
   }
 }
 
@@ -332,11 +367,12 @@ async function obtainGoogleAccessToken(sa) {
   }
 }
 
-if (!isGoogleQuotaCoolingDown && serviceAccountPool.length > 0) {
-  console.log(`[Enterprise Indexer] Active Service Account Pool Size: ${serviceAccountPool.length}`);
-
+if (activeProjects.length === 0) {
+  console.log(`[Enterprise Indexer] All ${projectMap.size} GCP Project(s) are currently in quota cooldown until next reset (07:00 UTC / 12:30 PM IST).`);
+  console.log(`[Enterprise Indexer] All URLs remain fully synchronized via WebSub, Sitemaps, and IndexNow.`);
+} else {
   // Build Intelligent Priority Queue:
-  // 1. URLs that need submit (never submitted or content hash changed)
+  // 1. URLs needing submit (never submitted or content hash changed)
   // 2. High-priority corridor/Baner Annexe URLs
   // 3. LRU (sorted by lastGoogleSubmit ascending)
   const priorityQueue = [...allDiscoveredUrls].sort((a, b) => {
@@ -357,10 +393,14 @@ if (!isGoogleQuotaCoolingDown && serviceAccountPool.length > 0) {
 
   console.log(`[Enterprise Indexer] Processing top ${queueToProcess.length} prioritized URLs from queue...`);
 
+  let currentProjectIdx = 0;
   let currentSaIdx = 0;
-  let activeToken = await obtainGoogleAccessToken(serviceAccountPool[currentSaIdx]);
+  let activeProject = activeProjects[currentProjectIdx];
+  let activeSa = activeProject.accounts[currentSaIdx];
+  let activeToken = await obtainGoogleAccessToken(activeSa);
+
   if (activeToken) {
-    console.log(`[Enterprise Indexer] Authenticated with primary account: ${serviceAccountPool[currentSaIdx].client_email}`);
+    console.log(`[Enterprise Indexer] Authenticated with GCP Project [${activeProject.projectId}] SA: ${activeSa.client_email}`);
   }
 
   let successCount = 0;
@@ -394,29 +434,41 @@ if (!isGoogleQuotaCoolingDown && serviceAccountPool.length > 0) {
           console.log(`[Enterprise Indexer] [${i + 1}/${queueToProcess.length}] ✓ Google Indexing API (200 OK): ${targetUrl}`);
         }
       } else if (pubRes.status === 429) {
-        failedCount++;
-        console.log(`[Enterprise Indexer] Daily limit on account ${serviceAccountPool[currentSaIdx].client_email}`);
+        const errorMsg = pubJson.error?.message || '';
+        const isPerDayQuota = errorMsg.includes('Publish requests per day') || errorMsg.includes('quota metric');
 
-        // Rotate to fallback account
-        if (currentSaIdx + 1 < serviceAccountPool.length) {
-          currentSaIdx++;
-          console.log(`[Enterprise Indexer] Rotating to fallback account: ${serviceAccountPool[currentSaIdx].client_email}...`);
-          activeToken = await obtainGoogleAccessToken(serviceAccountPool[currentSaIdx]);
-          if (activeToken) {
-            i--; // Retry target with new token
-            continue;
+        if (isPerDayQuota) {
+          console.log(`[Enterprise Indexer] ✕ Daily quota exhausted for GCP Project [${activeProject.projectId}] (${errorMsg})`);
+          
+          // Mark this project in cooldown
+          const resetTime = getNextMidnightPt();
+          journal.projectCooldowns[activeProject.projectId] = resetTime;
+          journal.quotaCooldownUntil = resetTime;
+
+          // Attempt to failover to next active GCP project
+          currentProjectIdx++;
+          if (currentProjectIdx < activeProjects.length) {
+            activeProject = activeProjects[currentProjectIdx];
+            currentSaIdx = 0;
+            activeSa = activeProject.accounts[currentSaIdx];
+            console.log(`[Enterprise Indexer] ↻ Project Failover: Switching to GCP Project [${activeProject.projectId}] SA: ${activeSa.client_email}...`);
+            activeToken = await obtainGoogleAccessToken(activeSa);
+            if (activeToken) {
+              i--; // Retry target URL under new project
+              continue;
+            }
           }
-        }
 
-        // All accounts exhausted for the day
-        const midnightPt = new Date();
-        midnightPt.setUTCHours(7, 0, 0, 0); // Midnight PT is 07:00 UTC next day
-        if (midnightPt.getTime() <= Date.now()) {
-          midnightPt.setDate(midnightPt.getDate() + 1);
+          // If no other projects available, exit batch
+          console.log(`[Enterprise Indexer] All active GCP Projects have reached their daily quota.`);
+          break;
+        } else {
+          // Per-minute burst limit - back off with jitter
+          console.log(`[Enterprise Indexer] Burst rate limit encountered (per-minute quota). Backing off for 6s...`);
+          await sleep(6000);
+          i--; // Retry URL
+          continue;
         }
-        journal.quotaCooldownUntil = midnightPt.toISOString();
-        console.log(`[Enterprise Indexer] Service accounts exhausted for today. Cooldown set until ${journal.quotaCooldownUntil}`);
-        break;
       } else {
         failedCount++;
         journal.urls[targetUrl].googleStatus = pubRes.status;
@@ -467,5 +519,5 @@ try {
 }
 
 console.log('\n' + '='.repeat(80));
-console.log(`[Enterprise Indexer v6.0] Broadcast Cycle Executed Successfully.`);
+console.log(`[Enterprise Indexer v7.0] Broadcast Cycle Executed Successfully.`);
 console.log('='.repeat(80));
