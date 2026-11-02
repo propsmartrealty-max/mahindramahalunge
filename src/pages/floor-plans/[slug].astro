@@ -75,6 +75,24 @@ const planSchema = {
       }
     },
     {
+      "@type": "FloorPlan",
+      "@id": `https://mahindralifespaceshomes.in/floor-plans/${unit.slug}/#floorplan`,
+      "name": `${unit.name} Architectural CAD Blueprint`,
+      "description": `Sanctioned architectural CAD layout blueprint for ${unit.name} with ${unit.reraCarpetSqFt} sq.ft. MahaRERA carpet area and ${unit.balconySqFt} sq.ft. balcony deck at Mahindra Rivenza.`,
+      "image": `https://mahindralifespaceshomes.in${unit.image}`,
+      "numberOfRooms": unit.bhk === '2 BHK' ? 2 : unit.bhk === '3 BHK' ? 3 : 4,
+      "numberOfBedrooms": unit.bhk === '2 BHK' ? 2 : unit.bhk === '3 BHK' ? 3 : 4,
+      "numberOfBathroomsTotal": unit.bhk === '2 BHK' ? 2 : unit.bhk === '3 BHK' ? 3 : 4,
+      "floorSize": {
+        "@type": "QuantitativeValue",
+        "value": unit.reraCarpetSqFt,
+        "unitCode": "FTK"
+      },
+      "isPlanForApartment": {
+        "@id": `https://mahindralifespaceshomes.in/floor-plans/${unit.slug}/#apartment`
+      }
+    },
+    {
       "@type": "Apartment",
       "@id": `https://mahindralifespaceshomes.in/floor-plans/${unit.slug}/#apartment`,
       "name": unit.name,
