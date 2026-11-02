@@ -11,6 +11,10 @@
     "lint": "eslint . --ext .js,.ts,.tsx,.astro",
     "ping:indexnow": "node scripts/ping-indexnow.mjs",
     "cron:index": "node scripts/cron-search-indexer.mjs",
+    "index:enterprise": "node scripts/cron-search-indexer.mjs",
+    "index:status": "node scripts/cron-search-indexer.mjs --status",
+    "index:force": "node scripts/cron-search-indexer.mjs --force",
+    "index:dry-run": "node scripts/cron-search-indexer.mjs --dry-run",
     "audit:dns": "node scripts/audit-dns-security.mjs"
   },
   "dependencies": {

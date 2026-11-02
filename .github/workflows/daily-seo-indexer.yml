@@ -4,6 +4,8 @@ on:
   schedule:
     # 02:00 UTC (7:30 AM IST) - Morning search indexation push
     - cron: '0 2 * * *'
+    # 08:15 UTC (1:45 PM IST) - Google Quota Reset Window Push (Midnight PT Boundary)
+    - cron: '15 8 * * *'
     # 14:00 UTC (7:30 PM IST) - Evening search indexation push
     - cron: '0 14 * * *'
   workflow_dispatch:
@@ -21,7 +23,7 @@ permissions:
 
 jobs:
   broadcast-indexing:
-    name: Broadcast Sitemaps, Google Indexing API & IndexNow (315 URLs)
+    name: Broadcast Sitemaps, Google RFC 2046 Batch & IndexNow (375 URLs)
     runs-on: ubuntu-latest
     timeout-minutes: 10
 
