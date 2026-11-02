@@ -213,7 +213,7 @@ const allRssItems = [
 ];
 
 export const GET: APIRoute = async () => {
-  const defaultRssImage = 'https://cms.mahindralifespaces.com/web/sites/default/files/styles/web_banner_webp/public/2026-10/jpeg-optimizer_Elevation%20Opt%20A..webp';
+  const defaultRssImage = 'https://mahindralifespaceshomes.in/images/official/mahindra-rivenza-architectural-elevation.webp';
 
   const rssXml = `<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" xmlns:content="http://purl.org/rss/1.0/modules/content/">

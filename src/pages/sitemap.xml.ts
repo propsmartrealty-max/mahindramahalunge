@@ -19,6 +19,7 @@ export const GET: APIRoute = async () => {
     `${BASE_URL}/sitemap-commute.xml`,
     `${BASE_URL}/sitemap-web-stories.xml`,
     `${BASE_URL}/sitemap-images.xml`,
+    `${BASE_URL}/sitemap-videos.xml`,
   ];
 
   const xml = generateSitemapIndex(subSitemaps);

@@ -7,7 +7,7 @@ export const GET: APIRoute = async () => {
       title: 'Mahindra Rivenza 2 BHK Premium Residence (635 Sq.Ft. Carpet)',
       description: 'Biophilic 2 BHK Premium apartment at Mahindra Rivenza by Mahindra Lifespaces in Baner Annex / Mahalunge, Pune. Features 635 sq.ft RERA carpet area (688 sq.ft aggregate), IGBC Gold Pre-Certified, Net Zero Waste to Landfill, ~44,000 sq.ft clubhouse with sunken aqua bar pool. MahaRERA PR1261012602102.',
       link: 'https://mahindralifespaceshomes.in/floor-plans/mahindra-rivenza-2-bhk-premium/',
-      imageLink: 'https://cms.mahindralifespaces.com/web/sites/default/files/styles/web_banner_webp/public/2026-10/jpeg-optimizer_Elevation%20Opt%20A..webp',
+      imageLink: 'https://mahindralifespaceshomes.in/images/official/mahindra-rivenza-architectural-elevation.webp',
       price: '9000000 INR',
       salePrice: '9000000 INR',
       carpetArea: '635 sq.ft',
@@ -18,7 +18,7 @@ export const GET: APIRoute = async () => {
       title: 'Mahindra Rivenza 2 BHK Luxury B Residence (705 Sq.Ft. Carpet)',
       description: '2 BHK Luxury B apartment at Mahindra Rivenza, Baner Annex / Mahalunge, Pune. 705 sq.ft RERA carpet area, 785 sq.ft aggregate usable area. 7 mins to Hinjewadi Phase 1 IT Park & 8 mins to Balewadi High Street. Pre-approved loans from SBI, HDFC, ICICI.',
       link: 'https://mahindralifespaceshomes.in/floor-plans/mahindra-rivenza-2-bhk-luxury-b/',
-      imageLink: 'https://cms.mahindralifespaces.com/web/sites/default/files/styles/web_banner_webp/public/2026-10/jpeg-optimizer_Elevation%20Opt%20A..webp',
+      imageLink: 'https://mahindralifespaceshomes.in/images/official/mahindra-rivenza-architectural-elevation.webp',
       price: '10400000 INR',
       salePrice: '10400000 INR',
       carpetArea: '705 sq.ft',
@@ -29,7 +29,7 @@ export const GET: APIRoute = async () => {
       title: 'Mahindra Rivenza 2 BHK Luxury A Residence (711 Sq.Ft. Carpet)',
       description: '2 BHK Luxury A flat at Mahindra Rivenza, Baner Annex / Mahalunge, Pune. 711 sq.ft RERA carpet area, 824 sq.ft aggregate area with expanded deck (113 sq.ft EBVT). 9+ acres of vehicle-free landscaped greens and biophilic architecture.',
       link: 'https://mahindralifespaceshomes.in/floor-plans/mahindra-rivenza-2-bhk-luxury-a/',
-      imageLink: 'https://cms.mahindralifespaces.com/web/sites/default/files/styles/web_banner_webp/public/2026-10/jpeg-optimizer_Elevation%20Opt%20A..webp',
+      imageLink: 'https://mahindralifespaceshomes.in/images/official/mahindra-rivenza-architectural-elevation.webp',
       price: '11400000 INR',
       salePrice: '11400000 INR',
       carpetArea: '711 sq.ft',
@@ -40,7 +40,7 @@ export const GET: APIRoute = async () => {
       title: 'Mahindra Rivenza 2 BHK Ultra Luxury E Residence (747 Sq.Ft. Carpet)',
       description: 'Largest 2 BHK typology at Mahindra Rivenza, Baner Annex / Mahalunge, Pune. 747 sq.ft RERA carpet, 855 sq.ft aggregate area with private study alcove. MahaRERA Phase 1 PR1261012602102.',
       link: 'https://mahindralifespaceshomes.in/floor-plans/mahindra-rivenza-2-bhk-ultra-luxury-e/',
-      imageLink: 'https://cms.mahindralifespaces.com/web/sites/default/files/styles/web_banner_webp/public/2026-10/jpeg-optimizer_Elevation%20Opt%20A..webp',
+      imageLink: 'https://mahindralifespaceshomes.in/images/official/mahindra-rivenza-architectural-elevation.webp',
       price: '11800000 INR',
       salePrice: '11800000 INR',
       carpetArea: '747 sq.ft',
@@ -51,7 +51,7 @@ export const GET: APIRoute = async () => {
       title: 'Mahindra Rivenza 3 BHK Deluxe C Residence (882 Sq.Ft. Carpet)',
       description: '3 BHK Deluxe C residence at Mahindra Rivenza, Baner Annex / Mahalunge, Pune. 882 sq.ft RERA carpet, 995 sq.ft aggregate usable area. Designed with Vastu-compliant layout, dual cross-ventilation, and panoramic hill & river valley views.',
       link: 'https://mahindralifespaceshomes.in/floor-plans/mahindra-rivenza-3-bhk-deluxe-c/',
-      imageLink: 'https://cms.mahindralifespaces.com/web/sites/default/files/styles/web_banner_webp/public/2026-10/jpeg-optimizer_Elevation%20Opt%20A..webp',
+      imageLink: 'https://mahindralifespaceshomes.in/images/official/mahindra-rivenza-architectural-elevation.webp',
       price: '13100000 INR',
       salePrice: '13100000 INR',
       carpetArea: '882 sq.ft',
@@ -62,7 +62,7 @@ export const GET: APIRoute = async () => {
       title: 'Mahindra Rivenza 3 BHK Deluxe B Residence (894 Sq.Ft. Carpet)',
       description: '3 BHK Deluxe B apartment at Mahindra Rivenza, Baner Annex / Mahalunge, Pune. 894 sq.ft RERA carpet area, 1,007 sq.ft aggregate area. Direct access to PMRDA 36m Ring Road, Hinjewadi river bridge, and Pune Metro Line 3.',
       link: 'https://mahindralifespaceshomes.in/floor-plans/mahindra-rivenza-3-bhk-deluxe-b/',
-      imageLink: 'https://cms.mahindralifespaces.com/web/sites/default/files/styles/web_banner_webp/public/2026-10/jpeg-optimizer_Elevation%20Opt%20A..webp',
+      imageLink: 'https://mahindralifespaceshomes.in/images/official/mahindra-rivenza-architectural-elevation.webp',
       price: '14000000 INR',
       salePrice: '14000000 INR',
       carpetArea: '894 sq.ft',
@@ -73,7 +73,7 @@ export const GET: APIRoute = async () => {
       title: 'Mahindra Rivenza 3 BHK Ultra Luxury B Residence (1,065 Sq.Ft. Carpet)',
       description: 'Sprawling 3 BHK Ultra Luxury B residence at Mahindra Rivenza, Baner Annex / Mahalunge, Pune. 1,065 sq.ft RERA carpet, 1,206 sq.ft aggregate area, 141 sq.ft EBVT. Access to ~44,000 sq.ft clubhouse, futsal court, yoga lawn, and wellness spa.',
       link: 'https://mahindralifespaceshomes.in/floor-plans/mahindra-rivenza-3-bhk-ultra-luxury-b/',
-      imageLink: 'https://cms.mahindralifespaces.com/web/sites/default/files/styles/web_banner_webp/public/2026-10/jpeg-optimizer_Elevation%20Opt%20A..webp',
+      imageLink: 'https://mahindralifespaceshomes.in/images/official/mahindra-rivenza-architectural-elevation.webp',
       price: '16000000 INR',
       salePrice: '16000000 INR',
       carpetArea: '1065 sq.ft',
@@ -84,7 +84,7 @@ export const GET: APIRoute = async () => {
       title: 'Mahindra Rivenza 4 BHK Luxury B Residence (1,438 Sq.Ft. Carpet)',
       description: 'Grand 4 BHK Luxury B estate at Mahindra Rivenza, Baner Annex / Mahalunge, Pune. 1,438 sq.ft RERA carpet area, 1,615 sq.ft aggregate usable area, 177 sq.ft EBVT. Fully furnished 4 BHK show home open on-site at sales gallery.',
       link: 'https://mahindralifespaceshomes.in/floor-plans/mahindra-rivenza-4-bhk-luxury-b/',
-      imageLink: 'https://cms.mahindralifespaces.com/web/sites/default/files/styles/web_banner_webp/public/2026-10/jpeg-optimizer_Elevation%20Opt%20A..webp',
+      imageLink: 'https://mahindralifespaceshomes.in/images/official/mahindra-rivenza-architectural-elevation.webp',
       price: '22000000 INR',
       salePrice: '22000000 INR',
       carpetArea: '1438 sq.ft',
@@ -95,7 +95,7 @@ export const GET: APIRoute = async () => {
       title: 'Mahindra Rivenza 4 BHK Luxury A Presidential Suite (1,465 Sq.Ft. Carpet)',
       description: 'Flagship 4 BHK Luxury A Presidential Suite at Mahindra Rivenza, Baner Annex / Mahalunge, Pune. 1,465 sq.ft RERA carpet, 1,651 sq.ft aggregate area, 186 sq.ft EBVT. Complete biophilic privacy, dual decks, and dedicated EV charging parking.',
       link: 'https://mahindralifespaceshomes.in/floor-plans/mahindra-rivenza-4-bhk-luxury-a/',
-      imageLink: 'https://cms.mahindralifespaces.com/web/sites/default/files/styles/web_banner_webp/public/2026-10/jpeg-optimizer_Elevation%20Opt%20A..webp',
+      imageLink: 'https://mahindralifespaceshomes.in/images/official/mahindra-rivenza-architectural-elevation.webp',
       price: '25500000 INR',
       salePrice: '25500000 INR',
       carpetArea: '1465 sq.ft',
@@ -118,10 +118,10 @@ export const GET: APIRoute = async () => {
       <g:description><![CDATA[${p.description}]]></g:description>
       <g:link>${p.link}</g:link>
       <g:image_link>${p.imageLink}</g:image_link>
-      <g:additional_image_link>https://cms.mahindralifespaces.com/web/sites/default/files/styles/web_banner_webp/public/2026-10/Swimming%20pool%20with%20sunken%20bar_Rivenza_11zon.webp</g:additional_image_link>
-      <g:additional_image_link>https://cms.mahindralifespaces.com/web/sites/default/files/styles/web_banner_webp/public/2026-10/Multi-purpose_Rivenza__11zon.webp</g:additional_image_link>
-      <g:additional_image_link>https://cms.mahindralifespaces.com/web/sites/default/files/styles/web_banner_webp/public/2026-10/Yoga%20lawn_Rivenza_11zon.webp</g:additional_image_link>
-      <g:additional_image_link>https://cms.mahindralifespaces.com/web/sites/default/files/2026-10/2%20BHK%20premium%20%28687%20sqft%29_Rivenza.webp</g:additional_image_link>
+      <g:additional_image_link>https://mahindralifespaceshomes.in/images/official/swimming-pool-sunken-aqua-bar.webp</g:additional_image_link>
+      <g:additional_image_link>https://mahindralifespaceshomes.in/images/official/multipurpose-sports-arena.webp</g:additional_image_link>
+      <g:additional_image_link>https://mahindralifespaceshomes.in/images/official/yoga-lawn-biophilic-gardens.webp</g:additional_image_link>
+      <g:additional_image_link>https://mahindralifespaceshomes.in/images/official/floor-plan-2bhk-premium-687sqft.webp</g:additional_image_link>
       <g:availability>in stock</g:availability>
       <g:price>${p.price}</g:price>
       <g:sale_price>${p.salePrice}</g:sale_price>

@@ -154,12 +154,12 @@ export const CORE_PAGES: SitemapEntry[] = [
     changefreq: 'monthly',
     images: [
       {
-        loc: 'https://cms.mahindralifespaces.com/web/sites/default/files/styles/web_banner_webp/public/2026-10/RERA%20full%20url_PR1261012602102.jpeg.webp',
+        loc: 'https://mahindralifespaceshomes.in/images/official/maharera-certificate-phase-1-pr1261012602102.webp',
         title: 'MahaRERA Phase 1 Registration Certificate PR1261012602102',
         caption: 'MahaRERA official registration barcode for Mahindra Rivenza Phase 1',
       },
       {
-        loc: 'https://cms.mahindralifespaces.com/web/sites/default/files/styles/web_banner_webp/public/2026-10/RERA%20full%20url_PM1261012602103.jpeg.webp',
+        loc: 'https://mahindralifespaceshomes.in/images/official/maharera-certificate-phase-2-pm1261012602103.webp',
         title: 'MahaRERA Phase 2 Registration Certificate PM1261012602103',
         caption: 'MahaRERA official registration barcode for Mahindra Rivenza Phase 2',
       },

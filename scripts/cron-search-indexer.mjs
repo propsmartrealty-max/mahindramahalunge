@@ -238,6 +238,8 @@ const feedsToPing = [
   `${BASE_URL}/rss.xml`,
   `${BASE_URL}/sitemap.xml`,
   `${BASE_URL}/sitemap-index.xml`,
+  `${BASE_URL}/sitemap-videos.xml`,
+  `${BASE_URL}/sitemap-images.xml`,
   `${BASE_URL}/google-shopping.xml`,
 ];
 

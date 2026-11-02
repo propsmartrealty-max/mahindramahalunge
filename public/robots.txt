@@ -11,6 +11,8 @@ User-agent: Googlebot
 Allow: /
 Allow: /_astro/
 Allow: /images/
+Allow: /videos/
+Allow: /documents/
 Allow: /favicon.ico
 Allow: /favicon.svg
 Allow: /favicon*.png
@@ -21,11 +23,22 @@ Allow: /*.jpg$
 Allow: /*.jpeg$
 Allow: /*.webp$
 Allow: /*.svg$
+Allow: /*.mp4$
+Allow: /*.pdf$
 Disallow: /api/
 Disallow: /cdn-cgi/
 
 # ------------------------------------------------------------------------------
-# 2. Google Image Search Bot (Googlebot-Image)
+# 2. Google Video Search Bot (Googlebot-Video)
+# ------------------------------------------------------------------------------
+User-agent: Googlebot-Video
+Allow: /
+Allow: /videos/
+Allow: /*.mp4$
+Allow: /*.webp$
+
+# ------------------------------------------------------------------------------
+# 3. Google Image Search Bot (Googlebot-Image)
 # ------------------------------------------------------------------------------
 User-agent: Googlebot-Image
 Allow: /
@@ -214,6 +227,7 @@ Sitemap: https://mahindralifespaceshomes.in/sitemap-floor-plans.xml
 Sitemap: https://mahindralifespaceshomes.in/sitemap-commute.xml
 Sitemap: https://mahindralifespaceshomes.in/sitemap-web-stories.xml
 Sitemap: https://mahindralifespaceshomes.in/sitemap-images.xml
+Sitemap: https://mahindralifespaceshomes.in/sitemap-videos.xml
 Sitemap: https://mahindralifespaceshomes.in/google-shopping.xml
 # Syndication Feeds:
 # https://mahindralifespaceshomes.in/rss.xml
