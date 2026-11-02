@@ -388,6 +388,27 @@ export const CORE_PAGES: SitemapEntry[] = [
     images: [PRIMARY_IMAGES[0]],
   },
   {
+    url: `${BASE_URL}/privacy-policy/`,
+    title: 'Privacy Policy & Data Protection Notice — PropSmart Realty & Mahindra Rivenza',
+    category: 'core',
+    priority: 0.6,
+    changefreq: 'monthly',
+  },
+  {
+    url: `${BASE_URL}/terms-of-use/`,
+    title: 'Terms of Use & Legal Conditions — PropSmart Realty & Mahindra Rivenza',
+    category: 'core',
+    priority: 0.6,
+    changefreq: 'monthly',
+  },
+  {
+    url: `${BASE_URL}/disclaimer/`,
+    title: 'Statutory Disclaimer & MahaRERA Compliance Notice — PropSmart Realty',
+    category: 'core',
+    priority: 0.6,
+    changefreq: 'monthly',
+  },
+  {
     url: `${BASE_URL}/near/`,
     title: 'Flats Near Hinjewadi IT Parks [Starts ₹90L*] Mahindra Rivenza',
     category: 'core',

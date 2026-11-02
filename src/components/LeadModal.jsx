@@ -347,10 +347,10 @@ export default function LeadModal() {
                         id="consent"
                         checked={formData.consent}
                         onChange={(e) => setFormData({ ...formData, consent: e.target.checked })}
-                        className="mt-0.5 rounded border-stone-600 text-gold-500 focus:ring-0"
+                        className="mt-0.5 rounded border-stone-600 text-gold-500 focus:ring-0 cursor-pointer"
                       />
-                      <label htmlFor="consent" className="text-[10px] text-stone-400 leading-tight">
-                        I authorize Mahindra Lifespaces and its authorized representatives to contact me via Call, SMS or WhatsApp regarding the Mahalunge project.
+                      <label htmlFor="consent" className="text-[10px] text-stone-300 leading-tight">
+                        I authorize <strong className="text-white">PropSmart Realty</strong> (Authorized Strategic Channel Partner for Mahindra Lifespaces, MahaRERA: <span className="text-gold-300 font-mono">A031262401295</span>) to contact me via Call, SMS or WhatsApp regarding Mahindra Rivenza. I agree to the <a href="/privacy-policy/" target="_blank" className="text-gold-400 underline">Privacy Policy</a> &amp; <a href="/terms-of-use/" target="_blank" className="text-gold-400 underline">Terms of Use</a>.
                       </label>
                     </div>
                   </div>

@@ -146,6 +146,9 @@ const corePriorityUrls = [
   `${BASE_URL}/tools/`,
   `${BASE_URL}/web-stories/`,
   `${BASE_URL}/sitemap/`,
+  `${BASE_URL}/privacy-policy/`,
+  `${BASE_URL}/terms-of-use/`,
+  `${BASE_URL}/disclaimer/`,
 ];
 
 const allDiscoveredUrls = [...corePriorityUrls];

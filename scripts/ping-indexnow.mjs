@@ -57,6 +57,9 @@ let urlList = [
   `https://${HOST}/nri/`,
   `https://${HOST}/web-stories/`,
   `https://${HOST}/sitemap/`,
+  `https://${HOST}/privacy-policy/`,
+  `https://${HOST}/terms-of-use/`,
+  `https://${HOST}/disclaimer/`,
 ];
 
 // Extract all URLs from generated dist/sitemap*.xml if available

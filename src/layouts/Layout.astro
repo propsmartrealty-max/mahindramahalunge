@@ -674,15 +674,28 @@ const baseSchema = {
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- Google tag (gtag.js) - Google Ads: AW-17430583486 -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17430583486"></script>
+    <!-- Google Consent Mode v2 Default Initialization & Google Ads Tag (AW-17430583486) -->
     <script is:inline>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       window.gtag = gtag;
-      gtag('js', new Date());
 
-      gtag('config', 'AW-17430583486');
+      // Google Consent Mode v2 Mandatory Defaults for Google Ads & Analytics Compliance
+      gtag('consent', 'default', {
+        'ad_storage': 'granted',
+        'ad_user_data': 'granted',
+        'ad_personalization': 'granted',
+        'analytics_storage': 'granted',
+        'functionality_storage': 'granted',
+        'personalization_storage': 'granted',
+        'security_storage': 'granted',
+        'wait_for_update': 500
+      });
+
+      gtag('js', new Date());
+      gtag('config', 'AW-17430583486', {
+        'allow_enhanced_conversions': true
+      });
 
       // Global Lead Form Conversion Dispatched to Google Ads
       window.triggerLeadConversion = function() {
@@ -693,6 +706,7 @@ const baseSchema = {
         }
       };
     </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17430583486"></script>
     <title>{title}</title>
     <meta name="description" content={description} />
     <meta name="keywords" content={metaKeywords} />
