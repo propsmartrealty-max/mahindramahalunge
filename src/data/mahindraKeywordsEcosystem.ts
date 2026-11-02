@@ -73,6 +73,32 @@ export const rivenzaMasterBrandKeywords = [
 ];
 
 // ==============================================================================
+// 1b. ULTRA-PREMIUM BANER ANNEX & PUNE REAL ESTATE MARKET DOMINATION KEYWORDS
+// ==============================================================================
+export const ultraPremiumBanerAnnexPuneKeywords = [
+  'most premium project in Baner Annex',
+  'most luxury project in Pune',
+  'ultra luxury apartments in Pune',
+  'best residential project in Baner Annex',
+  'most premium project in Mahalunge',
+  'top luxury flats in Pune',
+  'Mahindra Rivenza most premium project',
+  'Mahindra Rivenza luxury flats in Pune',
+  'luxury 2 BHK in Baner Annex',
+  'luxury 3 BHK in Baner Annex Pune',
+  'presidential 4 BHK sky villas Pune',
+  'gated luxury township Baner Annex',
+  'best investment in Pune real estate 2026',
+  'high end luxury residences West Pune',
+  'Mahindra Rivenza flagship luxury township',
+  'top 10 luxury projects in Pune',
+  'Pune real estate luxury benchmark',
+  'most expensive flats in Baner Annex',
+  'luxury homes near Hinjewadi IT Park',
+  'IGBC Gold luxury township Pune'
+];
+
+// ==============================================================================
 // 2. BRAND × DEVELOPER KEYWORDS
 // ==============================================================================
 export const rivenzaBrandDeveloperKeywords = [

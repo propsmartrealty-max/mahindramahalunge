@@ -9,6 +9,12 @@ export const GET: APIRoute = async () => {
     $schema: "https://json-ld.org/spec/latest/json-ld-syntax/",
     context: "https://schema.org",
     project: "Mahindra Rivenza",
+    marketPositioning: "The Most Premium Residential Project in Baner Annex & Pune Real Estate Market",
+    luxuryBadges: [
+      "Most Premium Project in Baner Annex 2026",
+      "Benchmark of Luxury in West Pune Real Estate",
+      "IGBC Gold Pre-Certified Net Zero Waste Living"
+    ],
     aliasSpellings: [
       "Mahindra Rivenze",
       "Mahindra Riveza",
