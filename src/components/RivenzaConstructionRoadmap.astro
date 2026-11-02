@@ -1,0 +1,127 @@
+---
+// RivenzaConstructionRoadmap.astro — Ground Construction Milestones & Target Delivery Tracker
+interface Props {
+  className?: string;
+}
+
+const { className = "" } = Astro.props;
+
+const milestones = [
+  {
+    phase: "Phase 01",
+    title: "13.46-Acre Acquisition & Sanctions",
+    timeline: "Completed (2025 - Q1 2026)",
+    status: "Completed",
+    badgeColor: "bg-emerald-500/10 text-emerald-400 border-emerald-500/20",
+    desc: "Land parcel acquired for estimated ₹3,500 Cr GDV. Full environmental clearance, non-agricultural (NA) conversion, and MahaRERA Phase 1 (PR1261012602102) & Phase 2 (PM1261012602103) approvals sanctioned.",
+  },
+  {
+    phase: "Phase 02",
+    title: "Excavation, Soil Piling & Substructure",
+    timeline: "In Progress (Current Stage)",
+    status: "Active on Ground",
+    badgeColor: "bg-gold-500/10 text-gold-400 border-gold-500/20",
+    desc: "Heavy hydraulic piling rigs mobilized. Deep geotechnical foundation piling, perimeter RCC retaining walls, and lower multi-level parking podium excavation proceeding at high velocity.",
+  },
+  {
+    phase: "Phase 03",
+    title: "Plinth Level & Podium Slab Casting",
+    timeline: "Target: Q4 2026 - Q1 2027",
+    status: "Scheduled",
+    badgeColor: "bg-white/5 text-stone-300 border-white/10",
+    desc: "Completion of ground plinths, vehicle-free elevated podium slab casting, and setting up of dedicated automated concrete batching plants on site.",
+  },
+  {
+    phase: "Phase 04",
+    title: "Mivan Monolithic Superstructure (G+30 to G+34)",
+    timeline: "Target: 2027 - 2028",
+    status: "Scheduled",
+    badgeColor: "bg-white/5 text-stone-300 border-white/10",
+    desc: "Rapid Aluform monolithic concrete pouring cycles (8 to 10 days per typical floor slab) across all 6 residential towers.",
+  },
+  {
+    phase: "Phase 05",
+    title: "Façade, Clubhouse Finishes & Biophilic Landscape",
+    timeline: "Target: 2029",
+    status: "Scheduled",
+    badgeColor: "bg-white/5 text-stone-300 border-white/10",
+    desc: "Exterior acoustic glazing, ~44,000 sq.ft clubhouse fit-outs, sunken aqua bar pool filtration plants, and 9+ acres biophilic tree plantation.",
+  },
+  {
+    phase: "Phase 06",
+    title: "MahaRERA OC & Targeted Early Handover",
+    timeline: "Target: Dec 2029 – Mid 2030 (RERA Boundary: Dec 2031)",
+    status: "Target Handover",
+    badgeColor: "bg-purple-500/10 text-purple-400 border-purple-500/20",
+    desc: "Final municipal inspections, fire NOC, water supply commissioning, and early phased key handover to homebuyers well ahead of statutory MahaRERA long-stop date.",
+  },
+];
+---
+
+<section id="construction-status" class={`py-20 bg-charcoal-900 border-b border-white/10 ${className}`}>
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+    
+    <!-- Header -->
+    <div class="text-center max-w-3xl mx-auto space-y-4">
+      <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-gold-500/10 border border-gold-500/30 text-gold-400 text-xs font-semibold uppercase tracking-wider">
+        <span>Transparent Milestone Accountability</span>
+      </div>
+      <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-stone-100">
+        Live Ground Construction Status &amp; Handover Roadmap
+      </h2>
+      <p class="text-stone-300 text-sm sm:text-base font-light leading-relaxed">
+        Track transparent, stage-by-stage engineering progress from soil stabilization to scheduled key handovers.
+      </p>
+    </div>
+
+    <!-- Timeline Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {milestones.map((m, idx) => (
+        <div class="p-6 rounded-2xl bg-charcoal-950 border border-white/10 space-y-4 relative flex flex-col justify-between">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="text-[11px] font-mono text-stone-400">{m.phase}</span>
+              <span class={`text-[10px] font-semibold uppercase tracking-wider px-2 py-0.5 rounded-full border ${m.badgeColor}`}>
+                {m.status}
+              </span>
+            </div>
+            <h3 class="font-serif text-lg font-bold text-stone-100">{m.title}</h3>
+            <div class="text-xs text-gold-400 font-semibold">{m.timeline}</div>
+            <p class="text-xs text-stone-400 leading-relaxed">{m.desc}</p>
+          </div>
+          <div class="pt-4 border-t border-white/5 flex items-center justify-between text-[11px] text-stone-400">
+            <span>Milestone {idx + 1} of 6</span>
+            <span class="text-stone-200">Mahindra Lifespaces</span>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <!-- Callout Banner -->
+    <div class="p-8 rounded-2xl bg-gradient-to-r from-charcoal-950 via-charcoal-900 to-charcoal-950 border border-gold-500/30 flex flex-col md:flex-row items-center justify-between gap-6">
+      <div class="space-y-2 text-center md:text-left">
+        <h4 class="font-serif text-xl sm:text-2xl font-bold text-stone-100">
+          Request Latest Drone Footage &amp; Ground Inspection Report
+        </h4>
+        <p class="text-xs sm:text-sm text-stone-400 max-w-xl">
+          Get high-resolution quarterly site photos, excavation updates, and structural milestone certificates sent directly to your phone.
+        </p>
+      </div>
+      <div class="flex flex-wrap gap-3">
+        <button
+          data-open-modal
+          class="px-6 py-3 rounded-xl bg-gold-400 text-charcoal-950 font-bold text-xs uppercase tracking-wider hover:bg-gold-300 transition-all shadow-md"
+        >
+          Download Site Report (PDF)
+        </button>
+        <a
+          href="/construction-status/"
+          class="px-6 py-3 rounded-xl bg-white/5 border border-white/10 text-stone-200 font-semibold text-xs uppercase tracking-wider hover:bg-white/10 transition-colors"
+        >
+          Full Live Tracker ↗
+        </a>
+      </div>
+    </div>
+
+  </div>
+</section>

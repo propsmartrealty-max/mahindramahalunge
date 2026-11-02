@@ -1,0 +1,149 @@
+---
+// RivenzaEngineeringSpecs.astro — Room-by-Room Dimensions & Construction Specifications
+interface Props {
+  className?: string;
+}
+
+const { className = "" } = Astro.props;
+
+const roomDimensions = [
+  {
+    room: "Living & Formal Dining",
+    twoBhk: "11'0\" x 19'6\"",
+    threeBhk: "12'0\" x 22'6\"",
+    fourBhk: "14'6\" x 28'0\"",
+    feature: "Cross-ventilated living space with floor-to-ceiling glass slider to sundeck",
+  },
+  {
+    room: "Open-Air Balcony / Sundeck",
+    twoBhk: "5'0\" x 8'6\"",
+    threeBhk: "5'6\" x 11'0\"",
+    fourBhk: "6'6\" x 16'0\"",
+    feature: "Toughened glass railing with unobstructed views of 9+ acres biophilic valley",
+  },
+  {
+    room: "Master Bedroom Suite",
+    twoBhk: "11'0\" x 13'6\"",
+    threeBhk: "12'0\" x 15'0\"",
+    fourBhk: "14'0\" x 18'0\"",
+    feature: "Dedicated wardrobe niche, acoustic glazed windows & laminated wooden flooring",
+  },
+  {
+    room: "Master Ensuite Bathroom",
+    twoBhk: "5'0\" x 8'0\"",
+    threeBhk: "5'6\" x 8'6\"",
+    fourBhk: "7'0\" x 9'6\"",
+    feature: "Grohe / Kohler CP fittings, glass shower partition & anti-skid ceramic tiling",
+  },
+  {
+    room: "Secondary / Children’s Bedroom",
+    twoBhk: "10'0\" x 11'6\"",
+    threeBhk: "11'0\" x 12'6\"",
+    fourBhk: "12'0\" x 14'0\"",
+    feature: "Optimized study desk space with energy-efficient daylight ingress",
+  },
+  {
+    room: "Guest Bedroom / Study",
+    twoBhk: "—",
+    threeBhk: "10'6\" x 11'6\"",
+    fourBhk: "11'6\" x 13'0\"",
+    feature: "Versatile layout convertible to executive home office or private library",
+  },
+  {
+    room: "Modular Kitchen & Utility",
+    twoBhk: "8'0\" x 10'0\"",
+    threeBhk: "8'6\" x 11'6\"",
+    fourBhk: "10'0\" x 14'0\"",
+    feature: "Granite platform with double-bowl SS sink and dedicated 3'6\" dry balcony",
+  },
+];
+
+const technicalSpecs = [
+  {
+    title: "Aluform / Mivan Monolithic Concrete",
+    desc: "100% shear wall RCC system poured in a single cycle. Eliminates external brick joints, ensures seismic resistance (Zone 3 compliant), and completely prevents monsoon water seepage.",
+    icon: "🏗️",
+  },
+  {
+    title: "10.0 Ft. Clear Floor-to-Ceiling Height",
+    desc: "Expansive vertical volume ensuring enhanced daylight penetration, superior air circulation, and luxurious spatial grandeur compared to standard 9.2 ft builder apartments.",
+    icon: "📐",
+  },
+  {
+    title: "High-Speed Elevators (2.5 m/s)",
+    desc: "Each tower core features 3 high-speed automated passenger elevators plus 1 dedicated heavy-duty stretcher/service elevator, serving just 4 to 6 apartments per floor lobby.",
+    icon: "🛗",
+  },
+  {
+    title: "Acoustic Double-Glazed Windows",
+    desc: "High-performance aluminium window frames with acoustic insulated glass units (DGU) reducing outdoor noise by up to 32 dB and attenuating solar heat gain.",
+    icon: "🪟",
+  },
+  {
+    title: "Pre-Certified IGBC Gold Biophilic Design",
+    desc: "Integrated solar rooftop generation for common areas, 100% rainwater harvesting, organic waste converter (OWC), and Net Zero Waste to Landfill operational compliance.",
+    icon: "🌿",
+  },
+  {
+    title: "100% DG Power Backup for Essential Services",
+    desc: "Full automated generator backup for elevators, firefighting systems, water pumps, clubhouse, and dedicated 1 kW emergency power for every apartment.",
+    icon: "⚡",
+  },
+];
+---
+
+<section id="engineering-specs" class={`py-20 bg-charcoal-950 border-b border-white/10 ${className}`}>
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+    
+    <!-- Header -->
+    <div class="text-center max-w-3xl mx-auto space-y-4">
+      <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-semibold uppercase tracking-wider">
+        <span>Architectural Quality &amp; Engineering</span>
+      </div>
+      <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-stone-100">
+        Room-by-Room Dimensions &amp; Technical Specifications
+      </h2>
+      <p class="text-stone-300 text-sm sm:text-base font-light leading-relaxed">
+        Engineered with zero dead passage space, maximum usable carpet efficiency, and monolithic Aluform concrete construction for permanent longevity.
+      </p>
+    </div>
+
+    <!-- Dimensions Table -->
+    <div class="overflow-x-auto rounded-2xl border border-white/10 bg-charcoal-900/90 shadow-2xl backdrop-blur-md">
+      <table class="w-full text-left text-xs sm:text-sm text-stone-300">
+        <thead class="bg-charcoal-950/90 text-gold-400 font-serif border-b border-white/10 uppercase tracking-wider text-[11px] sm:text-xs">
+          <tr>
+            <th class="py-4 px-4 sm:px-6">Room / Living Zone</th>
+            <th class="py-4 px-3 sm:px-4">2 BHK Dimensions</th>
+            <th class="py-4 px-3 sm:px-4">3 BHK Dimensions</th>
+            <th class="py-4 px-3 sm:px-4">4 BHK Dimensions</th>
+            <th class="py-4 px-4 sm:px-6">Architectural Feature</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-white/5 font-sans">
+          {roomDimensions.map((r) => (
+            <tr class="hover:bg-white/[0.02] transition-colors">
+              <td class="py-4 px-4 sm:px-6 font-semibold text-stone-100">{r.room}</td>
+              <td class="py-4 px-3 sm:px-4 text-stone-300 font-mono text-xs">{r.twoBhk}</td>
+              <td class="py-4 px-3 sm:px-4 text-stone-300 font-mono text-xs">{r.threeBhk}</td>
+              <td class="py-4 px-3 sm:px-4 text-stone-300 font-mono text-xs">{r.fourBhk}</td>
+              <td class="py-4 px-4 sm:px-6 text-stone-400 text-xs leading-relaxed">{r.feature}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+
+    <!-- 6 Technical Pillars Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {technicalSpecs.map((spec) => (
+        <div class="p-6 rounded-2xl bg-charcoal-900 border border-white/10 space-y-3 hover:border-gold-500/40 transition-colors">
+          <div class="text-3xl">{spec.icon}</div>
+          <h3 class="font-serif text-lg font-bold text-stone-100">{spec.title}</h3>
+          <p class="text-xs text-stone-400 leading-relaxed">{spec.desc}</p>
+        </div>
+      ))}
+    </div>
+
+  </div>
+</section>

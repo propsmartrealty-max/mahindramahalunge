@@ -1,0 +1,207 @@
+---
+// RivenzaCostSheetTable.astro — Comprehensive All-Inclusive Cost Sheet Breakdown & EOI Allotment
+interface Props {
+  className?: string;
+}
+
+const { className = "" } = Astro.props;
+
+const costBreakdowns = [
+  {
+    typology: "2 BHK Premium",
+    carpet: "635 - 687 Sq.Ft",
+    basePrice: "₹90.00 L*",
+    stampDuty: "₹6.30 L (7%)",
+    gst: "₹4.50 L (5%)",
+    totalEst: "₹1.01 Cr*",
+    eoiToken: "₹1,00,000",
+    status: "Fast Filling",
+  },
+  {
+    typology: "2 BHK Luxury (Type A/B/E)",
+    carpet: "668 - 747 Sq.Ft",
+    basePrice: "₹1.04 Cr*",
+    stampDuty: "₹7.28 L (7%)",
+    gst: "₹5.20 L (5%)",
+    totalEst: "₹1.17 Cr*",
+    eoiToken: "₹1,00,000",
+    status: "Limited Units",
+  },
+  {
+    typology: "3 BHK Deluxe (Type B/C)",
+    carpet: "882 - 945 Sq.Ft",
+    basePrice: "₹1.31 Cr*",
+    stampDuty: "₹9.17 L (7%)",
+    gst: "₹6.55 L (5%)",
+    totalEst: "₹1.47 Cr*",
+    eoiToken: "₹1,00,000",
+    status: "Popular Choice",
+  },
+  {
+    typology: "3 BHK Ultra Luxury (Type B)",
+    carpet: "1,065 Sq.Ft",
+    basePrice: "₹1.52 Cr*",
+    stampDuty: "₹10.64 L (7%)",
+    gst: "₹7.60 L (5%)",
+    totalEst: "₹1.71 Cr*",
+    eoiToken: "₹1,00,000",
+    status: "High Demand",
+  },
+  {
+    typology: "4 BHK Presidential Sky Villa",
+    carpet: "1,438 - 1,465 Sq.Ft",
+    basePrice: "₹2.20 Cr*",
+    stampDuty: "₹15.40 L (7%)",
+    gst: "₹11.00 L (5%)",
+    totalEst: "₹2.47 Cr*",
+    eoiToken: "₹2,00,000",
+    status: "Executive Suites",
+  },
+];
+
+const bankPartners = [
+  { name: "State Bank of India (SBI)", code: "APF Pre-Approved", roi: "8.40%*" },
+  { name: "HDFC Bank", code: "APF Pre-Approved", roi: "8.45%*" },
+  { name: "ICICI Bank", code: "APF Pre-Approved", roi: "8.50%*" },
+  { name: "Axis Bank", code: "APF Pre-Approved", roi: "8.55%*" },
+  { name: "Bank of Baroda", code: "APF Pre-Approved", roi: "8.40%*" },
+];
+
+const clpSchedule = [
+  { stage: "Booking & Agreement", pct: "10%", desc: "Upon registration of agreement for sale" },
+  { stage: "Plinth Completion", pct: "10%", desc: "Substructure & plinth level completion" },
+  { stage: "5th Floor Slab", pct: "10%", desc: "Casting of 5th residential floor slab" },
+  { stage: "15th Floor Slab", pct: "10%", desc: "Casting of 15th residential floor slab" },
+  { stage: "25th Floor Slab", pct: "10%", desc: "Casting of 25th residential floor slab" },
+  { stage: "Top Slab Casting", pct: "10%", desc: "Terrace floor slab completion" },
+  { stage: "Internal Plaster & Flooring", pct: "15%", desc: "Brickwork, MEP conduits, tiles & vitrified flooring" },
+  { stage: "External Paint, Lifts & Façade", pct: "15%", desc: "High-speed lifts installation & façade waterproofing" },
+  { stage: "Possession & OC Handover", pct: "10%", desc: "Receipt of MahaRERA Occupancy Certificate (OC)" },
+];
+---
+
+<section id="cost-sheet" class={`py-20 bg-charcoal-900 border-b border-white/10 ${className}`}>
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+    
+    <!-- Section Header -->
+    <div class="text-center max-w-3xl mx-auto space-y-4">
+      <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-gold-500/10 border border-gold-500/30 text-gold-400 text-xs font-semibold uppercase tracking-wider">
+        <span>Transparent Statutory Disclosures</span>
+      </div>
+      <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-stone-100">
+        All-Inclusive Cost Sheet &amp; EOI Priority Matrix
+      </h2>
+      <p class="text-stone-300 text-sm sm:text-base font-light leading-relaxed">
+        Review transparent base prices, Maharashtra statutory taxes (6% Stamp Duty + 1% Metro Cess + 5% GST + ₹30,000 Registration), and pre-launch Expression of Interest (EOI) token guidelines.
+      </p>
+    </div>
+
+    <!-- Cost Sheet Table (Responsive) -->
+    <div class="overflow-x-auto rounded-2xl border border-white/10 bg-charcoal-950/90 shadow-2xl backdrop-blur-md">
+      <table class="w-full text-left text-xs sm:text-sm text-stone-300">
+        <thead class="bg-charcoal-900/90 text-gold-400 font-serif border-b border-white/10 uppercase tracking-wider text-[11px] sm:text-xs">
+          <tr>
+            <th class="py-4 px-4 sm:px-6">Typology</th>
+            <th class="py-4 px-3 sm:px-4">RERA Carpet Area</th>
+            <th class="py-4 px-3 sm:px-4">Base Agreement Value</th>
+            <th class="py-4 px-3 sm:px-4">Stamp Duty (7%)</th>
+            <th class="py-4 px-3 sm:px-4">GST (5%)</th>
+            <th class="py-4 px-3 sm:px-4">Total On-Road*</th>
+            <th class="py-4 px-3 sm:px-4">EOI Token</th>
+            <th class="py-4 px-4 sm:px-6 text-center">Action</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-white/5 font-sans">
+          {costBreakdowns.map((row) => (
+            <tr class="hover:bg-white/[0.02] transition-colors">
+              <td class="py-4 px-4 sm:px-6 font-semibold text-stone-100 flex items-center gap-2">
+                <span>{row.typology}</span>
+                <span class="text-[9px] px-1.5 py-0.5 rounded bg-gold-500/10 border border-gold-500/20 text-gold-400 whitespace-nowrap">
+                  {row.status}
+                </span>
+              </td>
+              <td class="py-4 px-3 sm:px-4 text-stone-300 font-mono text-xs">{row.carpet}</td>
+              <td class="py-4 px-3 sm:px-4 font-semibold text-stone-100">{row.basePrice}</td>
+              <td class="py-4 px-3 sm:px-4 text-stone-400">{row.stampDuty}</td>
+              <td class="py-4 px-3 sm:px-4 text-stone-400">{row.gst}</td>
+              <td class="py-4 px-3 sm:px-4 font-bold text-gold-400">{row.totalEst}</td>
+              <td class="py-4 px-3 sm:px-4 text-emerald-400 font-mono font-semibold">{row.eoiToken}</td>
+              <td class="py-4 px-4 sm:px-6 text-center">
+                <button
+                  data-open-modal
+                  class="px-3 py-1.5 rounded-lg bg-gold-400 text-charcoal-950 font-bold text-xs uppercase tracking-wider hover:bg-gold-300 transition-all shadow-sm"
+                >
+                  Get Cost Sheet
+                </button>
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Additional Disclosures & EOI Pass Highlights -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="p-6 rounded-2xl bg-charcoal-950 border border-white/10 space-y-3">
+        <div class="w-10 h-10 rounded-xl bg-gold-500/10 border border-gold-500/20 flex items-center justify-center text-gold-400 font-bold text-lg">
+          🎟️
+        </div>
+        <h3 class="font-serif text-lg font-bold text-stone-100">100% Refundable EOI Token</h3>
+        <p class="text-xs text-stone-400 leading-relaxed">
+          Pre-launch Expressions of Interest (EOI) start at ₹1,00,000. In case of non-allotment of preferred floor or cancellation prior to booking agreement, 100% of the token amount is refunded to your bank account with zero deductions.
+        </p>
+      </div>
+
+      <div class="p-6 rounded-2xl bg-charcoal-950 border border-white/10 space-y-3">
+        <div class="w-10 h-10 rounded-xl bg-gold-500/10 border border-gold-500/20 flex items-center justify-center text-gold-400 font-bold text-lg">
+          🏦
+        </div>
+        <h3 class="font-serif text-lg font-bold text-stone-100">Pre-Approved Bank APF Facilities</h3>
+        <p class="text-xs text-stone-400 leading-relaxed">
+          Title clearance and legal vetting completed. Pre-approved home loan facilities from <strong>SBI, HDFC Bank, ICICI Bank, Axis Bank, and Bank of Baroda</strong> with funding up to 80%–85% of total agreement value.
+        </p>
+      </div>
+
+      <div class="p-6 rounded-2xl bg-charcoal-950 border border-white/10 space-y-3">
+        <div class="w-10 h-10 rounded-xl bg-gold-500/10 border border-gold-500/20 flex items-center justify-center text-gold-400 font-bold text-lg">
+          ⚖️
+        </div>
+        <h3 class="font-serif text-lg font-bold text-stone-100">MahaRERA 70% Escrow Protection</h3>
+        <p class="text-xs text-stone-400 leading-relaxed">
+          In strict compliance with MahaRERA regulations, 70% of all buyer disbursements are deposited into a dedicated project escrow bank account exclusively utilized for construction milestones at Mahindra Rivenza.
+        </p>
+      </div>
+    </div>
+
+    <!-- CLP Milestone Payment Breakdown -->
+    <div class="p-6 sm:p-8 rounded-2xl bg-charcoal-950 border border-white/10 space-y-6">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-white/10 pb-4">
+        <div>
+          <h3 class="font-serif text-xl sm:text-2xl font-bold text-stone-100">
+            Construction-Linked Payment (CLP) Milestone Structure
+          </h3>
+          <p class="text-xs text-stone-400">
+            No upfront bulk liability. Payments are disbursed by banks strictly upon verified civil construction milestones.
+          </p>
+        </div>
+        <a
+          href="/tools/construction-linked-payment-calculator/"
+          class="px-4 py-2 rounded-xl bg-white/5 border border-white/10 text-xs text-gold-400 hover:bg-white/10 transition-colors font-medium text-center"
+        >
+          Open CLP Calculator ↗
+        </a>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-9 gap-3">
+        {clpSchedule.map((s, idx) => (
+          <div class="p-3 bg-charcoal-900 rounded-xl border border-white/5 text-center space-y-1">
+            <div class="text-[10px] text-stone-400 font-mono">Stage 0{idx + 1}</div>
+            <div class="font-serif text-lg font-bold text-gold-400">{s.pct}</div>
+            <div class="text-[11px] font-semibold text-stone-200 leading-tight">{s.stage}</div>
+          </div>
+        ))}
+      </div>
+    </div>
+
+  </div>
+</section>

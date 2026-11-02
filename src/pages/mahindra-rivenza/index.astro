@@ -4,6 +4,9 @@ import ResidenceSelector from '../../components/ResidenceSelector.astro';
 import MasterPlanViewer from '../../components/MasterPlanViewer.astro';
 import CommuteDistanceMatrix from '../../components/CommuteDistanceMatrix.astro';
 import MahindraKeywordMatrix from '../../components/MahindraKeywordMatrix.astro';
+import RivenzaCostSheetTable from '../../components/RivenzaCostSheetTable.astro';
+import RivenzaEngineeringSpecs from '../../components/RivenzaEngineeringSpecs.astro';
+import RivenzaConstructionRoadmap from '../../components/RivenzaConstructionRoadmap.astro';
 
 const rivenzaMasterSchema = {
   "@context": "https://schema.org",
@@ -110,20 +113,26 @@ const rivenzaMasterSchema = {
           href="#typologies" 
           class="px-6 py-3.5 rounded-xl bg-gold-500 text-charcoal-950 font-semibold text-sm tracking-wide hover:bg-gold-400 transition-colors shadow-lg shadow-gold-500/20"
         >
-          View 9 Typologies & Floor Plans
+          View 9 Typologies
         </a>
         <a 
-          href="/pricing/" 
+          href="#cost-sheet" 
           class="px-6 py-3.5 rounded-xl bg-charcoal-900 border border-white/20 text-stone-100 font-medium text-sm tracking-wide hover:border-gold-500/50 hover:text-gold-300 transition-colors"
         >
-          Download Cost Sheet (From ₹90L*)
+          Cost Sheet (From ₹90L*)
         </a>
-        <button 
-          data-open-modal 
+        <a 
+          href="#engineering-specs" 
           class="px-6 py-3.5 rounded-xl bg-white/5 border border-white/10 text-stone-200 font-medium text-sm hover:bg-white/10 transition-colors"
         >
-          Book Priority Site Visit
-        </button>
+          Room Dimensions &amp; Specs
+        </a>
+        <a 
+          href="#construction-status" 
+          class="px-6 py-3.5 rounded-xl bg-white/5 border border-white/10 text-stone-200 font-medium text-sm hover:bg-white/10 transition-colors"
+        >
+          Ground Progress Tracker
+        </a>
       </div>
     </div>
   </section>
@@ -176,6 +185,12 @@ const rivenzaMasterSchema = {
     </div>
   </section>
 
+  <!-- Comprehensive All-Inclusive Cost Sheet & EOI Priority Allotment -->
+  <RivenzaCostSheetTable />
+
+  <!-- Room-by-Room Dimensions & Construction Specifications -->
+  <RivenzaEngineeringSpecs />
+
   <!-- Master Layout Section -->
   <section class="py-20 bg-charcoal-900 border-b border-white/10">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
@@ -207,6 +222,9 @@ const rivenzaMasterSchema = {
       <CommuteDistanceMatrix />
     </div>
   </section>
+
+  <!-- Live Ground Construction Status & Handover Roadmap -->
+  <RivenzaConstructionRoadmap />
 
   <!-- Legal MahaRERA Disclosures -->
   <section class="py-16 bg-charcoal-900 border-b border-white/10">
