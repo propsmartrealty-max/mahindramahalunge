@@ -11,7 +11,9 @@ User-agent: Googlebot
 Allow: /
 Allow: /_astro/
 Allow: /images/
+Allow: /favicon.ico
 Allow: /favicon.svg
+Allow: /favicon*.png
 Allow: /*.css$
 Allow: /*.js$
 Allow: /*.png$
@@ -28,6 +30,9 @@ Disallow: /cdn-cgi/
 User-agent: Googlebot-Image
 Allow: /
 Allow: /images/
+Allow: /favicon.ico
+Allow: /favicon.svg
+Allow: /favicon*.png
 Allow: /*.png$
 Allow: /*.jpg$
 Allow: /*.jpeg$
