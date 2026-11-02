@@ -2,8 +2,6 @@
 // Footer.astro - RERA Compliance, Brand Credentials & Strategic Keyword Silo
 import { mahindraPuneProjects, corporateProfile } from '../data/mahindraPuneEcosystem';
 import RiverFlowingEmblem from './RiverFlowingEmblem.astro';
-
-const isHomePage = Astro.url.pathname === '/' || Astro.url.pathname === '';
 ---
 
 <footer class="bg-[#0c1017] border-t border-white/10 pt-16 pb-28 sm:pb-20 text-stone-300 text-xs relative overflow-hidden">
@@ -242,27 +240,38 @@ const isHomePage = Astro.url.pathname === '/' || Astro.url.pathname === '';
 
     </div>
 
-    <!-- MahaRERA Compliance & Authorized Strategic Channel Partner Notice Box -->
-    <div class="mt-10 p-6 rounded-xl glass-card border border-white/10 space-y-4">
-      <div class="flex items-center space-x-2 text-stone-100 font-medium">
-        <svg class="w-4 h-4 text-gold-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-          <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"/>
-        </svg>
-        <span class="tracking-wider uppercase text-[11px] font-serif text-gold-300 font-bold">Statutory Disclosure & MahaRERA Compliance Advisory</span>
+    <!-- MahaRERA Compliance, Statutory Disclosure & Disclaimer Notice Box -->
+    <div id="disclaimer" class="mt-10 p-6 sm:p-8 rounded-2xl glass-card border border-white/10 space-y-5 bg-charcoal-900/80 backdrop-blur-md">
+      <div class="flex flex-wrap items-center justify-between gap-4 border-b border-white/10 pb-4">
+        <div class="flex items-center space-x-2.5 text-stone-100 font-medium">
+          <svg class="w-5 h-5 text-gold-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"/>
+          </svg>
+          <span class="tracking-wider uppercase text-xs font-serif text-gold-300 font-bold">Statutory Disclosure &amp; Legal Disclaimer</span>
+        </div>
+        <div class="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-gold-500/10 border border-gold-500/30 text-xs text-gold-300 font-mono">
+          <span>PropSmart Realty MahaRERA:</span>
+          <strong class="text-white font-bold tracking-wider">A031262401295</strong>
+        </div>
       </div>
 
       <div class="grid grid-cols-1 lg:grid-cols-4 gap-6 items-center">
-        <div class="lg:col-span-3 space-y-3">
-          <p class="text-[11px] text-stone-300 leading-relaxed">
-            <strong>MahaRERA Registration:</strong> "Mahindra Rivenza" is a landmark residential project developed by Mahindra Lifespace Developers Limited in a phase-wise manner. The project is registered with MahaRERA as <strong>Mahindra Rivenza Phase 1</strong> bearing registration no. <span class="text-gold-300 font-mono font-semibold">PR1261012602102</span> valid upto 30/12/31 and <strong>Mahindra Rivenza Phase 2</strong> bearing registration no. <span class="text-gold-300 font-mono font-semibold">PM1261012602103</span> valid upto 30/12/31 available on <a href="https://maharera.maharashtra.gov.in" target="_blank" rel="noopener noreferrer" class="text-gold-400 underline hover:text-gold-300">https://maharera.maharashtra.gov.in</a>. For detailed statutory certificates, visit our dedicated <a href="/rera/" class="text-gold-400 underline hover:text-gold-300 font-semibold">MahaRERA Compliance Portal</a>.
+        <div class="lg:col-span-3 space-y-3.5 text-[11px] text-stone-300 leading-relaxed">
+          <p>
+            <strong class="text-white">Authorized Strategic Channel Partner Disclosure:</strong> This project marketing portal (<span class="text-gold-300 font-mono">mahindralifespaceshomes.in</span>) is conceptualized, operated, and maintained by <strong class="text-white">PropSmart Realty</strong> (MahaRERA Agent Registration No: <span class="text-gold-300 font-mono font-bold">A031262401295</span>), an Authorized Strategic Channel Partner for marketing, customer consultation, and sales facilitation of residential developments by Mahindra Lifespace Developers Limited.
           </p>
-          <p class="text-[11px] text-stone-300 leading-relaxed border-t border-white/10 pt-3">
-            <strong>Authorized Strategic Channel Partner Advisory:</strong> This showcase portal (mahindralifespaceshomes.in) is operated and maintained by <strong>PropSmart Realty</strong>{isHomePage ? ' (MahaRERA: A031262401295)' : ''}, an Authorized Strategic Channel Partner for Mahindra Lifespace Developers Limited. The information contained herein is indicative of the kind of development proposed and does not constitute a legal offering or contract. All brand trademarks, logos, elevations, and design specifications belong to Mahindra Lifespace Developers Limited. Site address: Mahindra Rivenza, Baner Annex, off Baner-Hinjawadi Road, Pune, Maharashtra 412115.
+
+          <p>
+            <strong class="text-white">MahaRERA Project Registration:</strong> "Mahindra Rivenza" is a 13.46-acre master development by Mahindra Lifespace Developers Limited located at Baner Annex / Mahalunge, Pune. The project is officially registered under MahaRERA in phases: <strong class="text-white">Mahindra Rivenza Phase 1</strong> bearing Registration No. <span class="text-gold-300 font-mono font-semibold">PR1261012602102</span> (valid upto 30/12/2031) and <strong class="text-white">Mahindra Rivenza Phase 2</strong> bearing Registration No. <span class="text-gold-300 font-mono font-semibold">PM1261012602103</span> (valid upto 30/12/2031). Official certificates and sanctioned layout CADs can be verified on <a href="https://maharera.maharashtra.gov.in" target="_blank" rel="noopener noreferrer" class="text-gold-400 underline hover:text-gold-300">https://maharera.maharashtra.gov.in</a> or viewed on our dedicated <a href="/rera/" class="text-gold-400 underline hover:text-gold-300 font-semibold">MahaRERA Compliance Portal</a>.
+          </p>
+
+          <p class="border-t border-white/10 pt-3 text-[10px] text-stone-400 leading-relaxed">
+            <strong class="text-stone-300">Disclaimer:</strong> The images, 3D artist renderings, walkthroughs, layout plans, floor plans, specifications, unit dimensions, and pricing displayed on this portal are conceptual and for general guidance purposes only. They do not constitute an offer, guarantee, or legal contract between the developer/agent and prospective purchasers. All dimensions, architectural details, and specifications are subject to approvals by competent planning authorities (PMRDA / MahaRERA). All corporate brand marks, project logos, designs, and visual trademarks belong exclusively to Mahindra Lifespace Developers Limited. Site Address: Mahindra Rivenza, PMRDA Town Planning Scheme 1, Baner Annex / Mahalunge, off Baner-Hinjawadi Road, Pune, Maharashtra 412115.
           </p>
         </div>
 
         <div class="lg:col-span-1 flex flex-row sm:flex-row lg:flex-row justify-center items-center gap-3 pt-2 lg:pt-0">
-          <div class="bg-white p-2 rounded-lg text-center shadow-lg border border-gold-500/30 flex-1 max-w-[125px]">
+          <div class="bg-white p-2.5 rounded-xl text-center shadow-lg border border-gold-500/30 flex-1 max-w-[125px]">
             <img 
               src="/images/rera-qr-phase1.jpeg" 
               alt="MahaRERA Phase 1 QR PR1261012602102" 
@@ -271,9 +280,9 @@ const isHomePage = Astro.url.pathname === '/' || Astro.url.pathname === '';
               height="96"
               loading="lazy"
             />
-            <span class="block text-[8px] text-charcoal-950 font-mono font-bold mt-1">Phase 1: PR1261012602102</span>
+            <span class="block text-[8px] text-charcoal-950 font-mono font-bold mt-1.5">Phase 1: PR1261012602102</span>
           </div>
-          <div class="bg-white p-2 rounded-lg text-center shadow-lg border border-gold-500/30 flex-1 max-w-[125px]">
+          <div class="bg-white p-2.5 rounded-xl text-center shadow-lg border border-gold-500/30 flex-1 max-w-[125px]">
             <img 
               src="/images/rera-qr-phase2.jpeg" 
               alt="MahaRERA Phase 2 QR PM1261012602103" 
@@ -282,7 +291,7 @@ const isHomePage = Astro.url.pathname === '/' || Astro.url.pathname === '';
               height="96"
               loading="lazy"
             />
-            <span class="block text-[8px] text-charcoal-950 font-mono font-bold mt-1">Phase 2: PM1261012602103</span>
+            <span class="block text-[8px] text-charcoal-950 font-mono font-bold mt-1.5">Phase 2: PM1261012602103</span>
           </div>
         </div>
       </div>
