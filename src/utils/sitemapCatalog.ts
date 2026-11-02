@@ -37,43 +37,43 @@ import { rievenzaCorridorData } from '../data/pSeoMahindraRivenzaCorridor';
 // Shared Project Images for Google Image Sitemap Indexation
 export const PRIMARY_IMAGES: SitemapImage[] = [
   {
-    loc: 'https://cms.mahindralifespaces.com/web/sites/default/files/styles/web_banner_webp/public/2026-10/jpeg-optimizer_Elevation%20Opt%20A..webp',
+    loc: 'https://mahindralifespaceshomes.in/images/official/mahindra-rivenza-architectural-elevation.webp',
     title: 'Mahindra Rivenza - 13.46-Acre Landmark Architectural Elevation',
     caption: 'Official architectural elevation of Mahindra Rivenza at Baner Annex, Mahalunge, Pune',
     geo: 'Mahalunge, Baner Annex, Pune, Maharashtra, India',
   },
   {
-    loc: 'https://cms.mahindralifespaces.com/web/sites/default/files/styles/web_thumb_webp/public/2026-10/Mahindra%20Rivenza-01_new.png',
+    loc: 'https://mahindralifespaceshomes.in/images/official/master-plan-layout-cad.webp',
     title: 'Mahindra Rivenza Official Emblem Logo',
     caption: 'Official brand logo of Mahindra Rivenza by Mahindra Lifespaces',
     geo: 'Pune, Maharashtra, India',
   },
   {
-    loc: 'https://cms.mahindralifespaces.com/web/sites/default/files/styles/web_banner_webp/public/2026-10/Swimming%20pool%20with%20sunken%20bar_Rivenza_11zon.webp',
+    loc: 'https://mahindralifespaceshomes.in/images/official/swimming-pool-sunken-aqua-bar.webp',
     title: 'Resort Swimming Pool with Sunken Aqua Bar',
     caption: 'Temperature-regulated infinity resort pool with sunken aqua bar at Mahindra Rivenza',
     geo: 'Mahalunge, Baner Annex, Pune, India',
   },
   {
-    loc: 'https://cms.mahindralifespaces.com/web/sites/default/files/styles/web_banner_webp/public/2026-10/Multi-purpose_Rivenza__11zon.webp',
+    loc: 'https://mahindralifespaceshomes.in/images/official/multipurpose-sports-arena.webp',
     title: 'Multipurpose Championship Sports Arena',
     caption: 'All-weather multisport court at Mahindra Rivenza',
     geo: 'Mahalunge, Baner Annex, Pune, India',
   },
   {
-    loc: 'https://cms.mahindralifespaces.com/web/sites/default/files/styles/web_banner_webp/public/2026-10/Yoga%20lawn_Rivenza_11zon.webp',
+    loc: 'https://mahindralifespaceshomes.in/images/official/yoga-lawn-biophilic-gardens.webp',
     title: 'Mindful Yoga Lawn & Biophilic Gardens',
     caption: 'Open-sky meditation and yoga meadows at Mahindra Rivenza',
     geo: 'Mahalunge, Baner Annex, Pune, India',
   },
   {
-    loc: 'https://cms.mahindralifespaces.com/web/sites/default/files/styles/web_banner_webp/public/2026-10/image001_11zon%20%281%29.webp',
+    loc: 'https://mahindralifespaceshomes.in/images/official/floodlit-futsal-football-turf.webp',
     title: 'Floodlit Futsal Arena & Football Turf',
     caption: 'FIFA-standard turf futsal court at Mahindra Rivenza',
     geo: 'Mahalunge, Baner Annex, Pune, India',
   },
   {
-    loc: 'https://cms.mahindralifespaces.com/web/sites/default/files/2026-10/2%20BHK%20premium%20%28687%20sqft%29_Rivenza.webp',
+    loc: 'https://mahindralifespaceshomes.in/images/official/floor-plan-2bhk-premium-687sqft.webp',
     title: 'Official Sanctioned Architectural CAD Floor Plan',
     caption: 'MahaRERA sanctioned architectural layout blueprint for Mahindra Rivenza',
     geo: 'Pune, Maharashtra, India',

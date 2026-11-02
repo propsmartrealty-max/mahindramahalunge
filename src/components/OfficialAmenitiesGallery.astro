@@ -1,6 +1,6 @@
 ---
 // OfficialAmenitiesGallery.astro - Official Interactive Amenities & Elevation Gallery
-// Replicated directly from https://www.mahindralifespaces.com/residential/pune-properties/mahindra-rivenza/#amenities
+// First-party self-hosted official assets
 ---
 
 <div class="w-full glass-card rounded-2xl border border-white/10 p-6 lg:p-10 shadow-2xl relative overflow-hidden">
@@ -43,7 +43,7 @@
         class="amenity-thumb-btn active flex items-center space-x-2.5 px-4 py-2.5 rounded-xl bg-charcoal-900 border border-gold-400/60 shadow-lg text-xs font-semibold text-gold-300 transition-all cursor-pointer whitespace-nowrap"
         data-index="0"
       >
-        <img src="https://cms.mahindralifespaces.com/web/sites/default/files/styles/web_thumb_webp/public/2026-02/Swimming%20pool_0.png" alt="Swimming pool" width="24" height="24" loading="lazy" class="w-6 h-6 object-contain" />
+        <img src="/images/official/swimming-pool-sunken-aqua-bar.webp" alt="Swimming pool" width="24" height="24" loading="lazy" class="w-6 h-6 object-cover rounded-full" />
         <span>Swimming Pool</span>
       </button>
 
@@ -51,7 +51,7 @@
         class="amenity-thumb-btn flex items-center space-x-2.5 px-4 py-2.5 rounded-xl bg-charcoal-950/70 border border-white/10 text-xs font-medium text-stone-300 hover:text-white hover:border-gold-400/40 transition-all cursor-pointer whitespace-nowrap"
         data-index="1"
       >
-        <img src="https://cms.mahindralifespaces.com/web/sites/default/files/styles/web_thumb_webp/public/2026-01/multipurpose-court.png" alt="Multipurpose Court" width="24" height="24" loading="lazy" class="w-6 h-6 object-contain" />
+        <img src="/images/official/multipurpose-sports-arena.webp" alt="Multipurpose Court" width="24" height="24" loading="lazy" class="w-6 h-6 object-cover rounded-full" />
         <span>Multipurpose Court</span>
       </button>
 
@@ -59,7 +59,7 @@
         class="amenity-thumb-btn flex items-center space-x-2.5 px-4 py-2.5 rounded-xl bg-charcoal-950/70 border border-white/10 text-xs font-medium text-stone-300 hover:text-white hover:border-gold-400/40 transition-all cursor-pointer whitespace-nowrap"
         data-index="2"
       >
-        <img src="https://cms.mahindralifespaces.com/web/sites/default/files/styles/web_thumb_webp/public/2026-06/yoga_room.png" alt="Yoga room" width="24" height="24" loading="lazy" class="w-6 h-6 object-contain" />
+        <img src="/images/official/yoga-lawn-biophilic-gardens.webp" alt="Yoga room" width="24" height="24" loading="lazy" class="w-6 h-6 object-cover rounded-full" />
         <span>Yoga Lawn</span>
       </button>
 
@@ -67,7 +67,7 @@
         class="amenity-thumb-btn flex items-center space-x-2.5 px-4 py-2.5 rounded-xl bg-charcoal-950/70 border border-white/10 text-xs font-medium text-stone-300 hover:text-white hover:border-gold-400/40 transition-all cursor-pointer whitespace-nowrap"
         data-index="3"
       >
-        <img src="https://cms.mahindralifespaces.com/web/sites/default/files/styles/web_thumb_webp/public/2026-03/Half-basketball-court.png" alt="Half-basketball-court" width="24" height="24" loading="lazy" class="w-6 h-6 object-contain" />
+        <img src="/images/official/floodlit-futsal-football-turf.webp" alt="Half-basketball-court" width="24" height="24" loading="lazy" class="w-6 h-6 object-cover rounded-full" />
         <span>Futsal Court</span>
       </button>
     </div>
@@ -76,7 +76,7 @@
     <div class="relative rounded-2xl overflow-hidden border border-white/15 bg-charcoal-950 shadow-2xl group min-h-[360px] sm:min-h-[440px] flex items-end">
       <img
         id="amenity-display-img"
-        src="https://cms.mahindralifespaces.com/web/sites/default/files/styles/web_banner_webp/public/2026-10/Swimming%20pool%20with%20sunken%20bar_Rivenza_11zon.webp"
+        src="/images/official/swimming-pool-sunken-aqua-bar.webp"
         alt="Mahindra Rivenza Swimming Pool with Sunken Bar"
         class="absolute inset-0 w-full h-full object-cover object-center filter brightness-[0.82] contrast-[1.08] saturate-[1.1] transition-transform duration-700 group-hover:scale-105"
         loading="lazy"
@@ -116,7 +116,7 @@
   <div id="elevation-showcase-view" class="mt-8 hidden space-y-6">
     <div class="relative rounded-2xl overflow-hidden border border-white/15 bg-charcoal-950 shadow-2xl group min-h-[380px] sm:min-h-[480px] flex items-end">
       <img
-        src="https://cms.mahindralifespaces.com/web/sites/default/files/styles/web_banner_webp/public/2026-10/jpeg-optimizer_Elevation%20Opt%20A..webp"
+        src="/images/official/mahindra-rivenza-architectural-elevation.webp"
         alt="Mahindra Rivenza - High-Rise Tower Architecture Elevation"
         class="absolute inset-0 w-full h-full object-cover object-center filter brightness-[0.85] contrast-[1.08] saturate-[1.1] transition-transform duration-700 group-hover:scale-105"
         loading="lazy"
@@ -152,25 +152,25 @@
         title: "Swimming Pool with Sunken Aqua Bar",
         badge: "Zone 01 • Aquatic Wellness",
         desc: "Resort-style temperature-regulated swimming pool featuring an integrated sunken aqua bar, dedicated kids' splash pool, and relaxing sun loungers facing the river.",
-        img: "https://cms.mahindralifespaces.com/web/sites/default/files/styles/web_banner_webp/public/2026-10/Swimming%20pool%20with%20sunken%20bar_Rivenza_11zon.webp"
+        img: "/images/official/swimming-pool-sunken-aqua-bar.webp"
       },
       {
         title: "Multipurpose Sports Court",
         badge: "Zone 02 • Championship Athletics",
         desc: "All-weather cushioned synthetic arena configured for basketball, tennis, and volleyball with perimeter spectator seating and Olympic floodlights.",
-        img: "https://cms.mahindralifespaces.com/web/sites/default/files/styles/web_banner_webp/public/2026-10/Multi-purpose_Rivenza__11zon.webp"
+        img: "/images/official/multipurpose-sports-arena.webp"
       },
       {
         title: "Yoga Lawn & Zen Meadows",
         badge: "Zone 03 • Mindful Wellness",
         desc: "Open-sky biophilic landscaped meditation lawn surrounded by indigenous aromatics, zen reflexology pathways, and sunrise pavilions.",
-        img: "https://cms.mahindralifespaces.com/web/sites/default/files/styles/web_banner_webp/public/2026-10/Yoga%20lawn_Rivenza_11zon.webp"
+        img: "/images/official/yoga-lawn-biophilic-gardens.webp"
       },
       {
         title: "Floodlit Futsal Arena",
         badge: "Zone 04 • Fast-Paced Sports",
         desc: "High-impact rebound fenced turf arena engineered with FIFA-standard artificial grass, automated LED towers, and box football specifications.",
-        img: "https://cms.mahindralifespaces.com/web/sites/default/files/styles/web_banner_webp/public/2026-10/image001_11zon%20%281%29.webp"
+        img: "/images/official/floodlit-futsal-football-turf.webp"
       }
     ];
 

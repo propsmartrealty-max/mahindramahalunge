@@ -117,7 +117,7 @@ export const brandProjectData: BrandProjectItem[] = [
         a: 'Mahindra Lifespaces has tied up with leading banks and financial institutions including SBI, HDFC, Canara Bank, ICICI Bank, and Bajaj Finance.'
       }
     ],
-    image: 'https://cms.mahindralifespaces.com/web/sites/default/files/styles/web_banner_webp/public/2026-10/jpeg-optimizer_Elevation%20Opt%20A..webp'
+    image: '/images/official/mahindra-rivenza-architectural-elevation.webp'
   },
   {
     slug: 'mahindra-ivylush-kharadi-annex',

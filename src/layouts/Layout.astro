@@ -25,7 +25,7 @@ const {
   noindex = false,
 } = Astro.props;
 
-const defaultImage = "https://cms.mahindralifespaces.com/web/sites/default/files/styles/web_banner_webp/public/2026-10/jpeg-optimizer_Elevation%20Opt%20A..webp";
+const defaultImage = "https://mahindralifespaceshomes.in/images/official/mahindra-rivenza-architectural-elevation.webp";
 const metaImage = image || defaultImage;
 
 const defaultKeywords = "Mahindra Rivenza, Mahindra Rivenza Pune, Mahindra Rivenza Mahalunge, Mahindra Rivenza Baner Annex, 2 BHK Mahindra Rivenza, 3 BHK Mahindra Rivenza, 4 BHK Mahindra Rivenza, flats in Mahalunge Pune";
@@ -87,9 +87,9 @@ if (processedCustomSchema) {
     if (item && (item["@type"] === "Article" || item["@type"] === "NewsArticle" || item["@type"] === "BlogPosting")) {
       if (!item["image"]) {
         item["image"] = [
-          metaImage || "https://cms.mahindralifespaces.com/web/sites/default/files/styles/web_banner_webp/public/2026-10/jpeg-optimizer_Elevation%20Opt%20A..webp",
-          "https://cms.mahindralifespaces.com/web/sites/default/files/styles/web_banner_webp/public/2026-10/Swimming%20pool%20with%20sunken%20bar_Rivenza_11zon.webp",
-          "https://cms.mahindralifespaces.com/web/sites/default/files/styles/web_banner_webp/public/2026-10/Yoga%20lawn_Rivenza_11zon.webp"
+          metaImage || "https://mahindralifespaceshomes.in/images/official/mahindra-rivenza-architectural-elevation.webp",
+          "https://mahindralifespaceshomes.in/images/official/swimming-pool-sunken-aqua-bar.webp",
+          "https://mahindralifespaceshomes.in/images/official/yoga-lawn-biophilic-gardens.webp"
         ];
       }
       if (!item["mainEntityOfPage"]) {
@@ -119,9 +119,9 @@ if (processedCustomSchema) {
     if (item && item["@type"] === "Product") {
       if (!item["image"]) {
         item["image"] = [
-          metaImage || "https://cms.mahindralifespaces.com/web/sites/default/files/styles/web_banner_webp/public/2026-10/jpeg-optimizer_Elevation%20Opt%20A..webp",
-          "https://cms.mahindralifespaces.com/web/sites/default/files/styles/web_banner_webp/public/2026-10/Swimming%20pool%20with%20sunken%20bar_Rivenza_11zon.webp",
-          "https://cms.mahindralifespaces.com/web/sites/default/files/styles/web_banner_webp/public/2026-10/Yoga%20lawn_Rivenza_11zon.webp"
+          metaImage || "https://mahindralifespaceshomes.in/images/official/mahindra-rivenza-architectural-elevation.webp",
+          "https://mahindralifespaceshomes.in/images/official/swimming-pool-sunken-aqua-bar.webp",
+          "https://mahindralifespaceshomes.in/images/official/yoga-lawn-biophilic-gardens.webp"
         ];
       }
       if (!item["brand"]) {
@@ -273,7 +273,7 @@ const baseSchema = {
     },
     {
       "@type": "Organization",
-      "@id": "https://www.mahindralifespaces.com/#organization",
+      "@id": "https://mahindralifespaceshomes.in/#developer",
       "name": "Mahindra Lifespace Developers Limited",
       "legalName": "Mahindra Lifespace Developers Limited",
       "alternateName": [
@@ -281,7 +281,7 @@ const baseSchema = {
         "Mahindra Lifespaces Developers Ltd.",
         "MLDL"
       ],
-      "url": "https://www.mahindralifespaces.com/",
+      "url": "https://mahindralifespaceshomes.in/",
       "logo": "https://mahindralifespaceshomes.in/images/mahindra-lifespaces-logo.svg",
       "tickerSymbol": ["NSE:MAHLIFE", "BSE:532313"],
       "foundingDate": "1994",
@@ -325,7 +325,6 @@ const baseSchema = {
       "telephone": "+91-7744009295",
       "url": "https://mahindralifespaceshomes.in/",
       "sameAs": [
-        "https://www.mahindralifespaces.com/residential/pune-properties/mahindra-rivenza/",
         "https://maharera.maharashtra.gov.in/",
         "https://en.wikipedia.org/wiki/Mahindra_Lifespaces"
       ],
@@ -452,8 +451,8 @@ const baseSchema = {
       "@id": "https://mahindralifespaceshomes.in/#product",
       "name": "Mahindra Rivenza Residential Apartments",
       "image": [
-        "https://cms.mahindralifespaces.com/web/sites/default/files/styles/web_banner_webp/public/2026-10/jpeg-optimizer_Elevation%20Opt%20A..webp",
-        "https://cms.mahindralifespaces.com/web/sites/default/files/styles/web_banner_webp/public/2026-10/Swimming%20pool%20with%20sunken%20bar_Rivenza_11zon.webp"
+        "https://mahindralifespaceshomes.in/images/official/mahindra-rivenza-architectural-elevation.webp",
+        "https://mahindralifespaceshomes.in/images/official/swimming-pool-sunken-aqua-bar.webp"
       ],
       "description": "Luxury 2, 3 & 4 BHK climate-responsive residences at Mahindra Rivenza, Baner Annex / Mahalunge, Pune. Starting ₹90 Lakhs*. MahaRERA Phase 1 PR1261012602102 & Phase 2 PM1261012602103.",
       "brand": {
@@ -559,7 +558,7 @@ const baseSchema = {
       "description": "Authorized Strategic Channel Partner for Mahindra Rivenza by Mahindra Lifespaces in Baner Annex, Mahalunge, Pune. Facilitating direct consultations, floor plans, cost sheets, and site tours.",
       "telephone": "+91-7744009295",
       "url": "https://mahindralifespaceshomes.in/",
-      "image": "https://cms.mahindralifespaces.com/web/sites/default/files/styles/web_banner_webp/public/2026-10/jpeg-optimizer_Elevation%20Opt%20A..webp",
+      "image": "https://mahindralifespaceshomes.in/images/official/mahindra-rivenza-architectural-elevation.webp",
       "priceRange": "₹90 Lakhs - ₹2.55 Crore",
       "currenciesAccepted": "INR, USD, AED, EUR, GBP, SGD",
       "paymentAccepted": "Bank Transfer, Cheque, Home Loan",
@@ -705,10 +704,9 @@ const baseSchema = {
     <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
     <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preconnect" href="https://cms.mahindralifespaces.com" crossorigin />
     
-    <!-- Responsive LCP Image Preload: Saves 390 KiB Mobile Bandwidth -->
-    <link rel="preload" as="image" href="https://cms.mahindralifespaces.com/web/sites/default/files/styles/web_card_webp/public/2026-10/jpeg-optimizer_Elevation%20Opt%20A..webp" media="(max-width: 767px)" fetchpriority="high" type="image/webp" />
+    <!-- Responsive LCP Image Preload: First-Party High-Performance WebP -->
+    <link rel="preload" as="image" href="/images/official/mahindra-rivenza-architectural-elevation.webp" media="(max-width: 767px)" fetchpriority="high" type="image/webp" />
     <link rel="preload" as="image" href={metaImage} media="(min-width: 768px)" fetchpriority="high" type="image/webp" />
 
     <!-- Google SERP Verified Favicons & Brand Marks (Googlebot-Image Optimized) -->
