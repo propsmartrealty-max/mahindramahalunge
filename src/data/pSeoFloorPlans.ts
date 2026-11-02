@@ -14,6 +14,7 @@ export interface FloorPlanUnit {
   sunlightExposure: string;
   views: string;
   targetBuyer: string;
+  image: string;
   dimensions: {
     livingDining: string;
     masterBedroom: string;
@@ -29,6 +30,80 @@ export interface FloorPlanUnit {
   metaTitle: string;
   metaDescription: string;
 }
+
+export interface TowerFloorPlan {
+  tower: string;
+  name: string;
+  description: string;
+  unitsPerFloor: string;
+  floors: string;
+  elevators: string;
+  typologies: string;
+  image: string;
+}
+
+export const towerFloorPlansData: TowerFloorPlan[] = [
+  {
+    tower: 'Tower 1 (T1)',
+    name: 'Tower 1 Typical Floor Plan',
+    description: 'Phase 1 high-rise tower facing morning sunrise and landscaped podium meadows with maximum privacy.',
+    unitsPerFloor: '4 Units / Floor (Corner Sanctum)',
+    floors: 'G + 28 Floors',
+    elevators: '3 High-Speed Elevators + 1 Fire Service Stretcher Lift',
+    typologies: '2 BHK Luxury & 3 BHK Deluxe Residences',
+    image: '/images/official/tower-1-typical-floor-plan.webp'
+  },
+  {
+    tower: 'Tower 2 (T2)',
+    name: 'Tower 2 Typical Floor Plan',
+    description: 'Premium central tower overlooking the grand clubhouse and sunken aqua bar resort pool.',
+    unitsPerFloor: '4 Units / Floor (Cross-Ventilated)',
+    floors: 'G + 28 Floors',
+    elevators: '3 High-Speed Elevators + 1 Fire Service Stretcher Lift',
+    typologies: '2 BHK Luxury & 3 BHK Deluxe Residences',
+    image: '/images/official/tower-2-typical-floor-plan.webp'
+  },
+  {
+    tower: 'Tower 3 (T3)',
+    name: 'Tower 3 Typical Floor Plan',
+    description: 'Scenic high-rise tower with direct views of the central 9+ acres of biophilic greenery and forest walking trails.',
+    unitsPerFloor: '4 Units / Floor',
+    floors: 'G + 30 Floors',
+    elevators: '3 High-Speed Elevators + 1 Fire Service Stretcher Lift',
+    typologies: '3 BHK Deluxe & 3 BHK Ultra Luxury Residences',
+    image: '/images/official/tower-3-typical-floor-plan.webp'
+  },
+  {
+    tower: 'Tower 4 (T4)',
+    name: 'Tower 4 Typical Floor Plan',
+    description: 'Luxury residential tower featuring spacious 3 BHK and 4 BHK layouts with dual balcony sundecks.',
+    unitsPerFloor: '4 Units / Floor (Low Density)',
+    floors: 'G + 30 Floors',
+    elevators: '3 High-Speed Elevators + 1 Fire Service Stretcher Lift',
+    typologies: '3 BHK Ultra Luxury & 4 BHK Sky Villa Suites',
+    image: '/images/official/tower-4-typical-floor-plan.webp'
+  },
+  {
+    tower: 'Tower 5 (T5)',
+    name: 'Tower 5 Typical Floor Plan',
+    description: 'Flagship sky villa tower featuring palatial 3 & 4 BHK corner estates overlooking the Mula River valley.',
+    unitsPerFloor: '4 Units / Floor (Executive Plate)',
+    floors: 'G + 32 Floors',
+    elevators: '4 High-Speed Mitsubishi/Otis Elevators',
+    typologies: '3 BHK Ultra Luxury & 4 BHK Presidential Estates',
+    image: '/images/official/tower-5-typical-floor-plan.webp'
+  },
+  {
+    tower: 'Tower 6 (T6)',
+    name: 'Tower 6 Typical Floor Plan',
+    description: 'Corner flagship tower with 270° unobstructed Sahyadri mountain ridgeline vistas and triple-aspect illumination.',
+    unitsPerFloor: '4 Units / Floor (Max Privacy)',
+    floors: 'G + 32 Floors',
+    elevators: '4 High-Speed Mitsubishi/Otis Elevators',
+    typologies: '4 BHK Luxury & Presidential Sky Estates',
+    image: '/images/official/tower-6-typical-floor-plan.webp'
+  }
+];
 
 export const floorPlansData: FloorPlanUnit[] = [
   {
@@ -47,6 +122,7 @@ export const floorPlansData: FloorPlanUnit[] = [
     sunlightExposure: 'Morning Sunrise & East-West Cross Breeze',
     views: 'Panoramic Central Greens & River Vistas',
     targetBuyer: 'First-time tech professionals in Hinjewadi, young families, and high-yield investors',
+    image: '/images/official/floor-plan-2bhk-premium-687sqft.webp',
     dimensions: {
       livingDining: '17\'6" × 11\'0"',
       masterBedroom: '12\'6" × 10\'6"',
@@ -82,6 +158,7 @@ export const floorPlansData: FloorPlanUnit[] = [
     sunlightExposure: 'Continuous Natural Daylighting with Sahyadri Breeze',
     views: 'Resort Swimming Pool & Sunken Aqua Bar Views',
     targetBuyer: 'IT team leads, consultants, and buyers desiring deep balcony lounging space',
+    image: '/images/official/floor-plan-2bhk-luxury-b-785sqft.webp',
     dimensions: {
       livingDining: '18\'0" × 11\'6"',
       masterBedroom: '13\'0" × 11\'0"',
@@ -117,6 +194,7 @@ export const floorPlansData: FloorPlanUnit[] = [
     sunlightExposure: 'Dual-Aspect Cross Ventilation',
     views: 'Unobstructed Sahyadri Mountain Ridgeline',
     targetBuyer: 'Discerning couples and families hosting frequent social gatherings',
+    image: '/images/official/floor-plan-2bhk-luxury-a-824sqft.webp',
     dimensions: {
       livingDining: '19\'0" × 12\'0"',
       masterBedroom: '13\'6" × 11\'0"',
@@ -152,6 +230,7 @@ export const floorPlansData: FloorPlanUnit[] = [
     sunlightExposure: 'Corner Unit with 3-Sided Open Light & Air Flow',
     views: 'Curated Biophilic Gardens & Podium Water Bodies',
     targetBuyer: 'Buyers wanting the luxury scale of a 3 BHK within an efficient 2 BHK financial framework',
+    image: '/images/official/floor-plan-2bhk-ultra-luxury-e-855sqft.webp',
     dimensions: {
       livingDining: '20\'0" × 12\'0"',
       masterBedroom: '14\'0" × 11\'6"',
@@ -187,6 +266,7 @@ export const floorPlansData: FloorPlanUnit[] = [
     sunlightExposure: 'Direct Sunrise Light into Living Room & Balcony',
     views: 'Championship Sports Arena & Forest Trail Vistas',
     targetBuyer: 'Growing families, multi-generational households, and senior tech managers',
+    image: '/images/official/floor-plan-3bhk-deluxe-c-995sqft.webp',
     dimensions: {
       livingDining: '21\'0" × 12\'0"',
       masterBedroom: '14\'0" × 11\'0"',
@@ -223,6 +303,7 @@ export const floorPlansData: FloorPlanUnit[] = [
     sunlightExposure: 'All-Day Ambient Natural Light with North-South Wind Funneling',
     views: 'Clubhouse Infinity Lagoon & Zen Meadows',
     targetBuyer: 'Families desiring private master separation from guest/children suites',
+    image: '/images/official/floor-plan-3bhk-deluxe-b-1007sqft.webp',
     dimensions: {
       livingDining: '21\'6" × 12\'6"',
       masterBedroom: '14\'6" × 11\'6"',
@@ -259,6 +340,7 @@ export const floorPlansData: FloorPlanUnit[] = [
     sunlightExposure: 'Triple-Aspect Panoramic Hill & Canopy Exposure',
     views: 'Unrivaled 180° Sahyadri Mountain Views & Sunken Aqua Bar',
     targetBuyer: 'C-suite executives, NRI tech directors, and elite Pune business owners',
+    image: '/images/official/floor-plan-3bhk-ultra-luxury-b-1206sqft.webp',
     dimensions: {
       livingDining: '24\'0" × 13\'6"',
       masterBedroom: '16\'0" × 12\'6"',
@@ -295,6 +377,7 @@ export const floorPlansData: FloorPlanUnit[] = [
     sunlightExposure: 'Corner Sky Villa with 270° Unrestricted Daylight & Wind Sweep',
     views: 'Panoramic Riverfront & Cloud-Capped Western Ghats Horizons',
     targetBuyer: 'Luxury connoisseurs, joint families, and NRI global investors',
+    image: '/images/official/floor-plan-4bhk-luxury-b-1615sqft.webp',
     dimensions: {
       livingDining: '26\'0" × 15\'0"',
       masterBedroom: '17\'0" × 13\'0"',
@@ -332,6 +415,7 @@ export const floorPlansData: FloorPlanUnit[] = [
     sunlightExposure: 'Dual-Corner Exposure with Maximum Natural Illumination',
     views: 'Full 360° Township Greens, Clubhouse Lagoon & River Valley Vistas',
     targetBuyer: 'High Net Worth Individuals (HNIs), Ultra HNIs, and international NRI tech founders',
+    image: '/images/official/floor-plan-4bhk-luxury-a-1651sqft.webp',
     dimensions: {
       livingDining: '27\'6" × 15\'6"',
       masterBedroom: '18\'0" × 13\'6"',

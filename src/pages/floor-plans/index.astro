@@ -1,6 +1,6 @@
 ---
 import Layout from '../../layouts/Layout.astro';
-import { floorPlansData } from '../../data/pSeoFloorPlans';
+import { floorPlansData, towerFloorPlansData } from '../../data/pSeoFloorPlans';
 import MahindraKeywordMatrix from '../../components/MahindraKeywordMatrix.astro';
 
 const indexSchema = {
@@ -97,6 +97,21 @@ const indexSchema = {
                 <div class="text-xs text-stone-400 mt-1 font-medium">{unit.variant}</div>
               </div>
 
+              <!-- Sanctioned CAD Floor Plan Preview -->
+              <a href={`/floor-plans/${unit.slug}/`} class="block bg-white rounded-xl p-3 border border-white/10 group-hover:border-gold-500/40 transition-all overflow-hidden relative">
+                <img
+                  src={unit.image}
+                  alt={`${unit.name} Sanctioned CAD Floor Plan`}
+                  class="w-full h-44 object-contain transition-transform duration-500 group-hover:scale-105"
+                  loading="lazy"
+                  width="400"
+                  height="260"
+                />
+                <span class="absolute bottom-2 right-2 bg-charcoal-950/85 text-gold-400 text-[9px] px-2 py-0.5 rounded font-mono border border-gold-500/30">
+                  Sanctioned CAD
+                </span>
+              </a>
+
               <div class="bg-charcoal-950/60 p-4 rounded-xl border border-white/5 space-y-2 text-xs font-mono">
                 <div class="flex justify-between">
                   <span class="text-stone-400 font-sans">Aggregate Usable</span>
@@ -136,6 +151,94 @@ const indexSchema = {
             </div>
           </div>
         ))}
+      </div>
+
+      <!-- Typical Tower Floor Plans Section (Towers 1 to 6) -->
+      <div class="space-y-8 pt-8 border-t border-white/10">
+        <div class="text-center max-w-3xl mx-auto space-y-3">
+          <span class="text-xs uppercase tracking-widest text-gold-400 font-bold flex items-center justify-center gap-1.5">
+            <span class="w-1.5 h-1.5 rounded-full bg-gold-400 animate-pulse"></span>
+            Tower Plate Architecture
+          </span>
+          <h2 class="font-serif text-2xl sm:text-4xl font-bold text-stone-100">
+            Typical Tower Floor Plans <span class="gold-gradient-text">(Towers 1 to 6)</span>
+          </h2>
+          <p class="text-xs sm:text-sm text-stone-400 leading-relaxed">
+            Inspect typical cluster floor plates, elevator core placements, fire escape routes, and 4-to-a-core corner privacy orientations across all Phase 1 high-rise towers.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {towerFloorPlansData.map((tower) => (
+            <div class="bg-charcoal-900/80 border border-white/10 rounded-2xl p-6 hover:border-gold-500/50 transition-all flex flex-col justify-between group shadow-xl">
+              <div class="space-y-4">
+                <div class="flex items-center justify-between">
+                  <span class="px-2.5 py-1 rounded bg-gold-500/10 text-gold-400 border border-gold-500/20 text-[11px] font-semibold uppercase tracking-wider">
+                    {tower.tower}
+                  </span>
+                  <span class="text-xs text-stone-400 font-mono">
+                    {tower.floors}
+                  </span>
+                </div>
+
+                <div>
+                  <h3 class="font-serif text-lg font-bold text-stone-100 group-hover:text-gold-300 transition-colors">
+                    {tower.name}
+                  </h3>
+                  <p class="text-xs text-stone-400 mt-1 leading-relaxed">{tower.description}</p>
+                </div>
+
+                <!-- Tower CAD Floor Plan Preview -->
+                <div class="bg-white rounded-xl p-3 border border-white/10 group-hover:border-gold-500/40 transition-all overflow-hidden relative">
+                  <img
+                    src={tower.image}
+                    alt={`${tower.name} - Sanctioned Tower Floor Plate`}
+                    class="w-full h-48 object-contain transition-transform duration-500 group-hover:scale-105"
+                    loading="lazy"
+                    width="400"
+                    height="280"
+                  />
+                  <span class="absolute bottom-2 right-2 bg-charcoal-950/85 text-emerald-400 text-[9px] px-2 py-0.5 rounded font-mono border border-emerald-500/30">
+                    Typical Floor Plate
+                  </span>
+                </div>
+
+                <div class="bg-charcoal-950/60 p-3.5 rounded-xl border border-white/5 space-y-1.5 text-xs font-mono">
+                  <div class="flex justify-between">
+                    <span class="text-stone-400 font-sans">Core Density</span>
+                    <span class="text-stone-200 font-semibold">{tower.unitsPerFloor}</span>
+                  </div>
+                  <div class="flex justify-between">
+                    <span class="text-stone-400 font-sans">Elevators</span>
+                    <span class="text-gold-400 font-semibold">{tower.elevators}</span>
+                  </div>
+                  <div class="flex justify-between">
+                    <span class="text-stone-400 font-sans">Typologies</span>
+                    <span class="text-stone-300 font-sans text-[11px]">{tower.typologies}</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="pt-5 border-t border-white/5 mt-5 flex gap-3">
+                <button
+                  onclick={`window.dispatchEvent(new CustomEvent('open-lead-modal', { detail: { title: 'Download ${tower.name} Sanctioned PDF', type: 'floorplan' } }))`}
+                  class="flex-1 text-center py-2.5 px-4 bg-gold-500 hover:bg-gold-400 text-charcoal-950 text-xs font-bold uppercase tracking-wider rounded-xl transition-all shadow-md cursor-pointer"
+                >
+                  Download {tower.tower} CAD Plan
+                </button>
+                <a
+                  href={tower.image}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="px-3 py-2.5 border border-white/10 hover:border-gold-400 text-gold-400 text-xs rounded-xl transition-all"
+                  title="Zoom Plate"
+                >
+                  🔍
+                </a>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
 
       <!-- Conversion Callout -->
