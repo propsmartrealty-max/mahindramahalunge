@@ -135,6 +135,16 @@
   Cache-Control: public, max-age=3600, stale-while-revalidate=86400
   Access-Control-Allow-Origin: *
 
+/syndication/*.csv
+  Content-Type: text/csv; charset=utf-8
+  Cache-Control: public, max-age=3600, stale-while-revalidate=86400
+  Access-Control-Allow-Origin: *
+
+/syndication/*.md
+  Content-Type: text/markdown; charset=utf-8
+  Cache-Control: public, max-age=3600, stale-while-revalidate=86400
+  Access-Control-Allow-Origin: *
+
 /web-stories/*
   Cache-Control: public, max-age=0, s-maxage=3600, stale-while-revalidate=86400, stale-if-error=86400
   Cache-Tag: mahindra-rivenza, web-stories, enterprise-edge

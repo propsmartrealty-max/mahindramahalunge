@@ -1,0 +1,21 @@
+{
+  "targetDomain": "https://mahindralifespaceshomes.in/",
+  "generatedAt": "2026-11-03T17:35:52.832Z",
+  "totalDirectoriesCataloged": 18,
+  "pressReleasesCount": 1,
+  "syndicationBlogsCount": 5,
+  "forumQAInjectionsCount": 5,
+  "filesGenerated": [
+    "global-directory-citations.csv",
+    "global-directory-citations.json",
+    "global-press-release-wire.md",
+    "global-press-release-wire.json",
+    "global-syndication-blogs.json",
+    "blog-01-macro-investment-thesis.md",
+    "blog-02-global-nri-investment-guide.md",
+    "blog-03-architectural-biophilic-benchmark.md",
+    "blog-04-connectivity-bridge-bypass.md",
+    "blog-05-price-breakdown-cost-sheet-audit.md",
+    "global-forum-qa-injections.json"
+  ]
+}
