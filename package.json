@@ -15,6 +15,9 @@
     "index:status": "node scripts/cron-search-indexer.mjs --status",
     "index:force": "node scripts/cron-search-indexer.mjs --force",
     "index:dry-run": "node scripts/cron-search-indexer.mjs --dry-run",
+    "gcp:list": "node scripts/link-gcp-project.mjs --list",
+    "gcp:link": "node scripts/link-gcp-project.mjs",
+    "gsc:inspect": "node scripts/inspect-google-index.mjs",
     "audit:dns": "node scripts/audit-dns-security.mjs"
   },
   "dependencies": {

@@ -25,4 +25,6 @@ Thumbs.db
 
 # Indexing State Journal & Reports
 .indexing-journal.json
+.indexing-journal.backup.json
+.indexing-journal.json.tmp
 .indexing-report.json

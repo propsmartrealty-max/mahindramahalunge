@@ -2,35 +2,35 @@
 /**
  * ==============================================================================
  * Enterprise Search Engine Indexing Engine & Google RFC 2046 Batch Orchestrator
- * Version: 8.0 Ultra Enterprise
+ * Version: 9.0 Quantum Enterprise
  * Ecosystem: Mahindra Lifespaces Pune (https://mahindralifespaceshomes.in)
  * ==============================================================================
  * 
- * Enterprise Capabilities:
+ * Quantum Enterprise Architecture:
  * 1. RFC 2046 Multipart/Mixed Batch Request Architecture:
- *    - Dispatches up to 100 URL notifications in a SINGLE atomic HTTP round-trip
- *      to `https://indexing.googleapis.com/batch`.
- *    - Full multipart/mixed boundary parser extracting per-item HTTP status codes
- *      and error details without socket churn or TLS handshake bottlenecks.
- * 2. Multi-Project GCP Federation & Dynamic Quota Failover:
- *    - Automatically discovers and pools all Google Cloud Service Accounts.
- *    - Groups accounts by GCP `project_id` to enforce project-level quota boundaries (200/day).
+ *    - Bundles up to 100 URL notifications per HTTP round-trip to
+ *      `https://indexing.googleapis.com/batch`.
+ *    - Streaming boundary parser extracts per-item HTTP status, Google
+ *      urlNotificationMetadata, and error diagnostics without socket churn.
+ * 2. Multi-Project GCP Federation & Distributed Sharding Engine:
+ *    - Auto-discovers all service accounts across files (`service-account*.json`)
+ *      and env vars (`GOOGLE_SERVICE_ACCOUNT_KEY`, `GOOGLE_SERVICE_ACCOUNTS_FEDERATION`).
+ *    - Groups accounts by GCP `project_id` to strictly isolate daily quota boundaries (200/day).
  *    - Instant failover across federated GCP projects when one hits daily quota.
- *    - Extracts `window_start_time` from Google ErrorInfo details to compute exact
- *      cooldown timestamps down to the second.
- * 3. Stateful Delta-Tracking & Smart Priority Queue (.indexing-journal.json):
- *    - SHA-256 content hashing to identify modified pages immediately (P0).
- *    - Automatic elevation of newly created pages (P1) and core flagship hubs (P0).
- *    - LRU (Least Recently Used) round-robin scheduling for programmatic URLs (P2).
+ *    - Parses exact `window_start_time` from Google ErrorInfo details to compute down-to-the-second
+ *      cooldown timestamps.
+ * 3. Self-Healing Stateful Journal (.indexing-journal.json):
+ *    - Atomic writes via temporary file and atomic rename.
+ *    - Rolling automatic backup (.indexing-journal.backup.json) and corruption self-recovery.
+ *    - SHA-256 content delta-tracking: P0 (Modified/Core), P1 (New Unindexed), P2 (LRU Stale).
  * 4. Google WebSub Hub (PubSubHubbub) Real-Time Broadcast:
- *    - Real-time publish pings for all 17 specialized XML sitemaps and RSS feed.
+ *    - Broadcasts RSS feeds and all 21 specialized XML sitemaps to `https://pubsubhubbub.appspot.com/publish`.
  * 5. 5-Gateway Chunked IndexNow Consortium:
  *    - Batches 100-URL payloads to IndexNow, Bing, Yandex, Seznam, and Naver.
- * 6. Edge Fast-Path & Cache Pre-Warming:
- *    - Triggers Cloudflare edge cache pre-warming across PoPs.
- * 7. CLI Diagnostics & Telemetry:
- *    - Flags: `--status`, `--force`, `--dry-run`, `--batch-size <N>`.
- *    - Generates `.indexing-report.json` with execution metrics and status.
+ * 6. Cloudflare Edge Fast-Path & Cache Pre-Warming:
+ *    - Invalidation and warming across global Edge PoPs.
+ * 7. HTML Visual Dashboard & Machine-Readable Telemetry:
+ *    - Generates `.indexing-report.json` and `dist/indexing-report.html`.
  */
 
 import fs from 'node:fs';
@@ -47,6 +47,7 @@ const BASE_URL = `https://${HOST}`;
 const GLOBAL_KEY = process.env.GLOBAL_KEY || process.env.INDEXNOW_KEY || '9e4f2b8c6a0d4e7f8b1c3a5d7e9f0b2a';
 const KEY_LOCATION = `${BASE_URL}/${GLOBAL_KEY}.txt`;
 const JOURNAL_FILE = path.join(projectRoot, '.indexing-journal.json');
+const BACKUP_JOURNAL_FILE = path.join(projectRoot, '.indexing-journal.backup.json');
 const REPORT_FILE = path.join(projectRoot, '.indexing-report.json');
 
 // CLI Arguments
@@ -58,7 +59,7 @@ const batchSizeArgIdx = args.indexOf('--batch-size');
 const BATCH_SIZE = batchSizeArgIdx !== -1 && args[batchSizeArgIdx + 1] ? parseInt(args[batchSizeArgIdx + 1], 10) : 100;
 
 console.log('='.repeat(80));
-console.log(`[Enterprise Indexer v8.0] Master Google RFC 2046 Batch & Multi-Project GCP Engine`);
+console.log(`[Enterprise Indexer v9.0 Quantum] Google RFC 2046 Batch & Multi-Project GCP Federation`);
 console.log(`[Enterprise Indexer] Target Host: ${HOST}`);
 console.log(`[Enterprise Indexer] Mode: ${IS_STATUS_ONLY ? 'STATUS-CHECK' : IS_DRY_RUN ? 'DRY-RUN' : IS_FORCE ? 'FORCE-BROADCAST' : 'STATEFUL-AUTO'}`);
 console.log(`[Enterprise Indexer] Timestamp: ${new Date().toISOString()}`);
@@ -77,28 +78,60 @@ function computeFileHash(filePath) {
 }
 
 // -----------------------------------------------------------------------------
-// 1. Load or Initialize Indexing Journal
+// 1. Self-Healing Indexing Journal Loading with Automatic Backup Recovery
 // -----------------------------------------------------------------------------
 let journal = {
-  version: '8.0',
+  version: '9.0',
   lastRun: null,
   quotaCooldownUntil: null,
   projectCooldowns: {},
   urls: {},
 };
 
-if (fs.existsSync(JOURNAL_FILE)) {
+function loadJournalWithRecovery() {
+  if (fs.existsSync(JOURNAL_FILE)) {
+    try {
+      const raw = JSON.parse(fs.readFileSync(JOURNAL_FILE, 'utf8'));
+      return {
+        ...journal,
+        ...raw,
+        version: '9.0',
+        projectCooldowns: raw.projectCooldowns || {},
+        urls: raw.urls || {},
+      };
+    } catch (err) {
+      console.warn(`[Enterprise Indexer] Corrupted journal detected: ${err.message}. Attempting backup recovery...`);
+      if (fs.existsSync(BACKUP_JOURNAL_FILE)) {
+        try {
+          const backupRaw = JSON.parse(fs.readFileSync(BACKUP_JOURNAL_FILE, 'utf8'));
+          console.log(`[Enterprise Indexer] ✓ Successfully recovered state from rolling backup.`);
+          return {
+            ...journal,
+            ...backupRaw,
+            version: '9.0',
+            projectCooldowns: backupRaw.projectCooldowns || {},
+            urls: backupRaw.urls || {},
+          };
+        } catch (_) {}
+      }
+    }
+  }
+  return journal;
+}
+
+journal = loadJournalWithRecovery();
+
+function saveJournalAtomically(filePath, data) {
+  const tmpPath = `${filePath}.tmp`;
   try {
-    const raw = JSON.parse(fs.readFileSync(JOURNAL_FILE, 'utf8'));
-    journal = {
-      ...journal,
-      ...raw,
-      version: '8.0',
-      projectCooldowns: raw.projectCooldowns || {},
-      urls: raw.urls || {},
-    };
-  } catch (err) {
-    console.warn(`[Enterprise Indexer] Notice loading journal: ${err.message}. Initializing clean store.`);
+    if (fs.existsSync(filePath)) {
+      fs.copyFileSync(filePath, BACKUP_JOURNAL_FILE);
+    }
+    fs.writeFileSync(tmpPath, JSON.stringify(data, null, 2), 'utf8');
+    fs.renameSync(tmpPath, filePath);
+    console.log(`\n[Enterprise Indexer] Journal successfully updated & backed up (.indexing-journal.json).`);
+  } catch (writeErr) {
+    console.warn(`[Enterprise Indexer] Notice persisting journal: ${writeErr.message}`);
   }
 }
 
@@ -172,14 +205,13 @@ try {
   console.warn(`[Enterprise Indexer] Sitemap scanning notice: ${e.message}`);
 }
 
-// Add supplementary feeds to sitemaps list if available
 if (!allDiscoveredSitemaps.includes(`${BASE_URL}/rss.xml`)) allDiscoveredSitemaps.push(`${BASE_URL}/rss.xml`);
 if (!allDiscoveredSitemaps.includes(`${BASE_URL}/google-shopping.xml`)) allDiscoveredSitemaps.push(`${BASE_URL}/google-shopping.xml`);
 
 console.log(`[Enterprise Indexer] Canonical URLs Discovered: ${allDiscoveredUrls.length}`);
 console.log(`[Enterprise Indexer] XML Sitemaps Cataloged: ${allDiscoveredSitemaps.length}`);
 
-// Map URLs to disk HTML files to detect updates
+// Delta-Tracking via SHA-256
 let modifiedCount = 0;
 let newCount = 0;
 
@@ -203,7 +235,6 @@ for (const urlStr of allDiscoveredUrls) {
       priorityTier: corePriorityUrls.includes(urlStr) ? 'P0' : 'P1',
     };
   } else {
-    // If content hash changed, flag for priority P0 re-submission
     if (currentHash && journal.urls[urlStr].contentHash !== currentHash) {
       modifiedCount++;
       journal.urls[urlStr].contentHash = currentHash;
@@ -216,18 +247,11 @@ for (const urlStr of allDiscoveredUrls) {
 console.log(`[Enterprise Indexer] Delta Audit: ${modifiedCount} Modified (P0), ${newCount} Newly Added (P1), ${allDiscoveredUrls.length - modifiedCount - newCount} Established.`);
 
 // -----------------------------------------------------------------------------
-// 3. Service Account Pooling & Multi-Project GCP Federation
+// 3. Multi-Project GCP Federation Pooling
 // -----------------------------------------------------------------------------
-const keyCandidatePaths = [
-  ...fs.readdirSync(projectRoot)
-    .filter(f => f.startsWith('service-account') && f.endsWith('.json'))
-    .sort()
-    .map(f => path.join(projectRoot, f)),
-  path.join(projectRoot, 'google-indexing-key.json'),
-];
-
 const allLoadedAccounts = [];
 
+// 1. Check direct ENV key
 if (process.env.GOOGLE_SERVICE_ACCOUNT_KEY) {
   try {
     const envSa = JSON.parse(process.env.GOOGLE_SERVICE_ACCOUNT_KEY);
@@ -236,6 +260,31 @@ if (process.env.GOOGLE_SERVICE_ACCOUNT_KEY) {
     }
   } catch (_) {}
 }
+
+// 2. Check multi-account federation ENV (Base64 or JSON array)
+if (process.env.GOOGLE_SERVICE_ACCOUNTS_FEDERATION) {
+  try {
+    let raw = process.env.GOOGLE_SERVICE_ACCOUNTS_FEDERATION.trim();
+    if (raw.startsWith('ey') || raw.startsWith('W3')) {
+      try { raw = Buffer.from(raw, 'base64').toString('utf8'); } catch (_) {}
+    }
+    const parsed = JSON.parse(raw);
+    const list = Array.isArray(parsed) ? parsed : [parsed];
+    for (const item of list) {
+      if (item.client_email && item.private_key && !allLoadedAccounts.some(s => s.client_email === item.client_email)) {
+        allLoadedAccounts.push({ ...item, source: `ENV:FEDERATION:${item.project_id || 'unknown'}` });
+      }
+    }
+  } catch (_) {}
+}
+
+// 3. Scan workspace files
+const keyCandidatePaths = [
+  ...fs.readdirSync(projectRoot)
+    .filter(f => (f.startsWith('service-account') || f === 'google-indexing-key.json') && f.endsWith('.json'))
+    .sort()
+    .map(f => path.join(projectRoot, f)),
+];
 
 for (const candidate of keyCandidatePaths) {
   if (fs.existsSync(candidate)) {
@@ -279,12 +328,12 @@ for (const [pId, saList] of projectMap.entries()) {
   }
 }
 
-// If --status flag was passed, output status summary and exit cleanly
 if (IS_STATUS_ONLY) {
   console.log('\n--- Status Summary ---');
   console.log(`Total Canonical URLs: ${allDiscoveredUrls.length}`);
   console.log(`GCP Projects Configured: ${projectMap.size}`);
   console.log(`Active GCP Projects Ready: ${activeProjects.length}`);
+  console.log(`Total Theoretical Quota: ${projectMap.size * 200} requests/day`);
   for (const [pId, saList] of projectMap.entries()) {
     const cd = journal.projectCooldowns[pId];
     console.log(`Project [${pId}]: Cooldown=${cd || 'None (Ready)'}`);
@@ -332,15 +381,12 @@ function parseMultipartBatchResponse(responseText, boundary) {
   for (const part of parts) {
     if (!part || part.trim() === '' || part.trim() === '--') continue;
 
-    // Extract Content-ID
     const contentIdMatch = part.match(/Content-ID:\s*<response-([^>]+)>/i) || part.match(/Content-ID:\s*<([^>]+)>/i);
     const contentId = contentIdMatch ? contentIdMatch[1] : null;
 
-    // Extract HTTP status code
     const statusMatch = part.match(/HTTP\/1\.[01]\s+(\d{3})\b/);
     const status = statusMatch ? parseInt(statusMatch[1], 10) : 500;
 
-    // Extract JSON body
     let body = null;
     const bodyIndex = part.indexOf('\r\n\r\n{') !== -1 ? part.indexOf('\r\n\r\n{') + 4 : part.indexOf('\n\n{') !== -1 ? part.indexOf('\n\n{') + 2 : -1;
     if (bodyIndex !== -1) {
@@ -370,7 +416,6 @@ if (activeProjects.length === 0) {
   console.log(`[Enterprise Indexer] All ${projectMap.size} GCP Project(s) are currently in daily quota cooldown.`);
   console.log(`[Enterprise Indexer] Quota unlocks at next 24-hr boundary. WebSub, Sitemaps & IndexNow handle real-time sync.`);
 } else {
-  // Sort priority queue: P0 (Modified/Core) -> P1 (New) -> P2 (LRU by lastGoogleSubmit)
   const priorityQueue = [...allDiscoveredUrls].sort((a, b) => {
     const dataA = journal.urls[a];
     const dataB = journal.urls[b];
@@ -388,7 +433,7 @@ if (activeProjects.length === 0) {
     return timeA - timeB;
   });
 
-  const MAX_PER_CYCLE = parseInt(process.env.MAX_GOOGLE_INDEX_URLS || '200', 10);
+  const MAX_PER_CYCLE = parseInt(process.env.MAX_GOOGLE_INDEX_URLS || String(activeProjects.length * 200), 10);
   const queueToProcess = priorityQueue.slice(0, MAX_PER_CYCLE);
   console.log(`[Enterprise Indexer] Selected top ${queueToProcess.length} prioritized URLs for Google Indexing batch processing.`);
 
@@ -402,7 +447,6 @@ if (activeProjects.length === 0) {
     console.log(`[Enterprise Indexer] Authenticated with GCP Project [${activeProject.projectId}] SA: ${activeSa.client_email}`);
   }
 
-  // Chunk queue into batches of up to BATCH_SIZE (max 100 per Google batch)
   const googleBatches = [];
   const CHUNK_LIMIT = Math.min(BATCH_SIZE, 100);
   for (let i = 0; i < queueToProcess.length; i += CHUNK_LIMIT) {
@@ -491,7 +535,6 @@ if (activeProjects.length === 0) {
         if (batchQuotaExhausted) {
           console.log(`[Enterprise Indexer] ✕ Daily quota boundary reached for GCP Project [${activeProject.projectId}].`);
 
-          // Extract exact window_start_time from error metadata if present
           let exactResetIso = null;
           if (quotaErrorDetails?.details) {
             for (const d of quotaErrorDetails.details) {
@@ -506,7 +549,7 @@ if (activeProjects.length === 0) {
 
           if (!exactResetIso) {
             const fallback = new Date();
-            fallback.setUTCHours(7, 0, 0, 0);
+            fallback.setUTCHours(8, 0, 0, 0);
             if (fallback.getTime() <= Date.now()) fallback.setDate(fallback.getDate() + 1);
             exactResetIso = fallback.toISOString();
           }
@@ -523,7 +566,7 @@ if (activeProjects.length === 0) {
             console.log(`[Enterprise Indexer] ↻ Project Failover: Switching to GCP Project [${activeProject.projectId}] SA: ${activeSa.client_email}...`);
             activeToken = await obtainGoogleAccessToken(activeSa);
             if (activeToken) {
-              bIdx--; // Retry this batch under new project
+              bIdx--;
               continue;
             }
           }
@@ -533,7 +576,6 @@ if (activeProjects.length === 0) {
         }
       } else {
         console.warn(`[Enterprise Indexer] ! Batch envelope HTTP ${batchRes.status}. Falling back to individual queue...`);
-        // Fallback to sequential individual requests
         for (const targetUrl of batchUrls) {
           try {
             const pubRes = await fetch('https://indexing.googleapis.com/v3/urlNotifications:publish', {
@@ -636,7 +678,7 @@ for (const ep of indexNowEndpoints) {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json; charset=utf-8',
-          'User-Agent': 'Enterprise-IndexNow-Client/8.0 (Mahindra-Rivenza)',
+          'User-Agent': 'Enterprise-IndexNow-Client/9.0 (Mahindra-Rivenza)',
         },
         body: JSON.stringify(payload),
       });
@@ -679,18 +721,13 @@ if (!IS_DRY_RUN) {
 }
 
 // -----------------------------------------------------------------------------
-// 8. Persist Journal & Generate Telemetry Report
+// 8. Persist Journal Atomically & Generate Telemetry Reports
 // -----------------------------------------------------------------------------
 journal.lastRun = new Date().toISOString();
-try {
-  fs.writeFileSync(JOURNAL_FILE, JSON.stringify(journal, null, 2), 'utf8');
-  console.log(`\n[Enterprise Indexer] Journal successfully updated (.indexing-journal.json).`);
-} catch (writeErr) {
-  console.warn(`[Enterprise Indexer] Notice persisting journal: ${writeErr.message}`);
-}
+saveJournalAtomically(JOURNAL_FILE, journal);
 
 const report = {
-  version: '8.0 Ultra Enterprise',
+  version: '9.0 Quantum Enterprise',
   executedAt: new Date().toISOString(),
   targetHost: HOST,
   metrics: {
@@ -706,6 +743,7 @@ const report = {
     totalProjectsConfigured: projectMap.size,
     totalServiceAccounts: allLoadedAccounts.length,
     activeProjectsReady: activeProjects.length,
+    dailyCapacityUrls: projectMap.size * 200,
     projectCooldowns: journal.projectCooldowns,
   },
 };
@@ -717,6 +755,71 @@ try {
   console.warn(`[Enterprise Indexer] Notice writing report: ${reportErr.message}`);
 }
 
+// Generate static HTML visual report if dist exists
+if (fs.existsSync(distDir)) {
+  try {
+    const htmlReportPath = path.join(distDir, 'indexing-report.html');
+    const htmlContent = `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Search Engine Indexing Telemetry | Mahindra Rivenza</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: #0c1017; color: #e2e8f0; margin: 0; padding: 2rem; }
+    .card { background: #161d27; border: 1px solid #2d3748; border-radius: 12px; padding: 1.5rem; margin-bottom: 1.5rem; }
+    h1 { color: #d4af37; font-size: 1.5rem; margin-top: 0; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; }
+    .metric { background: #0c1017; padding: 1rem; border-radius: 8px; border: 1px solid #2d3748; }
+    .metric-val { font-size: 1.8rem; font-weight: bold; color: #10b981; }
+    .metric-lbl { font-size: 0.75rem; text-transform: uppercase; color: #a0aec0; letter-spacing: 0.05em; margin-top: 0.25rem; }
+    .status-badge { display: inline-block; padding: 0.25rem 0.75rem; border-radius: 9999px; font-size: 0.75rem; font-weight: bold; }
+    .ready { background: rgba(16, 185, 129, 0.2); color: #10b981; border: 1px solid #10b981; }
+    .cooldown { background: rgba(245, 158, 11, 0.2); color: #f59e0b; border: 1px solid #f59e0b; }
+    table { width: 100%; border-collapse: collapse; font-size: 0.85rem; margin-top: 1rem; }
+    th, td { text-align: left; padding: 0.75rem; border-bottom: 1px solid #2d3748; }
+    th { color: #a0aec0; font-size: 0.75rem; text-transform: uppercase; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>🚀 Google Enterprise Indexing Engine v9.0 Quantum Telemetry</h1>
+    <p style="color: #a0aec0; font-size: 0.85rem;">Host: <strong>${HOST}</strong> • Generated: ${new Date().toISOString()}</p>
+    <div class="grid">
+      <div class="metric"><div class="metric-val">${allDiscoveredUrls.length}</div><div class="metric-lbl">Total Canonical URLs</div></div>
+      <div class="metric"><div class="metric-val">${allDiscoveredSitemaps.length}</div><div class="metric-lbl">XML Sitemaps Broadcast</div></div>
+      <div class="metric"><div class="metric-val">${projectMap.size * 200}/day</div><div class="metric-lbl">GCP Indexing Capacity</div></div>
+      <div class="metric"><div class="metric-val" style="color: #60a5fa;">5</div><div class="metric-lbl">Search Engine Gateways</div></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2 style="color: #d4af37; font-size: 1.2rem; margin-top: 0;">GCP Federation Health</h2>
+    <table>
+      <thead>
+        <tr><th>Project ID</th><th>Service Accounts</th><th>Quota State</th><th>Reset Time (UTC)</th></tr>
+      </thead>
+      <tbody>
+        ${[...projectMap.entries()].map(([pId, saList]) => {
+          const cd = journal.projectCooldowns[pId];
+          const isCd = cd && new Date(cd).getTime() > nowMs;
+          return `<tr>
+            <td style="font-family: monospace; color: #fff;">${pId}</td>
+            <td>${saList.length} Accounts</td>
+            <td><span class="status-badge ${isCd ? 'cooldown' : 'ready'}">${isCd ? 'Daily Quota Cooldown' : 'Ready (Active)'}</span></td>
+            <td style="font-family: monospace; color: #a0aec0;">${cd || 'Immediate'}</td>
+          </tr>`;
+        }).join('')}
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>`;
+    fs.writeFileSync(htmlReportPath, htmlContent, 'utf8');
+    console.log(`[Enterprise Indexer] HTML Visual Dashboard generated (dist/indexing-report.html).`);
+  } catch (_) {}
+}
+
 console.log('\n' + '='.repeat(80));
-console.log(`[Enterprise Indexer v8.0] Master Broadcast Cycle Executed Successfully.`);
+console.log(`[Enterprise Indexer v9.0 Quantum] Master Broadcast Cycle Executed Successfully.`);
 console.log('='.repeat(80));
