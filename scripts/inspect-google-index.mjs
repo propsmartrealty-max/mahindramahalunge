@@ -26,7 +26,8 @@ const __dirname = path.dirname(__filename);
 const projectRoot = path.resolve(__dirname, '..');
 
 const targetUrl = process.argv[2] || 'https://mahindralifespaceshomes.in/';
-const SITE_URL = 'https://mahindralifespaceshomes.in/';
+const SITE_URL = 'sc-domain:mahindralifespaceshomes.in';
+const FALLBACK_SITE_URL = 'https://mahindralifespaceshomes.in/';
 
 console.log('='.repeat(80));
 console.log('[Google Index Inspector] Search Console URL Inspection Diagnostic');
@@ -109,7 +110,7 @@ try {
 
   // 2. Query Search Console URL Inspection API
   console.log('\n--- 2. Google Search Console URL Inspection API ---');
-  const inspectRes = await fetch('https://searchconsole.googleapis.com/v1/urlInspection/index:inspect', {
+  let inspectRes = await fetch('https://searchconsole.googleapis.com/v1/urlInspection/index:inspect', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -121,7 +122,25 @@ try {
     })
   });
 
-  const inspectData = await inspectRes.json();
+  let inspectData = await inspectRes.json();
+  if (inspectRes.status !== 200) {
+    // Try fallback URL prefix
+    const retryRes = await fetch('https://searchconsole.googleapis.com/v1/urlInspection/index:inspect', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${token}`
+      },
+      body: JSON.stringify({
+        inspectionUrl: targetUrl,
+        siteUrl: FALLBACK_SITE_URL,
+      })
+    });
+    if (retryRes.status === 200) {
+      inspectRes = retryRes;
+      inspectData = await retryRes.json();
+    }
+  }
   if (inspectRes.status === 200) {
     console.log('✓ Inspection Result:');
     const result = inspectData.inspectionResult || {};
