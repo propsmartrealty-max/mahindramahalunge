@@ -25,6 +25,12 @@ Allow: /*.webp$
 Allow: /*.svg$
 Allow: /*.mp4$
 Allow: /*.pdf$
+Allow: /*.json$
+Allow: /*.xml$
+Allow: /llms.txt
+Allow: /llms-full.txt
+Allow: /llm-knowledge-graph.json
+Allow: /keywords-ecosystem.json
 Disallow: /api/
 Disallow: /cdn-cgi/
 
