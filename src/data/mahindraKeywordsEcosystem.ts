@@ -1212,38 +1212,194 @@ export const rivenzaPriorityBookingPassKeywords = [
 ];
 
 // ==============================================================================
-// 36. 5-DIMENSIONAL PROGRAMMATIC MATRIX ENGINE
-// Project × Location × Configuration × Intent × Modifier
+// 36. MULTI-DIMENSIONAL PROGRAMMATIC COMBINATORIAL ENGINE
+// Project & Aliases × Micro-Market × Typology × Intent × Modifier
+// Hardening all programmatic permutations and combinations across the ecosystem
 // ==============================================================================
-export function generate5DMatrixKeywords(): string[] {
-  const project = 'Mahindra Rivenza';
-  const locations = ['Mahalunge', 'Baner Annex', 'Nande', 'Hinjewadi', 'Baner', 'Balewadi', 'West Pune'];
-  const configurations = ['2 BHK', '3 BHK', '4 BHK', 'flats', 'apartments', 'luxury homes'];
-  const intents = ['price', 'floor plan', 'booking', 'amenities', 'RERA', 'possession', 'investment'];
-  
-  const results: string[] = [];
-  locations.forEach(loc => {
-    configurations.forEach(cfg => {
-      intents.forEach(intent => {
-        results.push(`${project} ${loc} ${cfg} ${intent}`);
-        results.push(`${cfg} in ${loc} ${project} ${intent}`);
-        results.push(`${project} ${intent} for ${cfg} ${loc}`);
+
+export const programmaticBrandVariants = [
+  'Mahindra Rivenza',
+  'Mahindra Rivenze',
+  'Mahindra Riveza',
+  'Mahinfra Revenza',
+  'Mahinfra Rivenze',
+  'Mahinfra Rivenza',
+  'Mahindra Revenza',
+  'Mahindra Revenze',
+  'Mahindra Lifespaces Rivenza',
+  'Mahindra Lifespaces Mahalunge',
+  'Mahindra Mahalunge',
+  'Mahinfra Mahalunge',
+  'Mahindra Rivenza Phase 1',
+  'Mahindra Rivenza Phase 2'
+];
+
+export const programmaticLocations = [
+  'Mahalunge',
+  'Baner Annex',
+  'Mahalunge Baner Annex',
+  'Nande',
+  'Nande Mahalunge',
+  'Hinjewadi',
+  'Hinjawadi',
+  'Hinjewadi Phase 1',
+  'Baner',
+  'Balewadi',
+  'Balewadi High Street',
+  'Wakad',
+  'Pashan',
+  'Bavdhan',
+  'Tathawade',
+  'Punawale',
+  'Sus Road',
+  'West Pune',
+  'Pune',
+  'PCMC'
+];
+
+export const programmaticConfigurations = [
+  '2 BHK',
+  '2 BHK flats',
+  '2 BHK apartments',
+  '2 BHK luxury',
+  '2 BHK premium',
+  '3 BHK',
+  '3 BHK flats',
+  '3 BHK apartments',
+  '3 BHK luxury',
+  '3 BHK deluxe',
+  '4 BHK',
+  '4 BHK luxury',
+  '4 BHK sky villas',
+  'flats',
+  'apartments',
+  'luxury homes',
+  'gated community residences'
+];
+
+export const programmaticIntents = [
+  'price',
+  'price list 2026',
+  'cost sheet',
+  'all inclusive price',
+  'floor plans',
+  'floor plan pdf',
+  'carpet area',
+  'master layout',
+  'brochure',
+  'brochure pdf download',
+  'booking',
+  'token amount',
+  'payment plan',
+  'pre launch offers',
+  'amenities',
+  'clubhouse',
+  'sunken aqua pool',
+  'RERA number',
+  'RERA registration',
+  'possession date',
+  'handover date',
+  'construction status',
+  'site progress',
+  'sample flat video',
+  'experience center',
+  'reviews',
+  'ratings',
+  'location map',
+  'contact number',
+  'advisory phone',
+  'investment ROI',
+  'rental yield'
+];
+
+export const programmaticModifiers = [
+  'official',
+  'new launch',
+  'most premium project',
+  'most luxury project',
+  'best residential project',
+  'upcoming project',
+  'top rated luxury',
+  'direct developer'
+];
+
+export function generateComprehensiveProgrammaticCombinations(): string[] {
+  const set = new Set<string>();
+
+  // 1. Core Target 4D Combinations (Brand × Location × Config × Intent)
+  const coreBrands = ['Mahindra Rivenza', 'Mahinfra Revenza', 'Mahindra Revenza', 'Mahindra Rivenze'];
+  const coreLocs = ['Mahalunge', 'Baner Annex', 'Nande', 'Hinjewadi', 'Baner', 'Balewadi', 'West Pune', 'Pune'];
+  const coreCfgs = ['2 BHK', '3 BHK', '4 BHK', 'flats', 'apartments', 'luxury homes'];
+  const coreInts = ['price', 'cost sheet', 'floor plan', 'brochure', 'booking', 'amenities', 'RERA', 'possession', 'reviews', 'location map'];
+
+  coreBrands.forEach(b => {
+    coreLocs.forEach(l => {
+      coreCfgs.forEach(c => {
+        coreInts.forEach(i => {
+          set.add(`${b} ${l} ${c} ${i}`);
+          set.add(`${c} in ${l} ${b} ${i}`);
+          set.add(`${b} ${i} for ${c} ${l}`);
+        });
       });
     });
   });
-  return results;
+
+  // 2. High-Frequency 3D Permutations: Brand × Location × Intent
+  programmaticBrandVariants.forEach(b => {
+    programmaticLocations.forEach(l => {
+      programmaticIntents.forEach(i => {
+        set.add(`${b} ${l} ${i}`);
+        set.add(`${i} of ${b} ${l}`);
+      });
+    });
+  });
+
+  // 3. Typology & Micro-Market 3D Permutations: Brand × Location × Config
+  programmaticBrandVariants.forEach(b => {
+    programmaticLocations.forEach(l => {
+      programmaticConfigurations.forEach(c => {
+        set.add(`${b} ${l} ${c}`);
+        set.add(`${c} in ${l} ${b}`);
+      });
+    });
+  });
+
+  // 4. Modifier & Prestige 3D Permutations: Modifier × Brand × Location
+  programmaticModifiers.forEach(m => {
+    programmaticBrandVariants.forEach(b => {
+      programmaticLocations.forEach(l => {
+        set.add(`${m} ${b} in ${l}`);
+        set.add(`${m} ${b} ${l}`);
+      });
+    });
+  });
+
+  // 5. Direct Navigational Permutations: Brand × Intent
+  programmaticBrandVariants.forEach(b => {
+    programmaticIntents.forEach(i => {
+      set.add(`${b} ${i}`);
+    });
+  });
+
+  return Array.from(set);
 }
+
+// Backwards-compatible alias
+export const generate5DMatrixKeywords = generateComprehensiveProgrammaticCombinations;
 
 // Master Deduplicated Permutations
 export const allMahindraKeywordPermutations: string[] = Array.from(
   new Set([
     ...rivenzaTop150MoneyKeywords,
     ...rivenzaMasterBrandKeywords,
+    ...ultraPremiumBanerAnnexPuneKeywords,
     ...rivenzaBrandDeveloperKeywords,
+    ...rivenzaTypoKeywords,
     ...rivenzaMahalungeKeywords,
     ...rivenzaBanerAnnexKeywords,
     ...rivenzaNandeKeywords,
     ...rivenzaWestPuneKeywords,
+    ...rivenzaNorthWestPuneKeywords,
     ...rivenza2BhkKeywords,
     ...rivenza3BhkKeywords,
     ...rivenza4BhkKeywords,
@@ -1251,6 +1407,7 @@ export const allMahindraKeywordPermutations: string[] = Array.from(
     ...rivenzaFloorPlanKeywords,
     ...rivenzaMasterPlanKeywords,
     ...rivenzaAmenitiesKeywords,
+    ...rivenzaLifestyleKeywords,
     ...rivenzaSustainabilityKeywords,
     ...rivenzaReraKeywords,
     ...rivenzaPossessionKeywords,
@@ -1269,9 +1426,32 @@ export const allMahindraKeywordPermutations: string[] = Array.from(
     ...rivenzaMaintenanceSocietyKeywords,
     ...rivenzaPossessionHandoverKeywords,
     ...rivenzaPriorityBookingPassKeywords,
-    ...generate5DMatrixKeywords()
+    ...generateComprehensiveProgrammaticCombinations()
   ])
 );
+
+// Programmatic Query Helpers
+export function getKeywordsByBrand(brand: string): string[] {
+  const bLow = brand.toLowerCase();
+  return allMahindraKeywordPermutations.filter(k => k.toLowerCase().includes(bLow));
+}
+
+export function getKeywordsByLocation(locality: string): string[] {
+  const lLow = locality.toLowerCase();
+  return allMahindraKeywordPermutations.filter(k => k.toLowerCase().includes(lLow));
+}
+
+export function searchKeywordPermutations(query: string, limit: number = 50): string[] {
+  const qLow = query.toLowerCase().trim();
+  const matched: string[] = [];
+  for (const k of allMahindraKeywordPermutations) {
+    if (k.toLowerCase().includes(qLow)) {
+      matched.push(k);
+      if (matched.length >= limit) break;
+    }
+  }
+  return matched;
+}
 
 // ==============================================================================
 // COMPREHENSIVE KEYWORD CLUSTERS ARRAY (For UI Matrices & FAQ Schemas)

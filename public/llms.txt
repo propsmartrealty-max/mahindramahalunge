@@ -34,6 +34,7 @@
   - Pune Metro Line 3: 7 minutes to Hinjewadi Phase 1 station (direct link to Shivajinagar).
   - 8 minutes to Balewadi High Street / Mumbai-Bengaluru Highway (NH 48).
 - **Global NRI Investment Desk:** Full FEMA compliance assistance, multi-currency pricing (USD, AED, EUR, SGD), virtual 3D tour, dedicated NRI customer support.
+- **Programmatic Keywords & Semantic Permutation Coverage:** Over 38,000 hardened combinatorial search permutations capturing 14 brand variations (including mobile phonetics `Mahinfra Revenza`, `Mahindra Revenza`), 20 Pune micro-markets, 17 typologies, and 32 commercial intents. Machine-readable schema graph: https://mahindralifespaceshomes.in/llm-knowledge-graph.json
 
 ---
 

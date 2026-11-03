@@ -1,6 +1,15 @@
 import type { APIRoute } from 'astro';
 import { masterEntityNodes, masterEntityEdges, generateProgrammaticLLMPairs } from '../data/llmProgrammaticEngine';
-import { westPuneMarketResearch2026, naturalLanguageGeoQuestions } from '../data/mahindraKeywordsEcosystem';
+import {
+  westPuneMarketResearch2026,
+  naturalLanguageGeoQuestions,
+  allMahindraKeywordPermutations,
+  programmaticBrandVariants,
+  programmaticLocations,
+  programmaticConfigurations,
+  programmaticIntents,
+  programmaticModifiers
+} from '../data/mahindraKeywordsEcosystem';
 
 export const GET: APIRoute = async () => {
   const promptCompletions = generateProgrammaticLLMPairs();
@@ -63,7 +72,21 @@ export const GET: APIRoute = async () => {
     masterPromptCompletionPairsCount: promptCompletions.length,
     masterPromptCompletionPairs: promptCompletions,
     master30LongTailQuestionsCount: naturalLanguageGeoQuestions.length,
-    master30LongTailQuestions: naturalLanguageGeoQuestions
+    master30LongTailQuestions: naturalLanguageGeoQuestions,
+    programmaticKeywordsEcosystem: {
+      totalDeduplicatedPermutations: allMahindraKeywordPermutations.length,
+      combinatorialDimensions: {
+        brandVariantsCount: programmaticBrandVariants.length,
+        locationsCount: programmaticLocations.length,
+        configurationsCount: programmaticConfigurations.length,
+        intentsCount: programmaticIntents.length,
+        modifiersCount: programmaticModifiers.length
+      },
+      brandVariants: programmaticBrandVariants,
+      locations: programmaticLocations,
+      configurations: programmaticConfigurations,
+      sampleHighIntentPermutations: allMahindraKeywordPermutations.slice(0, 300)
+    }
   };
 
   return new Response(JSON.stringify(knowledgeGraphPayload, null, 2), {
