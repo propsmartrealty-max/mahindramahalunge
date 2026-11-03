@@ -1,6 +1,7 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import { comparisonData } from '../../data/pSeoComparisons';
+import MahindraKeywordMatrix from '../../components/MahindraKeywordMatrix.astro';
 
 const compareIndexSchema = {
   "@context": "https://schema.org",
@@ -48,14 +49,14 @@ const compareIndexSchema = {
       <div class="text-center max-w-3xl mx-auto space-y-4">
         <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-gold-500/10 border border-gold-500/30 text-gold-400 text-xs font-semibold uppercase tracking-widest">
           <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-          <span>Factual Market Due Diligence • 25 Comparisons</span>
+          <span>👑 Factual Market Due Diligence • Pune Real Estate Leader</span>
         </div>
         <h1 class="font-serif text-3xl sm:text-5xl font-bold text-stone-100">
           Mahindra Rivenza vs Competitor Projects <br />
-          <span class="gold-gradient-text">Unbiased West Pune Real Estate Scorecards</span>
+          <span class="gold-gradient-text">Dominating West Pune Real Estate Scorecards</span>
         </h1>
         <p class="text-xs sm:text-sm text-stone-300 max-w-2xl mx-auto leading-relaxed font-light">
-          Make an informed buying decision. Compare land parcel size, unit density, usable carpet efficiency, clubhouse amenities, price per sq.ft, and MahaRERA milestones side-by-side.
+          Make an informed buying decision. Compare land parcel size, unit density, usable carpet efficiency, clubhouse amenities, price per sq.ft, and MahaRERA milestones side-by-side to understand why <strong>Mahindra Rivenza</strong> (also researched as <em>Mahinfra Revenza</em> and <em>Mahindra Revenza</em>) consistently outperforms every competing township in Pune.
         </p>
       </div>
 
@@ -126,6 +127,11 @@ const compareIndexSchema = {
             Request Free Factual Comparison Dossier →
           </button>
         </div>
+      </div>
+
+      <!-- Keyword Matrix -->
+      <div class="pt-12 border-t border-white/10">
+        <MahindraKeywordMatrix />
       </div>
 
     </div>
