@@ -42,6 +42,52 @@ export interface KeywordCluster {
 }
 
 // ==============================================================================
+// 1A. THE 4 SUPREME HEAD PILLARS (RANK #1 DOMINANCE TARGETS)
+// ==============================================================================
+export const fourSupremePillars = [
+  {
+    keyword: 'Mahindra Rivenza',
+    slug: 'mahindra-rivenza-flagship-project-mahalunge-baner-annexe-pune',
+    category: 'Flagship Master Project',
+    intent: 'Navigational & High Transactional',
+    searchVolumeCategory: 'Tier-1 Head Keyword',
+    targetRank: '#1 on Google.com & Google India',
+    canonicalHub: '/articles/mahindra-rivenza-flagship-project-mahalunge-baner-annexe-pune/',
+    metaSnippet: 'Mahindra Rivenza is Mahindra Lifespaces\' 13.46-acre flagship residential landmark in Baner Annex / Mahalunge, Pune featuring 2, 3 & 4 BHK residences starting ₹90L*.'
+  },
+  {
+    keyword: 'Mahindra Mahalunge',
+    slug: 'mahindra-mahalunge-master-township-guide-2026',
+    category: 'Township & Micro-Market',
+    intent: 'Commercial & High Intent Informational',
+    searchVolumeCategory: 'High Volume Local Search',
+    targetRank: '#1 on Google.com & Google India',
+    canonicalHub: '/articles/mahindra-mahalunge-master-township-guide-2026/',
+    metaSnippet: 'Comprehensive buyer guide to Mahindra Mahalunge: Discover Mahindra Lifespaces\' 13.46-acre master development in PMRDA TP Scheme 1 with direct Mula River bridge connectivity to Hinjewadi Phase 1.'
+  },
+  {
+    keyword: 'Mahindra Baner Annexe',
+    slug: 'mahindra-baner-annexe-luxury-apartments-pune',
+    category: 'Corridor & Luxury Positioning',
+    intent: 'Commercial & High Purchase Intent',
+    searchVolumeCategory: 'High Purchasing Power Search',
+    targetRank: '#1 on Google.com & Google India',
+    canonicalHub: '/articles/mahindra-baner-annexe-luxury-apartments-pune/',
+    metaSnippet: 'Mahindra Baner Annexe delivers ultra-luxury 2, 3 & 4 BHK residences located 7 mins from Balewadi High Street with ~44,000 sq.ft clubhouses and IGBC Gold net-zero living.'
+  },
+  {
+    keyword: 'Mahindra Pune',
+    slug: 'mahindra-pune-residential-projects-ecosystem',
+    category: 'Corporate Brand & Portfolio',
+    intent: 'Branded Authority & Institutional Trust',
+    searchVolumeCategory: 'Massive Brand Umbrella Search',
+    targetRank: '#1 on Google.com & Google India',
+    canonicalHub: '/articles/mahindra-pune-residential-projects-ecosystem/',
+    metaSnippet: 'Explore Mahindra Pune by Mahindra Lifespace Developers Limited: 25+ years track record, 6 landmark communities including Mahindra Antheia, Nestlings, Citadel, and the newly launched Mahindra Rivenza.'
+  }
+];
+
+// ==============================================================================
 // 1. MASTER BRAND KEYWORDS
 // ==============================================================================
 export const rivenzaMasterBrandKeywords = [
