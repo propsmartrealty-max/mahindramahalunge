@@ -9,6 +9,11 @@ $TTL 300
 @               IN      NS      malcolm.ns.cloudflare.com.
 @               IN      NS      margot.ns.cloudflare.com.
 
+; --- Cloudflare Edge Anycast Routing Records ---
+@               IN      A       104.21.57.81
+@               IN      A       172.67.161.140
+www             IN      CNAME   mahindralifespaceshomes.in.
+
 ; --- Google Search Console Ownership Verification ---
 @               IN      TXT     "google-site-verification=ZkWP-CncVKOeHdtgmsT4UXy9E5pCTAaJNBp-ez3YLEs"
 

@@ -38,6 +38,14 @@
   Cache-Control: public, max-age=0, s-maxage=3600, stale-while-revalidate=86400, stale-if-error=86400
   Cache-Tag: mahindra-rivenza, corridor-pages, baner-annex, enterprise-edge
 
+/google-business-profile/*
+  Cache-Control: public, max-age=0, s-maxage=3600, stale-while-revalidate=86400, stale-if-error=86400
+  Cache-Tag: mahindra-rivenza, google-business-profile, gbp-hub, enterprise-edge
+
+/google-keywords-planner/*
+  Cache-Control: public, max-age=0, s-maxage=3600, stale-while-revalidate=86400, stale-if-error=86400
+  Cache-Tag: mahindra-rivenza, google-keywords-planner, keyword-matrix, enterprise-edge
+
 /baner-annex/*
   Cache-Control: public, max-age=0, s-maxage=3600, stale-while-revalidate=86400, stale-if-error=86400
   Cache-Tag: mahindra-rivenza, baner-annex, enterprise-edge
@@ -164,6 +172,15 @@
 /documents/*
   Cache-Control: public, max-age=31536000, immutable
   Access-Control-Allow-Origin: *
+  X-Robots-Tag: all, max-image-preview:large, max-snippet:-1
+  Content-Disposition: inline
+
+/documents/*.pdf
+  Content-Type: application/pdf
+  Cache-Control: public, max-age=31536000, immutable
+  Access-Control-Allow-Origin: *
+  X-Robots-Tag: all, max-image-preview:large, max-snippet:-1
+  Content-Disposition: inline
 
 /favicon.ico
   Content-Type: image/x-icon

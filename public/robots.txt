@@ -73,10 +73,26 @@ User-agent: Google-InspectionTool
 Allow: /
 Allow: /_astro/
 Allow: /images/
+Allow: /documents/
+Allow: /videos/
+Allow: /*.pdf$
+Allow: /*.json$
+Allow: /*.xml$
 
 # ------------------------------------------------------------------------------
-# 5. Specialized Google Crawlers (Ads, Store, Extended)
+# 5. Specialized Google Crawlers (News, Feeds, Ads, Store, Extended, Other)
 # ------------------------------------------------------------------------------
+User-agent: Googlebot-News
+Allow: /
+Allow: /articles/
+Allow: /rss.xml
+Allow: /images/
+
+User-agent: FeedFetcher-Google
+Allow: /
+Allow: /rss.xml
+Allow: /*.xml$
+
 User-agent: Mediapartners-Google
 Allow: /
 
@@ -86,28 +102,117 @@ Allow: /
 User-agent: AdsBot-Google-Mobile
 Allow: /
 
-User-agent: Mediapartners-Google
-Allow: /
-
 User-agent: Storebot-Google
 Allow: /
+Allow: /pricing/
+Allow: /google-shopping.xml
+
+User-agent: GoogleOther
+Allow: /
+
+User-agent: GoogleOther-Image
+Allow: /
+Allow: /images/
+
+User-agent: GoogleOther-Video
+Allow: /
+Allow: /videos/
+
+User-agent: Google-Extended
+Allow: /
+Allow: /llms.txt
+Allow: /llms-full.txt
+Allow: /llm-knowledge-graph.json
+Allow: /keywords-ecosystem.json
 
 # ------------------------------------------------------------------------------
-# 6. Microsoft Bing & Yahoo Crawler (Bingbot, Slurp)
+# 6. Microsoft Bing, Yahoo & IndexNow Gateways (Bingbot, Slurp, msnbot)
 # ------------------------------------------------------------------------------
 User-agent: bingbot
 Allow: /
 Allow: /_astro/
 Allow: /images/
+Allow: /documents/
 Disallow: /api/
 Disallow: /cdn-cgi/
+
+User-agent: msnbot
+Allow: /
+
+User-agent: msnbot-media
+Allow: /
+Allow: /images/
+
+User-agent: BingPreview
+Allow: /
 
 User-agent: Slurp
 Allow: /
 
 # ------------------------------------------------------------------------------
-# 7. Other Major Compliant Search Engine Crawlers
+# 7. Social Media Preview Crawlers & Link Expanders (OpenGraph / Rich Cards)
 # ------------------------------------------------------------------------------
+User-agent: Twitterbot
+Allow: /
+Allow: /images/
+Allow: /videos/
+
+User-agent: facebookexternalhit
+Allow: /
+Allow: /images/
+
+User-agent: LinkedInBot
+Allow: /
+Allow: /images/
+
+User-agent: WhatsApp
+Allow: /
+Allow: /images/
+
+User-agent: TelegramBot
+Allow: /
+Allow: /images/
+
+User-agent: Pinterestbot
+Allow: /
+Allow: /images/
+
+User-agent: Applebot
+Allow: /
+Allow: /images/
+Allow: /llms.txt
+Allow: /llms-full.txt
+Allow: /llm-knowledge-graph.json
+
+User-agent: Applebot-Extended
+Allow: /
+Allow: /llms.txt
+Allow: /llms-full.txt
+Allow: /llm-knowledge-graph.json
+
+# ------------------------------------------------------------------------------
+# 8. Regional Search Engines (Naver, Seznam, Yandex, Baidu, DuckDuckGo)
+# ------------------------------------------------------------------------------
+User-agent: NaverBot
+Allow: /
+
+User-agent: Yeti
+Allow: /
+
+User-agent: SeznamBot
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: YandexBot
+Allow: /
+Allow: /images/
+Allow: /documents/
+
+User-agent: Baiduspider
+Allow: /
+Allow: /images/
 # 8. Generative AI Models & Real-Time Search Crawlers (Full Citation Authority)
 # Hardened for ChatGPT, Claude, Gemini, Perplexity, DeepSeek, Apple Intelligence & Meta AI
 # ------------------------------------------------------------------------------
