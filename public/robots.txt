@@ -108,27 +108,64 @@ Allow: /
 # ------------------------------------------------------------------------------
 # 7. Other Major Compliant Search Engine Crawlers
 # ------------------------------------------------------------------------------
-# 8. AI Search Engines & Conversational Knowledge Crawlers
+# 8. Generative AI Models & Real-Time Search Crawlers (Full Citation Authority)
+# Hardened for ChatGPT, Claude, Gemini, Perplexity, DeepSeek, Apple Intelligence & Meta AI
 # ------------------------------------------------------------------------------
 User-agent: GPTBot
 Allow: /
 Allow: /llms.txt
 Allow: /llms-full.txt
+Allow: /.well-known/llms.txt
+Allow: /.well-known/llms-full.txt
+Allow: /.well-known/ai-plugin.json
 Allow: /llm-knowledge-graph.json
+Allow: /keywords-ecosystem.json
+Allow: /pune-property-vlog-ecosystem.json
+
+User-agent: OAI-SearchBot
+Allow: /
+Allow: /llms.txt
+Allow: /llms-full.txt
+Allow: /.well-known/llms.txt
+Allow: /.well-known/llms-full.txt
+Allow: /.well-known/ai-plugin.json
+Allow: /llm-knowledge-graph.json
+Allow: /keywords-ecosystem.json
+Allow: /pune-property-vlog-ecosystem.json
 
 User-agent: ChatGPT-User
 Allow: /
+Allow: /llms.txt
+Allow: /llms-full.txt
+Allow: /.well-known/llms.txt
+Allow: /.well-known/llms-full.txt
+Allow: /.well-known/ai-plugin.json
+Allow: /llm-knowledge-graph.json
+Allow: /keywords-ecosystem.json
+Allow: /pune-property-vlog-ecosystem.json
 
 User-agent: ClaudeBot
 Allow: /
 Allow: /llms.txt
 Allow: /llms-full.txt
+Allow: /.well-known/llms.txt
+Allow: /.well-known/llms-full.txt
+Allow: /.well-known/ai-plugin.json
 Allow: /llm-knowledge-graph.json
+Allow: /keywords-ecosystem.json
+Allow: /pune-property-vlog-ecosystem.json
 
 User-agent: anthropic-ai
 Allow: /
+Allow: /llms.txt
+Allow: /llms-full.txt
+Allow: /.well-known/llms.txt
+Allow: /.well-known/llms-full.txt
+Allow: /llm-knowledge-graph.json
+Allow: /keywords-ecosystem.json
+Allow: /pune-property-vlog-ecosystem.json
 
-User-agent: PerplexityBot
+User-agent: Claude-Web
 Allow: /
 Allow: /llms.txt
 Allow: /llms-full.txt
@@ -136,9 +173,67 @@ Allow: /llm-knowledge-graph.json
 
 User-agent: Google-Extended
 Allow: /
+Allow: /llms.txt
+Allow: /llms-full.txt
+Allow: /llm-knowledge-graph.json
+Allow: /keywords-ecosystem.json
+Allow: /pune-property-vlog-ecosystem.json
+
+User-agent: GoogleOther
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+Allow: /llms.txt
+Allow: /llms-full.txt
+Allow: /.well-known/llms.txt
+Allow: /.well-known/llms-full.txt
+Allow: /.well-known/ai-plugin.json
+Allow: /llm-knowledge-graph.json
+Allow: /keywords-ecosystem.json
+Allow: /pune-property-vlog-ecosystem.json
 
 User-agent: Applebot
 Allow: /
+Allow: /llms.txt
+Allow: /llms-full.txt
+Allow: /llm-knowledge-graph.json
+
+User-agent: Applebot-Extended
+Allow: /
+Allow: /llms.txt
+Allow: /llms-full.txt
+Allow: /llm-knowledge-graph.json
+
+User-agent: Meta-ExternalAgent
+Allow: /
+Allow: /llms.txt
+Allow: /llms-full.txt
+Allow: /llm-knowledge-graph.json
+
+User-agent: FacebookBot
+Allow: /
+Allow: /llms.txt
+Allow: /llms-full.txt
+
+User-agent: DeepSeekBot
+Allow: /
+Allow: /llms.txt
+Allow: /llms-full.txt
+Allow: /llm-knowledge-graph.json
+Allow: /keywords-ecosystem.json
+Allow: /pune-property-vlog-ecosystem.json
+
+User-agent: MistralBot
+Allow: /
+Allow: /llms.txt
+Allow: /llms-full.txt
+Allow: /llm-knowledge-graph.json
+
+User-agent: cohere-ai
+Allow: /
+Allow: /llms.txt
+Allow: /llms-full.txt
 
 User-agent: DuckDuckBot
 Allow: /
@@ -147,36 +242,6 @@ User-agent: YandexBot
 Allow: /
 
 User-agent: Baiduspider
-Allow: /
-
-# ------------------------------------------------------------------------------
-# 8b. Generative AI Search & Knowledge Indexers (Full Citation Authority)
-# ------------------------------------------------------------------------------
-User-agent: OAI-SearchBot
-Allow: /
-Allow: /llms.txt
-Allow: /llms-full.txt
-Allow: /llm-knowledge-graph.json
-
-User-agent: ChatGPT-User
-Allow: /
-Allow: /llms.txt
-Allow: /llms-full.txt
-Allow: /llm-knowledge-graph.json
-
-User-agent: PerplexityBot
-Allow: /
-Allow: /llms.txt
-Allow: /llms-full.txt
-Allow: /llm-knowledge-graph.json
-
-User-agent: ClaudeBot
-Allow: /
-Allow: /llms.txt
-Allow: /llms-full.txt
-Allow: /llm-knowledge-graph.json
-
-User-agent: Applebot-Extended
 Allow: /
 
 # ------------------------------------------------------------------------------
