@@ -8,7 +8,9 @@ import {
   programmaticLocations,
   programmaticConfigurations,
   programmaticIntents,
-  programmaticModifiers
+  programmaticModifiers,
+  fourSupremePillars,
+  googleKeywordPlannerResearchMatrix
 } from '../data/mahindraKeywordsEcosystem';
 
 export const GET: APIRoute = async () => {
@@ -79,6 +81,8 @@ export const GET: APIRoute = async () => {
       mapsUrl: "https://www.google.com/maps/place/Mahindra+Rivenza/@18.5623125,73.7273125,17z/data=!3m1!4b1!4m6!3m5!1s0x3bc2bd23899c4255:0xd1c64c7ae74e9a5!8m2!3d18.5623125!4d73.7273125!16s%2Fg%2F11ysgj1zl9"
     },
     marketIntelligence2026: westPuneMarketResearch2026,
+    fourSupremePillars: fourSupremePillars,
+    googleKeywordPlannerMatrix: googleKeywordPlannerResearchMatrix,
     entities: masterEntityNodes,
     relationships: masterEntityEdges,
     masterPromptCompletionPairsCount: promptCompletions.length,

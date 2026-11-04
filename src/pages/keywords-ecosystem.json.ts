@@ -10,7 +10,9 @@ import {
   ultraPremiumBanerAnnexPuneKeywords,
   rivenzaTypoKeywords,
   punePropertyVlogMasterEcosystem,
-  punePropertyVlogAllKeywords
+  punePropertyVlogAllKeywords,
+  fourSupremePillars,
+  googleKeywordPlannerResearchMatrix
 } from '../data/mahindraKeywordsEcosystem';
 
 export const GET: APIRoute = async () => {
@@ -22,12 +24,15 @@ export const GET: APIRoute = async () => {
     canonicalDomain: "https://mahindralifespaceshomes.in",
     syndicationPartner: "PunePropertyVlog.com",
     generatedAt: new Date().toISOString(),
+    fourSupremePillars: fourSupremePillars,
+    googleKeywordPlannerMatrix: googleKeywordPlannerResearchMatrix,
     metrics: {
       totalDeduplicatedPermutations: allMahindraKeywordPermutations.length,
       topMoneyKeywordsCount: rivenzaTop150MoneyKeywords.length,
       marketDominationKeywordsCount: ultraPremiumBanerAnnexPuneKeywords.length,
       phoneticTypoKeywordsCount: rivenzaTypoKeywords.length,
-      punePropertyVlogKeywordsCount: punePropertyVlogAllKeywords.length
+      punePropertyVlogKeywordsCount: punePropertyVlogAllKeywords.length,
+      keywordPlannerAuditedKeywordsCount: googleKeywordPlannerResearchMatrix.length
     },
     punePropertyVlogEcosystem: punePropertyVlogMasterEcosystem,
     combinatorialDimensions: {
