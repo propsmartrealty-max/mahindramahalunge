@@ -1,0 +1,594 @@
+{
+  "$schema": "https://json-ld.org/spec/latest/json-ld-syntax/",
+  "context": "https://schema.org",
+  "ecosystemName": "PunePropertyVlog.com Mahindra Rivenza Master SEO & Google Compliance Injection Suite",
+  "canonicalDomain": "https://mahindralifespaceshomes.in",
+  "partnerDomain": "https://punepropertyvlog.com",
+  "project": {
+    "name": "Mahindra Rivenza",
+    "developer": "Mahindra Lifespace Developers Limited (Mahindra Group)",
+    "location": "Baner Annex, Mahalunge, Pune 412115",
+    "configurations": [
+      "2 BHK",
+      "3 BHK",
+      "4 BHK"
+    ],
+    "landArea": "13.46 Acres (~₹3,500 Cr GDV)",
+    "phase1Units": 1236,
+    "launchDate": "October 6, 2026",
+    "amenitiesArea": "2.65 Lakh+ sq.ft.",
+    "clubhouseArea": "44,000+ sq.ft.",
+    "greenSpaces": "9+ Acres Landscaped Greens",
+    "sustainability": "Pre-Certified IGBC Gold & Net Zero Waste to Landfill",
+    "mahaReraPhase1": "PR1261012602102",
+    "mahaReraPhase2": "PM1261012602103",
+    "mahaReraAgent": "A031262401295 (PropSmart Realty)",
+    "contactPhone": "+91 7744009295"
+  },
+  "sections": {
+    "A_primaryProjectKeywords": [
+      "Mahindra Rivenza",
+      "Mahindra Rivenza Pune",
+      "Mahindra Rivenza Mahalunge",
+      "Mahindra Rivenza Baner Annex",
+      "Mahindra Rivenza Baner Annex Pune",
+      "Mahindra Rivenza Mahalunge Pune",
+      "Mahindra Rivenza project",
+      "Mahindra Rivenza residential project",
+      "Mahindra Rivenza residential project Pune",
+      "Mahindra Rivenza new launch",
+      "Mahindra Rivenza new launch Pune",
+      "Mahindra Rivenza property",
+      "Mahindra Rivenza apartments",
+      "Mahindra Rivenza flats",
+      "Mahindra Rivenza homes",
+      "Mahindra Rivenza township",
+      "Mahindra Rivenza luxury apartments",
+      "Mahindra Rivenza premium residences",
+      "Mahindra Rivenza real estate project",
+      "Mahindra Rivenza official website",
+      "Mahindra Rivenza booking",
+      "Mahindra Rivenza enquiry",
+      "Mahindra Rivenza sales office",
+      "Mahindra Rivenza brochure",
+      "Mahindra Rivenza project details"
+    ],
+    "B_priceAndCostKeywords": [
+      "Mahindra Rivenza price",
+      "Mahindra Rivenza price Pune",
+      "Mahindra Rivenza price Mahalunge",
+      "Mahindra Rivenza price list",
+      "Mahindra Rivenza apartment price",
+      "Mahindra Rivenza flat price",
+      "Mahindra Rivenza 2 BHK price",
+      "Mahindra Rivenza 3 BHK price",
+      "Mahindra Rivenza 4 BHK price",
+      "Mahindra Rivenza starting price",
+      "Mahindra Rivenza cost",
+      "Mahindra Rivenza total cost",
+      "Mahindra Rivenza all inclusive price",
+      "Mahindra Rivenza agreement value",
+      "Mahindra Rivenza booking amount",
+      "Mahindra Rivenza token amount",
+      "Mahindra Rivenza payment plan",
+      "Mahindra Rivenza construction linked payment plan",
+      "Mahindra Rivenza EMI",
+      "Mahindra Rivenza home loan",
+      "Mahindra Rivenza stamp duty",
+      "Mahindra Rivenza registration charges",
+      "Mahindra Rivenza GST",
+      "Mahindra Rivenza maintenance charges",
+      "Mahindra Rivenza possession charges",
+      "Mahindra Rivenza cost sheet",
+      "Mahindra Rivenza latest offers",
+      "Mahindra Rivenza pre launch offers",
+      "Mahindra Rivenza launch offers",
+      "Mahindra Rivenza payment schedule"
+    ],
+    "C_configurationKeywords": {
+      "2BHK": [
+        "Mahindra Rivenza 2 BHK",
+        "Mahindra Rivenza 2 BHK flats",
+        "Mahindra Rivenza 2 BHK apartments",
+        "Mahindra Rivenza 2 BHK price",
+        "Mahindra Rivenza 2 BHK price list",
+        "Mahindra Rivenza 2 BHK floor plan",
+        "Mahindra Rivenza 2 BHK carpet area",
+        "Mahindra Rivenza 2 BHK layout",
+        "Mahindra Rivenza 2 BHK photos",
+        "Mahindra Rivenza 2 BHK brochure",
+        "Mahindra Rivenza 2 BHK booking",
+        "Mahindra Rivenza 2 BHK availability",
+        "Mahindra Rivenza spacious 2 BHK",
+        "Mahindra Rivenza premium 2 BHK",
+        "Mahindra Rivenza luxury 2 BHK"
+      ],
+      "3BHK": [
+        "Mahindra Rivenza 3 BHK",
+        "Mahindra Rivenza 3 BHK flats",
+        "Mahindra Rivenza 3 BHK apartments",
+        "Mahindra Rivenza 3 BHK price",
+        "Mahindra Rivenza 3 BHK price list",
+        "Mahindra Rivenza 3 BHK floor plan",
+        "Mahindra Rivenza 3 BHK carpet area",
+        "Mahindra Rivenza 3 BHK layout",
+        "Mahindra Rivenza 3 BHK photos",
+        "Mahindra Rivenza 3 BHK brochure",
+        "Mahindra Rivenza 3 BHK booking",
+        "Mahindra Rivenza 3 BHK availability",
+        "Mahindra Rivenza premium 3 BHK",
+        "Mahindra Rivenza luxury 3 BHK",
+        "Mahindra Rivenza spacious 3 BHK"
+      ],
+      "4BHK": [
+        "Mahindra Rivenza 4 BHK",
+        "Mahindra Rivenza 4 BHK flats",
+        "Mahindra Rivenza 4 BHK apartments",
+        "Mahindra Rivenza 4 BHK price",
+        "Mahindra Rivenza 4 BHK price list",
+        "Mahindra Rivenza 4 BHK floor plan",
+        "Mahindra Rivenza 4 BHK carpet area",
+        "Mahindra Rivenza 4 BHK layout",
+        "Mahindra Rivenza 4 BHK photos",
+        "Mahindra Rivenza 4 BHK brochure",
+        "Mahindra Rivenza 4 BHK booking",
+        "Mahindra Rivenza 4 BHK availability",
+        "Mahindra Rivenza luxury 4 BHK",
+        "Mahindra Rivenza spacious 4 BHK",
+        "Mahindra Rivenza premium 4 BHK"
+      ]
+    },
+    "D_floorPlanLayoutKeywords": [
+      "Mahindra Rivenza floor plan",
+      "Mahindra Rivenza floor plans Pune",
+      "Mahindra Rivenza master plan",
+      "Mahindra Rivenza master layout",
+      "Mahindra Rivenza tower plan",
+      "Mahindra Rivenza building plan",
+      "Mahindra Rivenza apartment layout",
+      "Mahindra Rivenza flat layout",
+      "Mahindra Rivenza unit plan",
+      "Mahindra Rivenza 2 BHK layout",
+      "Mahindra Rivenza 3 BHK layout",
+      "Mahindra Rivenza 4 BHK layout",
+      "Mahindra Rivenza carpet area",
+      "Mahindra Rivenza apartment sizes",
+      "Mahindra Rivenza flat sizes",
+      "Mahindra Rivenza room dimensions",
+      "Mahindra Rivenza living room layout",
+      "Mahindra Rivenza balcony size",
+      "Mahindra Rivenza floor rise",
+      "Mahindra Rivenza tower elevation"
+    ],
+    "E_locationKeywords": {
+      "mahalunge": [
+        "Mahindra Rivenza Mahalunge",
+        "Flats in Mahalunge Pune",
+        "New residential projects in Mahalunge",
+        "New launch projects in Mahalunge",
+        "Luxury flats in Mahalunge",
+        "Premium apartments in Mahalunge",
+        "2 BHK flats in Mahalunge",
+        "3 BHK flats in Mahalunge",
+        "4 BHK flats in Mahalunge",
+        "Residential projects near Mahalunge",
+        "Upcoming projects in Mahalunge",
+        "Best residential project in Mahalunge",
+        "Property investment in Mahalunge",
+        "Mahalunge real estate",
+        "Mahalunge property prices"
+      ],
+      "banerAnnex": [
+        "Mahindra Rivenza Baner Annex",
+        "Flats in Baner Annex Pune",
+        "Residential projects in Baner Annex",
+        "New launch projects Baner Annex",
+        "Luxury flats Baner Annex",
+        "2 BHK flats Baner Annex",
+        "3 BHK flats Baner Annex",
+        "4 BHK flats Baner Annex",
+        "Premium residential projects Baner Annex",
+        "Upcoming projects Baner Annex",
+        "Property investment Baner Annex",
+        "Baner Annex real estate",
+        "Baner Annex property rates",
+        "Apartments near Baner Annex",
+        "Best projects in Baner Annex"
+      ],
+      "nandeAndBalewadi": [
+        "Mahindra Rivenza Nande",
+        "Flats in Nande Pune",
+        "Residential projects in Nande",
+        "Mahindra Rivenza near Balewadi",
+        "Flats near Balewadi High Street",
+        "Residential projects near Balewadi",
+        "Luxury apartments near Balewadi",
+        "2 BHK flats near Balewadi",
+        "3 BHK flats near Balewadi",
+        "4 BHK flats near Balewadi",
+        "New launch projects near Balewadi",
+        "Apartments on Nande Balewadi Road",
+        "Properties near Nande Balewadi Road",
+        "Flats near Baner Balewadi Road",
+        "Residential projects near Baner Balewadi"
+      ]
+    },
+    "F_amenitiesKeywords": [
+      "Mahindra Rivenza amenities",
+      "Mahindra Rivenza clubhouse",
+      "Mahindra Rivenza swimming pool",
+      "Mahindra Rivenza gym",
+      "Mahindra Rivenza landscaped garden",
+      "Mahindra Rivenza green spaces",
+      "Mahindra Rivenza jogging track",
+      "Mahindra Rivenza cycling track",
+      "Mahindra Rivenza badminton court",
+      "Mahindra Rivenza squash court",
+      "Mahindra Rivenza pickleball court",
+      "Mahindra Rivenza children's play area",
+      "Mahindra Rivenza library",
+      "Mahindra Rivenza sunken bar",
+      "Mahindra Rivenza giant swings",
+      "Mahindra Rivenza stargazing hammocks",
+      "Mahindra Rivenza indoor games",
+      "Mahindra Rivenza lifestyle amenities",
+      "Mahindra Rivenza sports amenities",
+      "Mahindra Rivenza wellness amenities",
+      "Mahindra Rivenza recreational facilities",
+      "Mahindra Rivenza open space",
+      "Mahindra Rivenza landscaped open area",
+      "Mahindra Rivenza family amenities",
+      "Mahindra Rivenza clubhouse facilities"
+    ],
+    "G_projectFeaturesUsps": [
+      "Mahindra Rivenza 13.46 acres",
+      "Mahindra Rivenza 9 acres green space",
+      "Mahindra Rivenza 44000 sq ft clubhouse",
+      "Mahindra Rivenza 2.65 lakh sq ft amenities",
+      "Mahindra Rivenza sustainable homes",
+      "Mahindra Rivenza green building",
+      "Mahindra Rivenza IGBC Gold",
+      "Mahindra Rivenza Net Zero Waste",
+      "Mahindra Rivenza gated community",
+      "Mahindra Rivenza luxury lifestyle",
+      "Mahindra Rivenza premium township",
+      "Mahindra Rivenza open spaces",
+      "Mahindra Rivenza landscaped development",
+      "Mahindra Rivenza modern apartments",
+      "Mahindra Rivenza family lifestyle",
+      "Mahindra Rivenza high rise apartments",
+      "Mahindra Rivenza residential community",
+      "Mahindra Rivenza sustainable development",
+      "Mahindra Rivenza green homes Pune",
+      "Mahindra Rivenza lifestyle project"
+    ],
+    "H_connectivityLandmarks": [
+      "Mahindra Rivenza near Hinjewadi IT Park",
+      "Mahindra Rivenza near Baner",
+      "Mahindra Rivenza near Balewadi",
+      "Mahindra Rivenza near Wakad",
+      "Mahindra Rivenza near Pune University",
+      "Mahindra Rivenza near Mumbai Bangalore Highway",
+      "Mahindra Rivenza near Mumbai Bengaluru Highway",
+      "Mahindra Rivenza near NH 48",
+      "Mahindra Rivenza near Hinjewadi Phase 1",
+      "Mahindra Rivenza near Hinjewadi Phase 2",
+      "Mahindra Rivenza near Hinjewadi Phase 3",
+      "Mahindra Rivenza near Infosys Hinjewadi",
+      "Mahindra Rivenza near Wipro Hinjewadi",
+      "Mahindra Rivenza near Rajiv Gandhi Infotech Park",
+      "Mahindra Rivenza near Balewadi High Street",
+      "Mahindra Rivenza near Jupiter Hospital",
+      "Mahindra Rivenza near Orchid School",
+      "Mahindra Rivenza near D Mart",
+      "Mahindra Rivenza near Westend Mall",
+      "Mahindra Rivenza near Xion Mall",
+      "Mahindra Rivenza near educational institutions",
+      "Mahindra Rivenza connectivity",
+      "Mahindra Rivenza location advantages",
+      "Mahindra Rivenza road connectivity",
+      "Mahindra Rivenza IT hub connectivity",
+      "Flats near Hinjewadi IT Park Pune",
+      "Flats near Baner Pune",
+      "Flats near Balewadi Pune",
+      "Flats near Wakad Pune",
+      "Apartments near Hinjewadi Phase 1",
+      "Apartments near Hinjewadi Phase 2",
+      "Apartments near Hinjewadi Phase 3",
+      "Properties near Mumbai Bangalore Highway Pune",
+      "Residential projects near Hinjewadi IT Park",
+      "Residential projects near Balewadi High Street"
+    ],
+    "I_developerBrandKeywords": [
+      "Mahindra Lifespaces Rivenza",
+      "Mahindra Lifespaces Rivenza Pune",
+      "Mahindra Lifespaces Mahalunge",
+      "Mahindra Lifespaces Baner Annex",
+      "Mahindra Lifespace Developers Pune",
+      "Mahindra Lifespaces residential projects Pune",
+      "Mahindra Group residential projects Pune",
+      "Mahindra real estate projects in Pune",
+      "Mahindra upcoming projects Pune",
+      "Mahindra new launch projects Pune",
+      "Mahindra premium projects Pune",
+      "Mahindra luxury apartments Pune",
+      "Mahindra residential projects Mahalunge",
+      "Mahindra Lifespaces new launch",
+      "Mahindra Lifespaces property price",
+      "Mahindra Lifespaces project brochure",
+      "Mahindra Lifespaces project review",
+      "Mahindra Lifespaces property investment",
+      "Mahindra Lifespaces Pune contact number",
+      "Mahindra Lifespaces booking office Pune"
+    ],
+    "J_bookingEnquiryKeywords": [
+      "Book Mahindra Rivenza",
+      "Mahindra Rivenza online booking",
+      "Mahindra Rivenza site visit",
+      "Mahindra Rivenza site visit booking",
+      "Mahindra Rivenza enquiry form",
+      "Mahindra Rivenza sales enquiry",
+      "Mahindra Rivenza contact number",
+      "Mahindra Rivenza sales office contact",
+      "Mahindra Rivenza sales team",
+      "Mahindra Rivenza WhatsApp number",
+      "Mahindra Rivenza property dealer",
+      "Mahindra Rivenza channel partner",
+      "Mahindra Rivenza authorized channel partner",
+      "Mahindra Rivenza real estate consultant",
+      "Mahindra Rivenza property consultant",
+      "Mahindra Rivenza book a flat",
+      "Mahindra Rivenza book 2 BHK",
+      "Mahindra Rivenza book 3 BHK",
+      "Mahindra Rivenza book 4 BHK",
+      "Mahindra Rivenza sample flat visit",
+      "Mahindra Rivenza model flat",
+      "Mahindra Rivenza sales gallery",
+      "Mahindra Rivenza project walkthrough",
+      "Mahindra Rivenza cost sheet request",
+      "Mahindra Rivenza brochure download"
+    ],
+    "K_possessionAndLegalKeywords": [
+      "Mahindra Rivenza possession date",
+      "Mahindra Rivenza possession timeline",
+      "Mahindra Rivenza completion date",
+      "Mahindra Rivenza construction status",
+      "Mahindra Rivenza construction updates",
+      "Mahindra Rivenza project status",
+      "Mahindra Rivenza under construction",
+      "Mahindra Rivenza MahaRERA",
+      "Mahindra Rivenza RERA number",
+      "Mahindra Rivenza RERA registration",
+      "Mahindra Rivenza RERA approved project",
+      "Mahindra Rivenza RERA details",
+      "Mahindra Rivenza legal documents",
+      "Mahindra Rivenza sanctioned plans",
+      "Mahindra Rivenza commencement certificate",
+      "Mahindra Rivenza occupancy certificate",
+      "Mahindra Rivenza agreement details",
+      "Mahindra Rivenza project approvals",
+      "Mahindra Rivenza phase 1",
+      "Mahindra Rivenza phase 2",
+      "PR1261012602102",
+      "PM1261012602103"
+    ],
+    "L_visualSearchKeywords": [
+      "Mahindra Rivenza photos",
+      "Mahindra Rivenza images",
+      "Mahindra Rivenza project images",
+      "Mahindra Rivenza building photos",
+      "Mahindra Rivenza elevation",
+      "Mahindra Rivenza exterior design",
+      "Mahindra Rivenza interior photos",
+      "Mahindra Rivenza apartment photos",
+      "Mahindra Rivenza sample flat photos",
+      "Mahindra Rivenza 2 BHK photos",
+      "Mahindra Rivenza 3 BHK photos",
+      "Mahindra Rivenza 4 BHK photos",
+      "Mahindra Rivenza floor plan images",
+      "Mahindra Rivenza master plan images",
+      "Mahindra Rivenza amenities photos",
+      "Mahindra Rivenza clubhouse photos",
+      "Mahindra Rivenza swimming pool photos",
+      "Mahindra Rivenza garden photos",
+      "Mahindra Rivenza drone video",
+      "Mahindra Rivenza project video",
+      "Mahindra Rivenza walkthrough video",
+      "Mahindra Rivenza virtual tour",
+      "Mahindra Rivenza construction video",
+      "Mahindra Rivenza site visit video",
+      "Mahindra Rivenza review video"
+    ],
+    "M_investmentResearchKeywords": [
+      "Mahindra Rivenza investment",
+      "Mahindra Rivenza investment potential",
+      "Mahindra Rivenza property investment Pune",
+      "Is Mahindra Rivenza worth buying",
+      "Is Mahindra Rivenza a good investment",
+      "Mahindra Rivenza investment review",
+      "Mahindra Rivenza property appreciation",
+      "Mahindra Rivenza future growth",
+      "Mahindra Rivenza rental income",
+      "Mahindra Rivenza rental yield",
+      "Mahindra Rivenza resale value",
+      "Mahindra Rivenza property ROI",
+      "Mahindra Rivenza investment analysis",
+      "Mahindra Rivenza for end users",
+      "Mahindra Rivenza for investors",
+      "Mahindra Rivenza for IT professionals",
+      "Mahindra Rivenza family homes Pune",
+      "Mahindra Rivenza luxury property investment",
+      "Mahalunge real estate investment",
+      "Baner Annex property investment",
+      "West Pune real estate investment",
+      "Hinjewadi residential investment",
+      "Baner vs Mahalunge property investment",
+      "Balewadi vs Mahalunge flats",
+      "Best investment projects in West Pune"
+    ],
+    "O_westPuneResidentialKeywords": [
+      "Best residential projects in West Pune",
+      "Upcoming residential projects in West Pune",
+      "New launch projects in West Pune",
+      "Luxury flats in West Pune",
+      "Premium residential projects in Pune West",
+      "Best flats for sale in West Pune",
+      "2 BHK flats in West Pune",
+      "3 BHK flats in West Pune",
+      "4 BHK flats in West Pune",
+      "New township projects in West Pune",
+      "Best property investment in West Pune",
+      "Residential projects near Hinjewadi",
+      "Flats near Baner Balewadi",
+      "Luxury apartments near IT Park Pune",
+      "Best residential locations in Pune West",
+      "Upcoming real estate projects Pune West",
+      "New apartments near Mumbai Bangalore Highway",
+      "Flats near Pune IT corridor",
+      "Residential projects near Pune Ring Road",
+      "Best areas to buy a flat in Pune West"
+    ],
+    "competitorHeadToHead": [
+      {
+        "competitor": "Godrej Hillside",
+        "terms": [
+          "Mahindra Rivenza vs Godrej Hillside"
+        ],
+        "url": "/compare/mahindra-mahalunge-vs-godrej-hillside/"
+      },
+      {
+        "competitor": "Godrej Green Cove",
+        "terms": [
+          "Mahindra Rivenza vs Godrej Green Cove"
+        ],
+        "url": "/compare/mahindra-rivenza-vs-godrej-green-cove/"
+      },
+      {
+        "competitor": "VTP Blue Waters",
+        "terms": [
+          "Mahindra Rivenza vs VTP Blue Waters"
+        ],
+        "url": "/compare/mahindra-mahalunge-vs-vtp-blue-waters/"
+      },
+      {
+        "competitor": "VTP Earth One",
+        "terms": [
+          "Mahindra Rivenza vs VTP Earth One"
+        ],
+        "url": "/compare/mahindra-rivenza-vs-vtp-earth-one/"
+      },
+      {
+        "competitor": "Kumar Parth Towers",
+        "terms": [
+          "Mahindra Rivenza vs Kumar Parth Towers"
+        ],
+        "url": "/compare/mahindra-rivenza-vs-kumar-parth-towers/"
+      },
+      {
+        "competitor": "Kolte Patil 24K Altura",
+        "terms": [
+          "Mahindra Rivenza vs Kolte Patil 24K Altura"
+        ],
+        "url": "/compare/mahindra-rivenza-vs-kolte-patil-24k-altura/"
+      },
+      {
+        "competitor": "Supreme Estia",
+        "terms": [
+          "Mahindra Rivenza vs Supreme Estia"
+        ],
+        "url": "/compare/mahindra-rivenza-vs-supreme-estia/"
+      },
+      {
+        "competitor": "Kalpataru Jade Residences",
+        "terms": [
+          "Mahindra Rivenza vs Kalpataru Jade"
+        ],
+        "url": "/compare/mahindra-rivenza-vs-kalpataru-jade-baner/"
+      },
+      {
+        "competitor": "Lodha Panache",
+        "terms": [
+          "Mahindra Rivenza vs Lodha Panache"
+        ],
+        "url": "/compare/mahindra-mahalunge-vs-lodha-panache-hinjewadi/"
+      },
+      {
+        "competitor": "Paranjape Blue Ridge",
+        "terms": [
+          "Mahindra Rivenza vs Paranjape Blue Ridge"
+        ],
+        "url": "/compare/mahindra-rivenza-vs-paranjape-blue-ridge/"
+      }
+    ],
+    "googleAdsMatrix": {
+      "campaigns": [
+        {
+          "name": "Brand Campaign",
+          "keywords": [
+            "Mahindra Rivenza",
+            "Mahindra Rivenza Pune",
+            "Mahindra Rivenza Mahalunge",
+            "Mahindra Rivenza Baner Annex"
+          ]
+        },
+        {
+          "name": "Price Campaign",
+          "keywords": [
+            "Mahindra Rivenza price",
+            "Rivenza price list",
+            "Mahindra Rivenza cost sheet",
+            "Mahindra Rivenza 2 BHK price"
+          ]
+        },
+        {
+          "name": "Configuration Campaign",
+          "keywords": [
+            "Mahindra Rivenza 2 BHK",
+            "Mahindra Rivenza 3 BHK",
+            "Mahindra Rivenza 4 BHK",
+            "Mahindra Rivenza floor plans"
+          ]
+        },
+        {
+          "name": "Location Campaign",
+          "keywords": [
+            "Flats in Mahalunge",
+            "Flats in Baner Annex",
+            "Residential projects near Hinjewadi",
+            "New launch West Pune"
+          ]
+        },
+        {
+          "name": "Competitor Campaign",
+          "keywords": [
+            "Alternative projects in Mahalunge",
+            "Mahindra Rivenza vs Godrej",
+            "Projects near VTP Blue Waters"
+          ]
+        },
+        {
+          "name": "Lead Campaign",
+          "keywords": [
+            "Mahindra Rivenza site visit",
+            "Mahindra Rivenza booking enquiry",
+            "Mahindra Rivenza sales office contact",
+            "Mahindra Rivenza brochure download"
+          ]
+        }
+      ],
+      "negativeKeywords": [
+        "jobs",
+        "careers",
+        "salary",
+        "internship",
+        "customer care jobs",
+        "free download",
+        "school project",
+        "stock price",
+        "automobile",
+        "tractor",
+        "used cars"
+      ]
+    }
+  }
+}

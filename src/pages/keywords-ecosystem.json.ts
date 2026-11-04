@@ -8,7 +8,9 @@ import {
   programmaticModifiers,
   rivenzaTop150MoneyKeywords,
   ultraPremiumBanerAnnexPuneKeywords,
-  rivenzaTypoKeywords
+  rivenzaTypoKeywords,
+  punePropertyVlogMasterEcosystem,
+  punePropertyVlogAllKeywords
 } from '../data/mahindraKeywordsEcosystem';
 
 export const GET: APIRoute = async () => {
@@ -18,13 +20,16 @@ export const GET: APIRoute = async () => {
     ecosystemName: "Mahindra Rivenza Programmatic Keywords & Search Intent Graph",
     project: "Mahindra Rivenza",
     canonicalDomain: "https://mahindralifespaceshomes.in",
+    syndicationPartner: "PunePropertyVlog.com",
     generatedAt: new Date().toISOString(),
     metrics: {
       totalDeduplicatedPermutations: allMahindraKeywordPermutations.length,
       topMoneyKeywordsCount: rivenzaTop150MoneyKeywords.length,
       marketDominationKeywordsCount: ultraPremiumBanerAnnexPuneKeywords.length,
-      phoneticTypoKeywordsCount: rivenzaTypoKeywords.length
+      phoneticTypoKeywordsCount: rivenzaTypoKeywords.length,
+      punePropertyVlogKeywordsCount: punePropertyVlogAllKeywords.length
     },
+    punePropertyVlogEcosystem: punePropertyVlogMasterEcosystem,
     combinatorialDimensions: {
       brandVariantsCount: programmaticBrandVariants.length,
       brandVariants: programmaticBrandVariants,

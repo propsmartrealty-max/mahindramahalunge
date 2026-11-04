@@ -819,6 +819,158 @@ export const comparisonData: ComparisonItem[] = [
       }
     ]
   }
+,
+  {
+    slug: 'mahindra-rivenza-vs-godrej-green-cove',
+    competitorName: 'Godrej Green Cove Mahalunge',
+    competitorType: 'Project',
+    h1: 'Mahindra Rivenza vs Godrej Green Cove Mahalunge: Detailed Comparison',
+    metaTitle: 'Mahindra Rivenza vs Godrej Green Cove Mahalunge | Project Comparison',
+    metaDescription: 'Objective comparison between Mahindra Rivenza and Godrej Green Cove in Mahalunge. Compare master layout, usable carpet areas, amenities and developer trust.',
+    summaryVerdict: 'While Godrej Green Cove is part of an established township cluster, Mahindra Rivenza offers lower residential density, larger usable carpet layouts with expansive private balconies, Pre-Certified IGBC Gold sustainability, and Mahindra Group zero-compromise institutional governance.',
+    prosMahindra: [
+      'Expansive 13.46-acre master layout with 9+ acres of landscaped biophilic greens',
+      'Pre-Certified IGBC Gold & proposed Net Zero Waste development',
+      'Generous 2, 3 and 4 BHK layouts with zero internal corridor wastage',
+      'Backed by USD 20+ Billion Mahindra Group financial strength'
+    ],
+    prosCompetitor: [
+      'Earlier township launch phase with completed internal roads',
+      'Established community retail facilities nearby'
+    ],
+    metrics: [
+      { feature: 'Development Parcel', mahindra: '13.46 Acres (~₹3,500 Cr GDV)', competitor: 'Township Sector Parcel', winner: 'Mahindra' },
+      { feature: 'Open Green Space', mahindra: '9+ Acres Dedicated Greens', competitor: 'Standard Landscaped Lawns', winner: 'Mahindra' },
+      { feature: 'Clubhouse Infrastructure', mahindra: '44,000+ Sq.Ft. Multi-Level Clubhouse', competitor: 'Township Shared Clubhouse', winner: 'Mahindra' },
+      { feature: 'Launch Price', mahindra: 'Starts ₹90 Lakhs*', competitor: 'Mature Resale / Higher Ticket', winner: 'Mahindra' }
+    ],
+    faqs: [
+      {
+        q: 'Which project offers better long-term appreciation potential?',
+        a: 'Mahindra Rivenza offers stronger early-mover appreciation due to fresh launch pricing and direct frontage on PMRDA 36m DP boulevards.'
+      }
+    ]
+  },
+  {
+    slug: 'mahindra-rivenza-vs-kumar-parth-towers',
+    competitorName: 'Kumar Parth Towers Baner',
+    competitorType: 'Project',
+    h1: 'Mahindra Rivenza vs Kumar Parth Towers Baner: Head-to-Head Comparison',
+    metaTitle: 'Mahindra Rivenza vs Kumar Parth Towers Baner | Comparison Guide',
+    metaDescription: 'Compare Mahindra Rivenza Baner Annex with Kumar Parth Towers Baner. Evaluate pricing arbitrage, carpet area efficiency, and commute velocity.',
+    summaryVerdict: 'Kumar Parth Towers is located in central Baner with higher land rates and vehicular traffic. Mahindra Rivenza at Baner Annex provides a 35% to 42% price arbitrage, substantially larger biophilic open spaces, and faster 7-minute access to Hinjewadi Phase 1.',
+    prosMahindra: [
+      '35% to 42% price arbitrage compared to central Baner rates',
+      '13.46 acres of integrated lifestyle living vs standalone tower layout',
+      'Signal-free 7-minute commute to Hinjewadi Phase 1 via Mula River Bridge',
+      'Resort pool with sunken aqua bar and 2.65 lakh+ sq.ft. of amenities'
+    ],
+    prosCompetitor: [
+      'Walking distance to central Baner retail high street',
+      'Established municipal water and civic infrastructure'
+    ],
+    metrics: [
+      { feature: 'Land Parcel Scale', mahindra: '13.46 Acres Gated Master Community', competitor: 'High-Density Standalone Tower', winner: 'Mahindra' },
+      { feature: 'Price Arbitrage', mahindra: 'Starts ₹90 Lakhs* (Exceptional Value)', competitor: 'Starts ₹1.45 Cr+ for 2 BHK', winner: 'Mahindra' },
+      { feature: 'Traffic & Congestion', mahindra: 'Wide 36m DP Roads, Low Pollution', competitor: 'Busy Baner Main Road Congestion', winner: 'Mahindra' }
+    ],
+    faqs: [
+      {
+        q: 'Why choose Baner Annex over central Baner?',
+        a: 'Baner Annex gives you double the lifestyle amenities, 9+ acres of greens, and modern master-planned infrastructure at significantly lower capital expenditure.'
+      }
+    ]
+  },
+  {
+    slug: 'mahindra-rivenza-vs-kolte-patil-24k-altura',
+    competitorName: 'Kolte Patil 24K Altura Baner',
+    competitorType: 'Project',
+    h1: 'Mahindra Rivenza vs Kolte Patil 24K Altura Baner: Luxury Benchmarking',
+    metaTitle: 'Mahindra Rivenza vs Kolte Patil 24K Altura Baner | Luxury Comparison',
+    metaDescription: 'In-depth comparison of Mahindra Rivenza vs Kolte Patil 24K Altura Baner. Compare luxury specifications, green certifications, and investment yield.',
+    summaryVerdict: 'Kolte Patil 24K Altura targets ultra-luxury Baner buyers at premium pricing. Mahindra Rivenza delivers comparable luxury typologies (including 4 BHK sky villas) with superior green credentials (IGBC Gold & Net Zero Waste) and far higher rental yield potential driven by Hinjewadi tech proximity.',
+    prosMahindra: [
+      'Pre-Certified IGBC Gold and proposed Net Zero Waste development',
+      '4.8% to 5.4% projected rental yields vs 3.2% in mature central Baner',
+      '44,000+ sq.ft. clubhouse featuring squash, pickleball, and sunken bar',
+      'Mahindra Lifespaces governance and statutory escrow transparency'
+    ],
+    prosCompetitor: [
+      'Established high-end luxury branding in central Baner',
+      'Immediate access to Baner-Pashan link road'
+    ],
+    metrics: [
+      { feature: 'Sustainability Benchmark', mahindra: 'Pre-Certified IGBC Gold & Net Zero Waste', competitor: 'Standard Green Norms', winner: 'Mahindra' },
+      { feature: 'Projected Rental Yield', mahindra: '4.8% – 5.4% (Direct IT Belt Access)', competitor: '3.0% – 3.4% (High Capital Base)', winner: 'Mahindra' },
+      { feature: 'Entry Pricing', mahindra: 'From ₹90 Lakhs*', competitor: 'From ₹1.85 Cr+ (High Ticket)', winner: 'Mahindra' }
+    ],
+    faqs: [
+      {
+        q: 'Which project is better for IT professionals working in Hinjewadi?',
+        a: 'Mahindra Rivenza saves 30–45 minutes of daily rush-hour commuting thanks to direct river bridge access to Hinjewadi Phase 1.'
+      }
+    ]
+  },
+  {
+    slug: 'mahindra-rivenza-vs-supreme-estia',
+    competitorName: 'Supreme Estia Baner',
+    competitorType: 'Project',
+    h1: 'Mahindra Rivenza vs Supreme Estia Baner: Detailed Project Comparison',
+    metaTitle: 'Mahindra Rivenza vs Supreme Estia Baner | Project Analysis',
+    metaDescription: 'Detailed comparison between Mahindra Rivenza Mahalunge/Baner Annex and Supreme Estia Baner. Assess lifestyle amenities, density, and price growth.',
+    summaryVerdict: 'Supreme Estia is an established gated community in Baner. Mahindra Rivenza offers a massive 13.46-acre integrated master plan, 9+ acres of landscaped biophilic open space, brand-new 2026 architectural floor plans, and entry prices starting ₹90L*.',
+    prosMahindra: [
+      'Fresh 2026 launch inventory with maximum layout selection and early-bird pricing',
+      '9+ acres of vehicle-free landscaped open space (over 68% open area)',
+      'Direct connectivity to PMRDA Town Planning Scheme 1 wide boulevards',
+      'Flexible Construction Linked Payment (CLP) milestone schedules'
+    ],
+    prosCompetitor: [
+      'Established construction progress in central Baner',
+      'Proximity to Mumbai-Bengaluru Highway junction'
+    ],
+    metrics: [
+      { feature: 'Master Land Parcel', mahindra: '13.46 Acres (~₹3,500 Cr GDV)', competitor: 'Mid-Sized Gated Community', winner: 'Mahindra' },
+      { feature: 'Open Greens Ratio', mahindra: '68%+ Vehicle-Free Landscaped Greens', competitor: 'Standard Common Open Space', winner: 'Mahindra' },
+      { feature: 'Launch Stage', mahindra: 'Phase 1 Flagship Launch (Max Price Growth)', competitor: 'Advanced Construction / Reduced Upside', winner: 'Mahindra' }
+    ],
+    faqs: [
+      {
+        q: 'How does capital appreciation compare between early launch and ready projects?',
+        a: 'Early-stage flagship launches like Mahindra Rivenza typically capture 25% to 35% capital gains over construction cycles compared to mature ready developments.'
+      }
+    ]
+  },
+  {
+    slug: 'mahindra-rivenza-vs-paranjape-blue-ridge',
+    competitorName: 'Paranjape Blue Ridge Hinjewadi',
+    competitorType: 'Project',
+    h1: 'Mahindra Rivenza vs Paranjape Blue Ridge Hinjewadi: Township Comparison',
+    metaTitle: 'Mahindra Rivenza vs Paranjape Blue Ridge Hinjewadi | Comparison',
+    metaDescription: 'Compare Mahindra Rivenza Baner Annex with Paranjape Blue Ridge Hinjewadi. Evaluate township age, air quality, lifestyle amenities, and capital growth.',
+    summaryVerdict: 'Paranjape Blue Ridge is an iconic early-generation Hinjewadi township. Mahindra Rivenza represents next-generation 2026 sustainable luxury in Baner Annex—featuring modern biophilic architecture, superior acoustic insulation, Net Zero Waste systems, and cleaner air quality away from industrial park zones.',
+    prosMahindra: [
+      'Modern 2026 architectural typologies with work-from-home acoustic zones',
+      'Pre-Certified IGBC Gold & proposed Net Zero Waste development',
+      'Scenic biodiversity setting in Baner Annex with superior AQI',
+      'Backed by Mahindra Lifespaces and USD 20+ Billion Mahindra Group'
+    ],
+    prosCompetitor: [
+      'Inside Hinjewadi Phase 1 boundary (walking distance to tech parks)',
+      'Operational golf course and established township schools'
+    ],
+    metrics: [
+      { feature: 'Architectural Era', mahindra: '2026 Next-Gen Biophilic Smart Homes', competitor: '2010s Early Generation Township', winner: 'Mahindra' },
+      { feature: 'Air Quality & Green Setting', mahindra: 'Baner Annex Biodiversity Foothills', competitor: 'High-Density IT Park Corridor', winner: 'Mahindra' },
+      { feature: 'Pricing Advantage', mahindra: 'Starts ₹90 Lakhs* for Brand New Units', competitor: 'Aging Resale Inventory / High Maintenance', winner: 'Mahindra' }
+    ],
+    faqs: [
+      {
+        q: 'Why prefer Mahindra Rivenza over living directly inside Hinjewadi IT Park?',
+        a: 'Living in Baner Annex gives you tranquil, green residential surroundings, lower noise and air pollution, and dual access to both Baner dining and Hinjewadi offices in just 7 minutes.'
+      }
+    ]
+  }
 ];
 
 
