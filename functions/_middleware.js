@@ -13,12 +13,12 @@
  */
 
 // Bot Classification Regex — Multi-Search Engine Whitebot Recognition
-const GOOGLE_BOT_REGEX = /googlebot|google-inspectiontool|storebot-google|googleother|adsbot-google|mediapartners-google/i;
+const GOOGLE_BOT_REGEX = /googlebot|google-inspectiontool|storebot-google|googleother|adsbot-google|mediapartners-google|feedfetcher-google|google-extended/i;
 const MICROSOFT_BING_REGEX = /bingbot|bingpreview|msnbot|slurp|microsoft-search/i;
-const APPLE_BOT_REGEX = /applebot/i;
-const SEARCH_BOT_REGEX = /googlebot|google-inspectiontool|bingbot|slurp|duckduckbot|baiduspider|yandexbot|sogou|exabot|applebot|storebot-google/i;
+const APPLE_BOT_REGEX = /applebot|applebot-extended/i;
+const SEARCH_BOT_REGEX = /googlebot|google-inspectiontool|bingbot|slurp|duckduckbot|baiduspider|yandexbot|sogou|exabot|applebot|storebot-google|naverbot|yeti|seznam/i;
 const SOCIAL_BOT_REGEX = /facebookexternalhit|twitterbot|linkedinbot|whatsapp|telegrambot|pinterest|slackbot|discordbot/i;
-const AI_CRAWLER_REGEX = /gptbot|chatgpt-user|claudebot|anthropic-ai|perplexitybot|applebot|google-extended|oai-searchbot/i;
+const AI_CRAWLER_REGEX = /gptbot|chatgpt-user|claudebot|anthropic-ai|perplexitybot|applebot|google-extended|oai-searchbot|deepseekbot|meta-externalagent|mistralbot|cohere-ai/i;
 const BAD_SCRAPER_REGEX = /bytespider|petalbot|mj12bot|dotbot|zoominfobot|semrushbot|ahrefsbot|aspiegelbot|megaindex|seekport|ccbot/i;
 
 // Enterprise Vulnerability Scanner & Exploit Toolkit Signatures
@@ -110,6 +110,12 @@ export async function onRequest(context) {
         'https://mahindralifespaceshomes.in/luxury-apartments-in-pune/',
         'https://mahindralifespaceshomes.in/web-stories/',
         'https://mahindralifespaceshomes.in/sitemap/',
+        'https://mahindralifespaceshomes.in/articles/mahindra-rivenza-flagship-project-mahalunge-baner-annexe-pune/',
+        'https://mahindralifespaceshomes.in/articles/mahindra-mahalunge-master-township-guide-2026/',
+        'https://mahindralifespaceshomes.in/articles/mahindra-baner-annexe-luxury-apartments-pune/',
+        'https://mahindralifespaceshomes.in/articles/mahindra-pune-residential-projects-ecosystem/',
+        'https://mahindralifespaceshomes.in/google-business-profile/',
+        'https://mahindralifespaceshomes.in/google-keywords-planner/',
       ];
 
       if (request.method === 'POST') {
@@ -177,7 +183,12 @@ export async function onRequest(context) {
   }
 
   // 1. Enterprise Edge WAF: Exploit Probe, SQLi & Vulnerability Scanner Rejection
-  const isSearchEngineBot = GOOGLE_BOT_REGEX.test(userAgent) || MICROSOFT_BING_REGEX.test(userAgent) || APPLE_BOT_REGEX.test(userAgent);
+  const isSearchEngineBot = GOOGLE_BOT_REGEX.test(userAgent) || 
+                            MICROSOFT_BING_REGEX.test(userAgent) || 
+                            APPLE_BOT_REGEX.test(userAgent) ||
+                            SEARCH_BOT_REGEX.test(userAgent) ||
+                            SOCIAL_BOT_REGEX.test(userAgent) ||
+                            AI_CRAWLER_REGEX.test(userAgent);
   
   if (!isSearchEngineBot) {
     // Drop known scanner toolkits
@@ -222,7 +233,7 @@ export async function onRequest(context) {
   }
 
   // 3. Edge Trailing Slash & Canonical Enforcement
-  const isStaticFile = /\.(css|js|mjs|svg|png|jpg|jpeg|webp|ico|xml|txt|json|woff|woff2|ttf)$/i.test(pathname);
+  const isStaticFile = /\.(css|js|mjs|svg|png|jpg|jpeg|webp|ico|xml|txt|json|woff|woff2|ttf|pdf|mp4)$/i.test(pathname);
 
   if (!isStaticFile && !pathname.endsWith('/')) {
     url.pathname = `${pathname}/`;
