@@ -18,6 +18,8 @@
     "gcp:list": "node scripts/link-gcp-project.mjs --list",
     "gcp:link": "node scripts/link-gcp-project.mjs",
     "gsc:inspect": "node scripts/inspect-google-index.mjs",
+    "gsc:analytics": "node scripts/query-gsc-analytics.mjs",
+    "audit:infra": "node scripts/validate-enterprise-infra.mjs",
     "audit:dns": "node scripts/audit-dns-security.mjs"
   },
   "dependencies": {
