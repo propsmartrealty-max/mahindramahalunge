@@ -1,28 +1,56 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import MahindraKeywordMatrix from '../../components/MahindraKeywordMatrix.astro';
 
 const articleSchema = {
   "@context": "https://schema.org",
-  "@type": "Article",
-  "headline": "Mahindra Lifespaces Mahalunge: Upcoming Project Guide 2026",
-  "description": "Comprehensive guide to Mahindra Lifespaces upcoming residential development in Mahalunge Pune: 13.46-acre acquisition, ₹3,500 Cr GDV, PMRDA scheme, and pre-launch timeline.",
-  "author": {
-    "@type": "Organization",
-    "name": "Mahindra Lifespaces Pune Research Desk"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "Propsmart Realty Max"
-  },
-  "datePublished": "2026-01-15",
-  "dateModified": "2026-09-21"
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://mahindralifespaceshomes.in/articles/mahindra-lifespaces-mahalunge-upcoming-project-guide/#article",
+      "headline": "Mahindra Lifespaces Mahalunge: Master Project Guide & Launch Dossier 2026",
+      "description": "Comprehensive guide to Mahindra Lifespaces development in Mahalunge Pune (Mahindra Rivenza): 13.46 acres, ₹3,500 Cr GDV, Phase 1 1,236 residences, MahaRERA PR1261012602102.",
+      "author": {
+        "@type": "Organization",
+        "name": "Mahindra Lifespaces Pune Research Desk"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "PropSmart Realty"
+      },
+      "datePublished": "2026-01-15",
+      "dateModified": "2026-11-05"
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://mahindralifespaceshomes.in/articles/mahindra-lifespaces-mahalunge-upcoming-project-guide/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is the official MahaRERA number for Mahindra Lifespaces Mahalunge?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Mahindra Lifespaces Mahalunge is officially registered as Mahindra Rivenza Phase 1 under MahaRERA No. PR1261012602102 and Phase 2 under No. PM1261012602103."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What are the prices and configurations available?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The project features 2, 3 and 4 BHK residences starting from ₹90 Lakhs* with sanctioned carpet areas from 635 to 1,465 sq.ft."
+          }
+        }
+      ]
+    }
+  ]
 };
 ---
 
 <Layout
-  title="Mahindra Lifespaces Mahalunge Project Guide [13.46-Acre Landmark]"
-  description="Official overview of the upcoming Mahindra Lifespaces development in Mahalunge Pune. 13.46 acres acquired in October 2025, ~₹3,500 Cr GDV, 2, 3 & 4 BHK residences."
-  keywords="mahindra lifespaces mahalunge upcoming project, mahindra mahalunge upcoming project guide, mahindra new project mahalunge, mahindra 13.46 acres mahalunge, mahindra nande mahalunge, mahindra mahalunge pre launch"
+  title="Mahindra Lifespaces Mahalunge Project Guide [Mahindra Rivenza 2026]"
+  description="Official overview of Mahindra Lifespaces development in Mahalunge Pune (Mahindra Rivenza). 13.46 acres, ₹3,500 Cr GDV, 2, 3 & 4 BHK residences starting ₹90L*."
+  keywords="mahindra lifespaces mahalunge, mahindra mahalunge upcoming project guide, mahindra new project mahalunge, mahindra 13.46 acres mahalunge, mahindra nande mahalunge, mahindra rivenza, mahindra rivenza pune, mahindra baner annexe, mahindra pune"
   canonical="https://mahindralifespaceshomes.in/articles/mahindra-lifespaces-mahalunge-upcoming-project-guide/"
   customSchema={articleSchema}
 >
@@ -119,30 +147,40 @@ const articleSchema = {
           <li><strong>Typology Matrix:</strong> Projected configurations across 2 BHK Optima Suites, 3 BHK Luxe Residences, and 4 BHK Signature Estates tailored to tech engineers, managerial leaders, and multi-generational families.</li>
         </ul>
 
-        <h2 class="font-serif text-2xl text-stone-100 font-bold">4. Regulatory Guidelines & Expression of Interest (EOI)</h2>
+        <h2 class="font-serif text-2xl text-stone-100 font-bold">4. Officially Launched as Mahindra Rivenza (MahaRERA Registered)</h2>
         <p>
-          Under MahaRERA statutory guidelines, until formal project registration and RERA numbers are issued, no commercial sale or financial booking can take place. Interested homebuyers can submit a non-financial Expression of Interest (EOI) or Priority Pass to receive official project notifications, floor plan blueprints, and cost sheets as soon as statutory sanctions are secured.
+          The development has officially launched under the name <strong class="text-white">Mahindra Rivenza</strong> with MahaRERA project registration numbers <strong class="text-gold-300 font-mono">PR1261012602102</strong> (Phase 1) and <strong class="text-gold-300 font-mono">PM1261012602103</strong> (Phase 2), valid upto 30/12/2031. Sales, site visits, and priority unit selections are actively underway through PropSmart Realty (MahaRERA Agent: A031262401295).
         </p>
 
         <!-- CTA Box -->
         <div class="p-6 rounded-2xl bg-charcoal-900 border border-gold-500/40 text-center space-y-4">
           <h3 class="font-serif text-lg text-white font-bold">
-            Stay Informed on the Upcoming Mahindra Mahalunge Launch
+            Connect with the Mahindra Lifespaces Mahalunge Advisory Desk
           </h3>
           <p class="text-xs text-stone-400 max-w-lg mx-auto">
-            Register your non-financial Expression of Interest (EOI) to receive official MahaRERA disclosures and confidential pre-launch updates.
+            Get instant access to sanctioned CAD floor plans, all-inclusive cost sheets (starting ₹90L*), and schedule a VIP show residence tour.
           </p>
-          <button
-            data-open-modal
-            data-interest="Mahalunge Upcoming Project Guide EOI"
-            class="btn-shimmer px-8 py-3 rounded-full bg-gold-400 text-charcoal-950 font-bold uppercase tracking-wider text-xs shadow-lg hover:bg-gold-300 transition-all cursor-pointer"
-          >
-            Register Expression of Interest
-          </button>
+          <div class="flex flex-wrap justify-center gap-3 pt-2">
+            <a
+              href="tel:+917744009295"
+              class="px-6 py-2.5 rounded-full bg-gold-400 text-charcoal-950 font-bold uppercase tracking-wider text-xs shadow-lg hover:bg-gold-300 transition-all cursor-pointer"
+            >
+              Call Advisory: +91 7744009295
+            </a>
+            <a
+              href="/pricing/"
+              class="px-6 py-2.5 rounded-full bg-white/10 text-stone-200 font-bold uppercase tracking-wider text-xs hover:bg-white/20 transition-all cursor-pointer"
+            >
+              View Cost Sheet
+            </a>
+          </div>
         </div>
 
       </div>
 
     </div>
   </article>
+
+  <!-- Comprehensive Programmatic Keyword Matrix & Search Graph -->
+  <MahindraKeywordMatrix />
 </Layout>

@@ -1,5 +1,6 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import MahindraKeywordMatrix from '../../components/MahindraKeywordMatrix.astro';
 import { mahindraPuneProjects } from '../../data/mahindraPuneEcosystem';
 
 const breadcrumbSchema = {
@@ -190,25 +191,32 @@ const pageSchema = {
 
       <!-- Action Card -->
       <div class="p-8 rounded-2xl bg-gradient-to-r from-gold-950/40 to-charcoal-900 border border-gold-500/30 space-y-4 text-center">
-        <span class="text-xs uppercase tracking-widest text-gold-400 font-bold">Pre-Launch Privileges</span>
+        <span class="text-xs uppercase tracking-widest text-gold-400 font-bold">Officially Launched Flagship Landmark</span>
         <h3 class="font-serif text-2xl sm:text-3xl text-stone-100 font-bold">
-          Be Part of Mahindra’s Next Milestone in Mahalunge
+          Explore Mahindra Rivenza in Mahalunge / Baner Annexe
         </h3>
         <p class="text-xs sm:text-sm text-stone-300 max-w-lg mx-auto leading-relaxed">
-          Register your Expression of Interest (EOI) today to receive private architectural previews and guaranteed first access when bookings open.
+          Mahindra Rivenza is officially launched with MahaRERA registration (PR1261012602102). Connect with PropSmart Realty (Authorized Partner A031262401295) for verified cost sheets and VIP show flat walkthroughs.
         </p>
-        <div class="pt-2">
-          <button
-            type="button"
-            data-open-modal
-            data-interest="Priority Early Pass - Brand Legacy"
+        <div class="pt-2 flex flex-wrap justify-center gap-4">
+          <a
+            href="tel:+917744009295"
             class="px-8 py-3.5 rounded-full bg-gradient-to-r from-gold-400 via-gold-500 to-gold-400 text-charcoal-950 font-bold text-xs uppercase tracking-wider hover:shadow-xl active:scale-95 transition-all"
           >
-            Register for Pre-Launch EOI
-          </button>
+            Call Advisory: +91 7744009295
+          </a>
+          <a
+            href="/pricing/"
+            class="px-8 py-3.5 rounded-full bg-white/10 text-stone-200 font-bold text-xs uppercase tracking-wider hover:bg-white/20 transition-all"
+          >
+            View Pricing &amp; Plans
+          </a>
         </div>
       </div>
 
     </div>
   </article>
+
+  <!-- Comprehensive Programmatic Keyword Matrix & Search Graph -->
+  <MahindraKeywordMatrix />
 </Layout>

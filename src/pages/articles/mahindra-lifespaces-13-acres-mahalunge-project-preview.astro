@@ -1,28 +1,56 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import MahindraKeywordMatrix from '../../components/MahindraKeywordMatrix.astro';
 
 const articleSchema = {
   "@context": "https://schema.org",
-  "@type": "Article",
-  "headline": "Mahindra Lifespaces Acquires 13.46 Acres in Mahalunge, Pune: ₹3,500 Cr Master Plan Preview",
-  "description": "Comprehensive analysis of Mahindra Lifespaces acquisition of 13.46 acres in Nande-Mahalunge with ₹3,500 Cr development potential, 2, 3 & 4 BHK homes.",
-  "author": {
-    "@type": "Organization",
-    "name": "West Pune Real Estate Intelligence"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "PropSmart Realty"
-  },
-  "datePublished": "2025-10-20",
-  "dateModified": "2026-09-10"
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://mahindralifespaceshomes.in/articles/mahindra-lifespaces-13-acres-mahalunge-project-preview/#article",
+      "headline": "Mahindra Lifespaces 13.46 Acres Mahalunge: Officially Launched as Mahindra Rivenza",
+      "description": "Comprehensive analysis of Mahindra Lifespaces 13.46-acre development in Nande-Mahalunge: ₹3,500 Cr GDV, Phase 1 1,236 luxury residences, 2, 3 & 4 BHK homes starting ₹90L*.",
+      "author": {
+        "@type": "Organization",
+        "name": "West Pune Real Estate Intelligence"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "PropSmart Realty"
+      },
+      "datePublished": "2025-10-20",
+      "dateModified": "2026-11-05"
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://mahindralifespaceshomes.in/articles/mahindra-lifespaces-13-acres-mahalunge-project-preview/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is the official project name for Mahindra Lifespaces' 13.46 acres in Mahalunge?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The 13.46-acre development by Mahindra Lifespaces is officially launched as 'Mahindra Rivenza' (MahaRERA: PR1261012602102 for Phase 1 and PM1261012602103 for Phase 2), featuring 1,236 residences starting ₹90 Lakhs*."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Where is Mahindra Lifespaces Mahalunge located?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It is located at Plus Code HP6G+WWF Baner Annex, off Baner-Hinjawadi Road, PMRDA Town Planning Scheme 1, Mahalunge (Nande), Pune 412115, connecting directly to Hinjewadi Phase 1 in 7 minutes via the 4-lane Mula River Bridge."
+          }
+        }
+      ]
+    }
+  ]
 };
 ---
 
 <Layout
-  title="Mahindra Rivenza 13.46 Acres Mahalunge [Project Master Preview]"
-  description="Explore Mahindra Mahalunge by Mahindra Lifespaces: landmark 13.46-acre land acquisition with ~₹3,500 Cr development potential. Upcoming 2, 3 & 4 BHK homes near Hinjewadi."
-  keywords="mahindra lifespaces mahalunge, mahindra mahalunge new project launch, mahindra 13.46 acres mahalunge, mahindra mahalunge pre launch, mahindra lifespaces pune new launch, mahindra new project mahalunge pune, mahindra lifespaces acquisition mahalunge"
+  title="Mahindra Lifespaces 13.46 Acres Mahalunge | Mahindra Rivenza [Starts ₹90L*]"
+  description="Explore Mahindra Lifespaces Mahalunge (Mahindra Rivenza): the landmark 13.46-acre project in Baner Annex / Mahalunge, Pune. Phase 1 officially launched with 2, 3 & 4 BHK residences starting ₹90L*."
+  keywords="mahindra lifespaces mahalunge, mahindra mahalunge new project launch, mahindra 13.46 acres mahalunge, mahindra rivenza, mahindra rivenza pune, mahindra baner annexe, mahindra pune, mahindra lifespaces pune new launch, mahindra new project mahalunge pune"
   canonical="https://mahindralifespaceshomes.in/articles/mahindra-lifespaces-13-acres-mahalunge-project-preview/"
   customSchema={articleSchema}
 >
@@ -35,29 +63,110 @@ const articleSchema = {
         <div class="flex items-center space-x-3 text-xs text-gold-400 uppercase tracking-widest font-semibold">
           <a href="/articles/" class="hover:underline">← All Research</a>
           <span>•</span>
-          <span>Project Analysis</span>
+          <span>Officially Launched Flagship</span>
           <span>•</span>
-          <span>Updated September 2026</span>
+          <span>Updated November 2026</span>
         </div>
 
         <h1 class="font-serif text-3xl sm:text-5xl font-bold text-stone-100 leading-tight">
-          Mahindra Lifespaces Acquires 13.46 Acres in Mahalunge: What Homebuyers & Investors Need to Know
+          Mahindra Lifespaces 13.46 Acres in Mahalunge: <br />
+          <span class="gold-gradient-text">Officially Launched as Mahindra Rivenza</span>
         </h1>
 
-        <p class="text-sm sm:text-base text-stone-400 font-light leading-relaxed">
-          The landmark October 2025 announcement by Mahindra Lifespaces Developers Ltd. marks a transformative chapter for West Pune's Nande–Mahalunge corridor with an estimated development potential of ₹3,500 Crore.
+        <p class="text-sm sm:text-base text-stone-300 font-light leading-relaxed">
+          The landmark 13.46-acre development by <strong class="text-white">Mahindra Lifespaces Developers Ltd.</strong> in the Nande–Mahalunge / Baner Annexe corridor has officially launched as <strong class="text-white">Mahindra Rivenza</strong> with an estimated Gross Development Value (GDV) of ₹3,500 Crore, Phase 1 offering 1,236 residences starting from ₹90 Lakhs*.
         </p>
       </div>
 
       <!-- Feature Image -->
       <div class="rounded-2xl overflow-hidden border border-white/10 shadow-2xl">
         <img
-          src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=85"
-          alt="Mahindra Lifespaces Mahalunge Concept"
+          src="https://mahindralifespaceshomes.in/images/official/mahindra-rivenza-architectural-elevation.webp"
+          alt="Mahindra Rivenza 13.46 Acres Landmark by Mahindra Lifespaces"
           class="w-full h-80 sm:h-96 object-cover"
           loading="eager"
           fetchpriority="high"
           decoding="async"
+          width="1200"
+          height="600"
+        />
+      </div>
+
+      <!-- Article Content -->
+      <div class="space-y-8 text-stone-300 text-sm leading-relaxed">
+        
+        <div class="p-6 rounded-2xl bg-gold-950/20 border border-gold-500/30 space-y-3">
+          <span class="text-xs font-mono uppercase tracking-widest text-gold-400 font-bold">Official MahaRERA Compliance Notice</span>
+          <p class="text-xs text-stone-200">
+            Mahindra Rivenza is registered under MahaRERA in phases: <strong class="text-white">Mahindra Rivenza Phase 1</strong> bearing Registration No. <strong class="text-gold-300 font-mono">PR1261012602102</strong> and <strong class="text-white">Phase 2</strong> bearing Registration No. <strong class="text-gold-300 font-mono">PM1261012602103</strong> (both valid upto 30/12/2031). Sanctioned CAD layouts, environmental clearances, and certificates can be verified at <a href="https://maharera.maharashtra.gov.in" target="_blank" rel="noopener noreferrer" class="text-gold-400 underline">https://maharera.maharashtra.gov.in</a>.
+          </p>
+        </div>
+
+        <h2 class="font-serif text-2xl text-stone-100 font-bold">1. Strategic Context: Nande–Mahalunge &amp; Baner Annexe Tri-Corridor</h2>
+        <p>
+          Mahindra Rivenza is uniquely positioned at the gateway between the Hinjewadi IT hub (home to Infosys, Wipro, TCS, Cognizant, and 400,000+ tech professionals) and the high-street urban core of Baner and Balewadi.
+        </p>
+        <p>
+          With the sanctioned 4-lane Mula River Bridge connecting Mahalunge directly to Hinjewadi Phase 1 in under 7 minutes, residents completely bypass the congested Wakad bridge, Bhumkar Chowk, and Shivaji Chowk bottlenecks.
+        </p>
+
+        <h2 class="font-serif text-2xl text-stone-100 font-bold">2. Biophilic Green Architecture &amp; Net-Zero Living</h2>
+        <p>
+          Consistent with Mahindra Lifespaces’ national brand commitment to sustainable, regenerative development, Mahindra Rivenza is pre-certified IGBC Gold and planned as a Net Zero Waste to Landfill community:
+        </p>
+        <ul class="space-y-2 pl-4 list-disc text-stone-400">
+          <li><strong>9+ Acres Vehicle-Free Biophilic Greens:</strong> Dense biodiverse tree groves, jogging and cycling tracks, and open-air lawns.</li>
+          <li><strong>~44,000+ Sq.Ft. Grand Clubhouses:</strong> Featuring a temperature-regulated swimming pool with a sunken aqua bar, glass-roof library, gymnasium, badminton, squash and pickleball courts.</li>
+          <li><strong>Water Stewardship:</strong> On-site sewage treatment plants (STP) providing recycled water for landscaping, alongside multi-pit rainwater harvesting.</li>
+        </ul>
+
+        <h2 class="font-serif text-2xl text-stone-100 font-bold">3. Official Configurations, Pricing &amp; Carpet Areas</h2>
+        <p>
+          Phase 1 offers 1,236 residences engineered with zero corridor wastage and private sundecks:
+        </p>
+        <ul class="space-y-2 pl-4 list-disc text-stone-400">
+          <li><strong>2 BHK Residences (635 - 747 sq.ft. carpet):</strong> Starting from ₹90 Lakhs*. Ideal for young tech professionals and nuclear families.</li>
+          <li><strong>3 BHK Luxury Residences (882 - 1,065 sq.ft. carpet):</strong> Starting from ₹1.31 Crore*. Engineered with separate study alcoves and panoramic hill-view balconies.</li>
+          <li><strong>4 BHK Signature Sky Villas (1,438 - 1,465 sq.ft. carpet):</strong> Starting from ₹2.20 Crore*. High-rise panoramic luxury living.</li>
+        </ul>
+
+      </div>
+
+      <!-- Bottom Conversion Callout -->
+      <div class="p-8 rounded-2xl bg-gradient-to-r from-charcoal-900 via-charcoal-850 to-charcoal-900 border border-gold-500/40 text-center space-y-4">
+        <span class="text-xs uppercase tracking-widest text-gold-400 font-bold">Authorized Strategic Channel Partner</span>
+        <h3 class="font-serif text-2xl text-stone-100 font-bold">Book VIP Site Visit to Mahindra Rivenza</h3>
+        <p class="text-xs text-stone-400 max-w-md mx-auto">
+          Connect with PropSmart Realty (MahaRERA Agent Registration No: <strong class="text-gold-300 font-mono">A031262401295</strong>) for verified cost sheets, CAD floor plans, and VIP show flat tours.
+        </p>
+        <div class="pt-2 flex flex-wrap justify-center gap-4">
+          <a
+            href="tel:+917744009295"
+            class="px-8 py-3 rounded-full bg-gold-500 text-charcoal-950 text-xs font-bold uppercase tracking-widest hover:bg-gold-400 transition-all"
+          >
+            Call Desk: +91 7744009295
+          </a>
+          <a
+            href="/pricing/"
+            class="px-8 py-3 rounded-full bg-white/10 text-stone-200 text-xs font-bold uppercase tracking-widest hover:bg-white/20 transition-all"
+          >
+            View Pricing &amp; Cost Sheet
+          </a>
+        </div>
+      </div>
+
+      <!-- Related Links -->
+      <div class="pt-6 border-t border-white/10 flex flex-col sm:flex-row justify-between text-xs text-stone-400">
+        <a href="/articles/mahindra-rivenza-flagship-project-mahalunge-baner-annexe-pune/" class="hover:text-gold-400 font-medium">← Mahindra Rivenza Flagship Guide</a>
+        <a href="/articles/mahindra-mahalunge-master-township-guide-2026/" class="hover:text-gold-400 font-medium mt-2 sm:mt-0">Mahindra Mahalunge Master Guide →</a>
+      </div>
+
+    </div>
+  </article>
+
+  <!-- Comprehensive Programmatic Keyword Matrix & Search Graph -->
+  <MahindraKeywordMatrix />
+</Layout>
           width="1200"
           height="600"
         />

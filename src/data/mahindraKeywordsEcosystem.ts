@@ -536,6 +536,21 @@ export const ultraPremiumBanerAnnexPuneKeywords = [
 // 2. BRAND × DEVELOPER KEYWORDS
 // ==============================================================================
 export const rivenzaBrandDeveloperKeywords = [
+  'Mahindra Lifespaces Pune',
+  'Mahindra Lifespace Developers Limited Pune',
+  'Mahindra Lifespaces Pune projects',
+  'Mahindra Lifespaces upcoming projects Pune',
+  'Mahindra Lifespaces ongoing projects in Pune',
+  'Mahindra Lifespaces delivered projects in Pune',
+  'Mahindra Lifespaces new launch Pune',
+  'Mahindra Lifespaces residential projects Pune',
+  'Mahindra Lifespaces flats in Pune',
+  'Mahindra Lifespaces luxury apartments Pune',
+  'Mahindra Lifespaces Mahalunge',
+  'Mahindra Lifespaces Mahalunge Pune',
+  'Mahindra Lifespaces Baner Annex',
+  'Mahindra Lifespaces Baner Annex Pune',
+  'Mahindra Lifespaces Hinjewadi',
   'Mahindra Lifespaces Rivenza',
   'Mahindra Lifespaces Mahindra Rivenza',
   'Mahindra Lifespaces Rivenza Pune',
@@ -547,11 +562,11 @@ export const rivenzaBrandDeveloperKeywords = [
   'Mahindra Lifespaces Mahalunge Rivenza',
   'Mahindra Lifespaces residential project Mahalunge',
   'Mahindra Lifespaces new project Pune',
-  'Mahindra Lifespaces new launch Pune',
   'Mahindra Lifespaces latest project Pune',
   'Mahindra Lifespaces latest residential project',
-  'Mahindra Lifespaces upcoming projects Pune',
-  'Mahindra Lifespaces West Pune projects'
+  'Mahindra Lifespaces West Pune projects',
+  'Mahindra Lifespaces customer reviews Pune',
+  'Mahindra Lifespaces RERA registered projects Pune'
 ];
 
 // ==============================================================================
