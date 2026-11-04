@@ -388,6 +388,14 @@ export const CORE_PAGES: SitemapEntry[] = [
     images: [PRIMARY_IMAGES[0]],
   },
   {
+    url: `${BASE_URL}/google-keywords-planner/`,
+    title: 'Google Keyword Planner Research & Search Intelligence Matrix | Mahindra Rivenza',
+    category: 'core',
+    priority: 0.95,
+    changefreq: 'daily',
+    images: PRIMARY_IMAGES.slice(0, 2),
+  },
+  {
     url: `${BASE_URL}/privacy-policy/`,
     title: 'Privacy Policy & Data Protection Notice — PropSmart Realty & Mahindra Rivenza',
     category: 'core',
