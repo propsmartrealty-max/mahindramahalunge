@@ -250,12 +250,15 @@ const indexSchema = {
           Our senior residential advisors provide side-by-side CAD comparisons, floor rise matrices, and all-inclusive bank approval estimates.
         </p>
         <div class="flex flex-wrap justify-center gap-4 pt-2">
-          <button
-            onclick="window.dispatchEvent(new CustomEvent('open-lead-modal', { detail: { title: 'Request Complete 9-Unit Floor Plan Dossier', type: 'brochure' } }))"
-            class="px-6 py-3 bg-gold-500 hover:bg-gold-400 text-charcoal-950 font-bold text-xs uppercase tracking-wider rounded-lg shadow-lg hover:shadow-gold-500/20 transition-all cursor-pointer"
+          <a
+            href="/documents/mahindra-rivenza-sanctioned-floor-plans.pdf"
+            download="mahindra-rivenza-sanctioned-floor-plans.pdf"
+            target="_blank"
+            class="px-6 py-3 bg-gold-500 hover:bg-gold-400 text-charcoal-950 font-bold text-xs uppercase tracking-wider rounded-lg shadow-lg hover:shadow-gold-500/20 transition-all cursor-pointer inline-flex items-center gap-2"
           >
-            Download Complete Floor Plan Dossier (PDF)
-          </button>
+            <span>📥</span>
+            <span>Download Complete CAD Floor Plan Dossier (PDF)</span>
+          </a>
           <a
             href="tel:+917744009295"
             class="px-6 py-3 border border-white/20 hover:border-gold-400 text-stone-200 hover:text-gold-400 font-semibold text-xs uppercase tracking-wider rounded-lg transition-all"

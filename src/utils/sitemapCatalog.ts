@@ -396,6 +396,14 @@ export const CORE_PAGES: SitemapEntry[] = [
     images: PRIMARY_IMAGES.slice(0, 2),
   },
   {
+    url: `${BASE_URL}/google-business-profile/`,
+    title: 'Mahindra Rivenza Google Business Profile, Sales Gallery & Map Pin | Pune',
+    category: 'core',
+    priority: 0.95,
+    changefreq: 'daily',
+    images: PRIMARY_IMAGES.slice(0, 2),
+  },
+  {
     url: `${BASE_URL}/privacy-policy/`,
     title: 'Privacy Policy & Data Protection Notice — PropSmart Realty & Mahindra Rivenza',
     category: 'core',

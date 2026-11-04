@@ -173,13 +173,24 @@ const pricingSchema = {
             <h2 class="font-serif text-xl sm:text-2xl text-stone-100 font-bold">Comprehensive Typology & Price Breakdown</h2>
             <p class="text-xs text-stone-400 mt-1">MahaRERA Registration: Phase 1 (PR1261012602102) & Phase 2 (PM1261012602103)</p>
           </div>
-          <button
-            data-open-modal
-            data-interest="Master Cost Sheet PDF"
-            class="btn-shimmer px-5 py-2.5 rounded-full bg-gradient-to-r from-gold-300 via-gold-400 to-gold-500 text-charcoal-950 text-xs font-bold uppercase tracking-wider shadow-lg cursor-pointer"
-          >
-            Download PDF Cost Sheet
-          </button>
+          <div class="flex flex-wrap items-center gap-2">
+            <a
+              href="/documents/mahindra-rivenza-cost-sheet-pricing-guide.pdf"
+              download="mahindra-rivenza-cost-sheet-pricing-guide.pdf"
+              target="_blank"
+              class="btn-shimmer px-5 py-2.5 rounded-full bg-gradient-to-r from-gold-300 via-gold-400 to-gold-500 text-charcoal-950 text-xs font-bold uppercase tracking-wider shadow-lg cursor-pointer inline-flex items-center gap-1.5"
+            >
+              <span>📥</span>
+              <span>Download PDF Cost Sheet</span>
+            </a>
+            <button
+              data-open-modal
+              data-interest="Master Cost Sheet PDF"
+              class="px-4 py-2.5 rounded-full border border-white/20 hover:border-gold-400 text-stone-300 hover:text-gold-300 text-xs font-medium uppercase tracking-wider transition-colors cursor-pointer"
+            >
+              Request Custom Quote
+            </button>
+          </div>
         </div>
 
         <div class="overflow-x-auto">
