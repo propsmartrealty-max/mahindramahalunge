@@ -3,6 +3,30 @@ import { rievenzaCorridorData } from '../data/pSeoMahindraRivenzaCorridor';
 
 const editorialArticles = [
   {
+    slug: 'mahindra-rivenza-flagship-project-mahalunge-baner-annexe-pune',
+    title: 'Mahindra Rivenza: Definitive 2026 Guide to Flagship Living in Mahalunge, Baner Annexe, Pune',
+    pubDate: 'Wed, 04 Nov 2026 00:00:00 GMT',
+    description: 'The ultimate guide to Mahindra Rivenza: 13.46 acres, 1,236 residences across Phase 1, ₹90L* launch pricing, 44,000 sq.ft clubhouse, and MahaRERA numbers PR1261012602102 and PM1261012602103.'
+  },
+  {
+    slug: 'mahindra-mahalunge-master-township-guide-2026',
+    title: 'Mahindra Mahalunge: Complete Project Review, Pricing & PMRDA Infrastructure 2026',
+    pubDate: 'Wed, 04 Nov 2026 00:00:00 GMT',
+    description: 'In-depth buyer review of Mahindra Mahalunge: PMRDA Town Planning Scheme 1, 4-lane river bridge to Hinjewadi, and competitive benchmarking against Godrej and VTP.'
+  },
+  {
+    slug: 'mahindra-baner-annexe-luxury-apartments-pune',
+    title: 'Mahindra Baner Annexe: Luxury 2, 3 & 4 BHK Residences, Rates & Location Advantage',
+    pubDate: 'Wed, 04 Nov 2026 00:00:00 GMT',
+    description: 'Discover why Mahindra Baner Annexe delivers a 42% price arbitrage over central Baner with 8-minute connectivity to Balewadi High Street and 2.65 lakh sq.ft. of amenities.'
+  },
+  {
+    slug: 'mahindra-pune-residential-projects-ecosystem',
+    title: 'Mahindra Pune: Complete Real Estate Portfolio, Upcoming Launches & Track Record 2026',
+    pubDate: 'Wed, 04 Nov 2026 00:00:00 GMT',
+    description: 'Institutional analysis of Mahindra Pune projects by Mahindra Lifespaces: Mahindra Rivenza (Mahalunge/Baner Annexe), IvyLush (Kharadi), Citadel (Pimpri), and Happinest.'
+  },
+  {
     slug: 'mahindra-lifespaces-13-acres-mahalunge-project-preview',
     title: 'Mahindra Lifespaces Acquires 13.46 Acres in Mahalunge: ₹3,500 Cr Master Plan Preview',
     pubDate: 'Mon, 20 Oct 2025 00:00:00 GMT',
@@ -157,6 +181,24 @@ const editorialArticles = [
     title: 'Mahindra Rivenza Sample Flat Review: 2 & 3 BHK Interior Walkthrough, Photos & Floor Specs',
     pubDate: 'Wed, 21 Oct 2026 00:00:00 GMT',
     description: 'Exhaustive review and interior walkthrough of the official Mahindra Rivenza sample flats in Mahalunge, Baner Annex, Pune. Detailed analysis of 2 & 3 BHK layout efficiency and 2.95m ceiling heights.'
+  },
+  {
+    slug: 'mahindra-rivenza-bank-loan-approvals-sbi-hdfc-icici',
+    title: 'Mahindra Rivenza Bank Loan Approvals: SBI, HDFC, ICICI APF Codes & Pre-EMI Guide',
+    pubDate: 'Fri, 23 Oct 2026 00:00:00 GMT',
+    description: 'Verified bank loan approval codes for Mahindra Rivenza Baner Annex: SBI, HDFC Bank, ICICI Bank, Axis Bank. Pre-approved APF codes, 80% funding & CLP disbursement schedules.'
+  },
+  {
+    slug: 'mahindra-rivenza-maintenance-charges-breakdown-pune',
+    title: 'Mahindra Rivenza Maintenance Charges: Monthly Cost per Sq.Ft. & Society Breakdown',
+    pubDate: 'Sat, 24 Oct 2026 00:00:00 GMT',
+    description: 'Detailed guide to Mahindra Rivenza maintenance charges in Baner Annex, Mahalunge, Pune. Estimated cost per sq.ft., clubhouse fees, sinking fund & Net-Zero utility savings.'
+  },
+  {
+    slug: 'mahindra-rivenza-possession-date-handover-timeline-2026',
+    title: 'Mahindra Rivenza Possession Date: RERA Handover Timeline & Construction Milestones',
+    pubDate: 'Sun, 25 Oct 2026 00:00:00 GMT',
+    description: 'Official possession date & handover timeline for Mahindra Rivenza at Baner Annex, Mahalunge, Pune. MahaRERA completion target 2028-2031 & delivery phase milestones.'
   }
 ];
 
