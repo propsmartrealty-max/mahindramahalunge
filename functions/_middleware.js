@@ -57,14 +57,22 @@ export async function onRequest(context) {
     return Response.redirect(url.toString(), 301);
   }
 
-  // 0b. Global Key & IndexNow Verification Endpoint (Bing, Microsoft, Yahoo, Yandex, Naver)
-  if (pathname === '/indexnow-key.txt' || pathname === `/${activeGlobalKey}.txt` || pathname === `/${INDEXNOW_KEY}.txt`) {
+  // 0b. Global Key & IndexNow Verification Endpoint (Bing, Microsoft, Yahoo, Yandex, Naver, Seznam)
+  if (
+    pathname === '/indexnow-key.txt' ||
+    pathname === '/indexnow.txt' ||
+    pathname === `/${activeGlobalKey}.txt` ||
+    pathname === `/${INDEXNOW_KEY}.txt` ||
+    pathname === '/.well-known/indexnow-key.txt' ||
+    pathname === '/.well-known/indexnow.txt'
+  ) {
     return new Response(activeGlobalKey, {
       status: 200,
       headers: {
         'Content-Type': 'text/plain; charset=utf-8',
-        'Cache-Control': 'public, max-age=86400',
+        'Cache-Control': 'public, max-age=86400, stale-while-revalidate=604800',
         'X-IndexNow-Key': activeGlobalKey,
+        'X-IndexNow-Location': `https://mahindralifespaceshomes.in/${activeGlobalKey}.txt`,
         'Access-Control-Allow-Origin': '*',
         'X-Content-Type-Options': 'nosniff',
       },
@@ -73,8 +81,15 @@ export async function onRequest(context) {
 
   // 0c. Edge IndexNow Submission Hook (Triggered securely via Global Key)
   if (pathname === '/api/indexnow-ping') {
-    const authKey = url.searchParams.get('key') || request.headers.get('x-global-key');
-    if (authKey !== activeGlobalKey) {
+    const authHeader = request.headers.get('authorization') || '';
+    const bearerMatch = authHeader.match(/^Bearer\s+(.+)$/i);
+    const authKey = url.searchParams.get('key') || 
+                    url.searchParams.get('global_key') || 
+                    request.headers.get('x-global-key') || 
+                    request.headers.get('x-indexnow-key') || 
+                    (bearerMatch ? bearerMatch[1].trim() : null);
+
+    if (authKey !== activeGlobalKey && authKey !== INDEXNOW_KEY) {
       return new Response(JSON.stringify({ error: 'Unauthorized - Invalid Global Key' }), {
         status: 401,
         headers: { 'Content-Type': 'application/json' },
@@ -136,11 +151,13 @@ export async function onRequest(context) {
         urlList: submitUrls,
       };
 
-      // Broadcast across all 3 IndexNow gateways concurrently
+      // Broadcast across all 5 IndexNow consortium gateways concurrently
       const gateways = [
         'https://api.indexnow.org/indexnow',
         'https://www.bing.com/indexnow',
         'https://yandex.com/indexnow',
+        'https://searchadvisor.naver.com/indexnow',
+        'https://search.seznam.cz/indexnow',
       ];
 
       const results = await Promise.allSettled(
@@ -154,18 +171,30 @@ export async function onRequest(context) {
         })
       );
 
-      // Trigger Google WebSub Hub (PubSubHubbub) asynchronously
-      fetch('https://pubsubhubbub.appspot.com/publish', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: `hub.mode=publish&hub.url=${encodeURIComponent('https://mahindralifespaceshomes.in/rss.xml')}`,
-      }).catch(() => {});
+      // Trigger Google WebSub Hub (PubSubHubbub) across primary sitemaps & feeds
+      const sitemapsToBroadcast = [
+        'https://mahindralifespaceshomes.in/sitemap-index.xml',
+        'https://mahindralifespaceshomes.in/sitemap-articles.xml',
+        'https://mahindralifespaceshomes.in/sitemap.xml',
+        'https://mahindralifespaceshomes.in/rss.xml',
+        'https://mahindralifespaceshomes.in/google-shopping.xml',
+      ];
+
+      sitemapsToBroadcast.forEach((sitemapUrl) => {
+        fetch('https://pubsubhubbub.appspot.com/publish', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+          body: `hub.mode=publish&hub.url=${encodeURIComponent(sitemapUrl)}`,
+        }).catch(() => {});
+      });
 
       return new Response(JSON.stringify({
         success: true,
         key: activeGlobalKey,
         submittedUrlsCount: submitUrls.length,
         gateways: results.map((r) => r.status === 'fulfilled' ? r.value : { error: r.reason?.message }),
+        websubBroadcasts: sitemapsToBroadcast.length,
+        timestamp: new Date().toISOString(),
       }), {
         status: 200,
         headers: {

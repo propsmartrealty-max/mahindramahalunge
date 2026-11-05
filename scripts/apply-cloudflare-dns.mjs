@@ -25,12 +25,26 @@ const INDEXNOW_KEY = process.env.GLOBAL_KEY || process.env.INDEXNOW_KEY || '9e4f
 
 // Authentication
 const API_TOKEN = process.env.CLOUDFLARE_API_TOKEN;
-const API_KEY = process.env.CLOUDFLARE_API_KEY || process.env.CF_API_KEY || process.env.GLOBAL_KEY;
-const EMAIL = process.env.CLOUDFLARE_EMAIL || process.env.CF_EMAIL;
+const rawApiKey = process.env.CLOUDFLARE_API_KEY || process.env.CF_API_KEY;
+const EMAIL = process.env.CLOUDFLARE_EMAIL || process.env.CF_EMAIL || 'propsmartrealty@gmail.com';
+
+// Validate Cloudflare API Key vs IndexNow Global Key
+let API_KEY = null;
+if (rawApiKey) {
+  if (/^[0-9a-f]{37}$/i.test(rawApiKey)) {
+    API_KEY = rawApiKey;
+  } else if (rawApiKey === INDEXNOW_KEY || /^[0-9a-f]{32}$/i.test(rawApiKey)) {
+    console.log(`[Notice] Key '${rawApiKey}' is identified as the IndexNow Global Key (32-hex).`);
+    console.log(`Cloudflare Global API Key is a 37-hex key found in Cloudflare Dashboard > Profile > API Tokens.`);
+  } else {
+    API_KEY = rawApiKey;
+  }
+}
 
 console.log('='.repeat(80));
 console.log(`[Cloudflare Ultra Tech] DNS & Edge Automation Engine`);
 console.log(`Target Domain: ${DOMAIN}`);
+console.log(`Sovereign Global Key: ${INDEXNOW_KEY}`);
 console.log('='.repeat(80));
 
 const authHeaders = {};
@@ -42,14 +56,18 @@ if (API_TOKEN) {
   authHeaders['X-Auth-Email'] = EMAIL;
   console.log(`✓ Using Cloudflare Global API Key for account: ${EMAIL}`);
 } else {
-  console.log(`\nNotice: Cloudflare API credentials not detected in environment.`);
-  console.log(`To execute automated Cloudflare DNS & Edge configuration directly via API, provide either:`);
-  console.log(`\n  Option A (Global API Key):`);
-  console.log(`    CLOUDFLARE_EMAIL="your-email@example.com" CLOUDFLARE_API_KEY="your-global-key" node scripts/apply-cloudflare-dns.mjs`);
-  console.log(`\n  Option B (API Token):`);
-  console.log(`    CLOUDFLARE_API_TOKEN="your-token" node scripts/apply-cloudflare-dns.mjs`);
-  console.log(`\nAll records are also exported in BIND 9 zone format for instant 1-click manual import at:`);
+  console.log(`\nStatus: Sovereign Global Key (${INDEXNOW_KEY}) is ACTIVE for IndexNow & Edge.`);
+  console.log(`\nTo push DNS records directly to Cloudflare via API v4, provide:`);
+  console.log(`  Option A (Cloudflare 37-char Global API Key):`);
+  console.log(`    CLOUDFLARE_EMAIL="${EMAIL}" CLOUDFLARE_API_KEY="<37-hex-key>" node scripts/apply-cloudflare-dns.mjs`);
+  console.log(`\n  Option B (Cloudflare API Token):`);
+  console.log(`    CLOUDFLARE_API_TOKEN="<token>" node scripts/apply-cloudflare-dns.mjs`);
+  console.log(`\nAll records are ready for instant 1-click import at:`);
   console.log(`  public/dns-records.zone`);
+  console.log(`\nCloudflare Dashboard Steps:`);
+  console.log(`  1. Open dash.cloudflare.com -> select ${DOMAIN} -> DNS -> Records`);
+  console.log(`  2. Click 'Import and Export' -> 'Import'`);
+  console.log(`  3. Select 'public/dns-records.zone'`);
   console.log('='.repeat(80));
   process.exit(0);
 }

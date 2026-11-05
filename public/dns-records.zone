@@ -41,3 +41,5 @@ _dmarc          IN      TXT     "v=DMARC1; p=reject; sp=reject; adkim=s; aspf=s;
 
 ; --- Microsoft / IndexNow Key Authentication ---
 indexnow        IN      TXT     "9e4f2b8c6a0d4e7f8b1c3a5d7e9f0b2a"
+@               IN      TXT     "indexnow=9e4f2b8c6a0d4e7f8b1c3a5d7e9f0b2a"
+@               IN      TXT     "indexnow-key=9e4f2b8c6a0d4e7f8b1c3a5d7e9f0b2a"

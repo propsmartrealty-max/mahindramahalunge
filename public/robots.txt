@@ -31,6 +31,11 @@ Allow: /llms.txt
 Allow: /llms-full.txt
 Allow: /llm-knowledge-graph.json
 Allow: /keywords-ecosystem.json
+Allow: /9e4f2b8c6a0d4e7f8b1c3a5d7e9f0b2a.txt
+Allow: /indexnow-key.txt
+Allow: /indexnow.txt
+Allow: /.well-known/indexnow-key.txt
+Allow: /.well-known/indexnow.txt
 Disallow: /api/
 Disallow: /cdn-cgi/
 
@@ -124,6 +129,11 @@ Allow: /llms.txt
 Allow: /llms-full.txt
 Allow: /llm-knowledge-graph.json
 Allow: /keywords-ecosystem.json
+Allow: /9e4f2b8c6a0d4e7f8b1c3a5d7e9f0b2a.txt
+Allow: /indexnow-key.txt
+Allow: /indexnow.txt
+Allow: /.well-known/indexnow-key.txt
+Allow: /.well-known/indexnow.txt
 
 # ------------------------------------------------------------------------------
 # 6. Microsoft Bing, Yahoo & IndexNow Gateways (Bingbot, Slurp, msnbot)
@@ -133,6 +143,11 @@ Allow: /
 Allow: /_astro/
 Allow: /images/
 Allow: /documents/
+Allow: /9e4f2b8c6a0d4e7f8b1c3a5d7e9f0b2a.txt
+Allow: /indexnow-key.txt
+Allow: /indexnow.txt
+Allow: /.well-known/indexnow-key.txt
+Allow: /.well-known/indexnow.txt
 Disallow: /api/
 Disallow: /cdn-cgi/
 
@@ -282,6 +297,11 @@ Allow: /llms.txt
 Allow: /llms-full.txt
 Allow: /llm-knowledge-graph.json
 Allow: /keywords-ecosystem.json
+Allow: /9e4f2b8c6a0d4e7f8b1c3a5d7e9f0b2a.txt
+Allow: /indexnow-key.txt
+Allow: /indexnow.txt
+Allow: /.well-known/indexnow-key.txt
+Allow: /.well-known/indexnow.txt
 Allow: /pune-property-vlog-ecosystem.json
 
 User-agent: GoogleOther
@@ -327,6 +347,11 @@ Allow: /llms.txt
 Allow: /llms-full.txt
 Allow: /llm-knowledge-graph.json
 Allow: /keywords-ecosystem.json
+Allow: /9e4f2b8c6a0d4e7f8b1c3a5d7e9f0b2a.txt
+Allow: /indexnow-key.txt
+Allow: /indexnow.txt
+Allow: /.well-known/indexnow-key.txt
+Allow: /.well-known/indexnow.txt
 Allow: /pune-property-vlog-ecosystem.json
 
 User-agent: MistralBot
@@ -380,6 +405,11 @@ Allow: /images/
 Allow: /llms.txt
 Allow: /llms-full.txt
 Allow: /llm-knowledge-graph.json
+Allow: /9e4f2b8c6a0d4e7f8b1c3a5d7e9f0b2a.txt
+Allow: /indexnow-key.txt
+Allow: /indexnow.txt
+Allow: /.well-known/indexnow-key.txt
+Allow: /.well-known/indexnow.txt
 Allow: /rss.xml
 Allow: /google-shopping.xml
 Allow: /site.webmanifest

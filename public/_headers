@@ -309,14 +309,40 @@
 # IndexNow Global Key Verification Endpoints
 /indexnow-key.txt
   Content-Type: text/plain; charset=utf-8
-  Cache-Control: public, max-age=86400
+  Cache-Control: public, max-age=86400, stale-while-revalidate=604800
   Access-Control-Allow-Origin: *
   X-Content-Type-Options: nosniff
   X-IndexNow-Key: 9e4f2b8c6a0d4e7f8b1c3a5d7e9f0b2a
+  X-IndexNow-Location: https://mahindralifespaceshomes.in/9e4f2b8c6a0d4e7f8b1c3a5d7e9f0b2a.txt
+
+/indexnow.txt
+  Content-Type: text/plain; charset=utf-8
+  Cache-Control: public, max-age=86400, stale-while-revalidate=604800
+  Access-Control-Allow-Origin: *
+  X-Content-Type-Options: nosniff
+  X-IndexNow-Key: 9e4f2b8c6a0d4e7f8b1c3a5d7e9f0b2a
+  X-IndexNow-Location: https://mahindralifespaceshomes.in/9e4f2b8c6a0d4e7f8b1c3a5d7e9f0b2a.txt
 
 /9e4f2b8c6a0d4e7f8b1c3a5d7e9f0b2a.txt
   Content-Type: text/plain; charset=utf-8
-  Cache-Control: public, max-age=86400
+  Cache-Control: public, max-age=86400, stale-while-revalidate=604800
   Access-Control-Allow-Origin: *
   X-Content-Type-Options: nosniff
   X-IndexNow-Key: 9e4f2b8c6a0d4e7f8b1c3a5d7e9f0b2a
+  X-IndexNow-Location: https://mahindralifespaceshomes.in/9e4f2b8c6a0d4e7f8b1c3a5d7e9f0b2a.txt
+
+/.well-known/indexnow-key.txt
+  Content-Type: text/plain; charset=utf-8
+  Cache-Control: public, max-age=86400, stale-while-revalidate=604800
+  Access-Control-Allow-Origin: *
+  X-Content-Type-Options: nosniff
+  X-IndexNow-Key: 9e4f2b8c6a0d4e7f8b1c3a5d7e9f0b2a
+  X-IndexNow-Location: https://mahindralifespaceshomes.in/9e4f2b8c6a0d4e7f8b1c3a5d7e9f0b2a.txt
+
+/.well-known/indexnow.txt
+  Content-Type: text/plain; charset=utf-8
+  Cache-Control: public, max-age=86400, stale-while-revalidate=604800
+  Access-Control-Allow-Origin: *
+  X-Content-Type-Options: nosniff
+  X-IndexNow-Key: 9e4f2b8c6a0d4e7f8b1c3a5d7e9f0b2a
+  X-IndexNow-Location: https://mahindralifespaceshomes.in/9e4f2b8c6a0d4e7f8b1c3a5d7e9f0b2a.txt
