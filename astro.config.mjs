@@ -9,6 +9,13 @@ export default defineConfig({
   build: {
     format: 'directory',
   },
+  vite: {
+    build: {
+      target: 'es2022',
+      cssCodeSplit: true,
+      minify: 'esbuild',
+    },
+  },
   integrations: [
     tailwind({
       applyBaseStyles: true,

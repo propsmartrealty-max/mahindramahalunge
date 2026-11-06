@@ -780,13 +780,12 @@ const baseSchema = {
     <meta name="geo.position" content="18.5775;73.7438" />
     <meta name="ICBM" content="18.5775, 73.7438" />
 
-    <!-- DNS Prefetch, Conserved Preconnect (Max 2 Origins) & Responsive LCP Preload -->
+    <!-- DNS Prefetch, Conserved Preconnect & Responsive LCP Preload -->
     <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
-    <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     
-    <!-- Responsive LCP Image Preload: First-Party High-Performance WebP -->
-    <link rel="preload" as="image" href="/images/official/mahindra-rivenza-architectural-elevation.webp" media="(max-width: 767px)" fetchpriority="high" type="image/webp" />
+    <!-- Responsive LCP Image Preload: First-Party High-Performance WebP (Desktop Viewport) -->
     <link rel="preload" as="image" href={metaImage} media="(min-width: 768px)" fetchpriority="high" type="image/webp" />
 
     <!-- Google SERP Verified Favicons & Brand Marks (Googlebot-Image Optimized) -->
@@ -828,11 +827,10 @@ const baseSchema = {
     <meta name="twitter:image" content={metaImage} />
     <meta name="twitter:image:alt" content="Mahindra Rivenza Baner Annex Luxury Residences" />
 
-    <!-- Google Fonts: Asynchronous Non-Render-Blocking Loading (Eliminates 1,920ms mobile delay) -->
-    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" media="print" onload="this.media='all'" />
+    <!-- Google Fonts: Asynchronous Non-Render-Blocking Modern Weights -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" media="print" onload="this.media='all'" />
     <noscript>
-      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" />
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" />
     </noscript>
 
     <!-- Schema.org JSON-LD -->
@@ -1081,25 +1079,35 @@ const baseSchema = {
         transform: rotate(25deg) translateX(100%);
       }
 
-      /* Scroll Reveal Animations */
+      /* Scroll Reveal Animations - GPU Layer Accelerated (Eliminates Forced Reflow) */
       .reveal {
         opacity: 0;
         transform: translateY(32px);
         transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        will-change: opacity, transform;
       }
       .reveal.revealed {
         opacity: 1;
         transform: translateY(0);
+        will-change: auto;
       }
 
       .reveal-scale {
         opacity: 0;
         transform: scale(0.94) translateY(24px);
         transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        will-change: opacity, transform;
       }
       .reveal-scale.revealed {
         opacity: 1;
         transform: scale(1) translateY(0);
+        will-change: auto;
+      }
+
+      /* Zero-Reflow Tabular Numerals for Numerical Counters */
+      [data-counter] {
+        font-variant-numeric: tabular-nums;
+        contain: layout inline-size;
       }
 
       .delay-100 { transition-delay: 100ms; }
@@ -1200,6 +1208,7 @@ const baseSchema = {
                 const duration = 1800; // ms
                 const startTime = performance.now();
 
+                let lastRendered = '';
                 const updateCounter = (currentTime: number) => {
                   const elapsed = currentTime - startTime;
                   const progress = Math.min(elapsed / duration, 1);
@@ -1207,15 +1216,20 @@ const baseSchema = {
                   const easeOut = 1 - Math.pow(1 - progress, 3);
                   const currentVal = target * easeOut;
 
-                  el.textContent = `${prefix}${currentVal.toLocaleString('en-IN', {
+                  const nextStr = `${prefix}${currentVal.toLocaleString('en-IN', {
                     minimumFractionDigits: decimals,
                     maximumFractionDigits: decimals,
                   })}${suffix}`;
 
+                  if (nextStr !== lastRendered) {
+                    el.textContent = nextStr;
+                    lastRendered = nextStr;
+                  }
+
                   if (progress < 1) {
                     requestAnimationFrame(updateCounter);
                   }
-                }
+                };
 
                 requestAnimationFrame(updateCounter);
                 observer.unobserve(el);
