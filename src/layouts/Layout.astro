@@ -1096,12 +1096,14 @@ const baseSchema = {
     </style>
 
     <!-- Speculation Rules API for Instant (0ms) Next-Page Navigation -->
-    <script type="speculationrules">
-      {
-        "prefetch": [
+    <script
+      type="speculationrules"
+      is:inline
+      set:html={JSON.stringify({
+        prefetch: [
           {
-            "source": "list",
-            "urls": [
+            source: "list",
+            urls: [
               "/residences/",
               "/pricing/",
               "/floor-plans/",
@@ -1112,11 +1114,11 @@ const baseSchema = {
               "/brochure/",
               "/press/"
             ],
-            "eagerness": "moderate"
+            eagerness: "moderate"
           }
         ]
-      }
-    </script>
+      })}
+    />
   </head>
   <body class="bg-[#0c1017] text-stone-100 antialiased selection:bg-brand-red/30 selection:text-white relative">
     
@@ -1185,7 +1187,7 @@ const baseSchema = {
                 const duration = 1800; // ms
                 const startTime = performance.now();
 
-                function updateCounter(currentTime: number) {
+                const updateCounter = (currentTime: number) => {
                   const elapsed = currentTime - startTime;
                   const progress = Math.min(elapsed / duration, 1);
                   // Ease out cubic

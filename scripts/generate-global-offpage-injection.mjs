@@ -19,15 +19,17 @@
  * ==============================================================================
  */
 
-import fs from 'fs';
-import path from 'path';
+import fs from "fs";
+import path from "path";
 
-const OUTPUT_DIR = path.resolve('public/syndication/global-injection');
+const OUTPUT_DIR = path.resolve("public/syndication/global-injection");
 if (!fs.existsSync(OUTPUT_DIR)) {
   fs.mkdirSync(OUTPUT_DIR, { recursive: true });
 }
 
-console.log('🚀 Generating Ultra High Global Off-Page SEO Injection Package...');
+console.log(
+  "🚀 Generating Ultra High Global Off-Page SEO Injection Package...",
+);
 
 // ------------------------------------------------------------------------------
 // 1. GLOBAL DIRECTORY CITATIONS MATRIX (60+ PLATFORMS)
@@ -35,382 +37,411 @@ console.log('🚀 Generating Ultra High Global Off-Page SEO Injection Package...
 const DIRECTORY_CITATIONS = [
   // Tier 1: Global Search Engines & Map Infrastructure
   {
-    tier: 'Tier 1 - Search & Maps',
-    platform: 'Google Business Profile',
-    domain: 'google.com/business',
+    tier: "Tier 1 - Search & Maps",
+    platform: "Google Business Profile",
+    domain: "google.com/business",
     da: 100,
-    region: 'Global / India',
-    name: 'Mahindra Rivenza Partner Advisory Desk — PropSmart Realty',
-    category: 'Real Estate Agency',
-    address: 'HP6G+WWF Baner Annex, Off Baner-Hinjawadi Road, Mahalunge (Nande)',
-    city: 'Pune',
-    state: 'Maharashtra',
-    pincode: '412115',
-    phone: '+91 7744009295',
-    website: 'https://mahindralifespaceshomes.in/',
+    region: "Global / India",
+    name: "Mahindra Rivenza Partner Advisory Desk — PropSmart Realty",
+    category: "Real Estate Agency",
+    address:
+      "HP6G+WWF Baner Annex, Off Baner-Hinjawadi Road, Mahalunge (Nande)",
+    city: "Pune",
+    state: "Maharashtra",
+    pincode: "412115",
+    phone: "+91 7744009295",
+    website: "https://mahindralifespaceshomes.in/",
     lat: 18.562313,
     lng: 73.727313,
-    rera: 'A031262401295 / PR1261012602102'
+    rera: "A031262401295 / PR1261012602102",
   },
   {
-    tier: 'Tier 1 - Search & Maps',
-    platform: 'Apple Business Connect / Apple Maps',
-    domain: 'businessconnect.apple.com',
+    tier: "Tier 1 - Search & Maps",
+    platform: "Apple Business Connect / Apple Maps",
+    domain: "businessconnect.apple.com",
     da: 99,
-    region: 'Global / iOS',
-    name: 'Mahindra Rivenza Partner Advisory Desk',
-    category: 'Real Estate Agency',
-    address: 'Baner Annex, Mahalunge, Pune',
-    city: 'Pune',
-    state: 'Maharashtra',
-    pincode: '412115',
-    phone: '+91 7744009295',
-    website: 'https://mahindralifespaceshomes.in/',
+    region: "Global / iOS",
+    name: "Mahindra Rivenza Partner Advisory Desk",
+    category: "Real Estate Agency",
+    address: "Baner Annex, Mahalunge, Pune",
+    city: "Pune",
+    state: "Maharashtra",
+    pincode: "412115",
+    phone: "+91 7744009295",
+    website: "https://mahindralifespaceshomes.in/",
     lat: 18.562313,
     lng: 73.727313,
-    rera: 'A031262401295'
+    rera: "A031262401295",
   },
   {
-    tier: 'Tier 1 - Search & Maps',
-    platform: 'Bing Places for Business',
-    domain: 'bingplaces.com',
+    tier: "Tier 1 - Search & Maps",
+    platform: "Bing Places for Business",
+    domain: "bingplaces.com",
     da: 94,
-    region: 'Global',
-    name: 'Mahindra Rivenza Advisory Desk',
-    category: 'Real Estate Agency',
-    address: 'Baner Annex, Mahalunge, Pune',
-    city: 'Pune',
-    state: 'Maharashtra',
-    pincode: '412115',
-    phone: '+91 7744009295',
-    website: 'https://mahindralifespaceshomes.in/',
+    region: "Global",
+    name: "Mahindra Rivenza Advisory Desk",
+    category: "Real Estate Agency",
+    address: "Baner Annex, Mahalunge, Pune",
+    city: "Pune",
+    state: "Maharashtra",
+    pincode: "412115",
+    phone: "+91 7744009295",
+    website: "https://mahindralifespaceshomes.in/",
     lat: 18.562313,
     lng: 73.727313,
-    rera: 'A031262401295'
+    rera: "A031262401295",
   },
   {
-    tier: 'Tier 1 - Search & Maps',
-    platform: 'MapMyIndia / Mappls',
-    domain: 'mappls.com',
+    tier: "Tier 1 - Search & Maps",
+    platform: "MapMyIndia / Mappls",
+    domain: "mappls.com",
     da: 83,
-    region: 'India',
-    name: 'Mahindra Rivenza Baner Annex',
-    category: 'Residential Township',
-    address: 'Mahalunge Nande Road, Baner Annex, Pune',
-    city: 'Pune',
-    state: 'Maharashtra',
-    pincode: '412115',
-    phone: '+91 7744009295',
-    website: 'https://mahindralifespaceshomes.in/mahindra-rivenza/baner-annex/',
+    region: "India",
+    name: "Mahindra Rivenza Baner Annex",
+    category: "Residential Township",
+    address: "Mahalunge Nande Road, Baner Annex, Pune",
+    city: "Pune",
+    state: "Maharashtra",
+    pincode: "412115",
+    phone: "+91 7744009295",
+    website: "https://mahindralifespaceshomes.in/mahindra-rivenza/baner-annex/",
     lat: 18.562313,
     lng: 73.727313,
-    rera: 'PR1261012602102'
+    rera: "PR1261012602102",
   },
   {
-    tier: 'Tier 1 - Search & Maps',
-    platform: 'HERE WeGo',
-    domain: 'here.com',
+    tier: "Tier 1 - Search & Maps",
+    platform: "HERE WeGo",
+    domain: "here.com",
     da: 87,
-    region: 'Global / Automotive',
-    name: 'Mahindra Rivenza Showcase',
-    category: 'Real Estate',
-    address: 'Baner Annex, Mahalunge, Pune',
-    city: 'Pune',
-    state: 'Maharashtra',
-    pincode: '412115',
-    phone: '+91 7744009295',
-    website: 'https://mahindralifespaceshomes.in/',
+    region: "Global / Automotive",
+    name: "Mahindra Rivenza Showcase",
+    category: "Real Estate",
+    address: "Baner Annex, Mahalunge, Pune",
+    city: "Pune",
+    state: "Maharashtra",
+    pincode: "412115",
+    phone: "+91 7744009295",
+    website: "https://mahindralifespaceshomes.in/",
     lat: 18.562313,
     lng: 73.727313,
-    rera: 'A031262401295'
+    rera: "A031262401295",
   },
 
   // Tier 2: Real Estate Portals & Brokerage Aggregators (India & Global)
   {
-    tier: 'Tier 2 - Real Estate Portals',
-    platform: 'MagicBricks',
-    domain: 'magicbricks.com',
+    tier: "Tier 2 - Real Estate Portals",
+    platform: "MagicBricks",
+    domain: "magicbricks.com",
     da: 82,
-    region: 'India / NRI',
-    name: 'PropSmart Realty — Mahindra Rivenza Baner Annex Desk',
-    category: 'Channel Partner Showcase',
-    address: 'Baner Annex, Mahalunge, Pune',
-    city: 'Pune',
-    state: 'Maharashtra',
-    pincode: '412115',
-    phone: '+91 7744009295',
-    website: 'https://mahindralifespaceshomes.in/pricing/',
+    region: "India / NRI",
+    name: "PropSmart Realty — Mahindra Rivenza Baner Annex Desk",
+    category: "Channel Partner Showcase",
+    address: "Baner Annex, Mahalunge, Pune",
+    city: "Pune",
+    state: "Maharashtra",
+    pincode: "412115",
+    phone: "+91 7744009295",
+    website: "https://mahindralifespaceshomes.in/pricing/",
     lat: 18.562313,
     lng: 73.727313,
-    rera: 'A031262401295'
+    rera: "A031262401295",
   },
   {
-    tier: 'Tier 2 - Real Estate Portals',
-    platform: '99acres',
-    domain: '99acres.com',
+    tier: "Tier 2 - Real Estate Portals",
+    platform: "99acres",
+    domain: "99acres.com",
     da: 81,
-    region: 'India / NRI',
-    name: 'Mahindra Rivenza Partner Advisory',
-    category: 'Real Estate Consultant',
-    address: 'Mahalunge Baner Annex, Pune',
-    city: 'Pune',
-    state: 'Maharashtra',
-    pincode: '412115',
-    phone: '+91 7744009295',
-    website: 'https://mahindralifespaceshomes.in/',
+    region: "India / NRI",
+    name: "Mahindra Rivenza Partner Advisory",
+    category: "Real Estate Consultant",
+    address: "Mahalunge Baner Annex, Pune",
+    city: "Pune",
+    state: "Maharashtra",
+    pincode: "412115",
+    phone: "+91 7744009295",
+    website: "https://mahindralifespaceshomes.in/",
     lat: 18.562313,
     lng: 73.727313,
-    rera: 'A031262401295'
+    rera: "A031262401295",
   },
   {
-    tier: 'Tier 2 - Real Estate Portals',
-    platform: 'Housing.com',
-    domain: 'housing.com',
+    tier: "Tier 2 - Real Estate Portals",
+    platform: "Housing.com",
+    domain: "housing.com",
     da: 79,
-    region: 'India / NRI',
-    name: 'PropSmart Realty (Mahindra Rivenza)',
-    category: 'Verified Real Estate Agent',
-    address: 'Baner Annex, Pune',
-    city: 'Pune',
-    state: 'Maharashtra',
-    pincode: '412115',
-    phone: '+91 7744009295',
-    website: 'https://mahindralifespaceshomes.in/floor-plans/',
+    region: "India / NRI",
+    name: "PropSmart Realty (Mahindra Rivenza)",
+    category: "Verified Real Estate Agent",
+    address: "Baner Annex, Pune",
+    city: "Pune",
+    state: "Maharashtra",
+    pincode: "412115",
+    phone: "+91 7744009295",
+    website: "https://mahindralifespaceshomes.in/floor-plans/",
     lat: 18.562313,
     lng: 73.727313,
-    rera: 'A031262401295'
+    rera: "A031262401295",
   },
   {
-    tier: 'Tier 2 - Real Estate Portals',
-    platform: 'SquareYards',
-    domain: 'squareyards.com',
+    tier: "Tier 2 - Real Estate Portals",
+    platform: "SquareYards",
+    domain: "squareyards.com",
     da: 77,
-    region: 'Global / NRI Desk',
-    name: 'Mahindra Rivenza Showcase Desk',
-    category: 'Real Estate Advisory',
-    address: 'Baner Annex, Pune',
-    city: 'Pune',
-    state: 'Maharashtra',
-    pincode: '412115',
-    phone: '+91 7744009295',
-    website: 'https://mahindralifespaceshomes.in/nri/',
+    region: "Global / NRI Desk",
+    name: "Mahindra Rivenza Showcase Desk",
+    category: "Real Estate Advisory",
+    address: "Baner Annex, Pune",
+    city: "Pune",
+    state: "Maharashtra",
+    pincode: "412115",
+    phone: "+91 7744009295",
+    website: "https://mahindralifespaceshomes.in/nri/",
     lat: 18.562313,
     lng: 73.727313,
-    rera: 'A031262401295'
+    rera: "A031262401295",
   },
   {
-    tier: 'Tier 2 - Real Estate Portals',
-    platform: 'CommonFloor',
-    domain: 'commonfloor.com',
+    tier: "Tier 2 - Real Estate Portals",
+    platform: "CommonFloor",
+    domain: "commonfloor.com",
     da: 75,
-    region: 'India',
-    name: 'Mahindra Rivenza Community Hub',
-    category: 'Gated Community Project',
-    address: 'Mahalunge Nande, Baner Annex, Pune',
-    city: 'Pune',
-    state: 'Maharashtra',
-    pincode: '412115',
-    phone: '+91 7744009295',
-    website: 'https://mahindralifespaceshomes.in/amenities/',
+    region: "India",
+    name: "Mahindra Rivenza Community Hub",
+    category: "Gated Community Project",
+    address: "Mahalunge Nande, Baner Annex, Pune",
+    city: "Pune",
+    state: "Maharashtra",
+    pincode: "412115",
+    phone: "+91 7744009295",
+    website: "https://mahindralifespaceshomes.in/amenities/",
     lat: 18.562313,
     lng: 73.727313,
-    rera: 'PR1261012602102'
+    rera: "PR1261012602102",
   },
 
   // Tier 3: National & B2B Business Directories
   {
-    tier: 'Tier 3 - B2B & Business Directories',
-    platform: 'IndiaMART',
-    domain: 'indiamart.com',
+    tier: "Tier 3 - B2B & Business Directories",
+    platform: "IndiaMART",
+    domain: "indiamart.com",
     da: 86,
-    region: 'India / B2B',
-    name: 'PropSmart Realty — Residential Property Consultants',
-    category: 'Real Estate Agents & Brokers',
-    address: 'Baner Annex, Mahalunge, Pune',
-    city: 'Pune',
-    state: 'Maharashtra',
-    pincode: '412115',
-    phone: '+91 7744009295',
-    website: 'https://mahindralifespaceshomes.in/',
+    region: "India / B2B",
+    name: "PropSmart Realty — Residential Property Consultants",
+    category: "Real Estate Agents & Brokers",
+    address: "Baner Annex, Mahalunge, Pune",
+    city: "Pune",
+    state: "Maharashtra",
+    pincode: "412115",
+    phone: "+91 7744009295",
+    website: "https://mahindralifespaceshomes.in/",
     lat: 18.562313,
     lng: 73.727313,
-    rera: 'A031262401295'
+    rera: "A031262401295",
   },
   {
-    tier: 'Tier 3 - B2B & Business Directories',
-    platform: 'JustDial Pune',
-    domain: 'justdial.com',
+    tier: "Tier 3 - B2B & Business Directories",
+    platform: "JustDial Pune",
+    domain: "justdial.com",
     da: 84,
-    region: 'Pune / India',
-    name: 'PropSmart Realty (Mahindra Rivenza Advisory)',
-    category: 'Estate Agents For Residential In Baner Annex',
-    address: 'Baner Annex, Off Baner-Hinjawadi Road, Mahalunge, Pune',
-    city: 'Pune',
-    state: 'Maharashtra',
-    pincode: '412115',
-    phone: '+91 7744009295',
-    website: 'https://mahindralifespaceshomes.in/',
+    region: "Pune / India",
+    name: "PropSmart Realty (Mahindra Rivenza Advisory)",
+    category: "Estate Agents For Residential In Baner Annex",
+    address: "Baner Annex, Off Baner-Hinjawadi Road, Mahalunge, Pune",
+    city: "Pune",
+    state: "Maharashtra",
+    pincode: "412115",
+    phone: "+91 7744009295",
+    website: "https://mahindralifespaceshomes.in/",
     lat: 18.562313,
     lng: 73.727313,
-    rera: 'A031262401295'
+    rera: "A031262401295",
   },
   {
-    tier: 'Tier 3 - B2B & Business Directories',
-    platform: 'Sulekha Properties',
-    domain: 'sulekha.com',
+    tier: "Tier 3 - B2B & Business Directories",
+    platform: "Sulekha Properties",
+    domain: "sulekha.com",
     da: 78,
-    region: 'India',
-    name: 'PropSmart Realty Pune',
-    category: 'Property Consultants & Home Search',
-    address: 'Baner Annex, Pune',
-    city: 'Pune',
-    state: 'Maharashtra',
-    pincode: '412115',
-    phone: '+91 7744009295',
-    website: 'https://mahindralifespaceshomes.in/pune-real-estate/',
+    region: "India",
+    name: "PropSmart Realty Pune",
+    category: "Property Consultants & Home Search",
+    address: "Baner Annex, Pune",
+    city: "Pune",
+    state: "Maharashtra",
+    pincode: "412115",
+    phone: "+91 7744009295",
+    website: "https://mahindralifespaceshomes.in/pune-real-estate/",
     lat: 18.562313,
     lng: 73.727313,
-    rera: 'A031262401295'
+    rera: "A031262401295",
   },
   {
-    tier: 'Tier 3 - B2B & Business Directories',
-    platform: 'Crunchbase',
-    domain: 'crunchbase.com',
+    tier: "Tier 3 - B2B & Business Directories",
+    platform: "Crunchbase",
+    domain: "crunchbase.com",
     da: 90,
-    region: 'Global',
-    name: 'PropSmart Realty — Mahindra Rivenza Showcase',
-    category: 'Real Estate Tech & Advisory',
-    address: 'Baner Annex, Pune',
-    city: 'Pune',
-    state: 'Maharashtra',
-    pincode: '412115',
-    phone: '+91 7744009295',
-    website: 'https://mahindralifespaceshomes.in/',
+    region: "Global",
+    name: "PropSmart Realty — Mahindra Rivenza Showcase",
+    category: "Real Estate Tech & Advisory",
+    address: "Baner Annex, Pune",
+    city: "Pune",
+    state: "Maharashtra",
+    pincode: "412115",
+    phone: "+91 7744009295",
+    website: "https://mahindralifespaceshomes.in/",
     lat: 18.562313,
     lng: 73.727313,
-    rera: 'A031262401295'
+    rera: "A031262401295",
   },
 
   // Tier 4: Global NRI & Expat Hubs
   {
-    tier: 'Tier 4 - Global NRI & Expat Directories',
-    platform: 'Dubizzle UAE Property Portal',
-    domain: 'dubizzle.com',
+    tier: "Tier 4 - Global NRI & Expat Directories",
+    platform: "Dubizzle UAE Property Portal",
+    domain: "dubizzle.com",
     da: 75,
-    region: 'UAE / GCC',
-    name: 'Mahindra Rivenza India Property Desk',
-    category: 'International Real Estate',
-    address: 'Baner Annex, Mahalunge, West Pune, India',
-    city: 'Pune',
-    state: 'Maharashtra',
-    pincode: '412115',
-    phone: '+91 7744009295',
-    website: 'https://mahindralifespaceshomes.in/nri/mahindra-rivenza-dubai-uae-investors/',
+    region: "UAE / GCC",
+    name: "Mahindra Rivenza India Property Desk",
+    category: "International Real Estate",
+    address: "Baner Annex, Mahalunge, West Pune, India",
+    city: "Pune",
+    state: "Maharashtra",
+    pincode: "412115",
+    phone: "+91 7744009295",
+    website:
+      "https://mahindralifespaceshomes.in/nri/mahindra-rivenza-dubai-uae-investors/",
     lat: 18.562313,
     lng: 73.727313,
-    rera: 'PR1261012602102'
+    rera: "PR1261012602102",
   },
   {
-    tier: 'Tier 4 - Global NRI & Expat Directories',
-    platform: 'Sulekha NRI Classifieds USA',
-    domain: 'us.sulekha.com',
+    tier: "Tier 4 - Global NRI & Expat Directories",
+    platform: "Sulekha NRI Classifieds USA",
+    domain: "us.sulekha.com",
     da: 78,
-    region: 'USA / North America',
-    name: 'Mahindra Rivenza USA NRI Desk',
-    category: 'India Real Estate Investment',
-    address: 'Baner Annex, West Pune, India',
-    city: 'Pune',
-    state: 'Maharashtra',
-    pincode: '412115',
-    phone: '+91 7744009295',
-    website: 'https://mahindralifespaceshomes.in/nri/mahindra-rivenza-nri-investment-usa-silicon-valley-tech/',
+    region: "USA / North America",
+    name: "Mahindra Rivenza USA NRI Desk",
+    category: "India Real Estate Investment",
+    address: "Baner Annex, West Pune, India",
+    city: "Pune",
+    state: "Maharashtra",
+    pincode: "412115",
+    phone: "+91 7744009295",
+    website:
+      "https://mahindralifespaceshomes.in/nri/mahindra-rivenza-nri-investment-usa-silicon-valley-tech/",
     lat: 18.562313,
     lng: 73.727313,
-    rera: 'PR1261012602102'
+    rera: "PR1261012602102",
   },
   {
-    tier: 'Tier 4 - Global NRI & Expat Directories',
-    platform: 'Sulekha NRI Classifieds UK',
-    domain: 'uk.sulekha.com',
+    tier: "Tier 4 - Global NRI & Expat Directories",
+    platform: "Sulekha NRI Classifieds UK",
+    domain: "uk.sulekha.com",
     da: 78,
-    region: 'UK / Europe',
-    name: 'Mahindra Rivenza UK NRI Desk',
-    category: 'India Real Estate Investment',
-    address: 'Baner Annex, West Pune, India',
-    city: 'Pune',
-    state: 'Maharashtra',
-    pincode: '412115',
-    phone: '+91 7744009295',
-    website: 'https://mahindralifespaceshomes.in/nri/mahindra-rivenza-uk-london-investors/',
+    region: "UK / Europe",
+    name: "Mahindra Rivenza UK NRI Desk",
+    category: "India Real Estate Investment",
+    address: "Baner Annex, West Pune, India",
+    city: "Pune",
+    state: "Maharashtra",
+    pincode: "412115",
+    phone: "+91 7744009295",
+    website:
+      "https://mahindralifespaceshomes.in/nri/mahindra-rivenza-uk-london-investors/",
     lat: 18.562313,
     lng: 73.727313,
-    rera: 'PR1261012602102'
+    rera: "PR1261012602102",
   },
   {
-    tier: 'Tier 4 - Global NRI & Expat Directories',
-    platform: 'PropertyGuru Singapore India Desk',
-    domain: 'propertyguru.com.sg',
+    tier: "Tier 4 - Global NRI & Expat Directories",
+    platform: "PropertyGuru Singapore India Desk",
+    domain: "propertyguru.com.sg",
     da: 76,
-    region: 'Singapore / SE Asia',
-    name: 'Mahindra Rivenza Singapore Desk',
-    category: 'Overseas Property Showcase',
-    address: 'Baner Annex, Pune, India',
-    city: 'Pune',
-    state: 'Maharashtra',
-    pincode: '412115',
-    phone: '+91 7744009295',
-    website: 'https://mahindralifespaceshomes.in/nri/mahindra-rivenza-global-desk-singapore-southeast-asia/',
+    region: "Singapore / SE Asia",
+    name: "Mahindra Rivenza Singapore Desk",
+    category: "Overseas Property Showcase",
+    address: "Baner Annex, Pune, India",
+    city: "Pune",
+    state: "Maharashtra",
+    pincode: "412115",
+    phone: "+91 7744009295",
+    website:
+      "https://mahindralifespaceshomes.in/nri/mahindra-rivenza-global-desk-singapore-southeast-asia/",
     lat: 18.562313,
     lng: 73.727313,
-    rera: 'PR1261012602102'
-  }
+    rera: "PR1261012602102",
+  },
 ];
 
 // Write Directory Citations in JSON & CSV
 fs.writeFileSync(
-  path.join(OUTPUT_DIR, 'global-directory-citations.json'),
-  JSON.stringify(DIRECTORY_CITATIONS, null, 2)
+  path.join(OUTPUT_DIR, "global-directory-citations.json"),
+  JSON.stringify(DIRECTORY_CITATIONS, null, 2),
 );
 
-const csvHeaders = ['Tier', 'Platform', 'Domain', 'DA', 'Region', 'Business Name', 'Category', 'Address', 'City', 'State', 'Pincode', 'Phone', 'Website URL', 'Latitude', 'Longitude', 'MahaRERA'];
-const csvRows = DIRECTORY_CITATIONS.map(d => [
-  `"${d.tier}"`,
-  `"${d.platform}"`,
-  `"${d.domain}"`,
-  d.da,
-  `"${d.region}"`,
-  `"${d.name}"`,
-  `"${d.category}"`,
-  `"${d.address}"`,
-  `"${d.city}"`,
-  `"${d.state}"`,
-  `"${d.pincode}"`,
-  `"${d.phone}"`,
-  `"${d.website}"`,
-  d.lat,
-  d.lng,
-  `"${d.rera}"`
-].join(','));
+const csvHeaders = [
+  "Tier",
+  "Platform",
+  "Domain",
+  "DA",
+  "Region",
+  "Business Name",
+  "Category",
+  "Address",
+  "City",
+  "State",
+  "Pincode",
+  "Phone",
+  "Website URL",
+  "Latitude",
+  "Longitude",
+  "MahaRERA",
+];
+const csvRows = DIRECTORY_CITATIONS.map((d) =>
+  [
+    `"${d.tier}"`,
+    `"${d.platform}"`,
+    `"${d.domain}"`,
+    d.da,
+    `"${d.region}"`,
+    `"${d.name}"`,
+    `"${d.category}"`,
+    `"${d.address}"`,
+    `"${d.city}"`,
+    `"${d.state}"`,
+    `"${d.pincode}"`,
+    `"${d.phone}"`,
+    `"${d.website}"`,
+    d.lat,
+    d.lng,
+    `"${d.rera}"`,
+  ].join(","),
+);
 
 fs.writeFileSync(
-  path.join(OUTPUT_DIR, 'global-directory-citations.csv'),
-  [csvHeaders.join(','), ...csvRows].join('\n')
+  path.join(OUTPUT_DIR, "global-directory-citations.csv"),
+  [csvHeaders.join(","), ...csvRows].join("\n"),
 );
 
-console.log(`✅ Saved ${DIRECTORY_CITATIONS.length} Global Directory Citations (JSON & CSV)`);
+console.log(
+  `✅ Saved ${DIRECTORY_CITATIONS.length} Global Directory Citations (JSON & CSV)`,
+);
 
 // ------------------------------------------------------------------------------
 // 2. GLOBAL PRESS RELEASE (AP NEWS / BLOOMBERG / PR NEWSWIRE STANDARD)
 // ------------------------------------------------------------------------------
 const GLOBAL_PRESS_RELEASE = {
-  releaseId: 'PR-2026-MR-001',
-  headline: 'Mahindra Lifespaces Commences Priority Allotments for ₹3,500 Cr Landmark "Mahindra Rivenza" at Baner Annex, West Pune',
-  subheadline: '13.46-Acre Biophilic Sanctuary Delivers 9+ Acres of Vehicle-Free Greens, ~44,000 Sq.Ft Clubhouse with Sunken Aqua Bar, and 7-Minute Direct Connectivity to Hinjewadi Phase 1 via Mula River Bridge',
-  dateline: 'PUNE, INDIA — November 2026',
-  canonicalUrl: 'https://mahindralifespaceshomes.in/',
-  mediaDeskPhone: '+91 7744009295',
-  mediaDeskEmail: 'media@mahindralifespaceshomes.in',
-  reraNotice: 'Phase 1 MahaRERA: PR1261012602102 | Phase 2 MahaRERA: PM1261012602103 | PropSmart Realty MahaRERA Agent: A031262401295',
+  releaseId: "PR-2026-MR-001",
+  headline:
+    'Mahindra Lifespaces Commences Priority Allotments for ₹3,500 Cr Landmark "Mahindra Rivenza" at Baner Annex, West Pune',
+  subheadline:
+    "13.46-Acre Biophilic Sanctuary Delivers 9+ Acres of Vehicle-Free Greens, ~44,000 Sq.Ft Clubhouse with Sunken Aqua Bar, and 7-Minute Direct Connectivity to Hinjewadi Phase 1 via Mula River Bridge",
+  dateline: "PUNE, INDIA — November 2026",
+  canonicalUrl: "https://mahindralifespaceshomes.in/",
+  mediaDeskPhone: "+91 7744009295",
+  mediaDeskEmail: "media@mahindralifespaceshomes.in",
+  reraNotice:
+    "Phase 1 MahaRERA: PR1261012602102 | Phase 2 MahaRERA: PM1261012602103 | PropSmart Realty MahaRERA Agent: A031262401295",
   contentMarkdown: `
 # Mahindra Lifespaces Commences Priority Allotments for ₹3,500 Cr Landmark "Mahindra Rivenza" at Baner Annex, West Pune
 
@@ -450,33 +481,43 @@ Official verification documents and sanctioned layout permits can be reviewed di
 - **Advisory & Booking Helpline:** +91 7744009295
 - **Official Canonical Portal:** https://mahindralifespaceshomes.in/
 - **Experience Center & Show Residence:** Baner Annex, Off Baner-Hinjawadi Road, Mahalunge (Nande), Pune, Maharashtra 412115.
-`
+`,
 };
 
 fs.writeFileSync(
-  path.join(OUTPUT_DIR, 'global-press-release-wire.json'),
-  JSON.stringify(GLOBAL_PRESS_RELEASE, null, 2)
+  path.join(OUTPUT_DIR, "global-press-release-wire.json"),
+  JSON.stringify(GLOBAL_PRESS_RELEASE, null, 2),
 );
 fs.writeFileSync(
-  path.join(OUTPUT_DIR, 'global-press-release-wire.md'),
-  GLOBAL_PRESS_RELEASE.contentMarkdown.trim()
+  path.join(OUTPUT_DIR, "global-press-release-wire.md"),
+  GLOBAL_PRESS_RELEASE.contentMarkdown.trim(),
 );
 
-console.log('✅ Saved Global Press Release Wire (JSON & Markdown)');
+console.log("✅ Saved Global Press Release Wire (JSON & Markdown)");
 
 // ------------------------------------------------------------------------------
 // 3. 5 PUBLICATION-READY DEEP-DIVE BLOG ARTICLES (MEDIUM / SUBSTACK / LINKEDIN)
 // ------------------------------------------------------------------------------
 const SYNDICATION_BLOGS = [
   {
-    id: 'blog-01-macro-investment-thesis',
-    title: 'Why Baner Annex (Mahalunge) is Pune’s Next ₹3,500 Cr Real Estate Golden Corridor',
-    targetPlatforms: ['Medium', 'LinkedIn Pulse', 'Substack Real Estate', 'Punekar News Guest Blog'],
+    id: "blog-01-macro-investment-thesis",
+    title:
+      "Why Baner Annex (Mahalunge) is Pune’s Next ₹3,500 Cr Real Estate Golden Corridor",
+    targetPlatforms: [
+      "Medium",
+      "LinkedIn Pulse",
+      "Substack Real Estate",
+      "Punekar News Guest Blog",
+    ],
     wordCount: 1350,
-    primaryKeyword: 'Mahindra Rivenza Baner Annex',
-    secondaryKeywords: ['flats in Mahalunge Pune', 'Pune real estate market 2026', 'Baner Annex property rates'],
-    canonicalUrl: 'https://mahindralifespaceshomes.in/pune-real-estate/',
-    readingTime: '6 min read',
+    primaryKeyword: "Mahindra Rivenza Baner Annex",
+    secondaryKeywords: [
+      "flats in Mahalunge Pune",
+      "Pune real estate market 2026",
+      "Baner Annex property rates",
+    ],
+    canonicalUrl: "https://mahindralifespaceshomes.in/pune-real-estate/",
+    readingTime: "6 min read",
     contentMarkdown: `
 # Why Baner Annex (Mahalunge) is Pune’s Next ₹3,500 Cr Real Estate Golden Corridor
 
@@ -509,17 +550,27 @@ While neighboring Baner 2 BHKs trade above ₹1.35 Cr and Hinjewadi Phase 1 stan
 For comprehensive price lists and milestone schedules, review the verified [Mahindra Rivenza Cost Sheet Breakdown](https://mahindralifespaceshomes.in/pricing/).
 
 *Statutory MahaRERA: Phase 1 PR1261012602102 | Advisory Desk: PropSmart Realty (MahaRERA Agent: A031262401295) | Helpline: +91 7744009295.*
-`
+`,
   },
   {
-    id: 'blog-02-global-nri-investment-guide',
-    title: 'The Global NRI Guide to Investing in Pune Real Estate 2026: The Mahindra Rivenza Case Study',
-    targetPlatforms: ['LinkedIn Pulse', 'Medium Expat Finance', 'Gulf News Community', 'Silicon India'],
+    id: "blog-02-global-nri-investment-guide",
+    title:
+      "The Global NRI Guide to Investing in Pune Real Estate 2026: The Mahindra Rivenza Case Study",
+    targetPlatforms: [
+      "LinkedIn Pulse",
+      "Medium Expat Finance",
+      "Gulf News Community",
+      "Silicon India",
+    ],
     wordCount: 1420,
-    primaryKeyword: 'Mahindra Rivenza NRI investment',
-    secondaryKeywords: ['NRI property in Pune', 'Mahindra Lifespaces Dubai expat', 'FEMA compliant real estate India'],
-    canonicalUrl: 'https://mahindralifespaceshomes.in/nri/',
-    readingTime: '7 min read',
+    primaryKeyword: "Mahindra Rivenza NRI investment",
+    secondaryKeywords: [
+      "NRI property in Pune",
+      "Mahindra Lifespaces Dubai expat",
+      "FEMA compliant real estate India",
+    ],
+    canonicalUrl: "https://mahindralifespaceshomes.in/nri/",
+    readingTime: "7 min read",
     contentMarkdown: `
 # The Global NRI Guide to Investing in Pune Real Estate 2026: The Mahindra Rivenza Case Study
 
@@ -547,17 +598,26 @@ Hinjewadi employs over 400,000 IT, engineering, and GCC professionals. Due to se
 For overseas consultation and virtual video walkthroughs, visit the [Mahindra Rivenza Global NRI Portal](https://mahindralifespaceshomes.in/nri/) or connect with the senior advisory team at \`+91 7744009295\`.
 
 *MahaRERA: Phase 1 PR1261012602102 | PropSmart Realty (MahaRERA Agent: A031262401295).*
-`
+`,
   },
   {
-    id: 'blog-03-architectural-biophilic-benchmark',
-    title: 'Inside Pune’s Net-Zero Benchmark: Mahindra Rivenza’s 9-Acre Green Sanctuary & ~44,000 Sq.Ft Clubhouse',
-    targetPlatforms: ['ArchDaily India', 'Medium Architecture & Urbanism', 'LinkedIn Architecture Network'],
+    id: "blog-03-architectural-biophilic-benchmark",
+    title:
+      "Inside Pune’s Net-Zero Benchmark: Mahindra Rivenza’s 9-Acre Green Sanctuary & ~44,000 Sq.Ft Clubhouse",
+    targetPlatforms: [
+      "ArchDaily India",
+      "Medium Architecture & Urbanism",
+      "LinkedIn Architecture Network",
+    ],
     wordCount: 1280,
-    primaryKeyword: 'Mahindra Rivenza master plan',
-    secondaryKeywords: ['IGBC Gold flats Pune', 'luxury amenities Baner Annex', 'Mahindra Rivenza clubhouse'],
-    canonicalUrl: 'https://mahindralifespaceshomes.in/amenities/',
-    readingTime: '5 min read',
+    primaryKeyword: "Mahindra Rivenza master plan",
+    secondaryKeywords: [
+      "IGBC Gold flats Pune",
+      "luxury amenities Baner Annex",
+      "Mahindra Rivenza clubhouse",
+    ],
+    canonicalUrl: "https://mahindralifespaceshomes.in/amenities/",
+    readingTime: "5 min read",
     contentMarkdown: `
 # Inside Pune’s Net-Zero Benchmark: Mahindra Rivenza’s 9-Acre Green Sanctuary & ~44,000 Sq.Ft Clubhouse
 
@@ -580,17 +640,26 @@ The social centerpiece of the community is a landmark ~44,000 sq.ft. multi-level
 Explore the complete master layout and CAD specifications at the [Mahindra Rivenza Master Plan Showcase](https://mahindralifespaceshomes.in/master-plan/).
 
 *MahaRERA: PR1261012602102 | PropSmart Realty (A031262401295) | Advisory Helpline: +91 7744009295.*
-`
+`,
   },
   {
-    id: 'blog-04-connectivity-bridge-bypass',
-    title: 'How the Hinjewadi-Mahalunge River Bridge Revolutionized West Pune Commutes',
-    targetPlatforms: ['Medium Infrastructure', 'LinkedIn Urban Mobility', 'Urban News Network'],
+    id: "blog-04-connectivity-bridge-bypass",
+    title:
+      "How the Hinjewadi-Mahalunge River Bridge Revolutionized West Pune Commutes",
+    targetPlatforms: [
+      "Medium Infrastructure",
+      "LinkedIn Urban Mobility",
+      "Urban News Network",
+    ],
     wordCount: 1200,
-    primaryKeyword: 'Hinjewadi Mahalunge river bridge',
-    secondaryKeywords: ['Mahindra Rivenza Hinjewadi commute', 'Baner Annex connectivity', 'flats near Pune Metro Line 3'],
-    canonicalUrl: 'https://mahindralifespaceshomes.in/connectivity/',
-    readingTime: '5 min read',
+    primaryKeyword: "Hinjewadi Mahalunge river bridge",
+    secondaryKeywords: [
+      "Mahindra Rivenza Hinjewadi commute",
+      "Baner Annex connectivity",
+      "flats near Pune Metro Line 3",
+    ],
+    canonicalUrl: "https://mahindralifespaceshomes.in/connectivity/",
+    readingTime: "5 min read",
     contentMarkdown: `
 # How the Hinjewadi-Mahalunge River Bridge Revolutionized West Pune Commutes
 
@@ -613,17 +682,26 @@ Global urban transit studies demonstrate that direct bridge linkages unlock imme
 Check live commute distance matrices at the [Mahindra Rivenza Commute & Location Portal](https://mahindralifespaceshomes.in/location/).
 
 *MahaRERA: PR1261012602102 | Advisory Desk: PropSmart Realty (+91 7744009295).*
-`
+`,
   },
   {
-    id: 'blog-05-price-breakdown-cost-sheet-audit',
-    title: 'Mahindra Rivenza Cost Sheet Breakdown 2026: Why Starting at ₹90 Lakhs Beats Saturated Suburbs',
-    targetPlatforms: ['Medium Personal Finance', 'Substack India Investing', 'LinkedIn Real Estate'],
+    id: "blog-05-price-breakdown-cost-sheet-audit",
+    title:
+      "Mahindra Rivenza Cost Sheet Breakdown 2026: Why Starting at ₹90 Lakhs Beats Saturated Suburbs",
+    targetPlatforms: [
+      "Medium Personal Finance",
+      "Substack India Investing",
+      "LinkedIn Real Estate",
+    ],
     wordCount: 1380,
-    primaryKeyword: 'Mahindra Rivenza price list 2026',
-    secondaryKeywords: ['Mahindra Rivenza cost sheet', '2 BHK price Baner Annex', 'stamp duty calculator Pune'],
-    canonicalUrl: 'https://mahindralifespaceshomes.in/pricing/',
-    readingTime: '6 min read',
+    primaryKeyword: "Mahindra Rivenza price list 2026",
+    secondaryKeywords: [
+      "Mahindra Rivenza cost sheet",
+      "2 BHK price Baner Annex",
+      "stamp duty calculator Pune",
+    ],
+    canonicalUrl: "https://mahindralifespaceshomes.in/pricing/",
+    readingTime: "6 min read",
     contentMarkdown: `
 # Mahindra Rivenza Cost Sheet Breakdown 2026: Why Starting at ₹90 Lakhs Beats Saturated Suburbs
 
@@ -661,19 +739,19 @@ Unlike risky 10:90 non-banking financial schemes, Mahindra Rivenza follows a cer
 For instant tax and EMI computations, use the [Pune Stamp Duty & EMI Calculator](https://mahindralifespaceshomes.in/tools/pune-stamp-duty-calculator/).
 
 *MahaRERA: Phase 1 PR1261012602102 | PropSmart Realty (MahaRERA Agent: A031262401295) | Consultation: +91 7744009295.*
-`
-  }
+`,
+  },
 ];
 
 fs.writeFileSync(
-  path.join(OUTPUT_DIR, 'global-syndication-blogs.json'),
-  JSON.stringify(SYNDICATION_BLOGS, null, 2)
+  path.join(OUTPUT_DIR, "global-syndication-blogs.json"),
+  JSON.stringify(SYNDICATION_BLOGS, null, 2),
 );
 
-SYNDICATION_BLOGS.forEach(b => {
+SYNDICATION_BLOGS.forEach((b) => {
   fs.writeFileSync(
     path.join(OUTPUT_DIR, `${b.id}.md`),
-    b.contentMarkdown.trim()
+    b.contentMarkdown.trim(),
   );
 });
 
@@ -684,9 +762,9 @@ console.log(`✅ Saved 5 Publication-Ready Syndication Blogs (JSON & Markdown)`)
 // ------------------------------------------------------------------------------
 const FORUM_QA_INJECTIONS = [
   {
-    platform: 'Quora',
-    topic: 'Pune Real Estate & Housing',
-    question: 'Is it worth buying a flat in Mahalunge / Baner Annex in 2026?',
+    platform: "Quora",
+    topic: "Pune Real Estate & Housing",
+    question: "Is it worth buying a flat in Mahalunge / Baner Annex in 2026?",
     suggestedAnswer: `Yes, Baner Annex (Mahalunge) is currently Western Pune's strongest capital appreciation micro-market. Here is why:
 
 1. **Town Planning Scheme 1:** PMRDA is developing Mahalunge under TP Scheme 1 with 36m wide DP roads and underground utility grids, eliminating future infrastructure gridlocks.
@@ -694,12 +772,13 @@ const FORUM_QA_INJECTIONS = [
 3. **Institutional Township:** The flagship project is [Mahindra Rivenza](https://mahindralifespaceshomes.in/), a 13.46-acre biophilic community by Mahindra Lifespaces with 9+ acres of greens and a ~44,000 sq.ft clubhouse. Prices start from ₹90 Lakhs* for 2 BHKs, compared to ₹1.35 Cr+ in mature Baner.
 4. **MahaRERA Security:** Registered under PR1261012602102 with 70% escrow accounts.
 
-It offers an estimated 12-15% CAGR over the next 4 years as PMRDA Ring Road connectivity matures.`
+It offers an estimated 12-15% CAGR over the next 4 years as PMRDA Ring Road connectivity matures.`,
   },
   {
-    platform: 'Reddit (r/pune / r/IndiaInvestments)',
-    topic: 'Real Estate Investment West Pune',
-    question: 'Review of Mahindra Rivenza in Baner Annex / Mahalunge? How does it compare to Godrej and VTP?',
+    platform: "Reddit (r/pune / r/IndiaInvestments)",
+    topic: "Real Estate Investment West Pune",
+    question:
+      "Review of Mahindra Rivenza in Baner Annex / Mahalunge? How does it compare to Godrej and VTP?",
     suggestedAnswer: `Did a deep factual due diligence on Mahindra Rivenza vs Godrej Woodsville and VTP Earth One in Mahalunge:
 
 - **Density & Open Greens:** Mahindra Rivenza has 13.46 acres with only 1,236 units in Phase 1 and 9+ acres of open biophilic greens (70%+ open space). Godrej and VTP have much higher unit density per acre.
@@ -707,71 +786,78 @@ It offers an estimated 12-15% CAGR over the next 4 years as PMRDA Ring Road conn
 - **Developer Track Record:** Mahindra Lifespaces is India's 1st Net Zero developer with zero delayed delivery history.
 - **Pricing:** 2 BHKs start at ₹90L*, 3 BHKs from ₹1.31Cr*, and 4 BHK sky villas from ₹2.20Cr*.
 
-You can review their CAD floor plans and cost sheets here: [Mahindra Rivenza Pricing & Floor Plans](https://mahindralifespaceshomes.in/pricing/). MahaRERA Phase 1: PR1261012602102.`
+You can review their CAD floor plans and cost sheets here: [Mahindra Rivenza Pricing & Floor Plans](https://mahindralifespaceshomes.in/pricing/). MahaRERA Phase 1: PR1261012602102.`,
   },
   {
-    platform: 'Quora',
-    topic: 'Hinjewadi IT Commute & Housing',
-    question: 'Which area is best to rent or buy a flat near Hinjewadi Phase 1?',
+    platform: "Quora",
+    topic: "Hinjewadi IT Commute & Housing",
+    question:
+      "Which area is best to rent or buy a flat near Hinjewadi Phase 1?",
     suggestedAnswer: `If you want to avoid highway traffic at Bhumkar Chowk and Wakad Flyover, **Baner Annex (Mahalunge)** is the best location in 2026. 
 
-The 4-lane Mula River Bridge connects Mahalunge directly to Phase 1 (Infosys/Wipro) in 7 minutes. The landmark community in this belt is [Mahindra Rivenza](https://mahindralifespaceshomes.in/mahindra-rivenza/baner-annex/), featuring 2, 3 & 4 BHK residences starting ₹90 Lakhs*. It offers 4.5% to 5.4% rental yields due to high demand from IT executives.`
+The 4-lane Mula River Bridge connects Mahalunge directly to Phase 1 (Infosys/Wipro) in 7 minutes. The landmark community in this belt is [Mahindra Rivenza](https://mahindralifespaceshomes.in/mahindra-rivenza/baner-annex/), featuring 2, 3 & 4 BHK residences starting ₹90 Lakhs*. It offers 4.5% to 5.4% rental yields due to high demand from IT executives.`,
   },
   {
-    platform: 'Indian Real Estate Forum (IREF)',
-    topic: 'Mahindra Lifespaces Pune Projects',
-    question: 'What are the official MahaRERA numbers and possession dates for Mahindra Rivenza Pune?',
+    platform: "Indian Real Estate Forum (IREF)",
+    topic: "Mahindra Lifespaces Pune Projects",
+    question:
+      "What are the official MahaRERA numbers and possession dates for Mahindra Rivenza Pune?",
     suggestedAnswer: `Mahindra Rivenza is officially registered under MahaRERA:
 - Phase 1: **PR1261012602102**
 - Phase 2: **PM1261012602103**
 - Sanctioned Handover: **December 2031** (as per MahaRERA filings)
 - Strategic Channel Partner: PropSmart Realty (MahaRERA Agent: **A031262401295**)
 
-Full statutory certificates and carpet area filings can be verified here: [Mahindra Rivenza MahaRERA Verification](https://mahindralifespaceshomes.in/rera/).`
+Full statutory certificates and carpet area filings can be verified here: [Mahindra Rivenza MahaRERA Verification](https://mahindralifespaceshomes.in/rera/).`,
   },
   {
-    platform: 'SkyscraperCity',
-    topic: 'Pune Infrastructure & Residential Highrises',
-    question: 'Status of PMRDA Town Planning Scheme 1 Mahalunge and 36m Ring Road?',
-    suggestedAnswer: `PMRDA TPS 1 at Mahalunge-Maan is progressing rapidly with physical road demarcations for the 36m arterial sector roads. The Mula River 4-lane bridge is operational. Landmark private developments anchoring the scheme include [Mahindra Rivenza](https://mahindralifespaceshomes.in/), covering 13.46 acres with 70% open green podiums.`
-  }
+    platform: "SkyscraperCity",
+    topic: "Pune Infrastructure & Residential Highrises",
+    question:
+      "Status of PMRDA Town Planning Scheme 1 Mahalunge and 36m Ring Road?",
+    suggestedAnswer: `PMRDA TPS 1 at Mahalunge-Maan is progressing rapidly with physical road demarcations for the 36m arterial sector roads. The Mula River 4-lane bridge is operational. Landmark private developments anchoring the scheme include [Mahindra Rivenza](https://mahindralifespaceshomes.in/), covering 13.46 acres with 70% open green podiums.`,
+  },
 ];
 
 fs.writeFileSync(
-  path.join(OUTPUT_DIR, 'global-forum-qa-injections.json'),
-  JSON.stringify(FORUM_QA_INJECTIONS, null, 2)
+  path.join(OUTPUT_DIR, "global-forum-qa-injections.json"),
+  JSON.stringify(FORUM_QA_INJECTIONS, null, 2),
 );
 
-console.log(`✅ Saved ${FORUM_QA_INJECTIONS.length} Community & Forum Q&A Injections (JSON)`);
+console.log(
+  `✅ Saved ${FORUM_QA_INJECTIONS.length} Community & Forum Q&A Injections (JSON)`,
+);
 
 // ------------------------------------------------------------------------------
 // 5. MASTER INJECTION INVENTORY MANIFEST
 // ------------------------------------------------------------------------------
 const INJECTION_SUMMARY = {
-  targetDomain: 'https://mahindralifespaceshomes.in/',
+  targetDomain: "https://mahindralifespaceshomes.in/",
   generatedAt: new Date().toISOString(),
   totalDirectoriesCataloged: DIRECTORY_CITATIONS.length,
   pressReleasesCount: 1,
   syndicationBlogsCount: SYNDICATION_BLOGS.length,
   forumQAInjectionsCount: FORUM_QA_INJECTIONS.length,
   filesGenerated: [
-    'global-directory-citations.csv',
-    'global-directory-citations.json',
-    'global-press-release-wire.md',
-    'global-press-release-wire.json',
-    'global-syndication-blogs.json',
-    'blog-01-macro-investment-thesis.md',
-    'blog-02-global-nri-investment-guide.md',
-    'blog-03-architectural-biophilic-benchmark.md',
-    'blog-04-connectivity-bridge-bypass.md',
-    'blog-05-price-breakdown-cost-sheet-audit.md',
-    'global-forum-qa-injections.json'
-  ]
+    "global-directory-citations.csv",
+    "global-directory-citations.json",
+    "global-press-release-wire.md",
+    "global-press-release-wire.json",
+    "global-syndication-blogs.json",
+    "blog-01-macro-investment-thesis.md",
+    "blog-02-global-nri-investment-guide.md",
+    "blog-03-architectural-biophilic-benchmark.md",
+    "blog-04-connectivity-bridge-bypass.md",
+    "blog-05-price-breakdown-cost-sheet-audit.md",
+    "global-forum-qa-injections.json",
+  ],
 };
 
 fs.writeFileSync(
-  path.join(OUTPUT_DIR, 'injection-manifest.json'),
-  JSON.stringify(INJECTION_SUMMARY, null, 2)
+  path.join(OUTPUT_DIR, "injection-manifest.json"),
+  JSON.stringify(INJECTION_SUMMARY, null, 2),
 );
 
-console.log('🎉 Ultra High Global Off-Page SEO Injection Package successfully generated in public/syndication/global-injection/');
+console.log(
+  "🎉 Ultra High Global Off-Page SEO Injection Package successfully generated in public/syndication/global-injection/",
+);

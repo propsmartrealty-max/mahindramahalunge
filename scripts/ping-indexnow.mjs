@@ -2,7 +2,7 @@
 /**
  * Global Enterprise IndexNow Push Engine (v5.0 Multi-Gateway & Chunked)
  * Mahindra Lifespaces Pune Ecosystem (https://mahindralifespaceshomes.in)
- * 
+ *
  * Capabilities:
  * - Scans all static sitemaps and compiles 100% canonical URL catalog
  * - Batches submissions into clean 100-URL chunks (optimal payload size)
@@ -15,19 +15,22 @@
  * - Graceful retry & non-blocking execution during local sandboxed builds
  */
 
-import fs from 'node:fs';
-import path from 'node:path';
-import { fileURLToPath } from 'node:url';
+import fs from "node:fs";
+import path from "node:path";
+import { fileURLToPath } from "node:url";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const HOST = 'mahindralifespaceshomes.in';
-const GLOBAL_KEY = process.env.GLOBAL_KEY || process.env.INDEXNOW_KEY || '9e4f2b8c6a0d4e7f8b1c3a5d7e9f0b2a';
+const HOST = "mahindralifespaceshomes.in";
+const GLOBAL_KEY =
+  process.env.GLOBAL_KEY ||
+  process.env.INDEXNOW_KEY ||
+  "9e4f2b8c6a0d4e7f8b1c3a5d7e9f0b2a";
 const KEY_LOCATION = `https://${HOST}/${GLOBAL_KEY}.txt`;
 
 // Read all XML sitemaps from dist or fallback to catalog
-const distDir = path.resolve(__dirname, '../dist');
+const distDir = path.resolve(__dirname, "../dist");
 let urlList = [
   `https://${HOST}/`,
   `https://${HOST}/mahindra-rivenza/`,
@@ -65,10 +68,14 @@ let urlList = [
 // Extract all URLs from generated dist/sitemap*.xml if available
 try {
   if (fs.existsSync(distDir)) {
-    const sitemapFiles = fs.readdirSync(distDir).filter(f => f.startsWith('sitemap') && f.endsWith('.xml'));
+    const sitemapFiles = fs
+      .readdirSync(distDir)
+      .filter((f) => f.startsWith("sitemap") && f.endsWith(".xml"));
     for (const file of sitemapFiles) {
-      const xml = fs.readFileSync(path.join(distDir, file), 'utf8');
-      const locMatches = [...xml.matchAll(/<loc>(https:\/\/[^<]+)<\/loc>/g)].map(m => m[1]);
+      const xml = fs.readFileSync(path.join(distDir, file), "utf8");
+      const locMatches = [
+        ...xml.matchAll(/<loc>(https:\/\/[^<]+)<\/loc>/g),
+      ].map((m) => m[1]);
       for (const loc of locMatches) {
         if (!urlList.includes(loc)) urlList.push(loc);
       }
@@ -78,7 +85,9 @@ try {
   // Use fallback list
 }
 
-console.log(`[Enterprise IndexNow] Cataloged ${urlList.length} canonical URLs. Global Key: ${GLOBAL_KEY}`);
+console.log(
+  `[Enterprise IndexNow] Cataloged ${urlList.length} canonical URLs. Global Key: ${GLOBAL_KEY}`,
+);
 
 // Chunk into batches of 100 URLs for optimal transport
 const CHUNK_SIZE = 100;
@@ -88,11 +97,14 @@ for (let i = 0; i < urlList.length; i += CHUNK_SIZE) {
 }
 
 const endpoints = [
-  { name: 'Global IndexNow Hub', url: 'https://api.indexnow.org/indexnow' },
-  { name: 'Microsoft Bing Gateway', url: 'https://www.bing.com/indexnow' },
-  { name: 'Yandex Search Gateway', url: 'https://yandex.com/indexnow' },
-  { name: 'Seznam Search Gateway', url: 'https://search.seznam.cz/indexnow' },
-  { name: 'Naver Search Advisor Gateway', url: 'https://searchadvisor.naver.com/indexnow' },
+  { name: "Global IndexNow Hub", url: "https://api.indexnow.org/indexnow" },
+  { name: "Microsoft Bing Gateway", url: "https://www.bing.com/indexnow" },
+  { name: "Yandex Search Gateway", url: "https://yandex.com/indexnow" },
+  { name: "Seznam Search Gateway", url: "https://search.seznam.cz/indexnow" },
+  {
+    name: "Naver Search Advisor Gateway",
+    url: "https://searchadvisor.naver.com/indexnow",
+  },
 ];
 
 for (const ep of endpoints) {
@@ -108,10 +120,10 @@ for (const ep of endpoints) {
       };
 
       const res = await fetch(ep.url, {
-        method: 'POST',
+        method: "POST",
         headers: {
-          'Content-Type': 'application/json; charset=utf-8',
-          'User-Agent': 'Enterprise-IndexNow-Client/5.0 (Mahindra-Rivenza)',
+          "Content-Type": "application/json; charset=utf-8",
+          "User-Agent": "Enterprise-IndexNow-Client/5.0 (Mahindra-Rivenza)",
         },
         body: JSON.stringify(payload),
       });
@@ -122,9 +134,13 @@ for (const ep of endpoints) {
     }
 
     if (epSuccess > 0) {
-      console.log(`[Enterprise IndexNow] ✓ ${ep.name}: SUCCESS (${epSuccess}/${urlList.length} URLs dispatched)`);
+      console.log(
+        `[Enterprise IndexNow] ✓ ${ep.name}: SUCCESS (${epSuccess}/${urlList.length} URLs dispatched)`,
+      );
     } else {
-      console.log(`[Enterprise IndexNow] ! ${ep.name}: Dispatched ${urlList.length} URLs`);
+      console.log(
+        `[Enterprise IndexNow] ! ${ep.name}: Dispatched ${urlList.length} URLs`,
+      );
     }
   } catch (err) {
     console.warn(`[Enterprise IndexNow] ! ${ep.name} notice: ${err.message}`);

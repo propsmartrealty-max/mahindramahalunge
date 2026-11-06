@@ -1,261 +1,335 @@
-import type { APIRoute } from 'astro';
-import { rievenzaCorridorData } from '../data/pSeoMahindraRivenzaCorridor';
+import type { APIRoute } from "astro";
+import { rievenzaCorridorData } from "../data/pSeoMahindraRivenzaCorridor";
 
 const editorialArticles = [
   {
-    slug: 'mahindra-rivenza-flagship-project-mahalunge-baner-annexe-pune',
-    title: 'Mahindra Rivenza: Definitive 2026 Guide to Flagship Living in Mahalunge, Baner Annexe, Pune',
-    pubDate: 'Wed, 04 Nov 2026 00:00:00 GMT',
-    description: 'The ultimate guide to Mahindra Rivenza: 13.46 acres, 1,236 residences across Phase 1, ₹90L* launch pricing, 44,000 sq.ft clubhouse, and MahaRERA numbers PR1261012602102 and PM1261012602103.'
+    slug: "mahindra-rivenza-flagship-project-mahalunge-baner-annexe-pune",
+    title:
+      "Mahindra Rivenza: Definitive 2026 Guide to Flagship Living in Mahalunge, Baner Annexe, Pune",
+    pubDate: "Wed, 04 Nov 2026 00:00:00 GMT",
+    description:
+      "The ultimate guide to Mahindra Rivenza: 13.46 acres, 1,236 residences across Phase 1, ₹90L* launch pricing, 44,000 sq.ft clubhouse, and MahaRERA numbers PR1261012602102 and PM1261012602103.",
   },
   {
-    slug: 'mahindra-mahalunge-master-township-guide-2026',
-    title: 'Mahindra Mahalunge: Complete Project Review, Pricing & PMRDA Infrastructure 2026',
-    pubDate: 'Wed, 04 Nov 2026 00:00:00 GMT',
-    description: 'In-depth buyer review of Mahindra Mahalunge: PMRDA Town Planning Scheme 1, 4-lane river bridge to Hinjewadi, and competitive benchmarking against Godrej and VTP.'
+    slug: "mahindra-mahalunge-master-township-guide-2026",
+    title:
+      "Mahindra Mahalunge: Complete Project Review, Pricing & PMRDA Infrastructure 2026",
+    pubDate: "Wed, 04 Nov 2026 00:00:00 GMT",
+    description:
+      "In-depth buyer review of Mahindra Mahalunge: PMRDA Town Planning Scheme 1, 4-lane river bridge to Hinjewadi, and competitive benchmarking against Godrej and VTP.",
   },
   {
-    slug: 'mahindra-baner-annexe-luxury-apartments-pune',
-    title: 'Mahindra Baner Annexe: Luxury 2, 3 & 4 BHK Residences, Rates & Location Advantage',
-    pubDate: 'Wed, 04 Nov 2026 00:00:00 GMT',
-    description: 'Discover why Mahindra Baner Annexe delivers a 42% price arbitrage over central Baner with 8-minute connectivity to Balewadi High Street and 2.65 lakh sq.ft. of amenities.'
+    slug: "mahindra-baner-annexe-luxury-apartments-pune",
+    title:
+      "Mahindra Baner Annexe: Luxury 2, 3 & 4 BHK Residences, Rates & Location Advantage",
+    pubDate: "Wed, 04 Nov 2026 00:00:00 GMT",
+    description:
+      "Discover why Mahindra Baner Annexe delivers a 42% price arbitrage over central Baner with 8-minute connectivity to Balewadi High Street and 2.65 lakh sq.ft. of amenities.",
   },
   {
-    slug: 'mahindra-pune-residential-projects-ecosystem',
-    title: 'Mahindra Pune: Complete Real Estate Portfolio, Upcoming Launches & Track Record 2026',
-    pubDate: 'Wed, 04 Nov 2026 00:00:00 GMT',
-    description: 'Institutional analysis of Mahindra Pune projects by Mahindra Lifespaces: Mahindra Rivenza (Mahalunge/Baner Annexe), IvyLush (Kharadi), Citadel (Pimpri), and Happinest.'
+    slug: "mahindra-pune-residential-projects-ecosystem",
+    title:
+      "Mahindra Pune: Complete Real Estate Portfolio, Upcoming Launches & Track Record 2026",
+    pubDate: "Wed, 04 Nov 2026 00:00:00 GMT",
+    description:
+      "Institutional analysis of Mahindra Pune projects by Mahindra Lifespaces: Mahindra Rivenza (Mahalunge/Baner Annexe), IvyLush (Kharadi), Citadel (Pimpri), and Happinest.",
   },
   {
-    slug: 'mahindra-lifespaces-13-acres-mahalunge-project-preview',
-    title: 'Mahindra Lifespaces Acquires 13.46 Acres in Mahalunge: ₹3,500 Cr Master Plan Preview',
-    pubDate: 'Mon, 20 Oct 2025 00:00:00 GMT',
-    description: 'Detailed breakdown of Mahindra Lifespaces strategic acquisition in the Nande–Mahalunge corridor, featuring 2, 3 & 4 BHK future-ready sustainable residences.'
+    slug: "mahindra-lifespaces-13-acres-mahalunge-project-preview",
+    title:
+      "Mahindra Lifespaces Acquires 13.46 Acres in Mahalunge: ₹3,500 Cr Master Plan Preview",
+    pubDate: "Mon, 20 Oct 2025 00:00:00 GMT",
+    description:
+      "Detailed breakdown of Mahindra Lifespaces strategic acquisition in the Nande–Mahalunge corridor, featuring 2, 3 & 4 BHK future-ready sustainable residences.",
   },
   {
-    slug: 'mahindra-mahalunge-vs-godrej-vtp-kolte-patil',
-    title: 'Mahindra Mahalunge vs Godrej Hillside vs VTP Blue Waters vs Kolte Patil: The Definitive Comparison',
-    pubDate: 'Sun, 15 Jan 2026 00:00:00 GMT',
-    description: 'An objective head-to-head evaluation of land density, developer trust, construction quality, green ratings, and ROI across Mahalunges landmark developments.'
+    slug: "mahindra-mahalunge-vs-godrej-vtp-kolte-patil",
+    title:
+      "Mahindra Mahalunge vs Godrej Hillside vs VTP Blue Waters vs Kolte Patil: The Definitive Comparison",
+    pubDate: "Sun, 15 Jan 2026 00:00:00 GMT",
+    description:
+      "An objective head-to-head evaluation of land density, developer trust, construction quality, green ratings, and ROI across Mahalunges landmark developments.",
   },
   {
-    slug: 'mahalunge-pin-code-connectivity-infrastructure-guide-2026',
-    title: 'Mahalunge Pune Pin Code 411045: Infrastructure, DP Roads & Metro Line 3 Connectivity Guide',
-    pubDate: 'Mon, 16 Feb 2026 00:00:00 GMT',
-    description: 'Exhaustive locality dossier covering postal pin code 411045, PMRDA 36m DP road network, Hinjewadi-Mahalunge bridge, Metro Line 3, and Ring Road alignment.'
+    slug: "mahalunge-pin-code-connectivity-infrastructure-guide-2026",
+    title:
+      "Mahalunge Pune Pin Code 411045: Infrastructure, DP Roads & Metro Line 3 Connectivity Guide",
+    pubDate: "Mon, 16 Feb 2026 00:00:00 GMT",
+    description:
+      "Exhaustive locality dossier covering postal pin code 411045, PMRDA 36m DP road network, Hinjewadi-Mahalunge bridge, Metro Line 3, and Ring Road alignment.",
   },
   {
-    slug: 'mahindra-lifespaces-pune-track-record-residential-legacy',
-    title: 'Mahindra Lifespaces in Pune: A Proven Legacy of Delivered Trust Across Landmark Communities',
-    pubDate: 'Wed, 18 Feb 2026 00:00:00 GMT',
-    description: 'Discover Mahindra Lifespaces delivered Pune communities—from Antheia and Centralis to Happinest Tathawade and the upcoming 13.46-acre Mahalunge community.'
+    slug: "mahindra-lifespaces-pune-track-record-residential-legacy",
+    title:
+      "Mahindra Lifespaces in Pune: A Proven Legacy of Delivered Trust Across Landmark Communities",
+    pubDate: "Wed, 18 Feb 2026 00:00:00 GMT",
+    description:
+      "Discover Mahindra Lifespaces delivered Pune communities—from Antheia and Centralis to Happinest Tathawade and the upcoming 13.46-acre Mahalunge community.",
   },
   {
-    slug: 'mahalunge-vs-baner-vs-hinjewadi',
-    title: 'Mahalunge vs Baner vs Hinjewadi: Which Location Offers the Best ROI & Lifestyle?',
-    pubDate: 'Fri, 20 Feb 2026 00:00:00 GMT',
-    description: 'An objective comparative study of property prices, rental yields, civic infrastructure, and long-term capital appreciation across Punes golden triangle.'
+    slug: "mahalunge-vs-baner-vs-hinjewadi",
+    title:
+      "Mahalunge vs Baner vs Hinjewadi: Which Location Offers the Best ROI & Lifestyle?",
+    pubDate: "Fri, 20 Feb 2026 00:00:00 GMT",
+    description:
+      "An objective comparative study of property prices, rental yields, civic infrastructure, and long-term capital appreciation across Punes golden triangle.",
   },
   {
-    slug: 'pmrda-town-planning-scheme-mahalunge',
-    title: 'PMRDA Town Planning Scheme at Mahalunge: 36M Roads, Metro 3 & Ring Road Impact',
-    pubDate: 'Mon, 23 Feb 2026 00:00:00 GMT',
-    description: 'How Punes flagship PMRDA model Town Planning Scheme is transforming Mahalunge into a world-class smart urban habitat with underground utility networks.'
+    slug: "pmrda-town-planning-scheme-mahalunge",
+    title:
+      "PMRDA Town Planning Scheme at Mahalunge: 36M Roads, Metro 3 & Ring Road Impact",
+    pubDate: "Mon, 23 Feb 2026 00:00:00 GMT",
+    description:
+      "How Punes flagship PMRDA model Town Planning Scheme is transforming Mahalunge into a world-class smart urban habitat with underground utility networks.",
   },
   {
-    slug: 'mahalunge-property-prices-investment-trends',
-    title: 'Mahalunge Property Price Trends 2026: Historical Appreciation & 5-Year Forecast',
-    pubDate: 'Wed, 25 Feb 2026 00:00:00 GMT',
-    description: 'Comprehensive data on price per sq.ft., rental yield averages (4.2% - 5.5%), and the upcoming price inflection following Grade-A developer entries.'
+    slug: "mahalunge-property-prices-investment-trends",
+    title:
+      "Mahalunge Property Price Trends 2026: Historical Appreciation & 5-Year Forecast",
+    pubDate: "Wed, 25 Feb 2026 00:00:00 GMT",
+    description:
+      "Comprehensive data on price per sq.ft., rental yield averages (4.2% - 5.5%), and the upcoming price inflection following Grade-A developer entries.",
   },
   {
-    slug: 'schools-hospitals-it-parks-near-mahalunge',
-    title: 'Social Infrastructure in Mahalunge: Top International Schools, Hospitals & IT Tech Parks',
-    pubDate: 'Fri, 27 Feb 2026 00:00:00 GMT',
-    description: 'Explore proximity to Mahindra International School, DPS Pune, Symbiosis, Jupiter Hospital, and Hinjewadi IT Park Phases 1, 2, and 3.'
+    slug: "schools-hospitals-it-parks-near-mahalunge",
+    title:
+      "Social Infrastructure in Mahalunge: Top International Schools, Hospitals & IT Tech Parks",
+    pubDate: "Fri, 27 Feb 2026 00:00:00 GMT",
+    description:
+      "Explore proximity to Mahindra International School, DPS Pune, Symbiosis, Jupiter Hospital, and Hinjewadi IT Park Phases 1, 2, and 3.",
   },
   {
-    slug: 'why-mahalunge-nande-maan-is-punes-next-billion-dollar-growth-corridor',
-    title: 'Why Nande-Mahalunge-Maan is Punes Next Billion-Dollar Residential Growth Corridor',
-    pubDate: 'Tue, 03 Mar 2026 00:00:00 GMT',
-    description: 'The confluence of geographic green belts, riverfront topography, IT tech job corridors, and institutional investments shaping the western horizon.'
+    slug: "why-mahalunge-nande-maan-is-punes-next-billion-dollar-growth-corridor",
+    title:
+      "Why Nande-Mahalunge-Maan is Punes Next Billion-Dollar Residential Growth Corridor",
+    pubDate: "Tue, 03 Mar 2026 00:00:00 GMT",
+    description:
+      "The confluence of geographic green belts, riverfront topography, IT tech job corridors, and institutional investments shaping the western horizon.",
   },
   {
-    slug: 'mahindra-lifespaces-mahalunge-upcoming-project-guide',
-    title: 'Mahindra Lifespaces Mahalunge: Upcoming Project Guide (13.46-Acre Acquisition & Pre-Launch Insights)',
-    pubDate: 'Thu, 05 Mar 2026 00:00:00 GMT',
-    description: 'Comprehensive overview of the upcoming 13.46-acre master development announced in October 2025: ₹3,500 Cr GDV, biophilic living, and pre-launch timeline.'
+    slug: "mahindra-lifespaces-mahalunge-upcoming-project-guide",
+    title:
+      "Mahindra Lifespaces Mahalunge: Upcoming Project Guide (13.46-Acre Acquisition & Pre-Launch Insights)",
+    pubDate: "Thu, 05 Mar 2026 00:00:00 GMT",
+    description:
+      "Comprehensive overview of the upcoming 13.46-acre master development announced in October 2025: ₹3,500 Cr GDV, biophilic living, and pre-launch timeline.",
   },
   {
-    slug: 'mahindra-lifespaces-acquires-land-in-nande-mahalunge-what-it-means',
-    title: 'Mahindra Lifespaces Acquires Land in Nande-Mahalunge: What It Means for Pune Real Estate',
-    pubDate: 'Sun, 08 Mar 2026 00:00:00 GMT',
-    description: 'Detailed economic analysis of Mahindras 13.46-acre acquisition, why the company selected Nande-Mahalunge, and its regional price appreciation impact.'
+    slug: "mahindra-lifespaces-acquires-land-in-nande-mahalunge-what-it-means",
+    title:
+      "Mahindra Lifespaces Acquires Land in Nande-Mahalunge: What It Means for Pune Real Estate",
+    pubDate: "Sun, 08 Mar 2026 00:00:00 GMT",
+    description:
+      "Detailed economic analysis of Mahindras 13.46-acre acquisition, why the company selected Nande-Mahalunge, and its regional price appreciation impact.",
   },
   {
-    slug: 'west-pune-real-estate-complete-2026-guide',
-    title: 'West Pune Real Estate: Complete 2026 Investment Guide & Emerging Micro-Markets',
-    pubDate: 'Wed, 11 Mar 2026 00:00:00 GMT',
-    description: 'Compare price rates per sq.ft., rental yields (4.2% - 5.5%), and capital growth across Hinjewadi, Baner, Wakad, Tathawade, and Mahalunge.'
+    slug: "west-pune-real-estate-complete-2026-guide",
+    title:
+      "West Pune Real Estate: Complete 2026 Investment Guide & Emerging Micro-Markets",
+    pubDate: "Wed, 11 Mar 2026 00:00:00 GMT",
+    description:
+      "Compare price rates per sq.ft., rental yields (4.2% - 5.5%), and capital growth across Hinjewadi, Baner, Wakad, Tathawade, and Mahalunge.",
   },
   {
-    slug: 'nande-mahalunge-maan-real-estate-guide',
-    title: 'Nande–Mahalunge–Maan Real Estate Guide: PMRDA Town Planning, Inner Ring Road & IT Corridor Hubs',
-    pubDate: 'Sat, 14 Mar 2026 00:00:00 GMT',
-    description: 'How Nande, Mahalunge, and Maan form West Punes strategic growth triangle with PMRDA Town Planning Scheme 1 and Hinjewadi river bridges.'
+    slug: "nande-mahalunge-maan-real-estate-guide",
+    title:
+      "Nande–Mahalunge–Maan Real Estate Guide: PMRDA Town Planning, Inner Ring Road & IT Corridor Hubs",
+    pubDate: "Sat, 14 Mar 2026 00:00:00 GMT",
+    description:
+      "How Nande, Mahalunge, and Maan form West Punes strategic growth triangle with PMRDA Town Planning Scheme 1 and Hinjewadi river bridges.",
   },
   {
-    slug: 'pune-inner-ring-road-and-west-pune-real-estate',
-    title: 'Pune Inner Ring Road & West Pune Real Estate: Infrastructure Transformation in Mahalunge & Nande',
-    pubDate: 'Tue, 17 Mar 2026 00:00:00 GMT',
-    description: 'The planned Pune Inner Ring Road and its alignment through Mahalunge and Nande, connecting directly to Mumbai-Bengaluru Highway and PCMC.'
+    slug: "pune-inner-ring-road-and-west-pune-real-estate",
+    title:
+      "Pune Inner Ring Road & West Pune Real Estate: Infrastructure Transformation in Mahalunge & Nande",
+    pubDate: "Tue, 17 Mar 2026 00:00:00 GMT",
+    description:
+      "The planned Pune Inner Ring Road and its alignment through Mahalunge and Nande, connecting directly to Mumbai-Bengaluru Highway and PCMC.",
   },
   {
-    slug: 'mahindra-rivenza-launch-price-carpet-area-analysis-2026',
-    title: 'Mahindra Rivenza Launch Price, Carpet Area & Typology Breakdown: Complete 2026 Evaluation',
-    pubDate: 'Tue, 06 Oct 2026 00:00:00 GMT',
-    description: 'Comprehensive buyer breakdown of Mahindra Rivenza launch pricing starting ₹90 Lakhs*, carpet areas (635 - 1,465 sq.ft), aggregate usable areas, and ~44,000 sq.ft clubhouse specifications.'
+    slug: "mahindra-rivenza-launch-price-carpet-area-analysis-2026",
+    title:
+      "Mahindra Rivenza Launch Price, Carpet Area & Typology Breakdown: Complete 2026 Evaluation",
+    pubDate: "Tue, 06 Oct 2026 00:00:00 GMT",
+    description:
+      "Comprehensive buyer breakdown of Mahindra Rivenza launch pricing starting ₹90 Lakhs*, carpet areas (635 - 1,465 sq.ft), aggregate usable areas, and ~44,000 sq.ft clubhouse specifications.",
   },
   {
-    slug: 'mahindra-rivenza-vs-baner-vs-hinjewadi-roi-yield',
-    title: 'Mahindra Rivenza vs Baner vs Hinjewadi: Rental Yields, Capital Growth & West Pune IT Tri-Corridor',
-    pubDate: 'Wed, 07 Oct 2026 00:00:00 GMT',
-    description: 'Comparative investment analysis of Mahindra Rivenza at Baner Annex / Mahalunge against core Baner and Hinjewadi Phase 1 micro-markets.'
+    slug: "mahindra-rivenza-vs-baner-vs-hinjewadi-roi-yield",
+    title:
+      "Mahindra Rivenza vs Baner vs Hinjewadi: Rental Yields, Capital Growth & West Pune IT Tri-Corridor",
+    pubDate: "Wed, 07 Oct 2026 00:00:00 GMT",
+    description:
+      "Comparative investment analysis of Mahindra Rivenza at Baner Annex / Mahalunge against core Baner and Hinjewadi Phase 1 micro-markets.",
   },
   {
-    slug: 'flats-under-1-crore-in-west-pune',
-    title: 'Flats Under ₹1 Crore in West Pune: Best Investment & End-Use Options 2026',
-    pubDate: 'Tue, 21 Oct 2026 00:00:00 GMT',
-    description: 'Explore the best 2 BHK flats under ₹1 Crore in West Pune across Mahalunge, Tathawade, and Hinjewadi. Why Mahindra Rivenza at ₹90 Lakhs* offers institutional quality and top rental yields.'
+    slug: "flats-under-1-crore-in-west-pune",
+    title:
+      "Flats Under ₹1 Crore in West Pune: Best Investment & End-Use Options 2026",
+    pubDate: "Tue, 21 Oct 2026 00:00:00 GMT",
+    description:
+      "Explore the best 2 BHK flats under ₹1 Crore in West Pune across Mahalunge, Tathawade, and Hinjewadi. Why Mahindra Rivenza at ₹90 Lakhs* offers institutional quality and top rental yields.",
   },
   {
-    slug: 'luxury-flats-under-2-crore-in-pune',
-    title: 'Luxury Flats Under ₹2 Crore in Pune: 3 BHK Sky Suites & Resort Living 2026',
-    pubDate: 'Tue, 21 Oct 2026 00:00:00 GMT',
-    description: 'In-depth buyer guide for luxury 3 BHK flats under ₹2 Crore in Pune. Compare carpet area, green ratio, and ~44,000 sq.ft clubhouse at Mahindra Rivenza.'
+    slug: "luxury-flats-under-2-crore-in-pune",
+    title:
+      "Luxury Flats Under ₹2 Crore in Pune: 3 BHK Sky Suites & Resort Living 2026",
+    pubDate: "Tue, 21 Oct 2026 00:00:00 GMT",
+    description:
+      "In-depth buyer guide for luxury 3 BHK flats under ₹2 Crore in Pune. Compare carpet area, green ratio, and ~44,000 sq.ft clubhouse at Mahindra Rivenza.",
   },
   {
-    slug: 'flats-near-pune-metro-line-3',
-    title: 'Flats Near Pune Metro Line 3: Hinjewadi to Shivajinagar Property Growth Corridor',
-    pubDate: 'Tue, 21 Oct 2026 00:00:00 GMT',
-    description: 'How Pune Metro Line 3 connects Hinjewadi to Shivajinagar in 23 stations, driving 15% to 20% rental premiums and capital appreciation for residential communities like Mahindra Rivenza.'
+    slug: "flats-near-pune-metro-line-3",
+    title:
+      "Flats Near Pune Metro Line 3: Hinjewadi to Shivajinagar Property Growth Corridor",
+    pubDate: "Tue, 21 Oct 2026 00:00:00 GMT",
+    description:
+      "How Pune Metro Line 3 connects Hinjewadi to Shivajinagar in 23 stations, driving 15% to 20% rental premiums and capital appreciation for residential communities like Mahindra Rivenza.",
   },
   {
-    slug: 'ready-possession-vs-under-construction-pune',
-    title: 'Ready Possession vs Under Construction Flats in Pune: Which Offers Higher ROI in 2026?',
-    pubDate: 'Tue, 21 Oct 2026 00:00:00 GMT',
-    description: 'A comprehensive financial comparison of ready vs under-construction apartments in Pune, covering GST exemptions, pre-launch price discounts, and developer RERA escrow compliance.'
+    slug: "ready-possession-vs-under-construction-pune",
+    title:
+      "Ready Possession vs Under Construction Flats in Pune: Which Offers Higher ROI in 2026?",
+    pubDate: "Tue, 21 Oct 2026 00:00:00 GMT",
+    description:
+      "A comprehensive financial comparison of ready vs under-construction apartments in Pune, covering GST exemptions, pre-launch price discounts, and developer RERA escrow compliance.",
   },
   {
-    slug: 'mahindra-rivenza-cost-sheet-pricing-breakdown-2026',
-    title: 'Mahindra Rivenza Cost Sheet Breakdown 2026: All-Inclusive Pricing & Payment Milestones',
-    pubDate: 'Wed, 21 Oct 2026 00:00:00 GMT',
-    description: 'Comprehensive buyer breakdown of Mahindra Rivenza cost sheet in Baner Annex, Mahalunge, Pune. Detailed analysis of 2, 3 & 4 BHK base prices, 7% stamp duty, 5% GST, and CLP payment schedules.'
+    slug: "mahindra-rivenza-cost-sheet-pricing-breakdown-2026",
+    title:
+      "Mahindra Rivenza Cost Sheet Breakdown 2026: All-Inclusive Pricing & Payment Milestones",
+    pubDate: "Wed, 21 Oct 2026 00:00:00 GMT",
+    description:
+      "Comprehensive buyer breakdown of Mahindra Rivenza cost sheet in Baner Annex, Mahalunge, Pune. Detailed analysis of 2, 3 & 4 BHK base prices, 7% stamp duty, 5% GST, and CLP payment schedules.",
   },
   {
-    slug: 'rent-vs-buy-in-hinjewadi-mahalunge-2026',
-    title: 'Rent vs Buy in Hinjewadi-Mahalunge 2026: 10-Year Financial Model for IT Professionals',
-    pubDate: 'Wed, 21 Oct 2026 00:00:00 GMT',
-    description: 'Comprehensive 10-year mathematical analysis comparing renting in Hinjewadi against buying a 2 BHK apartment at Mahindra Rivenza Baner Annex. Analyzes rental inflation and equity accumulation.'
+    slug: "rent-vs-buy-in-hinjewadi-mahalunge-2026",
+    title:
+      "Rent vs Buy in Hinjewadi-Mahalunge 2026: 10-Year Financial Model for IT Professionals",
+    pubDate: "Wed, 21 Oct 2026 00:00:00 GMT",
+    description:
+      "Comprehensive 10-year mathematical analysis comparing renting in Hinjewadi against buying a 2 BHK apartment at Mahindra Rivenza Baner Annex. Analyzes rental inflation and equity accumulation.",
   },
   {
-    slug: 'mahindra-rivenza-rera-possession-milestones-escrow',
-    title: 'Mahindra Rivenza MahaRERA Compliance, Possession Milestones & Escrow Security',
-    pubDate: 'Wed, 21 Oct 2026 00:00:00 GMT',
-    description: 'Exhaustive legal and regulatory evaluation of Mahindra Rivenza by Mahindra Lifespaces at Baner Annex (Mahalunge), Pune. Verifies MahaRERA numbers PR1261012602102 and PM1261012602103.'
+    slug: "mahindra-rivenza-rera-possession-milestones-escrow",
+    title:
+      "Mahindra Rivenza MahaRERA Compliance, Possession Milestones & Escrow Security",
+    pubDate: "Wed, 21 Oct 2026 00:00:00 GMT",
+    description:
+      "Exhaustive legal and regulatory evaluation of Mahindra Rivenza by Mahindra Lifespaces at Baner Annex (Mahalunge), Pune. Verifies MahaRERA numbers PR1261012602102 and PM1261012602103.",
   },
   {
-    slug: 'hinjewadi-mahalunge-bridge-connectivity-status-2026',
-    title: 'Hinjewadi-Mahalunge Mula River Bridge Status 2026: Route Map, Commute Impact & Real Estate Boom',
-    pubDate: 'Wed, 21 Oct 2026 00:00:00 GMT',
-    description: 'Comprehensive report on the upcoming Hinjewadi-Mahalunge Mula River Bridge. Detailed analysis of 4-lane direct connectivity, reduction of commute from 25 mins to 4 mins, and price appreciation.'
+    slug: "hinjewadi-mahalunge-bridge-connectivity-status-2026",
+    title:
+      "Hinjewadi-Mahalunge Mula River Bridge Status 2026: Route Map, Commute Impact & Real Estate Boom",
+    pubDate: "Wed, 21 Oct 2026 00:00:00 GMT",
+    description:
+      "Comprehensive report on the upcoming Hinjewadi-Mahalunge Mula River Bridge. Detailed analysis of 4-lane direct connectivity, reduction of commute from 25 mins to 4 mins, and price appreciation.",
   },
   {
-    slug: 'mahindra-rivenza-construction-status-updates-2026',
-    title: 'Mahindra Rivenza Construction Status 2026: Live Site Progress, Milestones & MahaRERA Timeline',
-    pubDate: 'Wed, 21 Oct 2026 00:00:00 GMT',
-    description: 'Exhaustive construction status report for Mahindra Rivenza in Mahalunge, Baner Annex, Pune. Track live ground progress, foundation piling, Mivan shuttering technology, and MahaRERA audit delivery schedules.'
+    slug: "mahindra-rivenza-construction-status-updates-2026",
+    title:
+      "Mahindra Rivenza Construction Status 2026: Live Site Progress, Milestones & MahaRERA Timeline",
+    pubDate: "Wed, 21 Oct 2026 00:00:00 GMT",
+    description:
+      "Exhaustive construction status report for Mahindra Rivenza in Mahalunge, Baner Annex, Pune. Track live ground progress, foundation piling, Mivan shuttering technology, and MahaRERA audit delivery schedules.",
   },
   {
-    slug: 'mahindra-rivenza-sample-flat-virtual-tour-review',
-    title: 'Mahindra Rivenza Sample Flat Review: 2 & 3 BHK Interior Walkthrough, Photos & Floor Specs',
-    pubDate: 'Wed, 21 Oct 2026 00:00:00 GMT',
-    description: 'Exhaustive review and interior walkthrough of the official Mahindra Rivenza sample flats in Mahalunge, Baner Annex, Pune. Detailed analysis of 2 & 3 BHK layout efficiency and 2.95m ceiling heights.'
+    slug: "mahindra-rivenza-sample-flat-virtual-tour-review",
+    title:
+      "Mahindra Rivenza Sample Flat Review: 2 & 3 BHK Interior Walkthrough, Photos & Floor Specs",
+    pubDate: "Wed, 21 Oct 2026 00:00:00 GMT",
+    description:
+      "Exhaustive review and interior walkthrough of the official Mahindra Rivenza sample flats in Mahalunge, Baner Annex, Pune. Detailed analysis of 2 & 3 BHK layout efficiency and 2.95m ceiling heights.",
   },
   {
-    slug: 'mahindra-rivenza-bank-loan-approvals-sbi-hdfc-icici',
-    title: 'Mahindra Rivenza Bank Loan Approvals: SBI, HDFC, ICICI APF Codes & Pre-EMI Guide',
-    pubDate: 'Fri, 23 Oct 2026 00:00:00 GMT',
-    description: 'Verified bank loan approval codes for Mahindra Rivenza Baner Annex: SBI, HDFC Bank, ICICI Bank, Axis Bank. Pre-approved APF codes, 80% funding & CLP disbursement schedules.'
+    slug: "mahindra-rivenza-bank-loan-approvals-sbi-hdfc-icici",
+    title:
+      "Mahindra Rivenza Bank Loan Approvals: SBI, HDFC, ICICI APF Codes & Pre-EMI Guide",
+    pubDate: "Fri, 23 Oct 2026 00:00:00 GMT",
+    description:
+      "Verified bank loan approval codes for Mahindra Rivenza Baner Annex: SBI, HDFC Bank, ICICI Bank, Axis Bank. Pre-approved APF codes, 80% funding & CLP disbursement schedules.",
   },
   {
-    slug: 'mahindra-rivenza-maintenance-charges-breakdown-pune',
-    title: 'Mahindra Rivenza Maintenance Charges: Monthly Cost per Sq.Ft. & Society Breakdown',
-    pubDate: 'Sat, 24 Oct 2026 00:00:00 GMT',
-    description: 'Detailed guide to Mahindra Rivenza maintenance charges in Baner Annex, Mahalunge, Pune. Estimated cost per sq.ft., clubhouse fees, sinking fund & Net-Zero utility savings.'
+    slug: "mahindra-rivenza-maintenance-charges-breakdown-pune",
+    title:
+      "Mahindra Rivenza Maintenance Charges: Monthly Cost per Sq.Ft. & Society Breakdown",
+    pubDate: "Sat, 24 Oct 2026 00:00:00 GMT",
+    description:
+      "Detailed guide to Mahindra Rivenza maintenance charges in Baner Annex, Mahalunge, Pune. Estimated cost per sq.ft., clubhouse fees, sinking fund & Net-Zero utility savings.",
   },
   {
-    slug: 'mahindra-rivenza-possession-date-handover-timeline-2026',
-    title: 'Mahindra Rivenza Possession Date: RERA Handover Timeline & Construction Milestones',
-    pubDate: 'Sun, 25 Oct 2026 00:00:00 GMT',
-    description: 'Official possession date & handover timeline for Mahindra Rivenza at Baner Annex, Mahalunge, Pune. MahaRERA completion target 2028-2031 & delivery phase milestones.'
-  }
+    slug: "mahindra-rivenza-possession-date-handover-timeline-2026",
+    title:
+      "Mahindra Rivenza Possession Date: RERA Handover Timeline & Construction Milestones",
+    pubDate: "Sun, 25 Oct 2026 00:00:00 GMT",
+    description:
+      "Official possession date & handover timeline for Mahindra Rivenza at Baner Annex, Mahalunge, Pune. MahaRERA completion target 2028-2031 & delivery phase milestones.",
+  },
 ];
 
 // Combine editorial articles with programmatic corridor dossiers and category hubs
 const allRssItems = [
-  ...editorialArticles.map(art => ({
+  ...editorialArticles.map((art) => ({
     title: art.title,
     link: `https://mahindralifespaceshomes.in/articles/${art.slug}/`,
     description: art.description,
     pubDate: art.pubDate,
   })),
-  ...rievenzaCorridorData.map(item => ({
+  ...rievenzaCorridorData.map((item) => ({
     title: item.h1,
     link: `https://mahindralifespaceshomes.in/mahindra-rivenza/${item.slug}/`,
     description: item.metaDescription,
-    pubDate: 'Wed, 28 Oct 2026 12:00:00 GMT',
+    pubDate: "Wed, 28 Oct 2026 12:00:00 GMT",
   })),
   {
-    title: 'Mahindra Rivenza Baner Annex: 50+ Curated Resort Lifestyle Amenities',
-    link: 'https://mahindralifespaceshomes.in/amenities/',
-    description: 'Comprehensive directory of 50+ resort lifestyle amenities across Aquatics, Athletics, Biophilic Nature, and ~44,000 sq.ft Clubhouses.',
-    pubDate: 'Wed, 28 Oct 2026 12:00:00 GMT',
+    title:
+      "Mahindra Rivenza Baner Annex: 50+ Curated Resort Lifestyle Amenities",
+    link: "https://mahindralifespaceshomes.in/amenities/",
+    description:
+      "Comprehensive directory of 50+ resort lifestyle amenities across Aquatics, Athletics, Biophilic Nature, and ~44,000 sq.ft Clubhouses.",
+    pubDate: "Wed, 28 Oct 2026 12:00:00 GMT",
   },
   {
-    title: 'Flats Near Hinjewadi IT Parks: Commute Times & Proximity Matrix',
-    link: 'https://mahindralifespaceshomes.in/near/',
-    description: 'Master directory of 32 top IT and tech parks near Mahindra Rivenza Baner Annex with commute benchmarks.',
-    pubDate: 'Wed, 28 Oct 2026 12:00:00 GMT',
+    title: "Flats Near Hinjewadi IT Parks: Commute Times & Proximity Matrix",
+    link: "https://mahindralifespaceshomes.in/near/",
+    description:
+      "Master directory of 32 top IT and tech parks near Mahindra Rivenza Baner Annex with commute benchmarks.",
+    pubDate: "Wed, 28 Oct 2026 12:00:00 GMT",
   },
   {
-    title: 'Mahindra Rivenza Project Comparisons: Pune Landmark Developments',
-    link: 'https://mahindralifespaceshomes.in/compare/',
-    description: 'Objective comparative dossiers comparing Mahindra Rivenza against Godrej, VTP, Kolte Patil, and Pune landmarks.',
-    pubDate: 'Wed, 28 Oct 2026 12:00:00 GMT',
+    title: "Mahindra Rivenza Project Comparisons: Pune Landmark Developments",
+    link: "https://mahindralifespaceshomes.in/compare/",
+    description:
+      "Objective comparative dossiers comparing Mahindra Rivenza against Godrej, VTP, Kolte Patil, and Pune landmarks.",
+    pubDate: "Wed, 28 Oct 2026 12:00:00 GMT",
   },
   {
-    title: 'Mahindra Rivenza Infrastructure & Transit Connectivity Matrix',
-    link: 'https://mahindralifespaceshomes.in/connectivity/',
-    description: 'Connectivity matrix covering Pune Metro Line 3, PMRDA 36m Ring Road, and Hinjewadi-Mahalunge Mula River Bridge.',
-    pubDate: 'Wed, 28 Oct 2026 12:00:00 GMT',
+    title: "Mahindra Rivenza Infrastructure & Transit Connectivity Matrix",
+    link: "https://mahindralifespaceshomes.in/connectivity/",
+    description:
+      "Connectivity matrix covering Pune Metro Line 3, PMRDA 36m Ring Road, and Hinjewadi-Mahalunge Mula River Bridge.",
+    pubDate: "Wed, 28 Oct 2026 12:00:00 GMT",
   },
   {
-    title: 'Mahindra Rivenza Global NRI Real Estate Investment Desks',
-    link: 'https://mahindralifespaceshomes.in/nri/',
-    description: 'Dedicated wealth advisory and NRI investment portals for Dubai UAE, Silicon Valley USA, Singapore, and UK expat investors.',
-    pubDate: 'Wed, 28 Oct 2026 12:00:00 GMT',
+    title: "Mahindra Rivenza Global NRI Real Estate Investment Desks",
+    link: "https://mahindralifespaceshomes.in/nri/",
+    description:
+      "Dedicated wealth advisory and NRI investment portals for Dubai UAE, Silicon Valley USA, Singapore, and UK expat investors.",
+    pubDate: "Wed, 28 Oct 2026 12:00:00 GMT",
   },
   {
-    title: 'Mahindra Lifespaces Pune Portfolio & Landmark Residential Projects',
-    link: 'https://mahindralifespaceshomes.in/brand/projects/',
-    description: 'Portfolio review of Mahindra Lifespaces developments in Pune including Rivenza, Citadel, Ivylush, and Happinest.',
-    pubDate: 'Wed, 28 Oct 2026 12:00:00 GMT',
-  }
+    title: "Mahindra Lifespaces Pune Portfolio & Landmark Residential Projects",
+    link: "https://mahindralifespaceshomes.in/brand/projects/",
+    description:
+      "Portfolio review of Mahindra Lifespaces developments in Pune including Rivenza, Citadel, Ivylush, and Happinest.",
+    pubDate: "Wed, 28 Oct 2026 12:00:00 GMT",
+  },
 ];
 
 export const GET: APIRoute = async () => {
-  const defaultRssImage = 'https://mahindralifespaceshomes.in/images/official/mahindra-rivenza-architectural-elevation.webp';
+  const defaultRssImage =
+    "https://mahindralifespaceshomes.in/images/official/mahindra-rivenza-architectural-elevation.webp";
 
   const rssXml = `<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
@@ -282,16 +356,16 @@ export const GET: APIRoute = async () => {
         <media:title><![CDATA[${art.title}]]></media:title>
         <media:description><![CDATA[${art.description}]]></media:description>
       </media:content>
-    </item>`
+    </item>`,
       )
-      .join('')}
+      .join("")}
   </channel>
 </rss>`;
 
   return new Response(rssXml.trim(), {
     headers: {
-      'Content-Type': 'application/xml; charset=utf-8',
-      'Cache-Control': 'public, max-age=3600, stale-while-revalidate=86400',
+      "Content-Type": "application/xml; charset=utf-8",
+      "Cache-Control": "public, max-age=3600, stale-while-revalidate=86400",
     },
   });
 };

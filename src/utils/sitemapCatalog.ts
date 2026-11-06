@@ -11,72 +11,89 @@ export interface SitemapImage {
 export interface SitemapEntry {
   url: string;
   title: string;
-  category: 'core' | 'residences' | 'locations' | 'techparks' | 'schools' | 'hospitals' | 'metro' | 'nri' | 'stories' | 'connectivity' | 'comparisons' | 'projects' | 'articles' | 'floorplans' | 'commute';
+  category:
+    | "core"
+    | "residences"
+    | "locations"
+    | "techparks"
+    | "schools"
+    | "hospitals"
+    | "metro"
+    | "nri"
+    | "stories"
+    | "connectivity"
+    | "comparisons"
+    | "projects"
+    | "articles"
+    | "floorplans"
+    | "commute";
   priority: number;
-  changefreq: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly';
+  changefreq: "always" | "hourly" | "daily" | "weekly" | "monthly" | "yearly";
   lastmod?: string;
   images?: SitemapImage[];
 }
 
-export const BASE_URL = 'https://mahindralifespaceshomes.in';
-export const CURRENT_DATE = new Date().toISOString().split('T')[0]; // YYYY-MM-DD
+export const BASE_URL = "https://mahindralifespaceshomes.in";
+export const CURRENT_DATE = new Date().toISOString().split("T")[0]; // YYYY-MM-DD
 
-import { schoolData } from '../data/pSeoSchools';
-import { nriPortalsData } from '../data/pSeoNriPortals';
-import { hospitalData } from '../data/pSeoHospitals';
-import { metroData } from '../data/pSeoMetroStations';
-import { webStoriesData } from '../data/pSeoWebStories';
-import { westPuneLocalityData } from '../data/pSeoWestPuneLocalities';
-import { floorPlansData } from '../data/pSeoFloorPlans';
-import { commuteMatrixData } from '../data/pSeoCommuteMatrix';
-import { techParkData } from '../data/pSeoTechParks';
-import { connectivityData } from '../data/pSeoConnectivity';
-import { rievenzaCorridorData } from '../data/pSeoMahindraRivenzaCorridor';
-
+import { schoolData } from "../data/pSeoSchools";
+import { nriPortalsData } from "../data/pSeoNriPortals";
+import { hospitalData } from "../data/pSeoHospitals";
+import { metroData } from "../data/pSeoMetroStations";
+import { webStoriesData } from "../data/pSeoWebStories";
+import { westPuneLocalityData } from "../data/pSeoWestPuneLocalities";
+import { floorPlansData } from "../data/pSeoFloorPlans";
+import { commuteMatrixData } from "../data/pSeoCommuteMatrix";
+import { techParkData } from "../data/pSeoTechParks";
+import { connectivityData } from "../data/pSeoConnectivity";
+import { rievenzaCorridorData } from "../data/pSeoMahindraRivenzaCorridor";
 
 // Shared Project Images for Google Image Sitemap Indexation
 export const PRIMARY_IMAGES: SitemapImage[] = [
   {
-    loc: 'https://mahindralifespaceshomes.in/images/official/mahindra-rivenza-architectural-elevation.webp',
-    title: 'Mahindra Rivenza - 13.46-Acre Landmark Architectural Elevation',
-    caption: 'Official architectural elevation of Mahindra Rivenza at Baner Annex, Mahalunge, Pune',
-    geo: 'Mahalunge, Baner Annex, Pune, Maharashtra, India',
+    loc: "https://mahindralifespaceshomes.in/images/official/mahindra-rivenza-architectural-elevation.webp",
+    title: "Mahindra Rivenza - 13.46-Acre Landmark Architectural Elevation",
+    caption:
+      "Official architectural elevation of Mahindra Rivenza at Baner Annex, Mahalunge, Pune",
+    geo: "Mahalunge, Baner Annex, Pune, Maharashtra, India",
   },
   {
-    loc: 'https://mahindralifespaceshomes.in/images/official/master-plan-layout-cad.webp',
-    title: 'Mahindra Rivenza Official Emblem Logo',
-    caption: 'Official brand logo of Mahindra Rivenza by Mahindra Lifespaces',
-    geo: 'Pune, Maharashtra, India',
+    loc: "https://mahindralifespaceshomes.in/images/official/master-plan-layout-cad.webp",
+    title: "Mahindra Rivenza Official Emblem Logo",
+    caption: "Official brand logo of Mahindra Rivenza by Mahindra Lifespaces",
+    geo: "Pune, Maharashtra, India",
   },
   {
-    loc: 'https://mahindralifespaceshomes.in/images/official/swimming-pool-sunken-aqua-bar.webp',
-    title: 'Resort Swimming Pool with Sunken Aqua Bar',
-    caption: 'Temperature-regulated infinity resort pool with sunken aqua bar at Mahindra Rivenza',
-    geo: 'Mahalunge, Baner Annex, Pune, India',
+    loc: "https://mahindralifespaceshomes.in/images/official/swimming-pool-sunken-aqua-bar.webp",
+    title: "Resort Swimming Pool with Sunken Aqua Bar",
+    caption:
+      "Temperature-regulated infinity resort pool with sunken aqua bar at Mahindra Rivenza",
+    geo: "Mahalunge, Baner Annex, Pune, India",
   },
   {
-    loc: 'https://mahindralifespaceshomes.in/images/official/multipurpose-sports-arena.webp',
-    title: 'Multipurpose Championship Sports Arena',
-    caption: 'All-weather multisport court at Mahindra Rivenza',
-    geo: 'Mahalunge, Baner Annex, Pune, India',
+    loc: "https://mahindralifespaceshomes.in/images/official/multipurpose-sports-arena.webp",
+    title: "Multipurpose Championship Sports Arena",
+    caption: "All-weather multisport court at Mahindra Rivenza",
+    geo: "Mahalunge, Baner Annex, Pune, India",
   },
   {
-    loc: 'https://mahindralifespaceshomes.in/images/official/yoga-lawn-biophilic-gardens.webp',
-    title: 'Mindful Yoga Lawn & Biophilic Gardens',
-    caption: 'Open-sky meditation and yoga meadows at Mahindra Rivenza',
-    geo: 'Mahalunge, Baner Annex, Pune, India',
+    loc: "https://mahindralifespaceshomes.in/images/official/yoga-lawn-biophilic-gardens.webp",
+    title: "Mindful Yoga Lawn & Biophilic Gardens",
+    caption: "Open-sky meditation and yoga meadows at Mahindra Rivenza",
+    geo: "Mahalunge, Baner Annex, Pune, India",
   },
   {
-    loc: 'https://mahindralifespaceshomes.in/images/official/floodlit-futsal-football-turf.webp',
-    title: 'Floodlit Futsal Arena & Football Turf',
-    caption: 'FIFA-standard turf futsal court at Mahindra Rivenza',
-    geo: 'Mahalunge, Baner Annex, Pune, India',
+    loc: "https://mahindralifespaceshomes.in/images/official/floodlit-futsal-football-turf.webp",
+    title: "Floodlit Futsal Arena & Football Turf",
+    caption: "FIFA-standard turf futsal court at Mahindra Rivenza",
+    geo: "Mahalunge, Baner Annex, Pune, India",
   },
   {
-    loc: 'https://mahindralifespaceshomes.in/images/official/floor-plan-2bhk-premium-687sqft.webp',
-    title: 'Official Sanctioned Architectural CAD Floor Plan',
-    caption: 'MahaRERA sanctioned architectural layout blueprint for Mahindra Rivenza',
-    geo: 'Pune, Maharashtra, India',
+    loc: "https://mahindralifespaceshomes.in/images/official/floor-plan-2bhk-premium-687sqft.webp",
+    title: "Official Sanctioned Architectural CAD Floor Plan",
+    caption:
+      "MahaRERA sanctioned architectural layout blueprint for Mahindra Rivenza",
+    geo: "Pune, Maharashtra, India",
   },
 ];
 
@@ -84,416 +101,428 @@ export const PRIMARY_IMAGES: SitemapImage[] = [
 export const CORE_PAGES: SitemapEntry[] = [
   {
     url: `${BASE_URL}/`,
-    title: 'Mahindra Rivenza Mahalunge Pune | Luxury 2, 3 & 4 BHK',
-    category: 'core',
+    title: "Mahindra Rivenza Mahalunge Pune | Luxury 2, 3 & 4 BHK",
+    category: "core",
     priority: 1.0,
-    changefreq: 'daily',
+    changefreq: "daily",
     images: PRIMARY_IMAGES,
   },
   {
     url: `${BASE_URL}/mahindra-rivenza/`,
-    title: 'Mahindra Rivenza - Project Overview & Blueprint Showcase',
-    category: 'core',
+    title: "Mahindra Rivenza - Project Overview & Blueprint Showcase",
+    category: "core",
     priority: 1.0,
-    changefreq: 'daily',
+    changefreq: "daily",
     images: PRIMARY_IMAGES.slice(0, 3),
   },
   {
     url: `${BASE_URL}/pricing/`,
-    title: 'Mahindra Rivenza Pricing, Cost Sheet & Inventory Matrix',
-    category: 'core',
+    title: "Mahindra Rivenza Pricing, Cost Sheet & Inventory Matrix",
+    category: "core",
     priority: 0.98,
-    changefreq: 'daily',
+    changefreq: "daily",
     images: [PRIMARY_IMAGES[0]],
   },
   {
     url: `${BASE_URL}/floor-plans/`,
-    title: 'Mahindra Rivenza Architectural Floor Plans PDF & Master Layout',
-    category: 'core',
+    title: "Mahindra Rivenza Architectural Floor Plans PDF & Master Layout",
+    category: "core",
     priority: 0.95,
-    changefreq: 'daily',
+    changefreq: "daily",
     images: [PRIMARY_IMAGES[6], PRIMARY_IMAGES[0]],
   },
   {
     url: `${BASE_URL}/master-plan/`,
-    title: '13.46-Acre Township Master Layout & 9+ Acres Greens Blueprint',
-    category: 'core',
+    title: "13.46-Acre Township Master Layout & 9+ Acres Greens Blueprint",
+    category: "core",
     priority: 0.95,
-    changefreq: 'daily',
+    changefreq: "daily",
     images: [PRIMARY_IMAGES[0], PRIMARY_IMAGES[2]],
   },
   {
     url: `${BASE_URL}/location/`,
-    title: 'Strategic Location in Baner Annex, Mahalunge & Hinjewadi Corridor',
-    category: 'core',
+    title: "Strategic Location in Baner Annex, Mahalunge & Hinjewadi Corridor",
+    category: "core",
     priority: 0.9,
-    changefreq: 'weekly',
+    changefreq: "weekly",
     images: [PRIMARY_IMAGES[0]],
   },
   {
     url: `${BASE_URL}/amenities/`,
-    title: '2.65 Lakh+ Sq.Ft. Lifestyle Amenities & ~44,000 Sq.Ft. Clubhouses',
-    category: 'core',
+    title: "2.65 Lakh+ Sq.Ft. Lifestyle Amenities & ~44,000 Sq.Ft. Clubhouses",
+    category: "core",
     priority: 0.9,
-    changefreq: 'weekly',
+    changefreq: "weekly",
     images: PRIMARY_IMAGES.slice(2, 6),
   },
   {
     url: `${BASE_URL}/brochure/`,
-    title: 'Project Brochure PDF, Floor Plan Kit & Payment Schedule',
-    category: 'core',
+    title: "Project Brochure PDF, Floor Plan Kit & Payment Schedule",
+    category: "core",
     priority: 0.92,
-    changefreq: 'daily',
+    changefreq: "daily",
     images: [PRIMARY_IMAGES[0]],
   },
   {
     url: `${BASE_URL}/rera/`,
-    title: 'MahaRERA Compliance: PR1261012602102 & PM1261012602103',
-    category: 'core',
+    title: "MahaRERA Compliance: PR1261012602102 & PM1261012602103",
+    category: "core",
     priority: 0.88,
-    changefreq: 'monthly',
+    changefreq: "monthly",
     images: [
       {
-        loc: 'https://mahindralifespaceshomes.in/images/official/maharera-certificate-phase-1-pr1261012602102.webp',
-        title: 'MahaRERA Phase 1 Registration Certificate PR1261012602102',
-        caption: 'MahaRERA official registration barcode for Mahindra Rivenza Phase 1',
+        loc: "https://mahindralifespaceshomes.in/images/official/maharera-certificate-phase-1-pr1261012602102.webp",
+        title: "MahaRERA Phase 1 Registration Certificate PR1261012602102",
+        caption:
+          "MahaRERA official registration barcode for Mahindra Rivenza Phase 1",
       },
       {
-        loc: 'https://mahindralifespaceshomes.in/images/official/maharera-certificate-phase-2-pm1261012602103.webp',
-        title: 'MahaRERA Phase 2 Registration Certificate PM1261012602103',
-        caption: 'MahaRERA official registration barcode for Mahindra Rivenza Phase 2',
+        loc: "https://mahindralifespaceshomes.in/images/official/maharera-certificate-phase-2-pm1261012602103.webp",
+        title: "MahaRERA Phase 2 Registration Certificate PM1261012602103",
+        caption:
+          "MahaRERA official registration barcode for Mahindra Rivenza Phase 2",
       },
     ],
   },
   {
     url: `${BASE_URL}/faq/`,
-    title: 'Frequently Asked Questions — Possession, RERA, Price & Booking',
-    category: 'core',
+    title: "Frequently Asked Questions — Possession, RERA, Price & Booking",
+    category: "core",
     priority: 0.85,
-    changefreq: 'weekly',
+    changefreq: "weekly",
   },
   {
     url: `${BASE_URL}/reviews/`,
-    title: 'Mahindra Rivenza Reviews [Official 4.9 ★ Rating & Buyer Feedback]',
-    category: 'core',
+    title: "Mahindra Rivenza Reviews [Official 4.9 ★ Rating & Buyer Feedback]",
+    category: "core",
     priority: 0.95,
-    changefreq: 'daily',
+    changefreq: "daily",
     images: [PRIMARY_IMAGES[0], PRIMARY_IMAGES[2]],
   },
   {
     url: `${BASE_URL}/brand/`,
-    title: 'Mahindra Lifespaces Developers Ltd. — Pune Portfolio & Track Record',
-    category: 'core',
+    title:
+      "Mahindra Lifespaces Developers Ltd. — Pune Portfolio & Track Record",
+    category: "core",
     priority: 0.85,
-    changefreq: 'monthly',
+    changefreq: "monthly",
     images: [PRIMARY_IMAGES[1]],
   },
   {
     url: `${BASE_URL}/west-pune/`,
-    title: 'West Pune Real Estate Investment & Growth Corridor Hub',
-    category: 'core',
+    title: "West Pune Real Estate Investment & Growth Corridor Hub",
+    category: "core",
     priority: 0.85,
-    changefreq: 'weekly',
+    changefreq: "weekly",
   },
   {
     url: `${BASE_URL}/articles/`,
-    title: 'Mahalunge & West Pune Research Insights, Market Reports & Guides',
-    category: 'core',
+    title: "Mahalunge & West Pune Research Insights, Market Reports & Guides",
+    category: "core",
     priority: 0.85,
-    changefreq: 'daily',
+    changefreq: "daily",
   },
   {
     url: `${BASE_URL}/baner-annex/`,
-    title: 'Baner Annex Real Estate Pune 2026 — Mahindra Rivenza Flagship Hub',
-    category: 'core',
+    title: "Baner Annex Real Estate Pune 2026 — Mahindra Rivenza Flagship Hub",
+    category: "core",
     priority: 0.95,
-    changefreq: 'daily',
+    changefreq: "daily",
     images: PRIMARY_IMAGES.slice(0, 3),
   },
   {
     url: `${BASE_URL}/mahalunge-pune/`,
-    title: 'Mahalunge Pune Real Estate Hub — High-Growth Infrastructure Guide',
-    category: 'core',
+    title: "Mahalunge Pune Real Estate Hub — High-Growth Infrastructure Guide",
+    category: "core",
     priority: 0.82,
-    changefreq: 'weekly',
+    changefreq: "weekly",
   },
   {
     url: `${BASE_URL}/nande-mahalunge-real-estate/`,
-    title: 'Nande Mahalunge Real Estate Growth, PMRDA TP Scheme & Pricing',
-    category: 'core',
+    title: "Nande Mahalunge Real Estate Growth, PMRDA TP Scheme & Pricing",
+    category: "core",
     priority: 0.82,
-    changefreq: 'weekly',
+    changefreq: "weekly",
   },
   {
     url: `${BASE_URL}/flats-near-baner/`,
-    title: 'Luxury Flats Near Baner Pune — Mahindra Rivenza Baner Annex',
-    category: 'core',
+    title: "Luxury Flats Near Baner Pune — Mahindra Rivenza Baner Annex",
+    category: "core",
     priority: 0.85,
-    changefreq: 'daily',
+    changefreq: "daily",
   },
   {
     url: `${BASE_URL}/flats-near-hinjewadi/`,
-    title: 'Premium Flats Near Hinjewadi IT Park — Mahindra Rivenza',
-    category: 'core',
+    title: "Premium Flats Near Hinjewadi IT Park — Mahindra Rivenza",
+    category: "core",
     priority: 0.85,
-    changefreq: 'daily',
+    changefreq: "daily",
   },
   {
     url: `${BASE_URL}/flats-near-wakad/`,
-    title: 'Luxury Flats Near Wakad Pune — Mahindra Rivenza Baner Annex',
-    category: 'core',
+    title: "Luxury Flats Near Wakad Pune — Mahindra Rivenza Baner Annex",
+    category: "core",
     priority: 0.85,
-    changefreq: 'daily',
+    changefreq: "daily",
   },
   {
     url: `${BASE_URL}/flats-near-balewadi/`,
-    title: 'Flats Near Balewadi High Street Pune — Mahindra Rivenza',
-    category: 'core',
+    title: "Flats Near Balewadi High Street Pune — Mahindra Rivenza",
+    category: "core",
     priority: 0.85,
-    changefreq: 'daily',
+    changefreq: "daily",
   },
   {
     url: `${BASE_URL}/flats-near-pashan/`,
-    title: 'Luxury Flats Near Pashan & Sus Road Pune — Mahindra Rivenza',
-    category: 'core',
+    title: "Luxury Flats Near Pashan & Sus Road Pune — Mahindra Rivenza",
+    category: "core",
     priority: 0.85,
-    changefreq: 'daily',
+    changefreq: "daily",
   },
   {
     url: `${BASE_URL}/flats-near-tathawade/`,
-    title: 'Flats Near Tathawade Pune — Mahindra Rivenza Baner Annex',
-    category: 'core',
+    title: "Flats Near Tathawade Pune — Mahindra Rivenza Baner Annex",
+    category: "core",
     priority: 0.85,
-    changefreq: 'daily',
+    changefreq: "daily",
   },
   {
     url: `${BASE_URL}/sitemap/`,
-    title: 'Mahindra Rivenza Complete Architectural & Directory HTML Sitemap',
-    category: 'core',
+    title: "Mahindra Rivenza Complete Architectural & Directory HTML Sitemap",
+    category: "core",
     priority: 0.75,
-    changefreq: 'weekly',
+    changefreq: "weekly",
   },
   {
     url: `${BASE_URL}/tools/`,
-    title: 'Pune Real Estate Financial Calculators & Decision Tools Hub',
-    category: 'core',
+    title: "Pune Real Estate Financial Calculators & Decision Tools Hub",
+    category: "core",
     priority: 0.88,
-    changefreq: 'weekly',
+    changefreq: "weekly",
   },
   {
     url: `${BASE_URL}/tools/pune-stamp-duty-calculator/`,
-    title: 'Pune Stamp Duty & Registration Calculator 2026 — 7% Official Levies',
-    category: 'core',
+    title:
+      "Pune Stamp Duty & Registration Calculator 2026 — 7% Official Levies",
+    category: "core",
     priority: 0.85,
-    changefreq: 'weekly',
+    changefreq: "weekly",
   },
   {
     url: `${BASE_URL}/tools/home-loan-emi-calculator/`,
-    title: 'Home Loan EMI & Eligibility Calculator — SBI, HDFC & ICICI Rates',
-    category: 'core',
+    title: "Home Loan EMI & Eligibility Calculator — SBI, HDFC & ICICI Rates",
+    category: "core",
     priority: 0.85,
-    changefreq: 'weekly',
+    changefreq: "weekly",
   },
   {
     url: `${BASE_URL}/tools/hinjewadi-rental-yield-calculator/`,
-    title: 'Hinjewadi Rental Yield & Real Estate Cashflow Calculator',
-    category: 'core',
+    title: "Hinjewadi Rental Yield & Real Estate Cashflow Calculator",
+    category: "core",
     priority: 0.85,
-    changefreq: 'weekly',
+    changefreq: "weekly",
   },
   {
     url: `${BASE_URL}/tools/capital-gains-tax-calculator/`,
-    title: 'Section 54 Capital Gains Tax Reinvestment Saver Calculator',
-    category: 'core',
+    title: "Section 54 Capital Gains Tax Reinvestment Saver Calculator",
+    category: "core",
     priority: 0.85,
-    changefreq: 'weekly',
+    changefreq: "weekly",
   },
   {
     url: `${BASE_URL}/tools/construction-linked-payment-calculator/`,
-    title: 'Mahindra Rivenza Construction-Linked Payment (CLP) & Slab Milestone Calculator',
-    category: 'core',
-    priority: 0.90,
-    changefreq: 'weekly',
+    title:
+      "Mahindra Rivenza Construction-Linked Payment (CLP) & Slab Milestone Calculator",
+    category: "core",
+    priority: 0.9,
+    changefreq: "weekly",
   },
   {
     url: `${BASE_URL}/pune-real-estate/`,
-    title: 'Pune Real Estate Market 2026: Property Prices, Micro-Markets & Investment Guide',
-    category: 'core',
+    title:
+      "Pune Real Estate Market 2026: Property Prices, Micro-Markets & Investment Guide",
+    category: "core",
     priority: 0.95,
-    changefreq: 'daily',
+    changefreq: "daily",
     images: PRIMARY_IMAGES.slice(0, 3),
   },
   {
     url: `${BASE_URL}/flats-in-pune/`,
-    title: 'Flats in Pune 2026: Buy 2, 3 & 4 BHK Apartments in Top Localities',
-    category: 'core',
+    title: "Flats in Pune 2026: Buy 2, 3 & 4 BHK Apartments in Top Localities",
+    category: "core",
     priority: 0.95,
-    changefreq: 'daily',
+    changefreq: "daily",
     images: PRIMARY_IMAGES.slice(0, 2),
   },
   {
     url: `${BASE_URL}/new-projects-in-pune/`,
-    title: 'New Residential Projects in Pune 2026: Upcoming Launches & Offers',
-    category: 'core',
+    title: "New Residential Projects in Pune 2026: Upcoming Launches & Offers",
+    category: "core",
     priority: 0.95,
-    changefreq: 'daily',
+    changefreq: "daily",
     images: PRIMARY_IMAGES.slice(0, 2),
   },
   {
     url: `${BASE_URL}/luxury-apartments-in-pune/`,
-    title: 'Luxury Apartments in Pune: 3 & 4 BHK Sky Villas & Resort Living',
-    category: 'core',
+    title: "Luxury Apartments in Pune: 3 & 4 BHK Sky Villas & Resort Living",
+    category: "core",
     priority: 0.95,
-    changefreq: 'daily',
+    changefreq: "daily",
     images: PRIMARY_IMAGES.slice(0, 3),
   },
   {
     url: `${BASE_URL}/contact/`,
-    title: 'Mahindra Rivenza Advisory Desk, Phone & Site Office',
-    category: 'core',
+    title: "Mahindra Rivenza Advisory Desk, Phone & Site Office",
+    category: "core",
     priority: 0.92,
-    changefreq: 'weekly',
+    changefreq: "weekly",
     images: [PRIMARY_IMAGES[0]],
   },
   {
     url: `${BASE_URL}/site-visit/`,
-    title: 'Book VIP Site Visit to Mahindra Rivenza 4 BHK Show Residence',
-    category: 'core',
+    title: "Book VIP Site Visit to Mahindra Rivenza 4 BHK Show Residence",
+    category: "core",
     priority: 0.95,
-    changefreq: 'daily',
+    changefreq: "daily",
     images: [PRIMARY_IMAGES[0]],
   },
   {
     url: `${BASE_URL}/gallery/`,
-    title: 'Photo Gallery & 3D Architectural Renders | Mahindra Rivenza',
-    category: 'core',
+    title: "Photo Gallery & 3D Architectural Renders | Mahindra Rivenza",
+    category: "core",
     priority: 0.92,
-    changefreq: 'weekly',
+    changefreq: "weekly",
     images: PRIMARY_IMAGES,
   },
   {
     url: `${BASE_URL}/construction-status/`,
-    title: 'Mahindra Rivenza Construction Status & Ground Milestone Tracker 2026',
-    category: 'core',
+    title:
+      "Mahindra Rivenza Construction Status & Ground Milestone Tracker 2026",
+    category: "core",
     priority: 0.93,
-    changefreq: 'daily',
+    changefreq: "daily",
     images: [PRIMARY_IMAGES[0]],
   },
   {
     url: `${BASE_URL}/virtual-tour/`,
-    title: '3D Virtual Tour & 4 BHK Show Residence Video Walkthrough',
-    category: 'core',
+    title: "3D Virtual Tour & 4 BHK Show Residence Video Walkthrough",
+    category: "core",
     priority: 0.94,
-    changefreq: 'weekly',
+    changefreq: "weekly",
     images: [PRIMARY_IMAGES[0]],
   },
   {
     url: `${BASE_URL}/google-keywords-planner/`,
-    title: 'Google Keyword Planner Research & Search Intelligence Matrix | Mahindra Rivenza',
-    category: 'core',
+    title:
+      "Google Keyword Planner Research & Search Intelligence Matrix | Mahindra Rivenza",
+    category: "core",
     priority: 0.95,
-    changefreq: 'daily',
+    changefreq: "daily",
     images: PRIMARY_IMAGES.slice(0, 2),
   },
   {
     url: `${BASE_URL}/google-business-profile/`,
-    title: 'Mahindra Rivenza Google Business Profile, Sales Gallery & Map Pin | Pune',
-    category: 'core',
+    title:
+      "Mahindra Rivenza Google Business Profile, Sales Gallery & Map Pin | Pune",
+    category: "core",
     priority: 0.95,
-    changefreq: 'daily',
+    changefreq: "daily",
     images: PRIMARY_IMAGES.slice(0, 2),
   },
   {
     url: `${BASE_URL}/privacy-policy/`,
-    title: 'Privacy Policy & Data Protection Notice — PropSmart Realty & Mahindra Rivenza',
-    category: 'core',
+    title:
+      "Privacy Policy & Data Protection Notice — PropSmart Realty & Mahindra Rivenza",
+    category: "core",
     priority: 0.6,
-    changefreq: 'monthly',
+    changefreq: "monthly",
   },
   {
     url: `${BASE_URL}/terms-of-use/`,
-    title: 'Terms of Use & Legal Conditions — PropSmart Realty & Mahindra Rivenza',
-    category: 'core',
+    title:
+      "Terms of Use & Legal Conditions — PropSmart Realty & Mahindra Rivenza",
+    category: "core",
     priority: 0.6,
-    changefreq: 'monthly',
+    changefreq: "monthly",
   },
   {
     url: `${BASE_URL}/disclaimer/`,
-    title: 'Statutory Disclaimer & MahaRERA Compliance Notice — PropSmart Realty',
-    category: 'core',
+    title:
+      "Statutory Disclaimer & MahaRERA Compliance Notice — PropSmart Realty",
+    category: "core",
     priority: 0.6,
-    changefreq: 'monthly',
+    changefreq: "monthly",
   },
   {
     url: `${BASE_URL}/near/`,
-    title: 'Flats Near Hinjewadi IT Parks [Starts ₹90L*] Mahindra Rivenza',
-    category: 'core',
+    title: "Flats Near Hinjewadi IT Parks [Starts ₹90L*] Mahindra Rivenza",
+    category: "core",
     priority: 0.95,
-    changefreq: 'daily',
+    changefreq: "daily",
     images: PRIMARY_IMAGES.slice(0, 2),
   },
   {
     url: `${BASE_URL}/near/schools/`,
-    title: 'Flats Near Top Schools in Baner & Balewadi [Starts ₹90L*] Rivenza',
-    category: 'core',
+    title: "Flats Near Top Schools in Baner & Balewadi [Starts ₹90L*] Rivenza",
+    category: "core",
     priority: 0.92,
-    changefreq: 'weekly',
+    changefreq: "weekly",
     images: [PRIMARY_IMAGES[0]],
   },
   {
     url: `${BASE_URL}/near/hospitals/`,
-    title: 'Flats Near Jupiter & Manipal Hospital Baner [Starts ₹90L*] Rivenza',
-    category: 'core',
+    title: "Flats Near Jupiter & Manipal Hospital Baner [Starts ₹90L*] Rivenza",
+    category: "core",
     priority: 0.92,
-    changefreq: 'weekly',
+    changefreq: "weekly",
     images: [PRIMARY_IMAGES[0]],
   },
   {
     url: `${BASE_URL}/near/metro/`,
-    title: 'Flats Near Pune Metro Line 3 Stations [Starts ₹90L*] Rivenza',
-    category: 'core',
+    title: "Flats Near Pune Metro Line 3 Stations [Starts ₹90L*] Rivenza",
+    category: "core",
     priority: 0.93,
-    changefreq: 'daily',
+    changefreq: "daily",
     images: [PRIMARY_IMAGES[0]],
   },
   {
     url: `${BASE_URL}/compare/`,
-    title: 'Mahindra Rivenza Comparisons [Godrej, VTP, Kolte Patil] Pune',
-    category: 'core',
+    title: "Mahindra Rivenza Comparisons [Godrej, VTP, Kolte Patil] Pune",
+    category: "core",
     priority: 0.95,
-    changefreq: 'daily',
+    changefreq: "daily",
     images: PRIMARY_IMAGES.slice(0, 2),
   },
   {
     url: `${BASE_URL}/connectivity/`,
-    title: 'Mahindra Rivenza Connectivity [Metro Line 3, Ring Road] Pune',
-    category: 'core',
+    title: "Mahindra Rivenza Connectivity [Metro Line 3, Ring Road] Pune",
+    category: "core",
     priority: 0.94,
-    changefreq: 'weekly',
+    changefreq: "weekly",
     images: [PRIMARY_IMAGES[0]],
   },
   {
     url: `${BASE_URL}/nri/`,
-    title: 'Mahindra Rivenza Global NRI Real Estate Desks [Dubai, USA, UK]',
-    category: 'core',
+    title: "Mahindra Rivenza Global NRI Real Estate Desks [Dubai, USA, UK]",
+    category: "core",
     priority: 0.93,
-    changefreq: 'weekly',
+    changefreq: "weekly",
     images: [PRIMARY_IMAGES[0]],
   },
   {
     url: `${BASE_URL}/brand/projects/`,
-    title: 'Mahindra Lifespaces Projects in Pune [Rivenza, Citadel, IvyLush]',
-    category: 'core',
+    title: "Mahindra Lifespaces Projects in Pune [Rivenza, Citadel, IvyLush]",
+    category: "core",
     priority: 0.92,
-    changefreq: 'weekly',
+    changefreq: "weekly",
     images: [PRIMARY_IMAGES[1]],
   },
   {
     url: `${BASE_URL}/press/`,
-    title: 'Mahindra Rivenza Press Room, Media Assets & Digital PR Kit',
-    category: 'core',
-    priority: 0.90,
-    changefreq: 'weekly',
+    title: "Mahindra Rivenza Press Room, Media Assets & Digital PR Kit",
+    category: "core",
+    priority: 0.9,
+    changefreq: "weekly",
     images: PRIMARY_IMAGES.slice(0, 3),
   },
 ];
@@ -502,319 +531,689 @@ export const CORE_PAGES: SitemapEntry[] = [
 export const RESIDENCES_PAGES: SitemapEntry[] = [
   {
     url: `${BASE_URL}/residences/`,
-    title: 'Luxury Residences Directory — 2, 3 & 4 BHK Collection',
-    category: 'residences',
+    title: "Luxury Residences Directory — 2, 3 & 4 BHK Collection",
+    category: "residences",
     priority: 0.9,
-    changefreq: 'daily',
+    changefreq: "daily",
     images: [PRIMARY_IMAGES[0]],
   },
   {
     url: `${BASE_URL}/residences/2-bhk/`,
-    title: '2 BHK Luxury Flats at Mahindra Rivenza — 688 to 855 Sq.Ft.',
-    category: 'residences',
+    title: "2 BHK Luxury Flats at Mahindra Rivenza — 688 to 855 Sq.Ft.",
+    category: "residences",
     priority: 0.92,
-    changefreq: 'daily',
+    changefreq: "daily",
     images: [PRIMARY_IMAGES[6]],
   },
   {
     url: `${BASE_URL}/residences/3-bhk/`,
-    title: '3 BHK Deluxe & Ultra Luxury Residences — 995 to 1,206 Sq.Ft.',
-    category: 'residences',
+    title: "3 BHK Deluxe & Ultra Luxury Residences — 995 to 1,206 Sq.Ft.",
+    category: "residences",
     priority: 0.92,
-    changefreq: 'daily',
+    changefreq: "daily",
     images: [PRIMARY_IMAGES[0]],
   },
   {
     url: `${BASE_URL}/residences/4-bhk/`,
-    title: '4 BHK Luxury Sky Estates & Show Residence — 1,615 to 1,650 Sq.Ft.',
-    category: 'residences',
+    title: "4 BHK Luxury Sky Estates & Show Residence — 1,615 to 1,650 Sq.Ft.",
+    category: "residences",
     priority: 0.92,
-    changefreq: 'daily',
+    changefreq: "daily",
     images: [PRIMARY_IMAGES[0]],
   },
   {
     url: `${BASE_URL}/residences/2-bhk-premium/`,
-    title: '2 BHK Premium Residences — 688 Sq.Ft. Starting ₹90 Lakhs*',
-    category: 'residences',
+    title: "2 BHK Premium Residences — 688 Sq.Ft. Starting ₹90 Lakhs*",
+    category: "residences",
     priority: 0.85,
-    changefreq: 'weekly',
+    changefreq: "weekly",
   },
   {
     url: `${BASE_URL}/residences/3-bhk-signature/`,
-    title: '3 BHK Signature Residences with Double-Height Balconies',
-    category: 'residences',
+    title: "3 BHK Signature Residences with Double-Height Balconies",
+    category: "residences",
     priority: 0.85,
-    changefreq: 'weekly',
+    changefreq: "weekly",
   },
   {
     url: `${BASE_URL}/residences/4-bhk-penthouse/`,
-    title: '4 BHK Luxury Penthouses with 270° Panoramic Hill Views',
-    category: 'residences',
+    title: "4 BHK Luxury Penthouses with 270° Panoramic Hill Views",
+    category: "residences",
     priority: 0.85,
-    changefreq: 'weekly',
+    changefreq: "weekly",
   },
   {
     url: `${BASE_URL}/residences/1-bhk-fusion/`,
-    title: '1 BHK Smart Fusion Suites at Mahindra Mahalunge',
-    category: 'residences',
+    title: "1 BHK Smart Fusion Suites at Mahindra Mahalunge",
+    category: "residences",
     priority: 0.8,
-    changefreq: 'weekly',
+    changefreq: "weekly",
   },
   {
     url: `${BASE_URL}/residences/duplex-penthouse/`,
-    title: 'Duplex Penthouses with Private Terrace Decks',
-    category: 'residences',
+    title: "Duplex Penthouses with Private Terrace Decks",
+    category: "residences",
     priority: 0.82,
-    changefreq: 'weekly',
+    changefreq: "weekly",
   },
   {
     url: `${BASE_URL}/residences/affordable-luxury/`,
-    title: 'Affordable Luxury Homes in Baner Annex Mahalunge Pune',
-    category: 'residences',
+    title: "Affordable Luxury Homes in Baner Annex Mahalunge Pune",
+    category: "residences",
     priority: 0.82,
-    changefreq: 'weekly',
+    changefreq: "weekly",
   },
   {
     url: `${BASE_URL}/residences/vastu-compliant/`,
-    title: '100% Vastu-Compliant East-Facing Residences',
-    category: 'residences',
+    title: "100% Vastu-Compliant East-Facing Residences",
+    category: "residences",
     priority: 0.85,
-    changefreq: 'weekly',
+    changefreq: "weekly",
   },
   {
     url: `${BASE_URL}/residences/nri-investment/`,
-    title: 'NRI Real Estate Investment Guide & High-Yield Rental Returns',
-    category: 'residences',
+    title: "NRI Real Estate Investment Guide & High-Yield Rental Returns",
+    category: "residences",
     priority: 0.85,
-    changefreq: 'weekly',
+    changefreq: "weekly",
   },
   {
     url: `${BASE_URL}/residences/west-facing/`,
-    title: 'Scenic West-Facing Sunset Homes with Sahyadri Views',
-    category: 'residences',
+    title: "Scenic West-Facing Sunset Homes with Sahyadri Views",
+    category: "residences",
     priority: 0.8,
-    changefreq: 'weekly',
+    changefreq: "weekly",
   },
   {
     url: `${BASE_URL}/residences/north-east-facing/`,
-    title: 'North-East Facing Vastu Sanctum Residences',
-    category: 'residences',
+    title: "North-East Facing Vastu Sanctum Residences",
+    category: "residences",
     priority: 0.8,
-    changefreq: 'weekly',
+    changefreq: "weekly",
   },
 ];
 
 // 03. WEST PUNE LOCALITIES & MICRO-MARKETS
 export const WEST_PUNE_SLUGS = [
-  { slug: 'mahalunge-real-estate', name: 'Mahalunge Real Estate & Investment Growth' },
-  { slug: 'nande-real-estate', name: 'Nande Real Estate, Baner Annex Corridors' },
-  { slug: 'maan-real-estate', name: 'Maan Real Estate & Hinjewadi Phase 3 Hub' },
-  { slug: 'hinjewadi-residential-projects', name: 'Hinjewadi Residential Projects & IT Hub Living' },
-  { slug: 'baner-residential-projects', name: 'Baner Residential Projects & Baner Annex Living' },
-  { slug: 'balewadi-residential-projects', name: 'Balewadi Residential Projects & High Street Corridor' },
-  { slug: 'wakad-residential-projects', name: 'Wakad Residential Projects & Highway Connectivity' },
-  { slug: 'tathawade-residential-projects', name: 'Tathawade Residential Projects & Educational Belt' },
-  { slug: 'punawale-residential-projects', name: 'Punawale Real Estate & Affordable Corridors' },
-  { slug: 'bavdhan-residential-projects', name: 'Bavdhan Residential Projects & Kothrud Proximity' },
-  { slug: 'sus-residential-projects', name: 'Sus Residential Projects & Pashan-Baner Ridge' },
-  { slug: 'ravet-residential-projects', name: 'Ravet Residential Projects & Expressway Junction' },
-  { slug: 'pashan-residential-projects', name: 'Pashan Residential Projects & Lake Enclave' },
-  { slug: 'aundh-residential-projects', name: 'Aundh Residential Projects & High-Street Corridor' },
-  { slug: 'someshwarwadi-residential-projects', name: 'Someshwarwadi Real Estate & Valley Living' },
-  { slug: 'marunji-residential-projects', name: 'Marunji Real Estate & Hinjewadi Phase 2 SEZ' },
-  { slug: 'pimple-nilakh-residential-projects', name: 'Pimple Nilakh Luxury Flats & Riverside Bridge' },
-  { slug: 'pimple-saudagar-residential-projects', name: 'Pimple Saudagar Properties & Linear Garden' },
-  { slug: 'rahatani-residential-projects', name: 'Rahatani Real Estate & Wakad Annex Living' },
-  { slug: 'chinchwad-residential-projects', name: 'Chinchwad Residential Projects & Auto Cluster' },
-  { slug: 'nigdi-pradhikaran-real-estate', name: 'Nigdi Pradhikaran Planned Green Sector Living' },
-  { slug: 'akurdi-residential-projects', name: 'Akurdi Real Estate & D.Y. Patil University Hub' },
-  { slug: 'thergaon-residential-projects', name: 'Thergaon Properties & Aditya Birla Hospital' },
-  { slug: 'kiwale-residential-projects', name: 'Kiwale Properties & Mumbai Expressway Entry' },
-  { slug: 'mamurdi-residential-projects', name: 'Mamurdi Real Estate & Dehu Road Foothills' },
-  { slug: 'balewadi-high-street-real-estate', name: 'Balewadi High Street Dining & Luxury Living' },
-  { slug: 'kothrud-residential-projects', name: 'Kothrud Luxury Residences & Chandani Chowk Link' },
-  { slug: 'senapati-bapat-road-real-estate', name: 'Senapati Bapat Road Prime Living & ICC Tech Park' },
+  {
+    slug: "mahalunge-real-estate",
+    name: "Mahalunge Real Estate & Investment Growth",
+  },
+  {
+    slug: "nande-real-estate",
+    name: "Nande Real Estate, Baner Annex Corridors",
+  },
+  {
+    slug: "maan-real-estate",
+    name: "Maan Real Estate & Hinjewadi Phase 3 Hub",
+  },
+  {
+    slug: "hinjewadi-residential-projects",
+    name: "Hinjewadi Residential Projects & IT Hub Living",
+  },
+  {
+    slug: "baner-residential-projects",
+    name: "Baner Residential Projects & Baner Annex Living",
+  },
+  {
+    slug: "balewadi-residential-projects",
+    name: "Balewadi Residential Projects & High Street Corridor",
+  },
+  {
+    slug: "wakad-residential-projects",
+    name: "Wakad Residential Projects & Highway Connectivity",
+  },
+  {
+    slug: "tathawade-residential-projects",
+    name: "Tathawade Residential Projects & Educational Belt",
+  },
+  {
+    slug: "punawale-residential-projects",
+    name: "Punawale Real Estate & Affordable Corridors",
+  },
+  {
+    slug: "bavdhan-residential-projects",
+    name: "Bavdhan Residential Projects & Kothrud Proximity",
+  },
+  {
+    slug: "sus-residential-projects",
+    name: "Sus Residential Projects & Pashan-Baner Ridge",
+  },
+  {
+    slug: "ravet-residential-projects",
+    name: "Ravet Residential Projects & Expressway Junction",
+  },
+  {
+    slug: "pashan-residential-projects",
+    name: "Pashan Residential Projects & Lake Enclave",
+  },
+  {
+    slug: "aundh-residential-projects",
+    name: "Aundh Residential Projects & High-Street Corridor",
+  },
+  {
+    slug: "someshwarwadi-residential-projects",
+    name: "Someshwarwadi Real Estate & Valley Living",
+  },
+  {
+    slug: "marunji-residential-projects",
+    name: "Marunji Real Estate & Hinjewadi Phase 2 SEZ",
+  },
+  {
+    slug: "pimple-nilakh-residential-projects",
+    name: "Pimple Nilakh Luxury Flats & Riverside Bridge",
+  },
+  {
+    slug: "pimple-saudagar-residential-projects",
+    name: "Pimple Saudagar Properties & Linear Garden",
+  },
+  {
+    slug: "rahatani-residential-projects",
+    name: "Rahatani Real Estate & Wakad Annex Living",
+  },
+  {
+    slug: "chinchwad-residential-projects",
+    name: "Chinchwad Residential Projects & Auto Cluster",
+  },
+  {
+    slug: "nigdi-pradhikaran-real-estate",
+    name: "Nigdi Pradhikaran Planned Green Sector Living",
+  },
+  {
+    slug: "akurdi-residential-projects",
+    name: "Akurdi Real Estate & D.Y. Patil University Hub",
+  },
+  {
+    slug: "thergaon-residential-projects",
+    name: "Thergaon Properties & Aditya Birla Hospital",
+  },
+  {
+    slug: "kiwale-residential-projects",
+    name: "Kiwale Properties & Mumbai Expressway Entry",
+  },
+  {
+    slug: "mamurdi-residential-projects",
+    name: "Mamurdi Real Estate & Dehu Road Foothills",
+  },
+  {
+    slug: "balewadi-high-street-real-estate",
+    name: "Balewadi High Street Dining & Luxury Living",
+  },
+  {
+    slug: "kothrud-residential-projects",
+    name: "Kothrud Luxury Residences & Chandani Chowk Link",
+  },
+  {
+    slug: "senapati-bapat-road-real-estate",
+    name: "Senapati Bapat Road Prime Living & ICC Tech Park",
+  },
 ];
 
-export const LOCATIONS_PAGES: SitemapEntry[] = westPuneLocalityData.map((item) => ({
-  url: `${BASE_URL}/west-pune/${item.slug}/`,
-  title: `${item.name} — Mahindra Rivenza Pune Connectivity & Real Estate Guide`,
-  category: 'locations',
-  priority: 0.8,
-  changefreq: 'weekly',
-}));
+export const LOCATIONS_PAGES: SitemapEntry[] = westPuneLocalityData.map(
+  (item) => ({
+    url: `${BASE_URL}/west-pune/${item.slug}/`,
+    title: `${item.name} — Mahindra Rivenza Pune Connectivity & Real Estate Guide`,
+    category: "locations",
+    priority: 0.8,
+    changefreq: "weekly",
+  }),
+);
 
 // 04. COMMERCIAL IT PARKS & TECH HUBS (/near/*)
 export const TECH_PARKS_SLUGS = [
-  { slug: 'flats-near-infosys-hinjewadi', name: 'Flats Near Infosys Hinjewadi Phase 1 & 2' },
-  { slug: 'flats-near-wipro-circle-hinjewadi', name: 'Flats Near Wipro Circle Hinjewadi' },
-  { slug: 'flats-near-tcs-sahyadri-park-hinjewadi', name: 'Flats Near TCS Sahyadri Park Hinjewadi Phase 3' },
-  { slug: 'flats-near-embassy-techzone-hinjewadi', name: 'Flats Near Embassy TechZone Hinjewadi' },
-  { slug: 'flats-near-cognizant-hinjewadi', name: 'Flats Near Cognizant Hinjewadi' },
-  { slug: 'flats-near-quadron-business-park-hinjewadi', name: 'Flats Near Quadron Business Park' },
-  { slug: 'flats-near-balewadi-high-street', name: 'Flats Near Balewadi High Street & Baner' },
-  { slug: 'flats-near-amar-paradigm-baner', name: 'Flats Near Amar Paradigm Baner' },
-  { slug: 'flats-near-eon-free-zone-kharadi', name: 'Flats Near EON Free Zone Kharadi' },
-  { slug: 'flats-near-world-trade-center-pune', name: 'Flats Near World Trade Center Pune' },
-  { slug: 'flats-near-cybercity-magarpatta', name: 'Flats Near Cybercity Magarpatta' },
-  { slug: 'flats-near-panchshil-business-park-baner', name: 'Flats Near Panchshil Business Park Baner' },
-  { slug: 'flats-near-icc-tech-park-senapati-bapat-road', name: 'Flats Near ICC Tech Park Senapati Bapat Road' },
-  { slug: 'flats-near-cerebrum-it-park-kalyani-nagar', name: 'Flats Near Cerebrum IT Park Kalyani Nagar' },
-  { slug: 'flats-near-commerzone-yerwada', name: 'Flats Near Commerzone Yerwada' },
-  { slug: 'flats-near-weikfield-it-citi-info-park', name: 'Flats Near Weikfield IT Citi Info Park' },
-  { slug: 'flats-near-synechron-hinjewadi', name: 'Flats Near Synechron Hinjewadi Phase 1' },
-  { slug: 'flats-near-barclays-hinjewadi', name: 'Flats Near Barclays Global Service Centre Hinjewadi' },
-  { slug: 'flats-near-kpit-hinjewadi', name: 'Flats Near KPIT Technologies Hinjewadi' },
-  { slug: 'flats-near-hexaware-hinjewadi', name: 'Flats Near Hexaware Technologies Hinjewadi Phase 3' },
-  { slug: 'flats-near-veritas-baner', name: 'Flats Near Veritas Technologies Baner' },
-  { slug: 'flats-near-siemens-balewadi', name: 'Flats Near Siemens Balewadi' },
-  { slug: 'flats-near-mindspace-hinjewadi', name: 'Flats Near Mindspace IT Park Hinjewadi' },
-  { slug: 'flats-near-cummins-balewadi', name: 'Flats Near Cummins India Campus Balewadi' },
-  { slug: 'flats-near-tech-mahindra-hinjewadi', name: 'Flats Near Tech Mahindra Hinjewadi Phase 3' },
-  { slug: 'flats-near-capgemini-hinjewadi', name: 'Flats Near Capgemini Hinjewadi Phase 3' },
-  { slug: 'flats-near-persistent-hinjewadi', name: 'Flats Near Persistent Systems Hinjewadi' },
-  { slug: 'flats-near-eaton-pune', name: 'Flats Near Eaton Innovation Center Pune' },
-  { slug: 'flats-near-nvidia-pune', name: 'Flats Near NVIDIA Pune Technology Centre' },
-  { slug: 'flats-near-credit-suisse-pune', name: 'Flats Near UBS Credit Suisse Hinjewadi' },
-  { slug: 'flats-near-atos-syntel-hinjewadi', name: 'Flats Near Atos Syntel Hinjewadi' },
-  { slug: 'flats-near-qualcomm-pune', name: 'Flats Near Qualcomm India Design Centre' },
+  {
+    slug: "flats-near-infosys-hinjewadi",
+    name: "Flats Near Infosys Hinjewadi Phase 1 & 2",
+  },
+  {
+    slug: "flats-near-wipro-circle-hinjewadi",
+    name: "Flats Near Wipro Circle Hinjewadi",
+  },
+  {
+    slug: "flats-near-tcs-sahyadri-park-hinjewadi",
+    name: "Flats Near TCS Sahyadri Park Hinjewadi Phase 3",
+  },
+  {
+    slug: "flats-near-embassy-techzone-hinjewadi",
+    name: "Flats Near Embassy TechZone Hinjewadi",
+  },
+  {
+    slug: "flats-near-cognizant-hinjewadi",
+    name: "Flats Near Cognizant Hinjewadi",
+  },
+  {
+    slug: "flats-near-quadron-business-park-hinjewadi",
+    name: "Flats Near Quadron Business Park",
+  },
+  {
+    slug: "flats-near-balewadi-high-street",
+    name: "Flats Near Balewadi High Street & Baner",
+  },
+  {
+    slug: "flats-near-amar-paradigm-baner",
+    name: "Flats Near Amar Paradigm Baner",
+  },
+  {
+    slug: "flats-near-eon-free-zone-kharadi",
+    name: "Flats Near EON Free Zone Kharadi",
+  },
+  {
+    slug: "flats-near-world-trade-center-pune",
+    name: "Flats Near World Trade Center Pune",
+  },
+  {
+    slug: "flats-near-cybercity-magarpatta",
+    name: "Flats Near Cybercity Magarpatta",
+  },
+  {
+    slug: "flats-near-panchshil-business-park-baner",
+    name: "Flats Near Panchshil Business Park Baner",
+  },
+  {
+    slug: "flats-near-icc-tech-park-senapati-bapat-road",
+    name: "Flats Near ICC Tech Park Senapati Bapat Road",
+  },
+  {
+    slug: "flats-near-cerebrum-it-park-kalyani-nagar",
+    name: "Flats Near Cerebrum IT Park Kalyani Nagar",
+  },
+  {
+    slug: "flats-near-commerzone-yerwada",
+    name: "Flats Near Commerzone Yerwada",
+  },
+  {
+    slug: "flats-near-weikfield-it-citi-info-park",
+    name: "Flats Near Weikfield IT Citi Info Park",
+  },
+  {
+    slug: "flats-near-synechron-hinjewadi",
+    name: "Flats Near Synechron Hinjewadi Phase 1",
+  },
+  {
+    slug: "flats-near-barclays-hinjewadi",
+    name: "Flats Near Barclays Global Service Centre Hinjewadi",
+  },
+  {
+    slug: "flats-near-kpit-hinjewadi",
+    name: "Flats Near KPIT Technologies Hinjewadi",
+  },
+  {
+    slug: "flats-near-hexaware-hinjewadi",
+    name: "Flats Near Hexaware Technologies Hinjewadi Phase 3",
+  },
+  {
+    slug: "flats-near-veritas-baner",
+    name: "Flats Near Veritas Technologies Baner",
+  },
+  { slug: "flats-near-siemens-balewadi", name: "Flats Near Siemens Balewadi" },
+  {
+    slug: "flats-near-mindspace-hinjewadi",
+    name: "Flats Near Mindspace IT Park Hinjewadi",
+  },
+  {
+    slug: "flats-near-cummins-balewadi",
+    name: "Flats Near Cummins India Campus Balewadi",
+  },
+  {
+    slug: "flats-near-tech-mahindra-hinjewadi",
+    name: "Flats Near Tech Mahindra Hinjewadi Phase 3",
+  },
+  {
+    slug: "flats-near-capgemini-hinjewadi",
+    name: "Flats Near Capgemini Hinjewadi Phase 3",
+  },
+  {
+    slug: "flats-near-persistent-hinjewadi",
+    name: "Flats Near Persistent Systems Hinjewadi",
+  },
+  {
+    slug: "flats-near-eaton-pune",
+    name: "Flats Near Eaton Innovation Center Pune",
+  },
+  {
+    slug: "flats-near-nvidia-pune",
+    name: "Flats Near NVIDIA Pune Technology Centre",
+  },
+  {
+    slug: "flats-near-credit-suisse-pune",
+    name: "Flats Near UBS Credit Suisse Hinjewadi",
+  },
+  {
+    slug: "flats-near-atos-syntel-hinjewadi",
+    name: "Flats Near Atos Syntel Hinjewadi",
+  },
+  {
+    slug: "flats-near-qualcomm-pune",
+    name: "Flats Near Qualcomm India Design Centre",
+  },
 ];
 
 export const TECH_PARKS_PAGES: SitemapEntry[] = techParkData.map((item) => ({
   url: `${BASE_URL}/near/${item.slug}/`,
   title: `${item.name} — Commute Time & Proximity Guide`,
-  category: 'techparks',
+  category: "techparks",
   priority: 0.78,
-  changefreq: 'weekly',
+  changefreq: "weekly",
 }));
 
 // 05. CONNECTIVITY & INFRASTRUCTURE CORRIDORS (/connectivity/*)
-export const CONNECTIVITY_SLUGS = connectivityData.map((item) => ({ slug: item.slug, name: item.name }));
-
-export const CONNECTIVITY_PAGES: SitemapEntry[] = connectivityData.map((item) => ({
-  url: `${BASE_URL}/connectivity/${item.slug}/`,
-  title: `${item.name} — Infrastructure & Commute Benchmark`,
-  category: 'connectivity',
-  priority: 0.78,
-  changefreq: 'weekly',
+export const CONNECTIVITY_SLUGS = connectivityData.map((item) => ({
+  slug: item.slug,
+  name: item.infrastructureName,
 }));
+
+export const CONNECTIVITY_PAGES: SitemapEntry[] = connectivityData.map(
+  (item) => ({
+    url: `${BASE_URL}/connectivity/${item.slug}/`,
+    title: `${item.infrastructureName} — Infrastructure & Commute Benchmark`,
+    category: "connectivity",
+    priority: 0.78,
+    changefreq: "weekly",
+  }),
+);
 
 // 06. COMPETITIVE COMPARISON MATRIX (/compare/*)
 export const COMPARISONS_SLUGS = [
-  { slug: 'mahindra-mahalunge-vs-godrej-hillside', name: 'Mahindra Rivenza vs Godrej Hillside Mahalunge' },
-  { slug: 'mahindra-mahalunge-vs-vtp-blue-waters', name: 'Mahindra Rivenza vs VTP Blue Waters Mahalunge' },
-  { slug: 'mahindra-mahalunge-vs-kolte-patil-life-republic', name: 'Mahindra Rivenza vs Kolte Patil Life Republic Hinjewadi' },
-  { slug: 'mahindra-mahalunge-vs-lodha-panache-hinjewadi', name: 'Mahindra Rivenza vs Lodha Panache Hinjewadi' },
-  { slug: 'mahalunge-vs-wakad-real-estate', name: 'Mahalunge vs Wakad Real Estate Comparison' },
-  { slug: 'mahalunge-vs-baner-real-estate', name: 'Mahalunge vs Baner Real Estate Price & ROI Comparison' },
-  { slug: 'mahindra-ivylush-vs-godrej-infinity', name: 'Mahindra Ivylush vs Godrej Infinity Kharadi' },
-  { slug: 'mahindra-citadel-vs-kohinoor-grandeur', name: 'Mahindra Citadel vs Kohinoor Grandeur Pimpri' },
-  { slug: 'mahindra-happinest-vs-rohan-ananta', name: 'Mahindra Happinest Tathawade vs Rohan Ananta' },
-  { slug: 'mahindra-lifespaces-vs-godrej-properties-pune', name: 'Mahindra Lifespaces vs Godrej Properties Pune Track Record' },
-  { slug: 'mahindra-mahalunge-vs-megapolis-hinjewadi', name: 'Mahindra Rivenza vs Megapolis Hinjewadi Phase 3' },
-  { slug: 'mahindra-mahalunge-vs-shapoorji-pallonji-sensorium', name: 'Mahindra Rivenza vs Shapoorji Pallonji Sensorium Hinjewadi' },
-  { slug: 'mahindra-citadel-vs-runwal-elixir-pimpri', name: 'Mahindra Citadel vs Runwal Elixir Pimpri' },
-  { slug: 'mahindra-mahalunge-vs-kolte-patil-24k-majestic', name: 'Mahindra Rivenza vs Kolte Patil 24K Majestic' },
-  { slug: 'mahindra-rivenza-vs-vtp-earth-one', name: 'Mahindra Rivenza vs VTP Earth One Mahalunge' },
-  { slug: 'mahindra-rivenza-vs-godrej-woodsville', name: 'Mahindra Rivenza vs Godrej Woodsville Hinjewadi' },
-  { slug: 'mahindra-rivenza-vs-rohan-harita', name: 'Mahindra Rivenza vs Rohan Harita Tathawade' },
-  { slug: 'mahindra-rivenza-vs-kasturi-balmoral-riverside', name: 'Mahindra Rivenza vs Kasturi The Balmoral Riverside Balewadi' },
-  { slug: 'mahindra-rivenza-vs-pride-world-city', name: 'Mahindra Rivenza vs Pride World City Charholi' },
-  { slug: 'mahindra-rivenza-vs-amar-landmark', name: 'Mahindra Rivenza vs Amar Landmark Baner' },
-  { slug: 'mahindra-rivenza-vs-shapoorji-joyville-hinjewadi', name: 'Mahindra Rivenza vs Shapoorji Joyville Hinjewadi' },
-  { slug: 'mahindra-rivenza-vs-vilas-javdekar-yashwin', name: 'Mahindra Rivenza vs VJ Yashwin Hinjewadi' },
-  { slug: 'mahindra-rivenza-vs-kalpataru-jade-baner', name: 'Mahindra Rivenza vs Kalpataru Jade Baner' },
-  { slug: 'mahindra-rivenza-vs-kohinoor-courtyard-one', name: 'Mahindra Rivenza vs Kohinoor Courtyard One Wakad' },
-  { slug: 'mahindra-rivenza-vs-gera-isle-royale', name: 'Mahindra Rivenza vs Gera Isle Royale Bavdhan' },
+  {
+    slug: "mahindra-mahalunge-vs-godrej-hillside",
+    name: "Mahindra Rivenza vs Godrej Hillside Mahalunge",
+  },
+  {
+    slug: "mahindra-mahalunge-vs-vtp-blue-waters",
+    name: "Mahindra Rivenza vs VTP Blue Waters Mahalunge",
+  },
+  {
+    slug: "mahindra-mahalunge-vs-kolte-patil-life-republic",
+    name: "Mahindra Rivenza vs Kolte Patil Life Republic Hinjewadi",
+  },
+  {
+    slug: "mahindra-mahalunge-vs-lodha-panache-hinjewadi",
+    name: "Mahindra Rivenza vs Lodha Panache Hinjewadi",
+  },
+  {
+    slug: "mahalunge-vs-wakad-real-estate",
+    name: "Mahalunge vs Wakad Real Estate Comparison",
+  },
+  {
+    slug: "mahalunge-vs-baner-real-estate",
+    name: "Mahalunge vs Baner Real Estate Price & ROI Comparison",
+  },
+  {
+    slug: "mahindra-ivylush-vs-godrej-infinity",
+    name: "Mahindra Ivylush vs Godrej Infinity Kharadi",
+  },
+  {
+    slug: "mahindra-citadel-vs-kohinoor-grandeur",
+    name: "Mahindra Citadel vs Kohinoor Grandeur Pimpri",
+  },
+  {
+    slug: "mahindra-happinest-vs-rohan-ananta",
+    name: "Mahindra Happinest Tathawade vs Rohan Ananta",
+  },
+  {
+    slug: "mahindra-lifespaces-vs-godrej-properties-pune",
+    name: "Mahindra Lifespaces vs Godrej Properties Pune Track Record",
+  },
+  {
+    slug: "mahindra-mahalunge-vs-megapolis-hinjewadi",
+    name: "Mahindra Rivenza vs Megapolis Hinjewadi Phase 3",
+  },
+  {
+    slug: "mahindra-mahalunge-vs-shapoorji-pallonji-sensorium",
+    name: "Mahindra Rivenza vs Shapoorji Pallonji Sensorium Hinjewadi",
+  },
+  {
+    slug: "mahindra-citadel-vs-runwal-elixir-pimpri",
+    name: "Mahindra Citadel vs Runwal Elixir Pimpri",
+  },
+  {
+    slug: "mahindra-mahalunge-vs-kolte-patil-24k-majestic",
+    name: "Mahindra Rivenza vs Kolte Patil 24K Majestic",
+  },
+  {
+    slug: "mahindra-rivenza-vs-vtp-earth-one",
+    name: "Mahindra Rivenza vs VTP Earth One Mahalunge",
+  },
+  {
+    slug: "mahindra-rivenza-vs-godrej-woodsville",
+    name: "Mahindra Rivenza vs Godrej Woodsville Hinjewadi",
+  },
+  {
+    slug: "mahindra-rivenza-vs-rohan-harita",
+    name: "Mahindra Rivenza vs Rohan Harita Tathawade",
+  },
+  {
+    slug: "mahindra-rivenza-vs-kasturi-balmoral-riverside",
+    name: "Mahindra Rivenza vs Kasturi The Balmoral Riverside Balewadi",
+  },
+  {
+    slug: "mahindra-rivenza-vs-pride-world-city",
+    name: "Mahindra Rivenza vs Pride World City Charholi",
+  },
+  {
+    slug: "mahindra-rivenza-vs-amar-landmark",
+    name: "Mahindra Rivenza vs Amar Landmark Baner",
+  },
+  {
+    slug: "mahindra-rivenza-vs-shapoorji-joyville-hinjewadi",
+    name: "Mahindra Rivenza vs Shapoorji Joyville Hinjewadi",
+  },
+  {
+    slug: "mahindra-rivenza-vs-vilas-javdekar-yashwin",
+    name: "Mahindra Rivenza vs VJ Yashwin Hinjewadi",
+  },
+  {
+    slug: "mahindra-rivenza-vs-kalpataru-jade-baner",
+    name: "Mahindra Rivenza vs Kalpataru Jade Baner",
+  },
+  {
+    slug: "mahindra-rivenza-vs-kohinoor-courtyard-one",
+    name: "Mahindra Rivenza vs Kohinoor Courtyard One Wakad",
+  },
+  {
+    slug: "mahindra-rivenza-vs-gera-isle-royale",
+    name: "Mahindra Rivenza vs Gera Isle Royale Bavdhan",
+  },
 ];
 
-export const COMPARISONS_PAGES: SitemapEntry[] = COMPARISONS_SLUGS.map((item) => ({
-  url: `${BASE_URL}/compare/${item.slug}/`,
-  title: `${item.name} — Detailed Feature, Carpet Area & Pricing Comparison`,
-  category: 'comparisons',
-  priority: 0.75,
-  changefreq: 'weekly',
-}));
+export const COMPARISONS_PAGES: SitemapEntry[] = COMPARISONS_SLUGS.map(
+  (item) => ({
+    url: `${BASE_URL}/compare/${item.slug}/`,
+    title: `${item.name} — Detailed Feature, Carpet Area & Pricing Comparison`,
+    category: "comparisons",
+    priority: 0.75,
+    changefreq: "weekly",
+  }),
+);
 
 // 07. MAHINDRA PORTFOLIO PROJECTS (/brand/projects/*)
 export const BRAND_PROJECTS_SLUGS = [
-  { slug: 'mahindra-mahalunge-pune', name: 'Mahindra Rivenza Mahalunge Pune (Flagship)' },
-  { slug: 'mahindra-ivylush-kharadi-annex', name: 'Mahindra Ivylush Kharadi Annex' },
-  { slug: 'mahindra-citadel-pimpri-metro', name: 'Mahindra Citadel Pimpri Metro Station' },
-  { slug: 'mahindra-happinest-tathawade', name: 'Mahindra Happinest Tathawade Pune' },
-  { slug: 'mahindra-antheia-pimpri', name: 'Mahindra Antheia Pimpri Pune' },
-  { slug: 'mahindra-centralis-pimpri', name: 'Mahindra Centralis Pimpri Pune' },
-  { slug: 'mahindra-nestalgia-pimpri', name: 'Mahindra Nestalgia Pimpri Chinchwad' },
-  { slug: 'mahindra-lartista-sopan-baug', name: 'Mahindra L\'Artista Sopan Baug Pune' },
-  { slug: 'mahindra-woods-pimpri', name: 'Mahindra The Woods Wakad Pimpri' },
+  {
+    slug: "mahindra-mahalunge-pune",
+    name: "Mahindra Rivenza Mahalunge Pune (Flagship)",
+  },
+  {
+    slug: "mahindra-ivylush-kharadi-annex",
+    name: "Mahindra Ivylush Kharadi Annex",
+  },
+  {
+    slug: "mahindra-citadel-pimpri-metro",
+    name: "Mahindra Citadel Pimpri Metro Station",
+  },
+  {
+    slug: "mahindra-happinest-tathawade",
+    name: "Mahindra Happinest Tathawade Pune",
+  },
+  { slug: "mahindra-antheia-pimpri", name: "Mahindra Antheia Pimpri Pune" },
+  { slug: "mahindra-centralis-pimpri", name: "Mahindra Centralis Pimpri Pune" },
+  {
+    slug: "mahindra-nestalgia-pimpri",
+    name: "Mahindra Nestalgia Pimpri Chinchwad",
+  },
+  {
+    slug: "mahindra-lartista-sopan-baug",
+    name: "Mahindra L'Artista Sopan Baug Pune",
+  },
+  { slug: "mahindra-woods-pimpri", name: "Mahindra The Woods Wakad Pimpri" },
 ];
 
-export const BRAND_PROJECTS_PAGES: SitemapEntry[] = BRAND_PROJECTS_SLUGS.map((item) => ({
-  url: `${BASE_URL}/brand/projects/${item.slug}/`,
-  title: `${item.name} — Project Review, Amenities & Status`,
-  category: 'projects',
-  priority: 0.72,
-  changefreq: 'weekly',
-}));
+export const BRAND_PROJECTS_PAGES: SitemapEntry[] = BRAND_PROJECTS_SLUGS.map(
+  (item) => ({
+    url: `${BASE_URL}/brand/projects/${item.slug}/`,
+    title: `${item.name} — Project Review, Amenities & Status`,
+    category: "projects",
+    priority: 0.72,
+    changefreq: "weekly",
+  }),
+);
 
 // 07b. MAHINDRA RIVENZA EXPANSION CORRIDOR DOSSIERS (/mahindra-rivenza/*)
-export const RIVENZA_CORRIDOR_PAGES: SitemapEntry[] = rievenzaCorridorData.map((item) => ({
-  url: `${BASE_URL}/mahindra-rivenza/${item.slug}/`,
-  title: item.metaTitle,
-  category: 'core',
-  priority: 0.88,
-  changefreq: 'daily',
-  images: [PRIMARY_IMAGES[0]],
-}));
+export const RIVENZA_CORRIDOR_PAGES: SitemapEntry[] = rievenzaCorridorData.map(
+  (item) => ({
+    url: `${BASE_URL}/mahindra-rivenza/${item.slug}/`,
+    title: item.metaTitle,
+    category: "core",
+    priority: 0.88,
+    changefreq: "daily",
+    images: [PRIMARY_IMAGES[0]],
+  }),
+);
 
 // 08. EDITORIAL ARTICLES & MARKET GUIDES (/articles/*)
 export const ARTICLES_SLUGS = [
-  { slug: 'why-mahalunge-nande-maan-is-punes-next-billion-dollar-growth-corridor', name: 'Why Mahalunge-Nande-Maan is Pune’s Next Billion-Dollar Corridor' },
-  { slug: 'mahindra-lifespaces-acquires-land-in-nande-mahalunge-what-it-means', name: 'Mahindra Lifespaces Acquires 13.46 Acres in Nande-Mahalunge' },
-  { slug: 'mahalunge-pin-code-connectivity-infrastructure-guide-2026', name: 'Mahalunge Pin Code 412115 Connectivity & Infrastructure Guide' },
-  { slug: 'mahindra-lifespaces-pune-track-record-residential-legacy', name: 'Mahindra Lifespaces Pune Residential Track Record & Delivery Legacy' },
-  { slug: 'mahindra-rivenza-launch-price-carpet-area-analysis-2026', name: 'Mahindra Rivenza Launch Price & Carpet Area Analysis 2026' },
-  { slug: 'mahindra-lifespaces-13-acres-mahalunge-project-preview', name: 'Mahindra Lifespaces 13.46 Acres Mahalunge Township Project Preview' },
-  { slug: 'mahindra-lifespaces-mahalunge-upcoming-project-guide', name: 'Mahindra Lifespaces Mahalunge Upcoming Project Complete Guide' },
-  { slug: 'mahindra-rivenza-vs-baner-vs-hinjewadi-roi-yield', name: 'Mahindra Rivenza vs Baner vs Hinjewadi Rental Yield & ROI Analysis' },
-  { slug: 'pune-inner-ring-road-and-west-pune-real-estate', name: 'Pune Inner Ring Road Impact on West Pune Real Estate Appreciation' },
-  { slug: 'mahindra-mahalunge-vs-godrej-vtp-kolte-patil', name: 'Mahindra Mahalunge vs Godrej vs VTP vs Kolte Patil Developer Comparison' },
-  { slug: 'mahalunge-property-prices-investment-trends', name: 'Mahalunge Property Prices & 5-Year Capital Appreciation Trends' },
-  { slug: 'schools-hospitals-it-parks-near-mahalunge', name: 'Top Schools, Hospitals & IT Parks Within 15 Mins of Mahalunge' },
-  { slug: 'west-pune-real-estate-complete-2026-guide', name: 'West Pune Real Estate Complete 2026 Buyer & Investor Guide' },
-  { slug: 'nande-mahalunge-maan-real-estate-guide', name: 'Nande-Mahalunge-Maan Micro-Market Comprehensive Investment Guide' },
-  { slug: 'pmrda-town-planning-scheme-mahalunge', name: 'PMRDA Town Planning Scheme (TPS) Mahalunge Infrastructure Masterplan' },
-  { slug: 'mahalunge-vs-baner-vs-hinjewadi', name: 'Mahalunge vs Baner vs Hinjewadi Comprehensive Location Comparison' },
-  { slug: 'flats-under-1-crore-in-west-pune', name: 'Flats Under 1 Crore in West Pune: Best Projects & 2 BHK Guide' },
-  { slug: 'luxury-flats-under-2-crore-in-pune', name: 'Luxury Flats Under 2 Crore in Pune: 3 BHK Price Analysis' },
-  { slug: 'flats-near-pune-metro-line-3', name: 'Flats Near Pune Metro Line 3 Hinjewadi-Shivajinagar' },
-  { slug: 'ready-possession-vs-under-construction-pune', name: 'Ready Possession vs Under Construction Flats in Pune' },
-  { slug: 'mahindra-rivenza-cost-sheet-pricing-breakdown-2026', name: 'Mahindra Rivenza Cost Sheet Breakdown & All-Inclusive Pricing 2026' },
-  { slug: 'rent-vs-buy-in-hinjewadi-mahalunge-2026', name: 'Rent vs Buy in Hinjewadi-Mahalunge 2026: 10-Year Financial Model' },
-  { slug: 'mahindra-rivenza-rera-possession-milestones-escrow', name: 'Mahindra Rivenza MahaRERA Compliance, Milestones & Escrow Security' },
-  { slug: 'hinjewadi-mahalunge-bridge-connectivity-status-2026', name: 'Hinjewadi-Mahalunge Mula River Bridge Status 2026: Route Map & Commute Impact' },
-  { slug: 'mahindra-rivenza-construction-status-updates-2026', name: 'Mahindra Rivenza Construction Status 2026: Live Site Progress & Milestones' },
-  { slug: 'mahindra-rivenza-sample-flat-virtual-tour-review', name: 'Mahindra Rivenza Sample Flat Review: 2 & 3 BHK Walkthrough & Tour' },
-  { slug: 'mahindra-rivenza-bank-loan-approvals-sbi-hdfc-icici', name: 'Mahindra Rivenza Bank Loan Approvals: SBI, HDFC, ICICI & Home Loan Guide' },
-  { slug: 'mahindra-rivenza-maintenance-charges-breakdown-pune', name: 'Mahindra Rivenza Maintenance Charges Breakdown: Per Sq Ft & Society Fund Guide' },
-  { slug: 'mahindra-rivenza-possession-date-handover-timeline-2026', name: 'Mahindra Rivenza Possession Date & Handover Timeline: Phase 1 & 2 RERA Schedule' },
+  {
+    slug: "why-mahalunge-nande-maan-is-punes-next-billion-dollar-growth-corridor",
+    name: "Why Mahalunge-Nande-Maan is Pune’s Next Billion-Dollar Corridor",
+  },
+  {
+    slug: "mahindra-lifespaces-acquires-land-in-nande-mahalunge-what-it-means",
+    name: "Mahindra Lifespaces Acquires 13.46 Acres in Nande-Mahalunge",
+  },
+  {
+    slug: "mahalunge-pin-code-connectivity-infrastructure-guide-2026",
+    name: "Mahalunge Pin Code 412115 Connectivity & Infrastructure Guide",
+  },
+  {
+    slug: "mahindra-lifespaces-pune-track-record-residential-legacy",
+    name: "Mahindra Lifespaces Pune Residential Track Record & Delivery Legacy",
+  },
+  {
+    slug: "mahindra-rivenza-launch-price-carpet-area-analysis-2026",
+    name: "Mahindra Rivenza Launch Price & Carpet Area Analysis 2026",
+  },
+  {
+    slug: "mahindra-lifespaces-13-acres-mahalunge-project-preview",
+    name: "Mahindra Lifespaces 13.46 Acres Mahalunge Township Project Preview",
+  },
+  {
+    slug: "mahindra-lifespaces-mahalunge-upcoming-project-guide",
+    name: "Mahindra Lifespaces Mahalunge Upcoming Project Complete Guide",
+  },
+  {
+    slug: "mahindra-rivenza-vs-baner-vs-hinjewadi-roi-yield",
+    name: "Mahindra Rivenza vs Baner vs Hinjewadi Rental Yield & ROI Analysis",
+  },
+  {
+    slug: "pune-inner-ring-road-and-west-pune-real-estate",
+    name: "Pune Inner Ring Road Impact on West Pune Real Estate Appreciation",
+  },
+  {
+    slug: "mahindra-mahalunge-vs-godrej-vtp-kolte-patil",
+    name: "Mahindra Mahalunge vs Godrej vs VTP vs Kolte Patil Developer Comparison",
+  },
+  {
+    slug: "mahalunge-property-prices-investment-trends",
+    name: "Mahalunge Property Prices & 5-Year Capital Appreciation Trends",
+  },
+  {
+    slug: "schools-hospitals-it-parks-near-mahalunge",
+    name: "Top Schools, Hospitals & IT Parks Within 15 Mins of Mahalunge",
+  },
+  {
+    slug: "west-pune-real-estate-complete-2026-guide",
+    name: "West Pune Real Estate Complete 2026 Buyer & Investor Guide",
+  },
+  {
+    slug: "nande-mahalunge-maan-real-estate-guide",
+    name: "Nande-Mahalunge-Maan Micro-Market Comprehensive Investment Guide",
+  },
+  {
+    slug: "pmrda-town-planning-scheme-mahalunge",
+    name: "PMRDA Town Planning Scheme (TPS) Mahalunge Infrastructure Masterplan",
+  },
+  {
+    slug: "mahalunge-vs-baner-vs-hinjewadi",
+    name: "Mahalunge vs Baner vs Hinjewadi Comprehensive Location Comparison",
+  },
+  {
+    slug: "flats-under-1-crore-in-west-pune",
+    name: "Flats Under 1 Crore in West Pune: Best Projects & 2 BHK Guide",
+  },
+  {
+    slug: "luxury-flats-under-2-crore-in-pune",
+    name: "Luxury Flats Under 2 Crore in Pune: 3 BHK Price Analysis",
+  },
+  {
+    slug: "flats-near-pune-metro-line-3",
+    name: "Flats Near Pune Metro Line 3 Hinjewadi-Shivajinagar",
+  },
+  {
+    slug: "ready-possession-vs-under-construction-pune",
+    name: "Ready Possession vs Under Construction Flats in Pune",
+  },
+  {
+    slug: "mahindra-rivenza-cost-sheet-pricing-breakdown-2026",
+    name: "Mahindra Rivenza Cost Sheet Breakdown & All-Inclusive Pricing 2026",
+  },
+  {
+    slug: "rent-vs-buy-in-hinjewadi-mahalunge-2026",
+    name: "Rent vs Buy in Hinjewadi-Mahalunge 2026: 10-Year Financial Model",
+  },
+  {
+    slug: "mahindra-rivenza-rera-possession-milestones-escrow",
+    name: "Mahindra Rivenza MahaRERA Compliance, Milestones & Escrow Security",
+  },
+  {
+    slug: "hinjewadi-mahalunge-bridge-connectivity-status-2026",
+    name: "Hinjewadi-Mahalunge Mula River Bridge Status 2026: Route Map & Commute Impact",
+  },
+  {
+    slug: "mahindra-rivenza-construction-status-updates-2026",
+    name: "Mahindra Rivenza Construction Status 2026: Live Site Progress & Milestones",
+  },
+  {
+    slug: "mahindra-rivenza-sample-flat-virtual-tour-review",
+    name: "Mahindra Rivenza Sample Flat Review: 2 & 3 BHK Walkthrough & Tour",
+  },
+  {
+    slug: "mahindra-rivenza-bank-loan-approvals-sbi-hdfc-icici",
+    name: "Mahindra Rivenza Bank Loan Approvals: SBI, HDFC, ICICI & Home Loan Guide",
+  },
+  {
+    slug: "mahindra-rivenza-maintenance-charges-breakdown-pune",
+    name: "Mahindra Rivenza Maintenance Charges Breakdown: Per Sq Ft & Society Fund Guide",
+  },
+  {
+    slug: "mahindra-rivenza-possession-date-handover-timeline-2026",
+    name: "Mahindra Rivenza Possession Date & Handover Timeline: Phase 1 & 2 RERA Schedule",
+  },
 ];
 
 export const ARTICLES_PAGES: SitemapEntry[] = ARTICLES_SLUGS.map((item) => ({
   url: `${BASE_URL}/articles/${item.slug}/`,
   title: `${item.name} — Real Estate Editorial Analysis`,
-  category: 'articles',
+  category: "articles",
   priority: 0.68,
-  changefreq: 'monthly',
+  changefreq: "monthly",
 }));
 
 // 09. INTERNATIONAL SCHOOLS PROXIMITY (/near/schools/*)
 export const SCHOOLS_PAGES: SitemapEntry[] = schoolData.map((item) => ({
   url: `${BASE_URL}/near/schools/${item.slug}/`,
   title: `${item.name} — Family Living & Proximity Guide`,
-  category: 'schools',
+  category: "schools",
   priority: 0.78,
-  changefreq: 'weekly',
+  changefreq: "weekly",
   lastmod: CURRENT_DATE,
 }));
 
@@ -822,9 +1221,9 @@ export const SCHOOLS_PAGES: SitemapEntry[] = schoolData.map((item) => ({
 export const NRI_PAGES: SitemapEntry[] = nriPortalsData.map((item) => ({
   url: `${BASE_URL}/nri/${item.slug}/`,
   title: `Mahindra Rivenza Global NRI Investment — ${item.countryOrRegion}`,
-  category: 'nri',
+  category: "nri",
   priority: 0.85,
-  changefreq: 'weekly',
+  changefreq: "weekly",
   lastmod: CURRENT_DATE,
 }));
 
@@ -832,9 +1231,9 @@ export const NRI_PAGES: SitemapEntry[] = nriPortalsData.map((item) => ({
 export const HOSPITALS_PAGES: SitemapEntry[] = hospitalData.map((item) => ({
   url: `${BASE_URL}/near/hospitals/${item.slug}/`,
   title: `${item.name} — Healthcare & Wellness Living Guide`,
-  category: 'hospitals',
+  category: "hospitals",
   priority: 0.78,
-  changefreq: 'weekly',
+  changefreq: "weekly",
   lastmod: CURRENT_DATE,
 }));
 
@@ -842,9 +1241,9 @@ export const HOSPITALS_PAGES: SitemapEntry[] = hospitalData.map((item) => ({
 export const METRO_PAGES: SitemapEntry[] = metroData.map((item) => ({
   url: `${BASE_URL}/near/metro/${item.slug}/`,
   title: `${item.name} — Transit & Commuter Living Guide`,
-  category: 'metro',
-  priority: 0.80,
-  changefreq: 'weekly',
+  category: "metro",
+  priority: 0.8,
+  changefreq: "weekly",
   lastmod: CURRENT_DATE,
 }));
 
@@ -852,25 +1251,26 @@ export const METRO_PAGES: SitemapEntry[] = metroData.map((item) => ({
 export const WEB_STORIES_PAGES: SitemapEntry[] = [
   {
     url: `${BASE_URL}/web-stories/`,
-    title: 'Google Web Stories — Mahindra Rivenza Baner Annex & Pune Real Estate Market',
-    category: 'stories',
+    title:
+      "Google Web Stories — Mahindra Rivenza Baner Annex & Pune Real Estate Market",
+    category: "stories",
     priority: 0.85,
-    changefreq: 'daily',
+    changefreq: "daily",
     lastmod: CURRENT_DATE,
   },
   ...webStoriesData.map((story) => ({
     url: `${BASE_URL}/web-stories/${story.slug}/`,
     title: `${story.title} — Visual Web Story`,
-    category: 'stories' as const,
+    category: "stories" as const,
     priority: 0.85,
-    changefreq: 'weekly' as const,
+    changefreq: "weekly" as const,
     lastmod: CURRENT_DATE,
     images: [
       {
         loc: story.posterPortrait,
         title: story.title,
         caption: story.metaDescription,
-        geo: 'Pune, Maharashtra, India',
+        geo: "Pune, Maharashtra, India",
       },
     ],
   })),
@@ -880,19 +1280,19 @@ export const WEB_STORIES_PAGES: SitemapEntry[] = [
 export const FLOOR_PLANS_PAGES: SitemapEntry[] = [
   {
     url: `${BASE_URL}/floor-plans/`,
-    title: 'Mahindra Rivenza Sanctioned Floor Plans & Blueprints Catalog',
-    category: 'floorplans',
-    priority: 0.90,
-    changefreq: 'daily',
+    title: "Mahindra Rivenza Sanctioned Floor Plans & Blueprints Catalog",
+    category: "floorplans",
+    priority: 0.9,
+    changefreq: "daily",
     lastmod: CURRENT_DATE,
     images: PRIMARY_IMAGES.slice(0, 2),
   },
   ...floorPlansData.map((unit) => ({
     url: `${BASE_URL}/floor-plans/${unit.slug}/`,
     title: `${unit.name} Layout & Carpet Specifications`,
-    category: 'floorplans' as const,
+    category: "floorplans" as const,
     priority: 0.88,
-    changefreq: 'weekly' as const,
+    changefreq: "weekly" as const,
     lastmod: CURRENT_DATE,
     images: PRIMARY_IMAGES.slice(0, 1),
   })),
@@ -902,18 +1302,18 @@ export const FLOOR_PLANS_PAGES: SitemapEntry[] = [
 export const COMMUTE_PAGES: SitemapEntry[] = [
   {
     url: `${BASE_URL}/commute/`,
-    title: 'Mahindra Rivenza Commute Matrix & Transit Route Dossier',
-    category: 'commute',
+    title: "Mahindra Rivenza Commute Matrix & Transit Route Dossier",
+    category: "commute",
     priority: 0.85,
-    changefreq: 'weekly',
+    changefreq: "weekly",
     lastmod: CURRENT_DATE,
   },
   ...commuteMatrixData.map((dest) => ({
     url: `${BASE_URL}/commute/${dest.slug}/`,
     title: `Mahindra Rivenza to ${dest.destinationName} Travel Time`,
-    category: 'commute' as const,
-    priority: 0.80,
-    changefreq: 'weekly' as const,
+    category: "commute" as const,
+    priority: 0.8,
+    changefreq: "weekly" as const,
     lastmod: CURRENT_DATE,
   })),
 ];
@@ -938,23 +1338,22 @@ export const ALL_SITEMAP_ENTRIES: SitemapEntry[] = [
   ...COMMUTE_PAGES,
 ];
 
-
 // XML GENERATOR HELPERS (Google Pro Compliance)
 export function generateUrlXml(entry: SitemapEntry): string {
   const lastmod = entry.lastmod || CURRENT_DATE;
   const hreflangIn = `    <xhtml:link rel="alternate" hreflang="en-IN" href="${entry.url}" />`;
   const hreflangDefault = `    <xhtml:link rel="alternate" hreflang="x-default" href="${entry.url}" />`;
-  
-  let imageXml = '';
+
+  let imageXml = "";
   if (entry.images && entry.images.length > 0) {
     imageXml = entry.images
       .map(
         (img) => `    <image:image>
       <image:loc>${escapeXml(img.loc)}</image:loc>
-      <image:title>${escapeXml(img.title)}</image:title>${img.caption ? `\n      <image:caption>${escapeXml(img.caption)}</image:caption>` : ''}${img.geo ? `\n      <image:geo_location>${escapeXml(img.geo)}</image:geo_location>` : ''}
-    </image:image>`
+      <image:title>${escapeXml(img.title)}</image:title>${img.caption ? `\n      <image:caption>${escapeXml(img.caption)}</image:caption>` : ""}${img.geo ? `\n      <image:geo_location>${escapeXml(img.geo)}</image:geo_location>` : ""}
+    </image:image>`,
       )
-      .join('\n');
+      .join("\n");
   }
 
   return `  <url>
@@ -963,7 +1362,7 @@ export function generateUrlXml(entry: SitemapEntry): string {
     <changefreq>${entry.changefreq}</changefreq>
     <priority>${entry.priority.toFixed(2)}</priority>
 ${hreflangIn}
-${hreflangDefault}${imageXml ? `\n${imageXml}` : ''}
+${hreflangDefault}${imageXml ? `\n${imageXml}` : ""}
   </url>`;
 }
 
@@ -972,7 +1371,7 @@ export function generateUrlset(entries: SitemapEntry[]): string {
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
-${entries.map(generateUrlXml).join('\n')}
+${entries.map(generateUrlXml).join("\n")}
 </urlset>`;
 }
 
@@ -985,21 +1384,27 @@ ${sitemapUrls
     (url) => `  <sitemap>
     <loc>${url}</loc>
     <lastmod>${timestamp}</lastmod>
-  </sitemap>`
+  </sitemap>`,
   )
-  .join('\n')}
+  .join("\n")}
 </sitemapindex>`;
 }
 
 function escapeXml(unsafe: string): string {
   return unsafe.replace(/[<>&'"]/g, (c) => {
     switch (c) {
-      case '<': return '&lt;';
-      case '>': return '&gt;';
-      case '&': return '&amp;';
-      case '\'': return '&apos;';
-      case '"': return '&quot;';
-      default: return c;
+      case "<":
+        return "&lt;";
+      case ">":
+        return "&gt;";
+      case "&":
+        return "&amp;";
+      case "'":
+        return "&apos;";
+      case '"':
+        return "&quot;";
+      default:
+        return c;
     }
   });
 }
