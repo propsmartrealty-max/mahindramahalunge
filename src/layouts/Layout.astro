@@ -289,7 +289,12 @@ const baseSchema = {
         "https://www.wikidata.org/wiki/Q6734139",
         "https://www.mahindra.com/",
         "https://www.bseindia.com/stock-share-price/mahindra-lifespace-developers-ltd/mahlife/532313/",
-        "https://www.nseindia.com/get-quotes/equity?symbol=MAHLIFE"
+        "https://www.nseindia.com/get-quotes/equity?symbol=MAHLIFE",
+        "https://www.linkedin.com/company/mahindra-lifespaces",
+        "https://www.youtube.com/@MahindraLifespacesOfficial",
+        "https://twitter.com/life_spaces",
+        "https://www.facebook.com/MahindraLifespaces/",
+        "https://www.instagram.com/mahindralifespacesofficial/"
       ],
       "parentOrganization": {
         "@type": "Organization",
@@ -715,19 +720,51 @@ const baseSchema = {
     <meta name="description" content={description} />
     <meta name="keywords" content={metaKeywords} />
     <link rel="canonical" href={canonicalUrl} />
+
+    <!-- Google Global & Multi-Region NRI Targeting Hreflang Tags -->
     <link rel="alternate" hreflang="en-IN" href={canonicalUrl} />
+    <link rel="alternate" hreflang="en-US" href={canonicalUrl} />
+    <link rel="alternate" hreflang="en-GB" href={canonicalUrl} />
+    <link rel="alternate" hreflang="en-AE" href={canonicalUrl} />
+    <link rel="alternate" hreflang="en-SG" href={canonicalUrl} />
+    <link rel="alternate" hreflang="en-CA" href={canonicalUrl} />
+    <link rel="alternate" hreflang="en-AU" href={canonicalUrl} />
+    <link rel="alternate" hreflang="en-QA" href={canonicalUrl} />
+    <link rel="alternate" hreflang="en-SA" href={canonicalUrl} />
+    <link rel="alternate" hreflang="en" href={canonicalUrl} />
     <link rel="alternate" hreflang="x-default" href={canonicalUrl} />
+
+    <!-- Google WebSub (PubSubHubbub) Real-Time Instant Indexing Protocol -->
+    <link rel="hub" href="https://pubsubhubbub.appspot.com/" />
+    <link rel="self" href={canonicalUrl} />
+
+    <!-- Global Search Engine Crawlers & Indexing Directives -->
+    <meta name="rating" content="general" />
+    <meta name="distribution" content="global" />
+    <meta name="coverage" content="Worldwide" />
+    <meta name="target" content="all" />
+    <meta name="revisit-after" content="1 days" />
     {noindex || path === '/404' ? (
       <>
         <meta name="robots" content="noindex, follow" />
         <meta name="googlebot" content="noindex, follow" />
         <meta name="bingbot" content="noindex, follow" />
+        <meta name="slurp" content="noindex, follow" />
+        <meta name="duckduckbot" content="noindex, follow" />
+        <meta name="yandex" content="noindex, follow" />
+        <meta name="baiduspider" content="noindex, follow" />
+        <meta name="applebot" content="noindex, follow" />
       </>
     ) : (
       <>
         <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
         <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
         <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+        <meta name="slurp" content="index, follow, max-snippet:-1, max-image-preview:large" />
+        <meta name="duckduckbot" content="index, follow" />
+        <meta name="yandex" content="index, follow" />
+        <meta name="baiduspider" content="index, follow" />
+        <meta name="applebot" content="index, follow" />
       </>
     )}
     <meta name="theme-color" content="#0c1017" />
