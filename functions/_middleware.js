@@ -131,10 +131,6 @@ export async function onRequest(context) {
         'https://mahindralifespaceshomes.in/articles/mahindra-pune-residential-projects-ecosystem/',
         'https://mahindralifespaceshomes.in/google-business-profile/',
         'https://mahindralifespaceshomes.in/google-keywords-planner/',
-        'https://mahindralifespaceshomes.in/articles/krisala-hiranandani-township-pune-vs-mahindra-rivenza/',
-        'https://mahindralifespaceshomes.in/compare/mahindra-rivenza-vs-krisala-hiranandani-township-pune/',
-        'https://mahindralifespaceshomes.in/compare/mahindra-rivenza-vs-hiranandani-township-pune/',
-        'https://mahindralifespaceshomes.in/compare/mahindra-rivenza-vs-krisala-pune/',
       ];
 
       if (request.method === 'POST') {
