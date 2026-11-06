@@ -726,6 +726,9 @@ export const COMPARISONS_SLUGS = [
   { slug: 'mahindra-rivenza-vs-kalpataru-jade-baner', name: 'Mahindra Rivenza vs Kalpataru Jade Baner' },
   { slug: 'mahindra-rivenza-vs-kohinoor-courtyard-one', name: 'Mahindra Rivenza vs Kohinoor Courtyard One Wakad' },
   { slug: 'mahindra-rivenza-vs-gera-isle-royale', name: 'Mahindra Rivenza vs Gera Isle Royale Bavdhan' },
+  { slug: 'mahindra-rivenza-vs-krisala-hiranandani-township-pune', name: 'Mahindra Rivenza vs Krisala Hiranandani Township Pune' },
+  { slug: 'mahindra-rivenza-vs-hiranandani-township-pune', name: 'Mahindra Rivenza vs Hiranandani Township Pune' },
+  { slug: 'mahindra-rivenza-vs-krisala-pune', name: 'Mahindra Rivenza vs Krisala Developers Pune' },
 ];
 
 export const COMPARISONS_PAGES: SitemapEntry[] = COMPARISONS_SLUGS.map((item) => ({
@@ -798,6 +801,7 @@ export const ARTICLES_SLUGS = [
   { slug: 'mahindra-rivenza-bank-loan-approvals-sbi-hdfc-icici', name: 'Mahindra Rivenza Bank Loan Approvals: SBI, HDFC, ICICI & Home Loan Guide' },
   { slug: 'mahindra-rivenza-maintenance-charges-breakdown-pune', name: 'Mahindra Rivenza Maintenance Charges Breakdown: Per Sq Ft & Society Fund Guide' },
   { slug: 'mahindra-rivenza-possession-date-handover-timeline-2026', name: 'Mahindra Rivenza Possession Date & Handover Timeline: Phase 1 & 2 RERA Schedule' },
+  { slug: 'krisala-hiranandani-township-pune-vs-mahindra-rivenza', name: 'Krisala Hiranandani Township Pune vs Mahindra Rivenza Comparison' },
 ];
 
 export const ARTICLES_PAGES: SitemapEntry[] = ARTICLES_SLUGS.map((item) => ({

@@ -178,6 +178,118 @@ export const googleKeywordPlannerResearchMatrix: KeywordPlannerEntry[] = [
     targetUrl: '/',
     priorityTier: 'P0 - Supreme Pillar'
   },
+  {
+    keyword: 'Mahindra Rivenza Baner Annexe',
+    avgMonthlySearches: '3K - 10K',
+    threeMonthChange: '+1,450%',
+    yoyChange: '+2,700%',
+    competition: 'High',
+    competitionIndex: 89,
+    lowTopPageBidInr: 48.00,
+    highTopPageBidInr: 185.00,
+    intent: 'Commercial',
+    category: 'Supreme Brand Corridor',
+    targetUrl: '/articles/mahindra-baner-annexe-luxury-apartments-pune/',
+    priorityTier: 'P0 - Supreme Pillar'
+  },
+  {
+    keyword: 'Mahindra Pune Projects',
+    avgMonthlySearches: '5K - 18K',
+    threeMonthChange: '+680%',
+    yoyChange: '+1,350%',
+    competition: 'High',
+    competitionIndex: 83,
+    lowTopPageBidInr: 36.00,
+    highTopPageBidInr: 142.00,
+    intent: 'Commercial',
+    category: 'Corporate Umbrella',
+    targetUrl: '/articles/mahindra-pune-residential-projects-ecosystem/',
+    priorityTier: 'P0 - Supreme Pillar'
+  },
+  {
+    keyword: 'Krisala Hiranandani Township Pune',
+    avgMonthlySearches: '5K - 15K',
+    threeMonthChange: '+720%',
+    yoyChange: '+1,500%',
+    competition: 'High',
+    competitionIndex: 84,
+    lowTopPageBidInr: 38.00,
+    highTopPageBidInr: 148.00,
+    intent: 'Commercial',
+    category: 'Competitor & Township Benchmarking',
+    targetUrl: '/compare/mahindra-rivenza-vs-krisala-hiranandani-township-pune/',
+    priorityTier: 'P1 - High Transactional'
+  },
+  {
+    keyword: 'Hiranandani Pune',
+    avgMonthlySearches: '10K - 30K',
+    threeMonthChange: '+450%',
+    yoyChange: '+950%',
+    competition: 'High',
+    competitionIndex: 80,
+    lowTopPageBidInr: 34.00,
+    highTopPageBidInr: 136.00,
+    intent: 'Navigational',
+    category: 'Competitor & Township Benchmarking',
+    targetUrl: '/compare/mahindra-rivenza-vs-hiranandani-township-pune/',
+    priorityTier: 'P1 - High Transactional'
+  },
+  {
+    keyword: 'Hiranandani Township Pune',
+    avgMonthlySearches: '5K - 20K',
+    threeMonthChange: '+620%',
+    yoyChange: '+1,280%',
+    competition: 'High',
+    competitionIndex: 82,
+    lowTopPageBidInr: 37.00,
+    highTopPageBidInr: 145.00,
+    intent: 'Commercial',
+    category: 'Competitor & Township Benchmarking',
+    targetUrl: '/compare/mahindra-rivenza-vs-hiranandani-township-pune/',
+    priorityTier: 'P1 - High Transactional'
+  },
+  {
+    keyword: 'Krisala Pune',
+    avgMonthlySearches: '5K - 15K',
+    threeMonthChange: '+510%',
+    yoyChange: '+1,100%',
+    competition: 'Medium',
+    competitionIndex: 76,
+    lowTopPageBidInr: 31.00,
+    highTopPageBidInr: 122.00,
+    intent: 'Navigational',
+    category: 'Competitor & Township Benchmarking',
+    targetUrl: '/compare/mahindra-rivenza-vs-krisala-pune/',
+    priorityTier: 'P1 - High Transactional'
+  },
+  {
+    keyword: 'Hiranandani Township',
+    avgMonthlySearches: '15K - 50K',
+    threeMonthChange: '+380%',
+    yoyChange: '+820%',
+    competition: 'High',
+    competitionIndex: 85,
+    lowTopPageBidInr: 42.00,
+    highTopPageBidInr: 168.00,
+    intent: 'Commercial',
+    category: 'Competitor & Township Benchmarking',
+    targetUrl: '/articles/krisala-hiranandani-township-pune-vs-mahindra-rivenza/',
+    priorityTier: 'P1 - High Transactional'
+  },
+  {
+    keyword: 'Krisala Hinranandani Township',
+    avgMonthlySearches: '1K - 4K',
+    threeMonthChange: '+640%',
+    yoyChange: '+1,380%',
+    competition: 'Medium',
+    competitionIndex: 68,
+    lowTopPageBidInr: 28.00,
+    highTopPageBidInr: 112.00,
+    intent: 'Commercial',
+    category: 'Mobile Search & Typo Capture',
+    targetUrl: '/articles/krisala-hiranandani-township-pune-vs-mahindra-rivenza/',
+    priorityTier: 'P1 - High Transactional'
+  },
 
   // P1 - High Transactional & Money Terms
   {
@@ -2014,6 +2126,43 @@ export const keywordClusters: KeywordCluster[] = [
         actionLabel: 'Book 4 BHK Show Home Tour'
       }
     ]
+  },
+  {
+    id: 'krisala-hiranandani-township-benchmarking',
+    pillarId: 'west-pune-market',
+    categoryTitle: 'Krisala Hiranandani Township Pune vs Mahindra Rivenza Benchmarking',
+    badge: 'Township Comparison & Market Analysis',
+    description: 'Comprehensive competitive benchmarking between Krisala Hiranandani Township Pune and Mahindra Rivenza in Baner Annexe.',
+    keywords: [
+      'Krisala Hiranandani Township Pune',
+      'Hiranandani Pune',
+      'Hiranandani Township Pune',
+      'Krisala Hinranandani Township',
+      'Krisala Pune',
+      'Hiranandani Township',
+      'Mahindra Rivenza vs Hiranandani Pune',
+      'Mahindra Pune Projects'
+    ],
+    qaPairs: [
+      {
+        question: 'How does Mahindra Rivenza compare with Krisala Hiranandani Township Pune?',
+        answer: 'Mahindra Rivenza delivers institutional corporate governance backed by Mahindra Lifespaces (Mahindra Group - USD 20B+), a prime Baner Annexe address just 7 minutes from Hinjewadi Phase 1 via the newly completed Mula River bridge, and an intimate 13.46-acre master plan with 9+ acres of landscaped biophilic greens versus dense suburban township developments.',
+        relevantUrl: '/compare/mahindra-rivenza-vs-krisala-hiranandani-township-pune/',
+        actionLabel: 'Read Head-to-Head Comparison'
+      },
+      {
+        question: 'What are the price differences between Mahindra Rivenza and Hiranandani Township Pune?',
+        answer: 'Mahindra Rivenza offers competitive launch pricing starting at ₹90 Lakhs* for 2 BHK Premium residences, providing superior value per usable carpet square foot compared to premium township surcharges in Pune.',
+        relevantUrl: '/pricing/',
+        actionLabel: 'Compare Price & Cost Sheets'
+      },
+      {
+        question: 'Why do IT leaders choose Mahindra Rivenza over peripheral townships?',
+        answer: 'Mahindra Rivenza eliminates daily highway bottlenecks with its direct 7-minute river bridge commute to Hinjewadi Phase 1 tech parks and 8-minute commute to Balewadi High Street dining and entertainment.',
+        relevantUrl: '/location/',
+        actionLabel: 'Explore Commute Matrix'
+      }
+    ]
   }
 ];
 
@@ -2921,6 +3070,9 @@ export const punePropertyVlogMasterEcosystem = {
   ],
 
   competitorHeadToHead: [
+    { competitor: "Krisala Hiranandani Township", searchTerms: ["Krisala Hiranandani Township Pune", "Hiranandani Pune", "Hiranandani Township Pune", "Krisala Pune", "Krisala Hinranandani Township", "Mahindra Rivenza vs Krisala Hiranandani"], url: "/compare/mahindra-rivenza-vs-krisala-hiranandani-township-pune/" },
+    { competitor: "House of Hiranandani Pune", searchTerms: ["Hiranandani Township Pune", "Hiranandani Pune", "Hiranandani Township", "Mahindra Rivenza vs Hiranandani"], url: "/compare/mahindra-rivenza-vs-hiranandani-township-pune/" },
+    { competitor: "Krisala Developers", searchTerms: ["Krisala Pune", "Krisala Developers", "Krisala Projects Pune", "Mahindra Rivenza vs Krisala"], url: "/compare/mahindra-rivenza-vs-krisala-pune/" },
     { competitor: "Godrej Hillside", searchTerms: ["Mahindra Rivenza vs Godrej Hillside"], url: "/compare/mahindra-mahalunge-vs-godrej-hillside/" },
     { competitor: "Godrej Green Cove", searchTerms: ["Mahindra Rivenza vs Godrej Green Cove"], url: "/compare/mahindra-mahalunge-vs-godrej-hillside/" },
     { competitor: "VTP Blue Waters", searchTerms: ["Mahindra Rivenza vs VTP Blue Waters"], url: "/compare/mahindra-mahalunge-vs-vtp-blue-waters/" },
@@ -2934,6 +3086,13 @@ export const punePropertyVlogMasterEcosystem = {
   ],
 
   competitorComparisonVariations: [
+    "Mahindra Rivenza vs Krisala Hiranandani Township Pune",
+    "Krisala Hiranandani Township Pune reviews and price",
+    "Hiranandani Pune township vs Mahindra Rivenza",
+    "Hiranandani township Pune launch date and floor plans",
+    "Krisala Hinranandani township Mahalunge Baner",
+    "Krisala Pune projects vs Mahindra Lifespaces",
+    "Hiranandani township 2 BHK and 3 BHK price in Pune",
     "Mahindra Rivenza vs other projects in Mahalunge",
     "Mahindra Rivenza vs Baner residential projects",
     "Mahindra Rivenza vs Balewadi residential projects",
