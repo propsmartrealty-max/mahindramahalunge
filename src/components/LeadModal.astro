@@ -189,7 +189,7 @@ import RiverFlowingEmblem from './RiverFlowingEmblem.astro';
         <div class="pt-4 flex flex-col sm:flex-row gap-3 justify-center">
           <a 
             id="whatsapp-chat-link"
-            href="https://wa.me/917744009295?text=Hi%2C%20I%20have%20submitted%20an%20enquiry%20for%20Mahindra%20Rivenza%20Baner%20Annex%20Mahalunge."
+            href="https://wa.me/917744009295?text=Hello%2C%20I%20have%20submitted%20an%20enquiry%20for%20Project%3A%20Mahindra%20Rivenza%20(Mahalunge%20%2F%20Baner%20Annexe%2C%20Pune).%20Please%20share%20the%20cost%20sheet%20and%20floor%20plans."
             target="_blank" 
             rel="noopener noreferrer"
             class="btn-shimmer inline-flex items-center justify-center space-x-2 px-6 py-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold tracking-wider uppercase transition-all shadow-lg"
@@ -481,11 +481,28 @@ import RiverFlowingEmblem from './RiverFlowingEmblem.astro';
       const successName = document.getElementById('success-name');
       if (successName) successName.textContent = `Thank You, ${nameVal}`;
 
-      // Dynamically personalize WhatsApp confirmation button
+      // Dynamically personalize WhatsApp confirmation button with clear Project Name
       const whatsappChatLink = document.getElementById('whatsapp-chat-link');
       if (whatsappChatLink) {
+        let projectName = "Mahindra Rivenza (Mahalunge / Baner Annexe, Pune)";
+        const path = window.location.pathname;
+
+        if (path.includes('/brand/projects/mahindra-happinest-tathawade')) {
+          projectName = "Mahindra Happinest Tathawade, Pune";
+        } else if (path.includes('/brand/projects/mahindra-citadel-pimpri')) {
+          projectName = "Mahindra Citadel Pimpri, Pune";
+        } else if (path.includes('/brand/projects/mahindra-ivylush-kharadi')) {
+          projectName = "Mahindra Ivylush Kharadi, Pune";
+        } else if (path.includes('/brand/projects/mahindra-nestlings-centralis-pimpri')) {
+          projectName = "Mahindra Centralis Pimpri, Pune";
+        } else if (path.includes('/brand/projects/mahindra-antheia-pimpri')) {
+          projectName = "Mahindra Antheia Pimpri, Pune";
+        } else if (path.includes('/brand/projects/mahindra-woods-pimpri')) {
+          projectName = "Mahindra The Woods Pimpri, Pune";
+        }
+
         const customMsg = encodeURIComponent(
-          `Hi Mahindra Rivenza Team, my name is ${nameVal}. I just registered for ${selectedConf} (${selectedPurpose}) via the official portal. Please share the 2026 cost sheet & schedule a site visit.`
+          `Hello, my name is ${nameVal}. I have submitted an enquiry for Project: ${projectName} [Configuration: ${selectedConf}, Purpose: ${selectedPurpose}]. Please share verified cost sheet, floor plans & schedule a site visit.`
         );
         whatsappChatLink.setAttribute('href', `https://wa.me/917744009295?text=${customMsg}`);
       }

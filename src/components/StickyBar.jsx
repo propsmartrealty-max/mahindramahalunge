@@ -51,7 +51,7 @@ export default function StickyBar() {
       {/* Mobile Persistent Bottom Dock */}
       <div className="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-charcoal-950/95 backdrop-blur-lg border-t border-white/10 grid grid-cols-3 p-2 gap-2 text-center text-xs">
         <a 
-          href="https://wa.me/917744009295?text=Hello%20Mahindra%20Rivenza%20team%2C%20please%20share%20floor%20plans%20and%20booking%20details%20for%20Baner%20Annex%20project."
+          href="https://wa.me/917744009295?text=Hello%2C%20I%20would%20like%20to%20enquire%20about%20Project%3A%20Mahindra%20Rivenza%20(Mahalunge%20%2F%20Baner%20Annexe%2C%20Pune).%20Please%20share%20floor%20plans%2C%20pricing%2C%20and%20project%20details."
           target="_blank"
           rel="noopener noreferrer"
           className="flex flex-col items-center justify-center py-2 px-1 rounded bg-emerald-900/40 border border-emerald-500/30 text-emerald-400 font-medium active:scale-95"

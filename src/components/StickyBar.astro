@@ -53,7 +53,8 @@ import RiverFlowingEmblem from './RiverFlowingEmblem.astro';
 <!-- Mobile Persistent Bottom Dock -->
 <div class="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-charcoal-950/95 backdrop-blur-lg border-t border-white/10 grid grid-cols-3 p-2 gap-2 text-center text-xs">
   <a 
-    href="https://wa.me/917744009295?text=Hello%20Mahindra%20Rivenza%20team%2C%20please%20share%20floor%20plans%20and%20booking%20details%20for%20Baner%20Annex%20project."
+    id="sticky-whatsapp-btn"
+    href="https://wa.me/917744009295?text=Hello%2C%20I%20would%20like%20to%20enquire%20about%20Project%3A%20Mahindra%20Rivenza%20(Mahalunge%20%2F%20Baner%20Annexe%2C%20Pune).%20Please%20share%20floor%20plans%2C%20pricing%2C%20and%20project%20details."
     target="_blank"
     rel="noopener noreferrer"
     class="flex flex-col items-center justify-center min-h-[48px] py-2.5 px-2 rounded-xl bg-emerald-900/40 border border-emerald-500/30 text-emerald-400 font-medium active:scale-95"
@@ -86,3 +87,36 @@ import RiverFlowingEmblem from './RiverFlowingEmblem.astro';
     <span class="text-[10px] tracking-wider uppercase">Enquire</span>
   </button>
 </div>
+
+<script>
+  function personalizeStickyBarWhatsApp() {
+    const waBtn = document.getElementById('sticky-whatsapp-btn');
+    if (!waBtn) return;
+
+    let projectName = "Mahindra Rivenza (Mahalunge / Baner Annexe, Pune)";
+    const path = window.location.pathname;
+
+    if (path.includes('/brand/projects/mahindra-happinest-tathawade')) {
+      projectName = "Mahindra Happinest Tathawade, Pune";
+    } else if (path.includes('/brand/projects/mahindra-citadel-pimpri')) {
+      projectName = "Mahindra Citadel Pimpri, Pune";
+    } else if (path.includes('/brand/projects/mahindra-ivylush-kharadi')) {
+      projectName = "Mahindra Ivylush Kharadi, Pune";
+    } else if (path.includes('/brand/projects/mahindra-nestlings-centralis-pimpri')) {
+      projectName = "Mahindra Centralis Pimpri, Pune";
+    } else if (path.includes('/brand/projects/mahindra-antheia-pimpri')) {
+      projectName = "Mahindra Antheia Pimpri, Pune";
+    } else if (path.includes('/brand/projects/mahindra-woods-pimpri')) {
+      projectName = "Mahindra The Woods Pimpri, Pune";
+    }
+
+    const msg = encodeURIComponent(`Hello, I would like to enquire about Project: ${projectName}. Please share floor plans, pricing, and project details.`);
+    waBtn.setAttribute('href', `https://wa.me/917744009295?text=${msg}`);
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', personalizeStickyBarWhatsApp);
+  } else {
+    personalizeStickyBarWhatsApp();
+  }
+</script>

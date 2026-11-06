@@ -135,7 +135,7 @@ const highCtrDescription = `Invest in Mahindra Rivenza Pune from ${item.countryO
           Request NRI Cost Sheet & Currency Breakdown
         </a>
         <a
-          href="https://wa.me/917744009295?text=Hello%20NRI%20Desk%2C%20I%20am%20inquiring%20about%20Mahindra%20Rivenza%20from%20abroad."
+          href={`https://wa.me/917744009295?text=${encodeURIComponent(`Hello Global NRI Desk, I would like to enquire about Project: Mahindra Rivenza (Mahalunge / Baner Annexe, Pune) from ${item.country}. Please share the official NRI investor pack, currency pricing, and virtual walkthrough.`)}`}
           target="_blank"
           rel="noopener noreferrer"
           class="px-6 py-3 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white font-medium text-sm transition-all flex items-center space-x-2"

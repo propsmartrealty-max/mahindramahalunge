@@ -201,7 +201,7 @@ export default function LeadModal() {
               
               <div className="pt-4 flex flex-col sm:flex-row gap-3 justify-center">
                 <a 
-                  href={`https://wa.me/917744009295?text=Hi%20Mahindra%20Rivenza%20team%2C%20I%20am%20interested%20in%20Mahindra%20Rivenza%20Baner%20Annex%20for%20${encodeURIComponent(formData.configuration)}.`}
+                  href={`https://wa.me/917744009295?text=${encodeURIComponent(`Hello, I would like to enquire about Project: Mahindra Rivenza (Mahalunge / Baner Annexe, Pune) for ${formData.configuration}. Please share cost sheet and floor plans.`)}`}
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center space-x-2 px-5 py-2.5 rounded bg-emerald-700 hover:bg-emerald-600 text-white text-xs font-semibold tracking-wider uppercase transition-colors"
