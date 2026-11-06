@@ -18,7 +18,23 @@
  * 6. Global Edge Cache Invalidation
  */
 
+import fs from "node:fs";
 import https from "node:https";
+
+// Load .env if present
+if (fs.existsSync(".env")) {
+  const envContent = fs.readFileSync(".env", "utf-8");
+  for (const line of envContent.split("\n")) {
+    const match = line.match(/^\s*([\w.-]+)\s*=\s*(.*)?\s*$/);
+    if (match) {
+      const key = match[1];
+      let value = match[2] || "";
+      if (value.startsWith('"') && value.endsWith('"')) value = value.slice(1, -1);
+      if (value.startsWith("'") && value.endsWith("'")) value = value.slice(1, -1);
+      if (!process.env[key]) process.env[key] = value;
+    }
+  }
+}
 
 const DOMAIN = "mahindralifespaceshomes.in";
 const INDEXNOW_KEY =
@@ -37,14 +53,16 @@ const EMAIL =
 // Validate Cloudflare API Key vs IndexNow Global Key
 let API_KEY = null;
 if (rawApiKey) {
-  if (/^[0-9a-f]{37}$/i.test(rawApiKey)) {
+  if (rawApiKey.startsWith("cfk_")) {
+    API_KEY = rawApiKey;
+  } else if (/^[0-9a-f]{37}$/i.test(rawApiKey)) {
     API_KEY = rawApiKey;
   } else if (rawApiKey === INDEXNOW_KEY || /^[0-9a-f]{32}$/i.test(rawApiKey)) {
     console.log(
       `[Notice] Key '${rawApiKey}' is identified as the IndexNow Global Key (32-hex).`,
     );
     console.log(
-      `Cloudflare Global API Key is a 37-hex key found in Cloudflare Dashboard > Profile > API Tokens.`,
+      `Cloudflare Global API Key is a 37-hex or cfk_ key found in Cloudflare Dashboard > Profile > API Tokens.`,
     );
   } else {
     API_KEY = rawApiKey;
@@ -178,6 +196,18 @@ async function run() {
         content: INDEXNOW_KEY,
         comment: "Microsoft IndexNow Global Key",
       },
+      {
+        type: "TXT",
+        name: "@",
+        content: `indexnow=${INDEXNOW_KEY}`,
+        comment: "IndexNow Global Key Apex Verification",
+      },
+      {
+        type: "TXT",
+        name: "@",
+        content: `indexnow-key=${INDEXNOW_KEY}`,
+        comment: "IndexNow Global Key Apex Alternate",
+      },
       // CAA Records (RFC 6844)
       {
         type: "CAA",
@@ -276,7 +306,7 @@ async function run() {
       { id: "brotli", value: "on" },
       { id: "early_hints", value: "on" },
       { id: "http3", value: "on" },
-      { id: "min_tls_version", value: "1.3" },
+      { id: "min_tls_version", value: "1.2" },
       { id: "always_use_https", value: "on" },
       { id: "automatic_https_rewrites", value: "on" },
       { id: "0rtt", value: "on" },
