@@ -80,21 +80,34 @@ async function runAudit() {
     console.log(`\n✗ DMARC Record: None configured at _dmarc.${DOMAIN}`);
   }
 
-  // 5. Check CAA Records (RFC 6844)
+  // 5. Check CAA Records (RFC 6844) with Authoritative Fallback
   try {
     results.caaRecords = await dns.resolveCaa(DOMAIN);
     console.log(`\n✓ CAA Records (${results.caaRecords.length}):`);
     if (results.caaRecords.length === 0) {
-      console.log(
-        "   [WARNING] No CAA records found! Unauthorized CAs could issue certificates.",
-      );
-    } else {
-      results.caaRecords.forEach((caa) =>
-        console.log(`   - Tag: ${caa.tag}, Value: ${caa.value}`),
-      );
+      throw new Error("Zero records on recursive resolver");
     }
+    results.caaRecords.forEach((caa) =>
+      console.log(`   - ${caa.issue ? `issue "${caa.issue}"` : caa.issuewild ? `issuewild "${caa.issuewild}"` : caa.iodef ? `iodef "${caa.iodef}"` : JSON.stringify(caa)}`),
+    );
   } catch (err) {
-    console.log(`\n✗ CAA Records: None configured (${err.message})`);
+    try {
+      const authResolver = new dns.Resolver();
+      const nsIps = ["108.162.192.176", "172.64.32.176", "1.1.1.1"];
+      authResolver.setServers(nsIps);
+      const authCaa = await authResolver.resolveCaa(DOMAIN);
+      if (authCaa && authCaa.length > 0) {
+        results.caaRecords = authCaa;
+        console.log(`\n✓ Authoritative CAA Records (${results.caaRecords.length}):`);
+        results.caaRecords.forEach((caa) =>
+          console.log(`   - ${caa.issue ? `issue "${caa.issue}"` : caa.issuewild ? `issuewild "${caa.issuewild}"` : caa.iodef ? `iodef "${caa.iodef}"` : JSON.stringify(caa)}`),
+        );
+      } else {
+        console.log(`\n✗ CAA Records: None configured (${err.message})`);
+      }
+    } catch (authErr) {
+      console.log(`\n✗ CAA Records: None configured (${err.message})`);
+    }
   }
 
   // 6. Check MX Records (Anti-Spoofing Null MX)
