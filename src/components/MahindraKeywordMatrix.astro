@@ -4,9 +4,10 @@ import { keywordClusters, naturalLanguageGeoQuestions, westPuneMarketResearch202
 interface Props {
   className?: string;
   showTagsCloud?: boolean;
+  renderSchema?: boolean;
 }
 
-const { className = "", showTagsCloud = false } = Astro.props;
+const { className = "", showTagsCloud = false, renderSchema = true } = Astro.props;
 
 // Compile all 30 natural language Q&A pairs for JSON-LD schema injection
 const matrixFaqSchema = {
@@ -452,4 +453,6 @@ const googleKeywordPlannerSilos = [
 </section>
 
 <!-- Inject 30-Question FAQ Schema for Google Search Console & AI Search Engines -->
-<script type="application/ld+json" set:html={JSON.stringify(matrixFaqSchema)} />
+{renderSchema && (
+  <script type="application/ld+json" set:html={JSON.stringify(matrixFaqSchema)} />
+)}
