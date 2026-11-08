@@ -1643,4 +1643,146 @@ export const comparisonData: ComparisonItem[] = [
       },
     ],
   },
+  {
+    slug: "mahindra-rivenza-vs-kohinoor-famville-hinjewadi",
+    competitorName: "Kohinoor Famville Hinjewadi",
+    competitorType: "Project",
+    h1: "Mahindra Rivenza vs Kohinoor Famville Hinjewadi: Detailed Comparison",
+    metaTitle: "Mahindra Rivenza vs Kohinoor Famville Hinjewadi | Comparison Guide",
+    metaDescription: "Compare Mahindra Rivenza Baner Annex with Kohinoor Famville Hinjewadi Phase 2. Evaluate 13.46 acres vs compact plot, biophilic green zones & pricing from ₹90L*.",
+    summaryVerdict: "While Kohinoor Famville caters to entry-level Hinjewadi IT buyers on a smaller plot, Mahindra Rivenza offers a massive 13.46-acre master township with 9+ acres of open biophilic greens, a ~44,000 sq.ft resort clubhouse, and Grade-A institutional governance by Mahindra Lifespaces.",
+    prosMahindra: [
+      "13.46-acre expansive master development with 9+ acres of vehicle-free greens",
+      "~44,000 sq.ft clubhouse with sunken aqua bar pool and Olympic sports courts",
+      "Prime Baner Annex location with 7-min signal-free Mula River bridge connection",
+      "Backed by USD 20+ Billion Mahindra Group governance and financial integrity"
+    ],
+    prosCompetitor: [
+      "Closer proximity to Hinjewadi Phase 2 tech parks",
+      "Compact configurations focused on entry-level ticket sizes"
+    ],
+    metrics: [
+      { feature: "Land Parcel", mahindra: "13.46 Acres", competitor: "~4.5 Acres", winner: "Mahindra" },
+      { feature: "Open Greenery", mahindra: "9+ Acres Biophilic Reserve", competitor: "Standard Podium Greens", winner: "Mahindra" },
+      { feature: "Clubhouse Size", mahindra: "~44,000 Sq.Ft.", competitor: "~15,000 Sq.Ft.", winner: "Mahindra" }
+    ],
+    faqs: [
+      {
+        q: "Which project offers better long-term appreciation: Rivenza or Famville?",
+        a: "Mahindra Rivenza commands higher long-term capital appreciation due to its Grade-A institutional branding and PMRDA Town Planning Scheme 1 infrastructure."
+      }
+    ]
+  },
+  {
+    slug: "mahindra-rivenza-vs-mantra-24-west-tathawade",
+    competitorName: "Mantra 24 West Tathawade",
+    competitorType: "Project",
+    h1: "Mahindra Rivenza vs Mantra 24 West Tathawade: 2026 Comparison",
+    metaTitle: "Mahindra Rivenza vs Mantra 24 West Tathawade | Comparison Guide",
+    metaDescription: "In-depth comparison of Mahindra Rivenza Baner Annex vs Mantra 24 West Tathawade. Land area, carpet efficiency, clubhouse amenities & developer trust.",
+    summaryVerdict: "Mahindra Rivenza provides institutional Grade-A master development with 13.46 acres, Net Zero Waste certification, and direct 7-min river bridge connectivity to Hinjewadi, outperforming standard high-density corridor developments.",
+    prosMahindra: [
+      "13.46-acre integrated master community with over 80% open horizons",
+      "MahaRERA Phase 1 PR1261012602102 statutory escrow protection",
+      "Direct 4-lane river bridge access to Hinjewadi Phase 1"
+    ],
+    prosCompetitor: [
+      "Highway-facing location near JSPM institute in Tathawade",
+      "Earlier possession milestones"
+    ],
+    metrics: [
+      { feature: "Developer Governance", mahindra: "Mahindra Lifespaces (Listed MNC)", competitor: "Regional Pune Developer", winner: "Mahindra" },
+      { feature: "Master Scale", mahindra: "13.46 Acres", competitor: "Compact Enclave", winner: "Mahindra" }
+    ],
+    faqs: [
+      {
+        q: "How does connectivity differ between Tathawade and Baner Annex?",
+        a: "Baner Annex offers dual access to both cosmopolitan Baner-Balewadi and Hinjewadi without having to navigate highway underpass bottlenecks."
+      }
+    ]
+  },
+  {
+    slug: "mahindra-rivenza-vs-pharande-puneville-punawale",
+    competitorName: "Pharande Puneville Punawale",
+    competitorType: "Project",
+    h1: "Mahindra Rivenza vs Pharande Puneville Punawale: Comprehensive Guide",
+    metaTitle: "Mahindra Rivenza vs Pharande Puneville Punawale | Comparison",
+    metaDescription: "Evaluate Mahindra Rivenza Baner Annex against Pharande Puneville Punawale. Micro-market growth, construction quality, amenities, and rental returns.",
+    summaryVerdict: "Puneville is a large-scale development in Punawale, but Mahindra Rivenza in Baner Annex enjoys superior PMRDA Town Planning roads, direct proximity to Balewadi High Street, and Mahindra's climate-responsive biophilic architecture.",
+    prosMahindra: [
+      "Superior micro-market (Baner Annex / Mahalunge) with 12-15% projected CAGR",
+      "9+ acres of curated biophilic landscape with Olympic sports zones",
+      "Starting price from ₹90L* with attractive launch payment milestones"
+    ],
+    prosCompetitor: [
+      "Immediate proximity to Mumbai-Pune Expressway exit",
+      "Established residential community in Punawale"
+    ],
+    metrics: [
+      { feature: "Micro-Market Tier", mahindra: "Baner Annex (Tier 1 Growth)", competitor: "Punawale (Peripheral Expressway)", winner: "Mahindra" },
+      { feature: "Hinjewadi Commute", mahindra: "7 Mins via Mula Bridge", competitor: "15-20 Mins via Highway", winner: "Mahindra" }
+    ],
+    faqs: [
+      {
+        q: "Why is Baner Annex considered superior to Punawale for investment?",
+        a: "Baner Annex directly abuts Baner and Balewadi, capturing spillover demand from prime city zones with significantly higher rental yields (4.5% - 5.4%)."
+      }
+    ]
+  },
+  {
+    slug: "mahindra-rivenza-vs-lodha-giardino-pune",
+    competitorName: "Lodha Giardino Pune",
+    competitorType: "Project",
+    h1: "Mahindra Rivenza vs Lodha Giardino: Luxury Residential Evaluation",
+    metaTitle: "Mahindra Rivenza vs Lodha Giardino Pune | Luxury Comparison",
+    metaDescription: "Compare Mahindra Rivenza Baner Annex with Lodha Giardino Kharadi. West Pune vs East Pune luxury, ticket sizes, open space ratio, and amenities.",
+    summaryVerdict: "While Lodha Giardino caters to East Pune's Kharadi IT corridor at premium price points exceeding ₹1.35 Cr for 2 BHK, Mahindra Rivenza provides West Pune IT professionals with equal luxury standards, a massive ~44,000 sq.ft clubhouse, and starting prices from ₹90 Lakhs*.",
+    prosMahindra: [
+      "High-value launch pricing starting ₹90L* for 2 BHK in West Pune",
+      "Prime 7-min connectivity to Hinjewadi Phase 1 tech parks",
+      "9+ acres of vehicle-free biophilic greens and sunken aqua bar pool"
+    ],
+    prosCompetitor: [
+      "Established East Pune location near World Trade Center Kharadi",
+      "Lodha Group brand presence"
+    ],
+    metrics: [
+      { feature: "Price-to-Value", mahindra: "₹90L* (High Upside)", competitor: "₹1.35 Cr+ (Matured Market)", winner: "Mahindra" },
+      { feature: "Acreage & Greens", mahindra: "13.46 Acres (9+ Ac Greens)", competitor: "Dense Tower Cluster", winner: "Mahindra" }
+    ],
+    faqs: [
+      {
+        q: "Should an IT investor buy in West Pune (Rivenza) or East Pune (Kharadi)?",
+        a: "West Pune currently offers faster capital appreciation (12-15% CAGR) driven by PMRDA Town Planning Scheme 1 and Hinjewadi river bridges compared to saturated East Pune rates."
+      }
+    ]
+  },
+  {
+    slug: "mahindra-rivenza-vs-pride-aloma-baner",
+    competitorName: "Pride Aloma Baner",
+    competitorType: "Project",
+    h1: "Mahindra Rivenza vs Pride Aloma Baner: Project Analysis",
+    metaTitle: "Mahindra Rivenza vs Pride Aloma Baner | Comparison Guide",
+    metaDescription: "Detailed comparison between Mahindra Rivenza Baner Annex and Pride Aloma Baner. Acreage, amenity scale, price per sq.ft, and master planning.",
+    summaryVerdict: "Pride Aloma offers boutique living inside crowded Baner at high entry prices with limited amenities. Mahindra Rivenza gives buyers an expansive 13.46-acre resort community with 9+ acres of greens at ₹90L* just 5 minutes away in Baner Annex.",
+    prosMahindra: [
+      "13.46-acre master development vs small standalone footprint",
+      "~44,000 sq.ft clubhouse with sunken bar pool vs compact rooftop amenities",
+      "Attractive launch price from ₹90L* vs ₹1.40 Cr+ in congested Baner core"
+    ],
+    prosCompetitor: [
+      "Inside traditional Baner city municipal limits",
+      "Walking distance to Baner high street cafes"
+    ],
+    metrics: [
+      { feature: "Project Scale", mahindra: "13.46 Acres Integrated", competitor: "Standalone Plot", winner: "Mahindra" },
+      { feature: "Amenity Ecosystem", mahindra: "50+ Resort Amenities", competitor: "Limited Podium Facilities", winner: "Mahindra" }
+    ],
+    faqs: [
+      {
+        q: "Why are homebuyers moving from core Baner to Baner Annex?",
+        a: "Baner core has become saturated with traffic and narrow roads. Baner Annex offers planned 36m wide boulevards, cleaner air, and 3x larger amenity spaces at lower ticket sizes."
+      }
+    ]
+  }
 ];

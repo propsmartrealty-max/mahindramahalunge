@@ -8,10 +8,12 @@ export default defineConfig({
   trailingSlash: 'always',
   build: {
     format: 'directory',
+    inlineStylesheets: 'always',
   },
   vite: {
     build: {
-      target: 'es2022',
+      target: 'esnext',
+      modulePreload: { polyfill: false },
       cssCodeSplit: true,
       minify: 'esbuild',
     },

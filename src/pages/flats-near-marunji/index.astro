@@ -1,0 +1,98 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import ResidenceSelector from '../../components/ResidenceSelector.astro';
+
+const marunjiSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Place",
+      "@id": "https://mahindralifespaceshomes.in/flats-near-marunji/#place",
+      "name": "Marunji & Hinjewadi Phase 2 Residential Belt",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Marunji",
+        "addressRegion": "Maharashtra",
+        "addressCountry": "IN"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "18.5623125",
+        "longitude": "73.7273125"
+      }
+    },
+    {
+      "@type": "Product",
+      "@id": "https://mahindralifespaceshomes.in/flats-near-marunji/#product",
+      "name": "Luxury Flats Near Marunji Hinjewadi - Mahindra Rivenza",
+      "description": "Looking for flats near Marunji? Discover Mahindra Rivenza at Baner Annex / Mahalunge. 13.46 acres, ~44,000 sq.ft clubhouse, 4-lane river bridge connectivity from ₹90L*.",
+      "brand": {
+        "@type": "Brand",
+        "name": "Mahindra Lifespaces"
+      },
+      "hasMap": "https://www.google.com/maps/place/Mahindra+Rivenza/@18.5623125,73.7273125,17z/data=!3m1!4b1!4m6!3m5!1s0x3bc2bd23899c4255:0xd1c64c7ae74e9a5!8m2!3d18.5623125!4d73.7273125!16s%2Fg%2F11ysgj1zl9",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "bestRating": "5",
+        "worstRating": "1",
+        "ratingCount": "248",
+        "reviewCount": "248"
+      },
+      "offers": {
+        "@type": "AggregateOffer",
+        "lowPrice": "9000000",
+        "highPrice": "25500000",
+        "priceCurrency": "INR",
+        "offerCount": "1236",
+        "priceValidUntil": "2027-12-31",
+        "availability": "https://schema.org/InStock"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://mahindralifespaceshomes.in/flats-near-marunji/#breadcrumbs",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://mahindralifespaceshomes.in/" },
+        { "@type": "ListItem", "position": 2, "name": "West Pune", "item": "https://mahindralifespaceshomes.in/west-pune/" },
+        { "@type": "ListItem", "position": 3, "name": "Flats Near Marunji", "item": "https://mahindralifespaceshomes.in/flats-near-marunji/" }
+      ]
+    }
+  ]
+};
+---
+
+<Layout
+  title="Flats Near Marunji Hinjewadi | Mahindra Rivenza Luxury Homes ₹90L*"
+  description="Searching for flats near Marunji / Hinjewadi Phase 2? Discover Mahindra Rivenza in Baner Annex / Mahalunge. 13.46 acres with ~44,000 sq.ft clubhouse from ₹90L*."
+  keywords="flats near marunji, flats in marunji hinjewadi, 2 bhk flats in marunji, 3 bhk flats in marunji, mahindra rivenza mahalunge pune"
+  canonical="https://mahindralifespaceshomes.in/flats-near-marunji/"
+  customSchema={marunjiSchema}
+>
+  <section class="pt-32 pb-20 bg-charcoal-950 border-b border-white/10 relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-6">
+      <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-gold-500/10 border border-gold-500/30 text-gold-400 text-xs font-semibold uppercase tracking-widest font-mono">
+        <span>Prime Alternative to Hinjewadi Phase 2 Congestion</span>
+      </div>
+      <h1 class="font-serif text-3xl sm:text-5xl lg:text-6xl font-bold text-stone-100 max-w-4xl leading-tight">
+        Flats Near Marunji: <br />
+        <span class="gold-gradient-text">Upgrade to Planned Township Luxury</span>
+      </h1>
+      <p class="text-stone-300 text-sm sm:text-base max-w-2xl font-light leading-relaxed">
+        Avoid narrow village corridors and unorganized infrastructure in Marunji. Mahindra Rivenza in Baner Annex offers PMRDA 36m DP roads, 9+ acres of biophilic greenery, and rapid 7-min Hinjewadi Phase 1 access starting from ₹90 Lakhs*.
+      </p>
+
+      <div class="flex flex-wrap gap-4 pt-4">
+        <button
+          data-open-modal
+          data-interest="Marunji Buyer Priority"
+          class="btn-shimmer px-8 py-3.5 rounded-full bg-gradient-to-r from-gold-300 via-gold-400 to-gold-500 text-charcoal-950 text-xs font-bold tracking-widest uppercase hover:shadow-xl transition-all cursor-pointer"
+        >
+          Download Master Plan &amp; Cost Sheet
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <ResidenceSelector />
+</Layout>

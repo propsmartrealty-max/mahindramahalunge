@@ -1,0 +1,120 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import ResidenceSelector from '../../components/ResidenceSelector.astro';
+
+const punawaleSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Place",
+      "@id": "https://mahindralifespaceshomes.in/flats-near-punawale/#place",
+      "name": "Punawale & Baner Annex Residential Corridor",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Punawale",
+        "addressRegion": "Maharashtra",
+        "addressCountry": "IN"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "18.5623125",
+        "longitude": "73.7273125"
+      }
+    },
+    {
+      "@type": "Product",
+      "@id": "https://mahindralifespaceshomes.in/flats-near-punawale/#product",
+      "name": "Luxury Flats Near Punawale Pune - Mahindra Rivenza",
+      "description": "Searching for flats near Punawale? Discover Mahindra Rivenza at Baner Annex / Mahalunge. 13.46 acres, ~44,000 sq.ft clubhouse, PMRDA 36m Town Planning roads starting ₹90 Lakhs*.",
+      "brand": {
+        "@type": "Brand",
+        "name": "Mahindra Lifespaces"
+      },
+      "hasMap": "https://www.google.com/maps/place/Mahindra+Rivenza/@18.5623125,73.7273125,17z/data=!3m1!4b1!4m6!3m5!1s0x3bc2bd23899c4255:0xd1c64c7ae74e9a5!8m2!3d18.5623125!4d73.7273125!16s%2Fg%2F11ysgj1zl9",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "bestRating": "5",
+        "worstRating": "1",
+        "ratingCount": "248",
+        "reviewCount": "248"
+      },
+      "offers": {
+        "@type": "AggregateOffer",
+        "lowPrice": "9000000",
+        "highPrice": "25500000",
+        "priceCurrency": "INR",
+        "offerCount": "1236",
+        "priceValidUntil": "2027-12-31",
+        "availability": "https://schema.org/InStock"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://mahindralifespaceshomes.in/flats-near-punawale/#breadcrumbs",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://mahindralifespaceshomes.in/" },
+        { "@type": "ListItem", "position": 2, "name": "West Pune", "item": "https://mahindralifespaceshomes.in/west-pune/" },
+        { "@type": "ListItem", "position": 3, "name": "Flats Near Punawale", "item": "https://mahindralifespaceshomes.in/flats-near-punawale/" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://mahindralifespaceshomes.in/flats-near-punawale/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Why choose Mahindra Rivenza over residential projects in Punawale?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "While Punawale has seen budget residential activity, its internal approach roads suffer from underpass highway congestion and mixed industrial zones. Mahindra Rivenza at Baner Annex (Mahalunge) is situated within PMRDA Town Planning Scheme 1 with wide 36m DP roads, 7-minute direct river bridge access to Hinjewadi Phase 1, and institutional Grade-A developer governance."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does capital appreciation compare between Punawale and Mahalunge Baner Annex?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Mahalunge (Baner Annex) leads West Pune with projected 12% to 15% CAGR capital appreciation due to the Ring Road, Hinjewadi river bridge, and planned high-street retail, whereas Punawale averages 7% to 9% CAGR."
+          }
+        }
+      ]
+    }
+  ]
+};
+---
+
+<Layout
+  title="Flats Near Punawale Pune | Mahindra Rivenza Baner Annex ₹90L*"
+  description="Looking for flats near Punawale? Discover Mahindra Rivenza in Baner Annex / Mahalunge. 13.46-acre master development with ~44,000 sq.ft clubhouse from ₹90L*."
+  keywords="flats near punawale, flats in punawale pune, 2 bhk flats in punawale, 3 bhk flats in punawale, punawale property prices, mahindra rivenza baner annex"
+  canonical="https://mahindralifespaceshomes.in/flats-near-punawale/"
+  customSchema={punawaleSchema}
+>
+  <section class="pt-32 pb-20 bg-charcoal-950 border-b border-white/10 relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-6">
+      <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-gold-500/10 border border-gold-500/30 text-gold-400 text-xs font-semibold uppercase tracking-widest font-mono">
+        <span>Master-Planned Alternative to Punawale</span>
+      </div>
+      <h1 class="font-serif text-3xl sm:text-5xl lg:text-6xl font-bold text-stone-100 max-w-4xl leading-tight">
+        Flats Near Punawale: <br />
+        <span class="gold-gradient-text">Step Up to Institutional Grade-A Living</span>
+      </h1>
+      <p class="text-stone-300 text-sm sm:text-base max-w-2xl font-light leading-relaxed">
+        Evaluating apartments in Punawale? Compare with Mahindra Rivenza at Baner Annex (Mahalunge). Benefit from PMRDA Town Planning Scheme 1, 9+ acres of biophilic greenery, and a direct 7-minute river bridge to Hinjewadi Phase 1.
+      </p>
+
+      <div class="flex flex-wrap gap-4 pt-4">
+        <button
+          data-open-modal
+          data-interest="Punawale Buyer Priority"
+          class="btn-shimmer px-8 py-3.5 rounded-full bg-gradient-to-r from-gold-300 via-gold-400 to-gold-500 text-charcoal-950 text-xs font-bold tracking-widest uppercase hover:shadow-xl transition-all cursor-pointer"
+        >
+          Get Launch Pricing &amp; Brochure
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <ResidenceSelector />
+</Layout>

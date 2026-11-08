@@ -12,7 +12,7 @@ import RiverFlowingEmblem from './RiverFlowingEmblem.astro';
     <!-- Slide 0: Tranquility, crafted just for you -->
     <div class="hero-slide active absolute inset-0 transition-opacity duration-1000 ease-in-out opacity-100 z-10" data-index="0">
       <picture class="absolute inset-0 w-full h-full">
-        <source media="(max-width: 767px)" srcset="/images/official/mahindra-rivenza-architectural-elevation.webp" width="640" height="480" />
+        <source media="(max-width: 767px)" srcset="/images/official/mahindra-rivenza-architectural-elevation-mobile.webp" width="640" height="480" />
         <img
           src="/images/official/mahindra-rivenza-architectural-elevation.webp"
           alt="Mahindra Rivenza - Architectural Elevation"
@@ -41,7 +41,7 @@ import RiverFlowingEmblem from './RiverFlowingEmblem.astro';
         playsinline
         loop
         preload="none"
-        poster="/images/official/mahindra-rivenza-architectural-elevation.webp"
+        poster="/images/official/mahindra-rivenza-architectural-elevation-mobile.webp"
       >
         <source src="/videos/hero-elevation-banner-mobile.mp4" type="video/mp4" />
       </video>
@@ -50,7 +50,7 @@ import RiverFlowingEmblem from './RiverFlowingEmblem.astro';
     <!-- Slide 1: A place to pause and flow -->
     <div class="hero-slide absolute inset-0 transition-opacity duration-1000 ease-in-out opacity-0 z-0" data-index="1">
       <picture class="absolute inset-0 w-full h-full">
-        <source media="(max-width: 767px)" srcset="/images/official/yoga-lawn-biophilic-gardens.webp" width="640" height="480" />
+        <source media="(max-width: 767px)" srcset="/images/official/yoga-lawn-biophilic-gardens-mobile.webp" width="640" height="480" />
         <img
           src="/images/official/yoga-lawn-biophilic-gardens.webp"
           alt="Mahindra Rivenza - Mindful Yoga Lawn & Zen Sanctuaries"
@@ -79,7 +79,7 @@ import RiverFlowingEmblem from './RiverFlowingEmblem.astro';
         playsinline
         loop
         preload="none"
-        poster="/images/official/yoga-lawn-biophilic-gardens.webp"
+        poster="/images/official/yoga-lawn-biophilic-gardens-mobile.webp"
       >
         <source src="/videos/hero-yoga-deck-mobile.mp4" type="video/mp4" />
       </video>
@@ -88,7 +88,7 @@ import RiverFlowingEmblem from './RiverFlowingEmblem.astro';
     <!-- Slide 2: Scenic views that spark imagination -->
     <div class="hero-slide absolute inset-0 transition-opacity duration-1000 ease-in-out opacity-0 z-0" data-index="2">
       <picture class="absolute inset-0 w-full h-full">
-        <source media="(max-width: 767px)" srcset="/images/official/swimming-pool-sunken-aqua-bar.webp" width="640" height="480" />
+        <source media="(max-width: 767px)" srcset="/images/official/swimming-pool-sunken-aqua-bar-mobile.webp" width="640" height="480" />
         <img
           src="/images/official/swimming-pool-sunken-aqua-bar.webp"
           alt="Mahindra Rivenza - Swimming Pool with Sunken Aqua Bar"
@@ -117,7 +117,7 @@ import RiverFlowingEmblem from './RiverFlowingEmblem.astro';
         playsinline
         loop
         preload="none"
-        poster="/images/official/swimming-pool-sunken-aqua-bar.webp"
+        poster="/images/official/swimming-pool-sunken-aqua-bar-mobile.webp"
       >
         <source src="/videos/hero-twin-windows-mobile.mp4" type="video/mp4" />
       </video>
@@ -537,15 +537,20 @@ import RiverFlowingEmblem from './RiverFlowingEmblem.astro';
       });
     });
 
-    // Parallax Scrolling Effect
-    if (banner) {
+    // Parallax Scrolling Effect (GPU Accelerated, Desktop Only to Eliminate Mobile Forced Reflow)
+    if (banner && window.innerWidth >= 768) {
+      let ticking = false;
+      const slidesWrapper = document.getElementById('hero-slides-wrapper');
       window.addEventListener('scroll', () => {
-        const scrollY = window.scrollY;
-        if (scrollY < window.innerHeight) {
-          const slidesWrapper = document.getElementById('hero-slides-wrapper');
-          if (slidesWrapper) {
-            slidesWrapper.style.transform = `translateY(${scrollY * 0.25}px)`;
-          }
+        if (!ticking) {
+          window.requestAnimationFrame(() => {
+            const scrollY = window.scrollY;
+            if (scrollY < window.innerHeight && slidesWrapper) {
+              slidesWrapper.style.transform = `translate3d(0, ${scrollY * 0.25}px, 0)`;
+            }
+            ticking = false;
+          });
+          ticking = true;
         }
       }, { passive: true });
     }

@@ -131,8 +131,7 @@ export const mahindraPuneProjects: MahindraPuneProject[] = [
       "IGBC Pre-Certified Platinum with Dual Clubhouses (22,000 sq.ft.)",
     summary:
       "5.4-acre biophilic sanctuary in Kharadi Annex featuring dual clubhouses totaling 22,000 sq.ft., camping machan, adventure play zones, and minutes from EON Free Zone, World Trade Centre (WTC), Viman Nagar, and Kalyani Nagar.",
-    image:
-      "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=800&q=80",
+    image: "/images/projects/mahindra-ivylush.webp",
     distanceFromMahalunge:
       "24.5 km via Pune-Ahmednagar Highway & Kharadi Bypass",
     transitHighlight:
@@ -160,8 +159,7 @@ export const mahindraPuneProjects: MahindraPuneProject[] = [
     greenRating: "IGBC Pre-Certified Gold",
     summary:
       "9.66-acre luxury development in central Pimpri directly abutting Sant Tukaram Nagar Metro Station on the Old Mumbai-Pune Highway, featuring biometric automation, half-Olympic pool, cinema lounge, and sports health loop.",
-    image:
-      "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80",
+    image: "/images/projects/mahindra-citadel.webp",
     distanceFromMahalunge: "14.2 km via Hinjewadi-Aundh-Pimpri corridor",
     transitHighlight:
       "Direct adjacency to Sant Tukaram Nagar Metro Station & Old Mumbai-Pune Highway",
@@ -183,8 +181,7 @@ export const mahindraPuneProjects: MahindraPuneProject[] = [
     greenRating: "IGBC Pre-Certified Platinum",
     summary:
       "India’s first fusion home development featuring an elevated 1.5-acre skywalk, dual-tier aerial clubhouses, and minutes from Hinjewadi IT Park, Wakad, and D.Y. Patil University campus.",
-    image:
-      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80",
+    image: "/images/projects/mahindra-happinest-tathawade.webp",
     distanceFromMahalunge: "7.8 km via Wakad-Hinjewadi link",
     transitHighlight:
       "4 mins to Mumbai-Pune Expressway, Wakad & Hinjewadi Phase 1",
@@ -205,8 +202,7 @@ export const mahindraPuneProjects: MahindraPuneProject[] = [
     greenRating: "IGBC Certified Green Community",
     summary:
       "One of Pimpri-Chinchwad’s most celebrated integrated residential communities featuring extensive sports pavilions, senior citizen enclaves, and landscaped central promenades.",
-    image:
-      "https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?auto=format&fit=crop&w=800&q=80",
+    image: "/images/projects/mahindra-antheia.webp",
     distanceFromMahalunge: "15.5 km",
     transitHighlight:
       "Nehru Nagar Road close to Pimpri Station & Industrial Belt",
@@ -230,8 +226,7 @@ export const mahindraPuneProjects: MahindraPuneProject[] = [
     greenRating: "IGBC Certified Green Community",
     summary:
       "Biophilic residential community designed around childhood nostalgia themes, native flora sensory gardens, barefoot pathways, and modern leisure infrastructure in Nehru Nagar, Pimpri.",
-    image:
-      "https://images.unsplash.com/photo-1513836279014-a89f7a76ae86?auto=format&fit=crop&w=800&q=80",
+    image: "/images/projects/mahindra-nestalgia.webp",
     distanceFromMahalunge: "15.2 km",
     transitHighlight: "Bhosari Road, Nehru Nagar, Pimpri Colony",
     address:
@@ -255,8 +250,7 @@ export const mahindraPuneProjects: MahindraPuneProject[] = [
     greenRating: "IGBC Certified Gold",
     summary:
       "Architecturally sleek 4-tower high-rise enclave in central Pimpri Chowk engineered around transit-oriented urban lifestyle with low energy footprints and 80% natural daylighting.",
-    image:
-      "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=800&q=80",
+    image: "/images/projects/mahindra-ivylush.webp",
     distanceFromMahalunge: "14.8 km",
     transitHighlight:
       "Pimpri Chowk, Morewadi, Pimpri Colony with rapid highway access",
@@ -280,8 +274,7 @@ export const mahindraPuneProjects: MahindraPuneProject[] = [
     greenRating: "Certified High-End Sustainable Architecture",
     summary:
       "Signature ultra-luxury residential enclave in elite Sopan Baug / Ghorpadi, Pune, crafted for high-net-worth connoisseurs with private elevators, artisanal finishes, and lush tree canopies.",
-    image:
-      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80",
+    image: "/images/projects/mahindra-happinest-tathawade.webp",
     distanceFromMahalunge: "22.0 km",
     transitHighlight:
       "Direct access to Koregaon Park, Kalyani Nagar, MG Road & Pune Camp",
@@ -304,8 +297,7 @@ export const mahindraPuneProjects: MahindraPuneProject[] = [
     greenRating: "Certified Green Living",
     summary:
       "An established residential landmark in Pune exemplifying Mahindra’s long-standing structural integrity, community living values, and mature tree-lined pathways.",
-    image:
-      "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=800&q=80",
+    image: "/images/projects/mahindra-woods.webp",
     distanceFromMahalunge: "15.1 km",
     transitHighlight: "Pimpri industrial and residential belt",
   },

@@ -785,7 +785,8 @@ const baseSchema = {
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     
-    <!-- Responsive LCP Image Preload: First-Party High-Performance WebP (Desktop Viewport) -->
+    <!-- Responsive LCP Image Preload: First-Party High-Performance WebP (Mobile & Desktop Viewports) -->
+    <link rel="preload" as="image" href="/images/official/mahindra-rivenza-architectural-elevation-mobile.webp" media="(max-width: 767px)" fetchpriority="high" type="image/webp" />
     <link rel="preload" as="image" href={metaImage} media="(min-width: 768px)" fetchpriority="high" type="image/webp" />
 
     <!-- Google SERP Verified Favicons & Brand Marks (Googlebot-Image Optimized) -->

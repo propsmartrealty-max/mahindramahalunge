@@ -1,0 +1,182 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import ResidenceSelector from '../../components/ResidenceSelector.astro';
+import RiverFlowingEmblem from '../../components/RiverFlowingEmblem.astro';
+
+const bavdhanSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Place",
+      "@id": "https://mahindralifespaceshomes.in/flats-near-bavdhan/#place",
+      "name": "Bavdhan & Baner Annex Residential Corridor",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Bavdhan",
+        "addressRegion": "Maharashtra",
+        "addressCountry": "IN"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "18.5623125",
+        "longitude": "73.7273125"
+      }
+    },
+    {
+      "@type": "Product",
+      "@id": "https://mahindralifespaceshomes.in/flats-near-bavdhan/#product",
+      "name": "Luxury Flats Near Bavdhan Pune - Mahindra Rivenza",
+      "description": "Looking for flats near Bavdhan? Discover Mahindra Rivenza in Baner Annex / Mahalunge. 15 mins via Chandani Chowk and Pashan-Sus road. 13.46 acres, ~44,000 sq.ft clubhouse, 9+ acres greens starting ₹90 Lakhs*.",
+      "brand": {
+        "@type": "Brand",
+        "name": "Mahindra Lifespaces"
+      },
+      "hasMap": "https://www.google.com/maps/place/Mahindra+Rivenza/@18.5623125,73.7273125,17z/data=!3m1!4b1!4m6!3m5!1s0x3bc2bd23899c4255:0xd1c64c7ae74e9a5!8m2!3d18.5623125!4d73.7273125!16s%2Fg%2F11ysgj1zl9",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "bestRating": "5",
+        "worstRating": "1",
+        "ratingCount": "248",
+        "reviewCount": "248"
+      },
+      "offers": {
+        "@type": "AggregateOffer",
+        "lowPrice": "9000000",
+        "highPrice": "25500000",
+        "priceCurrency": "INR",
+        "offerCount": "1236",
+        "priceValidUntil": "2027-12-31",
+        "availability": "https://schema.org/InStock"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://mahindralifespaceshomes.in/flats-near-bavdhan/#breadcrumbs",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://mahindralifespaceshomes.in/" },
+        { "@type": "ListItem", "position": 2, "name": "West Pune", "item": "https://mahindralifespaceshomes.in/west-pune/" },
+        { "@type": "ListItem", "position": 3, "name": "Flats Near Bavdhan", "item": "https://mahindralifespaceshomes.in/flats-near-bavdhan/" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://mahindralifespaceshomes.in/flats-near-bavdhan/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Why choose Mahindra Rivenza over flats in Bavdhan?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "While Bavdhan is an established residential hub, standalone plots in Bavdhan are land-constrained with dense traffic through Chandani Chowk and property prices exceeding ₹10,500/sq.ft. Mahindra Rivenza at Baner Annex offers a master-planned 13.46-acre development with 9+ acres of biophilic greens, a ~44,000 sq.ft clubhouse, and faster 7-minute direct connectivity to Hinjewadi Phase 1 at ₹90 Lakhs*."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How far is Mahindra Rivenza from Bavdhan and Chandani Chowk?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Mahindra Rivenza is approximately 12 to 15 minutes from Bavdhan via the newly upgraded Chandani Chowk multi-tier interchange and the Pashan-Sus link road."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What are the configuration choices and pricing compared to Bavdhan?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Mahindra Rivenza offers 2 BHK (635–747 sq.ft carpet from ₹90L*), 3 BHK (882–1,065 sq.ft carpet from ₹1.31 Cr*), and 4 BHK Sky Villas (1,438–1,465 sq.ft carpet from ₹2.20 Cr*). This delivers ~25% higher carpet efficiency and world-class resort amenities compared to standalone Bavdhan towers."
+          }
+        }
+      ]
+    }
+  ]
+};
+---
+
+<Layout
+  title="Flats Near Bavdhan Pune | Mahindra Rivenza Luxury Homes ₹90L*"
+  description="Seeking flats near Bavdhan? Explore Mahindra Rivenza in Baner Annex / Mahalunge. 13.46 acres, ~44,000 sq.ft clubhouse, 9+ acres greens, starting ₹90 Lakhs*."
+  keywords="flats near bavdhan, flats in bavdhan pune, 2 bhk flats in bavdhan, 3 bhk flats in bavdhan, mahindra rivenza bavdhan connectivity, luxury apartments near chandani chowk"
+  canonical="https://mahindralifespaceshomes.in/flats-near-bavdhan/"
+  customSchema={bavdhanSchema}
+>
+  <!-- Hero Section -->
+  <section class="pt-32 pb-20 bg-charcoal-950 border-b border-white/10 relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-6">
+      <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-gold-500/10 border border-gold-500/30 text-gold-400 text-xs font-semibold uppercase tracking-widest font-mono">
+        <span>Strategic Alternative to Saturated Bavdhan</span>
+      </div>
+      <h1 class="font-serif text-3xl sm:text-5xl lg:text-6xl font-bold text-stone-100 max-w-4xl leading-tight">
+        Flats Near Bavdhan Pune: <br />
+        <span class="gold-gradient-text">Upgrade to 13.46-Acre Luxury at Mahindra Rivenza</span>
+      </h1>
+      <p class="text-stone-300 text-sm sm:text-base max-w-2xl font-light leading-relaxed">
+        Looking for modern 2, 3 &amp; 4 BHK apartments near Bavdhan? Discover Mahindra Rivenza in Baner Annex (Mahalunge)—just 15 minutes away via Chandani Chowk with 9+ acres of vehicle-free biophilic greens and resort clubhouse amenities.
+      </p>
+
+      <div class="flex flex-wrap gap-4 pt-4">
+        <button
+          data-open-modal
+          data-interest="Bavdhan Buyer Priority"
+          class="btn-shimmer px-8 py-3.5 rounded-full bg-gradient-to-r from-gold-300 via-gold-400 to-gold-500 text-charcoal-950 text-xs font-bold tracking-widest uppercase hover:shadow-xl transition-all cursor-pointer"
+        >
+          Download Cost Sheet &amp; Floor Plans
+        </button>
+        <a
+          href="/compare/mahindra-rivenza-vs-rohan-harita/"
+          class="px-8 py-3.5 rounded-full border border-gold-500/30 text-gold-300 hover:text-white text-xs font-bold tracking-widest uppercase transition-all"
+        >
+          Compare with Bavdhan &amp; Tathawade →
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Comparison Grid -->
+  <section class="py-20 bg-charcoal-900 border-b border-white/10">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+      <div class="text-center space-y-3">
+        <h2 class="font-serif text-2xl sm:text-4xl font-bold text-white">Why Upgrade from Bavdhan to Baner Annex?</h2>
+        <p class="text-stone-400 text-sm max-w-2xl mx-auto">See how Mahindra Rivenza delivers superior lifestyle, lower congestion, and institutional construction quality.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="bg-charcoal-950 p-6 rounded-2xl border border-white/10 space-y-3">
+          <div class="text-gold-400 font-bold text-lg font-serif">13.46 Acres vs 2-3 Acres</div>
+          <p class="text-xs text-stone-300 leading-relaxed">Most Bavdhan residential launches are small standalone plots with congested parking. Rivenza provides an expansive integrated master development with 9+ acres of open greens.</p>
+        </div>
+        <div class="bg-charcoal-950 p-6 rounded-2xl border border-white/10 space-y-3">
+          <div class="text-gold-400 font-bold text-lg font-serif">7-Min Hinjewadi Commute</div>
+          <p class="text-xs text-stone-300 leading-relaxed">Commuting from Bavdhan to Hinjewadi via Chandani Chowk and the highway takes 30–45 mins during peak hours. Rivenza connects to Hinjewadi Phase 1 in just 7 mins via Mula River bridge.</p>
+        </div>
+        <div class="bg-charcoal-950 p-6 rounded-2xl border border-white/10 space-y-3">
+          <div class="text-gold-400 font-bold text-lg font-serif">₹90L* Starting Launch Price</div>
+          <p class="text-xs text-stone-300 leading-relaxed">Bavdhan 2 BHKs trade between ₹1.05 Cr to ₹1.25 Cr in dated complexes. Mahindra Rivenza offers brand new Phase 1 MahaRERA inventory from ₹90 Lakhs*.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Residence Selector -->
+  <ResidenceSelector />
+
+  <!-- FAQ Section -->
+  <section class="py-20 bg-charcoal-950">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+      <h2 class="font-serif text-2xl sm:text-3xl font-bold text-white text-center">Frequently Asked Questions: Flats Near Bavdhan</h2>
+      <div class="space-y-4">
+        {bavdhanSchema["@graph"][3].mainEntity.map((faq) => (
+          <details class="bg-charcoal-900 border border-white/10 rounded-xl p-5 open:border-gold-500/40 transition-all cursor-pointer">
+            <summary class="font-serif text-base font-semibold text-stone-100 flex items-center justify-between">
+              <span>{faq.name}</span>
+              <span class="text-gold-400 ml-2">▼</span>
+            </summary>
+            <p class="text-stone-300 text-sm leading-relaxed mt-3 pt-3 border-t border-white/5 font-light">
+              {faq.acceptedAnswer.text}
+            </p>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+</Layout>
