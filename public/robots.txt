@@ -420,9 +420,9 @@ Disallow: /cdn-cgi/
 # ------------------------------------------------------------------------------
 # 11. Canonical Host, Sitemaps & AI Knowledge Base Manifest
 # ------------------------------------------------------------------------------
-Host: https://mahindralifespaceshomes.in
-Sitemap: https://mahindralifespaceshomes.in/sitemap.xml
+Host: mahindralifespaceshomes.in
 Sitemap: https://mahindralifespaceshomes.in/sitemap-index.xml
+Sitemap: https://mahindralifespaceshomes.in/sitemap.xml
 Sitemap: https://mahindralifespaceshomes.in/sitemap-main.xml
 Sitemap: https://mahindralifespaceshomes.in/sitemap-residences.xml
 Sitemap: https://mahindralifespaceshomes.in/sitemap-locations.xml

@@ -1374,10 +1374,25 @@ export const ALL_SITEMAP_ENTRIES: SitemapEntry[] = [
 ];
 
 // XML GENERATOR HELPERS (Google Pro Compliance)
+export const SITEMAP_HREFLANG_LOCALES = [
+  "en-IN",
+  "en-US",
+  "en-GB",
+  "en-AE",
+  "en-SG",
+  "en-CA",
+  "en-AU",
+  "en-QA",
+  "en-SA",
+  "en",
+  "x-default",
+] as const;
+
 export function generateUrlXml(entry: SitemapEntry): string {
   const lastmod = entry.lastmod || CURRENT_DATE;
-  const hreflangIn = `    <xhtml:link rel="alternate" hreflang="en-IN" href="${entry.url}" />`;
-  const hreflangDefault = `    <xhtml:link rel="alternate" hreflang="x-default" href="${entry.url}" />`;
+  const hreflangXml = SITEMAP_HREFLANG_LOCALES.map(
+    (lang) => `    <xhtml:link rel="alternate" hreflang="${lang}" href="${entry.url}" />`,
+  ).join("\n");
 
   let imageXml = "";
   if (entry.images && entry.images.length > 0) {
@@ -1396,8 +1411,7 @@ export function generateUrlXml(entry: SitemapEntry): string {
     <lastmod>${lastmod}</lastmod>
     <changefreq>${entry.changefreq}</changefreq>
     <priority>${entry.priority.toFixed(2)}</priority>
-${hreflangIn}
-${hreflangDefault}${imageXml ? `\n${imageXml}` : ""}
+${hreflangXml}${imageXml ? `\n${imageXml}` : ""}
   </url>`;
 }
 
