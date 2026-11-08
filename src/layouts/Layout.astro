@@ -683,7 +683,7 @@ const baseSchema = {
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- Google Consent Mode v2 Default Initialization & Google Ads Tag (AW-17430583486) -->
+    <!-- Google Consent Mode v2 Default Initialization & High-Performance Ads Tag Dispatcher -->
     <script is:inline>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
@@ -714,8 +714,25 @@ const baseSchema = {
           });
         }
       };
+
+      // Non-blocking deferred loading of external gtag.js after LCP
+      function loadGtagScript() {
+        if (window.__gtagLoaded) return;
+        window.__gtagLoaded = true;
+        const s = document.createElement('script');
+        s.async = true;
+        s.src = 'https://www.googletagmanager.com/gtag/js?id=AW-17430583486';
+        document.head.appendChild(s);
+      }
+      if ('requestIdleCallback' in window) {
+        window.requestIdleCallback(loadGtagScript, { timeout: 2500 });
+      } else {
+        setTimeout(loadGtagScript, 1800);
+      }
+      ['pointerdown', 'scroll', 'touchstart'].forEach(function(e) {
+        window.addEventListener(e, loadGtagScript, { once: true, passive: true });
+      });
     </script>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17430583486"></script>
     <title>{title}</title>
     <meta name="description" content={description} />
     <meta name="keywords" content={metaKeywords} />
@@ -1109,6 +1126,24 @@ const baseSchema = {
       [data-counter] {
         font-variant-numeric: tabular-nums;
         contain: layout inline-size;
+      }
+
+      /* Below-the-Fold Content Visibility Optimization (Accelerates DOM Rendering & Minimizes TBT) */
+      #search-matrix {
+        content-visibility: auto;
+        contain-intrinsic-size: 1px 1200px;
+      }
+      #pune-ecosystem {
+        content-visibility: auto;
+        contain-intrinsic-size: 1px 900px;
+      }
+      #programmatic-directory {
+        content-visibility: auto;
+        contain-intrinsic-size: 1px 800px;
+      }
+      footer {
+        content-visibility: auto;
+        contain-intrinsic-size: 1px 600px;
       }
 
       .delay-100 { transition-delay: 100ms; }
