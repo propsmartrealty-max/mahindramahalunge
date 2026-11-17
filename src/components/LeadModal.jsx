@@ -107,27 +107,33 @@ export default function LeadModal() {
         UtmTerm: urlParams.get('utm_term') || 'None',
       };
 
-      // Asynchronously send lead notification to propsmartrealty@gmail.com
+      // Asynchronously send lead notification to propsmartrealty@gmail.com via FormSubmit
       try {
+        const postData = {
+          _subject: `New Lead: Mahindra Rivenza - ${formData.name} (${formData.configuration})`,
+          _template: 'table',
+          _captcha: 'false',
+          Name: formData.name,
+          Phone: formData.phone,
+          Email: formData.email || 'Not Provided',
+          Configuration: formData.configuration,
+          Purpose: formData.purpose,
+          Interaction: formData.interaction,
+          Project: 'Mahindra Rivenza, Baner Annex, Mahalunge, Pune',
+          ...attribution,
+          SubmittedAt: new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' })
+        };
+        if (formData.email) {
+          postData._replyto = formData.email;
+        }
+
         fetch('https://formsubmit.co/ajax/propsmartrealty@gmail.com', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
             'Accept': 'application/json'
           },
-          body: JSON.stringify({
-            _subject: `New Lead: Mahindra Rivenza - ${formData.name} (${formData.configuration})`,
-            _template: 'table',
-            Name: formData.name,
-            Phone: formData.phone,
-            Email: formData.email || 'Not Provided',
-            Configuration: formData.configuration,
-            Purpose: formData.purpose,
-            Interaction: formData.interaction,
-            Project: 'Mahindra Rivenza, Baner Annex, Mahalunge, Pune',
-            ...attribution,
-            SubmittedAt: new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' })
-          })
+          body: JSON.stringify(postData)
         }).catch((err) => console.warn('Form dispatch background sync:', err));
       } catch (dispatchErr) {
         console.warn('Dispatch error:', dispatchErr);
@@ -350,7 +356,7 @@ export default function LeadModal() {
                         className="mt-0.5 rounded border-stone-600 text-gold-500 focus:ring-0 cursor-pointer"
                       />
                       <label htmlFor="consent" className="text-[10px] text-stone-300 leading-tight">
-                        I authorize <strong className="text-white">PropSmart Realty</strong> (Authorized Strategic Channel Partner for Mahindra Lifespaces, MahaRERA: <span className="text-gold-300 font-mono">A031262401295</span>) to contact me via Call, SMS or WhatsApp regarding Mahindra Rivenza. I agree to the <a href="/privacy-policy/" target="_blank" className="text-gold-400 underline">Privacy Policy</a> &amp; <a href="/terms-of-use/" target="_blank" className="text-gold-400 underline">Terms of Use</a>.
+                        I authorize the team to contact me via Call, SMS or WhatsApp with project details &amp; updates. I agree to the <a href="/privacy-policy/" target="_blank" className="text-gold-400 underline">Privacy Policy</a> &amp; <a href="/terms-of-use/" target="_blank" className="text-gold-400 underline">Terms of Use</a>.
                       </label>
                     </div>
                   </div>

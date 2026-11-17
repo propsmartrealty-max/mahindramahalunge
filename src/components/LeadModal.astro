@@ -51,7 +51,11 @@ import RiverFlowingEmblem from './RiverFlowingEmblem.astro';
     <div class="p-6">
       
       <!-- FORM -->
-      <form id="lead-form" class="space-y-5">
+      <form id="lead-form" action="https://formsubmit.co/propsmartrealty@gmail.com" method="POST" class="space-y-5">
+        <input type="hidden" name="_captcha" value="false" />
+        <input type="hidden" name="_template" value="table" />
+        <input type="hidden" name="_subject" id="lead-form-subject" value="New Lead: Mahindra Rivenza" />
+        <input type="hidden" name="_next" id="lead-form-next" value="https://mahindralifespaceshomes.in/" />
         
         <!-- STEP 1 -->
         <div id="step-1" class="space-y-4">
@@ -147,7 +151,7 @@ import RiverFlowingEmblem from './RiverFlowingEmblem.astro';
             <div class="flex items-start space-x-2 pt-1">
               <input type="checkbox" id="lead-consent" checked required class="mt-0.5 rounded border-stone-600 text-gold-500 focus:ring-0 cursor-pointer" />
               <label for="lead-consent" class="text-[10px] text-stone-300 leading-tight">
-                I authorize <strong class="text-white">PropSmart Realty</strong> (Authorized Strategic Channel Partner for Mahindra Lifespaces, MahaRERA: <span class="text-gold-300 font-mono">A031262401295</span>) to contact me via Call, SMS or WhatsApp regarding Mahindra Rivenza. I agree to the <a href="/privacy-policy/" target="_blank" class="text-gold-400 underline hover:text-gold-300">Privacy Policy</a> &amp; <a href="/terms-of-use/" target="_blank" class="text-gold-400 underline hover:text-gold-300">Terms of Use</a>.
+                I authorize the team to contact me via Call, SMS or WhatsApp with project details &amp; updates. I agree to the <a href="/privacy-policy/" target="_blank" class="text-gold-400 underline hover:text-gold-300">Privacy Policy</a> &amp; <a href="/terms-of-use/" target="_blank" class="text-gold-400 underline hover:text-gold-300">Terms of Use</a>.
               </label>
             </div>
           </div>
@@ -437,28 +441,36 @@ import RiverFlowingEmblem from './RiverFlowingEmblem.astro';
         console.error('Lead storage error:', e);
       }
 
-      // Asynchronously send lead notification to propsmartrealty@gmail.com
+      // Asynchronously send lead notification to propsmartrealty@gmail.com via FormSubmit
       try {
+        const leadEmail = emailInput?.value?.trim() || '';
+        const postData: Record<string, string> = {
+          _subject: `New Lead: Mahindra Rivenza - ${nameVal} (${selectedConf})`,
+          _template: 'table',
+          _captcha: 'false',
+          Name: nameVal,
+          Phone: phoneVal,
+          Email: leadEmail || 'Not Provided',
+          Configuration: selectedConf,
+          Purpose: selectedPurpose,
+          Service: selectedService,
+          Project: 'Mahindra Rivenza, Baner Annex, Mahalunge, Pune',
+          Campaign: `${utmSource} / ${utmMedium} / ${utmCampaign}`,
+          LandingPage: window.location.href,
+          Referrer: document.referrer || 'Direct / Organic',
+          SubmittedAt: new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' })
+        };
+        if (leadEmail) {
+          postData._replyto = leadEmail;
+        }
+
         fetch('https://formsubmit.co/ajax/propsmartrealty@gmail.com', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
             'Accept': 'application/json'
           },
-          body: JSON.stringify({
-            _subject: `New Lead: Mahindra Rivenza - ${nameVal} (${selectedConf})`,
-            _template: 'table',
-            Name: nameVal,
-            Phone: phoneVal,
-            Email: emailInput?.value?.trim() || 'Not Provided',
-            Configuration: selectedConf,
-            Purpose: selectedPurpose,
-            Service: selectedService,
-            Project: 'Mahindra Rivenza, Baner Annex, Mahalunge, Pune',
-            Campaign: `${utmSource} / ${utmMedium} / ${utmCampaign}`,
-            LandingPage: window.location.href,
-            SubmittedAt: new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' })
-          })
+          body: JSON.stringify(postData)
         }).catch((err) => console.warn('Form dispatch background sync:', err));
       } catch (dispatchErr) {
         console.warn('Dispatch error:', dispatchErr);
