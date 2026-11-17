@@ -133,7 +133,8 @@ export default function LeadModal() {
             'Content-Type': 'application/json',
             'Accept': 'application/json'
           },
-          body: JSON.stringify(postData)
+          body: JSON.stringify(postData),
+          keepalive: true
         }).catch((err) => console.warn('Form dispatch background sync:', err));
       } catch (dispatchErr) {
         console.warn('Dispatch error:', dispatchErr);
