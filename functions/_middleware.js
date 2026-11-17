@@ -406,6 +406,7 @@ export async function onRequest(context) {
     "font-src 'self' https://fonts.gstatic.com data:",
     "img-src 'self' data: blob: https://cms.mahindralifespaces.com https://images.unsplash.com https://*.ampproject.org https://www.googletagmanager.com https://*.google-analytics.com https://www.google.com https://www.google.co.in https://googleads.g.doubleclick.net https://www.googleadservices.com https://formsubmit.co https://*.formsubmit.co",
     "media-src 'self' https://cms.mahindralifespaces.com",
+    "frame-src 'self' https://formsubmit.co https://*.formsubmit.co",
     "connect-src 'self' https://api.indexnow.org https://cloudflareinsights.com https://wa.me https://formsubmit.co https://*.formsubmit.co https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com https://*.g.doubleclick.net https://googleads.g.doubleclick.net https://www.googleadservices.com",
     "frame-ancestors 'self'",
     "base-uri 'self'",
